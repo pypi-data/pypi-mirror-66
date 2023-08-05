@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: mqlTradeSim
+Version: 0.1.0.1
+Summary: MQL Trade Simulator
+Home-page: https://github.com/TurboCE/mqlTradeSim/
+Author: Yongseok Jang
+Author-email: turboce@gmail.com
+License: MIT
+Description: # mqlTradeSim
+        mql Simulator
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
