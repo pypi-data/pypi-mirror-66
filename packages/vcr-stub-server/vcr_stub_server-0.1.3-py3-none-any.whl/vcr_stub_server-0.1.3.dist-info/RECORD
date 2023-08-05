@@ -1,0 +1,11 @@
+vcr_stub_server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vcr_stub_server/__main__.py,sha256=zrXa8jGjSn0uX8MM_S8DVCdy9uaAgJ5umAHkV_-k7ng,2023
+vcr_stub_server/cassettes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vcr_stub_server/cassettes/base_vcr_cassette.py,sha256=4OmYfUtez-ST7wUYxGrwKIbwU8smjUA_JzwvGrnkDnk,176
+vcr_stub_server/cassettes/vcrpy_cassette.py,sha256=tdouE1S1Ei-_oyS43GmInAz0kGZxVgClwoxHfK__f1g,1344
+vcr_stub_server/stub_server_handler.py,sha256=zWWly2iivAJBotjOAB3TCsnfSv2CCKpCgV5k90KIc88,1679
+vcr_stub_server-0.1.3.dist-info/entry_points.txt,sha256=dfAmhnQIt6CTJ-3lTnfUqlcEq1NGZf5RN_Tg8beEr5s,65
+vcr_stub_server-0.1.3.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+vcr_stub_server-0.1.3.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+vcr_stub_server-0.1.3.dist-info/METADATA,sha256=xxuOAp06Nvn2Zv4E4DA9wHwhJ8f8nUwBgjS30vKBmws,2574
+vcr_stub_server-0.1.3.dist-info/RECORD,,
