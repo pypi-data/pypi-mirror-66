@@ -1,0 +1,12 @@
+rapidfuzz/__init__.py,sha256=NT29oMkI0BRfb3YE4xxLnDJ0lcGKVAFNdtAEkijdbKg,96
+rapidfuzz/_fuzz.cp38-win32.pyd,sha256=CKjxpBAig4HXxNHmwiyw7e4SNifOqWFyzVnGEGCza_k,58368
+rapidfuzz/_utils.cp38-win32.pyd,sha256=kYoqK8JpesKNzsze8sQjFdWItn7rd7JOVxodo01Zugs,13312
+rapidfuzz/fuzz.py,sha256=OUBfuW9yObviMzMWrZucCz95--Nt01GeMYkpZtjJ3yg,11106
+rapidfuzz/levenshtein.cp38-win32.pyd,sha256=EBEi5xJRn52ERFXJAukg9wvrJLCXISoUpH_joWHLCDs,16384
+rapidfuzz/process.py,sha256=drhosLUkYmOGrM1SmNFcE3AFBDK81oOh96r8CPPDYz8,6077
+rapidfuzz/utils.py,sha256=WJUsSi9JiD4ox4UokHzUCzkbjLYZqIi5_mFTlzKLP28,100
+rapidfuzz-0.7.6.dist-info/LICENSE,sha256=UZLgcFzb_G2cBTxv8lxLs-mCG06VPshbwdvBkgWotIo,1102
+rapidfuzz-0.7.6.dist-info/METADATA,sha256=Z79DxEE-fGiL6_nQBbx-xJdd0EzyOSi0wtu1NJBbZBg,4657
+rapidfuzz-0.7.6.dist-info/WHEEL,sha256=4TRfulwMrP8YSxpInGvijpm1wI5U2HlC51tdD-QDOYU,101
+rapidfuzz-0.7.6.dist-info/top_level.txt,sha256=Oxm3Kk-v28hdkOkW3AVE1EMl8Ml5FPFl32w6V65shvg,10
+rapidfuzz-0.7.6.dist-info/RECORD,,
