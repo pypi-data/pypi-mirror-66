@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: fasttp
+Version: 0.0.1
+Summary: Fasttp is a tool to perform test case prioritization.
+Home-page: https://github.com/GabrieleMaurina/fasttp
+Author: Gabriele Maurina
+Author-email: gabrielemaurina95@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8

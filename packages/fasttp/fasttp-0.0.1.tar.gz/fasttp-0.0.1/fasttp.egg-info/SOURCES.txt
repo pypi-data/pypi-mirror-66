@@ -1,0 +1,7 @@
+fasttp.py
+setup.py
+fasttp.egg-info/PKG-INFO
+fasttp.egg-info/SOURCES.txt
+fasttp.egg-info/dependency_links.txt
+fasttp.egg-info/requires.txt
+fasttp.egg-info/top_level.txt
