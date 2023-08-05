@@ -1,0 +1,8 @@
+fifa_preprocessing/__init__.py,sha256=z2yWeSln7JWtjbp0t-f7_xcJ02vF0GhPMq_Y9PpZiXo,69
+fifa_preprocessing/fifa19_data.csv,sha256=xWtUAlqFyx-Mhbl0Wr9MW0Hx9DDBpSpQsvqHLLFLYSg,9140113
+fifa_preprocessing/fifa_preprocessing.py,sha256=tjP7qgygGWVH1DZJP8wUFw4GxEhdoO9ZzW8TObt_ixg,17546
+fifa_preprocessing-0.3.0.dist-info/LICENSE,sha256=f9Hyd-RKs5fqoMGwU40B9wc4iroseNlRhaIW8rqUBHY,19345
+fifa_preprocessing-0.3.0.dist-info/METADATA,sha256=y3zcmCglfIugA4HRdMtEFn6_l7BXb5c1G9XYX-E0Mzo,2723
+fifa_preprocessing-0.3.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+fifa_preprocessing-0.3.0.dist-info/top_level.txt,sha256=7vvh24toCUqEeZND1tOhzn0iaFlZmvPLhWOhthHdMHY,19
+fifa_preprocessing-0.3.0.dist-info/RECORD,,
