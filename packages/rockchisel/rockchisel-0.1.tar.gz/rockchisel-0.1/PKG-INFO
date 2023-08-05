@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: rockchisel
+Version: 0.1
+Summary: A static documentation/website generator
+Home-page: https://rockchisel.com
+Author: Michael DeHaan
+Author-email: michael@michaeldehaan.net
+License: UNKNOWN
+Description: RockChisel is a static documentation and website generator.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Documentation
+Requires-Python: >=3.6
+Description-Content-Type: text/plain
