@@ -1,0 +1,8 @@
+nlp_preprocessing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nlp_preprocessing/clean.py,sha256=J_abVkupWMuRbtsIxNbfbMgCk63XBoZcxadCGfqxVcM,23438
+nlp_preprocessing/dataset.py,sha256=eX8inJp3ZfXm198fGYdWUayGs9yldcveLxYRdBAQNoI,4807
+nlp_preprocessing/seq_token_generator.py,sha256=HWVtDO0FDwO8dsO7XVHJM8EQbelkscS_bsO1y9qeG48,1574
+nlp_preprocessing-0.1.5.dist-info/METADATA,sha256=oYOWPcIqMKmpkZgNLGftzjZgu53PCtKefSBm3TgWDIo,1794
+nlp_preprocessing-0.1.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+nlp_preprocessing-0.1.5.dist-info/top_level.txt,sha256=ZlsvL5jUMHrAj50ifjz89gGOVRzt5QQK0wg3PFkjCc8,18
+nlp_preprocessing-0.1.5.dist-info/RECORD,,
