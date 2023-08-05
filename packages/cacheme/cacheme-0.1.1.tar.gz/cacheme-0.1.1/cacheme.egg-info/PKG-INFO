@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: cacheme
+Version: 0.1.1
+Summary: A memoized/cache decorator for Python using redis.
+Home-page: https://github.com/Yiling-J/cacheme
+Author: Yiling
+Author-email: njjyl723@gmail.com
+License: BSD-3-Clause
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
