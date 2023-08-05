@@ -1,0 +1,12 @@
+README.md
+setup.py
+scratchml/Loss.py
+scratchml/ScratchMLExceptions.py
+scratchml/__init__.py
+scratchml.egg-info/PKG-INFO
+scratchml.egg-info/SOURCES.txt
+scratchml.egg-info/dependency_links.txt
+scratchml.egg-info/top_level.txt
+scratchml/regression/MultipleLinearRegression.py
+scratchml/regression/SimpleLinearRegression.py
+scratchml/regression/__init__.py
