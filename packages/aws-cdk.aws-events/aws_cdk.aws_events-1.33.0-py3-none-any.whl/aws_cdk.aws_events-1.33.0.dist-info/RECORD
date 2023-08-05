@@ -1,0 +1,8 @@
+aws_cdk/aws_events/__init__.py,sha256=Z2dI-GWnMkaSYCrxWQU_0G8msK3Ul0FnW_30JDA_wd4,132381
+aws_cdk/aws_events/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_events/_jsii/__init__.py,sha256=GXnxt1OrS51oeDW4DxijJueOfgNqonKod3hYmpy0BRU,368
+aws_cdk/aws_events/_jsii/aws-events@1.33.0.jsii.tgz,sha256=1VgGM7mDaitPv2wE-kAc_JmxYqSwUNYkhp7zQ9LLOaM,112296
+aws_cdk.aws_events-1.33.0.dist-info/METADATA,sha256=xtC1IALC4JIB0xcVoJkNJU_6z5A8jZ5hqqY4ClyUo1M,8042
+aws_cdk.aws_events-1.33.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aws_cdk.aws_events-1.33.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_events-1.33.0.dist-info/RECORD,,
