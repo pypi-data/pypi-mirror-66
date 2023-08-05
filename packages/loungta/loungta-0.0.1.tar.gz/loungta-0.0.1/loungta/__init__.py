@@ -1,0 +1,1 @@
+from loungta.prayut import Loongtu
