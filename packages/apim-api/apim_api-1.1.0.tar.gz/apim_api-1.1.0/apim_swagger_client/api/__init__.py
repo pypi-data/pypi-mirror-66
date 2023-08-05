@@ -1,0 +1,18 @@
+from __future__ import absolute_import
+
+# flake8: noqa
+
+# import apis into api package
+from apim_swagger_client.api.api_discovery_api import APIDiscoveryApi
+from apim_swagger_client.api.api_manager_services_api import APIManagerServicesApi
+from apim_swagger_client.api.api_proxy_registration_api import APIProxyRegistrationApi
+from apim_swagger_client.api.api_repository_api import APIRepositoryApi
+from apim_swagger_client.api.applications_api import ApplicationsApi
+from apim_swagger_client.api.current_user_api import CurrentUserApi
+from apim_swagger_client.api.login_api import LoginApi
+from apim_swagger_client.api.metrics_api import MetricsApi
+from apim_swagger_client.api.migrate_api import MigrateApi
+from apim_swagger_client.api.o_auth_authorizations_api import OAuthAuthorizationsApi
+from apim_swagger_client.api.organizations_api import OrganizationsApi
+from apim_swagger_client.api.quotas_api import QuotasApi
+from apim_swagger_client.api.users_api import UsersApi
