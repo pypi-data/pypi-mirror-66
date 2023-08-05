@@ -1,0 +1,17 @@
+nbresuse/__init__.py,sha256=jgCUi0GbdHomN0NDPgZRgLRITivzmj3Wyytc3-dbJI4,3270
+nbresuse/metrics.py,sha256=5o1pSqhQ1tnND3flC-dsZLVivTGyS40pVTF0-oj_ZSQ,1288
+nbresuse/prometheus.py,sha256=gO_vcdk0A7MstsvoWm0adVRb-PRy0if4ATjNlEX6nmo,2134
+nbresuse/utils.py,sha256=i5ysXAYljVj4G0kIXp5GdQ_ZllR59wRCZ6lui5YBcFs,426
+nbresuse/etc/nbextension.json,sha256=jEJFuk1Ch57mqXhBPPD_lrZ8gg4hklfPBsHUbMyMQ8Q,58
+nbresuse/etc/serverextension.json,sha256=tqAykw9hyxAwfPDVErq6yNqkVmrt1EsTZVkkDKumQjI,85
+nbresuse/static/main.js,sha256=4ZVVLhFx3PH-G4WPpE3a2WnO09AiWK9e7gcsmboBP5E,2954
+nbresuse/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nbresuse/tests/test_basic.py,sha256=uFtaRLrrurQBq3L28MBiTofYk2QOqpQvx5ZKBcoX_aQ,1729
+nbresuse-0.3.4.data/data/etc/jupyter/jupyter_notebook_config.d/serverextension.json,sha256=tqAykw9hyxAwfPDVErq6yNqkVmrt1EsTZVkkDKumQjI,85
+nbresuse-0.3.4.data/data/etc/jupyter/nbconfig/notebook.d/nbextension.json,sha256=jEJFuk1Ch57mqXhBPPD_lrZ8gg4hklfPBsHUbMyMQ8Q,58
+nbresuse-0.3.4.data/data/share/jupyter/nbextensions/nbresuse/main.js,sha256=4ZVVLhFx3PH-G4WPpE3a2WnO09AiWK9e7gcsmboBP5E,2954
+nbresuse-0.3.4.dist-info/LICENSE,sha256=rvcCGCbl7oWlMOnvAAhNTYr9BobB8-xaPJgpRmHlmPI,1293
+nbresuse-0.3.4.dist-info/METADATA,sha256=xFBg1SLhWibEe-UgWONLR3_WHPkiFLETx10FetmfLxo,5078
+nbresuse-0.3.4.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+nbresuse-0.3.4.dist-info/top_level.txt,sha256=RzLn60k5_kn6SRgMQwH3ic6Z6vTJt1H5k167AaJfkhQ,9
+nbresuse-0.3.4.dist-info/RECORD,,
