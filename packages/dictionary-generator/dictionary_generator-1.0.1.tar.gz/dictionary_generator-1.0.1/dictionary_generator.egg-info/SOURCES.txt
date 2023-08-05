@@ -1,0 +1,12 @@
+README.md
+setup.py
+dictionary_generator/__init__.py
+dictionary_generator/__main__.py
+dictionary_generator/exercises.py
+dictionary_generator/exercises_abs.py
+dictionary_generator.egg-info/PKG-INFO
+dictionary_generator.egg-info/SOURCES.txt
+dictionary_generator.egg-info/dependency_links.txt
+dictionary_generator.egg-info/entry_points.txt
+dictionary_generator.egg-info/requires.txt
+dictionary_generator.egg-info/top_level.txt
