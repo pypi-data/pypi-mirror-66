@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: aiojenkins
+Version: 0.1.1
+Summary: Asynchronous library of Jenkins API endpoints based on aiohttp
+Home-page: https://github.com/pbelskiy/aiojenkins
+Author: Petr Belskiy
+Author-email: petr.belskiy@gmail.com
+License: MIT
+Download-URL: https://pypi.org/project/aiojenkins
+Description: # aiojenkins
+        
+        Initial version of aiojenkins
+        
+        Work is in progress
+        
+Keywords: aiojenkins,async jenkins api
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
