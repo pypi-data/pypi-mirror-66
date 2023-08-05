@@ -1,0 +1,6 @@
+include README.md
+include VERSION
+include LICENSE
+recursive-include src/rapidfuzz-cpp *.hpp *.txx *.h
+recursive-include src/rapidfuzz-cpp/extern/boost *
+recursive-include src *.hpp
