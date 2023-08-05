@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: owl-sanitizer-data-quality
+Version: 0.1
+Summary: Data Quality for Pyspark jobs
+Home-page: https://github.com/ronald-smith-angel/owl-data-sanitizer.git
+Author: Ronald Angel
+Author-email: ronaldsmithangel@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: dataclasses (==0.6)
+Requires-Dist: pyspark (==2.4.5)
+
+UNKNOWN
+
+
