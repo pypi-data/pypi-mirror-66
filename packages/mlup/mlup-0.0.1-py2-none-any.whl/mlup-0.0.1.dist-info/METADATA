@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: mlup
+Version: 0.0.1
+Summary: Automl by DSCVIT
+Home-page: https://github.com/unknown-guy-1610/mlAPI
+Author: Sai Sandeep Rayanuthala
+Author-email: rayanuthalas@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: asgiref
+Requires-Dist: astroid
+Requires-Dist: dj-database-url
+Requires-Dist: Django
+Requires-Dist: django-heroku
+Requires-Dist: djangorestframework
+Requires-Dist: gunicorn
+Requires-Dist: isort
+Requires-Dist: lazy-object-proxy
+Requires-Dist: mccabe
+Requires-Dist: psycopg2
+Requires-Dist: pylint
+Requires-Dist: pytz
+Requires-Dist: six
+Requires-Dist: sqlparse
+Requires-Dist: toml
+Requires-Dist: typed-ast
+Requires-Dist: whitenoise
+Requires-Dist: wrapt
+
+##MADE WITH AUTOML
+
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+
