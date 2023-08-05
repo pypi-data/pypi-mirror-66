@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pyg4ometry
+Version: 0.9.1
+Summary: Geometry package for high energy physics (Geant4, Fluka)
+Home-page: https://bitbucket.org/jairhul/pyg4ometry/
+Author: Stewart T. Boogert
+Author-email: stewart.boogert@rhul.ac.uk
+License: GPL3
+Keywords: geometry bdsim particle physics accelerators
+Platform: UNKNOWN
+Requires-Python: ==2.7.*
+Requires-Dist: antlr4-python2-runtime (==4.7)
+Requires-Dist: matplotlib
+Requires-Dist: networkx (==2.2)
+Requires-Dist: numpy
+Requires-Dist: vtk
+Requires-Dist: cython
+Requires-Dist: GitPython
+Requires-Dist: testtools
+Requires-Dist: pypandoc
+
+UNKNOWN
+
+
