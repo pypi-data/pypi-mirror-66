@@ -1,0 +1,7 @@
+README.md
+setup.py
+devshell.egg-info/PKG-INFO
+devshell.egg-info/SOURCES.txt
+devshell.egg-info/dependency_links.txt
+devshell.egg-info/requires.txt
+devshell.egg-info/top_level.txt
