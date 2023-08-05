@@ -1,0 +1,15 @@
+hashlib
+oss2
+csv
+xlrd
+chardet
+redis
+pyexecjs
+arrow
+pymysql
+pytesseract
+requests
+numpy
+jieba
+selenium
+pillow
