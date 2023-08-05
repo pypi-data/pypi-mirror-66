@@ -1,0 +1,11 @@
+README.md
+setup.py
+country_data_provider/__init__.py
+country_data_provider/country_dictionary.py
+country_data_provider/country_list.py
+factiva_country_code_mapping.egg-info/PKG-INFO
+factiva_country_code_mapping.egg-info/SOURCES.txt
+factiva_country_code_mapping.egg-info/dependency_links.txt
+factiva_country_code_mapping.egg-info/top_level.txt
+tests/__init__.py
+tests/test.py
