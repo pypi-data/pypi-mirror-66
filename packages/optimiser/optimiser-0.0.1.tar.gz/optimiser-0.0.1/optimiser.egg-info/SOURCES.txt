@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+optimiser/__init__.py
+optimiser.egg-info/PKG-INFO
+optimiser.egg-info/SOURCES.txt
+optimiser.egg-info/dependency_links.txt
+optimiser.egg-info/requires.txt
+optimiser.egg-info/top_level.txt

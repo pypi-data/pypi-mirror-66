@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: optimiser
+Version: 0.0.1
+Summary: Generic implementations of some numeric optimization methods.
+Home-page: https://github.com/Nikolay-Lysenko/optimiser
+Author: Nikolay Lysenko
+Author-email: nikolay-lysenco@yandex.ru
+License: MIT
+Description: # Optimiser
+        
+        Coming soon.
+        
+Keywords: blackbox_optimization,numeric_optimization,crossentropy
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
