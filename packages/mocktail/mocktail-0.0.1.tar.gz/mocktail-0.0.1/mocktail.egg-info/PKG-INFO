@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mocktail
+Version: 0.0.1
+Summary: Non-alcoholic Mockito-style when-then utilities for unittest.mock
+Home-page: https://github.com/koirikivi/mocktail.git
+Author: Rainer Koirikivi
+Author-email: rainer@koirikivi.fi
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: testing,mock,unittest,mockito,when
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: testing
