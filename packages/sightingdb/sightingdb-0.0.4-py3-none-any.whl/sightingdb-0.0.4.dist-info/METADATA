@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sightingdb
+Version: 0.0.4
+Summary: Client library for SightingDB
+Home-page: http://www.github.com/stricaud/sightingdb-client/
+Author: Sebastien Tricaud
+Author-email: sebastien@honeynet.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+UNKNOWN
+
+

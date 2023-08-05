@@ -1,0 +1,9 @@
+sightingdb/__init__.py,sha256=emCoU3lVJ48diaB_AHpUz7XSJKkucRzZkMPCTgoMFDU,168
+sightingdb/connection.py,sha256=tbd1L6VA3eOiYmb6QFDgtxGt3QP22Lot8O-hjBd90GQ,374
+sightingdb/delete.py,sha256=4lJ0QZoFjumlPhSvRssyD3kjwimJLCtt1xrD0A6YlHU,459
+sightingdb/read.py,sha256=2VJ3-MfnBdZPCJyekhYmg6oYRiyhsQSUe5iUgxEWPTE,805
+sightingdb/write.py,sha256=SiUPkmfG3Uj6wysrzpaUNND9BT4aj718PlQe6eqbBbg,804
+sightingdb-0.0.4.dist-info/METADATA,sha256=xwZu5qxmIg-1Uo598v4Bx9l4_QcKsK_Vx_1oKAX9-MU,409
+sightingdb-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sightingdb-0.0.4.dist-info/top_level.txt,sha256=lSfaA8yGJliPQkve4CQOZjYKg-Ujze5mAJhG8iKmFVA,11
+sightingdb-0.0.4.dist-info/RECORD,,
