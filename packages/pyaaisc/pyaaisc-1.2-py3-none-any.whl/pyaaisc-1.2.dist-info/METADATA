@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: pyaaisc
+Version: 1.2
+Summary: Python AAindex database scrape
+Home-page: https://github.com/stefs304/pyaaisc
+Author: Stefan Stojanovic
+Author-email: stefs304@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
+
+# pyaaisc
+Python AAindex database scrape
+
+### About
+
+`pyaaisc` scrapes data from AAindex website https://www.genome.jp/aaindex/. 
+
+Currently supported operations:
+* search by `keyword` and `dbkey`
+* get full list of indices by `dbkey`
+* get a single record by `accession_number` and `dbkey`
+
+### Instalation
+
+```
+pip install pyaaisc
+```
+
+### Usage
+
+```python
+from pyaaisc import Aaindex
+
+aaindex = Aaindex()
+for result in aaindex.search('charge'):
+    print(result)
+
+full_list = aaindex.get_all(dbkey='aaindex1')
+
+record = aaindex.get('KLEP840101')
+title = record.title
+index_data = record.index_data
+
+```
+
