@@ -1,0 +1,8 @@
+
+future
+configparser
+enum34; python_version<"3.4"
+IPy
+requests
+
+pytrafficgen==1.6.2
