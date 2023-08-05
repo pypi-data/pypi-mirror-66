@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+nostradamus/__init__.py
+nostradamus/example.py
+nostradamus/forecaster.py
+nostradamus.egg-info/PKG-INFO
+nostradamus.egg-info/SOURCES.txt
+nostradamus.egg-info/dependency_links.txt
+nostradamus.egg-info/entry_points.txt
+nostradamus.egg-info/requires.txt
+nostradamus.egg-info/top_level.txt
