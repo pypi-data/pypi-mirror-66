@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "enumagic"
+version = "0.1.0"
+readme = "README.rst"
+license = "Zlib"
+description = "Enums infused with magic."
+homepage = "https://github.com/ObserverOfTime/enumagic.py"
+documentation = "https://enumagic.readthedocs.io"
+authors = [
+    "ObserverOfTime <chronobserver@disroot.org>",
+]
+keywords = ["enum", "magic", "django"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: zlib/libpng License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[[tool.poetry.packages]]
+include = "enumagic"
+
+[tool.poetry.dependencies]
+python = "^3.5"
+
+[tool.poetry.dev-dependencies]
+sphinx = "^2.3.1"
+sphinx-rtd-theme = "^0.4.3"
+
+[tool.poetry.urls]
+"Bug tracker" = "https://github.com/ObserverOfTime/enumagic.py/issues"
+
+[build-system]
+requires = ["poetry>=1.0"]
+build-backend = "poetry.masonry.api"
