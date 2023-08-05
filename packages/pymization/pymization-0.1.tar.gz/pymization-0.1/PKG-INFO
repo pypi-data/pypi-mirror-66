@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pymization
+Version: 0.1
+Summary: A simple optimization solverp problem
+Home-page: https://github.com/mauricepoirrier/pymization
+Author: Nicolas Camus & Maurice Poirrier
+Author-email: maurice@merkenlabs.com
+License: MIT
+Download-URL: https://github.com/mauricepoirrier/pymization/archive/0.0.1.tar.gz
+Description: # pymization
+        Simple solver for optimization problems.
+        
+        CDS implemented
+        ## Installation
+        
+        ```bash
+        pip install pymization
+        ```
+        
+        Work in progress
+        
+        Any inquirements:
+        
+        - Nicolas Camus: ncamusf@gmail.com
+        - Maurice Poirrier: maurice@merkenlabs.com
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
