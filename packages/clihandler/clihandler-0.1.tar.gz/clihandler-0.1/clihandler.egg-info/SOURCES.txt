@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+clihandler/__init__.py
+clihandler/clihandler.py
+clihandler.egg-info/PKG-INFO
+clihandler.egg-info/SOURCES.txt
+clihandler.egg-info/dependency_links.txt
+clihandler.egg-info/top_level.txt
