@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: startpkg
+Version: 0.0.4
+Summary: AzatAI Start Package Tool (startpkg)
+Home-page: https://github.com/AzatAI/startpkg
+Author: Yaakov Azat
+Author-email: yaakovazat@gmail.com
+License: MIT
+Project-URL: Documentation, https://azat.ai
+Project-URL: Source, https://github.com/AzatAI/startpkg
+Description: # startpkg
+        A Python PyPi packaging guide. You do not need to know how to package your code, this script dose it for you. Focus what your package should do and left others to this script.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
