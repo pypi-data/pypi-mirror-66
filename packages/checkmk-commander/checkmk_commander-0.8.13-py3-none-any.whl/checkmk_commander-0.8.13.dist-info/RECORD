@@ -1,0 +1,13 @@
+checkmk-commander/__init__.py,sha256=VrYCH_L_z9PCV9OUdiDZNWHiae3bPo0-Nsiu72FY92U,23518
+checkmk_commander-0.8.13.data/data/share/applications/checkmk-commander.desktop,sha256=Dj7qUwahmJVAkvMVN82UJp2Jk9kVJ_k0ycjKlTd13hQ,282
+checkmk_commander-0.8.13.data/data/share/icons/hicolor/256x256/apps/checkmk-commander.png,sha256=EnrTwl0Gh0mpnscZXhXDPqIEctUpRzb0dfpdGi87fx0,44582
+checkmk_commander-0.8.13.data/data/share/icons/hicolor/48x48/apps/checkmk-commander.png,sha256=lzd3wjV-3AyN8mjwrdpSDrgYrKRJU2es-NsEmLpy2eA,14687
+checkmk_commander-0.8.13.data/scripts/chkcom,sha256=P6NDdf-StXC00jJg6Y1uVaBSca5NJHStR7lkws4blQ0,73
+checkmkcommander/__init__.py,sha256=I8RbJEtsAC8i01OedmGov5BfTx0vKAtQJweDIqZCeEk,33060
+checkmkcommander/command_line.py,sha256=RxEzgjRUBSD32WNo0ex6EwIQkdXduGaNUAbioJgermE,87
+checkmkcommander/tests/__init__.py,sha256=i102yRLeWn9ET7laSGGR2oDpHS0mUdd8swGx4fMDJhE,3248
+checkmk_commander-0.8.13.dist-info/LICENSE,sha256=vMGUdRgpvQCUg97IiA9Vi1gvO_sMEzTq1jNHpBFFolQ,35073
+checkmk_commander-0.8.13.dist-info/METADATA,sha256=M5bzHbVWy2kFFPO-pgQ0JSwgwjHHMcjVaW0oajsiQxs,4128
+checkmk_commander-0.8.13.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+checkmk_commander-0.8.13.dist-info/top_level.txt,sha256=toPzrx2QbqeqVlvq0DqngoxVviyLHRbHeHeeOQ9amT8,17
+checkmk_commander-0.8.13.dist-info/RECORD,,
