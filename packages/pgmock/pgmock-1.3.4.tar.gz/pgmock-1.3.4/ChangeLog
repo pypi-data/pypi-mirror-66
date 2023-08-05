@@ -1,0 +1,28 @@
+CHANGES
+=======
+
+1.3.4
+-----
+
+* Fix column name of reserved keywords causes syntax error (#4)
+
+1.3.3
+-----
+
+* Add UUID type to \_to\_sql\_value() (#3)
+
+1.3.2
+-----
+
+* [DI-8] Temple update 2018-07-30 (#2)
+
+1.3.1
+-----
+
+* Delete old README.md file
+
+1.3.0
+-----
+
+* Initial open source release (#1)
+* first commit
