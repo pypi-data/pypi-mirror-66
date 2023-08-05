@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: yoti-sandbox
+Version: 1.0.1
+Summary: The Yoti Python Sandbox SDK, providing API support for sandbox services
+Home-page: https://github.com/getyoti/yoti-python-sdk-sandbox
+Author: Yoti
+Author-email: websdk@yoti.com
+License: MIT
+Keywords: yoti sdk 2FA multifactor authentication verification identity login register verify 2Factor sandbox
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: yoti (>=2.10.2cryptography>=2.8.0)
+Provides-Extra: dev
+Requires-Dist: pre-commit (==1.17.0) ; extra == 'dev'
+Requires-Dist: pytest (>=3.6.0) ; extra == 'dev'
+Requires-Dist: pytest-cov (>=2.7.1) ; extra == 'dev'
+Requires-Dist: pylint (==1.9.4) ; extra == 'dev'
+Requires-Dist: pylint-exit (>=1.1.0) ; extra == 'dev'
+Requires-Dist: python-coveralls (==2.9.3) ; extra == 'dev'
+Requires-Dist: coverage (==4.5.4) ; extra == 'dev'
+Requires-Dist: mock (==2.0.0) ; extra == 'dev'
+Requires-Dist: virtualenv (==15.2) ; extra == 'dev'
+
+This package contains the tools you need to quickly integrate your Python back-end tests with Yoti sandbox services, so you can test integrations with different Yoti services without using real data.
+
+
