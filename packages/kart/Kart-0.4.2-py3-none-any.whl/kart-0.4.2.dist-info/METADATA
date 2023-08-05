@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: kart
+Version: 0.4.2
+Summary: A very flexible static site generator written in python
+License: MIT
+Author: Giacomo Caironi
+Author-email: giacomo.caironi@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
