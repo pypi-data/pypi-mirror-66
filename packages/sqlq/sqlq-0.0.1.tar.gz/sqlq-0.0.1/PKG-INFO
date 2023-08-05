@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: sqlq
+Version: 0.0.1
+Summary: A thread safe queue worker that executes SQL for multi-threaded applications.
+Home-page: https://github.com/foxe6/sqlq
+Author: f̣ộx̣ệ6
+Author-email: foxe6@protonmail.com
+License: AGPL-3.0
+Description: # Sqlite3 Execution Queue
+        
+        <badges>[![version](https://img.shields.io/pypi/v/sqlq.svg)](https://pypi.org/project/sqlq/)
+        [![license](https://img.shields.io/pypi/l/sqlq.svg)](https://pypi.org/project/sqlq/)
+        [![pyversions](https://img.shields.io/pypi/pyversions/sqlq.svg)](https://pypi.org/project/sqlq/)  
+        [![donate](https://img.shields.io/badge/Donate-Paypal-0070ba.svg)](https://paypal.me/foxe6)
+        [![powered](https://img.shields.io/badge/Powered%20by-UTF8-red.svg)](https://paypal.me/foxe6)
+        [![made](https://img.shields.io/badge/Made%20with-PyCharm-red.svg)](https://paypal.me/foxe6)
+        </badges>
+        
+        <i>A thread safe queue worker that executes SQL for multi-threaded applications.</i>
+        
+        # Hierarchy
+        
+        ```
+        sqlqueue
+        '---- SqlQueue()
+            |---- sql()
+            |---- _sql()
+            |---- commit()
+            '---- stop()
+        ```
+        
+        # Example
+        
+        ## python
+        ```python
+        
+        ```
+        
+Keywords: sql sqlite3 queue
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
