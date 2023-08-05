@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: newrelic-python-agent
+Version: 1.4.0
+Summary: Python based agent for collecting metrics for NewRelic
+Home-page: https://github.com/NewRelic-Python-Plugins/newrelic-python-agent
+Author: Gavin M. Roy
+Author-email: gavinmroy@gmail.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 2 :: Only
+Classifier: Topic :: System :: Monitoring
+Requires-Dist: helper (>=2.2.2)
+Requires-Dist: requests (>=2.0.0)
+Requires-Dist: six (>=1.5)
+Provides-Extra: mongodb
+Requires-Dist: pymongo ; extra == 'mongodb'
+Provides-Extra: pgbouncer
+Requires-Dist: psycopg2 ; extra == 'pgbouncer'
+Provides-Extra: postgresql
+Requires-Dist: psycopg2 ; extra == 'postgresql'
+Provides-Extra: prometheus
+Requires-Dist: prometheus-client ; extra == 'prometheus'
+
+UNKNOWN
+
+
