@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: opendbpy
+Version: 0.0.1
+Summary: Database and Tool Framework for EDA
+Home-page: https://github.com/EDAAC/ICTuner
+Author: Abdelrahman Hosny
+Author-email: abdelrahman_hosny@brown.edu
+License: BSD-3 License
+Download-URL: https://github.com/EDAAC/ICTuner/archive/v_0.0.1.tar.gz
+Description: Database and Tool Framework for EDA
+Keywords: EDA,Electronic,Design,Automation,Parameter,Tuning,Search,Exploration
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Other
+Description-Content-Type: text/markdown

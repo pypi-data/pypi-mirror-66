@@ -1,0 +1,5 @@
+setup.py
+opendbpy.egg-info/PKG-INFO
+opendbpy.egg-info/SOURCES.txt
+opendbpy.egg-info/dependency_links.txt
+opendbpy.egg-info/top_level.txt
