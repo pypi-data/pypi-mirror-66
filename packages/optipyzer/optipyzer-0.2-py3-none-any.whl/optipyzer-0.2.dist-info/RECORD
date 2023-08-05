@@ -1,0 +1,10 @@
+optipyzer/__init__.py,sha256=AsPmwR88PPpZxfHsONioYfsr-U37T8OczDzysB-GCXA,394
+optipyzer/api.py,sha256=J7_t9RKI9nlPXixSDjUdJuCxNfooBq3mDDUbBCDJYtI,4153
+optipyzer/codon_optimizer.py,sha256=o5A1w0ehXtKKB8hnscBFuxJCZ4sMz4eEKY-IXAq8wX0,3911
+optipyzer/codon_usage.py,sha256=Nqw8BQSZOZZDwLhLcWu6ptMQ1l5FGI4C4W_2brKrdtM,94
+optipyzer/optimization.py,sha256=FLI5H4qI5VhU4G-ZuCFTNOb7C8RQLR29iDWZaJ7EqlE,242
+optipyzer/organism.py,sha256=PIBJIcvMBpJuomSsMl98Y4XUmH-0S3kAJ23ru8zxb5s,1130
+optipyzer-0.2.dist-info/METADATA,sha256=1UNhiUVCiDzJtoPo8XA2_GJB20OdeIfxQs0NXrtEbs0,2115
+optipyzer-0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+optipyzer-0.2.dist-info/top_level.txt,sha256=z7d1o_-CuL7F1ilp-zeK8vaNm5vIjn0654ABPBdEoKI,10
+optipyzer-0.2.dist-info/RECORD,,
