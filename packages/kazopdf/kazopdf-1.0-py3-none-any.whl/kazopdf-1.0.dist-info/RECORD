@@ -1,0 +1,8 @@
+kazopdf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kazopdf/pdf2image.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kazopdf/pdf2text.py,sha256=2xKW-Bk7Ss-9fe-vA-wSjX6yRO6kpDyi_y5uw3Sxbrs,50
+kazopdf-1.0.dist-info/License,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+kazopdf-1.0.dist-info/METADATA,sha256=oFYtkqnm67fzTcWdFusH-z2rzx9AAUervYb20Vh1gWw,198
+kazopdf-1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+kazopdf-1.0.dist-info/top_level.txt,sha256=t0y-oEzgcwn1EhBilVjTq7-c7Cv130Gy4Mm9UCNM96Y,8
+kazopdf-1.0.dist-info/RECORD,,
