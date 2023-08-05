@@ -1,0 +1,9 @@
+filebridging/__init__.py,sha256=-9GHU6Va9Wp1IKxlepL8j3kyhMRT6wcO7MDfBbUIFwo,418
+filebridging/client.py,sha256=ICsCYDx47B77iZWVqPuQb_sx_JW2lPwyERvDFRIfm6o,27864
+filebridging/old_config.py,sha256=UsV0zXYWADQS_3axlMmjowyeqJmVjQ-4Z7tbQB0wbsg,228
+filebridging/server.py,sha256=Hx80S2VT5-X7LV4Vc5zHqP5kezFu7h6R9BrXQ9GM3Sg,13487
+filebridging/utilities.py,sha256=9Zy1ADFN0TN8VekY1uTxAKVYy-o8q0kYV0n61e38jtc,4114
+filebridging-0.0.4.dist-info/METADATA,sha256=iA7pBD8559PBwhpMzSr-eRg7g23IDRKhvV5rq_iOcbk,2727
+filebridging-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+filebridging-0.0.4.dist-info/top_level.txt,sha256=Ku6LUFN5eWnIf_k_2vEQZsqNBoHDv1TESFEi1FJOTro,13
+filebridging-0.0.4.dist-info/RECORD,,
