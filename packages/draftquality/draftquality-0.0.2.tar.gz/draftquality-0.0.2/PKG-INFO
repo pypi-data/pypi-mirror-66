@@ -1,0 +1,37 @@
+Metadata-Version: 1.1
+Name: draftquality
+Version: 0.0.2
+Summary: A library for performing automatic detection of the quality of Wikipedia article creations.
+Home-page: https://github.com/wikimedia/draftquality
+Author: Aaron Halfaker
+Author-email: ahalfaker@wikimedia.org
+License: MIT
+Description: # draftquality
+        
+        This library provides a set of utilities for building and maintaining
+        draft (new article creation) quality prediction models for Wikipedia.
+        
+        * **Installation:** ``pip install draftquality``
+        * **Repository:** https://github.com/wikimedia/draftquality
+        * **License:** MIT
+        
+        ## Requirements
+        
+        Optionally requires the following based on usage:
+        
+        * NLTK SentiWordnet - ``python -m nltk.downloader sentiwordnet``
+        * NLTK Wordnet - ``python -m nltk.downloader wordnet``
+        
+        ## Author
+        * Aaron Halfaker -- https://github.com/halfak
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Classifier: Topic :: Scientific/Engineering
