@@ -1,0 +1,10 @@
+README.md
+setup.py
+SimilarSentences/SimilarSentences.py
+SimilarSentences/__init__.py
+similar_sentences.egg-info/PKG-INFO
+similar_sentences.egg-info/SOURCES.txt
+similar_sentences.egg-info/dependency_links.txt
+similar_sentences.egg-info/requires.txt
+similar_sentences.egg-info/top_level.txt
+tests/__init__.py
