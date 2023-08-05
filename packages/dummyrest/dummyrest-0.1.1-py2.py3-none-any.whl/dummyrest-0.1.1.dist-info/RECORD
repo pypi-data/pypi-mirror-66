@@ -1,0 +1,17 @@
+dummyrest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dummyrest/app.py,sha256=fgozeXw8KGZcusX89v65n09COdNAHvUX9tzI6ni2hy4,1426
+dummyrest/db.py,sha256=gO0xXlZ0OvbDIsvqkuZRBbOHPf86mMmd486Urge-ysU,59
+dummyrest/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dummyrest/models/author.py,sha256=61LMnLjkIZuqYfVHpXM3UlXlovD8cTj12sLfwo0lFJc,1512
+dummyrest/models/book.py,sha256=DJ9By4fZo-nd1V8JAZbM-yMAbbHf7s3d8ozy2usKwxk,1770
+dummyrest/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dummyrest/resources/author.py,sha256=2n0zjdh6QAL2d1KAh6TKLiNaBAxJpg13h7rvOgo54LY,2633
+dummyrest/resources/book.py,sha256=_GMo0AU4QqE-KEC4sgPkqO2DLYSIyERCYUaDFyt1iNg,3103
+dummyrest/resources/dummyresource.py,sha256=C5JvQQ1bParvb5F8oTKgYzV2AxF8rZ7EMoWuzfQR4PM,1140
+dummyrest-0.1.1.data/scripts/dummyrest,sha256=9xWKdXjCHx1jt8FDevfMksUj2vnVq49HMchtjlXuQfA,155
+dummyrest-0.1.1.data/scripts/dummyrest-nginx,sha256=cwmCLYSP3X7o7e4pG_W25lirqdFwY8PQYYalVoSr1KI,202
+dummyrest-0.1.1.dist-info/LICENSE,sha256=8rrLNF3hOeVOXlZ17SIpuPuygW9uzTCZiJ8LXzZA_qQ,1059
+dummyrest-0.1.1.dist-info/METADATA,sha256=JTb07lW50nqjH85Ob1f4h-1t2qHGIPoOkXOMXK1W2PE,6992
+dummyrest-0.1.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+dummyrest-0.1.1.dist-info/top_level.txt,sha256=OPDKuawI3dD8IcLLEGWsDF1AGirw_D99Phxvb9IhndI,10
+dummyrest-0.1.1.dist-info/RECORD,,
