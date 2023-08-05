@@ -1,0 +1,6 @@
+assemblyline
+docker
+
+[test]
+fakeredis[lua]
+pytest
