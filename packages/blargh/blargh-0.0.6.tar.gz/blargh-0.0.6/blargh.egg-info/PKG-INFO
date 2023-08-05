@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: blargh
+Version: 0.0.6
+Summary: Generic REST API base
+Home-page: https://github.com/johny-b/blargh
+Author: Jan Betley
+Author-email: jan.betley@gmail.com
+License: UNKNOWN
+Description: # blargh
+        
+        Generic REST API base.
+        
+        ## Docs
+        
+        You'll find the user guide and the documentation [here](https://blargh.readthedocs.io)
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
