@@ -1,0 +1,8 @@
+README.txt
+setup.py
+requestwrapper/Request.py
+requestwrapper/__init__.py
+requestwrapper.egg-info/PKG-INFO
+requestwrapper.egg-info/SOURCES.txt
+requestwrapper.egg-info/dependency_links.txt
+requestwrapper.egg-info/top_level.txt
