@@ -1,0 +1,11 @@
+tap_zuora/__init__.py,sha256=Wy90jAjRGjTrHH-gHZT6YsTsfwuQE_L5o1Uc_BUKz2I,4412
+tap_zuora/apis.py,sha256=HC92OVYunEfYzzGd9QTBhKSeuwEp53N1WQlmXARceyk,13062
+tap_zuora/client.py,sha256=dEayzzbwfKSojsJaIGm5Rbz3-1OqqQJbrdzx2rab-fU,2982
+tap_zuora/discover.py,sha256=ysCfy9uW-wcSfwS_gdkPmJpoKSmMPfpKE5YOh1zQHeY,5999
+tap_zuora/sync.py,sha256=NwGrC2rDy5I-HvYEjDD-233vbJHp5rsXkR1hwQlH680,10753
+pipelinewise_tap_zuora-1.0.0.dist-info/LICENSE,sha256=N55E4B7ihMVyAnNnROBRnV3XRtNgobMkB9JlqbScCXU,32395
+pipelinewise_tap_zuora-1.0.0.dist-info/METADATA,sha256=b3IWif5MEJNP_FqxfYFsfpX5IMzPxiVSCJk5Wk3uPvs,2145
+pipelinewise_tap_zuora-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pipelinewise_tap_zuora-1.0.0.dist-info/entry_points.txt,sha256=nNrLZ8oyG6K73fyB47-EwOeSPeOEkvG2uVfuOz5Fqsw,70
+pipelinewise_tap_zuora-1.0.0.dist-info/top_level.txt,sha256=VcCQ4ueXAsvxDrzbtoa0L1d3K3n6Zip0ZATGwl3tQDA,10
+pipelinewise_tap_zuora-1.0.0.dist-info/RECORD,,
