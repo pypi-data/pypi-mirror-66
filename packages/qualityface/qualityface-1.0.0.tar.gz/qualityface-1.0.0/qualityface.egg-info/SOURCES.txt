@@ -1,0 +1,11 @@
+README.md
+setup.py
+qualityface/__init__.py
+qualityface/api.py
+qualityface/config.py
+qualityface/models.py
+qualityface.egg-info/PKG-INFO
+qualityface.egg-info/SOURCES.txt
+qualityface.egg-info/dependency_links.txt
+qualityface.egg-info/requires.txt
+qualityface.egg-info/top_level.txt
