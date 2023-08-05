@@ -1,0 +1,8 @@
+staticsql/__init__.py,sha256=8EU65zQO_H6M0o8IBwn6TgCLRiOtMp5jmh3FDt8k85A,503
+staticsql/database.py,sha256=ruAvXriHo5RKFOo7fibgzBgVPUT1DywzvBmoA66ENLQ,4653
+staticsql/file.py,sha256=jb0bB9-u_gELbaLjwexix6wPGSpaoCBAC-dK5rOM7AU,534
+staticsql/sql.py,sha256=Nlc7p0qBdgOzg3xXtPtIEC9_aW2erlwwnn4xBZL36uk,6865
+staticsql-0.9.0.dist-info/METADATA,sha256=xUk_VLk9PZbWVwKP7qYFFHYNmaW0-oJKOcOtmeEUENQ,553
+staticsql-0.9.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+staticsql-0.9.0.dist-info/top_level.txt,sha256=XQjEO7B2gmYJFm38cqgHgJzB7PTq7LE_FsAJ0VGRd2A,10
+staticsql-0.9.0.dist-info/RECORD,,
