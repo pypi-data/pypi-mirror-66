@@ -1,0 +1,13 @@
+deepl_tr_async/__init__.py,sha256=GIsSNU_VNf6e0PN9OgBqsiLOjGAlMPAu_nlZicl_LFA,366
+deepl_tr_async/__main__.py,sha256=BmdH8BIY_Mn8bjFOn37OLAj9qHk1i0WCXoQM8QZoRdM,5498
+deepl_tr_async/deepl_langpair.py,sha256=8AteeR5X4BuS7Df5S0sPms0KOYmuklW7f6mPQjH61xU,4671
+deepl_tr_async/deepl_tr_async.py,sha256=gvNFjgsjVZYa6XUEI7aj1im_rrl_2ItHgHOCCcIsOAE,14665
+deepl_tr_async/detect_lang.py,sha256=OagGQfRFRdG4KZ_XJx48Mlv6oeb4Xpshd4_w_MgbG0g,1429
+deepl_tr_async/google_langpair.py,sha256=OWDjGGgsdWSyge3kZRW7faNGQzAZ-m9fsYSbZ0QVTqY,3737
+deepl_tr_async/google_tr_async.py,sha256=y2agN3yvLTYo2Tq8uLOItDohM4lCSViOJcSLFkiobCc,12244
+deepl_tr_async/load_env.py,sha256=8cDYrPYBPXH9zZoJu-PZ1Fc87KGQghaaOn7BtO3_RCk,821
+deepl_tr_async-0.0.3a0.dist-info/entry_points.txt,sha256=izj6gIZQSF1LNN9po-_1M-VGlQ8W05cpshg3HPkMC1M,57
+deepl_tr_async-0.0.3a0.dist-info/LICENSE,sha256=bbHPUVqWKddgoeO4Cl0-S4Y60O7vbLX51GSgBTnpDww,1064
+deepl_tr_async-0.0.3a0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+deepl_tr_async-0.0.3a0.dist-info/METADATA,sha256=1xX0Rg3NDvb-NQUiRw3-S1vRbFHJhVHO8YSCR8nDTS0,4152
+deepl_tr_async-0.0.3a0.dist-info/RECORD,,
