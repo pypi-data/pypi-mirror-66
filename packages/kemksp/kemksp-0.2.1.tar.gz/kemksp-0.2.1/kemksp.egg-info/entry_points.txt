@@ -1,0 +1,3 @@
+[console_scripts]
+kem = kemksp.kemterminal:main
+

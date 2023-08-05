@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+data.json
+setup.py
+kemksp/__init__.py
+kemksp/config.json
+kemksp/kemterminal.py
+kemksp.egg-info/PKG-INFO
+kemksp.egg-info/SOURCES.txt
+kemksp.egg-info/dependency_links.txt
+kemksp.egg-info/entry_points.txt
+kemksp.egg-info/top_level.txt
