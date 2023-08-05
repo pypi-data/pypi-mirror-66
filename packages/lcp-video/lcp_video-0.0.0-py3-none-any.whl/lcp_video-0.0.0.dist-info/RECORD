@@ -1,0 +1,17 @@
+lcp_video/__init__.py,sha256=2A6GriggdOT_0cWFiEr1cVk3niegocCEdgF_1a5zl_A,180
+lcp_video/_version.py,sha256=R7wCIBY2GI_4bzTVa6Fc6idiNM1gXurxlZx1XQeLpdk,497
+lcp_video/analysis.py,sha256=pPwdZ3HfnQnikfw8UqGsqb-w48qXdf27DL_LXVMSHIg,10613
+lcp_video/audio.py,sha256=fiiqNjqxPkRCqYgsr54TzUuKYHtt0L0TIP_13xODoy8,31
+lcp_video/plotting.py,sha256=lI8QcPClyPSQihLJTCxGrNXXlv0EyZtUtsHgCiz0nT4,25
+lcp_video/video.py,sha256=ZqhJVsk7yC460StvWTfErgAOe_hz5DBn6-sAWBUwyLg,3685
+lcp_video/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lcp_video/tests/conftest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lcp_video/tests/test_examples.py,sha256=Hm1x01HZ9BiYYw4dS44uo0o_ku16oFRwSMjIh8_Uu-s,99
+lcp_video/tests/test_video.py,sha256=TYG8SXQBPxzY0_AfbHeAC_c3gKspyLm_dg3wCzzCq3E,706
+lcp_video-0.0.0.dist-info/AUTHORS.rst,sha256=8MTaREP10UEUcl-xyiaAxHKLi-Y51YqVhYm2GHxcWu8,179
+lcp_video-0.0.0.dist-info/LICENSE,sha256=2iCV8c53cz5VRdyLEPjrBa15X1dAXNEiT1dVEpo54Q0,1528
+lcp_video-0.0.0.dist-info/METADATA,sha256=SUiiRijzGlIMLYCS3nwJJx7kPVZ3vdKSdtV7U5kuWMA,1016
+lcp_video-0.0.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+lcp_video-0.0.0.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+lcp_video-0.0.0.dist-info/top_level.txt,sha256=jIKcSGEF9GjSWiD9f2X8MOV7KK-YCYllRtvM2Srzuas,10
+lcp_video-0.0.0.dist-info/RECORD,,
