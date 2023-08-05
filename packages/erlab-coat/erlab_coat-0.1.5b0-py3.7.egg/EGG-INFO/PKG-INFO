@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: erlab-coat
+Version: 0.1.5b0
+Summary: COAT: COVID-19 Statistical Analytics
+Home-page: https://github.com/shayanfazeli/coat
+Author: Shayan Fazeli
+Author-email: shayan@cs.ucla.edu
+License: Apache
+Description: UNKNOWN
+Keywords: machine learning,covid19,coronavirus,deep learning,inference
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >3.6.0

@@ -1,0 +1,13 @@
+pandas==0.25.3
+numpy>=1.16.4
+numpydoc>=0.9.1
+sklearn>=0.0
+matplotlib>=3.1.1
+dataflame>=1.0.4b0
+plauthor>=0.1.3b0
+gputil>=1.4.0
+wordcloud==1.5.0
+TwitterSearch==1.0.2
+scikit-misc==0.1.1
+plotnine==0.5.1
+matplotlib==3.1.1

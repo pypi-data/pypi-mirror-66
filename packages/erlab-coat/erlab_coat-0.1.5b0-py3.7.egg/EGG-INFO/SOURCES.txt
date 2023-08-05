@@ -1,0 +1,13 @@
+setup.py
+erlab_coat/__init__.py
+erlab_coat/meta.py
+erlab_coat/plots.py
+erlab_coat/preprocessing.py
+erlab_coat/statistics.py
+erlab_coat/twitter.py
+erlab_coat.egg-info/PKG-INFO
+erlab_coat.egg-info/SOURCES.txt
+erlab_coat.egg-info/dependency_links.txt
+erlab_coat.egg-info/not-zip-safe
+erlab_coat.egg-info/requires.txt
+erlab_coat.egg-info/top_level.txt
