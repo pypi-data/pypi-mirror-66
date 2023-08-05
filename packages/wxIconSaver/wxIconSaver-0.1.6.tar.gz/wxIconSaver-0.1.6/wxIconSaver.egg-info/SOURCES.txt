@@ -1,0 +1,11 @@
+MANIFEST.in
+README.rst
+__pkginfo__.py
+setup.py
+wxIconSaver.desktop
+wxIconSaver.py
+wxIconSaver.egg-info/PKG-INFO
+wxIconSaver.egg-info/SOURCES.txt
+wxIconSaver.egg-info/dependency_links.txt
+wxIconSaver.egg-info/entry_points.txt
+wxIconSaver.egg-info/top_level.txt
