@@ -1,0 +1,4 @@
+#!/usr/bin/env python
+import surk
+print("bin/surk çağırıldı.")
+surk.main()
