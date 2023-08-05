@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: hipims-io
+Version: 0.2.8.4
+Summary: To process input and output files of the HiPIMS model
+Home-page: https://github.com/mingxiaodong/hipims_io_py_package
+Author: Xiaodong Ming
+Author-email: xiaodong.ming@outlook.com
+License: LICENSE.txt
+Keywords: hipims model IO
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+hipims_io
+--------
+Python code to process input and output files of [HiPIMS flood model](https://github.com/xiaxilin/hipims). This code follows [Google Python Style Guide](http://google.github.io/styleguide/pyguide.html).
+
+Python version: >=3.6.
+
+To install hipims_io:
+```
+pip install hipims_io
+```
+A demonstration to setup a HiPIMS input object with a sample DEM:
+```
+>>> import hipims_io as hp
+>>> obj_in = hp.demo_input() # create an input object and show
+```
+
+To setup an input object for HiPIMS, you will need at least a DEM file and do:
+```
+>>> from hipims_io import InputHipims
+>>> obj_in = InputHipims(dem_data='your_file.asc') # create object
+>>> obj_in.domain_show() # show domain map
+>>> print(obj_in) # print model summary
+>>> obj_in.write_input_files() # write all input files for HiPIMS
+```
+
