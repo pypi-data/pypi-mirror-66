@@ -1,0 +1,11 @@
+LICENSE.md
+pyproject.toml
+setup.cfg
+setup.py
+wegift/__init__.py
+wegift.egg-info/PKG-INFO
+wegift.egg-info/SOURCES.txt
+wegift.egg-info/dependency_links.txt
+wegift.egg-info/namespace_packages.txt
+wegift.egg-info/requires.txt
+wegift.egg-info/top_level.txt

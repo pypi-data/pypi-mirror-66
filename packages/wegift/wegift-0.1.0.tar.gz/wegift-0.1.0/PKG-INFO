@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: wegift
+Version: 0.1.0
+Summary: Namespace package
+Home-page: https://gitlab.com/wegift
+Author: WeGift
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: test
