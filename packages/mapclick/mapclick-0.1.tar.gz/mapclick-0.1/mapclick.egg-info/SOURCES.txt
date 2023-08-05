@@ -1,0 +1,7 @@
+setup.py
+mapclick.egg-info/PKG-INFO
+mapclick.egg-info/SOURCES.txt
+mapclick.egg-info/dependency_links.txt
+mapclick.egg-info/not-zip-safe
+mapclick.egg-info/requires.txt
+mapclick.egg-info/top_level.txt
