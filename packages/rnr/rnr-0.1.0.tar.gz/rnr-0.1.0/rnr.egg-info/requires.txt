@@ -1,0 +1,4 @@
+urwid
+fuzzyfinder
+atomicwrites
+pyxdg
