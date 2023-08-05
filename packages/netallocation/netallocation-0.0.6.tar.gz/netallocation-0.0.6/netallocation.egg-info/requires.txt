@@ -1,0 +1,16 @@
+pypsa
+pandas
+pyyaml
+xarray
+progressbar2
+sparse
+dask
+h5py
+scipy
+geopandas
+pyyaml
+netcdf4
+
+[docs]
+sphinx>=1.4
+sphinx_rtd_theme
