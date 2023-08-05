@@ -1,0 +1,6 @@
+pydantic_gen/__init__.py,sha256=_S6aFnJycm9vdDH-Ez771vEqpS7bU0MnpJnoYzYj7JM,29
+pydantic_gen/main.py,sha256=UTW4iWX3em6NJs8TSX7IXlXXtqf3lSPFjCGEl1Ghe9Q,2651
+pydantic_gen/templates.yml,sha256=2s7p1xdhUNHQ1TxzLbiGd0xFnW17J9ADDKrBwmhYdrw,216
+pydantic_gen-0.2.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+pydantic_gen-0.2.0.dist-info/METADATA,sha256=JU1msIGBYv7lGFz9wniVLY8aIS7wBZ1lYckRyg8ufNg,2900
+pydantic_gen-0.2.0.dist-info/RECORD,,
