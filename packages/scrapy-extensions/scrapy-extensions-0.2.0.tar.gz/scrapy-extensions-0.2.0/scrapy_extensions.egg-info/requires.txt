@@ -1,0 +1,12 @@
+pytility
+jmespath
+Scrapy
+Twisted
+w3lib
+
+[articles]
+html2text
+readability-lxml
+
+[geo]
+python-geohash
