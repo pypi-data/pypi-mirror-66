@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: hubspot-api-client
+Version: 1.0.0b0
+Summary: HubSpot API client
+Home-page: https://github.com/HubSpot/hubspot-api-python
+Author: HubSpot
+Author-email: support@hubspot.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.4
