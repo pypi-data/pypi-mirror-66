@@ -1,0 +1,12 @@
+swimbundle_utils/__init__.py,sha256=4DRXBcpROtb2L2mHPbrHWb1eLQ3dlQd8U6085SQB6aM,245
+swimbundle_utils/exceptions.py,sha256=eMlk8MYLat-yYqDd1AkcuP1ytVIeRgenM4kB96k3ElY,3425
+swimbundle_utils/flattener.py,sha256=XTTJ2qlbiO_jWWpo5CAbzCZHZ9s8KuDXkr_P8NumkpU,23134
+swimbundle_utils/helpers.py,sha256=pYVQ91RGlLBG9XMFutHswzhjguAzt7c7LciVC85Xx4M,13677
+swimbundle_utils/ioc.py,sha256=9PTmf8m9652nNNEepkswBgWoqrWa-65aJ7nTbw1HV8A,15490
+swimbundle_utils/rest.py,sha256=w7ECzVqpeVNLVpOpa4NrD0gV_9FObzY0lnlY-NSgjo4,12525
+swimbundle_utils/validation.py,sha256=V7_GPpZCd0piJC2oYF5N3e24ijzmuKSFqyHIJ8PC5RE,8351
+swimbundle_utils/data/tld_list.json,sha256=zx8X9SnE86KHRD6XdqBTf1foNE-V8lJIT_PFePjfNOs,19199
+swimbundle_utils-2.4.12.dist-info/METADATA,sha256=pEr3hAKU0p3zwsv8IRtE5lJssDmrdhrAploW3nzhxEA,646
+swimbundle_utils-2.4.12.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+swimbundle_utils-2.4.12.dist-info/top_level.txt,sha256=C54NN-0jxj-7-0SI-2tPqbasD_6QO7HbqmHheLOupI8,17
+swimbundle_utils-2.4.12.dist-info/RECORD,,
