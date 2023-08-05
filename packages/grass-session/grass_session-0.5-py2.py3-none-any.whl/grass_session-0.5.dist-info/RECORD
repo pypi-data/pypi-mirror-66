@@ -1,0 +1,17 @@
+grass_session/__init__.py,sha256=zs8be2KQpadfHBoRNgvwf5G1hldZJwwVAyJXbDPd6jY,324
+grass_session/session.py,sha256=zt_f1yj6fbiodYI7S7DuI9FWQRl9IHIbaOqfBgpBnCw,17597
+grass_session/session_works.py,sha256=L5lNMuFt-5a429P_Bzp7PqsPy8WxfE_9Cefx43F2tCU,13819
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/grassbin_test.py,sha256=SfMz6kXU_4UuY9KCM5xsCSkWtMQLEq59MJHB4IcktnA,1341
+tests/platformname_test.py,sha256=mpxMZrPwyBpNX-s38ZEk9yxfsjUHlQzIi1_IJBJWq1Q,1713
+tests/session_test.py,sha256=c9-Xn6tcaH71Ik19uUpaJ1txcowznToif8UNWMBZA58,6938
+tests/test_no_with.py,sha256=QP2m1kakj7TwMMFEeXlXpYmNEOWeKDhkTuDRQQt5M2M,1884
+tests/test_platformname.py,sha256=6QhbJdXsSjpRQrtHYrXqosWCHtbOus4ppfWZFbTG41g,1595
+tests/test_session.py,sha256=_0O9wikFIuroTZ65I84tERU6TLHcNEmnGIhDjMoNEx8,5014
+tests/test_with.py,sha256=zkvQ8ZiOlyEroGH9TsBJkq1dg_VTe3t5Pb9UVEYnC4g,1818
+tests/tst_tif.py,sha256=CwKDHr8Jbc5oMdl_W1wTo0sHkVaqmiNxHdmffHWLyao,645
+grass_session-0.5.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+grass_session-0.5.dist-info/METADATA,sha256=LturomNj4ofsMIyGo5yYP1GBPcyFikRdgkFMbnbvoZA,2520
+grass_session-0.5.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+grass_session-0.5.dist-info/top_level.txt,sha256=UhvEWsRGnzYBZQOLZatoMVSHkFVjUJ5WqSSrSuWFjl0,20
+grass_session-0.5.dist-info/RECORD,,
