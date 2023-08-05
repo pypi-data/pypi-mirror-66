@@ -1,0 +1,7 @@
+pip install sphinx
+# apidoc generate
+~$ sphinx-apidoc -f -d 10 -o docs/apidocs/ rdflib examples
+
+# HTML generate
+~$ sphinx-build -b html docs html
+# last command puts docs in HTML into rdflib/html/
