@@ -1,0 +1,18 @@
+glados:
+  import_bots: yes
+  bots_config_folder: tests/bots_config
+  plugins_config_folder: tests/plugins_config
+  plugins_folder: tests/plugins
+  logging_format: "%(levelname)-8s :: [ %(module)s.%(funcName)s:%(lineno)s ] %(message)s"
+  logging_level: DEBUG
+
+datastore:
+  enabled: false
+  host:
+    env_var: POSTGRES_HOST
+
+my_other_config:
+  log: yes
+  force_quit: no
+  delay: 3
+  last_message: Goodbye! Have a good day
