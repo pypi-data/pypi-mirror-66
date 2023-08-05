@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+admin_wizard/__init__.py
+admin_wizard/admin.py
+admin_wizard/forms.py
+admin_wizard/models.py
+admin_wizard/tests.py
+django_admin_wizard.egg-info/PKG-INFO
+django_admin_wizard.egg-info/SOURCES.txt
+django_admin_wizard.egg-info/dependency_links.txt
+django_admin_wizard.egg-info/requires.txt
+django_admin_wizard.egg-info/top_level.txt
