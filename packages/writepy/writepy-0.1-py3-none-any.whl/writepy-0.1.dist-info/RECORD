@@ -1,0 +1,11 @@
+writepy/__init__.py,sha256=4PpuIv6k45sWCN_ip88O49jgOXbqla3PlmcJu2HmskY,106
+writepy/code.py,sha256=D1VtiHjc_RdOeJh4MLLq1MsgH0RjJ1_g5iqhrOdxATk,2053
+writepy/dummy.py,sha256=k54dnaYuTwCEunlg2DKymkjHBtjJoV5HUq-CnZSMsHg,601
+writepy/matcher.py,sha256=SR0r9EzGC6CRdJQoSe_LA8ZNDB1X-cmWXvUnJqMJHVg,1706
+writepy/meta.py,sha256=w1MgsuuA3q1i5GB7W0jUAjkia-OKHU77bSoRxcacaxs,2713
+writepy-0.1.dist-info/LICENSE,sha256=ONDYNv3llJjcYUKz7kHAXdp8E1-3OWegz7FsoGy6smM,1120
+writepy-0.1.dist-info/METADATA,sha256=KiwRSrvwCm76fVu3UzCTfNzO2yE2GXh2fNMk_T04T8o,1798
+writepy-0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+writepy-0.1.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+writepy-0.1.dist-info/top_level.txt,sha256=vY73hJ40fZKsasTTJuND-qeroBgsb6kttWT2zFYCtA8,8
+writepy-0.1.dist-info/RECORD,,
