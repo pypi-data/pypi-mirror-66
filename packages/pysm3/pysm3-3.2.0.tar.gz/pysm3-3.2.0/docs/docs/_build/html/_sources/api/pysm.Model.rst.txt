@@ -1,0 +1,21 @@
+Model
+=====
+
+.. currentmodule:: pysm
+
+.. autoclass:: Model
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~Model.get_emission
+      ~Model.read_map
+      ~Model.read_txt
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_emission
+   .. automethod:: read_map
+   .. automethod:: read_txt

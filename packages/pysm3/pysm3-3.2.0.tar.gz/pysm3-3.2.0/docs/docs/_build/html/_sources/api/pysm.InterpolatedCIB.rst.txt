@@ -1,0 +1,19 @@
+InterpolatedCIB
+===============
+
+.. currentmodule:: pysm
+
+.. autoclass:: InterpolatedCIB
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~InterpolatedCIB.get_emission
+      ~InterpolatedCIB.read_metadata
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_emission
+   .. automethod:: read_metadata

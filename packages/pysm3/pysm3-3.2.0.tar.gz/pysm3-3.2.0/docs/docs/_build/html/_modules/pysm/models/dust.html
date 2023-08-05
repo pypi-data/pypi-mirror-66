@@ -1,0 +1,460 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pysm.models.dust &#8212; pysm v3.1.dev260</title>
+    <link rel="stylesheet" href="../../../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <script type="text/javascript" src="../../../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../../../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../../../index.html"><span id="logotext1">pysm</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../../../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../../../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li>
+	<a href="../../../index.html">pysm v3.1.dev260</a>
+	 &#187;
+      </li>
+      <li><a href="../../index.html" >Module code</a> &#187;</li>
+      <li><a href="../../pysm.html" accesskey="U">pysm</a> &#187;</li>
+      
+       
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for pysm.models.dust</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">.template</span> <span class="kn">import</span> <span class="n">Model</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">njit</span>
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">constants</span> <span class="k">as</span> <span class="n">const</span>
+
+
+<div class="viewcode-block" id="ModifiedBlackBody"><a class="viewcode-back" href="../../../api/pysm.ModifiedBlackBody.html#pysm.ModifiedBlackBody">[docs]</a><span class="k">class</span> <span class="nc">ModifiedBlackBody</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; This is a model for modified black body emission.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    I_ref, Q_ref, U_ref: ndarray</span>
+<span class="sd">        Arrays containing the intensity or polarization reference</span>
+<span class="sd">        templates at frequency `freq_ref_I` or `freq_ref_P`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">map_I</span><span class="p">,</span>
+        <span class="n">map_Q</span><span class="p">,</span>
+        <span class="n">map_U</span><span class="p">,</span>
+        <span class="n">freq_ref_I</span><span class="p">,</span>
+        <span class="n">freq_ref_P</span><span class="p">,</span>
+        <span class="n">map_mbb_index</span><span class="p">,</span>
+        <span class="n">map_mbb_temperature</span><span class="p">,</span>
+        <span class="n">nside</span><span class="p">,</span>
+        <span class="n">has_polarization</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">unit_I</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">unit_Q</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">unit_U</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">unit_mbb_temperature</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; This function initializes the modified black body model.</span>
+
+<span class="sd">        The initialization of this model consists of reading in emission</span>
+<span class="sd">        templates from file, reading in spectral parameter maps from</span>
+<span class="sd">        file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        map_I, map_Q, map_U: `pathlib.Path` object</span>
+<span class="sd">            Paths to the maps to be used as I, Q, U templates.</span>
+<span class="sd">        unit_* : string or Unit</span>
+<span class="sd">            Unit string or Unit object for all input FITS maps, if None, the input file</span>
+<span class="sd">            should have a unit defined in the FITS header.</span>
+<span class="sd">        freq_ref_I, freq_ref_P: Quantity or string</span>
+<span class="sd">            Reference frequencies at which the intensity and polarization</span>
+<span class="sd">            templates are defined. They should be a astropy Quantity object</span>
+<span class="sd">            or a string (e.g. &quot;1500 MHz&quot;) compatible with GHz.</span>
+<span class="sd">        map_mbb_index: `pathlib.Path` object or scalar value</span>
+<span class="sd">            Path to the map to be used as the power law index for the dust</span>
+<span class="sd">            opacity in a modified blackbody model, for a constant value use</span>
+<span class="sd">            a float or an integer</span>
+<span class="sd">        map_mbb_temperature: `pathlib.Path` object or scalar</span>
+<span class="sd">            Path to the map to be used as the temperature of the dust in a</span>
+<span class="sd">            modified blackbody model. For a constant value use a float or an</span>
+<span class="sd">            integer</span>
+<span class="sd">        nside: int</span>
+<span class="sd">            Resolution parameter at which this model is to be calculated.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span> <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">)</span>
+        <span class="c1"># do model setup</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">I_ref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">map_I</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">unit_I</span><span class="p">)</span>
+        <span class="c1"># This does unit conversion in place so we do not copy the data</span>
+        <span class="c1"># we do not keep the original unit because otherwise we would need</span>
+        <span class="c1"># to make a copy of the array when we run the model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">I_ref</span> <span class="o">&lt;&lt;=</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">freq_ref_I</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">freq_ref_I</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">has_polarization</span> <span class="o">=</span> <span class="n">has_polarization</span>
+        <span class="k">if</span> <span class="n">has_polarization</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Q_ref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">map_Q</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">unit_Q</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Q_ref</span> <span class="o">&lt;&lt;=</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">U_ref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">map_U</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">unit_U</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">U_ref</span> <span class="o">&lt;&lt;=</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">freq_ref_P</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">freq_ref_P</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mbb_index</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">map_mbb_index</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">map_mbb_index</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">))</span>
+            <span class="k">else</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">map_mbb_index</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mbb_temperature</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">map_mbb_temperature</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">unit_mbb_temperature</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">map_mbb_temperature</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">))</span>
+            <span class="k">else</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">map_mbb_temperature</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">unit_mbb_temperature</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mbb_temperature</span> <span class="o">&lt;&lt;=</span> <span class="n">u</span><span class="o">.</span><span class="n">K</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nside</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nside</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ModifiedBlackBody.get_emission"><a class="viewcode-back" href="../../../api/pysm.ModifiedBlackBody.html#pysm.ModifiedBlackBody.get_emission">[docs]</a>    <span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span>
+    <span class="k">def</span> <span class="nf">get_emission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freqs</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">:</span>
+        <span class="n">freqs</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">check_freq_input</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">normalize_weights</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="n">get_emission_numba</span><span class="p">(</span>
+            <span class="n">freqs</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="n">weights</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">I_ref</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Q_ref</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">U_ref</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">freq_ref_I</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">freq_ref_P</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mbb_index</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mbb_temperature</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">outputs</span> <span class="o">&lt;&lt;</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span></div></div>
+
+
+<span class="nd">@njit</span><span class="p">(</span><span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_emission_numba</span><span class="p">(</span>
+    <span class="n">freqs</span><span class="p">,</span>
+    <span class="n">weights</span><span class="p">,</span>
+    <span class="n">I_ref</span><span class="p">,</span>
+    <span class="n">Q_ref</span><span class="p">,</span>
+    <span class="n">U_ref</span><span class="p">,</span>
+    <span class="n">freq_ref_I</span><span class="p">,</span>
+    <span class="n">freq_ref_P</span><span class="p">,</span>
+    <span class="n">mbb_index</span><span class="p">,</span>
+    <span class="n">mbb_temperature</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">I_ref</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">I_ref</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">I_ref</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">I_ref</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">output</span>
+
+    <span class="n">I</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">U</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">)):</span>
+        <span class="n">temp</span><span class="p">[</span><span class="n">I</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">I_ref</span>
+        <span class="n">temp</span><span class="p">[</span><span class="n">Q</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">Q_ref</span>
+        <span class="n">temp</span><span class="p">[</span><span class="n">U</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">U_ref</span>
+        <span class="n">temp</span><span class="p">[</span><span class="n">I</span><span class="p">]</span> <span class="o">*=</span> <span class="p">(</span><span class="n">freq</span> <span class="o">/</span> <span class="n">freq_ref_I</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="n">mbb_index</span> <span class="o">-</span> <span class="mf">2.0</span><span class="p">)</span>
+        <span class="n">temp</span><span class="p">[</span><span class="n">Q</span><span class="p">:]</span> <span class="o">*=</span> <span class="p">(</span><span class="n">freq</span> <span class="o">/</span> <span class="n">freq_ref_P</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="n">mbb_index</span> <span class="o">-</span> <span class="mf">2.0</span><span class="p">)</span>
+        <span class="n">temp</span><span class="p">[</span><span class="n">I</span><span class="p">]</span> <span class="o">*=</span> <span class="n">blackbody_ratio</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">freq_ref_I</span><span class="p">,</span> <span class="n">mbb_temperature</span><span class="p">)</span>
+        <span class="n">temp</span><span class="p">[</span><span class="n">Q</span><span class="p">:]</span> <span class="o">*=</span> <span class="n">blackbody_ratio</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">freq_ref_P</span><span class="p">,</span> <span class="n">mbb_temperature</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">utils</span><span class="o">.</span><span class="n">trapz_step_inplace</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">temp</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">output</span>
+
+
+<div class="viewcode-block" id="DecorrelatedModifiedBlackBody"><a class="viewcode-back" href="../../../api/pysm.DecorrelatedModifiedBlackBody.html#pysm.DecorrelatedModifiedBlackBody">[docs]</a><span class="k">class</span> <span class="nc">DecorrelatedModifiedBlackBody</span><span class="p">(</span><span class="n">ModifiedBlackBody</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">map_I</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">map_Q</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">map_U</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">freq_ref_I</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">freq_ref_P</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">map_mbb_index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">map_mbb_temperature</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">nside</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">pixel_indices</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">mpi_comm</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">correlation_length</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; See parent class for other documentation.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        correlation_length: float</span>
+<span class="sd">            This number set the scale in logarithmic space for the distance in</span>
+<span class="sd">            freuqency past which the MBB emission becomes decorrelated. For</span>
+<span class="sd">            frequencies much much closer than this distance, the emission is</span>
+<span class="sd">            well correlated.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">map_I</span><span class="p">,</span>
+            <span class="n">map_Q</span><span class="p">,</span>
+            <span class="n">map_U</span><span class="p">,</span>
+            <span class="n">freq_ref_I</span><span class="p">,</span>
+            <span class="n">freq_ref_P</span><span class="p">,</span>
+            <span class="n">map_mbb_index</span><span class="p">,</span>
+            <span class="n">map_mbb_temperature</span><span class="p">,</span>
+            <span class="n">nside</span><span class="p">,</span>
+            <span class="n">pixel_indices</span><span class="o">=</span><span class="n">pixel_indices</span><span class="p">,</span>
+            <span class="n">mpi_comm</span><span class="o">=</span><span class="n">mpi_comm</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">correlation_length</span> <span class="o">=</span> <span class="n">correlation_length</span>
+
+<div class="viewcode-block" id="DecorrelatedModifiedBlackBody.get_emission"><a class="viewcode-back" href="../../../api/pysm.DecorrelatedModifiedBlackBody.html#pysm.DecorrelatedModifiedBlackBody.get_emission">[docs]</a>    <span class="k">def</span> <span class="nf">get_emission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freqs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Function to calculate the emission of a decorrelated modified black</span>
+<span class="sd">        body model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">freqs</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">check_freq_input</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>
+        <span class="c1"># calculate the decorrelation</span>
+        <span class="p">(</span><span class="n">rho_cov_I</span><span class="p">,</span> <span class="n">rho_mean_I</span><span class="p">)</span> <span class="o">=</span> <span class="n">get_decorrelation_matrix</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">freq_ref_I</span><span class="p">,</span> <span class="n">freqs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">correlation_length</span>
+        <span class="p">)</span>
+        <span class="p">(</span><span class="n">rho_cov_P</span><span class="p">,</span> <span class="n">rho_mean_P</span><span class="p">)</span> <span class="o">=</span> <span class="n">get_decorrelation_matrix</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">freq_ref_P</span><span class="p">,</span> <span class="n">freqs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">correlation_length</span>
+        <span class="p">)</span>
+        <span class="n">nfreqs</span> <span class="o">=</span> <span class="n">freqs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">extra_I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">rho_cov_I</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">nfreqs</span><span class="p">))</span>
+        <span class="n">extra_P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">rho_cov_P</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">nfreqs</span><span class="p">))</span>
+        <span class="n">decorr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">nfreqs</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="n">decorr</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">rho_mean_I</span> <span class="o">+</span> <span class="n">extra_I</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">decorr</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">rho_mean_P</span> <span class="o">+</span> <span class="n">extra_P</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">decorr</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">rho_mean_P</span> <span class="o">+</span> <span class="n">extra_P</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="c1"># apply the decorrelation to the mbb_emission</span>
+        <span class="k">return</span> <span class="n">decorr</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_emission</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span></div></div>
+
+
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span><span class="n">freqs</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span> <span class="n">correlation_length</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless_unscaled</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">frequency_decorr_model</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">correlation_length</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">u</span><span class="o">.</span><span class="n">dimensionless_unscaled</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Function to calculate the frequency decorrelation method of</span>
+<span class="sd">    Vansyngel+17.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">log_dep</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">freqs</span><span class="p">[:,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">/</span> <span class="n">freqs</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:])</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">log_dep</span> <span class="o">/</span> <span class="n">correlation_length</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+
+<span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span><span class="p">(</span>
+    <span class="n">freq_constrained</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+    <span class="n">freqs_constrained</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span>
+    <span class="n">correlation_length</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">dimensionless_unscaled</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_decorrelation_matrix</span><span class="p">(</span>
+    <span class="n">freq_constrained</span><span class="p">,</span> <span class="n">freqs_unconstrained</span><span class="p">,</span> <span class="n">correlation_length</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">u</span><span class="o">.</span><span class="n">dimensionless_unscaled</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Function to calculate the correlation matrix between observed</span>
+<span class="sd">    frequencies. This model is based on the proposed model for decorrelation</span>
+<span class="sd">    of Vanyngel+17. The proposed frequency covariance matrix in this paper</span>
+<span class="sd">    is implemented, and a constrained Gaussian realization for the unobserved</span>
+<span class="sd">    frequencies is calculated.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    For a derivation see 1109.0286.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    freq_constrained: float</span>
+<span class="sd">        Reference frequency.</span>
+<span class="sd">    freqs_unconstrained: ndarray</span>
+<span class="sd">        Frequencies at which to calculate the correlation matrix.</span>
+<span class="sd">    correlation_length: float</span>
+<span class="sd">         Parameter controlling the structure of the frequency covariance matrix.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ndarray</span>
+<span class="sd">        Frequency covariance matrix used to calculate a constrained realization.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">correlation_length</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">freqs_unconstrained</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span>
+    <span class="n">freq_constrained</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">check_freq_input</span><span class="p">(</span><span class="n">freq_constrained</span><span class="p">)</span>
+    <span class="n">freqs_all</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">freqs_unconstrained</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">freq_constrained</span><span class="p">)</span>
+    <span class="n">indref</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">freqs_all</span> <span class="o">==</span> <span class="n">freq_constrained</span><span class="p">)</span>
+    <span class="n">corrmatrix</span> <span class="o">=</span> <span class="n">frequency_decorr_model</span><span class="p">(</span><span class="n">freqs_all</span><span class="p">,</span> <span class="n">correlation_length</span><span class="p">)</span>
+    <span class="n">rho_inv</span> <span class="o">=</span> <span class="n">invert_safe</span><span class="p">(</span><span class="n">corrmatrix</span><span class="p">)</span>
+    <span class="n">rho_uu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">rho_inv</span><span class="p">,</span> <span class="n">indref</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">indref</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">rho_uu</span> <span class="o">=</span> <span class="n">invert_safe</span><span class="p">(</span><span class="n">rho_uu</span><span class="p">)</span>
+    <span class="n">rho_inv_cu</span> <span class="o">=</span> <span class="n">rho_inv</span><span class="p">[:,</span> <span class="n">indref</span><span class="p">]</span>
+    <span class="n">rho_inv_cu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">rho_inv_cu</span><span class="p">,</span> <span class="n">indref</span><span class="p">)]))</span>
+    <span class="c1"># get eigenvalues, w, and eigenvectors in matrix, v.</span>
+    <span class="n">rho_uu_w</span><span class="p">,</span> <span class="n">rho_uu_v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">rho_uu</span><span class="p">)</span>
+    <span class="c1"># reconstruct covariance matrix using only positive eigenvalues. Take</span>
+    <span class="c1"># square root as we use this to draw directly the pixels (sigma).</span>
+    <span class="n">evals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">rho_uu_w</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">rho_uu_w</span><span class="p">))))</span>
+    <span class="n">rho_covar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">rho_uu_v</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">evals</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">rho_uu_v</span><span class="p">)))</span>
+    <span class="n">rho_mean</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">rho_uu</span><span class="p">,</span> <span class="n">rho_inv_cu</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">rho_covar</span><span class="p">,</span> <span class="n">rho_mean</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">invert_safe</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Function to safely invert almost positive definite matrix.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    matrix: ndarray</span>
+<span class="sd">        matrix to invert.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ndaray</span>
+<span class="sd">        inverted matrix.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mb</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">w_ok</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">w_ok</span><span class="p">:</span>
+        <span class="n">w</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">mb</span><span class="p">)</span>
+        <span class="n">wmin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">wmin</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">w_ok</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">mb</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">([</span><span class="mf">1e-14</span><span class="p">,</span> <span class="o">-</span><span class="n">wmin</span><span class="p">])</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mb</span><span class="p">)))</span>
+    <span class="n">winv</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">w</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">winv</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">v</span><span class="p">)))</span>
+
+
+<span class="nd">@njit</span>
+<span class="k">def</span> <span class="nf">blackbody_ratio</span><span class="p">(</span><span class="n">freq_to</span><span class="p">,</span> <span class="n">freq_from</span><span class="p">,</span> <span class="n">temp</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Function to calculate the flux ratio between two frequencies for a</span>
+<span class="sd">    blackbody at a given temperature.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    freq_to: float</span>
+<span class="sd">        Frequency to which to scale assuming black body SED.</span>
+<span class="sd">    freq_from: float</span>
+<span class="sd">        Frequency from which to scale assuming black body SED.</span>
+<span class="sd">    temp: float</span>
+<span class="sd">        Temperature of the black body.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float</span>
+<span class="sd">        Black body ratio between `freq_to` and `freq_from` at temperature</span>
+<span class="sd">        `temp`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">blackbody_nu</span><span class="p">(</span><span class="n">freq_to</span><span class="p">,</span> <span class="n">temp</span><span class="p">)</span> <span class="o">/</span> <span class="n">blackbody_nu</span><span class="p">(</span><span class="n">freq_from</span><span class="p">,</span> <span class="n">temp</span><span class="p">)</span>
+
+
+<span class="n">h</span> <span class="o">=</span> <span class="n">const</span><span class="o">.</span><span class="n">h</span><span class="o">.</span><span class="n">value</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">const</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">value</span>
+<span class="n">k_B</span> <span class="o">=</span> <span class="n">const</span><span class="o">.</span><span class="n">k_B</span><span class="o">.</span><span class="n">value</span>
+
+
+<span class="nd">@njit</span>
+<span class="k">def</span> <span class="nf">blackbody_nu</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">temp</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Calculate blackbody flux per steradian, :math:`B_{\\nu}(T)`.</span>
+
+<span class="sd">    .. note::</span>
+
+<span class="sd">        Use `numpy.errstate` to suppress Numpy warnings, if desired.</span>
+
+<span class="sd">    .. warning::</span>
+
+<span class="sd">        Output values might contain ``nan`` and ``inf``.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    in_x : number, array-like, or `~astropy.units.Quantity`</span>
+<span class="sd">        Frequency, wavelength, or wave number.</span>
+<span class="sd">        If not a Quantity, it is assumed to be in Hz.</span>
+
+<span class="sd">    temperature : number, array-like, or `~astropy.units.Quantity`</span>
+<span class="sd">        Blackbody temperature.</span>
+<span class="sd">        If not a Quantity, it is assumed to be in Kelvin.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    flux : `~astropy.units.Quantity`</span>
+<span class="sd">        Blackbody monochromatic flux in</span>
+<span class="sd">        :math:`erg \\; cm^{-2} s^{-1} Hz^{-1} sr^{-1}`.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    ValueError</span>
+<span class="sd">        Invalid temperature.</span>
+
+<span class="sd">    ZeroDivisionError</span>
+<span class="sd">        Wavelength is zero (when converting to frequency).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">log_boltz</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">freq</span> <span class="o">*</span> <span class="mf">1e9</span> <span class="o">/</span> <span class="p">(</span><span class="n">k_B</span> <span class="o">*</span> <span class="n">temp</span><span class="p">)</span>
+    <span class="n">boltzm1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expm1</span><span class="p">(</span><span class="n">log_boltz</span><span class="p">)</span>
+
+    <span class="c1"># Calculate blackbody flux</span>
+    <span class="n">bb_nu</span> <span class="o">=</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">h</span> <span class="o">*</span> <span class="p">(</span><span class="n">freq</span> <span class="o">*</span> <span class="mf">1e9</span><span class="p">)</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">/</span> <span class="p">(</span><span class="n">c</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">boltzm1</span><span class="p">)</span>
+    <span class="c1"># flux = bb_nu.to(FNU, u.spectral_density(freq * 1e9))</span>
+
+    <span class="k">return</span> <span class="n">bb_nu</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right"> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2020, Ben Thorne, David Alonso, Sigurd Naess, Jo Dunkley, Andrea Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 06 Feb 2020. <br/>
+  </p>
+</footer>
+  </body>
+</html>

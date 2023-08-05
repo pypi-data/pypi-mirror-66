@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>InterpolatingComponent &#8212; pysm v3.1.dev260</title>
+    <link rel="stylesheet" href="../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MapDistribution" href="pysm.MapDistribution.html" />
+    <link rel="prev" title="DecorrelatedModifiedBlackBody" href="pysm.DecorrelatedModifiedBlackBody.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../index.html"><span id="logotext1">pysm</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="right">
+	<a href="pysm.MapDistribution.html" title="MapDistribution">
+	  next &raquo;
+	</a>
+      </li>
+      <li class="right">
+	<a href="pysm.DecorrelatedModifiedBlackBody.html" title="DecorrelatedModifiedBlackBody">
+	  &laquo; previous
+	</a>
+	 |
+      </li>
+      <li>
+	<a href="../index.html">pysm v3.1.dev260</a>
+	 &#187;
+      </li>
+      
+      <li>InterpolatingComponent</li> 
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="interpolatingcomponent">
+<h1>InterpolatingComponent<a class="headerlink" href="#interpolatingcomponent" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pysm.InterpolatingComponent">
+<em class="property">class </em><code class="descclassname">pysm.</code><code class="descname">InterpolatingComponent</code><span class="sig-paren">(</span><em>path</em>, <em>input_units</em>, <em>nside</em>, <em>interpolation_kind='linear'</em>, <em>has_polarization=True</em>, <em>map_dist=None</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pysm/models/interpolating.html#InterpolatingComponent"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/healpy/pysm/tree/master/pysm/models/interpolating.py#L14" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#pysm.InterpolatingComponent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pysm.Model.html#pysm.Model" title="pysm.models.template.Model"><code class="docutils literal notranslate"><span class="pre">pysm.Model</span></code></a></p>
+<p>PySM component interpolating between precomputed maps</p>
+<p>In order to save memory, maps are converted to float32, if this is not acceptable, please
+open an issue on the PySM repository.
+When you create the model, PySM checks the folder of the templates and stores a list of 
+available frequencies. Once you call <a class="reference internal" href="#pysm.InterpolatingComponent.get_emission" title="pysm.InterpolatingComponent.get_emission"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_emission</span></code></a>, maps are read, ud_graded to the target
+nside and stored for future use. This is useful if you are running many channels with a similar
+bandpass.
+If not, you can call <code class="xref py py-obj docutils literal notranslate"><span class="pre">cached_maps.clear()</span></code> to remove the cached maps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>path</strong><span class="classifier">str</span></dt><dd><p>Path should contain maps named as the frequency in GHz e.g. 20.fits or 20.5.fits or 00100.fits</p>
+</dd>
+<dt><strong>input_units</strong><span class="classifier">str</span></dt><dd><p>Any unit available in PySM (see <code class="xref py py-obj docutils literal notranslate"><span class="pre">pysm.convert_units</span></code> e.g. <code class="xref py py-obj docutils literal notranslate"><span class="pre">Jysr</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">MJsr</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">uK_RJ</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">K_CMB</span></code>).</p>
+</dd>
+<dt><strong>nside</strong><span class="classifier">int</span></dt><dd><p>HEALPix NSIDE of the output maps</p>
+</dd>
+<dt><strong>interpolation_kind</strong><span class="classifier">string</span></dt><dd><p>Currently only linear is implemented</p>
+</dd>
+<dt><strong>has_polarization</strong><span class="classifier">bool</span></dt><dd><p>whether or not to simulate also polarization maps</p>
+</dd>
+<dt><strong>map_dist</strong><span class="classifier">pysm.MapDistribution</span></dt><dd><p>Required for partial sky or MPI, see the PySM docs</p>
+</dd>
+<dt><strong>verbose</strong><span class="classifier">bool</span></dt><dd><p>Control amount of output</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods Summary</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pysm.InterpolatingComponent.get_emission" title="pysm.InterpolatingComponent.get_emission"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_emission</span></code></a>(self, freqs[, weights])</p></td>
+<td><p>This function evaluates the component model at a either a single frequency, an array of frequencies, or over a bandpass.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pysm.InterpolatingComponent.get_filenames" title="pysm.InterpolatingComponent.get_filenames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_filenames</span></code></a>(self, path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pysm.InterpolatingComponent.read_map_by_frequency" title="pysm.InterpolatingComponent.read_map_by_frequency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_map_by_frequency</span></code></a>(self, freq)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pysm.InterpolatingComponent.read_map_file" title="pysm.InterpolatingComponent.read_map_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_map_file</span></code></a>(self, freq, filename)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="pysm.InterpolatingComponent.get_emission">
+<code class="descname">get_emission</code><span class="sig-paren">(</span><em>self</em>, <em>freqs:Unit(&quot;GHz&quot;)</em>, <em>weights=None) -&gt; Unit(&quot;uK_RJ&quot;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pysm/models/interpolating.html#InterpolatingComponent.get_emission"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/healpy/pysm/tree/master/pysm/models/interpolating.py#L78" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#pysm.InterpolatingComponent.get_emission" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function evaluates the component model at a either
+a single frequency, an array of frequencies, or over a bandpass.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>freqs: scalar or array astropy.units.Quantity</strong></dt><dd><p>Frequency at which the model should be evaluated, in a frequency
+which can be converted to GHz using astropy.units.
+If an array of frequencies is provided, integrate using trapz
+with a equal weighting, i.e. simulate a top-hat bandpass.</p>
+</dd>
+<dt><strong>weights: np.array, optional</strong></dt><dd><p>Array of weights describing the frequency response of the instrument,
+i.e. the bandpass. Weights are normalized and applied in Jy/sr.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>output</strong><span class="classifier">astropy.units.Quantity</span></dt><dd><p>Simulated map at the given frequency or integrated over the given
+bandpass. The shape of the output is (3,npix) for polarized components,
+(1,npix) for temperature-only components. Output is in <code class="xref py py-obj docutils literal notranslate"><span class="pre">uK_RJ</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysm.InterpolatingComponent.get_filenames">
+<code class="descname">get_filenames</code><span class="sig-paren">(</span><em>self</em>, <em>path</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pysm/models/interpolating.html#InterpolatingComponent.get_filenames"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/healpy/pysm/tree/master/pysm/models/interpolating.py#L69" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#pysm.InterpolatingComponent.get_filenames" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pysm.InterpolatingComponent.read_map_by_frequency">
+<code class="descname">read_map_by_frequency</code><span class="sig-paren">(</span><em>self</em>, <em>freq</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pysm/models/interpolating.html#InterpolatingComponent.read_map_by_frequency"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/healpy/pysm/tree/master/pysm/models/interpolating.py#L154" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#pysm.InterpolatingComponent.read_map_by_frequency" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pysm.InterpolatingComponent.read_map_file">
+<code class="descname">read_map_file</code><span class="sig-paren">(</span><em>self</em>, <em>freq</em>, <em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pysm/models/interpolating.html#InterpolatingComponent.read_map_file"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/healpy/pysm/tree/master/pysm/models/interpolating.py#L158" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#pysm.InterpolatingComponent.read_map_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#">InterpolatingComponent</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right">
+    <a href="http://github.com/healpy/pysm/tree/master/docs/api/pysm.InterpolatingComponent.rst">Edit This Page on Github</a> &nbsp;
+    <a href="../_sources/api/pysm.InterpolatingComponent.rst.txt"
+       rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2020, Ben Thorne, David Alonso, Sigurd Naess, Jo Dunkley, Andrea Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 06 Feb 2020. <br/>
+  </p>
+</footer>
+  </body>
+</html>

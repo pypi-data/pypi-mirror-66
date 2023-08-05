@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Model &#8212; pysm v3.1.dev260</title>
+    <link rel="stylesheet" href="../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ModifiedBlackBody" href="pysm.ModifiedBlackBody.html" />
+    <link rel="prev" title="MapDistribution" href="pysm.MapDistribution.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../index.html"><span id="logotext1">pysm</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="right">
+	<a href="pysm.ModifiedBlackBody.html" title="ModifiedBlackBody">
+	  next &raquo;
+	</a>
+      </li>
+      <li class="right">
+	<a href="pysm.MapDistribution.html" title="MapDistribution">
+	  &laquo; previous
+	</a>
+	 |
+      </li>
+      <li>
+	<a href="../index.html">pysm v3.1.dev260</a>
+	 &#187;
+      </li>
+      
+      <li>Model</li> 
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="model">
+<h1>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pysm.Model">
+<em class="property">class </em><code class="descclassname">pysm.</code><code class="descname">Model</code><span class="sig-paren">(</span><em>nside</em>, <em>map_dist=None</em>, <em>dataurl=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pysm/models/template.html#Model"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/healpy/pysm/tree/master/pysm/models/template.py#L25" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#pysm.Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>This is the template object for PySM objects.</p>
+<p>If a MPI communicator is passed as input and <code class="xref py py-obj docutils literal notranslate"><span class="pre">pixel_indices</span></code> is None,
+the class automatically distributes the maps across processes.
+You can implement your own pixel distribution passing both a MPI
+communicator and <code class="xref py py-obj docutils literal notranslate"><span class="pre">pixel_indices</span></code>, however that won’t support smoothing
+with <code class="xref py py-obj docutils literal notranslate"><span class="pre">libsharp</span></code>.
+If <code class="xref py py-obj docutils literal notranslate"><span class="pre">libsharp</span></code> is available, the rings are distributed as expected
+by <code class="xref py py-obj docutils literal notranslate"><span class="pre">libsharp</span></code> to perform distributed spherical harmonics transforms,
+see <code class="xref py py-func docutils literal notranslate"><span class="pre">pysm.mpi.distribute_rings_libsharp()</span></code>, the <code class="xref py py-obj docutils literal notranslate"><span class="pre">libsharp</span></code> grid
+object is saved in <code class="xref py py-obj docutils literal notranslate"><span class="pre">self.libsharp_grid</span></code>.
+If libsharp is not available, pixels are distributed uniformly across
+processes, see <code class="xref py py-func docutils literal notranslate"><span class="pre">pysm.mpi.distribute_pixels_uniformly()</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>mpi_comm: object</strong></dt><dd><p>MPI communicator object (optional, default=None).</p>
+</dd>
+<dt><strong>nside: int</strong></dt><dd><p>Resolution parameter at which this model is to be calculated.</p>
+</dd>
+<dt><strong>smoothing_lmax</strong><span class="classifier">int</span></dt><dd><p><span class="math notranslate nohighlight">\(\ell_{max}\)</span> for the smoothing step, by default <span class="math notranslate nohighlight">\(2*N_{side}\)</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods Summary</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pysm.Model.get_emission" title="pysm.Model.get_emission"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_emission</span></code></a>(self, freqs[, weights])</p></td>
+<td><p>This function evaluates the component model at a either a single frequency, an array of frequencies, or over a bandpass.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pysm.Model.read_map" title="pysm.Model.read_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_map</span></code></a>(self, path[, unit, field])</p></td>
+<td><p>Wrapper of the PySM read_map function that automatically uses nside, pixel_indices and mpi_comm defined in this Model</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pysm.Model.read_txt" title="pysm.Model.read_txt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_txt</span></code></a>(self, path, \*\*kwargs)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="pysm.Model.get_emission">
+<code class="descname">get_emission</code><span class="sig-paren">(</span><em>self</em>, <em>freqs:Unit(&quot;GHz&quot;)</em>, <em>weights=None) -&gt; Unit(&quot;uK_RJ&quot;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pysm/models/template.html#Model.get_emission"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/healpy/pysm/tree/master/pysm/models/template.py#L73" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#pysm.Model.get_emission" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function evaluates the component model at a either
+a single frequency, an array of frequencies, or over a bandpass.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>freqs: scalar or array astropy.units.Quantity</strong></dt><dd><p>Frequency at which the model should be evaluated, in a frequency
+which can be converted to GHz using astropy.units.
+If an array of frequencies is provided, integrate using trapz
+with a equal weighting, i.e. simulate a top-hat bandpass.</p>
+</dd>
+<dt><strong>weights: np.array, optional</strong></dt><dd><p>Array of weights describing the frequency response of the instrument,
+i.e. the bandpass. Weights are normalized and applied in Jy/sr.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>output</strong><span class="classifier">astropy.units.Quantity</span></dt><dd><p>Simulated map at the given frequency or integrated over the given
+bandpass. The shape of the output is (3,npix) for polarized components,
+(1,npix) for temperature-only components. Output is in <code class="xref py py-obj docutils literal notranslate"><span class="pre">uK_RJ</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysm.Model.read_map">
+<code class="descname">read_map</code><span class="sig-paren">(</span><em>self</em>, <em>path</em>, <em>unit=None</em>, <em>field=0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pysm/models/template.html#Model.read_map"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/healpy/pysm/tree/master/pysm/models/template.py#L56" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#pysm.Model.read_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper of the PySM read_map function that automatically
+uses nside, pixel_indices and mpi_comm defined in this Model</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pysm.Model.read_txt">
+<code class="descname">read_txt</code><span class="sig-paren">(</span><em>self</em>, <em>path</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pysm/models/template.html#Model.read_txt"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/healpy/pysm/tree/master/pysm/models/template.py#L69" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#pysm.Model.read_txt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#">Model</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right">
+    <a href="http://github.com/healpy/pysm/tree/master/docs/api/pysm.Model.rst">Edit This Page on Github</a> &nbsp;
+    <a href="../_sources/api/pysm.Model.rst.txt"
+       rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2020, Ben Thorne, David Alonso, Sigurd Naess, Jo Dunkley, Andrea Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 06 Feb 2020. <br/>
+  </p>
+</footer>
+  </body>
+</html>

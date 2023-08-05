@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pysm Documentation &#8212; pysm v3.0.0</title>
+    <link rel="stylesheet" href="../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="apply_smoothing_and_coord_transform" href="../api/pysm.apply_smoothing_and_coord_transform.html" />
+    <link rel="prev" title="Documentation" href="../index.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../index.html"><span id="logotext1">pysm</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="right">
+	<a href="../api/pysm.apply_smoothing_and_coord_transform.html" title="apply_smoothing_and_coord_transform">
+	  next &raquo;
+	</a>
+      </li>
+      <li class="right">
+	<a href="../index.html" title="Documentation">
+	  &laquo; previous
+	</a>
+	 |
+      </li>
+      <li>
+	<a href="../index.html">pysm v3.0.0</a>
+	 &#187;
+      </li>
+      
+      <li>pysm Documentation</li> 
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pysm-documentation">
+<h1>pysm Documentation<a class="headerlink" href="#pysm-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This is the documentation for pysm.</p>
+<div class="section" id="reference-api">
+<h2>Reference/API<a class="headerlink" href="#reference-api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-pysm">
+<span id="pysm-package"></span><h3>pysm Package<a class="headerlink" href="#module-pysm" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="functions">
+<h4>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h4>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/pysm.apply_smoothing_and_coord_transform.html#pysm.apply_smoothing_and_coord_transform" title="pysm.apply_smoothing_and_coord_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_smoothing_and_coord_transform</span></code></a>(input_map)</p></td>
+<td><p>Apply smoothing and coordinate rotation to an input map</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/pysm.bandpass_unit_conversion.html#pysm.bandpass_unit_conversion" title="pysm.bandpass_unit_conversion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bandpass_unit_conversion</span></code></a>(freqs, weights, …)</p></td>
+<td><p>Unit conversion from uK_RJ to output unit given a bandpass</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/pysm.check_freq_input.html#pysm.check_freq_input" title="pysm.check_freq_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_freq_input</span></code></a>(freqs)</p></td>
+<td><p>Function to check that the input to <code class="xref py py-obj docutils literal notranslate"><span class="pre">Model.get_emission</span></code> is a np.ndarray.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/pysm.mpi_smoothing.html#pysm.mpi_smoothing" title="pysm.mpi_smoothing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mpi_smoothing</span></code></a>(input_map, fwhm, map_dist)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/pysm.normalize_weights.html#pysm.normalize_weights" title="pysm.normalize_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize_weights</span></code></a>(freqs, weights)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/pysm.read_map.html#pysm.read_map" title="pysm.read_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_map</span></code></a>(path, nside[, unit, field, …])</p></td>
+<td><p>Wrapper of <code class="xref py py-obj docutils literal notranslate"><span class="pre">healpy.read_map</span></code> for PySM data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/pysm.test.html#pysm.test" title="pysm.test"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test</span></code></a>(\*\*kwargs)</p></td>
+<td><p>Run the tests for the package.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="classes">
+<h4>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h4>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/pysm.CMBMap.html#pysm.CMBMap" title="pysm.CMBMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CMBMap</span></code></a>(map_I, map_Q, map_U, nside[, map_dist])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/pysm.DecorrelatedModifiedBlackBody.html#pysm.DecorrelatedModifiedBlackBody" title="pysm.DecorrelatedModifiedBlackBody"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DecorrelatedModifiedBlackBody</span></code></a>([map_I, …])</p></td>
+<td><p>See parent class for other documentation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/pysm.InterpolatingComponent.html#pysm.InterpolatingComponent" title="pysm.InterpolatingComponent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InterpolatingComponent</span></code></a>(path, input_units, nside)</p></td>
+<td><p>PySM component interpolating between precomputed maps</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/pysm.MapDistribution.html#pysm.MapDistribution" title="pysm.MapDistribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapDistribution</span></code></a>([pixel_indices, mpi_comm, …])</p></td>
+<td><p>Define how a map is distributed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/pysm.Model.html#pysm.Model" title="pysm.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Model</span></code></a>(nside[, map_dist, dataurl])</p></td>
+<td><p>This is the template object for PySM objects.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/pysm.ModifiedBlackBody.html#pysm.ModifiedBlackBody" title="pysm.ModifiedBlackBody"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModifiedBlackBody</span></code></a>(map_I, map_Q, map_U, …)</p></td>
+<td><p>This is a model for modified black body emission.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/pysm.PowerLaw.html#pysm.PowerLaw" title="pysm.PowerLaw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PowerLaw</span></code></a>(map_I, freq_ref_I, map_pl_index, nside)</p></td>
+<td><p>This is a model for a simple power law synchrotron model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/pysm.Sky.html#pysm.Sky" title="pysm.Sky"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sky</span></code></a>([nside, component_objects, …])</p></td>
+<td><p>This class is a convenience object that wraps together a group of component models.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/pysm.SpDust.html#pysm.SpDust" title="pysm.SpDust"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpDust</span></code></a>(map_I, freq_ref_I, emissivity, …[, …])</p></td>
+<td><p>Implementation of the SpDust2 code of (Ali-Haimoud et al 2012) evaluated for a Cold Neutral Medium.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/pysm.SpDustPol.html#pysm.SpDustPol" title="pysm.SpDustPol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpDustPol</span></code></a>(map_I, freq_ref_I, emissivity, …)</p></td>
+<td><p>SpDust2 model with Polarized emission</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/pysm.UnsupportedPythonError.html#pysm.UnsupportedPythonError" title="pysm.UnsupportedPythonError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnsupportedPythonError</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="class-inheritance-diagram">
+<h4>Class Inheritance Diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">¶</a></h4>
+<div class="graphviz"><object data="../_images/inheritance-9ff1d0c3a2d2a26a7bb3a826a00fa6d8956622f6.svg" type="image/svg+xml" class="inheritance graphviz">
+<p class="warning">Inheritance diagram of pysm.models.cmb.CMBMap, pysm.models.dust.DecorrelatedModifiedBlackBody, pysm.models.interpolating.InterpolatingComponent, pysm.distribution.MapDistribution, pysm.models.template.Model, pysm.models.dust.ModifiedBlackBody, pysm.models.power_law.PowerLaw, pysm.sky.Sky, pysm.models.spdust.SpDust, pysm.models.spdust.SpDustPol, pysm.UnsupportedPythonError</p></object></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#">pysm Documentation</a><ul>
+<li><a class="reference internal" href="#reference-api">Reference/API</a><ul>
+<li><a class="reference internal" href="#module-pysm">pysm Package</a><ul>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#class-inheritance-diagram">Class Inheritance Diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right">
+    <a href="http://github.com/healpy/pysm/tree/v3.0.0/docs/pysm/index.rst">Edit This Page on Github</a> &nbsp;
+    <a href="../_sources/pysm/index.rst.txt"
+       rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2019, Ben Thorne, David Alonso, Sigurd Naess, Jo Dunkley, Andrea Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 12 Sep 2019. <br/>
+  </p>
+</footer>
+  </body>
+</html>

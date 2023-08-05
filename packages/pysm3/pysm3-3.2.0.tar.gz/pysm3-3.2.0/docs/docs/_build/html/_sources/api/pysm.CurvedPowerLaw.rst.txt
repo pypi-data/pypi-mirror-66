@@ -1,0 +1,17 @@
+CurvedPowerLaw
+==============
+
+.. currentmodule:: pysm
+
+.. autoclass:: CurvedPowerLaw
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CurvedPowerLaw.get_emission
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_emission

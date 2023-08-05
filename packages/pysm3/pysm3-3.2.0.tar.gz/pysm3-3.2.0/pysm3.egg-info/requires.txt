@@ -1,0 +1,18 @@
+astropy
+healpy
+numba
+toml
+
+[:python_version < "3.7"]
+importlib_resources
+
+[docs]
+sphinx-astropy
+nbsphinx
+sphinx-astropy
+ipykernel
+sphinx-math-dollar
+Pygments
+
+[test]
+pytest-astropy

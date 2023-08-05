@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>apply_smoothing_and_coord_transform &#8212; pysm v3.1.dev260</title>
+    <link rel="stylesheet" href="../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="bandpass_unit_conversion" href="pysm.bandpass_unit_conversion.html" />
+    <link rel="prev" title="MPI support" href="../mpi.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../index.html"><span id="logotext1">pysm</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="right">
+	<a href="pysm.bandpass_unit_conversion.html" title="bandpass_unit_conversion">
+	  next &raquo;
+	</a>
+      </li>
+      <li class="right">
+	<a href="../mpi.html" title="MPI support">
+	  &laquo; previous
+	</a>
+	 |
+      </li>
+      <li>
+	<a href="../index.html">pysm v3.1.dev260</a>
+	 &#187;
+      </li>
+      
+      <li>apply_smoothing_and_coord_transform</li> 
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="apply-smoothing-and-coord-transform">
+<h1>apply_smoothing_and_coord_transform<a class="headerlink" href="#apply-smoothing-and-coord-transform" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pysm.apply_smoothing_and_coord_transform">
+<code class="descclassname">pysm.</code><code class="descname">apply_smoothing_and_coord_transform</code><span class="sig-paren">(</span><em>input_map</em>, <em>fwhm=None</em>, <em>rot=None</em>, <em>lmax=None</em>, <em>map_dist=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pysm/models/template.html#apply_smoothing_and_coord_transform"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/healpy/pysm/tree/master/pysm/models/template.py#L102" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#pysm.apply_smoothing_and_coord_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply smoothing and coordinate rotation to an input map</p>
+<p>it applies the <code class="xref py py-obj docutils literal notranslate"><span class="pre">healpy.smoothing</span></code> Gaussian smoothing kernel if <code class="xref py py-obj docutils literal notranslate"><span class="pre">map_dist</span></code>
+is None, otherwise applies distributed smoothing with <code class="xref py py-obj docutils literal notranslate"><span class="pre">libsharp</span></code>.
+In the distributed case, no rotation is supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>input_map</strong><span class="classifier">ndarray</span></dt><dd><p>Input map, of shape <code class="xref py py-obj docutils literal notranslate"><span class="pre">(3,</span> <span class="pre">npix)</span></code>
+This is assumed to have no beam at this point, as the
+simulated small scale tempatle on which the simulations are based
+have no beam.</p>
+</dd>
+<dt><strong>fwhm</strong><span class="classifier">astropy.units.Quantity</span></dt><dd><p>Full width at half-maximum, defining the
+Gaussian kernels to be applied.</p>
+</dd>
+<dt><strong>rot: hp.Rotator</strong></dt><dd><p>Apply a coordinate rotation give a healpy <code class="xref py py-obj docutils literal notranslate"><span class="pre">Rotator</span></code>, e.g. if the
+inputs are in Galactic, <code class="xref py py-obj docutils literal notranslate"><span class="pre">hp.Rotator(coord=(&quot;G&quot;,</span> <span class="pre">&quot;C&quot;))</span></code> rotates
+to Equatorial</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>smoothed_map</strong><span class="classifier">np.ndarray</span></dt><dd><p>Array containing the smoothed sky</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#">apply_smoothing_and_coord_transform</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right">
+    <a href="http://github.com/healpy/pysm/tree/master/docs/api/pysm.apply_smoothing_and_coord_transform.rst">Edit This Page on Github</a> &nbsp;
+    <a href="../_sources/api/pysm.apply_smoothing_and_coord_transform.rst.txt"
+       rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2020, Ben Thorne, David Alonso, Sigurd Naess, Jo Dunkley, Andrea Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 06 Feb 2020. <br/>
+  </p>
+</footer>
+  </body>
+</html>

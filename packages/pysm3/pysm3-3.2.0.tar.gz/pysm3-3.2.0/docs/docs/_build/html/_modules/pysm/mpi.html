@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pysm.mpi &#8212; pysm v3.1.dev260</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <script type="text/javascript" src="../../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../../index.html"><span id="logotext1">pysm</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li>
+	<a href="../../index.html">pysm v3.1.dev260</a>
+	 &#187;
+      </li>
+      <li><a href="../index.html" >Module code</a> &#187;</li>
+      <li><a href="../pysm.html" accesskey="U">pysm</a> &#187;</li>
+      
+       
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for pysm.mpi</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">healpy</span> <span class="k">as</span> <span class="nn">hp</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">libsharp</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">libsharp</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="k">def</span> <span class="nf">distribute_pixels_uniformly</span><span class="p">(</span><span class="n">mpi_comm</span><span class="p">,</span> <span class="n">nside</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Define the pixel_indices for each MPI rank to distribute a map uniformly</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    mpi_comm : mpi4py.MPI.Comm</span>
+<span class="sd">        mpi4py communicator</span>
+<span class="sd">    nside : int</span>
+<span class="sd">        nside of the map</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pixel_indices : np.ndarray</span>
+<span class="sd">        local pixel indices</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">npix</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">nside2npix</span><span class="p">(</span><span class="n">nside</span><span class="p">)</span>
+    <span class="n">pix_per_proc</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">npix</span> <span class="o">/</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+    <span class="n">pixel_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span>
+        <span class="n">mpi_comm</span><span class="o">.</span><span class="n">rank</span> <span class="o">*</span> <span class="n">pix_per_proc</span><span class="p">,</span> <span class="nb">min</span><span class="p">((</span><span class="n">mpi_comm</span><span class="o">.</span><span class="n">rank</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">pix_per_proc</span><span class="p">,</span> <span class="n">npix</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">pixel_indices</span>
+
+
+<span class="k">def</span> <span class="nf">expand_pix</span><span class="p">(</span><span class="n">startpix</span><span class="p">,</span> <span class="n">ringpix</span><span class="p">,</span> <span class="n">local_npix</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Turn first pixel index and number of pixel in full array of pixels</span>
+<span class="sd">    to be optimized with cython</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">local_pix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">local_npix</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">start</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">startpix</span><span class="p">,</span> <span class="n">ringpix</span><span class="p">):</span>
+        <span class="n">local_pix</span><span class="p">[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">num</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">start</span> <span class="o">+</span> <span class="n">num</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="n">num</span>
+    <span class="k">return</span> <span class="n">local_pix</span>
+
+
+<span class="k">def</span> <span class="nf">distribute_rings_libsharp</span><span class="p">(</span><span class="n">mpi_comm</span><span class="p">,</span> <span class="n">nside</span><span class="p">,</span> <span class="n">lmax</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create a libsharp map distribution based on rings</span>
+
+<span class="sd">    Build a libsharp grid object to distribute a HEALPix map</span>
+<span class="sd">    balancing North and South distribution of rings to achieve</span>
+<span class="sd">    the best performance on Harmonic Transforms</span>
+<span class="sd">    Returns the grid object and the pixel indices array in RING ordering</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ---------</span>
+<span class="sd">    mpi_comm : mpi4py.MPI.Comm</span>
+<span class="sd">        mpi4py communicator</span>
+<span class="sd">    nside : int</span>
+<span class="sd">        nside of the map</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    grid : libsharp.healpix_grid</span>
+<span class="sd">        libsharp object that includes metadata about HEALPix distributed rings</span>
+<span class="sd">    local_pix : np.ndarray</span>
+<span class="sd">        integer array of local pixel indices in the current MPI process in RING</span>
+<span class="sd">        ordering</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">libsharp</span>
+
+    <span class="n">nrings</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">nside</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># four missing pixels</span>
+
+    <span class="c1"># ring indices are 1-based</span>
+    <span class="n">ring_indices_emisphere</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">nside</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="n">local_ring_indices</span> <span class="o">=</span> <span class="n">ring_indices_emisphere</span><span class="p">[</span><span class="n">mpi_comm</span><span class="o">.</span><span class="n">rank</span> <span class="p">::</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">size</span><span class="p">]</span>
+
+    <span class="c1"># to improve performance, symmetric rings north/south need to be in the same rank</span>
+    <span class="c1"># therefore we use symmetry to create the full ring indexing</span>
+
+    <span class="k">if</span> <span class="n">local_ring_indices</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">nside</span><span class="p">:</span>
+        <span class="c1"># has equator ring</span>
+        <span class="n">local_ring_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">local_ring_indices</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">nrings</span> <span class="o">-</span> <span class="n">local_ring_indices</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># does not have equator ring</span>
+        <span class="n">local_ring_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">local_ring_indices</span><span class="p">,</span> <span class="n">nrings</span> <span class="o">-</span> <span class="n">local_ring_indices</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="p">)</span>
+
+    <span class="n">libsharp_grid</span> <span class="o">=</span> <span class="n">libsharp</span><span class="o">.</span><span class="n">healpix_grid</span><span class="p">(</span><span class="n">nside</span><span class="p">,</span> <span class="n">rings</span><span class="o">=</span><span class="n">local_ring_indices</span><span class="p">)</span>
+
+    <span class="c1"># returns start index of the ring and number of pixels</span>
+    <span class="n">startpix</span><span class="p">,</span> <span class="n">ringpix</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">ringinfo</span><span class="p">(</span><span class="n">nside</span><span class="p">,</span> <span class="n">local_ring_indices</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">))</span>
+
+    <span class="n">local_npix</span> <span class="o">=</span> <span class="n">libsharp_grid</span><span class="o">.</span><span class="n">local_size</span><span class="p">()</span>
+    <span class="n">local_pixels</span> <span class="o">=</span> <span class="n">expand_pix</span><span class="p">(</span><span class="n">startpix</span><span class="p">,</span> <span class="n">ringpix</span><span class="p">,</span> <span class="n">local_npix</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+
+    <span class="n">local_m_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">mpi_comm</span><span class="o">.</span><span class="n">rank</span><span class="p">,</span> <span class="n">lmax</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+    <span class="n">libsharp_order</span> <span class="o">=</span> <span class="n">libsharp</span><span class="o">.</span><span class="n">packed_real_order</span><span class="p">(</span><span class="n">lmax</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="n">local_m_indices</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">local_pixels</span><span class="p">,</span> <span class="n">libsharp_grid</span><span class="p">,</span> <span class="n">libsharp_order</span>
+
+
+<span class="k">def</span> <span class="nf">assemble_map_on_rank0</span><span class="p">(</span><span class="n">comm</span><span class="p">,</span> <span class="n">local_map</span><span class="p">,</span> <span class="n">pixel_indices</span><span class="p">,</span> <span class="n">n_components</span><span class="p">,</span> <span class="n">npix</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">mpi4py</span> <span class="kn">import</span> <span class="n">MPI</span>
+
+    <span class="n">full_maps_rank0</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_components</span><span class="p">,</span> <span class="n">npix</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">local_map</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">comm</span><span class="o">.</span><span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">else</span> <span class="kc">None</span>
+    <span class="p">)</span>
+    <span class="n">local_map_buffer</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_components</span><span class="p">,</span> <span class="n">npix</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">local_map</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">local_map_buffer</span><span class="p">[:,</span> <span class="n">pixel_indices</span><span class="p">]</span> <span class="o">=</span> <span class="n">local_map</span>
+    <span class="n">comm</span><span class="o">.</span><span class="n">Reduce</span><span class="p">(</span><span class="n">local_map_buffer</span><span class="p">,</span> <span class="n">full_maps_rank0</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">MPI</span><span class="o">.</span><span class="n">SUM</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">full_maps_rank0</span>
+
+<div class="viewcode-block" id="mpi_smoothing"><a class="viewcode-back" href="../../api/pysm.mpi_smoothing.html#pysm.mpi_smoothing">[docs]</a><span class="k">def</span> <span class="nf">mpi_smoothing</span><span class="p">(</span><span class="n">input_map</span><span class="p">,</span> <span class="n">fwhm</span><span class="p">,</span> <span class="n">map_dist</span><span class="p">):</span>
+    <span class="kn">import</span> <span class="nn">libsharp</span>
+
+    <span class="n">beam</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">gauss_beam</span><span class="p">(</span>
+        <span class="n">fwhm</span><span class="o">=</span><span class="n">fwhm</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">lmax</span><span class="o">=</span><span class="n">map_dist</span><span class="o">.</span><span class="n">smoothing_lmax</span><span class="p">,</span> <span class="n">pol</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)</span>
+
+    <span class="n">input_map_I</span> <span class="o">=</span> <span class="n">input_map</span> <span class="k">if</span> <span class="n">input_map</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">input_map</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">input_map_I_contig</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ascontiguousarray</span><span class="p">(</span><span class="n">input_map_I</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">)</span>
+
+    <span class="n">alm_sharp_I</span> <span class="o">=</span> <span class="n">libsharp</span><span class="o">.</span><span class="n">analysis</span><span class="p">(</span>
+        <span class="n">map_dist</span><span class="o">.</span><span class="n">libsharp_grid</span><span class="p">,</span>
+        <span class="n">map_dist</span><span class="o">.</span><span class="n">libsharp_order</span><span class="p">,</span>
+        <span class="n">input_map_I_contig</span><span class="p">,</span>
+        <span class="n">spin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">comm</span><span class="o">=</span><span class="n">map_dist</span><span class="o">.</span><span class="n">mpi_comm</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">map_dist</span><span class="o">.</span><span class="n">libsharp_order</span><span class="o">.</span><span class="n">almxfl</span><span class="p">(</span><span class="n">alm_sharp_I</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ascontiguousarray</span><span class="p">(</span><span class="n">beam</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">libsharp</span><span class="o">.</span><span class="n">synthesis</span><span class="p">(</span>
+        <span class="n">map_dist</span><span class="o">.</span><span class="n">libsharp_grid</span><span class="p">,</span>
+        <span class="n">map_dist</span><span class="o">.</span><span class="n">libsharp_order</span><span class="p">,</span>
+        <span class="n">alm_sharp_I</span><span class="p">,</span>
+        <span class="n">spin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">comm</span><span class="o">=</span><span class="n">map_dist</span><span class="o">.</span><span class="n">mpi_comm</span><span class="p">,</span>
+    <span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="k">if</span> <span class="n">utils</span><span class="o">.</span><span class="n">has_polarization</span><span class="p">(</span><span class="n">input_map</span><span class="p">):</span>
+        <span class="n">alm_sharp_P</span> <span class="o">=</span> <span class="n">libsharp</span><span class="o">.</span><span class="n">analysis</span><span class="p">(</span>
+            <span class="n">map_dist</span><span class="o">.</span><span class="n">libsharp_grid</span><span class="p">,</span>
+            <span class="n">map_dist</span><span class="o">.</span><span class="n">libsharp_order</span><span class="p">,</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">ascontiguousarray</span><span class="p">(</span><span class="n">input_map</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span>
+            <span class="p">),</span>
+            <span class="n">spin</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">comm</span><span class="o">=</span><span class="n">map_dist</span><span class="o">.</span><span class="n">mpi_comm</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">map_dist</span><span class="o">.</span><span class="n">libsharp_order</span><span class="o">.</span><span class="n">almxfl</span><span class="p">(</span>
+            <span class="n">alm_sharp_P</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ascontiguousarray</span><span class="p">(</span><span class="n">beam</span><span class="p">[:,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
+        <span class="p">)</span>
+
+        <span class="n">signal_map_P</span> <span class="o">=</span> <span class="n">libsharp</span><span class="o">.</span><span class="n">synthesis</span><span class="p">(</span>
+            <span class="n">map_dist</span><span class="o">.</span><span class="n">libsharp_grid</span><span class="p">,</span>
+            <span class="n">map_dist</span><span class="o">.</span><span class="n">libsharp_order</span><span class="p">,</span>
+            <span class="n">alm_sharp_P</span><span class="p">,</span>
+            <span class="n">spin</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">comm</span><span class="o">=</span><span class="n">map_dist</span><span class="o">.</span><span class="n">mpi_comm</span><span class="p">,</span>
+        <span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">out</span><span class="p">,</span> <span class="n">signal_map_P</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">out</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right"> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2020, Ben Thorne, David Alonso, Sigurd Naess, Jo Dunkley, Andrea Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 06 Feb 2020. <br/>
+  </p>
+</footer>
+  </body>
+</html>

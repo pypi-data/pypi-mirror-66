@@ -1,0 +1,17 @@
+DecorrelatedModifiedBlackBody
+=============================
+
+.. currentmodule:: pysm
+
+.. autoclass:: DecorrelatedModifiedBlackBody
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~DecorrelatedModifiedBlackBody.get_emission
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_emission

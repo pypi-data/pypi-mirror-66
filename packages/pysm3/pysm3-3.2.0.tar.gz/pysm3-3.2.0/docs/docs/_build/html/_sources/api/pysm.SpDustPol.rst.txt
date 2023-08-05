@@ -1,0 +1,17 @@
+SpDustPol
+=========
+
+.. currentmodule:: pysm
+
+.. autoclass:: SpDustPol
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SpDustPol.get_emission
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_emission

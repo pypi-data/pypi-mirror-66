@@ -1,0 +1,17 @@
+PowerLaw
+========
+
+.. currentmodule:: pysm
+
+.. autoclass:: PowerLaw
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~PowerLaw.get_emission
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_emission

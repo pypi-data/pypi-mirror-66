@@ -1,0 +1,17 @@
+SynchrotronPowerLaw
+===================
+
+.. currentmodule:: pysm
+
+.. autoclass:: SynchrotronPowerLaw
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SynchrotronPowerLaw.get_emission
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_emission

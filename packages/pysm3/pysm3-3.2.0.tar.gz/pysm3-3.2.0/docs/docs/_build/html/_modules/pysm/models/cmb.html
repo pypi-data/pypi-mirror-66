@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pysm.models.cmb &#8212; pysm v3.1.dev260</title>
+    <link rel="stylesheet" href="../../../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <script type="text/javascript" src="../../../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../../../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../../../index.html"><span id="logotext1">pysm</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../../../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../../../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li>
+	<a href="../../../index.html">pysm v3.1.dev260</a>
+	 &#187;
+      </li>
+      <li><a href="../../index.html" >Module code</a> &#187;</li>
+      <li><a href="../../pysm.html" accesskey="U">pysm</a> &#187;</li>
+      
+       
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for pysm.models.cmb</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">healpy</span> <span class="k">as</span> <span class="nn">hp</span>
+<span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">factorial</span><span class="p">,</span> <span class="n">comb</span>
+
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">utils</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">.template</span> <span class="kn">import</span> <span class="n">Model</span>
+
+
+<div class="viewcode-block" id="CMBMap"><a class="viewcode-back" href="../../../api/pysm.CMBMap.html#pysm.CMBMap">[docs]</a><span class="k">class</span> <span class="nc">CMBMap</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">nside</span><span class="p">,</span> <span class="n">map_IQU</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">map_I</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">map_Q</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">map_U</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span>
+    <span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span> <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">map_IQU</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">map</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">map_IQU</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_CMB</span><span class="p">,</span> <span class="n">field</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">map_I</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">map</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">map_I</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_CMB</span><span class="p">,</span> <span class="n">field</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">map_Q</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">map</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">map</span><span class="p">]</span>
+                <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="p">[</span><span class="n">map_Q</span><span class="p">,</span> <span class="n">map_U</span><span class="p">]:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_CMB</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">map</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">map</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_CMB</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No input map provided&quot;</span><span class="p">))</span>
+
+<div class="viewcode-block" id="CMBMap.get_emission"><a class="viewcode-back" href="../../../api/pysm.CMBMap.html#pysm.CMBMap.get_emission">[docs]</a>    <span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span>
+    <span class="k">def</span> <span class="nf">get_emission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freqs</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">:</span>
+        <span class="n">freqs</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">check_freq_input</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">normalize_weights</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+        <span class="n">convert_to_uK_RJ</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">freqs</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">double</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_CMB</span><span class="p">)</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span>
+            <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">cmb_equivalencies</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">scaling_factor</span> <span class="o">=</span> <span class="n">convert_to_uK_RJ</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">scaling_factor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">convert_to_uK_RJ</span> <span class="o">*</span> <span class="n">weights</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">freqs</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">value</span> <span class="o">*</span> <span class="n">scaling_factor</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div></div>
+
+
+<span class="sd">&quot;&quot;&quot;The following code is edited from the taylens code: Naess,</span>
+<span class="sd">S. K. and Louis, T. 2013 &#39;Lensing simulations by Taylor expansion -</span>
+<span class="sd">not so inefficient after all&#39; Journal of Cosmology and Astroparticle</span>
+<span class="sd">Physics September 2013.  Available at:</span>
+<span class="sd">https://github.com/amaurea/taylens</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">simulate_tebp_correlated</span><span class="p">(</span><span class="n">cl_tebp_arr</span><span class="p">,</span> <span class="n">nside</span><span class="p">,</span> <span class="n">lmax</span><span class="p">,</span> <span class="n">seed</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;This generates correlated T,E,B and Phi maps</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+    <span class="n">alms</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">synalm</span><span class="p">(</span><span class="n">cl_tebp_arr</span><span class="p">,</span> <span class="n">lmax</span><span class="o">=</span><span class="n">lmax</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">aphi</span> <span class="o">=</span> <span class="n">alms</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">acmb</span> <span class="o">=</span> <span class="n">alms</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="c1"># Set to zero above map resolution to avoid aliasing</span>
+    <span class="n">beam_cut</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">nside</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">ac</span> <span class="ow">in</span> <span class="n">acmb</span><span class="p">:</span>
+        <span class="n">hp</span><span class="o">.</span><span class="n">almxfl</span><span class="p">(</span><span class="n">ac</span><span class="p">,</span> <span class="n">beam_cut</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">cmb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">hp</span><span class="o">.</span><span class="n">alm2map</span><span class="p">(</span><span class="n">acmb</span><span class="p">,</span> <span class="n">nside</span><span class="p">,</span> <span class="n">pol</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">cmb</span><span class="p">,</span> <span class="n">aphi</span>
+
+
+<span class="k">def</span> <span class="nf">taylor_interpol_iter</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lmax</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Given a healpix map m[npix], and a set of positions</span>
+<span class="sd">    pos[{theta,phi},...], evaluate the values at those positions using</span>
+<span class="sd">    harmonic Taylor interpolation to the given order (3 by</span>
+<span class="sd">    default). Successively yields values for each cumulative order up</span>
+<span class="sd">    to the specified one. If verbose is specified, it will print</span>
+<span class="sd">    progress information to stderr.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">nside</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">npix2nside</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">lmax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">lmax</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">nside</span>
+    <span class="c1"># Find the healpix pixel centers closest to pos,</span>
+    <span class="c1"># and our deviation from these pixel centers.</span>
+    <span class="n">ipos</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">ang2pix</span><span class="p">(</span><span class="n">nside</span><span class="p">,</span> <span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">pos0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">hp</span><span class="o">.</span><span class="n">pix2ang</span><span class="p">(</span><span class="n">nside</span><span class="p">,</span> <span class="n">ipos</span><span class="p">))</span>
+    <span class="n">dpos</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">pos0</span>
+    <span class="c1"># Take wrapping into account</span>
+    <span class="n">bad</span> <span class="o">=</span> <span class="n">dpos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+    <span class="n">dpos</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">bad</span><span class="p">]</span> <span class="o">=</span> <span class="n">dpos</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">bad</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+    <span class="n">bad</span> <span class="o">=</span> <span class="n">dpos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+    <span class="n">dpos</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">bad</span><span class="p">]</span> <span class="o">=</span> <span class="n">dpos</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">bad</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+
+    <span class="c1"># Since healpix&#39; dphi actually returns dphi/sintheta, we choose</span>
+    <span class="c1"># to expand in terms of dphi*sintheta instead.</span>
+    <span class="n">dpos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">pos0</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">del</span> <span class="n">pos0</span>
+
+    <span class="c1"># We will now Taylor expand our healpix field to</span>
+    <span class="c1"># get approximations for the values at our chosen</span>
+    <span class="c1"># locations. The structure of this section is</span>
+    <span class="c1"># somewhat complicated by the fact that alm2map_der1 returns</span>
+    <span class="c1"># two different derivatives at the same time.</span>
+    <span class="n">derivs</span> <span class="o">=</span> <span class="p">[[</span><span class="n">m</span><span class="p">]]</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">m</span><span class="p">[</span><span class="n">ipos</span><span class="p">]</span>
+    <span class="k">yield</span> <span class="n">res</span>
+    <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">order</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="c1"># Compute our derivatives</span>
+        <span class="n">derivs2</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">o</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+        <span class="n">used</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">o</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+        <span class="c1"># Loop through previous level in steps of two (except last)</span>
+        <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+            <span class="n">tprint</span><span class="p">(</span><span class="s2">&quot;order </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">o</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">o</span><span class="p">):</span>
+            <span class="c1"># Each alm2map_der1 provides two derivatives, so avoid</span>
+            <span class="c1"># doing double work.</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">o</span> <span class="o">-</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">map2alm</span><span class="p">(</span><span class="n">derivs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">use_weights</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">lmax</span><span class="o">=</span><span class="n">lmax</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">derivs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="n">dtheta</span><span class="p">,</span> <span class="n">dphi</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">alm2map_der1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">nside</span><span class="p">,</span> <span class="n">lmax</span><span class="o">=</span><span class="n">lmax</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+            <span class="n">derivs2</span><span class="p">[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">dtheta</span><span class="p">,</span> <span class="n">dphi</span><span class="p">]</span>
+            <span class="k">del</span> <span class="n">a</span><span class="p">,</span> <span class="n">dtheta</span><span class="p">,</span> <span class="n">dphi</span>
+            <span class="c1"># Use these to compute the next level</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">o</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>
+                <span class="k">if</span> <span class="n">used</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                    <span class="k">continue</span>
+                <span class="n">N</span> <span class="o">=</span> <span class="n">comb</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="o">/</span> <span class="n">factorial</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+                <span class="n">res</span> <span class="o">+=</span> <span class="n">N</span> <span class="o">*</span> <span class="n">derivs2</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">ipos</span><span class="p">]</span> <span class="o">*</span> <span class="n">dpos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">**</span> <span class="p">(</span><span class="n">o</span> <span class="o">-</span> <span class="n">j</span><span class="p">)</span> <span class="o">*</span> <span class="n">dpos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="n">j</span>
+                <span class="n">used</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="c1"># If we are at the last order, we don&#39;t need to waste memory</span>
+                <span class="c1"># storing the derivatives any more</span>
+                <span class="k">if</span> <span class="n">o</span> <span class="o">==</span> <span class="n">order</span><span class="p">:</span>
+                    <span class="n">derivs2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">derivs</span> <span class="o">=</span> <span class="n">derivs2</span>
+        <span class="k">yield</span> <span class="n">res</span>
+
+
+<span class="k">def</span> <span class="nf">offset_pos</span><span class="p">(</span><span class="n">ipos</span><span class="p">,</span> <span class="n">dtheta</span><span class="p">,</span> <span class="n">dphi</span><span class="p">,</span> <span class="n">pol</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">geodesic</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Offsets positions ipos on the sphere by a unit length step along</span>
+<span class="sd">    the gradient dtheta, dphi/sintheta, taking the curvature of the</span>
+<span class="sd">    sphere into account. If pol is passed, also computes the cos and</span>
+<span class="sd">    sin of the angle by which (Q,U) must be rotated to take into</span>
+<span class="sd">    account the change in local coordinate system.</span>
+
+<span class="sd">    If geodesic is passed, a quick and dirty, but quite accurate,</span>
+<span class="sd">    approximation is used.</span>
+
+<span class="sd">    Uses the memory of 2 maps (4 if pol) (plus that of the input</span>
+<span class="sd">    maps).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">opos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">ipos</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">pol</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">geodesic</span><span class="p">:</span>
+        <span class="n">orot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">ipos</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">orot</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">geodesic</span><span class="p">:</span>
+        <span class="c1"># Loop over chunks in order to conserve memory</span>
+        <span class="n">step</span> <span class="o">=</span> <span class="mh">0x10000</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ipos</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">step</span><span class="p">):</span>
+            <span class="n">small_opos</span><span class="p">,</span> <span class="n">small_orot</span> <span class="o">=</span> <span class="n">offset_pos_helper</span><span class="p">(</span>
+                <span class="n">ipos</span><span class="p">[:,</span> <span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">step</span><span class="p">],</span> <span class="n">dtheta</span><span class="p">[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">step</span><span class="p">],</span> <span class="n">dphi</span><span class="p">[</span><span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">step</span><span class="p">],</span> <span class="n">pol</span>
+            <span class="p">)</span>
+            <span class="n">opos</span><span class="p">[:,</span> <span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">step</span><span class="p">]</span> <span class="o">=</span> <span class="n">small_opos</span>
+            <span class="k">if</span> <span class="n">pol</span><span class="p">:</span>
+                <span class="n">orot</span><span class="p">[:,</span> <span class="n">i</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">step</span><span class="p">]</span> <span class="o">=</span> <span class="n">small_orot</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">opos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">ipos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">dtheta</span>
+        <span class="n">opos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">ipos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">dphi</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ipos</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">opos</span> <span class="o">=</span> <span class="n">fixang</span><span class="p">(</span><span class="n">opos</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">opos</span><span class="p">,</span> <span class="n">orot</span>
+
+
+<span class="k">def</span> <span class="nf">offset_pos_helper</span><span class="p">(</span><span class="n">ipos</span><span class="p">,</span> <span class="n">dtheta</span><span class="p">,</span> <span class="n">dphi</span><span class="p">,</span> <span class="n">pol</span><span class="p">):</span>
+    <span class="n">grad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">dtheta</span><span class="p">,</span> <span class="n">dphi</span><span class="p">))</span>
+    <span class="n">dtheta</span><span class="p">,</span> <span class="n">dphi</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">grad</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
+    <span class="n">grad</span> <span class="o">/=</span> <span class="n">d</span>
+    <span class="n">cosd</span><span class="p">,</span> <span class="n">sind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">d</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="n">cost</span><span class="p">,</span> <span class="n">sint</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ipos</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ipos</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">ocost</span> <span class="o">=</span> <span class="n">cosd</span> <span class="o">*</span> <span class="n">cost</span> <span class="o">-</span> <span class="n">sind</span> <span class="o">*</span> <span class="n">sint</span> <span class="o">*</span> <span class="n">grad</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">osint</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">ocost</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
+    <span class="n">ophi</span> <span class="o">=</span> <span class="n">ipos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsin</span><span class="p">(</span><span class="n">sind</span> <span class="o">*</span> <span class="n">grad</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">osint</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">pol</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">ocost</span><span class="p">),</span> <span class="n">ophi</span><span class="p">]),</span> <span class="kc">None</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">grad</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">sind</span> <span class="o">*</span> <span class="n">cost</span> <span class="o">/</span> <span class="n">sint</span> <span class="o">+</span> <span class="n">grad</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">cosd</span><span class="p">)</span>
+    <span class="n">nom1</span> <span class="o">=</span> <span class="n">grad</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">grad</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">A</span>
+    <span class="n">denom</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">A</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="n">cosgam</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">nom1</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">denom</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">singam</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">nom1</span> <span class="o">*</span> <span class="p">(</span><span class="n">grad</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">grad</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">A</span><span class="p">)</span> <span class="o">/</span> <span class="n">denom</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">ocost</span><span class="p">),</span> <span class="n">ophi</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">cosgam</span><span class="p">,</span> <span class="n">singam</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">fixang</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Handle pole wraparound.&quot;&quot;&quot;</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+    <span class="n">bad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">bad</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">bad</span><span class="p">]</span>
+    <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">bad</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">bad</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+    <span class="n">bad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+    <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">bad</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">bad</span><span class="p">]</span>
+    <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">bad</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">bad</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+    <span class="k">return</span> <span class="n">a</span>
+
+
+<span class="k">def</span> <span class="nf">apply_rotation</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">rot</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Update Q,U components in polarized map by applying the rotation</span>
+<span class="sd">    rot, represented as [cos2psi,sin2psi] per pixel. Rot is one of the</span>
+<span class="sd">    outputs from offset_pos.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">m</span>
+    <span class="k">if</span> <span class="n">rot</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">m</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">rot</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">rot</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">m</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">rot</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">rot</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">m</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">m</span>
+
+
+<div class="viewcode-block" id="CMBLensed"><a class="viewcode-back" href="../../../api/pysm.CMBLensed.html#pysm.CMBLensed">[docs]</a><span class="k">class</span> <span class="nc">CMBLensed</span><span class="p">(</span><span class="n">CMBMap</span><span class="p">):</span>
+    <span class="c1"># intherit from CMBMap so we get the `get_emission` method</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">nside</span><span class="p">,</span>
+        <span class="n">cmb_spectra</span><span class="p">,</span>
+        <span class="n">cmb_seed</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">apply_delens</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">delensing_ells</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Lensed CMB</span>
+
+<span class="sd">        Takes an input unlensed CMB and lensing spectrum from CAMB and uses</span>
+<span class="sd">        Taylens to apply lensing, it optionally simulates delensing by</span>
+<span class="sd">        suppressing the lensing power at specific scales with the user</span>
+<span class="sd">        provided `delensing_ells`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">        cmb_spectra : path</span>
+<span class="sd">            Input text file from CAMB, spectra unlensed</span>
+<span class="sd">        cmb_seed : int</span>
+<span class="sd">            Numpy random seed for synfast, set to None for a random seed</span>
+<span class="sd">        apply_delens : bool</span>
+<span class="sd">            If true, simulate delensing with taylens</span>
+<span class="sd">        delensing_ells : path</span>
+<span class="sd">            Space delimited file with ells in the first columns and suppression</span>
+<span class="sd">            factor (1 for no suppression) in the second column</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span> <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">pass</span>  <span class="c1"># suppress exception about not providing any input map</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cmb_spectra</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_txt</span><span class="p">(</span><span class="n">cmb_spectra</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cmb_seed</span> <span class="o">=</span> <span class="n">cmb_seed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apply_delens</span> <span class="o">=</span> <span class="n">apply_delens</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delensing_ells</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="kc">None</span> <span class="k">if</span> <span class="n">delensing_ells</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_txt</span><span class="p">(</span><span class="n">delensing_ells</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">run_taylens</span><span class="p">(),</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">uK_CMB</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<div class="viewcode-block" id="CMBLensed.run_taylens"><a class="viewcode-back" href="../../../api/pysm.CMBLensed.html#pysm.CMBLensed.run_taylens">[docs]</a>    <span class="k">def</span> <span class="nf">run_taylens</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns CMB (T, Q, U) maps as a function of observing frequency, nu.</span>
+
+<span class="sd">        This code is extracted from the taylens code (reference).</span>
+
+<span class="sd">        :return: function -- CMB maps.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">synlmax</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">nside</span>  <span class="c1"># this used to be user-defined.</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cmb_spectra</span>
+        <span class="n">lmax_cl</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">lmax_cl</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">synlmax</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">synlmax</span><span class="p">,</span> <span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="c1"># Reading input spectra in CAMB format. CAMB outputs l(l+1)/2pi hence the corrections.</span>
+        <span class="n">cl_tebp_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="n">lmax_cl</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
+        <span class="n">cl_tebp_arr</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">*</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1"># TT</span>
+        <span class="n">cl_tebp_arr</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">*</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1"># EE</span>
+        <span class="n">cl_tebp_arr</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">*</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1"># BB</span>
+        <span class="n">cl_tebp_arr</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">data</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">*</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1"># TE</span>
+        <span class="n">cl_tebp_arr</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">lmax_cl</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># EB</span>
+        <span class="n">cl_tebp_arr</span><span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">lmax_cl</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># TB</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_delens</span><span class="p">:</span>
+            <span class="n">cl_tebp_arr</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="mi">2</span>
+                <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+                <span class="o">*</span> <span class="n">data</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+                <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">delensing_ells</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="o">/</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">*</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span>
+            <span class="p">)</span>  <span class="c1"># PP</span>
+            <span class="n">cl_tebp_arr</span><span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">lmax_cl</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># BP</span>
+            <span class="n">cl_tebp_arr</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="mi">2</span>
+                <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+                <span class="o">*</span> <span class="n">data</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span>
+                <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delensing_ells</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="o">/</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">*</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">**</span> <span class="mf">1.5</span>
+            <span class="p">)</span>  <span class="c1"># EP</span>
+            <span class="n">cl_tebp_arr</span><span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="mi">2</span>
+                <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+                <span class="o">*</span> <span class="n">data</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+                <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delensing_ells</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="o">/</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">*</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">**</span> <span class="mf">1.5</span>
+            <span class="p">)</span>  <span class="c1"># TP</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cl_tebp_arr</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">data</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">*</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span>  <span class="c1"># PP</span>
+            <span class="n">cl_tebp_arr</span><span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">lmax_cl</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># BP</span>
+            <span class="n">cl_tebp_arr</span><span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">data</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">*</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">**</span> <span class="mf">1.5</span>
+            <span class="p">)</span>  <span class="c1"># EP</span>
+            <span class="n">cl_tebp_arr</span><span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">:]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">data</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">*</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">**</span> <span class="mf">1.5</span>
+            <span class="p">)</span>  <span class="c1"># TP</span>
+
+        <span class="c1"># Coordinates of healpix pixel centers</span>
+        <span class="n">ipos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">hp</span><span class="o">.</span><span class="n">pix2ang</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nside</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">hp</span><span class="o">.</span><span class="n">nside2npix</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nside</span><span class="p">))))</span>
+
+        <span class="c1"># Simulate a CMB and lensing field</span>
+        <span class="n">cmb</span><span class="p">,</span> <span class="n">aphi</span> <span class="o">=</span> <span class="n">simulate_tebp_correlated</span><span class="p">(</span>
+            <span class="n">cl_tebp_arr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nside</span><span class="p">,</span> <span class="n">synlmax</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cmb_seed</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">cmb</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">cmb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">cmb</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">cmb</span><span class="o">.</span><span class="n">size</span><span class="p">])</span>
+
+        <span class="c1"># Compute the offset positions</span>
+        <span class="n">phi</span><span class="p">,</span> <span class="n">phi_dtheta</span><span class="p">,</span> <span class="n">phi_dphi</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">alm2map_der1</span><span class="p">(</span><span class="n">aphi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nside</span><span class="p">,</span> <span class="n">lmax</span><span class="o">=</span><span class="n">synlmax</span><span class="p">)</span>
+
+        <span class="k">del</span> <span class="n">aphi</span>
+
+        <span class="n">opos</span><span class="p">,</span> <span class="n">rot</span> <span class="o">=</span> <span class="n">offset_pos</span><span class="p">(</span>
+            <span class="n">ipos</span><span class="p">,</span> <span class="n">phi_dtheta</span><span class="p">,</span> <span class="n">phi_dphi</span><span class="p">,</span> <span class="n">pol</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">geodesic</span><span class="o">=</span><span class="kc">False</span>
+        <span class="p">)</span>  <span class="c1"># geodesic used to be used defined.</span>
+        <span class="k">del</span> <span class="n">phi</span><span class="p">,</span> <span class="n">phi_dtheta</span><span class="p">,</span> <span class="n">phi_dphi</span>
+
+        <span class="c1"># Interpolate maps one at a time</span>
+        <span class="n">maps</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">cmb</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">taylor_interpol_iter</span><span class="p">(</span>
+                <span class="n">comp</span><span class="p">,</span> <span class="n">opos</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lmax</span><span class="o">=</span><span class="kc">None</span>
+            <span class="p">):</span>  <span class="c1"># lmax here needs to be fixed. order of taylor expansion is fixed to 3.</span>
+                <span class="k">pass</span>
+            <span class="n">maps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+        <span class="k">del</span> <span class="n">opos</span><span class="p">,</span> <span class="n">cmb</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">apply_rotation</span><span class="p">(</span><span class="n">maps</span><span class="p">,</span> <span class="n">rot</span><span class="p">))</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right"> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2020, Ben Thorne, David Alonso, Sigurd Naess, Jo Dunkley, Andrea Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 06 Feb 2020. <br/>
+  </p>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+preset_models
+=============
+
+.. currentmodule:: pysm
+
+.. autofunction:: preset_models

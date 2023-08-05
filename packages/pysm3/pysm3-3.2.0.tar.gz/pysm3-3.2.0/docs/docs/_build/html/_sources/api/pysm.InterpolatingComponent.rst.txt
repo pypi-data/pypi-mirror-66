@@ -1,0 +1,23 @@
+InterpolatingComponent
+======================
+
+.. currentmodule:: pysm
+
+.. autoclass:: InterpolatingComponent
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~InterpolatingComponent.get_emission
+      ~InterpolatingComponent.get_filenames
+      ~InterpolatingComponent.read_map_by_frequency
+      ~InterpolatingComponent.read_map_file
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_emission
+   .. automethod:: get_filenames
+   .. automethod:: read_map_by_frequency
+   .. automethod:: read_map_file

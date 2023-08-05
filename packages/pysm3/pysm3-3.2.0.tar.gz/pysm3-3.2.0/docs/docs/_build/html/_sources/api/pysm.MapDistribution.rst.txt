@@ -1,0 +1,7 @@
+MapDistribution
+===============
+
+.. currentmodule:: pysm
+
+.. autoclass:: MapDistribution
+   :show-inheritance:

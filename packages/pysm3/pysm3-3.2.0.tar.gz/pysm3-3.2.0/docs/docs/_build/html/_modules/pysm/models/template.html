@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pysm.models.template &#8212; pysm v3.1.dev260</title>
+    <link rel="stylesheet" href="../../../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <script type="text/javascript" src="../../../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../../../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../../../index.html"><span id="logotext1">pysm</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../../../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../../../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li>
+	<a href="../../../index.html">pysm v3.1.dev260</a>
+	 &#187;
+      </li>
+      <li><a href="../../index.html" >Module code</a> &#187;</li>
+      <li><a href="../../pysm.html" accesskey="U">pysm</a> &#187;</li>
+      
+       
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for pysm.models.template</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot; This submodule contains the tempalte for the `Model` object.</span>
+<span class="sd">The available PySM models are subclasses of this template, and</span>
+<span class="sd">when adding models to PySM it is advised that the user subclasses</span>
+<span class="sd">this template, ensuring that the new subclass has the required</span>
+<span class="sd">`get_emission` method.</span>
+
+<span class="sd">Objects:</span>
+<span class="sd">    Model</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">healpy</span> <span class="k">as</span> <span class="nn">hp</span>
+<span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
+<span class="kn">from</span> <span class="nn">astropy.utils</span> <span class="kn">import</span> <span class="n">data</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">utils</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">..constants</span> <span class="kn">import</span> <span class="n">DATAURL</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">mpi</span>
+<span class="kn">import</span> <span class="nn">gc</span>
+
+<span class="kn">from</span> <span class="nn">unittest.mock</span> <span class="kn">import</span> <span class="n">Mock</span>
+
+
+<div class="viewcode-block" id="Model"><a class="viewcode-back" href="../../../api/pysm.Model.html#pysm.Model">[docs]</a><span class="k">class</span> <span class="nc">Model</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; This is the template object for PySM objects.</span>
+
+<span class="sd">    If a MPI communicator is passed as input and `pixel_indices` is None,</span>
+<span class="sd">    the class automatically distributes the maps across processes.</span>
+<span class="sd">    You can implement your own pixel distribution passing both a MPI</span>
+<span class="sd">    communicator and `pixel_indices`, however that won&#39;t support smoothing</span>
+<span class="sd">    with `libsharp`.</span>
+<span class="sd">    If `libsharp` is available, the rings are distributed as expected</span>
+<span class="sd">    by `libsharp` to perform distributed spherical harmonics transforms,</span>
+<span class="sd">    see :py:func:`pysm.mpi.distribute_rings_libsharp`, the `libsharp` grid</span>
+<span class="sd">    object is saved in `self.libsharp_grid`.</span>
+<span class="sd">    If libsharp is not available, pixels are distributed uniformly across</span>
+<span class="sd">    processes, see :py:func:`pysm.mpi.distribute_pixels_uniformly`&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nside</span><span class="p">,</span> <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dataurl</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        mpi_comm: object</span>
+<span class="sd">            MPI communicator object (optional, default=None).</span>
+<span class="sd">        nside: int</span>
+<span class="sd">            Resolution parameter at which this model is to be calculated.</span>
+<span class="sd">        smoothing_lmax : int</span>
+<span class="sd">            :math:`\ell_{max}` for the smoothing step, by default :math:`2*N_{side}`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nside</span> <span class="o">=</span> <span class="n">nside</span>
+        <span class="k">assert</span> <span class="n">nside</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">map_dist</span> <span class="o">=</span> <span class="n">map_dist</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dataurl</span> <span class="o">=</span> <span class="n">dataurl</span>
+
+<div class="viewcode-block" id="Model.read_map"><a class="viewcode-back" href="../../../api/pysm.Model.html#pysm.Model.read_map">[docs]</a>    <span class="k">def</span> <span class="nf">read_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">field</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Wrapper of the PySM read_map function that automatically</span>
+<span class="sd">        uses nside, pixel_indices and mpi_comm defined in this Model</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">read_map</span><span class="p">(</span>
+            <span class="n">path</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nside</span><span class="p">,</span>
+            <span class="n">unit</span><span class="o">=</span><span class="n">unit</span><span class="p">,</span>
+            <span class="n">field</span><span class="o">=</span><span class="n">field</span><span class="p">,</span>
+            <span class="n">map_dist</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">map_dist</span><span class="p">,</span>
+            <span class="n">dataurl</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dataurl</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="Model.read_txt"><a class="viewcode-back" href="../../../api/pysm.Model.html#pysm.Model.read_txt">[docs]</a>    <span class="k">def</span> <span class="nf">read_txt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">mpi_comm</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">map_dist</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">map_dist</span><span class="o">.</span><span class="n">mpi_comm</span>
+        <span class="k">return</span> <span class="n">read_txt</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mpi_comm</span><span class="o">=</span><span class="n">mpi_comm</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Model.get_emission"><a class="viewcode-back" href="../../../api/pysm.Model.html#pysm.Model.get_emission">[docs]</a>    <span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span>
+    <span class="k">def</span> <span class="nf">get_emission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freqs</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; This function evaluates the component model at a either</span>
+<span class="sd">        a single frequency, an array of frequencies, or over a bandpass.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        freqs: scalar or array astropy.units.Quantity</span>
+<span class="sd">            Frequency at which the model should be evaluated, in a frequency</span>
+<span class="sd">            which can be converted to GHz using astropy.units.</span>
+<span class="sd">            If an array of frequencies is provided, integrate using trapz</span>
+<span class="sd">            with a equal weighting, i.e. simulate a top-hat bandpass.</span>
+<span class="sd">        weights: np.array, optional</span>
+<span class="sd">            Array of weights describing the frequency response of the instrument,</span>
+<span class="sd">            i.e. the bandpass. Weights are normalized and applied in Jy/sr.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        output : astropy.units.Quantity</span>
+<span class="sd">            Simulated map at the given frequency or integrated over the given</span>
+<span class="sd">            bandpass. The shape of the output is (3,npix) for polarized components,</span>
+<span class="sd">            (1,npix) for temperature-only components. Output is in `uK_RJ`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">freqs</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">check_freq_input</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">normalize_weights</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="n">hp</span><span class="o">.</span><span class="n">nside2npix</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nside</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">outputs</span> <span class="o">&lt;&lt;</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span></div></div>
+
+
+<div class="viewcode-block" id="apply_smoothing_and_coord_transform"><a class="viewcode-back" href="../../../api/pysm.apply_smoothing_and_coord_transform.html#pysm.apply_smoothing_and_coord_transform">[docs]</a><span class="k">def</span> <span class="nf">apply_smoothing_and_coord_transform</span><span class="p">(</span>
+    <span class="n">input_map</span><span class="p">,</span> <span class="n">fwhm</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Apply smoothing and coordinate rotation to an input map</span>
+
+<span class="sd">    it applies the `healpy.smoothing` Gaussian smoothing kernel if `map_dist`</span>
+<span class="sd">    is None, otherwise applies distributed smoothing with `libsharp`.</span>
+<span class="sd">    In the distributed case, no rotation is supported.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    input_map : ndarray</span>
+<span class="sd">        Input map, of shape `(3, npix)`</span>
+<span class="sd">        This is assumed to have no beam at this point, as the</span>
+<span class="sd">        simulated small scale tempatle on which the simulations are based</span>
+<span class="sd">        have no beam.</span>
+<span class="sd">    fwhm : astropy.units.Quantity</span>
+<span class="sd">        Full width at half-maximum, defining the</span>
+<span class="sd">        Gaussian kernels to be applied.</span>
+<span class="sd">    rot: hp.Rotator</span>
+<span class="sd">        Apply a coordinate rotation give a healpy `Rotator`, e.g. if the</span>
+<span class="sd">        inputs are in Galactic, `hp.Rotator(coord=(&quot;G&quot;, &quot;C&quot;))` rotates</span>
+<span class="sd">        to Equatorial</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    smoothed_map : np.ndarray</span>
+<span class="sd">        Array containing the smoothed sky</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">map_dist</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">nside</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">get_nside</span><span class="p">(</span><span class="n">input_map</span><span class="p">)</span>
+        <span class="n">alm</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">map2alm</span><span class="p">(</span>
+            <span class="n">input_map</span><span class="p">,</span> <span class="n">lmax</span><span class="o">=</span><span class="n">lmax</span><span class="p">,</span> <span class="n">use_pixel_weights</span><span class="o">=</span><span class="kc">True</span> <span class="k">if</span> <span class="n">nside</span> <span class="o">&gt;</span> <span class="mi">16</span> <span class="k">else</span> <span class="kc">False</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">fwhm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">hp</span><span class="o">.</span><span class="n">smoothalm</span><span class="p">(</span>
+                <span class="n">alm</span><span class="p">,</span> <span class="n">fwhm</span><span class="o">=</span><span class="n">fwhm</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">rad</span><span class="p">),</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pol</span><span class="o">=</span><span class="kc">True</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">rot</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">rot</span><span class="o">.</span><span class="n">rotate_alm</span><span class="p">(</span><span class="n">alm</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">smoothed_map</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">alm2map</span><span class="p">(</span><span class="n">alm</span><span class="p">,</span> <span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">pixwin</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="p">(</span><span class="n">rot</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span>
+            <span class="n">rot</span><span class="o">.</span><span class="n">coordin</span> <span class="o">==</span> <span class="n">rot</span><span class="o">.</span><span class="n">coordout</span>
+        <span class="p">),</span> <span class="s2">&quot;No rotation supported in distributed smoothing&quot;</span>
+        <span class="n">smoothed_map</span> <span class="o">=</span> <span class="n">mpi</span><span class="o">.</span><span class="n">mpi_smoothing</span><span class="p">(</span><span class="n">input_map</span><span class="p">,</span> <span class="n">fwhm</span><span class="p">,</span> <span class="n">map_dist</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">input_map</span><span class="p">,</span> <span class="s2">&quot;unit&quot;</span><span class="p">):</span>
+        <span class="n">smoothed_map</span> <span class="o">&lt;&lt;=</span> <span class="n">input_map</span><span class="o">.</span><span class="n">unit</span>
+    <span class="k">return</span> <span class="n">smoothed_map</span></div>
+
+
+<span class="k">def</span> <span class="nf">apply_normalization</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Function to apply a normalization constraing to a set of weights.</span>
+<span class="sd">    This imposes the requirement that the integral of the weights over the</span>
+<span class="sd">    array `freqs` must equal unity.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    freqs: ndarray</span>
+<span class="sd">        Array containing the domain over which to integrate.</span>
+<span class="sd">    weights: ndarray</span>
+<span class="sd">        Array containing the samples to integrate.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    tuple(ndarray)</span>
+<span class="sd">        Tuple containing the frequencies and weights. These are numpy arrays</span>
+<span class="sd">        of equal length.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">freqs</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">extract_hdu_unit</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Function to extract unit from an hdu.</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    path: Path object</span>
+<span class="sd">        Path to the fits file.</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    string</span>
+<span class="sd">        String specifying the unit of the fits data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">hdul</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">unit</span> <span class="o">=</span> <span class="n">hdul</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">header</span><span class="p">[</span><span class="s2">&quot;TUNIT1&quot;</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="c1"># in the case that TUNIT1 does not exist, assume unitless quantity.</span>
+        <span class="n">unit</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;No physical unit associated with file &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">unit</span>
+
+
+<div class="viewcode-block" id="read_map"><a class="viewcode-back" href="../../../api/pysm.read_map.html#pysm.read_map">[docs]</a><span class="k">def</span> <span class="nf">read_map</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">nside</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">field</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dataurl</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Wrapper of `healpy.read_map` for PySM data. This function also extracts</span>
+<span class="sd">    the units from the fits HDU and applies them to the data array to form an</span>
+<span class="sd">    `astropy.units.Quantity` object.</span>
+<span class="sd">    This function requires that the fits file contains a TUNIT key for each</span>
+<span class="sd">    populated field.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    path : object `pathlib.Path`, or str</span>
+<span class="sd">        Path of HEALPix map to be read.</span>
+<span class="sd">    nside : int</span>
+<span class="sd">        Resolution at which to return map. Map is read in at whatever resolution</span>
+<span class="sd">        it is stored, and `healpy.ud_grade` is applied.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    map : ndarray</span>
+<span class="sd">        Numpy array containing HEALPix map in RING ordering.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mpi_comm</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">map_dist</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">map_dist</span><span class="o">.</span><span class="n">mpi_comm</span>
+    <span class="n">pixel_indices</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">map_dist</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">map_dist</span><span class="o">.</span><span class="n">pixel_indices</span>
+    <span class="k">if</span> <span class="n">dataurl</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">dataurl</span> <span class="o">=</span> <span class="n">DATAURL</span>
+    <span class="c1"># read map. Add `str()` operator in case dealing with `Path` object.</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">)):</span>  <span class="c1"># Python 3.5 requires turning a Path object to str</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">data</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">set_temp</span><span class="p">(</span><span class="s2">&quot;dataurl&quot;</span><span class="p">,</span> <span class="n">dataurl</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">set_temp</span><span class="p">(</span>
+            <span class="s2">&quot;remote_timeout&quot;</span><span class="p">,</span> <span class="mi">30</span>
+        <span class="p">):</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get_pkg_data_filename</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="c1"># inmap = hp.read_map(filename, field=field, verbose=False)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">mpi_comm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">mpi_comm</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="n">output_map</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">field</span><span class="o">=</span><span class="n">field</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">dtype</span> <span class="o">=</span> <span class="n">output_map</span><span class="o">.</span><span class="n">dtype</span>
+        <span class="c1"># numba only supports little endian</span>
+        <span class="k">if</span> <span class="n">dtype</span><span class="o">.</span><span class="n">byteorder</span> <span class="o">==</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">:</span>
+            <span class="n">dtype</span> <span class="o">=</span> <span class="n">dtype</span><span class="o">.</span><span class="n">newbyteorder</span><span class="p">()</span>
+        <span class="c1"># mpi4py has issues if the dtype is a string like &quot;&gt;f4&quot;</span>
+        <span class="k">if</span> <span class="n">dtype</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">):</span>
+            <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">dtype</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">):</span>
+            <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="n">nside_in</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">get_nside</span><span class="p">(</span><span class="n">output_map</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nside</span> <span class="o">&lt;</span> <span class="n">nside_in</span><span class="p">:</span>  <span class="c1"># do downgrading in double precision</span>
+            <span class="n">output_map</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">ud_grade</span><span class="p">(</span><span class="n">output_map</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">),</span> <span class="n">nside_out</span><span class="o">=</span><span class="n">nside</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">output_map</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">ud_grade</span><span class="p">(</span><span class="n">output_map</span><span class="p">,</span> <span class="n">nside_out</span><span class="o">=</span><span class="n">nside</span><span class="p">)</span>
+        <span class="n">output_map</span> <span class="o">=</span> <span class="n">output_map</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">unit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">unit</span> <span class="o">=</span> <span class="n">extract_hdu_unit</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+        <span class="n">shape</span> <span class="o">=</span> <span class="n">output_map</span><span class="o">.</span><span class="n">shape</span>
+    <span class="k">elif</span> <span class="n">mpi_comm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">rank</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">npix</span> <span class="o">=</span> <span class="n">hp</span><span class="o">.</span><span class="n">nside2npix</span><span class="p">(</span><span class="n">nside</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ncomp</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">field</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>  <span class="c1"># field is int</span>
+            <span class="n">ncomp</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">shape</span> <span class="o">=</span> <span class="n">npix</span> <span class="k">if</span> <span class="n">ncomp</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">field</span><span class="p">),</span> <span class="n">npix</span><span class="p">)</span>
+        <span class="n">unit</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">dtype</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="n">mpi_comm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">mpi4py</span> <span class="kn">import</span> <span class="n">MPI</span>
+
+        <span class="n">dtype</span> <span class="o">=</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">bcast</span><span class="p">(</span><span class="n">dtype</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">unit</span> <span class="o">=</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">bcast</span><span class="p">(</span><span class="n">unit</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">node_comm</span> <span class="o">=</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">Split_type</span><span class="p">(</span><span class="n">MPI</span><span class="o">.</span><span class="n">COMM_TYPE_SHARED</span><span class="p">)</span>
+        <span class="n">mpi_type</span> <span class="o">=</span> <span class="n">MPI</span><span class="o">.</span><span class="n">_typedict</span><span class="p">[</span><span class="n">dtype</span><span class="o">.</span><span class="n">char</span><span class="p">]</span>
+        <span class="n">mpi_type_size</span> <span class="o">=</span> <span class="n">mpi_type</span><span class="o">.</span><span class="n">Get_size</span><span class="p">()</span>
+        <span class="n">win</span> <span class="o">=</span> <span class="n">MPI</span><span class="o">.</span><span class="n">Win</span><span class="o">.</span><span class="n">Allocate_shared</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span> <span class="o">*</span> <span class="n">mpi_type_size</span> <span class="k">if</span> <span class="n">node_comm</span><span class="o">.</span><span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="n">mpi_type_size</span><span class="p">,</span>
+            <span class="n">comm</span><span class="o">=</span><span class="n">node_comm</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">shared_buffer</span><span class="p">,</span> <span class="n">item_size</span> <span class="o">=</span> <span class="n">win</span><span class="o">.</span><span class="n">Shared_query</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">item_size</span> <span class="o">==</span> <span class="n">mpi_type_size</span>
+        <span class="n">shared_buffer</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">shared_buffer</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">node_shared_map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span><span class="n">buffer</span><span class="o">=</span><span class="n">shared_buffer</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">)</span>
+
+        <span class="c1"># only the first MPI process in each node is in this communicator</span>
+        <span class="n">rank_comm</span> <span class="o">=</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">Split</span><span class="p">(</span><span class="mi">0</span> <span class="k">if</span> <span class="n">node_comm</span><span class="o">.</span><span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">MPI</span><span class="o">.</span><span class="n">UNDEFINED</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">node_shared_map</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">output_map</span>
+        <span class="k">if</span> <span class="n">node_comm</span><span class="o">.</span><span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">rank_comm</span><span class="o">.</span><span class="n">Bcast</span><span class="p">(</span><span class="n">node_shared_map</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">mpi_comm</span><span class="o">.</span><span class="n">barrier</span><span class="p">()</span>
+        <span class="c1"># code with broadcast to whole communicator</span>
+        <span class="c1"># if mpi_comm.rank &gt; 0:</span>
+        <span class="c1">#     output_map = np.empty(shape, dtype=dtype)</span>
+        <span class="c1"># mpi_comm.Bcast(output_map, root=0)</span>
+    <span class="k">else</span><span class="p">:</span>  <span class="c1"># without MPI node_shared_map is just another reference to output_map</span>
+        <span class="n">node_shared_map</span> <span class="o">=</span> <span class="n">output_map</span>
+
+    <span class="k">if</span> <span class="n">pixel_indices</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># make copies so that Python can release the full array</span>
+        <span class="k">try</span><span class="p">:</span>  <span class="c1"># multiple components</span>
+            <span class="n">output_map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+                <span class="p">[</span><span class="n">each</span><span class="p">[</span><span class="n">pixel_indices</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="k">for</span> <span class="n">each</span> <span class="ow">in</span> <span class="n">node_shared_map</span><span class="p">]</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>  <span class="c1"># single component</span>
+            <span class="n">output_map</span> <span class="o">=</span> <span class="n">node_shared_map</span><span class="p">[</span><span class="n">pixel_indices</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">mpi_comm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">node_shared_map</span>
+        <span class="k">del</span> <span class="n">shared_buffer</span>
+        <span class="n">win</span><span class="o">.</span><span class="n">Free</span><span class="p">()</span>
+        <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">output_map</span><span class="p">,</span> <span class="n">unit</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">read_txt</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mpi_comm</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;MPI-aware numpy.loadtxt function</span>
+<span class="sd">    reads text file on rank 0 with np.loadtxt and broadcasts over MPI</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    path : str</span>
+<span class="sd">        path to fits file.</span>
+<span class="sd">    mpi_comm :  mpi4py MPI Communicator.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    output : numpy.ndarray</span>
+<span class="sd">        data read with numpy.loadtxt</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">)):</span>
+        <span class="n">filename</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">data</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">set_temp</span><span class="p">(</span><span class="s2">&quot;dataurl&quot;</span><span class="p">,</span> <span class="n">DATAURL</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">set_temp</span><span class="p">(</span>
+            <span class="s2">&quot;remote_timeout&quot;</span><span class="p">,</span> <span class="mi">30</span>
+        <span class="p">):</span>
+            <span class="n">filename</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get_pkg_data_filename</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">mpi_comm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">rank</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">mpi_comm</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">mpi_comm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">rank</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="n">mpi_comm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">mpi_comm</span><span class="o">.</span><span class="n">bcast</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">output</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right"> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2020, Ben Thorne, David Alonso, Sigurd Naess, Jo Dunkley, Andrea Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 06 Feb 2020. <br/>
+  </p>
+</footer>
+  </body>
+</html>

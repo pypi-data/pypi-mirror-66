@@ -1,0 +1,6 @@
+apply_smoothing_and_coord_transform
+===================================
+
+.. currentmodule:: pysm
+
+.. autofunction:: apply_smoothing_and_coord_transform

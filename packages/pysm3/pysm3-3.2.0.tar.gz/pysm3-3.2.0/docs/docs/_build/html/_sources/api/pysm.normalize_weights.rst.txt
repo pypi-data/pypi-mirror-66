@@ -1,0 +1,6 @@
+normalize_weights
+=================
+
+.. currentmodule:: pysm
+
+.. autofunction:: normalize_weights

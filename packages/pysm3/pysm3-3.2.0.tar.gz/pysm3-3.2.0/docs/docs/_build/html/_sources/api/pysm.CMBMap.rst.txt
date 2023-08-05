@@ -1,0 +1,17 @@
+CMBMap
+======
+
+.. currentmodule:: pysm
+
+.. autoclass:: CMBMap
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CMBMap.get_emission
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_emission

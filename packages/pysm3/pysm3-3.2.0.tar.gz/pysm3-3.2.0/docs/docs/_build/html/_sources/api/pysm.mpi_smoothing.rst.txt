@@ -1,0 +1,6 @@
+mpi_smoothing
+=============
+
+.. currentmodule:: pysm
+
+.. autofunction:: mpi_smoothing

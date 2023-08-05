@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>CMBLensed &#8212; pysm v3.1.dev260</title>
+    <link rel="stylesheet" href="../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CMBMap" href="pysm.CMBMap.html" />
+    <link rel="prev" title="test" href="pysm.test.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../index.html"><span id="logotext1">pysm</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="right">
+	<a href="pysm.CMBMap.html" title="CMBMap">
+	  next &raquo;
+	</a>
+      </li>
+      <li class="right">
+	<a href="pysm.test.html" title="test">
+	  &laquo; previous
+	</a>
+	 |
+      </li>
+      <li>
+	<a href="../index.html">pysm v3.1.dev260</a>
+	 &#187;
+      </li>
+      
+      <li>CMBLensed</li> 
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="cmblensed">
+<h1>CMBLensed<a class="headerlink" href="#cmblensed" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pysm.CMBLensed">
+<em class="property">class </em><code class="descclassname">pysm.</code><code class="descname">CMBLensed</code><span class="sig-paren">(</span><em>nside</em>, <em>cmb_spectra</em>, <em>cmb_seed=None</em>, <em>apply_delens=False</em>, <em>delensing_ells=None</em>, <em>map_dist=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pysm/models/cmb.html#CMBLensed"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/healpy/pysm/tree/master/pysm/models/cmb.py#L221" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#pysm.CMBLensed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pysm.CMBMap.html#pysm.CMBMap" title="pysm.models.cmb.CMBMap"><code class="docutils literal notranslate"><span class="pre">pysm.CMBMap</span></code></a></p>
+<p>Lensed CMB</p>
+<p>Takes an input unlensed CMB and lensing spectrum from CAMB and uses
+Taylens to apply lensing, it optionally simulates delensing by
+suppressing the lensing power at specific scales with the user
+provided <code class="xref py py-obj docutils literal notranslate"><span class="pre">delensing_ells</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cmb_spectra</strong><span class="classifier">path</span></dt><dd><p>Input text file from CAMB, spectra unlensed</p>
+</dd>
+<dt><strong>cmb_seed</strong><span class="classifier">int</span></dt><dd><p>Numpy random seed for synfast, set to None for a random seed</p>
+</dd>
+<dt><strong>apply_delens</strong><span class="classifier">bool</span></dt><dd><p>If true, simulate delensing with taylens</p>
+</dd>
+<dt><strong>delensing_ells</strong><span class="classifier">path</span></dt><dd><p>Space delimited file with ells in the first columns and suppression
+factor (1 for no suppression) in the second column</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods Summary</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pysm.CMBLensed.run_taylens" title="pysm.CMBLensed.run_taylens"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_taylens</span></code></a>(self)</p></td>
+<td><p>Returns CMB (T, Q, U) maps as a function of observing frequency, nu.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="pysm.CMBLensed.run_taylens">
+<code class="descname">run_taylens</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pysm/models/cmb.html#CMBLensed.run_taylens"><span class="viewcode-link">[source]</span></a><a class="reference external" href="http://github.com/healpy/pysm/tree/master/pysm/models/cmb.py#L264" title="Push the Edit button on the next page"><span class="edit-on-github viewcode-link">&nbsp;[edit on github]</span></a><a class="headerlink" href="#pysm.CMBLensed.run_taylens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns CMB (T, Q, U) maps as a function of observing frequency, nu.</p>
+<p>This code is extracted from the taylens code (reference).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>function – CMB maps.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#">CMBLensed</a></li>
+</ul>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right">
+    <a href="http://github.com/healpy/pysm/tree/master/docs/api/pysm.CMBLensed.rst">Edit This Page on Github</a> &nbsp;
+    <a href="../_sources/api/pysm.CMBLensed.rst.txt"
+       rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2020, Ben Thorne, David Alonso, Sigurd Naess, Jo Dunkley, Andrea Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 06 Feb 2020. <br/>
+  </p>
+</footer>
+  </body>
+</html>

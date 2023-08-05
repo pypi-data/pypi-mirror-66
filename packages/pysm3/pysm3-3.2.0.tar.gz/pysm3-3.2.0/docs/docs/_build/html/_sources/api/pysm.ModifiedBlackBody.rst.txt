@@ -1,0 +1,17 @@
+ModifiedBlackBody
+=================
+
+.. currentmodule:: pysm
+
+.. autoclass:: ModifiedBlackBody
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~ModifiedBlackBody.get_emission
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: get_emission

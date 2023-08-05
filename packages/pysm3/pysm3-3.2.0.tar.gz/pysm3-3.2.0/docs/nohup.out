@@ -1,0 +1,87 @@
+[I 18:54:02.750 LabApp] JupyterLab extension loaded from /home/zonca/anaconda/envs/pysm3/lib/python3.6/site-packages/jupyterlab
+[I 18:54:02.750 LabApp] JupyterLab application directory is /home/zonca/anaconda/envs/pysm3/share/jupyter/lab
+[W 18:54:02.754 LabApp] Error loading server extension jupyterlab-slurm
+    Traceback (most recent call last):
+      File "/home/zonca/anaconda/envs/pysm3/lib/python3.6/site-packages/notebook/notebookapp.py", line 1670, in init_server_extensions
+        mod = importlib.import_module(modulename)
+      File "/home/zonca/anaconda/envs/pysm3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+    ModuleNotFoundError: No module named 'jupyterlab-slurm'
+[I 18:54:02.954 LabApp] Serving notebooks from local directory: /home/zonca/zonca/p/software/pysm/docs
+[I 18:54:02.954 LabApp] The Jupyter Notebook is running at:
+[I 18:54:02.954 LabApp] http://nebula.sdsc.edu:23232/?token=ba2b512cf7ee41c8928194136e8086dae4f22e9933a19faf
+[I 18:54:02.954 LabApp]  or http://127.0.0.1:23232/?token=ba2b512cf7ee41c8928194136e8086dae4f22e9933a19faf
+[I 18:54:02.954 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 18:54:02.961 LabApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/zonca/.local/share/jupyter/runtime/nbserver-2489-open.html
+    Or copy and paste one of these URLs:
+        http://nebula.sdsc.edu:23232/?token=ba2b512cf7ee41c8928194136e8086dae4f22e9933a19faf
+     or http://127.0.0.1:23232/?token=ba2b512cf7ee41c8928194136e8086dae4f22e9933a19faf
+[I 18:54:09.756 LabApp] 302 GET /?token=ba2b512cf7ee41c8928194136e8086dae4f22e9933a19faf (76.167.206.76) 0.76ms
+[W 18:54:11.954 LabApp] Could not determine jupyterlab build status without nodejs
+[W 18:54:13.090 LabApp] 404 GET /api/contents/p/issues/201912_pysm_hd17?1585360452970 (76.167.206.76): No such file or directory: p/issues/201912_pysm_hd17
+[W 18:54:13.090 LabApp] No such file or directory: p/issues/201912_pysm_hd17
+[W 18:54:13.091 LabApp] 404 GET /api/contents/p/issues/201912_pysm_hd17?1585360452970 (76.167.206.76) 2.14ms referer=http://nebula.sdsc.edu:23232/lab
+[W 18:54:13.091 LabApp] 404 GET /api/contents/p/issues/201912_pysm_hd17/hd17_pysm2.ipynb?content=0&1585360452973 (76.167.206.76): No such file or directory: p/issues/201912_pysm_hd17/hd17_pysm2.ipynb
+[W 18:54:13.091 LabApp] No such file or directory: p/issues/201912_pysm_hd17/hd17_pysm2.ipynb
+[W 18:54:13.092 LabApp] 404 GET /api/contents/p/issues/201912_pysm_hd17/hd17_pysm2.ipynb?content=0&1585360452973 (76.167.206.76) 2.14ms referer=http://nebula.sdsc.edu:23232/lab
+[W 18:54:13.092 LabApp] 404 GET /api/contents/p/issues/201912_pysm_hd17/hd17_pysm2-pysm3.ipynb?content=0&1585360452975 (76.167.206.76): No such file or directory: p/issues/201912_pysm_hd17/hd17_pysm2-pysm3.ipynb
+[W 18:54:13.093 LabApp] No such file or directory: p/issues/201912_pysm_hd17/hd17_pysm2-pysm3.ipynb
+[W 18:54:13.093 LabApp] 404 GET /api/contents/p/issues/201912_pysm_hd17/hd17_pysm2-pysm3.ipynb?content=0&1585360452975 (76.167.206.76) 1.18ms referer=http://nebula.sdsc.edu:23232/lab
+[W 18:54:17.748 LabApp] Notebook customize_components.ipynb is not trusted
+[I 18:54:20.630 LabApp] Kernel started: e9b403cf-f495-40f4-abb1-33cb9f68e34a
+[I 22:09:47.792 LabApp] Starting buffering for e9b403cf-f495-40f4-abb1-33cb9f68e34a:91177812-f7ea-4fbc-b7f4-4dc55ba45c4e
+[I 10:10:28.360 LabApp] Restoring connection for e9b403cf-f495-40f4-abb1-33cb9f68e34a:91177812-f7ea-4fbc-b7f4-4dc55ba45c4e
+[I 11:38:16.899 LabApp] Starting buffering for e9b403cf-f495-40f4-abb1-33cb9f68e34a:91177812-f7ea-4fbc-b7f4-4dc55ba45c4e
+[W 12:15:02.142 LabApp] Could not determine jupyterlab build status without nodejs
+[W 12:15:03.885 LabApp] Notebook customize_components.ipynb is not trusted
+[I 12:15:11.782 LabApp] Shutting down on /api/shutdown request.
+[I 12:15:11.783 LabApp] Shutting down 1 kernel
+[I 12:15:12.084 LabApp] Kernel shutdown: e9b403cf-f495-40f4-abb1-33cb9f68e34a
+nbenv package not found: automatic saving of conda environment disabled
+jupytext package not found: jupytext.TextFileContentsManager not available
+[I 15:09:56.194 LabApp] JupyterLab extension loaded from /home/zonca/anaconda/envs/pysm3/lib/python3.6/site-packages/jupyterlab
+[I 15:09:56.194 LabApp] JupyterLab application directory is /home/zonca/anaconda/envs/pysm3/share/jupyter/lab
+[W 15:09:56.198 LabApp] Error loading server extension jupyterlab-slurm
+    Traceback (most recent call last):
+      File "/home/zonca/anaconda/envs/pysm3/lib/python3.6/site-packages/notebook/notebookapp.py", line 1670, in init_server_extensions
+        mod = importlib.import_module(modulename)
+      File "/home/zonca/anaconda/envs/pysm3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+    ModuleNotFoundError: No module named 'jupyterlab-slurm'
+[I 15:09:56.400 LabApp] Serving notebooks from local directory: /home/zonca/zonca/p/software/pysm/docs
+[I 15:09:56.400 LabApp] The Jupyter Notebook is running at:
+[I 15:09:56.400 LabApp] http://nebula.sdsc.edu:23232/?token=a4fa83d29c633875a1ac4dcb9467286782d1a4716f0224bc
+[I 15:09:56.400 LabApp]  or http://127.0.0.1:23232/?token=a4fa83d29c633875a1ac4dcb9467286782d1a4716f0224bc
+[I 15:09:56.400 LabApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 15:09:56.406 LabApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/zonca/.local/share/jupyter/runtime/nbserver-28222-open.html
+    Or copy and paste one of these URLs:
+        http://nebula.sdsc.edu:23232/?token=a4fa83d29c633875a1ac4dcb9467286782d1a4716f0224bc
+     or http://127.0.0.1:23232/?token=a4fa83d29c633875a1ac4dcb9467286782d1a4716f0224bc
+[I 15:10:08.985 LabApp] 302 GET /?token=a4fa83d29c633875a1ac4dcb9467286782d1a4716f0224bc (76.167.206.76) 1.26ms
+[W 15:10:11.108 LabApp] Could not determine jupyterlab build status without nodejs
+[W 15:10:12.162 LabApp] 404 GET /api/contents/hd17_pysm2_.ipynb?content=0&1586902211412 (76.167.206.76): No such file or directory: hd17_pysm2_.ipynb
+[W 15:10:12.162 LabApp] No such file or directory: hd17_pysm2_.ipynb
+[W 15:10:12.163 LabApp] 404 GET /api/contents/hd17_pysm2_.ipynb?content=0&1586902211412 (76.167.206.76) 1.80ms referer=http://nebula.sdsc.edu:23232/lab
+[W 15:11:05.520 LabApp] Notebook model_data.ipynb is not trusted
+[I 15:11:06.915 LabApp] Kernel started: 2b093cc1-1728-4bb6-b3e8-bbec17222e8f
+[I 15:11:14.240 LabApp] Starting buffering for 2b093cc1-1728-4bb6-b3e8-bbec17222e8f:fe8ce1fe-ae89-4c51-9278-c0f528b6ed25
+[W 16:13:50.230 LabApp] Notebook basic_use.ipynb is not trusted
+[I 16:13:51.939 LabApp] Kernel started: 345d886f-da08-463a-ab3f-10aad775c15a
+[I 16:14:39.433 LabApp] Interrupted...
+[I 16:14:39.433 LabApp] Shutting down 2 kernels
+[I 16:14:39.735 LabApp] Kernel shutdown: 2b093cc1-1728-4bb6-b3e8-bbec17222e8f
+[I 16:14:39.736 LabApp] Kernel shutdown: 345d886f-da08-463a-ab3f-10aad775c15a
+nbenv package not found: automatic saving of conda environment disabled
+jupytext package not found: jupytext.TextFileContentsManager not available

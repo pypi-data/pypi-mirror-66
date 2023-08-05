@@ -1,0 +1,6 @@
+UnsupportedPythonError
+======================
+
+.. currentmodule:: pysm
+
+.. autoexception:: UnsupportedPythonError

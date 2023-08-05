@@ -1,0 +1,6 @@
+check_freq_input
+================
+
+.. currentmodule:: pysm
+
+.. autofunction:: check_freq_input

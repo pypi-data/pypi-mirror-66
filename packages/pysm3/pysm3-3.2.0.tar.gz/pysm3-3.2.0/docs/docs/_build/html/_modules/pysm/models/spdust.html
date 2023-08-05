@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pysm.models.spdust &#8212; pysm v3.1.dev260</title>
+    <link rel="stylesheet" href="../../../_static/bootstrap-astropy.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    <script type="text/javascript" src="../../../_static/sidebar.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../../../_static/astropy_logo.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="../../../index.html"><span id="logotext1">pysm</span><span id="logotext2"></span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="../../../genindex.html">Index</a></li>
+    <li><a title="Module Index" href="../../../py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="../../../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li>
+	<a href="../../../index.html">pysm v3.1.dev260</a>
+	 &#187;
+      </li>
+      <li><a href="../../index.html" >Module code</a> &#187;</li>
+      <li><a href="../../pysm.html" accesskey="U">pysm</a> &#187;</li>
+      
+       
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for pysm.models.spdust</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span> <span class="nn">numba</span> <span class="kn">import</span> <span class="n">njit</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">utils</span>
+
+<span class="kn">from</span> <span class="nn">.template</span> <span class="kn">import</span> <span class="n">Model</span>
+
+
+<div class="viewcode-block" id="SpDust"><a class="viewcode-back" href="../../../api/pysm.SpDust.html#pysm.SpDust">[docs]</a><span class="k">class</span> <span class="nc">SpDust</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Implementation of the SpDust2 code of (Ali-Haimoud et al 2012)</span>
+<span class="sd">    evaluated for a Cold Neutral Medium.</span>
+<span class="sd">    See:</span>
+<span class="sd">    * https://arxiv.org/abs/1003.4732</span>
+<span class="sd">    * https://arxiv.org/abs/0812.2904</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">map_I</span><span class="p">,</span>
+        <span class="n">freq_ref_I</span><span class="p">,</span>
+        <span class="n">emissivity</span><span class="p">,</span>
+        <span class="n">freq_peak</span><span class="p">,</span>
+        <span class="n">freq_ref_peak</span><span class="p">,</span>
+        <span class="n">nside</span><span class="p">,</span>
+        <span class="n">unit_I</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; This function initializes the spinning dust model</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        map_I : `pathlib.Path` object</span>
+<span class="sd">            Paths to the map to be used as I templates.</span>
+<span class="sd">        unit_I : string or Unit</span>
+<span class="sd">            Unit string or Unit object for all input FITS maps, if None, the input file</span>
+<span class="sd">            should have a unit defined in the FITS header.</span>
+<span class="sd">        freq_ref_I : Quantity or string</span>
+<span class="sd">            Reference frequencies at which the templates are defined.</span>
+<span class="sd">            They should be a astropy Quantity object</span>
+<span class="sd">            or a string (e.g. &quot;1500 MHz&quot;) compatible with GHz.</span>
+<span class="sd">        freq_peak : `pathlib.Path` object or string</span>
+<span class="sd">            Path to the map to be used as frequency of the peak of the emission or</span>
+<span class="sd">            its scalar value as a Quantity or a string convertible to a Quantity</span>
+<span class="sd">        freq_ref_peak : Quantity or string</span>
+<span class="sd">            Reference frequency for the peak frequency map</span>
+<span class="sd">            They should be a astropy Quantity object</span>
+<span class="sd">            or a string (e.g. &quot;1500 MHz&quot;) compatible with GHz.</span>
+<span class="sd">        nside: int</span>
+<span class="sd">            Resolution parameter at which this model is to be calculated.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span> <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">)</span>
+        <span class="c1"># do model setup</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">I_ref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">map_I</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">unit_I</span><span class="p">)</span>
+        <span class="c1"># This does unit conversion in place so we do not copy the data</span>
+        <span class="c1"># we do not keep the original unit because otherwise we would need</span>
+        <span class="c1"># to make a copy of the array when we run the model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">I_ref</span> <span class="o">&lt;&lt;=</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">freq_ref_I</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">freq_ref_I</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>  <span class="c1"># input is a number</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">freq_peak</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">freq_peak</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>  <span class="c1"># input is a path</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">freq_peak</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">freq_peak</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">)</span>
+        <span class="n">freq_ref_peak</span> <span class="o">=</span> <span class="n">u</span><span class="o">.</span><span class="n">Quantity</span><span class="p">(</span><span class="n">freq_ref_peak</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">freq_peak</span> <span class="o">/=</span> <span class="n">freq_ref_peak</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">emissivity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_txt</span><span class="p">(</span><span class="n">emissivity</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<div class="viewcode-block" id="SpDust.get_emission"><a class="viewcode-back" href="../../../api/pysm.SpDust.html#pysm.SpDust.get_emission">[docs]</a>    <span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span>
+    <span class="k">def</span> <span class="nf">get_emission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freqs</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">freqs</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">check_freq_input</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">normalize_weights</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">compute_spdust_emission_numba</span><span class="p">(</span>
+                <span class="n">freqs</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                <span class="n">weights</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">I_ref</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">freq_ref_I</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">freq_peak</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">emissivity</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="o">&lt;&lt;</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">outputs</span></div></div>
+
+
+<span class="nd">@njit</span>
+<span class="k">def</span> <span class="nf">compute_spdust_scaling_numba</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">freq_ref_I</span><span class="p">,</span> <span class="n">freq_peak</span><span class="p">,</span> <span class="n">emissivity</span><span class="p">):</span>
+    <span class="n">scaled_freq</span> <span class="o">=</span> <span class="n">freq</span> <span class="o">/</span> <span class="n">freq_peak</span>
+    <span class="n">scaled_ref_freq</span> <span class="o">=</span> <span class="n">freq_ref_I</span> <span class="o">/</span> <span class="n">freq_peak</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="p">(</span><span class="n">freq_ref_I</span> <span class="o">/</span> <span class="n">freq</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">scaled_freq</span><span class="p">,</span> <span class="n">emissivity</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">emissivity</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">scaled_ref_freq</span><span class="p">,</span> <span class="n">emissivity</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">emissivity</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@njit</span><span class="p">(</span><span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">compute_spdust_emission_numba</span><span class="p">(</span>
+    <span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">I_ref</span><span class="p">,</span> <span class="n">freq_ref_I</span><span class="p">,</span> <span class="n">freq_peak</span><span class="p">,</span> <span class="n">emissivity</span>
+<span class="p">):</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">I_ref</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">I_ref</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">I</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">)):</span>
+        <span class="n">scaling</span> <span class="o">=</span> <span class="n">compute_spdust_scaling_numba</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">freq_ref_I</span><span class="p">,</span> <span class="n">freq_peak</span><span class="p">,</span> <span class="n">emissivity</span><span class="p">)</span>
+        <span class="n">utils</span><span class="o">.</span><span class="n">trapz_step_inplace</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">scaling</span> <span class="o">*</span> <span class="n">I_ref</span><span class="p">,</span> <span class="n">output</span><span class="p">[</span><span class="n">I</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">output</span>
+
+
+<div class="viewcode-block" id="SpDustPol"><a class="viewcode-back" href="../../../api/pysm.SpDustPol.html#pysm.SpDustPol">[docs]</a><span class="k">class</span> <span class="nc">SpDustPol</span><span class="p">(</span><span class="n">SpDust</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;SpDust2 model with Polarized emission&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">map_I</span><span class="p">,</span>
+        <span class="n">freq_ref_I</span><span class="p">,</span>
+        <span class="n">emissivity</span><span class="p">,</span>
+        <span class="n">freq_peak</span><span class="p">,</span>
+        <span class="n">freq_ref_peak</span><span class="p">,</span>
+        <span class="n">pol_frac</span><span class="p">,</span>
+        <span class="n">angle_Q</span><span class="p">,</span>
+        <span class="n">angle_U</span><span class="p">,</span>
+        <span class="n">nside</span><span class="p">,</span>
+        <span class="n">unit_I</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">map_dist</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">map_I</span><span class="o">=</span><span class="n">map_I</span><span class="p">,</span>
+            <span class="n">freq_ref_I</span><span class="o">=</span><span class="n">freq_ref_I</span><span class="p">,</span>
+            <span class="n">emissivity</span><span class="o">=</span><span class="n">emissivity</span><span class="p">,</span>
+            <span class="n">freq_peak</span><span class="o">=</span><span class="n">freq_peak</span><span class="p">,</span>
+            <span class="n">freq_ref_peak</span><span class="o">=</span><span class="n">freq_ref_peak</span><span class="p">,</span>
+            <span class="n">nside</span><span class="o">=</span><span class="n">nside</span><span class="p">,</span>
+            <span class="n">unit_I</span><span class="o">=</span><span class="n">unit_I</span><span class="p">,</span>
+            <span class="n">map_dist</span><span class="o">=</span><span class="n">map_dist</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pol_angle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">angle_U</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_map</span><span class="p">(</span><span class="n">angle_Q</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pol_frac</span> <span class="o">=</span> <span class="n">pol_frac</span>
+
+<div class="viewcode-block" id="SpDustPol.get_emission"><a class="viewcode-back" href="../../../api/pysm.SpDustPol.html#pysm.SpDustPol.get_emission">[docs]</a>    <span class="nd">@u</span><span class="o">.</span><span class="n">quantity_input</span>
+    <span class="k">def</span> <span class="nf">get_emission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freqs</span><span class="p">:</span> <span class="n">u</span><span class="o">.</span><span class="n">GHz</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">freqs</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">check_freq_input</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">normalize_weights</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">compute_spdust_emission_pol_numba</span><span class="p">(</span>
+                <span class="n">freqs</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                <span class="n">weights</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">I_ref</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">freq_ref_I</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">freq_peak</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">emissivity</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">pol_angle</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">pol_frac</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="o">&lt;&lt;</span> <span class="n">u</span><span class="o">.</span><span class="n">uK_RJ</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">outputs</span></div></div>
+
+
+<span class="nd">@njit</span><span class="p">(</span><span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">compute_spdust_emission_pol_numba</span><span class="p">(</span>
+    <span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">I_ref</span><span class="p">,</span> <span class="n">freq_ref_I</span><span class="p">,</span> <span class="n">freq_peak</span><span class="p">,</span> <span class="n">emissivity</span><span class="p">,</span> <span class="n">pol_angle</span><span class="p">,</span> <span class="n">pol_frac</span>
+<span class="p">):</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">I_ref</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">I_ref</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">I</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">U</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">)):</span>
+        <span class="n">scaling</span> <span class="o">=</span> <span class="n">compute_spdust_scaling_numba</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">freq_ref_I</span><span class="p">,</span> <span class="n">freq_peak</span><span class="p">,</span> <span class="n">emissivity</span><span class="p">)</span>
+        <span class="n">utils</span><span class="o">.</span><span class="n">trapz_step_inplace</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">scaling</span> <span class="o">*</span> <span class="n">I_ref</span><span class="p">,</span> <span class="n">output</span><span class="p">[</span><span class="n">I</span><span class="p">])</span>
+        <span class="n">utils</span><span class="o">.</span><span class="n">trapz_step_inplace</span><span class="p">(</span>
+            <span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">scaling</span> <span class="o">*</span> <span class="n">I_ref</span> <span class="o">*</span> <span class="n">pol_frac</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pol_angle</span><span class="p">),</span> <span class="n">output</span><span class="p">[</span><span class="n">Q</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">utils</span><span class="o">.</span><span class="n">trapz_step_inplace</span><span class="p">(</span>
+            <span class="n">freqs</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">scaling</span> <span class="o">*</span> <span class="n">I_ref</span> <span class="o">*</span> <span class="n">pol_frac</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">pol_angle</span><span class="p">),</span> <span class="n">output</span><span class="p">[</span><span class="n">U</span><span class="p">]</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">output</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right"> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2020, Ben Thorne, David Alonso, Sigurd Naess, Jo Dunkley, Andrea Zonca.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 2.0.1. &nbsp;
+    Last built 06 Feb 2020. <br/>
+  </p>
+</footer>
+  </body>
+</html>

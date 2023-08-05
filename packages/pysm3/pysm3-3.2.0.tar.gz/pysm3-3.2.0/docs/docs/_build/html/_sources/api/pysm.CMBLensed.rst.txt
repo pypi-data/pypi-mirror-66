@@ -1,0 +1,17 @@
+CMBLensed
+=========
+
+.. currentmodule:: pysm
+
+.. autoclass:: CMBLensed
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CMBLensed.run_taylens
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: run_taylens
