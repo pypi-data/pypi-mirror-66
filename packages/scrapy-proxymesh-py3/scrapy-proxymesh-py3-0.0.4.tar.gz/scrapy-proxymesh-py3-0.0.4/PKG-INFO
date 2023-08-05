@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: scrapy-proxymesh-py3
+Version: 0.0.4
+Summary: Proxymesh downloader middleware for Scrapy
+License: MIT
+Author: mizhgun
+Author-email: mizhgun@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: scrapy (>=1.6)
+Requires-Dist: six (>=1.14.0,<2.0.0)
