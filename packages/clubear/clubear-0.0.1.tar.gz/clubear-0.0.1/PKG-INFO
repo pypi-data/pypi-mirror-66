@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: clubear
+Version: 0.0.1
+Summary: Data analysis toolkits from Clubear.
+Home-page: UNKNOWN
+Author: Hansheng Wang
+Author-email: hansheng@gsm.pku.edu.cn
+License: UNKNOWN
+Description: # clubear - Data Analysis for Human
+        
+        ## Overview
+        clubear is designed for 
+        
+        ## Installation
+        
+        
+        ### Examples
+        The following commands will create a virtual environment (if not already present) for the application and will install the necessary dependencies there before running the requested command.
+        
+        Run the package:
+        ```{python}
+        import clubear.CluBear as clb
+        # do some thing
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
