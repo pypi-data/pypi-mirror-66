@@ -1,0 +1,15 @@
+markus/__init__.py,sha256=aNxRN41ILLdnUpbe_7ehGgAo8C0Ug4avu_Ayu89vKw8,569
+markus/filters.py,sha256=4wlTYf8vVTpVVJJNMaacZd1Wy0xoJx46vNxSdQPa-1I,784
+markus/main.py,sha256=7_ui530k_tBikUWSap0iRn4Gfk_nPo6cYiKNxSnQyvA,18306
+markus/testing.py,sha256=IjrR28wZOZ5XLebvsgI-1WMe_eU9BnWLj8-xDQwsq2Y,5554
+markus/utils.py,sha256=6rU8nxBjWINVEAsj4MWBiz6OhXvyJuD_UH89dXKfCkc,2338
+markus/backends/__init__.py,sha256=F3EfL4JUP_NGRpO0oZ0IWjUIN5DNa7veglcZE0pPtNE,1259
+markus/backends/cloudwatch.py,sha256=lX0kAIBA5dpALQq6TtMgCK9vI4RtHCxNP9TbSQLQjJU,1862
+markus/backends/datadog.py,sha256=6p9nqHRYpGbqZHplwY7hptV-2rUQivs9RkbiHFYmb7U,2338
+markus/backends/logging.py,sha256=Jke8YBy7ko0itS7FrZxW457g9TS0VVP3U0XcGG_aFl8,6559
+markus/backends/statsd.py,sha256=nQG0f0r1NdpPmvC5dXXCca_b9p2_ZrjMdtxVJEsCmzY,2846
+markus-2.2.0.dist-info/LICENSE,sha256=vvF0ftqIue1G6UgwsNl4w0mdrV3-ONNklxdgiBkB2t0,15977
+markus-2.2.0.dist-info/METADATA,sha256=pt3ViewK4As2RkzFbaFT0Cdi26T4ZvaorHp1MKSGFkM,6896
+markus-2.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+markus-2.2.0.dist-info/top_level.txt,sha256=Q5oeKbpQC6SNV_N84SVV1cY_ZRes1EXXQfDFlUEgB-A,7
+markus-2.2.0.dist-info/RECORD,,
