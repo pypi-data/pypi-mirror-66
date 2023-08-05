@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: pymization
+Version: 0.1.2
+Summary: A simple optimization solverp problem
+Home-page: https://github.com/mauricepoirrier/pymization
+Author: Nicolas Camus & Maurice Poirrier
+Author-email: maurice@merkenlabs.com
+License: MIT
+Download-URL: https://github.com/mauricepoirrier/pymization/archive/0.0.1.tar.gz
+Description: # pymization
+        Simple solver for optimization problems.
+        
+        CDS implemented
+        ## Installation
+        
+        ```bash
+        pip install pymization
+        ```
+        
+        ## Example
+        
+        Code to use CDS given a matrix where rows are jobs and columns are machines.
+        
+        ```python
+        import pymization as pym
+        
+        
+        solver = pym.Solver("CDS")
+        solver.load_data_from_matrix(matrix)
+        solver.run()
+        ```
+        
+        If you want to use some functions developed on CDS you can use as the follow
+        
+        ```python
+        import pymization as pym
+        
+        solver = pym.Solver("CDS")
+        solver.load_data_from_matrix(matrix)
+        solver.load_model()
+        solver.model.get_sets() # Retrieves order sets to Johnson's algorithm
+        solver.model.min_makespan(job_sequence) # Given a Johnson's ordered jobs calculate min_makespan and actualize objective_function
+        
+        solver.model.final_sequence
+        solver.model.objective_function
+        ```
+        
+        ### Work in progress
+        
+        Any inquirements:
+        
+        - Nicolas Camus: ncamusf@gmail.com
+        - Maurice Poirrier: maurice@merkenlabs.com
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
