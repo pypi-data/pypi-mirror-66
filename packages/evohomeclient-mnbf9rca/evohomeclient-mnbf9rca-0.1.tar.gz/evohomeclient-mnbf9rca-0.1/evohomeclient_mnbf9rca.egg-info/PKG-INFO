@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: evohomeclient-mnbf9rca
+Version: 0.1
+Summary: A simple evohome client
+Home-page: https://github.com/mnbf9rca/EvohomeClient
+Author: mnbf9rca
+Author-email: robert.aleck@cynexia.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6

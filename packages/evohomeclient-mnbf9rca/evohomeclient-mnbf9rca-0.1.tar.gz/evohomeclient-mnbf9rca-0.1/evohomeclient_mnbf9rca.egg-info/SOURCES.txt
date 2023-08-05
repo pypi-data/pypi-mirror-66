@@ -1,0 +1,8 @@
+setup.py
+EvohomeClient/__init__.py
+evohomeclient_mnbf9rca.egg-info/PKG-INFO
+evohomeclient_mnbf9rca.egg-info/SOURCES.txt
+evohomeclient_mnbf9rca.egg-info/dependency_links.txt
+evohomeclient_mnbf9rca.egg-info/not-zip-safe
+evohomeclient_mnbf9rca.egg-info/requires.txt
+evohomeclient_mnbf9rca.egg-info/top_level.txt
