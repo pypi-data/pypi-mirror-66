@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: iaBot
+Version: 0.0.1
+Summary: A mini framework for building bots using python which can help you in automating your tasks
+Home-page: https://github.com/satheesh1997/iaBot
+Author: Satheesh Kumar
+Author-email: satheesh.101097@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7.0
