@@ -1,0 +1,12 @@
+airflow_declarative/__init__.py,sha256=2vzp-6Spx1BVx6Dq545ryEBfuIWGr3zR5Z8_BPfJQT4,1747
+airflow_declarative/builder.py,sha256=t4dOF_h4fYnVBqzuaQWSzO1fX26PtuAHuRNG93Ol-5A,5899
+airflow_declarative/compat.py,sha256=et2sQrGHWt-An75QYXfo3CAR9X4egb1QWPvUuE19ZAA,904
+airflow_declarative/operators.py,sha256=-K9_RT-etnIZMw0hI4xhffyDxb3hGQLfmmYKscTvcKY,2739
+airflow_declarative/schema.py,sha256=mH6oYoApBk7nJiDmQuChTOq90CnqABi-jPJ2gXGK9Ns,8223
+airflow_declarative/trafaret.py,sha256=mL4i2AGFG3lOr3MMtg7k8B36JpPRyvLLuikuX4k5L8Q,6870
+airflow_declarative/transformer.py,sha256=8FEHQgLOZnubbchyk0aCu7f7mpltZ4n71-_g45qsOps,7319
+airflow_declarative-1.1.dist-info/LICENSE,sha256=Zr1R8QRosUb4AiNdYh5WFwQu84GSD9ja7f4GU0hh0cM,11188
+airflow_declarative-1.1.dist-info/METADATA,sha256=l70bDpyRBmoqbwB_RVaFVwhVk9_EL9eGKP08ElpeJC4,5066
+airflow_declarative-1.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+airflow_declarative-1.1.dist-info/top_level.txt,sha256=e3Qqsr3yRErDrenCCQ40X5LmsxF2xBNLXI3ZAVbVriI,20
+airflow_declarative-1.1.dist-info/RECORD,,
