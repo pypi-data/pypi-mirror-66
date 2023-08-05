@@ -1,0 +1,10 @@
+ldstore/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ldstore/bcor.py,sha256=85kPsw6To7tZ3A5bxGimGetu0k7Fl96jVa99iSMsnzc,7789
+ldstore/bdose.py,sha256=yekB4_65Ej6CMXlcnnAwSeXjbGOSy542xHMz5H5zgsg,10614
+ldstore/parse.py,sha256=FCifaxwvSYB3-4dyu-1R-cGOaQXtiwR8N_tbJPto7ho,1405
+ldstore-0.1.9.data/data/LICENSE,sha256=P8atiaVnOL-n0B55iXepwf3dnlTM_VvYdo2wK6CXwU8,1065
+ldstore-0.1.9.dist-info/LICENSE,sha256=P8atiaVnOL-n0B55iXepwf3dnlTM_VvYdo2wK6CXwU8,1065
+ldstore-0.1.9.dist-info/METADATA,sha256=J_ICRGgczExQaQ4dPX9fULs15t5-Demxqz_Ec0HvWp0,487
+ldstore-0.1.9.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ldstore-0.1.9.dist-info/top_level.txt,sha256=qNqvKjsmFd-9JcqFLB-WIQYR3wdONTv99M4lGSUIUg8,8
+ldstore-0.1.9.dist-info/RECORD,,
