@@ -1,0 +1,6 @@
+README.md
+setup.py
+mgclipboard.egg-info/PKG-INFO
+mgclipboard.egg-info/SOURCES.txt
+mgclipboard.egg-info/dependency_links.txt
+mgclipboard.egg-info/top_level.txt
