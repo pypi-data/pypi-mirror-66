@@ -1,0 +1,3 @@
+[console_scripts]
+fundamentals = fundamentals.cl_utils:main
+
