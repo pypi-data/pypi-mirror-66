@@ -1,0 +1,8 @@
+napari
+
+[dev]
+black
+pytest-cov
+pytest
+coveralls
+coverage<=4.5.4

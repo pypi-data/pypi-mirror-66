@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+slicereg/__init__.py
+slicereg.egg-info/PKG-INFO
+slicereg.egg-info/SOURCES.txt
+slicereg.egg-info/dependency_links.txt
+slicereg.egg-info/not-zip-safe
+slicereg.egg-info/requires.txt
+slicereg.egg-info/top_level.txt
