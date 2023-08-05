@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+jk_bincontainer/BinContainer.py
+jk_bincontainer/__init__.py
+jk_bincontainer.egg-info/PKG-INFO
+jk_bincontainer.egg-info/SOURCES.txt
+jk_bincontainer.egg-info/dependency_links.txt
+jk_bincontainer.egg-info/not-zip-safe
+jk_bincontainer.egg-info/top_level.txt
