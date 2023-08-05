@@ -1,0 +1,28 @@
+Metadata-Version: 1.2
+Name: netbox-ddns
+Version: 0.2
+Summary: Dynamic DNS Connector for NetBox
+Home-page: https://github.com/sjm-steffann/netbox-ddns
+Author: Sander Steffann
+Author-email: sander@steffann.nl
+License: Apache 2.0
+Description: # Dynamic DNS Connector for NetBox
+        
+        This plugin lets you define DNS servers that support [RFC3007 Dynamic DNS Updates](https://tools.ietf.org/html/rfc3007). For each server you specify which domains and reverse DNS domains it is responsible for, and after that NetBox will automatically send DNS Updates to those servers whenever you change the DNS name of an IP Address in NetBox.
+        
+        Updates are sent from the worker process in the background. You can see their progress either by configuring Django logging or by looking at the Background Tasks in the NetBox admin back-end.
+        
+        For now all configuration is done in the NetBox admin back-end. A later version will provide a nicer user interface.
+        
+        ## Compatibility
+        
+        This plugin in compatible with [NetBox](https://netbox.readthedocs.org/) 2.8 and later.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
