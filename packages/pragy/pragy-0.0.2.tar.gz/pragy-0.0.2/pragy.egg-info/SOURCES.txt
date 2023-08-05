@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pragy.egg-info/PKG-INFO
+pragy.egg-info/SOURCES.txt
+pragy.egg-info/dependency_links.txt
+pragy.egg-info/top_level.txt
