@@ -1,0 +1,6 @@
+fastai
+torch>=1.2.0
+matplotlib
+pandas
+scipy
+scikit-learn
