@@ -1,0 +1,14 @@
+README.rst
+setup.py
+pyOnvif.egg-info/PKG-INFO
+pyOnvif.egg-info/SOURCES.txt
+pyOnvif.egg-info/dependency_links.txt
+pyOnvif.egg-info/entry_points.txt
+pyOnvif.egg-info/not-zip-safe
+pyOnvif.egg-info/requires.txt
+pyOnvif.egg-info/top_level.txt
+pyonvif/__init__.py
+pyonvif/cmdline.py
+pyonvif/messages.py
+pyonvif/namespaces.py
+pyonvif/pyonvif.py
