@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: mgclipboard
+Version: 0.1.3
+Summary: Clipboard middleware for Papermerge DMS
+Home-page: https://github.com/papermerge/mg-clipboard
+Author: Eugen Ciur
+Author-email: eugen@papermerge.com
+License: Apache 2.0 License
+Description: MgClipboard
+        ============
+        
+        Clipboard middleware for Papermerge DMS [Papermerge DMS](https://github.com/ciur/papermerge).
+        Designed as Django reusable app.
+        
+        ## Installation
+        
+        Install it using pip::
+            
+            pip install mgclipboard
+        
+        Add app to INSTALLED_APPS in settings.py::
+        
+            INSTALLED_APP = (
+            ...
+            'mgclipboard',
+            ...
+            )
+        
+        Add it to MIDDLEWARE list::
+        
+            MIDDLEWARE = [
+                ...
+                # AFTER
+                # * django.contrib.sessions.middleware
+                # * django.contrib.auth.middleware
+                'mgclipboard.middleware.ClipboardMiddleware'
+                ...
+            ]
+        
+        mgclipboard.middleware is dependent on django.contrib.sessions and django.contrib.auth middleware. Thus, dependencies must be included first in MIDDLEWARE list.
+        
+        
+        
+Keywords: Middleware,Django,Papermerge,DMS
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
