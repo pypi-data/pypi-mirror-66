@@ -1,0 +1,6 @@
+.idea
+*.pyc
+docs/
+u8timeseries.egg-info/
+examples/.ipynb_checkpoints/
+runs/
