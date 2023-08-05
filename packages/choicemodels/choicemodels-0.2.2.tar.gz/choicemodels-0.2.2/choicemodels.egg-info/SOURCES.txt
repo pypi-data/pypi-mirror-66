@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+choicemodels/__init__.py
+choicemodels/mnl.py
+choicemodels.egg-info/PKG-INFO
+choicemodels.egg-info/SOURCES.txt
+choicemodels.egg-info/dependency_links.txt
+choicemodels.egg-info/requires.txt
+choicemodels.egg-info/top_level.txt
+choicemodels/tools/__init__.py
+choicemodels/tools/distancematrix.py
+choicemodels/tools/mergedchoicetable.py
+choicemodels/tools/pmat.py
+choicemodels/tools/simulation.py
