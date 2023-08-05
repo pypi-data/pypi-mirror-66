@@ -1,0 +1,5 @@
+[console_scripts]
+mesma = mesma.cli.mesma_cli:main
+mesma-classify = mesma.cli.hard_classification_cli:main
+mesma-shade = mesma.cli.shade_normalisation_cli:main
+

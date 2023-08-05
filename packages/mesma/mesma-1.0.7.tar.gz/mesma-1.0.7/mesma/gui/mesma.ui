@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MesmaDialog</class>
+ <widget class="QDialog" name="MesmaDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>666</width>
+    <height>706</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MESMA</string>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="toolTipDuration">
+   <number>-1</number>
+  </property>
+  <property name="statusTip">
+   <string/>
+  </property>
+  <property name="whatsThis">
+   <string/>
+  </property>
+  <property name="accessibleName">
+   <string/>
+  </property>
+  <property name="accessibleDescription">
+   <string/>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedKingdom"/>
+  </property>
+  <property name="windowFilePath">
+   <string/>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QWidget" name="logoWidget" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_18">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="logoLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab1">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <attribute name="title">
+       <string>Basic Settings</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QScrollArea" name="scrollArea1">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollArea1Content">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>624</width>
+            <height>578</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="libraryGroup1">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="title">
+              <string>Spectral Library</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <widget class="QgsFileWidget" name="browseLibrary" native="true">
+                <property name="toolTip">
+                 <string>Browse for the spectral library</string>
+                </property>
+                <property name="dialogTitle" stdset="0">
+                 <string>Select a spectral library</string>
+                </property>
+                <property name="filter" stdset="0">
+                 <string>ENVI Spectral Library (*.sli);;All Files (*)</string>
+                </property>
+                <property name="defaultRoot" stdset="0">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="modelSettings">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="classLabel">
+                  <property name="text">
+                   <string>Metadata element with endmember classes:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QTextBrowser" name="modelSummary">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>100</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QComboBox" name="classDropDown">
+                  <property name="toolTip">
+                   <string>Choose the metadata element that contains the classification used in MESMA</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QPushButton" name="modelButton">
+                  <property name="toolTip">
+                   <string>Change the subset of chosen models in an interactive widget.</string>
+                  </property>
+                  <property name="text">
+                   <string>Change...</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="modelLabel">
+                  <property name="text">
+                   <string>Model summary:</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="constraintsGroup1">
+             <property name="toolTip">
+              <string>Only models that meet these constraints can be chosen.</string>
+             </property>
+             <property name="title">
+              <string>Constraints</string>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <property name="leftMargin">
+               <number>25</number>
+              </property>
+              <property name="topMargin">
+               <number>20</number>
+              </property>
+              <item row="0" column="1">
+               <widget class="QGroupBox" name="minShadeCheck">
+                <property name="styleSheet">
+                 <string notr="true">QGroupBox { border: none}</string>
+                </property>
+                <property name="title">
+                 <string>Min shade fraction:</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_10">
+                 <property name="leftMargin">
+                  <number>25</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>20</number>
+                 </property>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="minShadeValue">
+                   <property name="minimum">
+                    <double>-1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>2.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>0.050000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QGroupBox" name="maxShadeCheck">
+                <property name="styleSheet">
+                 <string notr="true">QGroupBox { border: none}</string>
+                </property>
+                <property name="title">
+                 <string>Max shade fraction:</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_11">
+                 <property name="leftMargin">
+                  <number>25</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>20</number>
+                 </property>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="maxShadeValue">
+                   <property name="minimum">
+                    <double>-1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>2.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>0.050000000000000</double>
+                   </property>
+                   <property name="value">
+                    <double>0.800000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QGroupBox" name="maxFracCheck">
+                <property name="styleSheet">
+                 <string notr="true">QGroupBox { border: none}</string>
+                </property>
+                <property name="title">
+                 <string>Max endmember fraction:</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <property name="leftMargin">
+                  <number>25</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>20</number>
+                 </property>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="maxFracValue">
+                   <property name="minimum">
+                    <double>-1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>2.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>0.050000000000000</double>
+                   </property>
+                   <property name="value">
+                    <double>1.050000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QGroupBox" name="minFracCheck">
+                <property name="styleSheet">
+                 <string notr="true">QGroupBox { border: none}</string>
+                </property>
+                <property name="title">
+                 <string>Min endmember fraction:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+                <property name="flat">
+                 <bool>false</bool>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_13">
+                 <property name="leftMargin">
+                  <number>25</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>20</number>
+                 </property>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="minFracValue">
+                   <property name="readOnly">
+                    <bool>false</bool>
+                   </property>
+                   <property name="buttonSymbols">
+                    <enum>QAbstractSpinBox::UpDownArrows</enum>
+                   </property>
+                   <property name="minimum">
+                    <double>-1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>2.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>0.050000000000000</double>
+                   </property>
+                   <property name="value">
+                    <double>-0.050000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QGroupBox" name="maxRMSECheck">
+                <property name="styleSheet">
+                 <string notr="true">QGroupBox { border: none  }</string>
+                </property>
+                <property name="title">
+                 <string>Max RMSE:</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_12">
+                 <property name="leftMargin">
+                  <number>25</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>20</number>
+                 </property>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="maxRMSEValue">
+                   <property name="decimals">
+                    <number>3</number>
+                   </property>
+                   <property name="maximum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>0.005000000000000</double>
+                   </property>
+                   <property name="value">
+                    <double>0.025000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="imageGroup1">
+             <property name="title">
+              <string>Input image(s)</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QgsFileWidget" name="browseImage" native="true">
+                <property name="toolTip">
+                 <string>Browse for the image or images you would like to unmix</string>
+                </property>
+                <property name="statusTip">
+                 <string/>
+                </property>
+                <property name="whatsThis">
+                 <string/>
+                </property>
+                <property name="accessibleName">
+                 <string/>
+                </property>
+                <property name="accessibleDescription">
+                 <string/>
+                </property>
+                <property name="fullUrl" stdset="0">
+                 <bool>false</bool>
+                </property>
+                <property name="dialogTitle" stdset="0">
+                 <string>Select your image</string>
+                </property>
+                <property name="filter" stdset="0">
+                 <string>All files (*);;GDAL/OGR VSIFileHandler (*.zip  *.gz *.tar *.tar.gz *.tgz *.ZIP *.GZ *.TAR *.TAR.GZ *.TGZ);;ACE2 (*.ace2  *.ACE2);;ARC Digitized Raster Graphics (*.gen *.GEN);;ASCII Gridded XYZ  (*.xyz *.XYZ);;Arc/Info ASCII Grid (*.asc *.ASC);;Arc/Info Binary Grid  (hdr.adf HDR.ADF);;Arc/Info Export E00 GRID (*.e00 *.E00);;DRDC COASP  SAR Processor Raster (*.hdr *.HDR);;DTED Elevation Raster (*.dt0 *.dt1  *.dt2 *.DT0 *.DT1 *.DT2);;ECRG TOC format (*.xml *.XML);;ESRI .hdr  Labelled (*.bil *.BIL);;EUMETSAT Archive native  (*.nat *.NAT);;Envisat  Image Format (*.n1 *.N1);;Erdas Imagine Images  (*.img *.IMG);;FARSITE  v.4 Landscape File  (*.lcp *.LCP);;GMT NetCDF Grid Format (*.nc  *.NC);;GRIdded Binary  (*.grb *.GRB);;GeoPackage (*.gpkg  *.GPKG);;GeoSoft Grid Exchange Format (*.gxf *.GXF);;GeoTIFF (*.tif  *.tiff *.TIF *.TIFF);;Geospatial PDF (*.pdf *.PDF);;Golden Software 7  Binary Grid  (*.grd *.GRD);;Golden Software ASCII Grid  (*.grd  *.GRD);;Golden Software Binary Grid  (*.grd *.GRD);;Graphics Interchange  Format  (*.gif *.GIF);;Graphics Interchange Format  (*.gif  *.GIF);;Ground-based SAR Applications Testbed File Format  (*.gff  *.GFF);;HF2/HFZ heightfield raster (*.hf2 *.HF2);;Hierarchical Data  Format Release 4 (*.hdf *.HDF);;Hierarchical Data Format Release 5  (*.hdf5 *.HDF5);;ILWIS Raster Map (*.mpr *.mpl *.MPR *.MPL);;IRIS data  (*.ppi *.PPI);;Idrisi Raster A.1 (*.rst *.RST);;JPEG JFIF (*.jpg *.jpeg  *.JPG *.JPEG);;JPEG-2000 driver based on OpenJPEG library (*.jp2 *.j2k  *.JP2 *.J2K);;Japanese DEM  (*.mem *.MEM);;KOLOR Raw (*.kro  *.KRO);;Leveller heightfield (*.ter *.TER);;MBTiles (*.mbtiles  *.MBTILES);;MS Windows Device Independent Bitmap (*.bmp *.BMP);;Magellan  topo  (*.blx *.BLX);;NOAA NGS Geoid Height Grids (*.bin *.BIN);;NOAA  Vertical Datum .GTX (*.gtx *.GTX);;NTv2 Datum Grid Shift (*.gsb  *.GSB);;National Imagery Transmission Format (*.ntf *.NTF);;Network  Common Data Format (*.nc *.NC);;Northwood Classified Grid Format  .grc/.tab (*.grc *.GRC);;Northwood Numeric Grid Format .grd/.tab (*.grd  *.GRD);;PCIDSK Database File (*.pix *.PIX);;PCRaster Raster File (*.map  *.MAP);;Portable Network Graphics (*.png *.PNG);;Portable Pixmap Format  (*.pnm *.PNM);;R Object Data Store (*.rda *.RDA);;Raster Matrix Format  (*.rsw *.RSW);;Raster Product Format TOC format (*.toc  *.TOC);;Rasterlite (*.sqlite *.SQLITE);;SAGA GIS Binary Grid  (*.sdat  *.SDAT);;SDTS Raster (*.ddf *.DDF);;SGI Image File Format 1.0 (*.rgb  *.RGB);;SRTMHGT File Format (*.hgt *.HGT);;Snow Data Assimilation System  (*.hdr *.HDR);;Standard Raster Product  (*.img *.IMG);;Swedish Grid RIK  (*.rik *.RIK);;Terragen heightfield (*.ter *.TER);;USGS Optional ASCII  DEM  (*.dem *.DEM);;VTP .bt (Binary Terrain) 1.3 Format (*.bt  *.BT);;Vexcel MFF Raster (*.hdr *.HDR);;Virtual Raster (*.vrt *.ovr  *.VRT *.OVR);;WEBP (*.webp *.WEBP);;X11 PixMap Format (*.xpm  *.XPM);;ZMap Plus Grid (*.dat *.DAT) </string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="outputGroup">
+             <property name="toolTip">
+              <string>Choose a name and location for the MESMA result file. Additional files will be filename_fractions, filename_rmse, filename_metadata.txt and filename_look_up_table.csv.</string>
+             </property>
+             <property name="title">
+              <string>Output image(s)</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QgsFileWidget" name="browseOut" native="true">
+                <property name="toolTip">
+                 <string>Choose a name and location for the MESMA result file. Additional files will be filename_fractions, filename_rmse, filename_metadata.txt and filename_look_up_table.csv.</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="openInQGIS">
+                <property name="toolTip">
+                 <string>Check if you would like to view the result in QGIS afterwards.</string>
+                </property>
+                <property name="text">
+                 <string>Open result in QGIS</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab2">
+      <attribute name="title">
+       <string>Advanced Settings</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QScrollArea" name="scrollArea2">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollArea2Content">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>624</width>
+            <height>578</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="libraryGroup2">
+             <property name="title">
+              <string>Spectral Library</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout">
+              <property name="verticalSpacing">
+               <number>20</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="libraryScaleLabel">
+                <property name="toolTip">
+                 <string>The reflectance scale factor is automatically detected. It is the number by which the array must be divided to get reflectance values between 0 and 1. The user can change this value here.</string>
+                </property>
+                <property name="text">
+                 <string>Reflectance scale factor:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="fusionLabel">
+                <property name="toolTip">
+                 <string>Models with a higher number of classes (e.g. 4-EM Models vs 3-EM Models) are only chosen if decrease in RMSE is larger than this threshold</string>
+                </property>
+                <property name="text">
+                 <string>Fusion Threshold: </string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QSpinBox" name="libraryScaleValue">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>The reflectance scale factor is automatically detected. It is the number by which the array must be divided to get reflectance values between 0 and 1. The user can change this value here.</string>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>1000000000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QDoubleSpinBox" name="fusionValue">
+                <property name="toolTip">
+                 <string>Models with a higher number of classes (e.g. 4-EM Models vs 3-EM Models) are only chosen if decrease in RMSE is larger than this threshold</string>
+                </property>
+                <property name="decimals">
+                 <number>3</number>
+                </property>
+                <property name="maximum">
+                 <double>1.000000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.001000000000000</double>
+                </property>
+                <property name="value">
+                 <double>0.007000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <spacer name="horizontalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="3" column="0" colspan="4">
+               <widget class="QGroupBox" name="shadeCheck">
+                <property name="toolTip">
+                 <string>Select a single shade spectrum</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QGroupBox {border: none}</string>
+                </property>
+                <property name="title">
+                 <string>Non-photometric shade: </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>false</bool>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_7">
+                 <property name="leftMargin">
+                  <number>25</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>20</number>
+                 </property>
+                 <item row="2" column="1">
+                  <widget class="QgsSpinBox" name="shadeScaleValue">
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="maximum">
+                    <number>1000000</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="shadeScaleLabel">
+                   <property name="text">
+                    <string>Reflectance scale factor for shade signal: </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="2">
+                  <spacer name="horizontalSpacer_4">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="0" column="0" colspan="3">
+                  <widget class="QgsFileWidget" name="browseShade" native="true">
+                   <property name="toolTip">
+                    <string>Select a single shade spectrum</string>
+                   </property>
+                   <property name="filter" stdset="0">
+                    <string>ENVI Spectral Library (*.sli);;All Files (*)</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="constraintsGroup2">
+             <property name="title">
+              <string>Constraints</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_15">
+              <item>
+               <widget class="QGroupBox" name="residualsCheck">
+                <property name="styleSheet">
+                 <string notr="true">QGroupBox { border: none}</string>
+                </property>
+                <property name="title">
+                 <string>Limit the residual values (slow!)</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+                <property name="checked">
+                 <bool>false</bool>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_3">
+                 <property name="leftMargin">
+                  <number>9</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>20</number>
+                 </property>
+                 <item row="0" column="2">
+                  <widget class="QDoubleSpinBox" name="maxThresValue">
+                   <property name="decimals">
+                    <number>3</number>
+                   </property>
+                   <property name="maximum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>0.005000000000000</double>
+                   </property>
+                   <property name="value">
+                    <double>0.025000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QSpinBox" name="maxBandsValue">
+                   <property name="maximum">
+                    <number>200</number>
+                   </property>
+                   <property name="value">
+                    <number>7</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLabel" name="maxThresLabel">
+                   <property name="baseSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;Threshold&lt;br/&gt;residual value:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="margin">
+                    <number>5</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLabel" name="maxBandsLabel">
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Max # contiguous bands&lt;br/&gt;exceeding the threshold:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="wordWrap">
+                    <bool>true</bool>
+                   </property>
+                   <property name="margin">
+                    <number>5</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="imageGroup2">
+             <property name="title">
+              <string>Input Image</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_5">
+              <item row="0" column="2">
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="1">
+               <widget class="QSpinBox" name="imageScaleValue">
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>The reflectance scale factor is automatically detected. It is the number by which the array must be divided to get reflectance values between 0 and 1. The user can change this value here.</string>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>1000000000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="imageScaleLabel">
+                <property name="toolTip">
+                 <string>The reflectance scale factor is automatically detected. It is the number by which the array must be divided to get reflectance values between 0 and 1. The user can change this value here.</string>
+                </property>
+                <property name="text">
+                 <string>Reflectance scale factor:</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="outputGroup2">
+             <property name="title">
+              <string>Output Image</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_14">
+              <item>
+               <widget class="QCheckBox" name="createResidualImage">
+                <property name="toolTip">
+                 <string>Would you like to create a residual image?</string>
+                </property>
+                <property name="text">
+                 <string>Create residual image</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="multiprocessingGroup">
+             <property name="title">
+              <string>Multiprocessing</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="0" column="2">
+               <spacer name="horizontalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>365</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="cpuLabel">
+                <property name="toolTip">
+                 <string>The reflectance scale factor is automatically detected. It is the number by which the array must be divided to get reflectance values between 0 and 1. The user can change this value here.</string>
+                </property>
+                <property name="text">
+                 <string>Number of available logical cores</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QSpinBox" name="cpuValue">
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>The reflectance scale factor is automatically detected. It is the number by which the array must be divided to get reflectance values between 0 and 1. The user can change this value here.</string>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>10000</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab3">
+      <attribute name="title">
+       <string>Advanced MESMA Algorithms</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_16">
+       <item>
+        <widget class="QScrollArea" name="scrollArea3">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollArea3Contents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>251</width>
+            <height>92</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_17">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="spectralWeighingCheck">
+             <property name="styleSheet">
+              <string notr="true">QGroupBox {border: none}</string>
+             </property>
+             <property name="title">
+              <string>Use spectral weighing (slow)</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="bandSelectionCheck">
+             <property name="styleSheet">
+              <string notr="true">QGroupBox {border: none}</string>
+             </property>
+             <property name="title">
+              <string>Use band selection (Stable Zone Unmixing)</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_6">
+              <property name="leftMargin">
+               <number>25</number>
+              </property>
+              <property name="topMargin">
+               <number>20</number>
+              </property>
+              <item row="2" column="1">
+               <widget class="QDoubleSpinBox" name="correlationDecrease">
+                <property name="maximum">
+                 <double>1.000000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.010000000000000</double>
+                </property>
+                <property name="value">
+                 <double>0.010000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>Correlation decrease:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label">
+                <property name="text">
+                 <string>Correlation threshold:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QDoubleSpinBox" name="correlationThreshold">
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximum">
+                 <double>1.000000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.010000000000000</double>
+                </property>
+                <property name="value">
+                 <double>0.990000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <spacer name="horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_log">
+      <attribute name="title">
+       <string>Log</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_19">
+       <item>
+        <widget class="QTextBrowser" name="logBrowser"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QProgressBar" name="progressBar">
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="store">
+       <property name="text">
+        <string>Save Settings</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="restore">
+       <property name="text">
+        <string>Load Settings</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="OKClose">
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Close|QDialogButtonBox::Ok</set>
+       </property>
+       <property name="centerButtons">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QgsFileWidget</class>
+   <extends>QWidget</extends>
+   <header>qgsfilewidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QgsSpinBox</class>
+   <extends>QSpinBox</extends>
+   <header>qgsspinbox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
