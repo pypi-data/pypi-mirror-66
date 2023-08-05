@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+s3resumable/__init__.py
+s3resumable/cli.py
+s3resumable/exceptions.py
+s3resumable/observer.py
+s3resumable/s3resumable.py
+s3resumable/utils.py
+s3resumable.egg-info/PKG-INFO
+s3resumable.egg-info/SOURCES.txt
+s3resumable.egg-info/dependency_links.txt
+s3resumable.egg-info/entry_points.txt
+s3resumable.egg-info/requires.txt
+s3resumable.egg-info/top_level.txt
