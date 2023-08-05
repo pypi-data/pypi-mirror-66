@@ -1,0 +1,4 @@
+pyjwt>=1.4.2
+pyyaml>=3.11
+qt.py>=1.1.0
+requests>=2.10.0
