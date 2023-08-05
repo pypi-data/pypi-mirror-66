@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: kalam
+Version: 0.1.0
+Summary: Superpowers for writing!
+Home-page: https://github.com/ankcorp/kalam
+License: MIT
+Keywords: kalam,static,site,generator
+Author: Ank
+Author-email: ank@ankcorp.xyz
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: desert (>=2020.1.6,<2021.0.0)
+Requires-Dist: importlib-metadata (>=1.5.0,<2.0.0); python_version < "3.8"
+Requires-Dist: marshmallow (>=3.3.0,<4.0.0)
+Requires-Dist: requests (>=2.22.0,<3.0.0)
+Project-URL: Documentation, https://kalam-ankcorp.readthedocs.io
+Project-URL: Repository, https://github.com/ankcorp/kalam
+Description-Content-Type: text/markdown
+
+[![Tests](https://github.com/ankcorp/kalam/workflows/Tests/badge.svg)](https://github.com/ankcorp/kalam/actions?workflow=Tests)
+[![codecov](https://codecov.io/gh/AnkCorp/kalam/branch/master/graph/badge.svg)](https://codecov.io/gh/AnkCorp/kalam)
+[![PyPI](https://img.shields.io/pypi/v/kalam.svg)](https://pypi.org/project/kalam/)
+[![Documentation Status](https://readthedocs.org/projects/kalam-ankcorp/badge/?version=latest)](https://kalam-ankcorp.readthedocs.io/en/latest/?badge=latest)
+
+# Kalam
+
+Superpowers for writing!
+
+## Getting Started
+
+
+## Developing
+
+### Create a python virtual env
+
+```bash
+python -m venv venv     # create python environment
+. ./venv/bin/activate    # activate python enviroment
+```
+
+### Install poetry
+
+```bash
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+```
+or
+
+```bash
+pipx install poetry
+```
+
+### Install nox
+
+```bash
+pip install nox
+```
+### Nox
+
+Run tests, lint check, type check, doc tests, coverage
+```bash
+nox
+```
+
