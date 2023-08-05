@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: battlehack20-fancyviewer
+Version: 1.0.1
+Summary: Battlehack 2020 fancy viewer.
+Home-page: https://bh2020.battlecode.org
+Author: cooljoseph
+Author-email: camacho.joseph@gmail.com
+License: GNU General Public License v3.0
+Project-URL: Code, https://github.com/cooljoseph1/battlehack20-fancyviewer
+Project-URL: Documentation, https://github.com/cooljoseph1/battlehack20-fancyviewer
+Platform: UNKNOWN
+Requires-Python: >=3, <3.8
+Requires-Dist: battlehack20
+Requires-Dist: pillow (==7.0.0)
+
+
+This is a fancy viewer for the Battlehack20 game.
+Read more at the Battlehack website: https://bh2020.battlecode.org.
+
+
