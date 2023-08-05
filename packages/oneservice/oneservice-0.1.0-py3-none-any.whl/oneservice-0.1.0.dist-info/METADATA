@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: oneservice
+Version: 0.1.0
+Summary: 
+Home-page: https://gitlab.com/davidevi/oneservice
+License: MIT
+Keywords: microservice,micro,service,oneservice,one
+Author: Davide Vitelaru
+Author-email: davide@vitelaru.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: flask (>=1.1.2,<2.0.0)
+Project-URL: Repository, https://gitlab.com/davidevi/oneservice
+Description-Content-Type: text/markdown
+
+# OneService
+
+Wrapper around Flask aimed at conveniently creating microservices.
+
+Features and limitations:
+- `Microservice` creates a server that can call a handler method when `/` is hit (HTTP method is configurable)
+- The handler method receives the request JSON data and must respond with a `(dict, int)` tuple containing
+the response data and response status code
+
+## Usage
+```python
+from oneservice import Microservice
+
+def return_doubled(json_data: dict) -> (dict, int):
+    return {"result": int(json_data["a"]) * 2}, 200
+
+m = Microservice(handler=return_doubled)
+m.start()
+```
+
+You may then hit the microservice and its health endpoint:
+```bash
+curl http://localhost:5000/health
+curl -X POST -H "Content-Type: application/json" --data '{"a": 2}' http://localhost:5000/
+```
+
+See [/examples](examples) for more code usage samples.
+

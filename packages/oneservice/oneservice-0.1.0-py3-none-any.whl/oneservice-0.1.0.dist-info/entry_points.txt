@@ -1,0 +1,6 @@
+[console_scripts]
+check=tasks:check
+flake8=tasks:flake8
+mypy=tasks:mypy
+test=tasks:test
+
