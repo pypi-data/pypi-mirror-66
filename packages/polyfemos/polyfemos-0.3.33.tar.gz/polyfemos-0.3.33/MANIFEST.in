@@ -1,0 +1,20 @@
+
+include *
+recursive-include polyfemos *
+recursive-include documentation *
+
+include polyfemos/scripts/*.sh
+include polyfemos/scripts/web_setup_templates/polyfemos_web.ini
+include polyfemos/scripts/web_setup_templates/polyfemos_web.service
+include polyfemos/scripts/web_setup_templates/nginx/polyfemos_web
+include polyfemos/scripts/web_setup_templates/nginx/*.conf
+include polyfemos/scripts/sohemailer_templates/*.htm
+include polyfemos/templates/*.htm
+include polyfemos/static/*
+include polyfemos/tests/*
+
+recursive-exclude .git *
+recursive-exclude dist *
+global-exclude *.pyc *.git*
+exclude .*
+

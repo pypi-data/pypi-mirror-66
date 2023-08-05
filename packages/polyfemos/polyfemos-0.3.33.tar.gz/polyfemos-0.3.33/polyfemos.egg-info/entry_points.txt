@@ -1,0 +1,9 @@
+[console_scripts]
+polyfemos-check = polyfemos.scripts.check_output_files:main
+polyfemos-devserver = polyfemos.scripts.devserver:main
+polyfemos-readconf = polyfemos.back.main:readconf
+polyfemos-rwt = polyfemos.scripts.render_web_templates:main
+polyfemos-secret_key = polyfemos.util.randomizer:get_secret_key
+polyfemos-sohemailer = polyfemos.scripts.sohemailer:main
+polyfemos-tfp = polyfemos.scripts.test_front_paths:main
+

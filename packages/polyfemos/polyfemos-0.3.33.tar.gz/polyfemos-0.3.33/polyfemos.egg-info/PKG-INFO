@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: polyfemos
+Version: 0.3.33
+Summary: Observatory State of Health monitoring package
+Home-page: https://github.com/hjanka/polyfemos
+Author: HJ
+Author-email: polyfemos.dev@gmail.com
+License: GNU Lesser General Public License v3 or later (LGPLv3+)
+Description: UNKNOWN
+Keywords: MiniSEED,MSEED,observatory,real time,realtime,seismology,signal,state of health,housekeeping
+Platform: Ubuntu 16.04
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
