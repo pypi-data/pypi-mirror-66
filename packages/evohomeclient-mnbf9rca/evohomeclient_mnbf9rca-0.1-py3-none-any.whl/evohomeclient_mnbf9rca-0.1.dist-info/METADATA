@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: evohomeclient-mnbf9rca
+Version: 0.1
+Summary: A simple evohome client
+Home-page: https://github.com/mnbf9rca/EvohomeClient
+Author: mnbf9rca
+Author-email: robert.aleck@cynexia.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: python-dateutil
+
+UNKNOWN
+
+
