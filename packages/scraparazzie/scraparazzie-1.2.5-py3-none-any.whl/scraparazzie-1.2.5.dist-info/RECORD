@@ -1,0 +1,11 @@
+scraparazzie/scraparazzie.py,sha256=fH-2LSmSxxX7uTL5hxO18QB3A3TSZPaFLEb3Cw-ISl0,6236
+scraparazzie/utils.py,sha256=X9ghNtOZYjcqeuexL-370nNmKnyrumboqYeWEp2M7BY,531
+scraparazzie/data/langMap.json,sha256=8M5NcEDFQVn9OBJ_uVSVRdDlasQEiCerm2c_G3KfPb8,811
+scraparazzie/data/locationMap.json,sha256=W_1IF-rkn4cFeRl2SmxIkom1uX5B3fkz0MdW3EBPXNc,1379
+scraparazzie/data/topicMap.json,sha256=3kQdxPQfks9BjRPcalI9AJU8p-KDByI1W1Tce0ighME,236
+scraparazzie-1.2.5.dist-info/LICENSE,sha256=yay70CNDWpSW3W1VTdfiNJNqOrgKFf1i7aKPj-dyVR0,1074
+scraparazzie-1.2.5.dist-info/METADATA,sha256=FsBSsf1-olPmPelRozjcbNptxvVbwoV8gS27SdS3Amk,6714
+scraparazzie-1.2.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+scraparazzie-1.2.5.dist-info/entry_points.txt,sha256=z-Yyl8y91yY9ApebL7aZOt1l0ZWcCmxEznyDYV8J-gU,64
+scraparazzie-1.2.5.dist-info/top_level.txt,sha256=Y3yehk06VQgBeIh0qpRV5jg7CgFIzQEcZ1ANlqsu-sA,13
+scraparazzie-1.2.5.dist-info/RECORD,,
