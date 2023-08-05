@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: qualityface
+Version: 1.0.3
+Summary: Quality face in Pytorch
+Home-page: https://github.com/siriusdemon/pytorch-QualityFace
+Author: sirius demon
+Author-email: mory2016@126.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+Requires-Dist: siriusbackbone
+Requires-Dist: pillow
+
+Quality Face model which decides how suitable of an input face for face recognition system
+
+
