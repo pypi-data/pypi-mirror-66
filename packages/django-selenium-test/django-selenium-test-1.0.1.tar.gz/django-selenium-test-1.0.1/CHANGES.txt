@@ -1,0 +1,7 @@
+1.0.1
+------------------
+- Incoperate django_force_login method from django-selenium-login 
+
+1.0.0
+------------------
+- Complete clean rebranding
