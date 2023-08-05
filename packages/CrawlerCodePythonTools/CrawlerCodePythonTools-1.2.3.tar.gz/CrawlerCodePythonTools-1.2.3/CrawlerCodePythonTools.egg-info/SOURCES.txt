@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+CrawlerCodePythonTools.egg-info/PKG-INFO
+CrawlerCodePythonTools.egg-info/SOURCES.txt
+CrawlerCodePythonTools.egg-info/dependency_links.txt
+CrawlerCodePythonTools.egg-info/requires.txt
+CrawlerCodePythonTools.egg-info/top_level.txt
