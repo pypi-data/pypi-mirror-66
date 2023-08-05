@@ -1,0 +1,8 @@
+README.md
+setup.py
+ffclientTest/__init__.py
+ffclientTest/client.py
+ffclientTest.egg-info/PKG-INFO
+ffclientTest.egg-info/SOURCES.txt
+ffclientTest.egg-info/dependency_links.txt
+ffclientTest.egg-info/top_level.txt
