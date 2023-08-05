@@ -1,0 +1,9 @@
+README.md
+setup.py
+brackettree/__init__.py
+brackettree/clscomp.py
+brackettree/nodes.py
+brackettree.egg-info/PKG-INFO
+brackettree.egg-info/SOURCES.txt
+brackettree.egg-info/dependency_links.txt
+brackettree.egg-info/top_level.txt
