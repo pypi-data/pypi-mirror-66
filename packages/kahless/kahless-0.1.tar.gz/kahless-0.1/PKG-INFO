@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: kahless
+Version: 0.1
+Summary: 
+Home-page: https://github.com/lechgu/kahless
+License: BSD-3-Clause
+Author: Lech Gudalewicz
+Author-email: lechgu@gmail.com
+Requires-Python: >=3.7,<3.9
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: gunicorn (>=20.0.4,<21.0.0)
+Requires-Dist: jinja2 (>=2.11.2,<3.0.0)
+Requires-Dist: parse (>=1.15.0,<2.0.0)
+Requires-Dist: requests (>=2.23.0,<3.0.0)
+Requires-Dist: requests-wsgi-adapter (>=0.4.1,<0.5.0)
+Requires-Dist: webob (>=1.8.6,<2.0.0)
+Requires-Dist: whitenoise (>=5.0.1,<6.0.0)
+Project-URL: Repository, https://github.com/lechgu/kahless
