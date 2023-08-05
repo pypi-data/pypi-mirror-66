@@ -1,0 +1,5 @@
+setup.py
+src/twilioSMS.egg-info/PKG-INFO
+src/twilioSMS.egg-info/SOURCES.txt
+src/twilioSMS.egg-info/dependency_links.txt
+src/twilioSMS.egg-info/top_level.txt
