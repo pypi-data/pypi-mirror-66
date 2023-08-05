@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: MyLib_JS
+Version: 0.11
+Summary: How to upload your python package to PyPi
+Home-page: https://github.com/jaisenbe58r/Ejemplo_pypi
+Author: Jaime Sendra
+Author-email: jaisenberafel@gmail.com
+License: MIT
+Download-URL: https://github.com/jaisenbe58r/Ejemplo_pypi/archive/v0.11.tar.gz
+Description: UNKNOWN
+Keywords: SOME,MEANINGFULL,KEYWORDS
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
