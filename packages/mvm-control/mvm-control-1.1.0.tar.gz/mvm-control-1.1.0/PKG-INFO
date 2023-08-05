@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: mvm-control
+Version: 1.1.0
+Summary: Simple command line tool to access a MVM ESP32 via the serial port
+Home-page: https://github.com/MechanicalVentilatorMilano/mvm-control
+Author: Bryerton Shaw
+Author-email: bryerton@triumf.ca
