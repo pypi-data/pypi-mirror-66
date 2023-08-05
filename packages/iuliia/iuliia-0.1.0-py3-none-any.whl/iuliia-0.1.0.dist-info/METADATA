@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: iuliia
+Version: 0.1.0
+Summary: Transliterate Cyrillic → Latin in all ways possible
+Home-page: https://github.com/nalgeon/iuliia-py
+License: UNKNOWN
+Author: Anton Zhiyanov
+Author-email: m@antonz.ru
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+
+# iuliia-py
+Transliterate Cyrillic → Latin in all ways possible
+
