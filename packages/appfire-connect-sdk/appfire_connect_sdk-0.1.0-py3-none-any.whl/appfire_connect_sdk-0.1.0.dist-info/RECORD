@@ -1,0 +1,9 @@
+ac_app_deploy/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+ac_app_deploy/deploy.py,sha256=xgxZ80F_Huy_PjfEgObMpvKp6B2LQxYAV06zEUXQAro,8407
+ac_app_installer/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+ac_app_installer/install.py,sha256=30jmZ8dEC9CaShKktUU9Q9TwBI-vYw5qBC5UFdyZHHU,4850
+appfire_connect_sdk-0.1.0.dist-info/METADATA,sha256=878grJYMMXbSxo6SFE3dbPEu6zhxs31qgPrI9QIS1qA,1512
+appfire_connect_sdk-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+appfire_connect_sdk-0.1.0.dist-info/entry_points.txt,sha256=rA-3lLvzFILWJFDbE3T9SzbPGUvRGSGlHr6jSF9MEvs,112
+appfire_connect_sdk-0.1.0.dist-info/top_level.txt,sha256=LavarbAuX6XyfoNWjQDZIS3yXmvb2_-hn8Wm88PdqVM,31
+appfire_connect_sdk-0.1.0.dist-info/RECORD,,
