@@ -1,0 +1,12 @@
+importlib-metadata
+setuptools
+
+[package]
+twine
+wheel
+zapp
+
+[test]
+pytest
+pytest-pycodestyle
+pytest-pylint
