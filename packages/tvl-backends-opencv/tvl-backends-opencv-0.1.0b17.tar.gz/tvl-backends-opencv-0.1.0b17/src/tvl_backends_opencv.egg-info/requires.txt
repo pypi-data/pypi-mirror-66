@@ -1,0 +1,4 @@
+tvl==0.1.0b17
+numpy
+torch
+opencv-python
