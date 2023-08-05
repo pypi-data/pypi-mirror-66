@@ -1,0 +1,117 @@
+Metadata-Version: 2.1
+Name: finlab
+Version: 0.1.0.dev1
+Summary: A Financial backtesting framework for stock portfolio selection
+Home-page: https://github.com/koreal6803/finlab
+Author: Cheng-Yu Han
+Author-email: finlabstaff@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (>=0.23.0)
+Requires-Dist: ffn
+Requires-Dist: pyecharts (>=1.7.1)
+Requires-Dist: plotly
+Requires-Dist: ipywidgets (>=7.5.0)
+
+# FinLab
+A Financial backtesting framework for stock portfolio selection
+
+## Installation
+
+FinLab is a easy to install python package aims to help developing stock portfolio strategies.
+```bash
+pip install finlab
+```
+
+
+
+## Getting Start
+
+There are two main functionality of finlab in the alpha development.
+First, taiwan stock market historical data can be obtain by online.Data interface:
+
+```python
+from finlab import online
+
+data = online.Data()
+
+close = data.get('close')
+close.head()
+```
+
+| date     | 1101  | 1203 | ...  | 1726 | 2330  |
+| -------- | ----- | ---- | ---- | ---- | ----- |
+| 2015-1-6 | 43.0  | 23.7 |      | 82.0 | 139.5 |
+| ...      | ...   | ...  | ...  | ...  | ...   |
+| 2015-1-8 | 42.25 | 23.8 |      | 82.0 | 133.5 |
+
+
+
+### Stock technical indicator calculation
+
+With the integration of TA-Lib package, it is easily to calculate technical indicator using wrapper function `online.Data.talib`:
+```python
+rsi = data.talib('RSI', timeperiod=14)
+````
+
+With the simple code above, `Data.talib` calculates RSI indicator for all stocks in the pool.
+
+
+
+### Perform dataFrame methods
+
+It is easy to perform stock selection using methods provided by pandas dataframe
+
+```python
+# plot stock price
+
+close['1101'].plot()
+
+# caculate monthly average price
+
+sma20 = close.rolling(20).plot()
+
+# select stocks with the price above sma20
+
+signal = close > sma20
+
+# print the stocks statisfy the condition above
+
+last_signal = signal.iloc[-1]
+last_signal[last_signal == True] # can be simplied to last_signal[last_signal]
+```
+
+
+
+### Stock Backtesting
+It is easy to write a condition using the similar calculation as above to create a backtest strategy:
+For example, let's select 10 stock that have the smallest price.
+
+```python
+def strategy(data):
+    close = data.get('close')
+    buy = close.smallest(10)
+    sell = None
+    resample_frequency = '60d'
+    return buy, sell, resample_frequency
+
+report = online.backtest(strategy)
+report
+```
+
+FinLab will **NEVER** store your strategy or backtest history in the cloud.
+
+**We value your privacy!**  For every single backtest, an AWS private virtual machine is created (AWS Lambda). After backtesting, all local variables during simlation is destroyed.
+
+## Authors
+
+* Cheng-Yu Han - Ph.D. [FinLab](www.finlab.tw)
+
