@@ -1,0 +1,12 @@
+optimizer:
+  type: Adamax
+  params:
+    eps: 1.0e-08
+    lr: 0.01
+    weight_decay: 0
+
+training:
+  batch_size: 128
+  snapshot_interval: 6000
+  monitored_metric: clevr/accuracy
+  metric_minimize: false
