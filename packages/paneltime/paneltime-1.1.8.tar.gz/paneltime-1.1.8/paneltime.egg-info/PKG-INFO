@@ -1,0 +1,44 @@
+Metadata-Version: 1.1
+Name: paneltime
+Version: 1.1.8
+Summary: An efficient integrated panel and GARCH estimator
+Home-page: https://github.com/espensirnes/paneltime
+Author: Espen Sirnes
+Author-email: espen.sirnes@uit.no
+License: GPL-3.0
+Description: Paneltime
+        
+        
+        Author: Espen Sirnes
+        Version: 1.1.6
+        
+        This package integrates paneldata estimation with a very efficient ARIMA/GARCH
+        estimator. 
+        
+        
+        Installation
+        
+        
+        Use standard "pip install paneltime" for installation
+        
+        
+        If you are NOT installing on Windows, make sure these requirements are satisfied before you install:
+        
+        For GUI:
+        	Tkinter:   From root, "apt python3-tk" in Ubuntu
+        
+        For matplotlib to be installed:
+        	pk-konfig: From root
+        	Freetype : From root, "apt install libfreetype6 libfreetype6-dev" in Ubuntu)
+        
+        For compiling the custum clibrary (sparse matrix inversion):
+        	numpy (will be installed anyway, but required in advance for compilation of custom c-library)
+        
+        
+Keywords: econometrics
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Researchers
+Classifier: Topic :: Statistical Software :: time series estimation
+Classifier: License :: OSI Approved :: GPL-3.0 License
+Classifier: Programming Language :: Python :: 3.5
