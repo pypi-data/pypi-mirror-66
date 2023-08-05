@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "space-console-game"
+version = "0.1.0"
+description = "We fly in space, we surf the Universe"
+authors = ["velivir <vitaliyantonoff@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+add-trailing-comma = "^2.0.1"
+autopep8 = "^1.5.1"
+mypy = "^0.770"
+wemake-python-styleguide = "^0.14.0"
+
+[tool.poetry.scripts]
+space-console-game = 'space_console_game.app:main'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
