@@ -1,0 +1,10 @@
+potemkin/__init__.py,sha256=Ila9BQ7zD42eGc7Xp9mvYocyY3df7Sm6JMD5SDaERBc,212
+potemkin/cloudformationstack.py,sha256=GOJzC4ECaCUG0_zP8SDjLHxfUu9FqXW5GSsTfvuzreU,5605
+potemkin/configservice.py,sha256=SSn2PjKAKePEKuUiZoImZVvJIChWUkSH65vU_wETWO0,8235
+potemkin/terraformresources.py,sha256=93wckc5CLx9x6oarz2l3Oq-v7Hl77V6tYPRk_52kA2A,3620
+potemkin/utilities.py,sha256=HEkzABYo3lTTRR5SYiyml-frHWgy0vcjy-lbQCs2vtM,1361
+potemkin_decorator-0.0.8.dist-info/LICENSE.md,sha256=C6lcAt03uC2p12VBaRoW0I-IeApvQd9N0b8_7s0qI2c,1072
+potemkin_decorator-0.0.8.dist-info/METADATA,sha256=t-GBs8g71TaUV408mBzM2_VGWkhg6SifJR2_CT4wcyc,6457
+potemkin_decorator-0.0.8.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+potemkin_decorator-0.0.8.dist-info/top_level.txt,sha256=xAO-6bV64PWU2ahAW3QFeyYZrArsWjR9x1HvZZ2CiA0,9
+potemkin_decorator-0.0.8.dist-info/RECORD,,
