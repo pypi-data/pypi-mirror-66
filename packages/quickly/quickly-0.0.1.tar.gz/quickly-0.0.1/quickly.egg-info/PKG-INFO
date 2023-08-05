@@ -1,0 +1,33 @@
+Metadata-Version: 1.2
+Name: quickly
+Version: 0.0.1
+Summary: Tool and library for manipulating LilyPond files
+Home-page: https://github.com/frescobaldi/quickly
+Maintainer: Wilbert Berendsen
+Maintainer-email: info@frescobaldi.org
+License: GPL v3
+Description: quickly
+        =======
+        
+        The quickly python package will become the successor of python-ly.
+        
+        It is currently in the planning phase.
+        
+        Like python-ly, it will provide tools to manipulate LilyPond music documents,
+        but instead of using the lexer in python-ly, which is very difficult to
+        maintain, it will use the new parce package at https://parce.info for parsing
+        LilyPond files.
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Editors

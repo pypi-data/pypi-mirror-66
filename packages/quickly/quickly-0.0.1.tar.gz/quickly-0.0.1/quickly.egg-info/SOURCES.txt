@@ -1,0 +1,17 @@
+ChangeLog
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+docs/Makefile
+docs/source/changelog.rst
+docs/source/conf.py
+docs/source/index.rst
+docs/source/license.rst
+docs/source/_static/custom.css
+quickly/__init__.py
+quickly/pkginfo.py
+quickly.egg-info/PKG-INFO
+quickly.egg-info/SOURCES.txt
+quickly.egg-info/dependency_links.txt
+quickly.egg-info/top_level.txt
