@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+tests/__init__.py
+tests/conftest.py
+tests/test_proxypool.py
+tests/test_websvr.py
+zwpool/__init__.py
+zwpool/__version__.py
+zwpool/websvr.py
+zwpool.egg-info/PKG-INFO
+zwpool.egg-info/SOURCES.txt
+zwpool.egg-info/dependency_links.txt
+zwpool.egg-info/requires.txt
+zwpool.egg-info/top_level.txt
