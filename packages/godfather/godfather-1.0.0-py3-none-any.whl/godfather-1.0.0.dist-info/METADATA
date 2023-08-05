@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: godfather
+Version: 1.0.0
+Summary: A CLI for running games of Mafia.
+Home-page: https://github.com/calder/godfather
+Author: Calder Coalson
+Author-email: caldercoalson@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: flask
+Requires-Dist: jinja2
+Requires-Dist: mafia
+Requires-Dist: pluginbase
+Requires-Dist: pytz
+Requires-Dist: requests
+Requires-Dist: termcolor
+
+See https://github.com/calder/godfather for documentation.
+
+
