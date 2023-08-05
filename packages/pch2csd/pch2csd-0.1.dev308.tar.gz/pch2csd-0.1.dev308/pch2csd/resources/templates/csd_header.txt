@@ -1,0 +1,30 @@
+<CsoundSynthesizer>
+<CsOptions>
+</CsOptions>
+<CsInstruments>
+sr = 44100 ;96000?
+kr = 22050 ;24000?
+nchnls = 2
+0dbfs = 1
+
+gkBPM init 120 ; GLOBAL TEMPO
+gaFX1 init 0 ; do we really need 3&4 fx bus?
+gaFX2 init 0
+gaFX3 init 0
+gaFX4 init 0
+;gaBU1 init 0 ; do we really need 3&4 bus?
+;gaBU2 init 0
+
+opcode K2Y, k, k  ; THIS IS TEMPORARY!
+    kin xin
+    kout = (kin > 0 ? 1 : 0)
+    xout kout
+endop
+
+opcode A2O, a, a  ; THIS IS TEMPORARY!
+    setksmps 1
+    ain xin
+    kin = k(ain)
+    kout = (kin > 0 ? 1 : 0)
+    xout a(kout)
+endop
