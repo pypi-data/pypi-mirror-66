@@ -1,0 +1,3 @@
+[setuptools_scm.local_scheme]
+node-and-dirty-tag=setuptools_scm_node_and_dirty_tag:node_and_dirty_tag
+
