@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ISPProgrammer
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: ElectroOptical Innovations, LLC.
+Author-email: simon.hobbs@electrooptical.net
+License: BSD
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: intelhex
+Requires-Dist: numpy
+Requires-Dist: pyserial
+Requires-Dist: timeout-decorator
+
+UNKNOWN
+
+
