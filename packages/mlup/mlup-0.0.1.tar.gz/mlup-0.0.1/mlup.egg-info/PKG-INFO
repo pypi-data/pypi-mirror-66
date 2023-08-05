@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: mlup
+Version: 0.0.1
+Summary: Automl by DSCVIT
+Home-page: https://github.com/unknown-guy-1610/mlAPI
+Author: Sai Sandeep Rayanuthala
+Author-email: rayanuthalas@gmail.com
+License: UNKNOWN
+Description: ##MADE WITH AUTOML
+        
+        
+        [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
