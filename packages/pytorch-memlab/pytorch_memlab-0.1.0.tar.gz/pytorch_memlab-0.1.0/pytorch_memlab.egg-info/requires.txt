@@ -1,0 +1,5 @@
+setuptools
+calmsize
+
+[ipython]
+IPython>=0.13
