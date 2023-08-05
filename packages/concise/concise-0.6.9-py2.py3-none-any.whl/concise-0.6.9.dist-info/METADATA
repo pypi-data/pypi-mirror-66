@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: concise
+Version: 0.6.9
+Summary: CONCISE (COnvolutional Neural for CIS-regulatory Elements)
+Home-page: https://github.com/gagneurlab/concise
+Author: Žiga Avsec
+Author-email: avsec@in.tum.de
+License: MIT license
+Keywords: computational biology,bioinformatics,genomics,deep learning,tensorflow
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: scikit-learn (>=0.18)
+Requires-Dist: matplotlib
+Requires-Dist: keras (<=2.2.4,>=2.0.4)
+Requires-Dist: descartes
+Requires-Dist: shapely
+Requires-Dist: gtfparse (>=1.0.7)
+Provides-Extra: tensorflow
+Requires-Dist: tensorflow (>=1.0) ; extra == 'tensorflow'
+Provides-Extra: tensorflow_with_gpu
+Requires-Dist: tensorflow-gpu (>=1.0) ; extra == 'tensorflow_with_gpu'
+
+UNKNOWN
+
+
