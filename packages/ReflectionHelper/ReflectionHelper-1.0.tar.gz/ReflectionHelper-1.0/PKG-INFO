@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: ReflectionHelper
+Version: 1.0
+Summary: A reflection module based on the C# System.Reflection library
+Home-page: https://github.com/Qkrisi/ReflectionHelper
+Author: Qkrisi
+Author-email: qruczkristof@gmail.com
+License: MIT
+Download-URL: https://github.com/Qkrisi/ReflectionHelper/archive/v_1_0.tar.gz
+Description: UNKNOWN
+Keywords: Reflection,Helper
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
