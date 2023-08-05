@@ -1,0 +1,17 @@
+hydroinform/DFS.py,sha256=t32ppMIcH0eFLlVbKTQ4Nv5EzJLCLXFLcRFY0oeD8-o,80241
+hydroinform/Mike_river.py,sha256=puBlQ_nzaMrJ0x2SZZ4iC9cQqfm4hNPV16uvHdNle94,18784
+hydroinform/NetCDF.py,sha256=bzNz_fRUorrCULMkwYspHwtuq4oX2nYQ9BsD7FJIBl8,5247
+hydroinform/Res1D.py,sha256=V7JXvJ318cFAkKXb93epnEYw2IbupAsBhXYAqb7oXMs,12505
+hydroinform/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hydroinform/core.py,sha256=f3VIcsLViBtGOPhrgBT9z7OpgeWvSI9l021qr0M0CUw,335
+hydroinform/dfs2gdal.py,sha256=Uyg0_HWaBLCUMcycMbU3edAlc_bE1WxVZWsLDc0Vi4c,1525
+hydroinform/hyimport2.py,sha256=0HVjGQfS5ZOtrbZRzTV7cE-Oo1NF7NkcCxGZrfG5CmM,4107
+hydroinform/hymod.py,sha256=ffB14z-iJTk5jYqvzvOVWc1rfOh7Gg0FA9xbNA01a20,52791
+hydroinform/hyplot.py,sha256=W4JsBSW0bhMDMuj2Svls0cS8fFsGAImHaOi1j-nurhM,15693
+hydroinform/hyshape.py,sha256=YWkkaiWxcZ398A3XqijbsE3M1aDCbjFpA65LOPxquGE,1979
+hydroinform/ts_tools.py,sha256=-fwhiN27v2D4cOxZhWXkaZe5j_mpk6l5ScWw3_NG8BE,17172
+hydroinform-0.1.15.dist-info/LICENSE,sha256=d5z_XqtZ0-qmhazewBlrk3lK6V9aG9Lku8EJ5Zynd1U,310
+hydroinform-0.1.15.dist-info/METADATA,sha256=UafqhiJAcK8aIpqnI07JvQO4OAynZj0p5qqYLYT01f0,2649
+hydroinform-0.1.15.dist-info/WHEEL,sha256=qB97nP5e4MrOsXW5bIU5cUn_KSVr10EV0l-GCHG9qNs,97
+hydroinform-0.1.15.dist-info/top_level.txt,sha256=TE6Y9r6Q6hLjqrGo9AVnIs0fhRgTEyBBlBf70wINlvc,12
+hydroinform-0.1.15.dist-info/RECORD,,
