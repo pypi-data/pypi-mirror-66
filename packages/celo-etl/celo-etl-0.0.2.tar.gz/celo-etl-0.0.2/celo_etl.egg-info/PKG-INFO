@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: celo-etl
+Version: 0.0.2
+Summary: Tools for exporting Celo blockchain data to CSV or JSON
+Home-page: https://github.com/codabl/celo-etl
+Author: Gonzalo Astorga
+Author-email: gonzalo@codabl.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/codabl/celo-etl/issues
+Project-URL: Source, https://github.com/codabl/celo-etl
+Description: # Celo ETL
+        
+        [![Build Status](https://travis-ci.org/codabl/celo-etl.png)](https://travis-ci.org/github/codabl/celo-etl)
+        [![Discord](https://img.shields.io/badge/discord-join%20chat-blue.svg)](https://discord.gg/6yWMkgM)
+        
+        Celo ETL lets you convert blockchain data into convenient formats like CSVs and relational databases.
+        
+        Celo ETL is a fork of 
+        ## Quickstart
+        
+        Install Celo ETL:
+        
+        ```bash
+        pip3 install celo-etl
+        ```
+        
+        Export blocks and transactions ([Schema](docs/schema.md#blockscsv), [Reference](docs/commands.md#export_blocks_and_transactions)):
+        
+        ```bash
+        > celoetl export_blocks_and_transactions --start-block 0 --end-block 100000 \
+        --provider-uri https://alfajores-forno.celo-testnet.org --blocks-output blocks.csv --transactions-output transactions.csv
+        ```
+        
+        
+        For the latest version, check out the repo and call 
+        ```bash
+        > pip3 install -e . 
+        > python3 celoetl.py
+        ```
+        
+        ## Running Tests
+        
+        ```bash
+        > pip3 install -e .[dev,streaming]
+        > export ETHEREUM_ETL_RUN_SLOW_TESTS=True
+        > pytest -vv
+        ```
+        
+        ### Running Tox Tests
+        
+        ```bash
+        > pip3 install tox
+        > tox
+        ```
+        
+        ## Running in Docker
+        
+        1. Install Docker https://docs.docker.com/install/
+        
+        2. Build a docker image
+                
+                > docker build -t celo-etl:latest .
+                > docker image ls
+                
+        3. Run a container out of the image
+        
+                > docker run -v $HOME/output:/celo-etl/output celo-etl:latest export_all -s 0 -e 100000 -b 50000 -p https://alfajores-forno.celo-testnet.org
+        
+        
+Keywords: celo
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5.3,<3.8.0
+Description-Content-Type: text/markdown
+Provides-Extra: streaming
+Provides-Extra: dev
