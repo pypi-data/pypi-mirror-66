@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: joblib-windower
+Version: 0.2.1
+Summary: Provides a `joblib`-based windowing function
+Home-page: UNKNOWN
+Author: Bao Wei
+Author-email: baowei.ur521@gmail.com
+License: MIT
+Description: # joblib-windower
+        Provides a `joblib`-based windowing function
+        
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
