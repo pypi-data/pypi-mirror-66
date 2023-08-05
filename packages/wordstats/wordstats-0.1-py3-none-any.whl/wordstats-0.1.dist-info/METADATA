@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: wordstats
+Version: 0.1
+Summary: Word frequency stats for your python fingertips 
+Home-page: UNKNOWN
+Author: Mircea Lungu
+Author-email: me@mir.lu
+License: UNKNOWN
+Keywords: second language acquisition api
+Platform: UNKNOWN
+Requires-Dist: configobj
+Requires-Dist: sqlalchemy
+
+UNKNOWN
+
+
