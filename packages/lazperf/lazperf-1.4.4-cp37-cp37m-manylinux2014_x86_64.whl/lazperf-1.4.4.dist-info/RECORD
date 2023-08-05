@@ -1,0 +1,13 @@
+lazperf/lazperf.pxd,sha256=9UZzdPOXxpUITirSL1zq3PLh1xbj4Z2wyaJ_zcMOHDc,2513
+lazperf/pylazperfapi.pyx,sha256=mQp8GXlAqp-Ocp8uqgx5wZSP2PSpY9dlaGpsqTLodSs,11020
+lazperf/PyLazperfTypes.hpp,sha256=xdqoX4u6KighWkxAAVdq6X3wuhIlfrqfaD1ZvvhVTiM,2764
+lazperf/pylazperfapi.cpython-37m-x86_64-linux-gnu.so,sha256=X0IXgXrWbvUz7L15prUO99sQiEIMEkhWrXoEyCzSWTY,3745208
+lazperf/__init__.py,sha256=5DfNaI5Ea-l7ZITgcFpENqkauw3qp_7h-5HFuFYSt_Q,455
+lazperf/PyLazperf.cpp,sha256=4mAu2XZ-i6PcXAG98KjAL3SJuuKD9Pxl5VlNlhJxAD4,2907
+lazperf/pylazperfapi.cpp,sha256=_-lqEJYIVHcbpbc0Z5Rus7C_hiiPzBPpn9vR4x-QWow,1259683
+lazperf/PyLazperf.hpp,sha256=VfncW2l0WFBTSKwdglaD9kcwUDgq2bZRLFlgjO0_-Vw,6096
+lazperf/PyVlrCompressor.cpp,sha256=KRI_TJ_keyiPSACB3OLOtOYEwtAyFnvQtGD8tllj048,3129
+lazperf-1.4.4.dist-info/RECORD,,
+lazperf-1.4.4.dist-info/WHEEL,sha256=Gukwhh_Vm0KMqvU45XB0IW9vULNpYAVpoy0oBl6s2RQ,112
+lazperf-1.4.4.dist-info/top_level.txt,sha256=0xINHMkCKStlFopGjNovc2SUm9-7aAurhIhZF1weuk8,8
+lazperf-1.4.4.dist-info/METADATA,sha256=Y2C24iEFNPWaXMFvUs_DWqib2nraIvmEDYoSlCcEDwg,936
