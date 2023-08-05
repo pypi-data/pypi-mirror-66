@@ -1,0 +1,15 @@
+gen_browser_header/GenHeader.py,sha256=2T82xVg8cs10Wl4WWdMOB9FVEJ36C88XsW7fWXMrQVs,2251
+gen_browser_header/GenUA.py,sha256=7FARse5gxIAF-9mMqHov0tXFnIihE8Kg1UQb-X1946o,8558
+gen_browser_header/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+helper/Helper.py,sha256=Q9V_YChvLfagQQDVmMHLEkaPdbTbWcVW-ZLcmx5Af2w,4229
+helper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+self/SelfEnum.py,sha256=Si8rmojtnqFuvWWXYRvQhtxK1pbrazoiyn5rTN0XPf4,723
+self/SelfException.py,sha256=qEb7N9CnbniQPANLZnRjc6BkxFeiXAcETfL4LQ24wWA,629
+self/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+setting/Setting.py,sha256=FARoAw2rkmnpRHXhsPdpdcqvBn1b4UIlDKzYd3yEdHc,9931
+setting/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gen_browser_header-0.0.5.dist-info/LICENSE,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+gen_browser_header-0.0.5.dist-info/METADATA,sha256=hbAVjpUqehpvWHQ2_fNjdpY2odeNKZ_TXwqe6Tw7pLs,4216
+gen_browser_header-0.0.5.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+gen_browser_header-0.0.5.dist-info/top_level.txt,sha256=yrg2gIpb3u5I4OWflcNQjPgdr7JSiL6CTGJXbIuJ2Ig,39
+gen_browser_header-0.0.5.dist-info/RECORD,,
