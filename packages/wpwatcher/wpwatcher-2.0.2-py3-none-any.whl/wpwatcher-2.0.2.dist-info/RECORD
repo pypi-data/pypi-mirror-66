@@ -1,0 +1,13 @@
+wpwatcher/__init__.py,sha256=e_3iKAahdfAlqaVEfmrs1e0HXA99BdARvhnwe0EAsY8,550
+wpwatcher/cli.py,sha256=AEeGEkUhE9T87lVZ1V7sAQE8F3YvZYnUAaqcsr4L3oI,8891
+wpwatcher/config.py,sha256=sLKxwbhUlIyQgOw0D8j2lNf_y3d5WDUj9_sruDYYkuk,9472
+wpwatcher/core.py,sha256=YBKS7bw68rV6MPlxElKxv-7WN4tRvRuRTYkw9SN8s5k,26644
+wpwatcher/parser.py,sha256=6Ud1TohTg89TfPuUmQdQpHRlGSad-_l4j37TagV9wJY,18692
+wpwatcher/scan.py,sha256=kvL-hkAO8ZJ_ow-YMyvNmnHW1_W81TO0mkyJvxpzTMA,3281
+wpwatcher/utils.py,sha256=dkMNjXn2ooFEZu2tyNjjlApt3eDftkY0Q32Qk4ejodE,4996
+wpwatcher-2.0.2.dist-info/LICENSE,sha256=xllut76FgcGL5zbIRvuRc7aezPbvlMUTWJPsVr2Sugg,11358
+wpwatcher-2.0.2.dist-info/METADATA,sha256=RAkl4IhMcGZOoddeD6yicw5kJhw15ZCyf3cPzp2feVo,33401
+wpwatcher-2.0.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+wpwatcher-2.0.2.dist-info/entry_points.txt,sha256=YPbL1JSAXRRqc-JpWTBXteydPvb-iHFfLKCt4_u64ww,50
+wpwatcher-2.0.2.dist-info/top_level.txt,sha256=H4hmvv9Xpp1W-D3yR6zqQxTNy0n2ZUu3mpRkggQ_7Hk,10
+wpwatcher-2.0.2.dist-info/RECORD,,
