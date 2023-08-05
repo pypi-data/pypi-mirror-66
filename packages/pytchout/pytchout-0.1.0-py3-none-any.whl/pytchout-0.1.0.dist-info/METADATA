@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pytchout
+Version: 0.1.0
+Summary: A package for downloading baseball data and performing baseball data analytics in Python.
+Author: Josh Hejka
+Author-email: josh@joshhejka.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: numpy (>=1.18.2,<2.0.0)
+Requires-Dist: pandas (>=1.0.3,<2.0.0)
+Requires-Dist: requests (>=2.23.0,<3.0.0)
