@@ -1,0 +1,11 @@
+configurator/__init__.py,sha256=ikCydyPmp6YmatAHDTwxen6GDDOXN7LlYjH5cJhBVR0,235
+configurator/config.py,sha256=yl8W09omZ2mArmeeH1CeaF5Tn762B8cwZKXO13bRNno,6776
+configurator/mapping.py,sha256=1upAZz59_1hxvsze2pWNJNNkrU5SJYkN1Nb47zn4q1Q,1950
+configurator/merge.py,sha256=6-nZ7XjQI3DchwVA_36OKFHhOsf1ykGcL67GHEVXw74,1188
+configurator/node.py,sha256=gWvziMXjkBlKPqRBN4GRHt2Da3jwYHBY82AuoVs-Ico,3091
+configurator/parsers.py,sha256=NNWy5n_TIGlvLaHrZyhqabe6uLHxJTI2ar_PReiImgY,700
+configurator/path.py,sha256=XHrf-3dD3bYiDOHKHxJpPqjRSDCTwTh88maH5AwmpMU,5546
+configurator-2.0.0.dist-info/METADATA,sha256=fjzIjAoGmTOwu4Q4ojwTCkiqBPAplnNbKTdauuaGmxI,5101
+configurator-2.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+configurator-2.0.0.dist-info/top_level.txt,sha256=3xOJQRQl7sFvVWHwXCCaoI1jV_0SOW3u6QykreSDKFw,13
+configurator-2.0.0.dist-info/RECORD,,
