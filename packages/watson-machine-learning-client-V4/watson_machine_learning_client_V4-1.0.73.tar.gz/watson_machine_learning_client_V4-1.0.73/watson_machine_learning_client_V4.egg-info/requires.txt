@@ -1,0 +1,12 @@
+autoai-libs
+requests
+urllib3
+pandas<=0.25.3
+scikit-learn==0.20.3
+certifi
+tqdm==4.36.1
+lomond
+tabulate
+ibm-cos-sdk==2.6.0
+tqdm==4.36.1
+xlrd>=1.0.0
