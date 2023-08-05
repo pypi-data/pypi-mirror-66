@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        apple_news_api=kcrw.apple_news.command:cli
+    
