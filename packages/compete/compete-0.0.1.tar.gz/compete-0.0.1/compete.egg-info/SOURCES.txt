@@ -1,0 +1,8 @@
+README.md
+setup.py
+compete/__init__.py
+compete.egg-info/PKG-INFO
+compete.egg-info/SOURCES.txt
+compete.egg-info/dependency_links.txt
+compete.egg-info/top_level.txt
+tests/__init__.py
