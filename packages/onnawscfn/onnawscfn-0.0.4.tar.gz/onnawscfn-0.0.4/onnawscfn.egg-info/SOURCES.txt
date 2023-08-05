@@ -1,0 +1,9 @@
+README.md
+setup.py
+onnawscfn/__init__.py
+onnawscfn/cfn.py
+onnawscfn.egg-info/PKG-INFO
+onnawscfn.egg-info/SOURCES.txt
+onnawscfn.egg-info/dependency_links.txt
+onnawscfn.egg-info/requires.txt
+onnawscfn.egg-info/top_level.txt
