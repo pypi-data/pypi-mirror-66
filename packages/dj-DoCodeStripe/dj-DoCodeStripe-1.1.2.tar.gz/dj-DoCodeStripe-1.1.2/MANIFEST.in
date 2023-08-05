@@ -1,0 +1,6 @@
+include LICENSE
+include README.md
+recursive-include DoCodeStripe/templates *
+recursive-include DoCodeStripe/procesos *
+recursive-include DoCodeStripe/migrations *
+recursive-include DoCodeStripe/static *
