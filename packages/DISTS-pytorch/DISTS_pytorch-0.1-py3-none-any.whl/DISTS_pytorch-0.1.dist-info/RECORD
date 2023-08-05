@@ -1,0 +1,9 @@
+DISTS_pytorch/DISTS_pt.py,sha256=2pFiMHrlG8WP_iWefneJc-hYYoZlLTbD6YhelLwmnag,5435
+DISTS_pytorch/__init__.py,sha256=FljXwd1oHEO63eMOkIHuHe218FUPnI04N66a_tWQIyM,27
+DISTS_pytorch/weights.pt,sha256=9eZcliMLf2yplWkWR9SCI35Mq4pQxcSleE8hnvB0ghg,12288
+DISTS_pytorch-0.1.data/data/weights.pt,sha256=9eZcliMLf2yplWkWR9SCI35Mq4pQxcSleE8hnvB0ghg,12288
+DISTS_pytorch-0.1.dist-info/LICENSE,sha256=8hgXdQk9o3EXZR-DzYEJB2vgqikiiSgOpAo6PR7tXT0,1067
+DISTS_pytorch-0.1.dist-info/METADATA,sha256=r3RIM4deE9W6e0JCD76c3ho8S-K92riW6JtYUI1TKtQ,2608
+DISTS_pytorch-0.1.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+DISTS_pytorch-0.1.dist-info/top_level.txt,sha256=5OHx7rwv7HZOkgaiPc-vgp48971LojGXh2hE3Vhn7dU,14
+DISTS_pytorch-0.1.dist-info/RECORD,,
