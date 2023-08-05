@@ -1,0 +1,338 @@
+#!python
+# -*- coding: utf-8 -*-
+
+# MIT License
+
+# Copyright (c) 2020 Robin Tournemenne
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+#
+
+from __future__ import unicode_literals
+
+import sys
+
+import time
+
+from pathlib import Path
+home = str(Path.home())
+
+from os import path
+
+import json
+
+import pygments
+from pygments.lexers.matlab import MatlabLexer
+from pygments.styles import get_style_by_name, get_all_styles
+from pygments.token import Token
+
+from prompt_toolkit.shortcuts import prompt
+from prompt_toolkit.lexers import PygmentsLexer
+from prompt_toolkit.styles.pygments import style_from_pygments_cls
+from prompt_toolkit import PromptSession
+from prompt_toolkit.history import FileHistory, ThreadedHistory
+from prompt_toolkit.formatted_text import PygmentsTokens
+from prompt_toolkit.auto_suggest import AutoSuggestFromHistory
+
+from prompt_toolkit import print_formatted_text, HTML
+from prompt_toolkit.completion import Completer, Completion
+
+import pexpect
+
+def setSettings(settings2parse):
+  stg = {}
+  if settings2parse == 'default': # then we will get the dault values
+    stg["settings_filename"] = home + '/.matREPLab_settings.json'
+    stg["history_filename"] = home + '/.matREPLab_history'
+    stg["completion_filename"] = home + '/.matREPLab_completion_result'
+    stg["log_filename"] = home + '/.matREPLab_live_log'
+    stg["matlab_flags"] = '-nodesktop'
+    stg["history_search"] = True
+    stg["auto_suggest"] = AutoSuggestFromHistory()
+    stg["complete_while_typing"] = False
+    stg["complete_in_threads"] = True
+    stg["theme"] = 'monokai'
+    return stg
+  elif isinstance(settings2parse, list):
+    if len(settings2parse) == 0:
+      return stg
+    elif (settings2parse[0].find('matREPLab') != -1) | (settings2parse[0].find('matreplab') != -1):
+      if len(settings2parse) == 1:
+        return stg
+      else:
+        settings2parse = settings2parse[1:]
+  else:
+    raise ValueError("input to setSettings unreadable: shoud be a list (can be empty) or 'default'")
+
+  for setting in settings2parse:
+    if setting.find('-settings_filename') != -1:
+      idx = setting.find('=')
+      stg["settings_filename"] = setting[idx + 1:]
+    elif setting.find('-history_filename') != -1:
+      idx = setting.find('=')
+      stg["history_filename"] = setting[idx + 1:]
+    elif setting.find('-completion_filename') != -1:
+      idx = setting.find('=')
+      stg["completion_filename"] = setting[idx + 1:]
+    elif setting.find('-log_filename') != -1:
+      idx = setting.find('=')
+      stg["log_filename"]  = setting[idx + 1:]
+    elif setting.find('-theme') != -1:
+      idx = setting.find('=')
+      stg["theme"] = setting[idx + 1:]
+    elif setting.find('-matlab_flags') != -1:
+      idx = setting.find('=')
+      stg["matlab_flags"] = setting[idx + 1:]
+    elif setting.find('-disable_history_search') != -1:
+      stg["history_search"] = False
+    elif setting.find('-disable_auto_suggest') != -1:
+      stg["auto_suggest"] = None
+    elif setting.find('-complete_while_typing') != -1:
+      stg["complete_while_typing"] = True
+    elif setting.find('-disable_complete_in_threads') != -1:
+      stg["complete_in_threads"] = False
+    else:
+      raise ValueError("the setting: '" + setting + "' does not exist.")
+  return stg
+
+settings = setSettings('default') # default settings
+if path.exists(settings["settings_filename"]):
+  with open(settings["settings_filename"]) as json_settings: # modified by the classic settings file
+    tmp_settings = json.load(json_settings)
+    if tmp_settings["auto_suggest"] == False:
+      tmp_settings["auto_suggest"] = None
+    else:
+      tmp_settings["auto_suggest"] = AutoSuggestFromHistory()
+    settings.update(tmp_settings)
+settings_arguments = setSettings(sys.argv)
+if "settings_filename" in settings_arguments.keys():
+  if settings["settings_filename"] != settings_arguments["settings_filename"]: # modified by a specific settings file if existing
+    if path.exists(settings_arguments["settings_filename"]):
+      with open(settings_arguments["settings_filename"]) as json_settings: 
+        tmp_settings = json.load(json_settings)
+        if tmp_settings["auto_suggest"] == False:
+          tmp_settings["auto_suggest"] = None
+        else:
+          tmp_settings["auto_suggest"] = AutoSuggestFromHistory()
+        settings.update(tmp_settings)
+    else:
+      raise ValueError("the file you want to load doesn't seem to exist")
+settings.update(settings_arguments) # modified by argv
+style = style_from_pygments_cls(get_style_by_name(settings["theme"]))
+
+try:
+  print_formatted_text('\r\n')
+  new_line = '\r\n'
+except AssertionError:
+  new_line = '\n'
+
+def cleaning(text2Clean, user_input):
+  text_cleaned = text2Clean
+  text_cleaned = text_cleaned.replace('{\x08', '')
+  text_cleaned = text_cleaned.replace('}\x08', '')
+  text_cleaned = text_cleaned.replace('[\x08', '')
+  text_cleaned = text_cleaned.replace('\x1b[?1h\x1b=', '')
+  text_cleaned = text_cleaned.replace('\x1b[?1h\x1b=\x1b[?1h\x1b=', '')
+  text_cleaned = text_cleaned.replace(']\x08', '')
+    #cases where a newline lacks at the beginning
+  if text_cleaned[len(user_input) : len(user_input) + 4] != '\r\n':
+    if text_cleaned[0] == ' ': # happen for the first prompt...
+      text_cleaned = text_cleaned[:len(user_input) + 1] + '\r\n' + text_cleaned[len(user_input) + 1:]
+    else:
+      text_cleaned = text_cleaned[:len(user_input)] + '\r\n' + text_cleaned[len(user_input):]
+  return text_cleaned
+
+def outputDrawer(output_elements_list):
+  for output_elements in output_elements_list:
+    if output_elements[-1] == 'K':
+      output_elements = output_elements[:-1]
+    if len(output_elements) == 1:
+      continue
+
+    if output_elements[0].find('error') != -1: # if we called the function error
+      print_formatted_text(HTML('<ansired>' + output_elements[1]  +'</ansired>'))
+    elif output_elements[1].find('Warning') != -1:
+      print_formatted_text(HTML('<ansiyellow>' + output_elements[1] +'</ansiyellow>'))
+    elif (output_elements[1].find('Undefined') != -1) | (output_elements[1].find('No appropriate') != -1):
+      print_formatted_text(HTML('<ansired>' + output_elements[1] +'</ansired>'))
+
+    elif len(output_elements) > 3:
+      done = 0
+      current_normal_output_idx = 1
+      isWarning =0
+      for idx, element in enumerate(output_elements):
+        if idx == 0:
+          continue
+        if (element.find('Error') != -1) & (idx == 3): # error after user input
+          tokens_input = list(pygments.lex(output_elements[1], lexer=MatlabLexer())) # maybe needed, maybe not according to case
+          print_formatted_text(PygmentsTokens(tokens_input[:-1]), style=style); print_formatted_text(HTML('<ansired>' + new_line.join(output_elements[2:]) +'</ansired>'))
+          done = 1
+          break
+        elif (element.find('Error') != -1):
+          if output_elements[idx + 1][:4] == 'Line':
+            parsedLineAndCol = output_elements[idx + 1].split(' ')
+            idx_path = idx
+          else: #filename too long, Matlba add a line
+            parsedLineAndCol = output_elements[idx + 2].split(' ')
+            idx_path = idx + 1
+          if len(parsedLineAndCol) > 3:
+            output_elements[idx_path]= output_elements[idx_path] + ':' + parsedLineAndCol[1] + ':' + parsedLineAndCol[3] # for precise vscode navigation
+          # terminal escape codes (works in zsh)
+          # parsedName = outputElements[1].split(' ')
+          # outputElements[1] = parsedName[0] + ' ' + parsedName[1] + "-e ''\e]8;;" + parsedName[2] + '\a' + parsedName[2] + '\e]8;;\a'
+          error2Format = new_line.join(output_elements[idx:])
+          print_formatted_text(new_line.join(output_elements[current_normal_output_idx : idx])); print_formatted_text(HTML('<ansired>' + error2Format +'</ansired>'))
+          done = 1
+          break
+        elif (element[:7] == 'Warning') | isWarning:
+          if isWarning:
+            if element.find('In') != -1:
+              print_formatted_text(HTML('<ansiyellow>' + element +'</ansiyellow>'))
+            else:
+              isWarning = 0
+              current_normal_output_idx = idx
+          else:
+            isWarning = 1
+            print_formatted_text(new_line.join(output_elements[current_normal_output_idx : idx]))
+            print_formatted_text(HTML('<ansiyellow>' + element +'</ansiyellow>'))
+      if done == 0: # classic output (if long print)
+        print_formatted_text(new_line.join(output_elements[current_normal_output_idx:]))
+    else: #classic output (if short print)
+      print_formatted_text(new_line.join(output_elements[1:]))
+
+child = pexpect.spawn('/bin/bash -c "matlab ' + settings["matlab_flags"] + ' 2>&1 | tee ' + settings["log_filename"] +'"')
+
+class MatlabCompleter(Completer):
+    def get_completions(self, document, complete_event):
+      word = document.get_word_before_cursor()
+      expression = document.current_line
+      expression_matlabed = expression.replace('\'', '\'\'')
+      child.sendline('a = com.mathworks.jmi.MatlabMCR().mtGetCompletions(\'' + expression_matlabed + '\',' + str(len(expression)) + '); fid = fopen(\'~/.matREPLab_completion_result\',\'w\'); fprintf(fid, \'%s\',a); fclose(fid);')
+      child.expect('>> $')
+      with open(settings["completion_filename"]) as json_file:
+        matlab_completion_output = json.load(json_file)
+      if 'cannotComplete' in matlab_completion_output:
+        pass
+      else:
+        if 'finalCompletions' in matlab_completion_output:
+          completion_propositions = matlab_completion_output['finalCompletions']
+        else:
+          completion_propositions = []
+        for proposition in completion_propositions:
+          if (word == '(') | (word == '(\'') | (word == ',') | (word == '\',') | (word == '\',\'') | (word == '.') | (word == '/') | (word.find('../') != -1):
+            yield Completion(proposition['popupCompletion'], start_position=0, display=proposition['popupCompletion'])
+          elif word == '\'':
+            pass
+          else:
+            yield Completion(proposition['popupCompletion'], start_position=-len(word), display=proposition['popupCompletion'])
+
+
+child.expect('>>')
+rawIntro = cleaning(child.before.decode('utf-8'), 'this setting is useless here')
+# the following lexing is not interesting since it is not matlab code to ptompt but it shows directly to the user that the extension works or not
+tokens = list(pygments.lex(rawIntro, lexer=MatlabLexer()))
+print_formatted_text(PygmentsTokens(tokens), style=style)
+if settings["matlab_flags"].find('nojvm') == -1:
+  child.sendline('com.mathworks.services.Prefs.setBooleanPref(\'EditorGraphicalDebugging\',false)') # line to send messages to matlab prior to working
+  child.expect('>>')
+
+session = PromptSession(lexer=PygmentsLexer(MatlabLexer),
+                        style=style,
+                        include_default_pygments_style=False,
+                        history=ThreadedHistory(FileHistory(settings["history_filename"])),
+                        enable_history_search=settings["history_search"],
+                        auto_suggest=settings["auto_suggest"],
+                        completer=MatlabCompleter(),
+                        complete_while_typing=settings["complete_while_typing"],
+                        complete_in_thread=settings["complete_in_threads"])
+
+debug_state = ''
+raw_text = ' '
+while(1):
+  if raw_text[-1] == 'K':
+    debug_state = 'K'
+  else:
+    debug_state = ''
+
+  user_input = session.prompt(debug_state + '>> ')
+
+  #special functions
+  if user_input.find('%setSettings') != -1:
+    new_settings = user_input.replace('%setSettings', '')
+    new_settings = new_settings.replace(';', '')
+    settings.update(json.loads(new_settings))
+    style = style_from_pygments_cls(get_style_by_name(settings["theme"]))
+    session = PromptSession(lexer=PygmentsLexer(MatlabLexer),
+                            style=style,
+                            include_default_pygments_style=False,
+                            history=ThreadedHistory(FileHistory(settings["history_filename"])),
+                            enable_history_search=settings["history_search"],
+                            auto_suggest=settings["auto_suggest"],
+                            completer=MatlabCompleter(),
+                            complete_while_typing=settings["complete_while_typing"],
+                            complete_in_thread=settings["complete_in_threads"])
+    continue
+  elif user_input.find('%saveSettings') != -1:
+    with open(settings["settings_filename"], 'w') as json_file:
+      if settings["auto_suggest"] == None:
+        settings["auto_suggest"] = False
+      else:
+        settings["auto_suggest"] = True
+      json.dump(settings, json_file)
+    continue
+  elif user_input.find('%getAvailableThemes') != -1:
+    print(list(get_all_styles()))
+    continue
+  else:
+    child.sendline(user_input)
+  if (user_input == 'exit') | (user_input == 'quit'):
+    break
+  time.sleep(0.1)
+  try: # for keyboard interrupt
+    child.expect('>> $') # the dollar is used for multiline inputs if I record well
+  except:
+    pass
+  raw_text = child.before.decode('utf-8')
+
+  raw_text = cleaning(raw_text, user_input)
+  output_elements2categorize = raw_text.split('\r\n')
+  if user_input.find('\n') != -1:
+    if user_input.find('\r') != -1:
+      user_input_parsed = user_input.split('\r\n')
+    else:
+      user_input_parsed = user_input.split('\n')
+    current_idx = 0
+    output_elements_list = []
+    for element in output_elements2categorize:
+      if current_idx != len(user_input_parsed):
+        if element.find(user_input_parsed[current_idx]) != -1:
+          current_idx += 1
+          output_elements_list.append(['simulating the first one Liner stdout'])
+          if current_idx == 1:
+            output_elements_list[current_idx - 1].append('')
+        else:
+          output_elements_list[current_idx - 1].append(element)
+      else:
+        output_elements_list[current_idx - 1].append(element)
+  else: #single line entered by the user
+    output_elements_list = [output_elements2categorize]
+  outputDrawer(output_elements_list)
+
+child.kill(1)
