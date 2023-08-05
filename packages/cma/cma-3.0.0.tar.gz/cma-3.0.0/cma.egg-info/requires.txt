@@ -1,0 +1,7 @@
+numpy
+
+[plotting]
+matplotlib
+
+[wrap-skopt]
+scikit-optimize
