@@ -1,0 +1,1 @@
+includes Week of Day average
