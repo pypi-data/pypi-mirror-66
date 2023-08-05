@@ -1,0 +1,8 @@
+README.md
+setup.py
+chexampletest.egg-info/PKG-INFO
+chexampletest.egg-info/SOURCES.txt
+chexampletest.egg-info/dependency_links.txt
+chexampletest.egg-info/top_level.txt
+example_pkg/__init__.py
+example_pkg/test.py
