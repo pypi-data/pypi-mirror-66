@@ -1,0 +1,9 @@
+README.md
+setup.py
+popcornTimeApi.egg-info/PKG-INFO
+popcornTimeApi.egg-info/SOURCES.txt
+popcornTimeApi.egg-info/dependency_links.txt
+popcornTimeApi.egg-info/requires.txt
+popcornTimeApi.egg-info/top_level.txt
+popcorntimeapi/Popcorn.py
+popcorntimeapi/__init__.py
