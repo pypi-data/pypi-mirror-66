@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: online-log.py
+Version: 0.0.1
+Summary: module to generate an online endpoint to visualize flask application log
+Home-page: https://github.com/pabloiea1995/online-log.py.git
+Author: Pablo Sánchez Morillo-Velarde
+Author-email: psanchezmvelarde@gmail.com
+License: UNKNOWN
+Description: # online-log.py
+        Python version of npm package online-log
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
