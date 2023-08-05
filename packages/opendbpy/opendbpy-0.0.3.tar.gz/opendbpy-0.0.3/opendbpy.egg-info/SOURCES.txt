@@ -1,0 +1,8 @@
+setup.py
+opendbpy/__init__.py
+opendbpy/_opendbpy.so
+opendbpy/opendbpy.py
+opendbpy.egg-info/PKG-INFO
+opendbpy.egg-info/SOURCES.txt
+opendbpy.egg-info/dependency_links.txt
+opendbpy.egg-info/top_level.txt
