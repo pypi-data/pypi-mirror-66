@@ -1,0 +1,98 @@
+# Base Configuration for add extra menus into ArtellaPipe DCC Menu for Plot Twist in Maya
+
+menus:
+    - menu:
+      - label: Shading
+        type: menu
+        children:
+            - id: plottwist-commands-ocio
+              command: "import artellapipe; artellapipe.OCIOMgr().init_ocio()"
+              type: command
+              language: python
+              tags: ['ocio', 'shading']
+              ui:
+                label: "OCIO Setup"
+                icon: 'ociosetup'
+                is_checkable: False
+                is_checked: False
+                load_on_startup: False
+      - label: General
+        type: menu
+        children:
+            - id: plottwist-commands-setproject
+              command: "import artellapipe; artellapipe.project.update_project()"
+              type: command
+              language: python
+              tags: ['plottwist', 'project']
+              ui:
+                label: "Project Setup"
+                icon: 'setproject'
+                is_checkable: False
+                is_checked: False
+                load_on_startup: False
+            - id: plottwist-commands-cleanstudentlicense
+              command: "from tpDcc.dccs.maya.core import helpers; helpers.clean_student_line()"
+              type: command
+              language: python
+              tags: ['plottwist', 'maya', 'clean', 'student', 'license']
+              ui:
+                label: "Clean Student License"
+                icon: 'studentlicense'
+                is_checkable: False
+                is_checked: False
+                load_on_startup: False
+            - id: plottwist-clean-scene
+              command: "from plottwist.core import utils; utils.clean_scene()"
+              type: command
+              language: python
+              tags: ['plottwist', 'clean', 'scene']
+              ui:
+                label: "Clean Scene"
+                icon: 'cleanscene'
+                is_checkable: False
+                is_checked: False
+                load_on_startup: False
+            - id: plottwist-commands-save
+              command: "import artellapipe; artellapipe.project.save_scene(notify=True)"
+              type: command
+              language: python
+              tags: ['plottwist', 'save']
+              ui:
+                label: "Save Scene"
+                icon: 'savescene'
+                is_checkable: False
+                is_checked: False
+                load_on_startup: False
+            - id: plottwist-commands-lockfile
+              command: "import artellapipe; artellapipe.FilesMgr().lock_file(notify=True)"
+              type: command
+              language: python
+              tags: ['plottwist', 'lock', 'file']
+              ui:
+                label: "Lock File"
+                icon: 'lock_file'
+                is_checkable: False
+                is_checked: False
+                load_on_startup: False
+            - id: plottwist-commands-unlockfile
+              command: "import artellapipe; artellapipe.FilesMgr().unlock_file(notify=True)"
+              type: command
+              language: python
+              tags: ['plottwist', 'unlock', 'file']
+              ui:
+                label: "Unlock File"
+                icon: 'unlock_file'
+                is_checkable: False
+                is_checked: False
+                load_on_startup: False
+            - id: plottwist-commands-uploadversion
+              command: "import artellapipe; artellapipe.FilesMgr().upload_working_version(notify=True)"
+              type: command
+              language: python
+              tags: ['solstice', 'upload', 'version', 'file']
+              ui:
+                label: "Upload File"
+                icon: 'upload'
+                is_checkable: False
+                is_checked: False
+                load_on_startup: False
