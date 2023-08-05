@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: jadn
+Version: 0.5.0b1
+Summary: JADN schema tools
+Home-page: https://github.com/davaya/jadn-software
+Author: David Kemp
+Author-email: dk190a@gmail.com
+License: UNKNOWN
+Description: long_description
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.4
+Description-Content-Type: text/x-rst
