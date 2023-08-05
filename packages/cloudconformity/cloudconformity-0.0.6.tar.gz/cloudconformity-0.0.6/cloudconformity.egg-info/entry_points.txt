@@ -1,0 +1,3 @@
+[console_scripts]
+cloudconformity = TemplateScanner.scanner:main
+
