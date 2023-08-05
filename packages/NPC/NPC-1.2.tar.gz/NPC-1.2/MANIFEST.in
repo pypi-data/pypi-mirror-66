@@ -1,0 +1,6 @@
+include *.py
+include src/*.py
+include __pycache__
+recursive-include __pycache__ *.pyc
+recursive-include dist *.gz
+recursive-include trash *.py
