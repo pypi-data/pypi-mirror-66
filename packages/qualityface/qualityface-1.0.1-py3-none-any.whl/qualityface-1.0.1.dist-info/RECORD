@@ -1,0 +1,10 @@
+qualityface/__init__.py,sha256=34LU-kPyb9r8mPEsPNXznlwggqBKrzx5Akyyv_fvcQk,25
+qualityface/api.py,sha256=v6p5zgPCZ1HwS2qmKO2BXeEWLz2CgBXwfWSlexiYxQY,859
+qualityface/config.py,sha256=j5MehamksIXYE3w14egdJw1hERuDIm4yLo4SR4DoT3U,939
+qualityface/models.py,sha256=rfdpS7k1_zxSdmVy_0M3GEtdpcM5vRODGer3bBp0-Oc,542
+qualityface/checkpoints/last.pth,sha256=laFL_rcGtJGe7XoDXCOAyvu1SOWQdwlor1vgMhrhkLc,14298317
+qualityface-1.0.1.dist-info/LICENSE,sha256=gzc1Q7aRmdjYuNFC4iUx38u5BMm3TroVqTjjyEU4QwQ,1069
+qualityface-1.0.1.dist-info/METADATA,sha256=NGbpj8UVndLh-21nH0IvpnINOvTuTN3h00pPiVzRQJ4,621
+qualityface-1.0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+qualityface-1.0.1.dist-info/top_level.txt,sha256=3RIveTf7t35_LumamVpsRdQI6YMqRvcZTaLXSeFxBcs,12
+qualityface-1.0.1.dist-info/RECORD,,
