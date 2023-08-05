@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: sparsebinarydistance
+Version: 0.1
+Summary: Calculate a distance matrix based on a binary feature matrix with missing data 
+Home-page: https://github.com/BuysDB/SparseBinaryDistance
+Author: Buys de Barbanson
+Author-email: code@buysdb.nl
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

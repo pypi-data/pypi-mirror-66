@@ -1,0 +1,15 @@
+.gitignore
+README.md
+setup.py
+data/example.csv
+notebooks/Simple example.ipynb
+notebooks/Sparse binary distance examples.ipynb
+notebooks/.ipynb_checkpoints/Simple example-checkpoint.ipynb
+notebooks/.ipynb_checkpoints/Sparse binary distance examples-checkpoint.ipynb
+sparsebinarydistance/__init__.py
+sparsebinarydistance/distance.py
+sparsebinarydistance.egg-info/PKG-INFO
+sparsebinarydistance.egg-info/SOURCES.txt
+sparsebinarydistance.egg-info/dependency_links.txt
+sparsebinarydistance.egg-info/requires.txt
+sparsebinarydistance.egg-info/top_level.txt
