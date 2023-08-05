@@ -1,0 +1,14 @@
+nfstream-4.0.0.data/purelib/nfstream/__init__.py,sha256=LgIyKDZAnnl7bylKKK8w2MAl07tUqHS8dshpmcYI2g4,987
+nfstream-4.0.0.data/purelib/nfstream/cache.py,sha256=Ap74mO7hKWtNBgBElG-Y8dr_O0SRfMm7H16lnIeI_z0,8911
+nfstream-4.0.0.data/purelib/nfstream/entry.py,sha256=3-c2wHdkOazNxccIcyVT8LjuUoV8zF4akAjuYFbdmk0,2785
+nfstream-4.0.0.data/purelib/nfstream/ndpi.py,sha256=UX6EAC9fcc4WS2kvg7bE_7kHfRRfQwiZht97rpVFW_s,41869
+nfstream-4.0.0.data/purelib/nfstream/observer.py,sha256=evvC3pf_DBHgPthLqj4KqnZBqt49TCqJegxG4wAVZ3Y,29298
+nfstream-4.0.0.data/purelib/nfstream/plugin.py,sha256=YIoTJBlwABUJslbFeJUmZvdMzExTWIw8K0W4AVpHuMk,49922
+nfstream-4.0.0.data/purelib/nfstream/streamer.py,sha256=kkpcCj0d67S4cu7DdsRWhu7wTr32cSuTDQOdzUh1LDU,3638
+nfstream-4.0.0.data/purelib/nfstream/libs/libndpi.so,sha256=ZH3m2uNE0iog9L5RFTCrYNJAy4WE8kK4Wm9mLvP1dKg,823644
+nfstream-4.0.0.data/purelib/nfstream/libs/libpcap.so,sha256=dbY3pGf5PJlvFTxefOzdANgsUkBO23rfRXd-c-oNrXA,288368
+nfstream-4.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+nfstream-4.0.0.dist-info/METADATA,sha256=JXhsLeYo1O96_4cenmfXpuip5CpSVep5_B3O1xwhkgE,13796
+nfstream-4.0.0.dist-info/WHEEL,sha256=d1FXElTc2O1aD-DA111TtqEjjjICRp-GfmLEJcA56oY,111
+nfstream-4.0.0.dist-info/top_level.txt,sha256=hJ2_QvVtHeXq7gxlOUnWap26uMhrrs1m4bQCgVeYZps,9
+nfstream-4.0.0.dist-info/RECORD,,
