@@ -1,0 +1,15 @@
+data/gm.mrc.mdoc,sha256=5nd3wdrUJcFxnpWEbTLDqSkqO6qUkaWnM12DZes1eTg,14858
+data/nav.nav,sha256=tP7PT2usHF5YZYJQU965S-B8DY2ACb69z9CCV0m6mwM,794
+LICENCE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pyproject.toml,sha256=gsSw8XUvyCU6pkZQMa15CKNeM9RhrEy2pFfQVjLoYq8,1655
+pyserialem/__init__.py,sha256=OCXdd-WsGAxzGR1agl57eL_qApfEoRlBANzzWCzgNr8,360
+pyserialem/pyserialem.py,sha256=oozGukHB-2ub9QCbmi-mpDKsbZC-d2W90s8tjn-6sUs,26573
+README.md,sha256=_fRcMRl3TTcjPdDYzRxwUyKFzKJctf1rG5cA2pe8rtU,4893
+setup.py,sha256=fQxTjJMWWt0tjLEh1jgJBJVG6it0x7CuSOwosKUWNic,5624
+tests/conftest.py,sha256=AbPriikUQV6pqC8DPi4IMobwSLO23Vq-8r1orGFyccc,110
+tests/test_bin_ndarray.py,sha256=eA4RH9aW0ocA-u0d6LeV-UVBGozdSniF6wykH4F0TNk,869
+tests/test_io.py,sha256=nsQwJBveenu-Vz-lrLQIA3dfJ13jZaqY2MMBYh7HynE,935
+tests/test_items.py,sha256=mBcCKRPWGq2ZYu_zSRbMfmjkbtwQewZ8t27iTEE8YtM,2915
+pyserialem-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+pyserialem-0.1.0.dist-info/METADATA,sha256=F-5QPV1ExRqYA5YFzQQfkpo_j-CtVeSxCyu26l16TSE,5878
+pyserialem-0.1.0.dist-info/RECORD,,
