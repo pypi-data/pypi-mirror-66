@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+import cproc.wrapper
+import argparse
+import json
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Capture a process environment.')
+    parser.add_argument('pid', type=int,
+                        help='The PID of the process to capture')
+    parser.add_argument('-p', '--pretty', action='store_true',
+                        help='Output the result in pretty JSON')
+    args = parser.parse_args()
+    print(json.dumps(
+        cproc.wrapper.capture_process(args.pid),
+        indent=None if args.pretty is False else 4))

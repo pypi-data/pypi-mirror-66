@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+import cproc.wrapper
+import argparse
+import json
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Spawn a process environment.')
+    parser.add_argument('pinfo', type=str,
+                        help='Path to a cproc process info JSON file')
+    args = parser.parse_args()
+    pinfo = json.load(open(args.pinfo))
+    cproc.wrapper.spawn_process(pinfo)
