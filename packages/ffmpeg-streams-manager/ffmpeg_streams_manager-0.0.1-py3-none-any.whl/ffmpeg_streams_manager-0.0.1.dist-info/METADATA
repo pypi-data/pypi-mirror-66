@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: ffmpeg-streams-manager
+Version: 0.0.1
+Summary: Manage your streams via ffmpeg
+Home-page: https://github.com/anthonykgross/ffmpeg-streams-manager
+Author: Anthony K GROSS
+Author-email: anthony.k.gross@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: ffmpeg-python (==0.2.0)
+Requires-Dist: tqdm (==4.45.0)
+Requires-Dist: requests (==2.23.0)
+
+ffmpeg-streams-manager : Manage your media streams easily with Python
+=====================================================================
+:Github: https://github.com/anthonykgross/ffmpeg-streams-manager
+
+
