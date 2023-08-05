@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+zhuhegege/Binomialdistribution.py
+zhuhegege/Gaussiandistribution.py
+zhuhegege/Generaldistribution.py
+zhuhegege/__init__.py
+zhuhegege.egg-info/PKG-INFO
+zhuhegege.egg-info/SOURCES.txt
+zhuhegege.egg-info/dependency_links.txt
+zhuhegege.egg-info/not-zip-safe
+zhuhegege.egg-info/top_level.txt
