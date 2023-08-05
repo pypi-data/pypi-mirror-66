@@ -1,0 +1,3 @@
+[console_scripts]
+ec = engineering_calculator.main:main
+
