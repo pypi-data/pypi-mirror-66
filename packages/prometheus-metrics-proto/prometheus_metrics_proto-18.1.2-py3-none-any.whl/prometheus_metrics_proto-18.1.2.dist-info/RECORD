@@ -1,0 +1,9 @@
+prometheus_metrics_proto/__init__.py,sha256=IdAG5ju5qR38zcAIZXT6q3QSJaYHZmEPskAwqnpbFZs,683
+prometheus_metrics_proto/api.py,sha256=91NBLcIldY_fKcgMxIGwndG6h0w4QyJEiA5FWI2k5ug,10449
+prometheus_metrics_proto/prometheus_metrics_pb2.py,sha256=PYVlzaAV5qNXZCYxnwiHLedXkS_2JS47dH-X2Q5CUNA,20916
+prometheus_metrics_proto/utils.py,sha256=828KzH6UtS4puSDQMnapgUQya30KEW6VfNeVau0DfEc,13277
+prometheus_metrics_proto-18.1.2.dist-info/LICENSE,sha256=JYiENw-h4YTmczLJWOkP7fAB0r-Ae0rsSHmonJsYUJQ,1062
+prometheus_metrics_proto-18.1.2.dist-info/METADATA,sha256=mYl48bF21R_wUpHIlKa2qagylRv6E4nHCpbSjcd6lYc,11750
+prometheus_metrics_proto-18.1.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+prometheus_metrics_proto-18.1.2.dist-info/top_level.txt,sha256=DZ9UI2XL3fAu76oO-8k5kI5Eh22CwZUfzdOSqDiqnx8,25
+prometheus_metrics_proto-18.1.2.dist-info/RECORD,,
