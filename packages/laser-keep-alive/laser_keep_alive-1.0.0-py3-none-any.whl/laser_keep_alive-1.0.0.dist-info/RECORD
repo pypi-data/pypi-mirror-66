@@ -1,0 +1,16 @@
+laser/__init__.py,sha256=OMqQQB_W_-CD682qYlz9nY0xweJU2Ud0wSvujZkkKAE,578
+laser/__main__.py,sha256=MZnVSU9_l-VMynHjQBppzIt819cvDlPcFtXQ6IOPoOg,1178
+laser/data.py,sha256=SkWa1eOcGOJMtpBOI3SfDzN2Br8ielMzj8F3UAgOUl0,9564
+laser/encoder.py,sha256=T9VN3XoAYAyLpss_Q9JzfolVfihcRQSy3Jvxe-kD77c,5852
+laser/generator_utils.py,sha256=IAPk8XDMN_WV1_VfuoZYqiJ2O5QmrMGmWFV4MD98fVU,2122
+laser/pretrained.py,sha256=BegStY-Fno45-4jnQY4BukDgAQOKGCe-e93xNrZSuAE,1838
+laser/sent_encoder.py,sha256=rEVH6MYMm9Bo_pzxPy6xeiolSRJ_jDZvWsD-2dwqczg,2670
+laser/utils.py,sha256=rTsa7-JTQD5nSWMekzeIU0AfRYcYU7RkowApX2RfP7Q,556
+laser/bin/__init__.py,sha256=AShnKRQCjTKLKybT4iTl1Evl_3RA7Qf4lGxAL4JATPw,342
+laser/bin/encode_texts.py,sha256=10pLzGB_eaWJU-8B3XU7D7UzCvjhYYkkvtyFxfyCpqY,9462
+laser/bin/filter_parallel.py,sha256=q4r4zG0gWibtEa1KZzXnOnfkZ-jtNpydT0TXGKIeTpM,10166
+laser_keep_alive-1.0.0.dist-info/LICENSE,sha256=WTlAgrxQn2yFVac7mNg7CBxEhKQgKG4bVK0SGqAh7o4,1141
+laser_keep_alive-1.0.0.dist-info/METADATA,sha256=mvB24M_0glrX8lVb2LeAAmtpcvq-TuQUfQ1l5L9e0yw,5011
+laser_keep_alive-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+laser_keep_alive-1.0.0.dist-info/top_level.txt,sha256=M7d49fk4ZddVKZbo1DhTg4GRk0n9ZNcn-90j1BgCWtQ,6
+laser_keep_alive-1.0.0.dist-info/RECORD,,
