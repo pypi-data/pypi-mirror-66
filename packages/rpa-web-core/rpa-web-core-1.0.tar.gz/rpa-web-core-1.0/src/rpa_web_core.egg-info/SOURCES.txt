@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/rpa-web-core/rf-resources/test.resource
+src/rpa_web_core.egg-info/PKG-INFO
+src/rpa_web_core.egg-info/SOURCES.txt
+src/rpa_web_core.egg-info/dependency_links.txt
+src/rpa_web_core.egg-info/top_level.txt
