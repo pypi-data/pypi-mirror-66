@@ -1,0 +1,10 @@
+storageprovider/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+storageprovider/client.py,sha256=e0Z6c_DW7dNz1rgG_tAA15Meearhpr-5vgp2l2gsjRU,12268
+tests/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+tests/test_client.py,sha256=F-wEMpR4iTl_JUPyz-Ya7nUzoEmjtNtEyf-wCauQZuw,19435
+storageprovider_client-2.4.0.dist-info/LICENSE,sha256=lNegf4pbfc0KlLoVPzUP0jY20c0vKq1PqVHMbAkk8x8,1089
+storageprovider_client-2.4.0.dist-info/METADATA,sha256=3h7FQqx4bz5ycz43pHhVr5xjEQZtJDKBksaDzwSyKtQ,2233
+storageprovider_client-2.4.0.dist-info/WHEEL,sha256=HX-v9-noUkyUoxyZ1PMSuS7auUxDAR4VBdoYLqD0xws,110
+storageprovider_client-2.4.0.dist-info/entry_points.txt,sha256=QDaM-PbNMfdgWwOvRhZzO_384WXuwhIzJDQcKuBXC0w,66
+storageprovider_client-2.4.0.dist-info/top_level.txt,sha256=YZ_BhMsApDwGHWE2SCiWcadyyOTsvoII1UkQryiP8qc,22
+storageprovider_client-2.4.0.dist-info/RECORD,,
