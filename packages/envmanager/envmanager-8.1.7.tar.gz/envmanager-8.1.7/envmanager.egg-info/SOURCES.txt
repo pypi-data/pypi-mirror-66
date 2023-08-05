@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+envmanager/__init__.py
+envmanager/core.py
+envmanager.egg-info/PKG-INFO
+envmanager.egg-info/SOURCES.txt
+envmanager.egg-info/dependency_links.txt
+envmanager.egg-info/requires.txt
+envmanager.egg-info/top_level.txt
+envmanager/decorators/__init__.py
+envmanager/decorators/envloader.py
+envmanager/exceptions/__init__.py
+envmanager/exceptions/main.py
+envmanager/utils/__init__.py
+envmanager/utils/helpers.py
+envmanager/utils/resources.py
