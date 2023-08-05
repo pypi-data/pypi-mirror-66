@@ -1,0 +1,39 @@
+Metadata-Version: 1.1
+Name: domdf-wxpython-tools
+Version: 0.2.4
+Summary: Tools and widgets for wxPython
+Home-page: https://github.com/domdfcoding/domdf_wxpython_tools
+Author: Dominic Davis-Foster
+Author-email: dominic@davis-foster.co.uk
+License: LGPL3
+Description: **********************
+        domdf_wxpython_tools
+        **********************
+        
+        .. image:: https://travis-ci.com/domdfcoding/domdf_wxpython_tools.svg?branch=master
+            :target: https://travis-ci.com/domdfcoding/domdf_wxpython_tools
+            :alt: Build Status
+        .. image:: https://readthedocs.org/projects/domdf_wxpython_tools/badge/?version=latest
+            :target: https://domdf_wxpython_tools.readthedocs.io/en/latest/?badge=latest
+            :alt: Documentation Status
+        .. image:: https://img.shields.io/pypi/v/domdf_wxpython_tools.svg
+            :target: https://pypi.org/project/domdf_wxpython_tools/
+            :alt: PyPI
+        .. image:: https://img.shields.io/pypi/pyversions/domdf_wxpython_tools.svg
+            :target: https://pypi.org/project/domdf_wxpython_tools/
+            :alt: PyPI - Python Version
+        
+        
+        Tools and widgets for wxPython
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
