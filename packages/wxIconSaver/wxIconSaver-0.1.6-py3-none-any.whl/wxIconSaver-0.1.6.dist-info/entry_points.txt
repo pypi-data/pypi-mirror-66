@@ -1,0 +1,4 @@
+[console_scripts]
+wxIconSaver = wxIconSaver:main
+wxiconsaver = wxIconSaver:main
+

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=0.1.6
+Name=wxIconSaver
+Comment=A GUI utility for saving wxPython icons to files
+Exec=wxIconSaver
+Icon=document-save
+Terminal=false
+Type=Application
+Categories=Utility;Application;
