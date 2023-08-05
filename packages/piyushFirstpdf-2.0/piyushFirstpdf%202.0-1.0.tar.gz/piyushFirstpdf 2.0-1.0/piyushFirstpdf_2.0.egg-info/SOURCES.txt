@@ -1,0 +1,6 @@
+README.md
+setup.py
+piyushFirstpdf_2.0.egg-info/PKG-INFO
+piyushFirstpdf_2.0.egg-info/SOURCES.txt
+piyushFirstpdf_2.0.egg-info/dependency_links.txt
+piyushFirstpdf_2.0.egg-info/top_level.txt
