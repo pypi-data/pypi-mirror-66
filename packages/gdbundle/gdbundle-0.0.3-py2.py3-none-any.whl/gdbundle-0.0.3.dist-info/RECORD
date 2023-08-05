@@ -1,0 +1,5 @@
+gdbundle/__init__.py,sha256=o-Q3sJKwqzXddyuPYJf0U8tf02YMmkY2N2MQk523l2g,3365
+gdbundle/commands_gdb.py,sha256=5PU-Bv1kZknfAc3Bfx_MqrogFITHFXg3TJlkI3W_NAI,805
+gdbundle-0.0.3.dist-info/WHEEL,sha256=kvwuEKnRH6O8i0OndiTtSFFMuXs9x3oJYWvW5x4ISEE,87
+gdbundle-0.0.3.dist-info/METADATA,sha256=d3qLESS3belkmROUEDl-Xl0aakGfA9npyPOQtDFDEUQ,12398
+gdbundle-0.0.3.dist-info/RECORD,,
