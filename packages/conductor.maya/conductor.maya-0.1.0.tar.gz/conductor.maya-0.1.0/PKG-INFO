@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: conductor.maya
+Version: 0.1.0
+Summary: Maya plugin for Conductor's client tools
+Home-page: https://github.com/AtomicConductor/conductor-maya
+Author: conductor
+Author-email: info@conductortech.com
+License: UNKNOWN
+Description: 
+        `pip install   git+ssh://git@github.com/AtomicConductor/conductor-maya.git@conductor-job-node`
+        
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python
+Classifier: Topic :: Multimedia :: Graphics :: 3D Rendering
+Requires-Python: ~=2.7
+Description-Content-Type: text/markdown
