@@ -1,0 +1,13 @@
+README.rst
+setup.py
+src/limecore/messaging/rabbitmq/__init__.py
+src/limecore/messaging/rabbitmq/configuration.py
+src/limecore/messaging/rabbitmq/configuration_builder.py
+src/limecore/messaging/rabbitmq/module.py
+src/limecore/messaging/rabbitmq/publisher.py
+src/limecore/messaging/rabbitmq/subscriber.py
+src/limecore_messaging_rabbitmq.egg-info/PKG-INFO
+src/limecore_messaging_rabbitmq.egg-info/SOURCES.txt
+src/limecore_messaging_rabbitmq.egg-info/dependency_links.txt
+src/limecore_messaging_rabbitmq.egg-info/requires.txt
+src/limecore_messaging_rabbitmq.egg-info/top_level.txt

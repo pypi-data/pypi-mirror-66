@@ -1,0 +1,4 @@
+amqpstorm
+injector
+limecore-core-configuration
+limecore-messaging-api
