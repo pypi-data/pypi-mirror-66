@@ -1,0 +1,37 @@
+## Analytics-zoo Cluster Serving
+
+model:
+  # model path must be set
+  path: model
+  # the inputs of the tensorflow model, separated by ","
+  inputs:
+  # the outputs of the tensorflow model, separated by ","
+  outputs:
+data:
+  # default, localhost:6379
+  src:
+  # default, 3, 224, 224
+  image_shape:
+  # default, topN(1)
+  filter:
+params:
+  # default, 4
+  batch_size:
+  # default: OFF
+  performance_mode:
+redis:
+  # default, 4g
+  maxmem: 
+spark:
+  # default, local[*]
+  master: 
+  # default, 4g
+  driver_memory:
+  # default, 1g
+  executor_memory:
+  # default, 1
+  num_executors:
+  # default, 4
+  executor_cores:
+  # default, 4
+  total_executor_cores:
