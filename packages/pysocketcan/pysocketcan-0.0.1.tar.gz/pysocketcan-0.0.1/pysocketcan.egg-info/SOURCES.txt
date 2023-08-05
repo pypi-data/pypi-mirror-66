@@ -1,0 +1,9 @@
+README.md
+setup.py
+pysocketcan/__init__.py
+pysocketcan/pysocketcan.py
+pysocketcan/scripts.py
+pysocketcan.egg-info/PKG-INFO
+pysocketcan.egg-info/SOURCES.txt
+pysocketcan.egg-info/dependency_links.txt
+pysocketcan.egg-info/top_level.txt
