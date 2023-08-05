@@ -1,0 +1,5 @@
+#!python
+
+from mkv_this import mkv_this
+
+main()
