@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+latex/main.tex
+make_kindle_collection.egg-info/PKG-INFO
+make_kindle_collection.egg-info/SOURCES.txt
+make_kindle_collection.egg-info/dependency_links.txt
+make_kindle_collection.egg-info/entry_points.txt
+make_kindle_collection.egg-info/requires.txt
+make_kindle_collection.egg-info/top_level.txt
+mkc/__init__.py
+mkc/__main__.py
+mkc/formulas.py
+mkc/images.py
+mkc/macros.py
