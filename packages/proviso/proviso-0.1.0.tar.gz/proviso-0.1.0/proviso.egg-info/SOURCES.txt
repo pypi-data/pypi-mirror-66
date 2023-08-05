@@ -1,0 +1,15 @@
+README.md
+setup.py
+proviso/__init__.py
+proviso/proviso.py
+proviso.egg-info/PKG-INFO
+proviso.egg-info/SOURCES.txt
+proviso.egg-info/dependency_links.txt
+proviso.egg-info/requires.txt
+proviso.egg-info/top_level.txt
+proviso/data/AlphaVantageGateway.py
+proviso/data/__init__.py
+proviso/data/bdshare.py
+proviso/utils/DataUtils.py
+proviso/utils/NetworkUtils.py
+proviso/utils/__init__.py

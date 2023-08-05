@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: proviso
+Version: 0.1.0
+Summary: A utility for Stock price prediction with keras
+Home-page: https://github.com/rochi88/proviso
+Author: Raisul Islam
+Author-email: raisul.exe@gmail.com
+License: MIT
+Download-URL: https://github.com/rochi88/proviso/archive/master.zip
+Description: # proviso
+        
+        
+        
+        ## Contributing to this project
+        
+        Anyone and everyone is welcome to contribute. Please take a moment to
+        review the [guidelines for contributing](CONTRIBUTING.md).
+        
+        * [Bug reports](CONTRIBUTING.md#bugs)
+        * [Feature requests](CONTRIBUTING.md#features)
+        * [Pull requests](CONTRIBUTING.md#pull-requests)
+        
+        # Change log
+        
+        ## [0.0.1-dev1] - 2020-04-12
+        
+        ### Added
+        - `CHANGELOG.md`
+        
+        ### Changed
+        
+        ### Removed
+Keywords: deep learning,ai
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
