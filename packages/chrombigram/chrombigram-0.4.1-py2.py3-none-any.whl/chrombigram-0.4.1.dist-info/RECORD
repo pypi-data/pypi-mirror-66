@@ -1,0 +1,12 @@
+chrombigram/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chrombigram/__main__.py,sha256=a4vXPGHtLT-vczEJqBiJFZlN8v6ZNGCQvdkspAHc8P0,419
+chrombigram/__version__.py,sha256=4lqrl6vOHYuLGi9MKng3z-m-GXEMzHaj38BAXVgSIp4,68
+chrombigram/chrombigram.py,sha256=9uYa6lagSH67OmdBTNh3ML_VQTld59kvQWKeX7HCh-0,2098
+chrombigram/chrombigram_cumulative.py,sha256=DYO8VwOm7oWikKac8tw20yDlGlapB0GlCPNv7B1y50s,528
+chrombigram/precomputed.py,sha256=uqzKZbhkeRh9xNBeCjecpP4WZiZhOqZOfz2ggW1kEsY,151968
+chrombigram/utilities.py,sha256=4jD_976vg7_cGsrvw7XQsLjHCiAHG4OWvnNJ16mZX3I,956
+chrombigram-0.4.1.dist-info/LICENSE,sha256=HGi3ojXOXR6UrQSjGheNTo3T3_2FqgWqW6IgAWNRyK4,1073
+chrombigram-0.4.1.dist-info/METADATA,sha256=0ynT8Q3p37j6oMSqEXoe_uPDOsClOlGRe6WWEnKTD0Q,908
+chrombigram-0.4.1.dist-info/WHEEL,sha256=6T3TYZE4YFi2HTS1BeZHNXAi8N52OZT4O-dJ6-ome_4,116
+chrombigram-0.4.1.dist-info/top_level.txt,sha256=Uh7BN2KzgZLEabiVVBoGWcKeVRD4vkESHd6kBAoC680,12
+chrombigram-0.4.1.dist-info/RECORD,,
