@@ -1,0 +1,14 @@
+pau_cuda.cpython-37m-x86_64-linux-gnu.so,sha256=m24zNO016s8VPm6rcmE5IXWiH-rx13I-_lbAbGY2f_A,6994608
+pau_keras/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pau_keras/pade_activation_unit.py,sha256=UE0h4H_VeZcrWPydHFMK2vT88AfWK7eqdO8wZP4Bvro,1437
+pau_keras/pade_keras_functions.py,sha256=rHW7KNrtXZPmILdv3EOq9UStPtBYvHf0X9bkILpyHeo,2228
+pau_keras/test_tfkeras.py,sha256=mafIWuzCzcOKqUNn5IsfbcfefE30VOVJwjGzoNmI00g,1574
+pau_torch/__init__.py,sha256=KYLhUgJgGwHXXxn9wtRBsxL9UqoTadW4kRBbCwQC3JY,46
+pau_torch/pade_activation_unit.py,sha256=PKFOzirw5g67UDcUWV6gPYp7U_KCKCawMHVrVc_z-X8,2050
+pau_torch/pade_cuda_functions.py,sha256=E4eINcpYtOD7I34HuFV4T7FgemAQC44DJsq3RzpQ6aA,3102
+pau_torch/pade_pytorch_functions.py,sha256=DBhU5i1yo470GhwXI1RV7ehbPk2iw66jTStxCg8Az-0,2129
+pau_torch/test_torch.py,sha256=husi1JIF0eZAMx4jFmFqcqZRLvGYEPo0ZzbZg77_FHo,1649
+pau-0.0.15.dist-info/METADATA,sha256=1r-pW76jhJRkkjVLTIgTGm8MaYLruc5Wqa5SQzIEMUs,434
+pau-0.0.15.dist-info/WHEEL,sha256=9cGxwQ3tTT7GAsdHCPGqLi61DXGpJWVkLren3MQuD0k,104
+pau-0.0.15.dist-info/top_level.txt,sha256=bQOCVbJdjl_N5-UP5WYn87mjIxWpUhHjAwsro7GRMwQ,29
+pau-0.0.15.dist-info/RECORD,,
