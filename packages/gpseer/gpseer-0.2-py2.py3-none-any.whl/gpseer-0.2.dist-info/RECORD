@@ -1,0 +1,13 @@
+gpseer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gpseer/__version__.py,sha256=VbasqJan0TGWIzBb5eKDeCzrqlpVlnzROHjfuNZuS7U,19
+gpseer/cross_validate.py,sha256=ggrHAI52_ExDXR_KUrHxRc3t2Fp8wFP2pocfAn5tjwM,4735
+gpseer/fetch_example.py,sha256=YBUOFQPwP4lFaAXvJzLPhLleFzQ40D_cFjkl51PvFKU,683
+gpseer/main.py,sha256=hS4Rp0PUOV9QRi5Oqo8BnowkadzNmTZXgvOlMOWPdW4,5149
+gpseer/maximum_likelihood.py,sha256=8tRWA3OPvDldNMNtyqVx1aaySYgm2GaNKB3EthJxhFM,15559
+gpseer/plot.py,sha256=V9S13qNIx9NY4cPSxT3pynWxBNyiZ7GhcriL0MMDoMk,11165
+gpseer/utils.py,sha256=IR9LI6hRlvZswDP5YDNwtVPdQKx681Nz1NUydThq6Uk,4860
+gpseer-0.2.dist-info/METADATA,sha256=DrIJt9zIp7uFtPPCq6TYvvBb2IbiQQMSiV5P8UqXIXA,5150
+gpseer-0.2.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+gpseer-0.2.dist-info/entry_points.txt,sha256=09h5GxClJKa3D6GkWg0_HsGowMzFdn4XoYtO_BWk7Gg,51
+gpseer-0.2.dist-info/top_level.txt,sha256=F8gd3AlU0CAUp0YzCHhpARUEqnlTq2TK-R5bLPkacL4,7
+gpseer-0.2.dist-info/RECORD,,
