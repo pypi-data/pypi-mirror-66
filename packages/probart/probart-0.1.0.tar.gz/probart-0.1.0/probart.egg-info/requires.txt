@@ -1,0 +1,8 @@
+numpy
+pycairo
+
+[dev]
+check-manifest
+
+[test]
+coverage
