@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: django-countdowntimer_model
+Version: 0.0.1
+Summary: Abstract countdown timer model to use in your Django projects.
+Home-page: https://github.com/bartmika/django-countdowntimer-model
+Author: Bartlomiej Mika
+Author-email: bart@mikasoftware.com
+License: BSD 2-Clause License
+Description: # django-countdowntimer-model
+        Abstract countdown timer model to use in your Django projects
+        
+Keywords: library countdown timer elapsed remaining time django timedelta helper
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
