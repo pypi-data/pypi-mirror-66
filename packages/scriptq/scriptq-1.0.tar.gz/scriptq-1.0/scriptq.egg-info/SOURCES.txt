@@ -1,0 +1,8 @@
+README.md
+setup.py
+scriptq.egg-info/PKG-INFO
+scriptq.egg-info/SOURCES.txt
+scriptq.egg-info/dependency_links.txt
+scriptq.egg-info/top_level.txt
+src/__main__.py
+src/gui.py
