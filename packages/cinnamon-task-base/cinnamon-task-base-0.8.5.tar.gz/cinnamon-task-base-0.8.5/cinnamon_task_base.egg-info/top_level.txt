@@ -1,0 +1,1 @@
+cinnamon_task_base
