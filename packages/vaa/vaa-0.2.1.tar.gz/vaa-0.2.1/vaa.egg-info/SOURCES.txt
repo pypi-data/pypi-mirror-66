@@ -1,0 +1,12 @@
+README.md
+README.rst
+setup.cfg
+setup.py
+vaa/_cached_property.py
+vaa/_internal.py
+vaa/_django_utils.py
+vaa/_error.py
+vaa/_auto.py
+vaa/_aliases.py
+vaa/__init__.py
+vaa/_external.py
