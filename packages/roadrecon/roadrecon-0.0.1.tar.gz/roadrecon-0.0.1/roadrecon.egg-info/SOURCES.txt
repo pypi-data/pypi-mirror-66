@@ -1,0 +1,8 @@
+setup.py
+roadrecon.egg-info/PKG-INFO
+roadrecon.egg-info/SOURCES.txt
+roadrecon.egg-info/dependency_links.txt
+roadrecon.egg-info/entry_points.txt
+roadrecon.egg-info/not-zip-safe
+roadrecon.egg-info/requires.txt
+roadrecon.egg-info/top_level.txt
