@@ -1,0 +1,3 @@
+[console_scripts]
+xsim = src.cli.cli:main
+

@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: xsim
+Version: 1.0.1
+Summary: A command-line interface to manage MTN / MCI account
+Home-page: https://github.com/SadeghHayeri/xSim
+Author: Sadegh Hayeri
+Author-email: hayerisadegh@gmail.com
+License: GPL 3.0
+Download-URL: https://pypi.org/project/xsim
+Description: # xSim
+        Manage MTN / MCI Account 
+        
+Keywords: Irancell,MTN,MCI,simcart
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
