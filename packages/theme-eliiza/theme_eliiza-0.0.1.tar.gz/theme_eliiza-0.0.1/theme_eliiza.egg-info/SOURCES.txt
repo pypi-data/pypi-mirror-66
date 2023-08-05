@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+theme_eliiza/__init__.py
+theme_eliiza/plotnine.py
+theme_eliiza.egg-info/PKG-INFO
+theme_eliiza.egg-info/SOURCES.txt
+theme_eliiza.egg-info/dependency_links.txt
+theme_eliiza.egg-info/not-zip-safe
+theme_eliiza.egg-info/requires.txt
+theme_eliiza.egg-info/top_level.txt
+theme_eliiza/data/Poppins-Regular.ttf
+theme_eliiza/data/Roboto-Regular.ttf
+theme_eliiza/data/eliiza.mplstyle

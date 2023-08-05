@@ -1,0 +1,58 @@
+#Author: Patrick Robotham.
+# Based on Cameron Davidson-Pilon's work
+# See https://dataorigami.net/blogs/napkin-folding/17543615-replicating-538s-plot-styles-in-matplotlib
+# https://zeroheight.com/3ce7ac1cd/p/01d8fa-eliiza
+
+lines.linewidth: 4
+lines.solid_capstyle: butt
+
+legend.fancybox: true
+
+axes.prop_cycle: cycler('color', ['9e00e9','32acac','4A0F6F', 'cb7d1d'])
+axes.facecolor: f9f7f5
+axes.labelsize: large
+axes.axisbelow: true
+axes.grid: true
+axes.grid.axis: y
+axes.edgecolor: f9f7f5
+axes.linewidth: 1
+axes.titlesize: x-large
+axes.titlepad: 11 # TODO: Make these relative to figure size
+axes.labelpad: 11
+axes.labelcolor: 232323
+
+patch.edgecolor: 232323
+patch.linewidth: 2.5
+
+svg.fonttype: path
+
+grid.linestyle: -
+grid.linewidth: 1.0
+grid.color: e6ded5
+
+xtick.major.size: 0
+xtick.minor.size: 0
+xtick.color: 232323
+xtick.major.pad: 11
+
+ytick.major.size: 0
+ytick.minor.size: 0
+ytick.color: 232323
+ytick.major.pad: 11
+
+font.family: sans-serif
+font.size: 22.0
+font.sans-serif: Poppins # Change to Roboto
+
+
+savefig.edgecolor: f9f7f5
+savefig.facecolor: f9f7f5
+
+hatch.color: 232323
+
+text.color: 232323
+
+# figure.subplot.left: 0.08
+# figure.subplot.right: 0.95
+# figure.subplot.bottom: 0.07
+figure.facecolor: f9f7f5
