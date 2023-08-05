@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: NPC
+Version: 1.32
+Summary: Parallel Processing in Network Devices
+Home-page: https://ntp.perity.site
+Author: Dipnarayan Das
+Author-email: dipnarayan.das35@gmail.com
+License: License.txt
+Platform: UNKNOWN
+Requires-Dist: netifaces
+
+
+NTP is a new parallel threading model which work in network level. Here two types of process work.
+
+1. Communication
+
+2. Execution
+
+
+Here communication start using local parallel thread but the execution happens in network devices.
+
+
+
+Language Dependency:
+
+Python
+
+
+Usage:
+
+import NPC
+
+
+NPC.register(ip, file_path)
+NPC.findServers()
+
+Finding for execution servers
+
+==> [REGISTRATION-TYPE] [CPU-MEMORY INFORMATION] [IP-ADDRESS]
+
+
+NPC.ntpExec(program,ip,timeout)
+NPC.fileTransfer(ip, file_path)
+
+Full Setup Tutorial => https://ntp.perity.site/
+
+FAQ
+
+
+
+
+
