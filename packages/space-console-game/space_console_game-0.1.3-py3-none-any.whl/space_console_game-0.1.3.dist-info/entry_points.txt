@@ -1,0 +1,3 @@
+[console_scripts]
+space-console-game=space_console_game.app:main
+

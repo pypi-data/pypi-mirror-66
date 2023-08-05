@@ -1,0 +1,12 @@
+space_console_game/animate_spaceship.py,sha256=X2mlWFWGdsFCcr9h2Jjr8YnChBOZlkT1-xLp9hxvd18,1021
+space_console_game/app.py,sha256=WYi7E2fALDUhrKvY6gApi2ZKxYQI-WLP1QGjG4srv-M,2965
+space_console_game/app_helpers.py,sha256=o47ToYpPnRuQiKsq92ma--T-fXviTyNhQYZJsHdTHFE,336
+space_console_game/curses_tools.py,sha256=oG3KLgxB_1k827aCLV9EdTa9TpyQ69WvXNL2vVojX2c,2377
+space_console_game/fire_animation.py,sha256=Kt1eFgW76X7wZ8WB9N6o2B5UlFJTjdvLgE4teDqXRec,954
+space_console_game/frames/rocket_frame_1.txt ,sha256=oXOkYURjmKAEj2IxvP_8aKqXSJozHZVMpjuHZZZhIDE,46
+space_console_game/frames/rocket_frame_2.txt ,sha256=AwDHgQ3RqiQj92knMVtsBvJ258-nkRKKbLTQkMGB9RQ,45
+space_console_game-0.1.3.dist-info/entry_points.txt,sha256=HuG4iJf5usPv9xGPnlHadRX7mftsZX79XL8R8mwMt4Y,66
+space_console_game-0.1.3.dist-info/LICENSE,sha256=TmkH8MkMauX3hWDtpf2MJDC2SzG8MRtU8i8F-c8kBek,1072
+space_console_game-0.1.3.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+space_console_game-0.1.3.dist-info/METADATA,sha256=08EnxLkcPPO2uCuOpwdFhh7XdRy-RvpZdHJTKKNF8f0,291
+space_console_game-0.1.3.dist-info/RECORD,,
