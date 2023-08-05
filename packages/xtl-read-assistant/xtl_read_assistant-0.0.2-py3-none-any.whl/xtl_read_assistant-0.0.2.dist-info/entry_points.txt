@@ -1,0 +1,3 @@
+[console_scripts]
+read-assist=xtl_read_assistant.read_assist:main
+
