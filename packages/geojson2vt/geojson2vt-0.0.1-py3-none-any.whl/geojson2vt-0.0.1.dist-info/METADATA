@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: geojson2vt
+Version: 0.0.1
+Summary: Python package to convert GeoJSON to vector tiles
+Home-page: https://github.com/geometalab/geojson2vt
+Author: Samuel Kurath
+Author-email: geometalab@hsr.ch
+License: UNKNOWN
+Platform: UNKNOWN
+
+All the credit belongs to the collaborators of JS GeoJSON-VT.
+
+
