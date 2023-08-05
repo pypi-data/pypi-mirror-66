@@ -1,0 +1,23 @@
+croniter
+jinja2>=2.8
+trafaret-config==1.0.1
+trafaret<2,>=1.0
+
+[:python_version < "3"]
+funcsigs
+
+[develop]
+apache-airflow
+coverage==4.5.4
+flake8==3.7.8
+isort==4.3.21
+mock==2.0.0
+pytest==4.6.6
+sphinx-rtd-theme==0.4.3
+
+[develop:python_version >= "3"]
+pylint==2.4.2
+sphinx==2.2.0
+
+[develop:python_version >= "3.6"]
+black==19.3b0
