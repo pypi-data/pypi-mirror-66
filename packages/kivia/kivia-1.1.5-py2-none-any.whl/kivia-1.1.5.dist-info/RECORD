@@ -1,0 +1,13 @@
+kivia/DB.py,sha256=H6B78EqLAOXTm5abrTvIuXMix0RW2XGrDLN7WRDjiMs,4338
+kivia/app.py,sha256=CWI6sm-yeSUnipykfTVmRg1OAh69syVnHcRqRB3eq9Y,6118
+kivia/bashrc.sh,sha256=v0e_CxFkSDyPHYi-DTErB0TLdtgtBbFeTSengP-swkA,85
+kivia/ke.so,sha256=_ltiZYoUSAhUaRCufGgf0UaQoHpwV7lg43m6WzZGZPw,442144
+kivia/lolcat.py,sha256=63ZJ96KbqeAWcsd43FVIJM1IdA7SlqjKOB5bI7RobxY,3027
+kivia/util.so,sha256=oXmWKKARMoJrKoi3mbVTQaXzavWsAwZYocBljO4QH7A,907528
+kivia/utils.py,sha256=yFMb_FDtTSreNAzdtRoHZSy2x6BCHqC20Yl_-baHZ3c,2454
+kivia-1.1.5.dist-info/LICENSE,sha256=0i3y5-2gzbKwmBJcNi7c2KURHEeQKtlS-_FPg-MB8xg,1055
+kivia-1.1.5.dist-info/METADATA,sha256=QaesrfL5gY-S6i292bAxmxQgm2LUxv5t51PkGhFCQe8,801
+kivia-1.1.5.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+kivia-1.1.5.dist-info/entry_points.txt,sha256=Aqus2F_Xat8hM91d8jCWwGdMG8JSSYkCtYyhBmmvHOE,43
+kivia-1.1.5.dist-info/top_level.txt,sha256=0yohDg_atjCt96GXVEh5Shsnk9q7HSU6Z8t3bnVkL1I,6
+kivia-1.1.5.dist-info/RECORD,,
