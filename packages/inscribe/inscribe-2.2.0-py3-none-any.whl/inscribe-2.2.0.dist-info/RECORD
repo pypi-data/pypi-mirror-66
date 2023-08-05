@@ -1,0 +1,8 @@
+inscribe/__init__.py,sha256=pC_E9BAa0F5wgVz0p6fAFXW5mMWKSWM8ei_HVALgbQQ,11421
+inscribe/_version.py,sha256=qNdOAprxLfvXqMePxNE06cxETpsRRqWqs2phwz5Lp50,72
+inscribe/config.py,sha256=X8gC3uQKkEPA09Sr6vKPlJBOG9FPRrDCmM4rfiBBp8k,331
+inscribe/errors.py,sha256=fgNr5XOyU5DinYkMmFu1ACpMG4tiA8J1wocmv5dIDXM,48
+inscribe-2.2.0.dist-info/METADATA,sha256=dyecSrTFFdViIthgFqjHYTKh1vfCInInt58wDByMLPI,1492
+inscribe-2.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+inscribe-2.2.0.dist-info/top_level.txt,sha256=RuWE3QZ_BA1oOOU7qi3cNVenbtUVmuW8BWV7KSk4-G0,9
+inscribe-2.2.0.dist-info/RECORD,,
