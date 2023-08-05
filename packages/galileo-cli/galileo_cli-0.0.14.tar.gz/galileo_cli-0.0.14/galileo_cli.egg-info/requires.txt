@@ -1,0 +1,14 @@
+requests>=2.21.0
+python-socketio
+termcolor==1.1.0
+colorama==0.4.3
+pyfiglet
+click
+click-shell
+pandas==1.0.1
+galileo-sdk==0.0.15
+halo
+
+[docs]
+sphinx>=2.2.0
+sphinx-material
