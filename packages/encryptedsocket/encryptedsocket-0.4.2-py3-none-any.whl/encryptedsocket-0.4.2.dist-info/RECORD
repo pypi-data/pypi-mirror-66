@@ -1,0 +1,11 @@
+encryptedsocket/__init__.py,sha256=Hwo3da2awFPkr61npBJVwm7dEutHwqgqpWAmd-D5NtA,438
+encryptedsocket/client.py,sha256=npPf9gHjbZIO7cZvcuZDtRDJ8l_JCTsme1bM2sQY_58,1417
+encryptedsocket/server.py,sha256=iP2zncQ_uYhkXMpcXlWmPZFbBcxOIgjDQE9bg_csOqU,3001
+encryptedsocket/test.py,sha256=xwGB2dEzdV8TaJFCj0AKq0v_I6e1GDibeqhj4iqUyl8,626
+encryptedsocket/utils.py,sha256=6AwtsSpFCNi01Lz-z9VTBWpVECpdQtqBMYp3rCuko_0,799
+encryptedsocket-0.4.2.dist-info/LICENSE,sha256=E_tIpsMacuDitpZQsc6-iVT3tzRJhISS3P0islvZGvo,35182
+encryptedsocket-0.4.2.dist-info/METADATA,sha256=GDXK5Rdu25ZQ4IVxG28ilx-6JQkI5jN4E4YCHyVILBI,2793
+encryptedsocket-0.4.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+encryptedsocket-0.4.2.dist-info/entry_points.txt,sha256=yMQAijp82c5n4m72IQ9swiF_XfTQwALmrInPQJcvyww,63
+encryptedsocket-0.4.2.dist-info/top_level.txt,sha256=eguiZWlm6ZOufnkztDIEPL2OwQxDbTcFlHsWT5FPySE,16
+encryptedsocket-0.4.2.dist-info/RECORD,,
