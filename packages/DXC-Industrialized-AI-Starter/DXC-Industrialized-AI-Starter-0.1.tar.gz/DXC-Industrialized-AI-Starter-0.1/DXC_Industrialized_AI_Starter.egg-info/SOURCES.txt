@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+DXC_Industrialized_AI_Starter.egg-info/PKG-INFO
+DXC_Industrialized_AI_Starter.egg-info/SOURCES.txt
+DXC_Industrialized_AI_Starter.egg-info/dependency_links.txt
+DXC_Industrialized_AI_Starter.egg-info/entry_points.txt
+DXC_Industrialized_AI_Starter.egg-info/requires.txt
+DXC_Industrialized_AI_Starter.egg-info/top_level.txt
+dxc/ai.py
