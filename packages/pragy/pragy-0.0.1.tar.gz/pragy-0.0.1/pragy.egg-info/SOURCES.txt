@@ -1,0 +1,8 @@
+README.md
+setup.py
+pragy/__init__.py
+pragy.egg-info/PKG-INFO
+pragy.egg-info/SOURCES.txt
+pragy.egg-info/dependency_links.txt
+pragy.egg-info/not-zip-safe
+pragy.egg-info/top_level.txt
