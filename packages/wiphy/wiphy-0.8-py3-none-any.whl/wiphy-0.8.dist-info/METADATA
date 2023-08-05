@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: wiphy
+Version: 0.8
+Summary: The fundamental Python package for wireless signal processing at the physical layer
+Home-page: https://github.com/ishikawalab/wiphy/
+Author: Ishikawa Laboratory
+Author-email: contact@ishikawa.cc
+License: MIT
+Download-URL: https://pypi.org/project/wiphy/
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: sympy
+Requires-Dist: numba
+Requires-Dist: tqdm
+
+# WiPhy
+
+WiPhy is a Python package for wireless signal processing 
+at the physical layer. This package attempts to facilitate 
+reproducible research in wireless communications.
+
+<!-- Specifically, it 
+MIMO, OFDM
+coherent and noncoherent detection
+index modulation
+Rayleigh and Rician channels
+spatial modulation and differential spatial modulation.
+BLAST, OSTBC, DUC-->
+
+
+## Key Features
+The major advantages of this package are highlighted as follows:
+- **Incredibly fast.** It accelerates bit error ratio and average mutual information 
+simulations by using a state-of-the-art Nvidia GPU and the massively parallel algorithms 
+proposed in [1].
+- **Numba friendly.** Different from the conventional IMToolkit, it dose not rely on any class 
+and object-oriented programming. Thus, users are free from the nightmare of complex @jitclass decorations.
+- **Highly reliable.** As with other high-quality packages, it has been maintained based on 
+test-driven development. The simulation results have been used by IEEE journal papers.
+- **Reproducible.** As given in examples, it is capable of reproducing results reported in 
+a number of academic papers.
+
+## Supported State-of-the-Art Concepts
+- **Nonsquare differential signaling.**
+- **Index modulation.**
+
+
+## Disadvantages
+- Some methods are not well documented.  
+
+
+## Installation Guide
+
+### pip users
+    > pip install wiphy
+
+
+### Anaconda users 
+    > git clone https://github.com/ishikawalab/wiphy/
+    > conda develop ./wiphy 
+
+
+
+
