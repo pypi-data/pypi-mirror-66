@@ -1,0 +1,13 @@
+tiny_3d_engine/__init__.py,sha256=rz0EcKGaQVHO-2zmTgOi8mFMMjqFAN91M-hVQpLR5QM,1258
+tiny_3d_engine/color.py,sha256=r30GWRWzgoWdJKfVXebU8UFKMdlj6JYeRQ6Lk1RpzA8,2823
+tiny_3d_engine/engine.py,sha256=aGn_oDaQl3FN70kv1mXETzCJ95ipddz8Qwip4ml5dLA,6291
+tiny_3d_engine/geo_loader.py,sha256=gNdS9Z9lyAht9jO1Oz3ZJngL1ow-3rNGRF5WpPUiHGE,2511
+tiny_3d_engine/part3d.py,sha256=E8A9xcmJdRk7KmsvsA1h6hkMkJUF4I65B5un_ExJiek,705
+tiny_3d_engine/scene3d.py,sha256=KY7fK_3c82Jv6LNmDMaVEM6sPA1z2ZCswAL7OcjT1Cs,10850
+tiny_3d_engine/screen.py,sha256=D5phWFBsmzyiwhskcUJJaOS3Pw4jU7PNi6RWhChHMos,5302
+tiny_3d_engine/viewfield.py,sha256=UV-Qm0wVXm5GCCyfwmq5pXk94qsWlB-tP8aGx-gNBrA,3354
+tiny_3d_engine-0.1.0.dist-info/LICENCE.md,sha256=JZ0FsAvt7hRTKixoNKCoHNqWfSzLHLXhbByq2MDd3jA,21395
+tiny_3d_engine-0.1.0.dist-info/METADATA,sha256=_rg1mq4gzBQ98EB_4CoLVa0MtaU8MSH1vd52nMYo-Hg,3301
+tiny_3d_engine-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+tiny_3d_engine-0.1.0.dist-info/top_level.txt,sha256=CWZ6NU5G8A8A7Wzjf5LtRpiZbb8GCGIEGyLI_YdGUpc,15
+tiny_3d_engine-0.1.0.dist-info/RECORD,,
