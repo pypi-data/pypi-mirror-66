@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: capblood-seq-viz
+Version: 0.1.1
+Summary: Interactive visualization web app for capillary blood data
+Home-page: https://github.com/ThomsonLab/capblood-seq-viz
+Author: David Brown
+Author-email: dibidave@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: ~=3.6
