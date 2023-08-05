@@ -1,0 +1,17 @@
+README.rst
+setup.py
+geojson2vt/__init__.py
+geojson2vt/clip.py
+geojson2vt/convert.py
+geojson2vt/feature.py
+geojson2vt/geojson2vt.py
+geojson2vt/simplify.py
+geojson2vt/tile.py
+geojson2vt/transform.py
+geojson2vt/utils.py
+geojson2vt/vt2geojson.py
+geojson2vt/wrap.py
+geojson2vt.egg-info/PKG-INFO
+geojson2vt.egg-info/SOURCES.txt
+geojson2vt.egg-info/dependency_links.txt
+geojson2vt.egg-info/top_level.txt
