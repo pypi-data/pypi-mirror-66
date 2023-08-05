@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: blackbricks
+Version: 0.3.4
+Summary: Black for Databricks notebooks
+Home-page: https://github.com/bsamseth/blackbricks
+Author: Bendik Samseth
+Author-email: b.samseth@gmail.com
+License: MIT
+Keywords: automation formatter black sql yapf autopep8 pyfmt gofmt rustfmt
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: black (==19.10b0)
+Requires-Dist: sqlparse (==0.3.1)
+
+# Blackbricks
+
+A formatting tool for your Databricks notebooks.
+
+- Python cells are formatted with [black](https://github.com/psf/black)
+- SQL cells are formatted with [sqlparse](https://github.com/andialbrecht/sqlparse)
+
+## Installation and Usage
+
+Install:
+
+```bash
+$ pip install blackbricks
+```
+
+Usage:
+
+```text
+$ blackbricks --help
+usage: blackbricks [-h] [--line-length LINE_LENGTH]
+                   [--sql-upper | --sql-lower] [--check | --diff]
+                   [--indent-with-two-spaces]
+                   [filenames [filenames ...]]
+
+Formatting tool for Databricks python notebooks. Python cells are formatted
+using `black`, and SQL cells are formatted by `sqlparse`.
+
+positional arguments:
+  filenames             Path to the notebook(s) to format
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --line-length LINE_LENGTH
+                        How many characters per line to allow. [default: ask
+                        black]
+  --sql-upper           SQL keywords should be uppercase
+  --sql-lower           SQL keywords should be lowercase
+  --check               Don't write the files back, just return the status.
+                        Return code 0 means nothing would change.
+  --diff                Don't write the files back, just output a diff for
+                        each file on stdout
+  --indent-with-two-spaces
+                        Use two spaces for indentation in Python cells instead
+                        of Black's default of four.
+```
+
+
+## Version control integration
+
+Use [pre-commit](https://pre-commit.com). Add a
+`.pre-commit-config.yaml` file to your repo with the following content:
+
+```yaml
+repos:
+-   repo: https://github.com/bsamseth/blackbricks
+    rev: 0.3.0
+    hooks:
+    - id: blackbricks
+      args: [--line-length=120, --indent-with-two-spaces]
+```
+
+Set the `rev` attribute to the most recent version of `blackbricks`.
+The `args` are optional and can be used to set any of `blackbricks` options.
+
+
