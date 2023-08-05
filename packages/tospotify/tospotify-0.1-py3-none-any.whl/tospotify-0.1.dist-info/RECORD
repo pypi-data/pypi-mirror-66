@@ -1,0 +1,17 @@
+tospotify/__init__.py,sha256=gv07VhhITS9MOP7NtRbtDxqeFk97FfQ_5JuVIj14Cdg,121
+tospotify/__main__.py,sha256=LC7JVcrnrB26Wcx1rJGJBVbZEk6eMYNzzVoG9nQHsAA,65
+tospotify/generator.py,sha256=NH3QV6TGIpR8DT3TnGKK509wwdKXr__A9R67jLOSqps,1823
+tospotify/processing.py,sha256=gr9XuNphHvM38p5-BCdmarZJTPu8XJMtrLXtj_5Fnyg,2253
+tospotify/run.py,sha256=M9Psgg_kdNGus32Yt2QZUq-pRoAM0Pne6hidvq_CmR4,2453
+tospotify/search.py,sha256=QnHvOesvSD7SUv56Qk7NLcpEe9eAfBAp0kZuHMpfRnY,4296
+tospotify/types/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tospotify/types/artists.py,sha256=pBger_E29XK7SZ3ejUk-4pCfT-GIVoh6hnlPFAkyiBs,4306
+tospotify/types/queries.py,sha256=HYAV40DlPFGRD8npXO877brv_m04it6Gks0HhGG85rg,2334
+tospotify/types/titles.py,sha256=TLYcK0jho034wz4EqXeYcfgw1KFcBUkYnrjWNXS4MCg,1181
+tospotify-0.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+tospotify-0.1.dist-info/METADATA,sha256=XMcckQpJBhRNWGjOrVejvMq-ieBY4o5RHNzr7VAI_3g,2389
+tospotify-0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+tospotify-0.1.dist-info/entry_points.txt,sha256=gyYfpFyV9C-WzNfxg5u0Kix0DKH0t2QBY7CFK-3RmB4,50
+tospotify-0.1.dist-info/top_level.txt,sha256=ZxJ-Ic515q1qrYFeHvwTbwBHaPXVWvwjDPUbId98k_g,10
+tospotify-0.1.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+tospotify-0.1.dist-info/RECORD,,
