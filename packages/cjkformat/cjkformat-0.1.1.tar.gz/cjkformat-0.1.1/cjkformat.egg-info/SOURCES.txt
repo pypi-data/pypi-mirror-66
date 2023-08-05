@@ -1,0 +1,8 @@
+README.md
+setup.py
+cjkformat/__init__.py
+cjkformat/cjkformat.py
+cjkformat.egg-info/PKG-INFO
+cjkformat.egg-info/SOURCES.txt
+cjkformat.egg-info/dependency_links.txt
+cjkformat.egg-info/top_level.txt
