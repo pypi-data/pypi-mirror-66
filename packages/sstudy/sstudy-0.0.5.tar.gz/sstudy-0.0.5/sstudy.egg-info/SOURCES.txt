@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+example/db_structure.py
+example/explore_results.py
+example/results.sqlite3
+example/run_simulation_study.py
+sstudy/__init__.py
+sstudy/core.py
+sstudy.egg-info/PKG-INFO
+sstudy.egg-info/SOURCES.txt
+sstudy.egg-info/dependency_links.txt
+sstudy.egg-info/requires.txt
+sstudy.egg-info/top_level.txt
