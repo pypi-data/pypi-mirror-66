@@ -1,0 +1,5 @@
+seamm>=0.9
+seamm_util>=0.9
+seamm_widgets>=0.9
+Pmw
+pyyaml>=5.3.1
