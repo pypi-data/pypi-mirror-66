@@ -1,0 +1,8 @@
+README.rst
+remind
+setup.py
+schedule_reminder.egg-info/PKG-INFO
+schedule_reminder.egg-info/SOURCES.txt
+schedule_reminder.egg-info/dependency_links.txt
+schedule_reminder.egg-info/requires.txt
+schedule_reminder.egg-info/top_level.txt
