@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: AternosAPI
+Version: 1.0.0
+Summary: A Python Aternos API
+Home-page: https://github.com/Duerocraft/AternosAPI
+License: GNU
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: bs4
+
+# AternosAPI
+
+## How To Use
+ - Watch My Youtube Video https://www.youtube.com/watch?v=wGM9V9tHJ2o
+
+
