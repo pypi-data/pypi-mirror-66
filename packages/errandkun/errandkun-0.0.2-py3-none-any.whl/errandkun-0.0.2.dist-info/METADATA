@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: errandkun
+Version: 0.0.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6.4
+Requires-Dist: mkdocs (>=1.0.4)
+Requires-Dist: requests
+
+UNKNOWN
+
+
