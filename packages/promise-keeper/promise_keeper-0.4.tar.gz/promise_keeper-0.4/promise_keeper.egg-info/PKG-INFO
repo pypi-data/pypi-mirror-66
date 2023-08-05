@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: promise-keeper
+Version: 0.4
+Summary: A simple async processing helper
+Home-page: https://github.com/brettschneider/python_promise_keeper
+Author: Steve Brettschneider
+Author-email: steve@bluehousefamily.com
+License: UNKNOWN
+Download-URL: https://github.com/brettschneider/python_promise_keeper/archive/0.4.tar.gz
+Description-Content-Type: UNKNOWN
+Description: UNKNOWN
+Keywords: promise,async,threading,aynchronous,simple
+Platform: UNKNOWN
