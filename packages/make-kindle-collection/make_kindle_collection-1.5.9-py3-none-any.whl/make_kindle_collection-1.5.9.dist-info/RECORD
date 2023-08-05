@@ -1,0 +1,12 @@
+mkc/__init__.py,sha256=-CdcCvPZMlKzEMXNs0r3V9a0a5a55ydxcjj0ESBipP4,7254
+mkc/__main__.py,sha256=lNX3DRU5iHI-dgqG2NccnJwIczHsvf0dsyumzYY3FKI,798
+mkc/formulas.py,sha256=8kd8ii7ad6I-apES6qOP-kFk8mub7XQJVOFg1Bq4WD8,1950
+mkc/images.py,sha256=2W33-DYXj9YQbtCjpI_DNQnKtLi0UtvFOLHbs3c8i54,2881
+mkc/macros.py,sha256=cnic_c5SNNc5FHxY4kuqjbT7GA2WR6aCeJqN-_E-gM0,3779
+usr/share/mkc/latex/main.tex,sha256=K4vDMkG_uM9D3LG88WaG5Cl4qCSjb3SzStUtG8BHIO4,221
+make_kindle_collection-1.5.9.dist-info/LICENCE,sha256=2n6rt7r999OuXp8iOqW9we7ORaxWncIbOwN1ILRGR2g,7651
+make_kindle_collection-1.5.9.dist-info/METADATA,sha256=ENOXIa6CmYFykqTpjwx8HeMzKiautWKmXvWtT0mnDnk,508
+make_kindle_collection-1.5.9.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+make_kindle_collection-1.5.9.dist-info/entry_points.txt,sha256=NqBOyTveaIvielAPXNWMgGGVY3O4nPxLMQcEgj3EaMA,34
+make_kindle_collection-1.5.9.dist-info/top_level.txt,sha256=HFAWwdSiumMyCZPs0hdRB27ORELC1oz8j4ZseQtplQw,4
+make_kindle_collection-1.5.9.dist-info/RECORD,,
