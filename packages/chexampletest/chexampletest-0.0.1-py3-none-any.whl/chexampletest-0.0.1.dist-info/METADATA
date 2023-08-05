@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: chexampletest
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/pypa/sampleproject
+Author: Charlie Hodgkinson
+Author-email: charlotte.hodgkinson4@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+#my third attempt at making a template pip package
+
+create distribution archives:
+*setuptools and wheel should be preinstalled*
+python setup.py sdist bdist_wheel
+*add .egg-info to .gitignore*
+
+Upload:
+pip install twine
+twine upload dist/*
+enter username: __token__
+enter password: pypi-AgEIcHlwaS5vcmcCJDU0ZTIxMWRiLWNlMjYtNDM3ZS05YjJlLWYzYTk5NmE2NGJjMgACJXsicGVybWlzc2lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgWzvnJ7sF-57Jw_YGg04aZTPCeuRpXrHBhAsPRfofZGc
+
