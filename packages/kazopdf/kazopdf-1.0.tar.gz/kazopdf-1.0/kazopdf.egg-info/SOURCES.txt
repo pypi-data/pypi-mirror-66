@@ -1,0 +1,9 @@
+README.md
+setup.py
+kazopdf/__init__.py
+kazopdf/pdf2image.py
+kazopdf/pdf2text.py
+kazopdf.egg-info/PKG-INFO
+kazopdf.egg-info/SOURCES.txt
+kazopdf.egg-info/dependency_links.txt
+kazopdf.egg-info/top_level.txt
