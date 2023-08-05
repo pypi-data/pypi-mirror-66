@@ -1,0 +1,7 @@
+padaos
+fann2==1.0.7
+padatious
+quantulum3
+requests
+lingua_franca>=0.1.0
+pyspotlight
