@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: sgrep
+Version: 0.0.1
+Summary: A python package of sgrep tool
+Home-page: https://sgrep.dev
+Author: Drew Dennison
+Author-email: drew@returntocorp.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
