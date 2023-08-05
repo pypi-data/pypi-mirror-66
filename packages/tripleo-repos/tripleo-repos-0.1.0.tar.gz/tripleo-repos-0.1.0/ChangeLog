@@ -1,0 +1,93 @@
+CHANGES
+=======
+
+0.1.0
+-----
+
+* Extend Ceph repos template to support CentOS8
+* Add missing current-tripleo-rdo repository choice
+* add centos8 highavailability,powertools
+* Drop py27 job
+* tox: Keeping going with docs
+* Switch to Ussuri jobs
+* Blacklist sphinx 2.1.0 (autodoc bug)
+* Add ansible-role-tripleo\* to INCLUDE\_PKGS
+* Update the constraints url
+* Add support for CentOS8
+* Include ansible-config\_template in delorean-current repo
+* Add tripleo-ansible to delorean-current repo
+* Add Python 3 Train unit tests
+* Remove deprecated --centos-mirror parameter
+* Fix mirror replacement logic for empty ones
+* Add support for RHEL8
+* Rename build-containers job
+* Replace git.openstack.org URLs with opendev.org URLs
+* Default to Ceph Nautilus unless branch is for an older OpenStack
+* OpenDev Migration Patch
+* Add stable/stein branch support to fedora
+* Fix error with undefined var
+* Keep delorean.repo filename consistent in branches
+* Include python\*-tripleoclient from delorean.repo
+* Fix --centos-mirror default
+* Trigger build containers when tripleo-repos is modified
+* Add tripleo-ci-testing to tripleo-repos for use in periodics
+* Add fedora support to tripleo-repos
+* Fix python3 processing out subprocess output
+* Fix previously broken distro auto-detection
+* Fix unit test execution on Fedora 28
+* Allow distro to be auto detected
+* Change openstack-dev to openstack-discuss
+* Removes checks for branch and current-tripleo/dev
+* Add fedora support to tripleo-repos
+* Fix pep8 errors
+* Don't quote {posargs} in tox.ini
+* Use openstack-tox-cover template
+* Fix regex for python paunch package in repo config
+* add python 3.6 unit test job
+* import zuul job settings from project-config
+* fix tox python3 overrides
+* Switch to stestr
+* Changed the home-page link
+* Add paunch to the includpkgs
+* Include python{2,3}-tripleo-common from delorean current
+* Clean metadata after switching repos
+* Use promotion process for diskimage-builder
+* Fix broken link in readme
+* Use the ceph jewel repos from the openstack pike branch
+* Use the ceph luminou repos from the openstack pike branch
+* Implement Proxy Support
+* Update ceph and opstools repos
+* Add .gitreview
+* Use openstack-tripleo-\* in includepkgs
+* Update .gitignore
+* Removed older version of python added 3.5
+* Update includepkgs
+* It's \_RDO Trunk\_ repos
+* Add docs structure
+* Make requests requirement g-r compatible
+* Always install deps with current and current-tripleo
+* Stop setting priority on deps repo
+* Add ceph repo to TripleO instructions
+* Allow current-tripleo-dev to be used with some other repos
+* Ceph repo tweaks
+* Add support for installing opstools repo
+* Update includepkgs list to match current
+* Add support for installing Ceph repo
+* Rename from dlrn-repo to tripleo-repos
+* Update readme to reflect current-tripleo change
+* Update current-tripleo link to new location
+* Use choices to limit allowed repos
+* Add current-tripleo-dev repo type
+* Tweak formatting
+* Add instructions for use with TripleO
+* Remove copy pasta from tox.ini
+* Add dib-utils to includepkgs
+* Fix includepkgs
+* Set priorities appropriately for current-tripleo
+* Add note about removing repos
+* Flesh out readme
+* Make pep8 pass
+* Add LICENSE
+* Include defaults in the help output
+* Add --output-path option
+* Initial commit
