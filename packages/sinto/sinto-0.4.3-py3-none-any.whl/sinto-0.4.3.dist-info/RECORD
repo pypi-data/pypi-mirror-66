@@ -1,0 +1,14 @@
+sinto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sinto/_version.py,sha256=Nyg0pmk5ea9-SLCAFEIF96ByFx4-TJFtrqYPN-Zn6g4,22
+sinto/addtags.py,sha256=Lgj5eW1vKobdiXEGXsI5627cEBk2L2YWPnkPcVK2VX4,3041
+sinto/cli.py,sha256=MYEG1mp1DbdX996A9lWbrkv-qqaahDBpoLk3oxzQ0Mk,1329
+sinto/filterbarcodes.py,sha256=TEKUctTeWqgKi2S2xF4l3QFoscWKSWbWQkfbm5CMNxU,3897
+sinto/fragments.py,sha256=utvbdXJ-kAk7iE74ugqrYU4y5Rnc5uBn0m7tZ0IG0Kk,16597
+sinto/utils.py,sha256=0LZt7mBSokY9CFkZX1ErKFfJDJsQ18hKnVRwubqYNQk,5843
+sinto-0.4.3.data/scripts/sinto,sha256=OtIMfTwUgFIQm1GYl-4ZJg5P-i3lxknm6HV5OCXcYGk,5891
+sinto-0.4.3.dist-info/DESCRIPTION.rst,sha256=HYGD31BjDP9ESq5vzqt4schbJKpPna6kPI_q2qMQ1bo,568
+sinto-0.4.3.dist-info/METADATA,sha256=XLMHhM1XOwCSE4Y2FsD5on7LbQrRmDgUJ55-nXP7vZw,1109
+sinto-0.4.3.dist-info/RECORD,,
+sinto-0.4.3.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+sinto-0.4.3.dist-info/metadata.json,sha256=CD9sjDsuQlQ-rA6Aya9RmMhHRtV9xhdAgZsWBw29lpc,703
+sinto-0.4.3.dist-info/top_level.txt,sha256=qqnsVrvJgfLY-3oFEIUT9zujhcZoI_Et6XBjQrFMrcw,6
