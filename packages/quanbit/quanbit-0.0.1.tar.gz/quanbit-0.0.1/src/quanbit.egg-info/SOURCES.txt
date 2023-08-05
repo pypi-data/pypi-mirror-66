@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+src/quanbit/__init__.py
+src/quanbit/circuit.py
+src/quanbit/measure.py
+src/quanbit/operators.py
+src/quanbit.egg-info/PKG-INFO
+src/quanbit.egg-info/SOURCES.txt
+src/quanbit.egg-info/dependency_links.txt
+src/quanbit.egg-info/not-zip-safe
+src/quanbit.egg-info/requires.txt
+src/quanbit.egg-info/top_level.txt
