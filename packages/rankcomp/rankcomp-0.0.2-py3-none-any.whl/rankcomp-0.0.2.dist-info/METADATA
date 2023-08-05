@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: rankcomp
+Version: 0.0.2
+Summary: high fided extraction of differential expression genes without considering the batch effects
+Home-page: https://github.com/SpiderClub/haipproxy
+Author: Terminator Jun
+Author-email: 2300869361@qq.com
+License: MIT
+Keywords: rank,DEG,batch-effect,rankcomp
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: time
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: statsmodels
+Requires-Dist: fisher
+Requires-Dist: sklearn
+
+##This module is a tool for getting the high fided DEG(differential expression genes) regardless of batch effects.
+
+
+
