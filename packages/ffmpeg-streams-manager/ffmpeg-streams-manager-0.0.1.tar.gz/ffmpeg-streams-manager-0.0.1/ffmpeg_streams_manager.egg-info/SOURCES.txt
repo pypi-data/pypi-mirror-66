@@ -1,0 +1,16 @@
+README.md
+setup.py
+examples/__init__.py
+examples/add_subtitles.py
+examples/debug_converter.py
+examples/debug_input.py
+examples/generate_csv.py
+examples/manage_streams.py
+ffmpeg_streams_manager/__init__.py
+ffmpeg_streams_manager.egg-info/PKG-INFO
+ffmpeg_streams_manager.egg-info/SOURCES.txt
+ffmpeg_streams_manager.egg-info/dependency_links.txt
+ffmpeg_streams_manager.egg-info/requires.txt
+ffmpeg_streams_manager.egg-info/top_level.txt
+tests/__init__.py
+tests/test_models.py
