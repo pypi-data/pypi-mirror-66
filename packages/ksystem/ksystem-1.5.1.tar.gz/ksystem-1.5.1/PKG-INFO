@@ -1,0 +1,67 @@
+Metadata-Version: 1.1
+Name: ksystem
+Version: 1.5.1
+Summary: a system to support kuzhidu
+Home-page: https://github.com/zoumingzhe/ksystem
+Author: Zou Mingzhe
+Author-email: zoumingzhe@qq.com
+License: MIT
+Description: ==================================================
+                            ksystem
+        ==================================================
+                    a system to support kuzhidu
+        
+        
+        概述
+        ====
+        ksystem是使用Python语言编写的用于支持kuzhidu业务的。
+        
+        - 工程主页: https://github.com/zoumingzhe/ksystem
+        - 下载地址: https://pypi.python.org/pypi/ksystem
+        - 法律许可: MIT license_ , (C) 2019-2020 ZouMingzhe_ <zoumingzhe@qq.com>
+        
+        安装
+        ====
+        通过pip命令安装k-system模块：
+        
+        ``pip install ksystem``
+        
+        如果已经安装k-system模块，可以通过pip命令更新：
+        
+        ``pip install --upgrade ksystem``
+        
+        更多安装信息请查阅 安装文档_ 。
+        
+        文档
+        ====
+        API（应用程序接口）文档、用法和例程可查阅 documentation_ 目录下的文档。
+        
+        例程
+        ====
+        例程存放在工程文件的 examples_ 目录下。
+        
+        测试
+        ====
+        单元测试存放在工程文件的 test_ 目录下。
+        
+        支持
+        ====
+        本项目由 ZouMingzhe_ <zoumingzhe@qq.com> 创建并维护。
+        
+        
+        .. _ZouMingzhe: https://zoumingzhe.github.io
+        .. _license: https://github.com/zoumingzhe/ksystem/blob/master/LICENSE.txt
+        .. _安装文档: https://github.com/zoumingzhe/ksystem/tree/master/documentation/k-system.rst#installation
+        .. _documentation: https://github.com/zoumingzhe/ksystem/tree/master/documentation
+        .. _examples: https://github.com/zoumingzhe/ksystem/tree/master/examples
+        .. _test: https://github.com/zoumingzhe/ksystem/tree/master/test
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
