@@ -1,0 +1,8 @@
+README.md
+setup.py
+PyDX/__init__.py
+PyDX/pydx.py
+PyDX_DevWorks8.egg-info/PKG-INFO
+PyDX_DevWorks8.egg-info/SOURCES.txt
+PyDX_DevWorks8.egg-info/dependency_links.txt
+PyDX_DevWorks8.egg-info/top_level.txt
