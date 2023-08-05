@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: cproc
+Version: 0.1.4
+Summary: A small tool to capture the environment of a running process
+Home-page: https://bitbucket.org/jakobsg/cproc
+Author: Jakob Simon-Gaarde
+Author-email: jakobsg@simon-gaarde.dk
+License: UNKNOWN
+Description: ***********************
+        Capture Process (cproc)
+        ***********************
+        
+        Capture the environment and other key values about a running process into an cproc
+        info file (JSON).
+        It is meant as a tool for system administration to do system probing.
+        A captured process info file can be used as input to another program or do other
+        things like respawning the process in the same type of environment.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.6
+Description-Content-Type: text/markdown
