@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: billing-2
+Version: 0.0.2
+Summary: Billing module test 2
+Home-page: http://project.billing_module.com
+Author: Danila
+Author-email: danilamgallo@gmail.com
+License: BSD
+Description: # Billing module
+        
+        #How to install
+        python setup.py sdist
+        
+        twine upload dist/*
+        
+        #How to use
+        pip install billing_module
+        
+        
+Keywords: billing invoice
+Platform: UNKNOWN
+Requires-Python: >=3.6
