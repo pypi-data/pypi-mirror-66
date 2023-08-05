@@ -1,0 +1,8 @@
+README.md
+setup.py
+pytos/__init__.py
+pytos/say_hi.py
+pytoslyx.egg-info/PKG-INFO
+pytoslyx.egg-info/SOURCES.txt
+pytoslyx.egg-info/dependency_links.txt
+pytoslyx.egg-info/top_level.txt
