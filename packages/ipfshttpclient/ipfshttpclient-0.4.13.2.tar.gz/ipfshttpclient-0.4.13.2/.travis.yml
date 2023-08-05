@@ -1,0 +1,72 @@
+# Config file for automatic testing at travis-ci.com
+
+language: python
+dist: bionic  # PIP is too old on xenial
+
+matrix:
+  include:
+  - python: 2.7
+    env: TOXENV=py27
+  - python: 3.4
+    dist: xenial
+    env: TOXENV=py34
+  - python: 3.5
+    dist: xenial
+    env: TOXENV=py35
+  - python: 3.6
+    env: TOXENV=py36
+  - python: 3.7
+    env: TOXENV=py37
+  - python: 3.8
+    env: TOXENV=py38
+  - python: 3.8
+    env: TOXENV=styleck
+    before_install: ":"
+  - # Testing on macOS/Darwin always uses virtual machines so only
+    # test the bare minimum.
+    os: osx
+    language: shell
+    env: TOXENV=py27
+  - os: osx
+    language: shell
+    env: TOXENV=py34
+
+env:
+  global:
+    - IPFS_VERSION=0.4.22
+    - IPFS_SHA512_LINUX=49b99fec741d67f7bad8fb6fbbd984967f06dfc3de846d10dca34b166f621a182d12f13cf5ccf4e4f33747b67cede6f4205b4cd9b57ce5244128d1385ec82c85
+    - IPFS_SHA512_DARWIN=d0e79b0fff555c23c3628e1a182c312cd18e36a81c71f97675df083adde3f77330e3fe76375f1fb212d81ce96eea4a16ebd9f4c87c6cb4eb52d0210f42ffb4b4
+
+
+# Ensure go-IPFS is available for testing
+before_install:
+  # Make the `sha512sum` available on macOS under that name!
+  - export PATH="$(echo /usr/local/Cellar/coreutils/*/libexec/gnubin):${PATH}"
+  
+  # Figure out parameters based on environment
+  - if [ "${TRAVIS_OS_NAME}" != "osx" ]; then export IPFS_PLATFORM="linux-amd64" IPFS_SHA512="${IPFS_SHA512_LINUX}"; else export IPFS_PLATFORM="darwin-amd64" IPFS_SHA512="${IPFS_SHA512_DARWIN}"; fi
+  # Download the daemon application
+  - wget "https://dist.ipfs.io/go-ipfs/v${IPFS_VERSION}/go-ipfs_v${IPFS_VERSION}_${IPFS_PLATFORM}.tar.gz" -O "/tmp/ipfs.tar.gz"
+  # Verify the checksum
+  - echo "${IPFS_SHA512}  /tmp/ipfs.tar.gz" | sha512sum -c
+  # Extract verified archive
+  - tar -xzvf "/tmp/ipfs.tar.gz"
+  # Set up path
+  - export PATH="${PWD}/go-ipfs:${PATH}"
+
+install:
+  # Install Python 3.4.4 (the last release binary version) for Python 3 testing on Darwin
+  - if [ "${TRAVIS_OS_NAME}" = "osx" -a "${TOXENV}" = "py34" ]; then wget "https://www.python.org/ftp/python/3.4.4/python-3.4.4-macosx10.6.pkg" -O /tmp/python.pkg; fi
+  - if [ "${TRAVIS_OS_NAME}" = "osx" -a "${TOXENV}" = "py34" ]; then echo "349c61e374f6aeb44ca85481ee14d2f5  /tmp/python.pkg" | md5sum -c; fi
+  - if [ "${TRAVIS_OS_NAME}" = "osx" -a "${TOXENV}" = "py34" ]; then sudo installer -pkg /tmp/python.pkg -target /; fi
+  # Just install PIP on the native Python 2.7 stack for Python 2 testing on Darwin
+  - if [ "${TRAVIS_OS_NAME}" = "osx" -a "${TOXENV}" = "py27" ]; then sudo easy_install pip; fi
+  # Update VirtualEnv on Ubuntu xenial based images to support PEP-518 build backends
+  - if [ "${TRAVIS_OS_NAME}" = "linux" -a "${TRAVIS_DIST}" = "xenial" ]; then pip install -U virtualenv; fi
+
+  # Install the test runner
+  - pip install tox
+
+script: tox
+
+cache: pip
