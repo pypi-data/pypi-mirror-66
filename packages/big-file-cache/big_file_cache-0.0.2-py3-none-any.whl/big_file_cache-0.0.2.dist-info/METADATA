@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: big-file-cache
+Version: 0.0.2
+Summary: make file cache to read big file
+Home-page: https://github.com/BeyondMark/big-file-cache.git
+Author: beyond_mark
+Author-email: luck.yangbo@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: aiofiles (>=0.5.0)
+
+# Big file cache
+
+some times ida trace file is too big.
+
+this tool will split the file and create cache file.
+
+TODO:
+- make cache file to the folder
+
+
+
