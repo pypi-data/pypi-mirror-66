@@ -1,0 +1,7 @@
+README.md
+setup.py
+cmlutils.egg-info/PKG-INFO
+cmlutils.egg-info/SOURCES.txt
+cmlutils.egg-info/dependency_links.txt
+cmlutils.egg-info/requires.txt
+cmlutils.egg-info/top_level.txt
