@@ -1,0 +1,7 @@
+m9s_nereid_cart_b2c<5.3,>=5.2
+m9s_nereid_checkout<5.3,>=5.2
+m9s_payment_gateway<5.3,>=5.2
+m9s_sale_channel_payment_gateway<5.3,>=5.2
+m9s_sale_payment_gateway<5.3,>=5.2
+paypalrestsdk
+trytond<5.3,>=5.2
