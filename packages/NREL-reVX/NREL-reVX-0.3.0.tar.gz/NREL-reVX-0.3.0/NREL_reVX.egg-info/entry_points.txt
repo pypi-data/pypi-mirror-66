@@ -1,0 +1,7 @@
+[console_scripts]
+reV-ReEDS = reVX.reeds.reeds_cli:main
+reV-plexos = reVX.plexos.plexos_cli:main
+reV-rpm = reVX.rpm.rpm_cli:main
+reVX = reVX.cli:main
+wind-dirs = reVX.wind_dirs.wind_dirs_cli:main
+
