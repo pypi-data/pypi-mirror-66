@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: pyOnvif
+Version: 1.1
+Summary: Simple Onvif camera client
+Home-page: https://github.com/koodaamo/pyOnvif
+Author: Pekka Jäppinen
+Maintainer: Petri Savolainen
+License: GPLv3
+Keywords: onvif
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: discovery
+Requires-Dist: WSDiscovery ; extra == 'discovery'
+
+pyOnvif
+=======
+
+This package provides a simple client to interact with ONVIF compliant IP cameras. It contains the SOAP message encoding for the basic functions that are commonly needed.
+
+There are no required dependencies. Optionally, if you want to use WS-Discovery to find your Onvif camera, you need `WS-Discovery support <https://pypi.python.org/pypi/WSDiscovery>`_.
+
+WS-Discovery support can also be installed by including the 'discovery' extra, as in::
+
+    pip install pyonvif[discovery]
+
+For command-line usage instructions run::
+
+    pyonvif -h
+
+
+History
+========
+
+1.1 (2020-04-16)
+-----------------
+
+- Improved command-line client
+- Major refactoring
+
+1.0 (2017-05-25)
+-----------------
+
+- First PyPI release (petri)
+
+

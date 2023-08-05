@@ -1,0 +1,11 @@
+pyonvif/__init__.py,sha256=OYDEOO5vsm9hxStGIpKGX8Wb8g5UnAKtJDCenT58Ad0,30
+pyonvif/cmdline.py,sha256=Y2wNr16OGEp0jVnw6M-afaykbab3HjoVwmMyqHj6rp4,2667
+pyonvif/messages.py,sha256=T_Wo6-fObqMNk8_jxPWE409CU0vQ41b4EUwTiQPoGUY,4085
+pyonvif/namespaces.py,sha256=XCxtWfF3YClivap_N4NEwpS1mfkzby-3wRBf9qRoPvY,1650
+pyonvif/pyonvif.py,sha256=HozcFFl5EFSspbi2pbcYBAA8nkp_RTM7vnrUaIhWpyY,4556
+pyOnvif-1.1.dist-info/LICENSE.txt,sha256=2n6rt7r999OuXp8iOqW9we7ORaxWncIbOwN1ILRGR2g,7651
+pyOnvif-1.1.dist-info/METADATA,sha256=wlDiHeNFShlR-Qg03pkgkj-GuHs_GaokCo-dSeSQ7iU,1404
+pyOnvif-1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pyOnvif-1.1.dist-info/entry_points.txt,sha256=Vm2n_KIr23nrKNvVHeiJTyFdRDiCt8IYWD5VNF8IqWo,53
+pyOnvif-1.1.dist-info/top_level.txt,sha256=bpHBGF_lm6oQH6BSr2BaACVfdFCD2ynipyhb-qSvau4,8
+pyOnvif-1.1.dist-info/RECORD,,
