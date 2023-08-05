@@ -1,0 +1,7 @@
+[console_scripts]
+auto_spot = spot:auto_spot
+spottool = spot:spottool
+subject_clustering = spot:subject_clustering
+verify_files = spot:verify_files
+wrapper = spot:wrapper
+
