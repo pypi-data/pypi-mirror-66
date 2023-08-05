@@ -1,0 +1,8 @@
+README.md
+setup.py
+posql/__init__.py
+posql/mysql.py
+posql.egg-info/PKG-INFO
+posql.egg-info/SOURCES.txt
+posql.egg-info/dependency_links.txt
+posql.egg-info/top_level.txt
