@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: spbdl
+Version: 1.0.2
+Summary: Download images from shitpostbot database
+Home-page: https://github.com/Boidushya/spbdl
+Author: Boidushya Bhattacharya
+Author-email: boidushyabhattacharya@gmail.com
+License: MIT
+Download-URL: https://github.com/Boidushya/spbdl/archive/v_01.tar.gz
+Description: # SPBDL
+        
+        Download images (custom/random) from shitpostbot database!
+        
+        # SPBDL Module Installation:
+        
+        #### Install with pip:
+        ```
+        pip install spbdl
+        ```
+        #### Install from source:
+        ```
+        $ git clone https://github.com/boidushya/spbdl  
+        $ cd spbdl
+        $ python setup.py install
+        ```
+        
+        # USAGE:
+        ```python
+        import spbdl
+        import requests
+        
+        def dl(url):
+            r = requests.get(url)
+            with open("randomImage.jpg","wb") as f:
+                f.write(r.content)
+        #Random image download
+        url = spbdl.randImg()
+        #Queried image download:
+        url2 = getImg("epic") #Uses the default arguments for getting image url
+        url3 = getImg("epic",sort='top', order='created_at',direction="ASC") #Passes custom arguments for getting image url
+        dl(url)
+        #dl(url2)
+        #dl(url3)
+        ```
+        
+        # ALLOWED VALUES FOR getImg ARGUMENTS:
+        
+        * ##### query:
+        	* `<your search query>` (required)
+        * ##### sort:
+        	* `random` (default)
+        	* `top`
+        	* `bottom`
+        * ##### order:
+        	* `total_rating` (default)
+        	* `last_reviewed_at`
+        	* `created_at`
+        * ##### direction:
+        	* `DESC` (default)
+        	* `ASC`
+        
+Keywords: shitpostbot,spb,spbdl
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
