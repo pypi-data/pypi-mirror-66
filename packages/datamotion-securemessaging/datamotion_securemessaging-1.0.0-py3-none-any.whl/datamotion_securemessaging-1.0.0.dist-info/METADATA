@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: datamotion-securemessaging
+Version: 1.0.0
+Summary: This is a Python Software Development Kit (SDK) for DataMotion SecureMail Messaging. This SDK is a wrapper providing helper functions for our Messaging RESTful APIs. This code is simple in nature, and is present to provide a complete yet basic implementation.
+Home-page: https://gitlab.com/datamotion/DMWeb/SecureMail/Python/Messaging/REST/Python-Messaging-Library
+Author: DataMotion Inc.
+Author-email: plmvas@datamotion.com
+License: MIT
+Keywords: python,messaging,library,datamotion,securemail,rest,api,secure
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: requests
+
+UNKNOWN
+
+
