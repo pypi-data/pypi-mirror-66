@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: airsim-adaptor
+Version: 1.0.2
+Summary: A customized airsim API adaptor for special purposes
+Home-page: https://github.com/ibrahim0v
+Author: ibrahim aydin
+Author-email: noemail@sorry.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+A customized airsim API adaptor for special purposes
+=====================================================
+
+This is a simple example package for special purpose usages of **Mirosoft AirSim Unmanned Vehicle Simulator**'s python API. It utilizes the use of sBGC commands for gimbal emulation and Visca adaptor for Zoom/FOV controls.
+
+For more information:
+----------------------------------------------------
+For more information on **AirSim** project checkout [Airsim Project](https://github.com/microsoft/AirSim) gitHub repo.
+
