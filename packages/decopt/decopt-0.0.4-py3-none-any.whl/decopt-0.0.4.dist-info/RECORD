@@ -1,0 +1,10 @@
+dec_opt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dec_opt/compression.py,sha256=nzgjKJA31lDfjS5ycgr8jXoIXDCwYVegzcthYN6oSUk,2219
+dec_opt/data_reader.py,sha256=nEoOJp0p4xxN1n46zcteVPTPtZ_gru5GI6-jSE4DXRs,1017
+dec_opt/gossip_matrix.py,sha256=oI1FruZoMb546bOuzMcbjF5YYluUUmddq4xGzGSN3HI,1661
+dec_opt/trainer.py,sha256=XCfm1VBPqb56GxZVpXBrtFFxq5feNjVuQgofEMYHIXw,121
+decopt-0.0.4.dist-info/LICENSE,sha256=b28xOA5j9sOLNqITqpHvknXwohCs-bgxavKtIQLqozM,1070
+decopt-0.0.4.dist-info/METADATA,sha256=R6b1HRJwuV3or93DIFqHusXc4oB4KUrmTZ-c7SKNlzQ,499
+decopt-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+decopt-0.0.4.dist-info/top_level.txt,sha256=wb9leFeDYW0qigyUVQm1xmFo3MRz0z2f_sD-je_KA4I,8
+decopt-0.0.4.dist-info/RECORD,,
