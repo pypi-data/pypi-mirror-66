@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+logux/__init__.py
+logux/core.py
+logux/dispatchers.py
+logux/settings.py
+logux/urls.py
+logux/utils.py
+logux/views.py
+logux_django.egg-info/PKG-INFO
+logux_django.egg-info/SOURCES.txt
+logux_django.egg-info/dependency_links.txt
+logux_django.egg-info/requires.txt
+logux_django.egg-info/top_level.txt
