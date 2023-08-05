@@ -1,0 +1,9 @@
+README.md
+setup.py
+bin/surk.py
+surk/__init__.py
+surk/__main__.py
+surk.egg-info/PKG-INFO
+surk.egg-info/SOURCES.txt
+surk.egg-info/dependency_links.txt
+surk.egg-info/top_level.txt
