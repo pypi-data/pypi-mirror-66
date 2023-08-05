@@ -1,0 +1,11 @@
+Click>=7.0
+pandas
+numpy
+PyJWT
+requests
+ndjson
+grpcio>=1.27.2
+protobuf
+postgresql-devel
+snowflake-connector-python==2.2.4
+snowflake-sqlalchemy==1.2.3
