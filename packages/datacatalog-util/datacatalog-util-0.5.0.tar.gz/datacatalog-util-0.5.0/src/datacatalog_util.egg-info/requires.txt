@@ -1,0 +1,5 @@
+datacatalog-tag-manager
+datacatalog-tag-exporter
+datacatalog-fileset-enricher
+datacatalog-tag-template-processor
+datacatalog-tag-template-exporter
