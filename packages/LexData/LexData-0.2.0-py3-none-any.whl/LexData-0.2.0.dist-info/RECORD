@@ -1,0 +1,16 @@
+LexData/__init__.py,sha256=fo8jAgQem-1K_RG9B4IZw-I82_dYrzCN3lgFyRQJOiI,4171
+LexData/claim.py,sha256=v8LKcyjaExXO9j41krjlccOyGyKzU-k6QmRRV4UhAD0,4011
+LexData/entity.py,sha256=-L8tU94-aKpyNBP16jT5ou8Po7BfHDH_0f7eH2CfQUo,3877
+LexData/form.py,sha256=_Yk8k8Xuq38Z3vBSzq-Gt_BUpqnBgmwresNRi6BlbW4,572
+LexData/language.py,sha256=hATr0EFv_kjZKrRAnxkkpahVsEWYiLChtzVuwR51yLY,367
+LexData/languages.py,sha256=c99gvr3T_4a5oIeHMV-_GpxVFMJwPHMzv04YIpjGqgw,185
+LexData/lexeme.py,sha256=92ujuNTmGOFlZyO9t3u6cYFV9LacQX-JfcDRSK-iNZQ,6176
+LexData/sense.py,sha256=CNf8_qrvLR1ZocceQjEMB9b50yEeHe1TDWGsMCAWN44,933
+LexData/utils.py,sha256=R7IexBSk9toRaTN4punG_xe5O54QaS9POKtP1ThXOJo,3753
+LexData/version.py,sha256=W_wVIHPa8YRC46POF62b6sKw5z2eLNRXXCqhNRp9zHg,74
+LexData/wikidatasession.py,sha256=Ql4ybNB4-jguWGmUj0fdhOFW8Lu04A5TLJAQXJ87fGY,4792
+LexData-0.2.0.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+LexData-0.2.0.dist-info/METADATA,sha256=4mk4hgufsJ88GyipZrA9pvqsdUokKevGxCeoB7ll7po,1155
+LexData-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+LexData-0.2.0.dist-info/top_level.txt,sha256=Yc2EeheBDcH2zT_gU4J60r5YLPhJd5_7mW-mPghP9LM,8
+LexData-0.2.0.dist-info/RECORD,,
