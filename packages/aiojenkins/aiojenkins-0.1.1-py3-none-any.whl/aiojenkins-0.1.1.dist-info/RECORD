@@ -1,0 +1,7 @@
+aiojenkins/__init__.py,sha256=gJ5XjBm4WR2el3t9inhTW7xQofZcCZPNRoIaxW128IA,1974
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_aiojenkins.py,sha256=dUpGL3fABtH2iVwChr36N933LyyHbQYhDAZtZclxS0c,556
+aiojenkins-0.1.1.dist-info/METADATA,sha256=kEjYO52ALP_IrQvS9ewv_NF4LuXSvc9mRNodJi9C454,508
+aiojenkins-0.1.1.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+aiojenkins-0.1.1.dist-info/top_level.txt,sha256=3HDvbv5hPjJz6DJPGMBw_3c03CK1EcgSCRkg1Cn-SwQ,17
+aiojenkins-0.1.1.dist-info/RECORD,,
