@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: wiser-smart-api
+Version: 1.0.0
+Summary: A simple API for accessing data on the Schneider Wiser Smart system
+Home-page: https://github.com/tomtomfx/wiser-smart-api
+Author: Thomas Fayoux
+Author-email: thomas.fayoux@gmail.com
+License: UNKNOWN
+Description: API to interact with the Wiser Smart Controller (White cross)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
