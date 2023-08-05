@@ -1,0 +1,13 @@
+agnpy/__init__.py,sha256=wbqDzKoQsBD__aEwI3K_SBrj9XsJBIN_viW94ILYprc,154
+agnpy/absorption.py,sha256=UXBpkVviEvH4waM8QdSurYdcR5c-B1EW03pYxFNUkQQ,8198
+agnpy/compton.py,sha256=E66gjqw92jcBnrG-aPXT8dDGWZevmWfOOYBwUnxC8GE,18732
+agnpy/emission_regions.py,sha256=26nrpitEN-pWf4LCPmwqAneuwT1BVeNAehPTpcrAz64,9934
+agnpy/spectra.py,sha256=DOaEc_u_KT_V5YPu9owkHDUBQtVvP838LsNm9SWk7yQ,14944
+agnpy/synchrotron.py,sha256=kiDRh00M3NHdRF55mp_DR0J_-nyCfHTQA7yGLs5RYZU,7226
+agnpy/targets.py,sha256=PDhHz58cB0Sb3ljclZxEBUzFKerk9CMVuyTZuZ3izoc,10080
+agnpy/tau.py,sha256=aGYp3892q7LNq4vh-C6xVHIq9H4o4N_PuJtrNhgndgE,4991
+agnpy-0.0.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+agnpy-0.0.4.dist-info/METADATA,sha256=Te0fsd4CIVVbBa1oTyTs-UifzWClKlWhvO92j7C3EgE,1527
+agnpy-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+agnpy-0.0.4.dist-info/top_level.txt,sha256=25v5s_28BGBJz_-1427l06Ny2sOICyWsObxxsFgAgzI,6
+agnpy-0.0.4.dist-info/RECORD,,
