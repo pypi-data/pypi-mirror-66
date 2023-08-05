@@ -1,0 +1,6 @@
+numpy
+pandas
+Pillow
+opencv-contrib-python==3.*
+ruamel.yaml
+watchdog
