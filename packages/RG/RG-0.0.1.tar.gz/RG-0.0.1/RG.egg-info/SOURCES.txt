@@ -1,0 +1,13 @@
+setup.py
+RG/__init__.py
+RG/fct_PCA.py
+RG/fct_PLS.py
+RG/fct_R2.py
+RG/fct_colorspectra.py
+RG/fct_regress.py
+RG/fct_snv.py
+RG/fct_xlsread.py
+RG.egg-info/PKG-INFO
+RG.egg-info/SOURCES.txt
+RG.egg-info/dependency_links.txt
+RG.egg-info/top_level.txt
