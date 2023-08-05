@@ -1,0 +1,7 @@
+README.md
+find_duplicate_files
+setup.py
+find_duplicate_files.egg-info/PKG-INFO
+find_duplicate_files.egg-info/SOURCES.txt
+find_duplicate_files.egg-info/dependency_links.txt
+find_duplicate_files.egg-info/top_level.txt
