@@ -1,0 +1,14 @@
+hydration/__init__.py,sha256=KIYqB1W3nP2CyRnX6TeQpZDFHXVU3JycZksU1QFCjH0,1184
+hydration/base.py,sha256=JY1rnOOIL8Q9OdXp87AdeKHJQjXFPC65aih_91sL5PI,11388
+hydration/endianness.py,sha256=nSDyIYiltWy7eTm6ZhiZlhk1VV-HVGNrx06btWQgC2g,153
+hydration/fields.py,sha256=Hx_gT0dnmi-1wrbc6w3yC_UFD8a4UgxdqvUrHfc1UU8,2155
+hydration/helpers.py,sha256=MbrcRzc4_TYBh81uBIunuQJ204ybkh_8K1RsipQcs2I,171
+hydration/message.py,sha256=QZUZUhy-Fx4siMsxir1s_TSLInqYcNCY-guXEUF-nwE,5875
+hydration/scalars.py,sha256=OOVHn1Uqp9J2EPONauzHqts7cKzO4QuMu7czZf7uavo,7658
+hydration/validators.py,sha256=joZ8WZnxlLEBcypOs69Qrogk2nCXFRLzj0gq7KCU8do,3057
+hydration/vectors.py,sha256=k-aa6so29dHtMK5ieTxpyXcfFPbdTkzNLKC7yoWsVLU,5145
+hydration-2.0.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+hydration-2.0.0.dist-info/METADATA,sha256=R0gd98LJcPjw72WVa3W5WyZt8MCXBm1ZcaGpkYAFvUA,2742
+hydration-2.0.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+hydration-2.0.0.dist-info/top_level.txt,sha256=wyNlVQf_9LIjGCxI196QtQY4G_VV_g0q19VFJ3r-c_I,10
+hydration-2.0.0.dist-info/RECORD,,
