@@ -1,0 +1,20 @@
+python-dateutil>=2.8.1
+typeguard>=2.7.0
+
+[:python_version < "3.7"]
+dataclasses
+
+[dev]
+autopep8
+black
+flake8
+jsonschema
+pyhamcrest
+pylint
+pytest
+pytest-testmon
+pytest-watch
+httpretty
+setuptools
+twine
+wheel
