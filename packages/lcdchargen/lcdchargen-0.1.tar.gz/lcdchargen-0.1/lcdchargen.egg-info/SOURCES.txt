@@ -1,0 +1,10 @@
+README.md
+setup.py
+lcdchargen/__init__.py
+lcdchargen/lcdchargen.py
+lcdchargen.egg-info/PKG-INFO
+lcdchargen.egg-info/SOURCES.txt
+lcdchargen.egg-info/dependency_links.txt
+lcdchargen.egg-info/entry_points.txt
+lcdchargen.egg-info/requires.txt
+lcdchargen.egg-info/top_level.txt
