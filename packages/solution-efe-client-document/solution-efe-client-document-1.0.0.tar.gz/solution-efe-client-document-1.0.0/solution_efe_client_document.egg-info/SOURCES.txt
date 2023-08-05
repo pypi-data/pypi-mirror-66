@@ -1,0 +1,9 @@
+README.md
+setup.py
+solution_efe_client_document/__init__.py
+solution_efe_client_document/documentService.py
+solution_efe_client_document.egg-info/PKG-INFO
+solution_efe_client_document.egg-info/SOURCES.txt
+solution_efe_client_document.egg-info/dependency_links.txt
+solution_efe_client_document.egg-info/requires.txt
+solution_efe_client_document.egg-info/top_level.txt
