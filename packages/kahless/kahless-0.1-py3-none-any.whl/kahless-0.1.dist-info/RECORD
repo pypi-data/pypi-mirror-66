@@ -1,0 +1,8 @@
+kahless/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kahless/api.py,sha256=4W9Y78Qp-VmnMpfi01hdNYMcqLvbSrlCp_EAjswGRhk,3816
+kahless/middleware.py,sha256=CwavRPcPVopKc3qu2RDQcApaNTpprqb4WlZv_ovwTIY,674
+kahless/response.py,sha256=IMD45MFRatvSG6530a7UB2hKrSAkePIwnMYCTFKq6U0,873
+kahless-0.1.dist-info/LICENSE,sha256=oI2yNgZML9j7cJIYKFiuAclAXJwL3dqLZY8ZOv9VD3A,1524
+kahless-0.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+kahless-0.1.dist-info/METADATA,sha256=-UNy3kZ3ROpadjnILoGdMNDAj9FzKBcuiN-72Yz2ZG8,800
+kahless-0.1.dist-info/RECORD,,
