@@ -1,0 +1,11 @@
+README.md
+setup.py
+fitting/__init__.py
+fitting/convertDataToJson.py
+fitting/fittingScript.py
+fitting/myapp.py
+fitting/scroll.py
+fitting_slaven92.egg-info/PKG-INFO
+fitting_slaven92.egg-info/SOURCES.txt
+fitting_slaven92.egg-info/dependency_links.txt
+fitting_slaven92.egg-info/top_level.txt
