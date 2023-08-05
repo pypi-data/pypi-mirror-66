@@ -1,0 +1,4 @@
+[console_scripts]
+run_sql = src.run_sql:main
+runner = src.runner:main
+
