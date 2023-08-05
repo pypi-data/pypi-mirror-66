@@ -1,0 +1,15 @@
+README.md
+setup.py
+ansible_filter/__init__.py
+ansible_filter/change_set.py
+ansible_filter/form_urlencode.py
+ansible_filter/group_by.py
+ansible_filter/helpers.py
+ansible_filter/network.py
+ansible_filter/omit.py
+ansible_filter/pick.py
+ansible_filter.egg-info/PKG-INFO
+ansible_filter.egg-info/SOURCES.txt
+ansible_filter.egg-info/dependency_links.txt
+ansible_filter.egg-info/not-zip-safe
+ansible_filter.egg-info/top_level.txt
