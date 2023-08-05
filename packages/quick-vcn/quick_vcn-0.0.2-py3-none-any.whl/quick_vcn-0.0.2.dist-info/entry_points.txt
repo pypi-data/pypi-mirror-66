@@ -1,0 +1,2 @@
+[console_scripts]
+quick-vcn = quick_vcn.cmd:main

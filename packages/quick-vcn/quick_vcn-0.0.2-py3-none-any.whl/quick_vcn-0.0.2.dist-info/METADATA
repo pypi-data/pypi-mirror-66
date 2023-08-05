@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: quick-vcn
+Version: 0.0.2
+Summary: Set up an OCI VCN and components quickly
+Home-page: UNKNOWN
+Author: jan grant 
+Author-email: quick-vcn@ioctl.org
+License: Apache License 2.0
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: argcomplete
+Requires-Dist: oci
+
+# Set up an OCI VCN and components quickly
+
+## To install:
+
+    pip install -e .
+
+## To use:
+
+    quick-vcn --profile YOUR-PROFILE \
+        --compartment YOUR-COMPARTMENT-NAME \
+        --region uk-london-1 \
+        [ --vcn-name "net" ] \
+        [ --vcn-cidr 10.0.0.0/16 ] \
+        [ --subnet-name "sub" ] \
+        [ --subnet-cidr 10.0.0.0/24 ]
+
