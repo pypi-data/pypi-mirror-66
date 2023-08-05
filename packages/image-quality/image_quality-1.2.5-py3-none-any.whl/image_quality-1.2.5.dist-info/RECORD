@@ -1,0 +1,17 @@
+imquality/__init__.py,sha256=mVbto7ql37Z5qaxZdvFimhabXBR9vUiM-sBD79-zjmQ,21
+imquality/brisque.py,sha256=lgv1KUabzsUx0e6NfNVrHTOigoW_snhvHOkuodGmqqs,4911
+imquality/statistics.py,sha256=MeeSI4HOZBUtW02dEQUADRj8U5qXbOqB5-hS4w8RjL4,3474
+imquality/utils.py,sha256=I4rlC0K5SyxtHiaRrfU8k1mLFSByq0lGfbB9GffBVE4,382
+imquality/datasets/__init__.py,sha256=ioOAVmZbD7-lGhLwFF6-AwzrrjsuuT7L9SmfHWyC1Ho,242
+imquality/datasets/live_iqa.py,sha256=X86zmb87HjsCz5-S82Cmao9YUdovVYPZvgZuKJeJNNM,6318
+imquality/datasets/tid2013.py,sha256=Ik907e3Gb1-YL57P2TKNi2wP1LpoUd8POHar1kiGJrc,2751
+imquality/datasets/url_checksums/live_iqa.txt,sha256=ygOZ8KOZ60xVU6d4ExekltjXTn59HCYCWfd4sx0c5wA,108
+imquality/datasets/url_checksums/tid2013.txt,sha256=uhbLYO3I3ib0n-LCykvJFoGG0D2WVd281umzoQ8wZ_A,112
+imquality/models/__init__.py,sha256=w_KTTU-2_cSR_xik7ZiPicB1vtYMqfmd4AO-E9pYL1Y,68
+imquality/models/brisque_svm.txt,sha256=GVJvt5nEx5kszBCfz-zdsll2ugJLGUzT7iddJ-iQnI0,351414
+imquality/models/normalize.pickle,sha256=qRdT_nCI7-C0Dk0JExUgH9sGeWb8Z4XPRl4eqwYKzak,686
+image_quality-1.2.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+image_quality-1.2.5.dist-info/METADATA,sha256=M4cZ6IGtFlmrZEsIX6fNGvbA-koqJPTyKIwZYzQvcKU,3893
+image_quality-1.2.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+image_quality-1.2.5.dist-info/top_level.txt,sha256=oyK0T-akl121-Lh-4Hp5sVUe2v8FncUpw61-ER2p8Aw,10
+image_quality-1.2.5.dist-info/RECORD,,
