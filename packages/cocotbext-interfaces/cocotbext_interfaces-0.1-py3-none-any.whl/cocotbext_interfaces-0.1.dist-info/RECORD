@@ -1,0 +1,12 @@
+cocotbext/interfaces/__init__.py,sha256=J83EJKLH3rQ1af7HP0917I_H1oRqiyM6TcGSOAuR0dw,5623
+cocotbext/interfaces/model.py,sha256=TM2Fl5mVTboUtu3SbllCKBe38na4bOjBTxOmkdgCq8U,16889
+cocotbext/interfaces/signal.py,sha256=2iFcgK-MO6S8jGmzpMGlTe-TPyexmTdRhpHk68HQdmw,9005
+cocotbext/interfaces/avalon/__init__.py,sha256=Yt-RCqcjSEtNqekV8xLvSkzUR1bLG7S1IMvoLhXXpac,3945
+cocotbext/interfaces/avalon/driver.py,sha256=nHzVL2M1BEwF6ELumpz9pm7c7UuGSFBXi3x_sDj4gqU,1254
+cocotbext/interfaces/avalon/monitor.py,sha256=ljfLioOW4Q8M6iNK_7lNE_O241472s2u76bj4ucLrKY,1274
+cocotbext/interfaces/avalon/streaming.py,sha256=NKz2jlud1Q19gIDPB3zn_HX51m1iEv9gFyNMIWfr8WU,12960
+cocotbext_interfaces-0.1.dist-info/LICENSE,sha256=ZTqzHiOUfSbN_pVsYM1O_yTtlcdC9EFZGgWlMoVltb8,1889
+cocotbext_interfaces-0.1.dist-info/METADATA,sha256=JsZS_L5qOsCK_0XU_FTuKqjBMp4Zuqq70VX3lut-MM0,445
+cocotbext_interfaces-0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+cocotbext_interfaces-0.1.dist-info/top_level.txt,sha256=CEzgDDbvABi5X1TOqXPbyRc2Bsf41BTwKc5T8riPRPM,10
+cocotbext_interfaces-0.1.dist-info/RECORD,,
