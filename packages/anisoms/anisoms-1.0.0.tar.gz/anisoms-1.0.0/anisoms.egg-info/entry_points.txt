@@ -1,0 +1,7 @@
+[console_scripts]
+ams-asc-to-csv = anisoms.asc_to_csv:main
+ams-params-from-asc = anisoms.params_from_asc:main
+ams-plot = anisoms.plot:main
+ams-print-ran-tensor = anisoms.print_ran_tensor:main
+ams-tensor-to-dir = anisoms.tensor_to_dir:main
+

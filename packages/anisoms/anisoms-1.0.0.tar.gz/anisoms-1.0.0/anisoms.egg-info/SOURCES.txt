@@ -1,0 +1,15 @@
+README.md
+setup.py
+anisoms/__init__.py
+anisoms/anisoms.py
+anisoms/asc_to_csv.py
+anisoms/params_from_asc.py
+anisoms/plot.py
+anisoms/print_ran_tensor.py
+anisoms/tensor_to_dir.py
+anisoms.egg-info/PKG-INFO
+anisoms.egg-info/SOURCES.txt
+anisoms.egg-info/dependency_links.txt
+anisoms.egg-info/entry_points.txt
+anisoms.egg-info/requires.txt
+anisoms.egg-info/top_level.txt
