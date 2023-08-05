@@ -1,0 +1,9 @@
+scons_tool_dvipdfm-0.2.0-py3.8-nspkg.pth,sha256=K-evxfATS_KMSc8W9xb6BTG2JIWBeWbSkp8OFupMQjE,554
+sconstool/dvipdfm/__init__.py,sha256=F4H_TQgqHj6Clfhs3meTUtPTnwrob5pPVJNwW-90deU,1533
+sconstool/dvipdfm/about.py,sha256=PDjFOoi9R53D2NJCgLhZPRQp0r8m3uKN0ybiXOX3r_s,228
+sconstool/dvipdfm/dvipdfm.py,sha256=suvKZQR6US0UEQsgFGqrtfF3gaf9finSR57AHHHDMok,4024
+scons_tool_dvipdfm-0.2.0.dist-info/METADATA,sha256=hdz7-AMnKCBymc2mCDmpi3cr8-19XKsek-eGMRjVA60,5265
+scons_tool_dvipdfm-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+scons_tool_dvipdfm-0.2.0.dist-info/namespace_packages.txt,sha256=tuub_RQZ7m4zLPVVdJyKxskMHVS7nSrKO-Mfk_wsvgU,10
+scons_tool_dvipdfm-0.2.0.dist-info/top_level.txt,sha256=tuub_RQZ7m4zLPVVdJyKxskMHVS7nSrKO-Mfk_wsvgU,10
+scons_tool_dvipdfm-0.2.0.dist-info/RECORD,,
