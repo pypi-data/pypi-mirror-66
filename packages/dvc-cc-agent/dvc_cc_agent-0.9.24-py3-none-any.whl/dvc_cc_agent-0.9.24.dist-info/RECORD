@@ -1,0 +1,11 @@
+dvc_cc_agent/__init__.py,sha256=EhESaE8FClldrDRTOfJtxp86OsGLKaZpIwFT0uOpM-s,64
+dvc_cc_agent/__main__.py,sha256=C0HRExLMeSdaUe8Vj7Q7JXfz32sEkrU5v5_cCkdA9sA,81
+dvc_cc_agent/bcolors.py,sha256=9oFFNRbC0kw6vcVi9wMFOaE45mXAJe_9__kxbkHLRYU,414
+dvc_cc_agent/copy_output_files.py,sha256=8gRCTnUDtjUboocJIcntHuwaRylV4O3BsgTRTdzOCac,1363
+dvc_cc_agent/main.py,sha256=ujCN2BpjBH7ikhBGFfHYJrkatXAZmBLY9fvFvbcDCng,27548
+dvc_cc_agent/start_dvc_repro.sh,sha256=VssJb9UCkhyI0krsrRzdkkCBoIJWSnkGm5ofSUwKcG0,242
+dvc_cc_agent/version.py,sha256=YuIiWl_QVk1v14nidjlfUVKXUhfiKdi-7QES3A3azxs,19
+dvc_cc_agent-0.9.24.dist-info/entry_points.txt,sha256=GKRjPO1QE6ci79b9WJgmrpcveKIePq1b_mBdmIrfAkc,55
+dvc_cc_agent-0.9.24.dist-info/WHEEL,sha256=C90Mwr_Jk4_IPKbEQeJHH_TSkLAVFEZOMPO9_4HdXQI,85
+dvc_cc_agent-0.9.24.dist-info/METADATA,sha256=reJIwyPt7qraNxjIRMchKsrpg-S85Y_-GC8ofDCWj5c,576
+dvc_cc_agent-0.9.24.dist-info/RECORD,,
