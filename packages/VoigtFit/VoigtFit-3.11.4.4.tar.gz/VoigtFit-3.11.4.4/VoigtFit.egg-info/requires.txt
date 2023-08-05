@@ -1,0 +1,7 @@
+matplotlib
+numpy
+scipy
+lmfit
+h5py>=2.1
+astropy
+numba<=0.47
