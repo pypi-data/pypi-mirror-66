@@ -1,0 +1,10 @@
+argcomplete
+colorama
+yarl
+
+[dev]
+docutils==0.15.2
+black==19.10b0
+
+[yaml]
+pyyaml
