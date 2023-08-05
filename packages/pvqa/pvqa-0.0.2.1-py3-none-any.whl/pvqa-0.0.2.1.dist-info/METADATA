@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pvqa
+Version: 0.0.2.1
+Summary: Question Answering System for Plants
+Home-page: UNKNOWN
+Author: PlantVillage
+License: UNKNOWN
+Keywords: plants question answering natural language processing deep learning cassava
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: Flask (==1.1.1)
+Requires-Dist: flask-cors (==3.0.8)
+Requires-Dist: joblib (==0.13.2)
+Requires-Dist: pandas (==0.25.0)
+Requires-Dist: prettytable (==0.7.2)
+Requires-Dist: transformers (==2.1.1)
+Requires-Dist: scikit-learn (==0.21.2)
+Requires-Dist: tika (==1.19)
+Requires-Dist: torch (==1.2.0)
+Requires-Dist: markdown (==3.1.1)
+Requires-Dist: tqdm (==4.32.2)
+Requires-Dist: wget (==3.2)
+
+UNKNOWN
+
+
