@@ -1,0 +1,12 @@
+karel/Karel.py,sha256=P91REUqyE2Tz-O-FS_7dtPwiQ9sJavEg0ua-LwkKLUw,12967
+karel/KarelApplication.py,sha256=rhL5qoObZqcgL-BVxKpp5Nx7b5WdbMPf-7z-QbEpZVM,12863
+karel/KarelCanvas.py,sha256=iMxkOkYUyxIANGVH09_pIEo1mUmqXF3faXMNxsvNTrw,17474
+karel/KarelWorld.py,sha256=S7gSSCij7WknZFTslm42Qvu8D3lyV10wfpA5iuwP5DI,12362
+karel/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+karel/kareldefinitions.py,sha256=DIFDbon-1_xbwnEBj0Ze4vAt8tTQWkXBq_gYSmcTcBk,4291
+karel/stanfordkarel.py,sha256=wbP_xcNG97MsU1yy6X0AfOoPbwXstkogioa4tohF1bw,3205
+stanfordkarel-0.0.1.dist-info/LICENSE,sha256=BG98wJh8OVnY-yqhPcrURJNI3zX3JM-sQc-YmrFF1vg,1072
+stanfordkarel-0.0.1.dist-info/METADATA,sha256=DP-76FwiwJV1njrAZz0ynrSIXfofoi3LtwskuSmpBdI,521
+stanfordkarel-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+stanfordkarel-0.0.1.dist-info/top_level.txt,sha256=3FFxCxPhWLyquHBR_UX1aMxdmrFYRpwpTRPF1F0E174,6
+stanfordkarel-0.0.1.dist-info/RECORD,,
