@@ -1,0 +1,16 @@
+slang/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slang/chunkers.py,sha256=lehFUq4NAwod-qgNS3DBWrY4AX410AImWw5GGusvIzQ,14132
+slang/core.py,sha256=D3CzaP6pv8t0K5igXHgLbkAo7fAJCat12LNOHsW0Cus,3338
+slang/featurizers.py,sha256=NwoPE22cbK6xfckxnzRf5ZutydPnJiQak2ruSS2UssQ,8150
+slang/snip_stats.py,sha256=7ETWJF7sesOiSZWKhYeG8omAp_t8inDrDNiBrYR00dM,11720
+slang/stypes.py,sha256=LTLc3Ib63REhPw67yI1pDo9blyzpFq9hLFtnTTrWHkY,4749
+slang/util.py,sha256=OX_CRjncE6pVSOZR3I3sT1k39Y_0RNn9iD3wEWnLvUw,9646
+slang/util_data.py,sha256=U-JhENLZWwz7i2xnktva_6GWABJZRouEpeWlUGHLGeM,36039
+slang/scrap/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slang/scrap/scrap_01.py,sha256=eM53syWZ3zBUb9YjwHaKERp0r09Qy8_F4z1KjXffYtM,1607
+slang/scrap/the_apis_i_wish_for.py,sha256=c9sGtmgudEgp2E9bGT75ig6ajyip2YuO_6pubN1IFGk,311
+slang-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+slang-0.0.1.dist-info/METADATA,sha256=8_xmfTyDUvpLtFtvZOAR875rgV6gZF4C_BKgJlgiV-w,21657
+slang-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+slang-0.0.1.dist-info/top_level.txt,sha256=YWdXvXgekLA4_Aj8hTaiksdBshRzw-oOrN7wzyA7D10,6
+slang-0.0.1.dist-info/RECORD,,
