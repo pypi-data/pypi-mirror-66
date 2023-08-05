@@ -1,0 +1,49 @@
+Metadata-Version: 1.1
+Name: flask_extension_ftm
+Version: 1.5
+Summary: Simple configuration system for mail, required for forms packages
+Home-page: https://github.com/AndrasHPataki/flask_extension_ftm/
+Author: AndrásPataki
+Author-email: andras.h.pataki@gmail.com
+License: MIT
+Download-URL: https://github.com/AndrasHPataki/flask_extension_ftm/archive/1.5.tar.gz
+Description: 
+          #FORM TO MAIL (core Library)
+          Pre-configured contact forms package system for sending MAIL
+          **Description**
+        
+          Form to email is a new way to create contact forms in a few steps.
+          Here are some advantages:
+        
+          1. Saves more than 25 lines of code
+        
+          2. Follows DOCKER style, where the user receives a package with pre-programmed formswith bootstrap4.
+        
+          3. Email routing with easy configuration
+        
+          4. Self-structured emails, with pre-defined body text.
+        
+          5. Data validation using TDD (Test Drive Development) concept
+        
+          6. Inserting only one variable, for all forms in your Html.
+        
+          7. You have complete freedom to edit your package, being able to make customizations.
+        
+          **This specific library is just the CORE for routing emails. The package form you download separately.**
+        
+          !!Follow the steps in the documentation to learn how to install Form-To-mail!!
+        
+          [README_DOCUMENTATION](https://form-to-mail.pataki.tech).
+        
+          This library is recommended to integrate with the forms package. 
+          It works to simplify sending emails.
+Keywords: Mail,Delivery,Form,Flask,flask-extension
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
