@@ -1,0 +1,9 @@
+config_path: /home/sadegh/.config/irancell/config.yaml
+
+irancell:
+  auth:
+    phone: ''
+    password: ''
+    session:
+      base_path: .data/irancell/sessions
+      file_name: session
