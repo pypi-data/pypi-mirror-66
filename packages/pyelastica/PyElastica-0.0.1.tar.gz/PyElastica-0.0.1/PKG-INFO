@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: PyElastica
+Version: 0.0.1
+Summary: Elastica is a software to simulate the dynamics of filaments that, at every cross-section, can undergo all six possible modes of deformation, allowing the filament to bend, twist, stretch and shear, while interacting with complex environments via muscular activity, surface contact, friction and hydrodynamics.
+Home-page: https://github.com/gazzolalab/pyelastica
+Author: Gazzola Lab
+Author-email: armant2@illinois.edu
+License: MIT
+Download-URL: https://github.com/GazzolaLab/PyElastica/archive/0.0.1.tar.gz
+Description: 
+        # PyElastica 
+        ![Build_status](https://travis-ci.com/GazzolaLab/PyElastica.svg?branch=master)[![codecov](https://codecov.io/gh/GazzolaLab/PyElastica/branch/master/graph/badge.svg)](https://codecov.io/gh/GazzolaLab/PyElastica)[![Documentation Status](https://readthedocs.org/projects/pyelastica/badge/?version=latest)](https://docs.cosseratrods.org/en/latest/?badge=latest)
+        
+        
+        PyElastica is the python implementation of **Elastica**, which is a *free* and *open-source* software project for the simulation of assemblies of slender, one-dimensional structures using Cosserat Rod theory. More information about Elastica and Cosserat rod theory is available at the Elastica [project website](https://cosseratrods.org)
+        
+        The current version of PyElastica released here is the educational version. This version is a straight forward Python implementation of the Elastica code making heavy use of numpy. As such, it is very slow. We are working on a significantly accelerated Python version of the code that we hope to release soon.
+        
+        ## Installation 
+        The easiest way to install PyElastica is with PIP **(not yet implemented)**. PyElastica requires Python 3.7. 
+        
+        ~~~python
+            pip install pyelastica 
+        ~~~
+        
+        ## Documentation
+        Documentation of PyElastica is available at [docs.cosseratrods.org](https://docs.cosseratrods.org/)
+        
+        PyElastica is developed by the [Gazzola Lab](http://mattia-lab.com/) at the University of Illinois at Urbana-Champaign. 
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Requires-Python: >=3.4.0
+Description-Content-Type: text/markdown
+Provides-Extra: Optimization and Inverse Design
