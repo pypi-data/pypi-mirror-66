@@ -1,0 +1,8 @@
+scons_tool_gcccov-0.2.0-py3.8-nspkg.pth,sha256=K-evxfATS_KMSc8W9xb6BTG2JIWBeWbSkp8OFupMQjE,554
+sconstool/gcccov/__init__.py,sha256=1fjwajC0s2hFipL0s9hDo2Hx7qmyo55Oz6n3USxFqyY,13450
+sconstool/gcccov/about.py,sha256=nhjn2bJPguKTYsvuEBrPUOVqVhNJe9mQV7qDRGG3NJ0,229
+scons_tool_gcccov-0.2.0.dist-info/METADATA,sha256=p1uTv9FJA2fcyHyA5up84pNua4wmIl4xd0msNiEfyAk,16180
+scons_tool_gcccov-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+scons_tool_gcccov-0.2.0.dist-info/namespace_packages.txt,sha256=tuub_RQZ7m4zLPVVdJyKxskMHVS7nSrKO-Mfk_wsvgU,10
+scons_tool_gcccov-0.2.0.dist-info/top_level.txt,sha256=tuub_RQZ7m4zLPVVdJyKxskMHVS7nSrKO-Mfk_wsvgU,10
+scons_tool_gcccov-0.2.0.dist-info/RECORD,,
