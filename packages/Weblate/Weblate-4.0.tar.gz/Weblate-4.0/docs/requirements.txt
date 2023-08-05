@@ -1,0 +1,4 @@
+pygments
+sphinx-jsonschema
+sphinx-rtd-theme
+sphinxcontrib-httpdomain
