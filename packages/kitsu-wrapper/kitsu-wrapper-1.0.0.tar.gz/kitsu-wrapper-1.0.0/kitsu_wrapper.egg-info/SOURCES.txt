@@ -1,0 +1,11 @@
+README.rst
+setup.py
+kitsu/__init__.py
+kitsu/client.py
+kitsu/errors.py
+kitsu/models.py
+kitsu_wrapper.egg-info/PKG-INFO
+kitsu_wrapper.egg-info/SOURCES.txt
+kitsu_wrapper.egg-info/dependency_links.txt
+kitsu_wrapper.egg-info/requires.txt
+kitsu_wrapper.egg-info/top_level.txt
