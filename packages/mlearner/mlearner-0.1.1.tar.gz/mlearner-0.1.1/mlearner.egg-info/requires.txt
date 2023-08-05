@@ -1,0 +1,16 @@
+matplotlib
+pandas
+scikit-learn
+numpy
+dlib
+seaborn
+shap
+hyperopt
+scipy
+xgboost
+lightgbm
+catboost
+scikit-image
+pytest<5.0.0,>=4.6.6
+mkdocs
+setuptools
