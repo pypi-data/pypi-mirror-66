@@ -1,0 +1,9 @@
+dataclass_cli/__init__.py,sha256=xNzPrbWoihmk2x9r3iDKRh97k6zH8zz4Vxw79DtaeCw,46
+dataclass_cli/parser.py,sha256=xmMhRdSZ1Kguo2JLh4xwp3N7cJzq4FoRkJapWSLJY5k,1631
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_dc_cli.py,sha256=0kyvxJJBNZTzK1KJ_OCn3-_7y_W2g25alRtQRqc1_b8,4451
+dc_cli-0.0.4.dist-info/LICENSE,sha256=G9A867yrX-cYEicnaqw0XaPa0ag4I7FNCf2tDwOzA4k,1074
+dc_cli-0.0.4.dist-info/METADATA,sha256=OtX-3SbDxtVHyPTJDbPPaPcB-XZdTiVI5APaVUku-W4,752
+dc_cli-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+dc_cli-0.0.4.dist-info/top_level.txt,sha256=gSUhhoj4H6Fn2vQYH7PmjFVMDT2w2uYtwpA7xyxyDlE,20
+dc_cli-0.0.4.dist-info/RECORD,,
