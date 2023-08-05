@@ -1,0 +1,7 @@
+README.md
+setup.py
+getgdelt/__init__.py
+getgdelt.egg-info/PKG-INFO
+getgdelt.egg-info/SOURCES.txt
+getgdelt.egg-info/dependency_links.txt
+getgdelt.egg-info/top_level.txt
