@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: dame-cli
+Version: 3.4.0
+Summary: A execution manager cli for execution
+Home-page: https://github.com/mintproject/dame_cli
+Author: Maximiliano Osorio
+Author-email: mosorio@isi.edu
+License: Apache-2
+Description: # Desktop Application for Model Execution (DAME)
+        
+        ## Requeriments
+        
+        ### Singularity 
+        
+        The application needs Singularity to run the containers. 
+        
+        - [Installation on Linux](https://sylabs.io/guides/3.5/admin-guide/installation.html#)
+        - [Installation on Windows](https://sylabs.io/guides/3.5/admin-guide/installation.html#windows)
+        - [Installation on Mac](https://sylabs.io/singularity-desktop-macos/)
+        
+        
+        If you would like support for Docker, let us know: [Supoort Docker](https://github.com/mintproject/dame_cli/issues/15)
+        
+        ### Python 3
+        
+        The applications needs Python. 
+        
+        - [Installation on Linux](https://realpython.com/installing-python/#linux)
+        - [Installation on Windows](https://realpython.com/installing-python/#windows)
+        - [Installation on Mac](https://realpython.com/installing-python/#macos-mac-os-x)
+        
+        ## Installation
+        
+        To install the execution application, open a terminal and run:
+        
+        ```bash
+        pip install dame-cli
+        ```
+        Full documentation of the CLI, including usage examples, can be found at: https://dame-cli.readthedocs.io/en/latest/
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: Unix
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
