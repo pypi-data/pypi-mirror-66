@@ -1,0 +1,15 @@
+ssub/__init__.py,sha256=sf0i95Xtehr7MyYp87BhVw8oRXcZ75ZQBRpoGtXANp4,291
+ssub/schema.json,sha256=3Z2Z8vkF3myeazsjJjV9o6eQ404Mhds1u_dTIiVi4hI,1840
+ssub/subscriber.py,sha256=JkuD12Q1KDO5LeWWOmUj6FamLq8jSp_n1bit_MPQlOk,24685
+ssub/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ssub/scripts/create_notification_configuration.py,sha256=CswRVP9R00pZwlW8kMzdvmg8wsgJvk2WUCo-0oqnDas,1598
+ssub/scripts/launch_ssub.py,sha256=NFfSfaQwbojH54_p2e1KLKBqxapo-Sj8qZMMYaQsdaQ,1480
+ssub/scripts/send_test_email.py,sha256=SU8rBlQlnbGUqJNY37RVtKceMo-y0Ny0CO3CVg_LBpo,1348
+ssub-0.2.1.data/scripts/create_notification_configuration.py,sha256=NmUNw-s0AFjBq-0qewtOucG44I92_T0KRI4naeI6zCQ,1584
+ssub-0.2.1.data/scripts/launch_ssub.py,sha256=lhUcySyBKEwD6SgB6O38HrE76LVDpIyRVDLe28J6p-s,1466
+ssub-0.2.1.data/scripts/send_test_email.py,sha256=2Dfp2ux0_V61jsc-DbA4PsnvEdUJyDxe1MJIdvqaFU0,1334
+ssub-0.2.1.dist-info/METADATA,sha256=jmVyGqs6V_nbu0sIthQA5bLXA5lqWdm5mOEiXlLsIjw,10033
+ssub-0.2.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+ssub-0.2.1.dist-info/entry_points.txt,sha256=Sp9WTpMTCgjE6JOp7NaTdqBSexEMd4BLh4D45mbbjvU,56
+ssub-0.2.1.dist-info/top_level.txt,sha256=TSbT6xicQQXqHKdX-bIiGqf2aHgJhiRGTj5fqBiripY,5
+ssub-0.2.1.dist-info/RECORD,,
