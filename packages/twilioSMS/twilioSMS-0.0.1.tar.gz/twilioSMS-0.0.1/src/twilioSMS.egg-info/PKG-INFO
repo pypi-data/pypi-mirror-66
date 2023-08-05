@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: twilioSMS
+Version: 0.0.1
+Summary: twilio package required (https://pypi.org/project/twilio/), credit goes to cleverprogrammer, who made the code that I added a GUI to
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: go to https://www.twilio.com and sign up, follow instructions, then import account sid, auth token, and twilio number
+        
+        also type in 'pip install twilio' in the terminal
+        
+        credit goes to CleverProgrammer for creating the base code for this program
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
