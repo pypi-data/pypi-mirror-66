@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: alphabet-soup-lambert
+Version: 0.1
+Summary: A word search project
+Home-page: https://github.com/alambe13/alphabet-soup
+Author: Angela Lambert
+Author-email: alambe13@terpmail.umd.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+
+# Alphabet Soup
+
+> You have been contracted from a newspaper tasked with the job of providing an answer key to their word search for the 
+>Sunday print. The newspaper's word search is a traditional game consisting of a grid of characters in which a selection 
+>of words have been hidden. You are provided with the list of words that have been hidden and must find the words within 
+>the grid of characters. 
+
+## Requirements
+Load a character grid with scrambled words embedded within it and a words list of the words to find.  The following 
+conditions apply:
+
+- Within the grid of characters, the words may appear vertical, horizontal or diagonal.
+- Within the grid of characters, the words may appear forwards or backwards. 
+- Words that have spaces in them will not include spaces when hidden in the grid of characters.
+
+# Execution
+When approaching this problem, I first made a list of what I needed- a way to read and store the words and the grid from
+the given file. I also needed to write functions that could search through the grid as well as a way to pass the 
+retrieved locations around. I decided a dictionary would be best for this so that when printing the output to the 
+console, a for-loop could just run through it. I also created a list to store the words and a 2D list to store the 
+grid. 
+
+Analyze is where the file is read and parsed. Word_find is the function that is used to create the dictionary and to 
+call each of the search functions. When running through the searches, I wanted to create a separate function for each 
+direction so that the code would be cleaner and easier to test. Vertical and horizontal are the two most straightforward
+functions- based on row and column. The diagonal searches were mostly trial and error using print statements to see
+which parts of the grid were being accessed. Using join on the list seemed the easiest way to search for a word. The
+locations list of tuples in each diagonal method made it easier to track the locations of the elements based on where 
+they were located in the current string.
+
+When testing, I created analyze as a separate function so that tests could be run without requesting the
+input file. I did do some research and attempted to make it work with a mock input file. That is something that I am
+going to continue to work with so that I can learn it. As a workaround, I created an output text file that analyze can
+write to for comparison with the answer files while running the tests. There is a test for each direction that tests 
+words going forward and backward within the grid. There is also a test that has words going in every direction to 
+ensure that all the functions work together.
+
+## Sample Data
+The following was used as one of the sample input and output datasets.
+
+### Input
+
+```
+10x10
+H A S S T A S T U I
+S E Y B S P L E A T
+B K R N A E J A U E
+I V G D F K T S B N
+G O O D E Y I S K L
+W N O E L D N I I T
+M M S L T R K X Q L
+Q U E E N J W K S A
+S A D T I V I T C A
+P I R X T O V I P Q
+TINT
+HERDED
+GOOD
+LIST
+LEAP
+SPA
+QUEEN
+TEAS
+GOOSE
+KNIT
+SEEK
+TEAS
+```
+
+### Output
+
+```
+TINT 9:4 6:4
+TEAS 0:7 3:7
+SEEK 6:2 3:5
+QUEEN 7:0 7:4
+LIST 6:9 3:6
+HERDED 0:0 5:5
+GOOSE 3:2 7:2
+LEAP 6:3 9:0
+GOOD 4:0 4:3
+SPA 0:6 2:4
+KNIT 6:6 3:6
+```
+
