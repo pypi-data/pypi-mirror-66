@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: pygame_vkeyboard
+Version: 2.0.0
+Summary: 
+        Visual keyboard for Pygame engine. Aims to be easy to use as
+        highly customizable as well.
+    
+Home-page: https://github.com/Faylixe/pygame_vkeyboard
+Author: Felix Voituret
+Author-email: felix.voituret@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/Faylixe/pygame_vkeyboard/tarball/1.1
+Description: UNKNOWN
+Keywords: pygame,keyboard
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: pygame
