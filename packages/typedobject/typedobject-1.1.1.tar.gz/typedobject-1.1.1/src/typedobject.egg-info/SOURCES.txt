@@ -1,0 +1,16 @@
+README.md
+setup.py
+src/typedobject/__init__.py
+src/typedobject/_decorator.py
+src/typedobject/_meta.py
+src/typedobject/_object.py
+src/typedobject.egg-info/PKG-INFO
+src/typedobject.egg-info/SOURCES.txt
+src/typedobject.egg-info/dependency_links.txt
+src/typedobject.egg-info/top_level.txt
+test/test_builder.py
+test/test_custom_init.py
+test/test_legacy.py
+test/test_readme.py
+test/test_sanity.py
+test/test_simple.py
