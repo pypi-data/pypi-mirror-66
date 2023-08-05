@@ -1,0 +1,62 @@
+# We set the language to c because python isn't supported on the MacOS X nodes
+# on Travis. However, the language ends up being irrelevant anyway, since we
+# install Python ourselves using conda.
+language: c
+
+os:
+    - linux
+
+# Use Travis' container-based architecture
+sudo: false
+
+env:
+    global:
+        # The following versions are the 'default' for tests, unless
+        # overidden underneath. They are defined here in order to save having
+        # to repeat them for all configurations.
+        - TOXENV='test'
+        - TOXARGS='-v'
+        - TOXPOSARGS=''
+
+matrix:
+    include:
+
+        - language: python
+          python: 3.6
+          name: Python 3.6 and pytest 4.6 (Linux)
+          env: TOXENV=py36-test-pytest46
+
+        - os: windows
+          name: Python 3.6 and pytest 5.0 (Windows)
+          env: PYTHON_VERSION=3.6
+               TOXENV=py36-test-pytest50
+
+        - os: osx
+          name: Python 3.7 and pytest 5.1 (MacOS X)
+          env: PYTHON_VERSION=3.7
+               TOXENV=py37-test-pytest51
+
+        - language: python
+          python: 3.7
+          name: Python 3.7 and pytest 5.2 (Linux)
+          env: TOXENV=py37-test-pytest52
+
+        - os: windows
+          name: Python 3.8 and pytest 5.3 (Windows)
+          env: PYTHON_VERSION=3.8
+               TOXENV=py38-test-pytest53
+
+        - os: osx
+          name: Python 3.8 and pytest dev (MacOS X)
+          env: PYTHON_VERSION=3.8
+               TOXENV=py38-test-pytestdev
+
+install:
+    - if [[ $TRAVIS_OS_NAME == osx || $TRAVIS_OS_NAME == windows ]]; then
+        git clone git://github.com/astropy/ci-helpers.git;
+        source ci-helpers/travis/setup_conda.sh;
+      fi
+
+script:
+    - pip install tox
+    - tox $TOXARGS -- $TOXPOSARGS
