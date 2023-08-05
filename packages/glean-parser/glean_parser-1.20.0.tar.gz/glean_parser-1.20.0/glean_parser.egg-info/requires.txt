@@ -1,0 +1,11 @@
+appdirs>=1.4.3
+Click>=7.0
+diskcache>=4.0.0
+iso8601>=0.1.12
+Jinja2<3.0,>=2.10.1
+jsonschema>=3.0.2
+markupsafe<2.0.0,>=1.1
+pep487==1.0.1
+PyYAML>=3.13
+yamllint>=1.18.0
+zipp<2.0,>=0.5
