@@ -1,0 +1,10 @@
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.custom-console {
+  color: white !important;
+  font-family: 'Roboto Mono', monospace !important;
+  resize: none;
+}
