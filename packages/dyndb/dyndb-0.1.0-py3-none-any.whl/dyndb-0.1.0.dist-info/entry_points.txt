@@ -1,0 +1,3 @@
+[console_scripts]
+dyndb=dyndb.cli:main
+
