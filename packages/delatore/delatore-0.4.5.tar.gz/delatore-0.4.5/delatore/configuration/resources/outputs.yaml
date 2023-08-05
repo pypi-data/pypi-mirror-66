@@ -1,0 +1,18 @@
+- name: telegram_bot
+  params:
+    parse_mode: 'MarkdownV2'
+  subscriptions:
+    - 'INFLUX_CHANGES'
+    - 'AWX_WEB_HOOK_CHANGES'
+    - 'AWX_CLIENT_OUT_CHANGES'
+
+- name: alerta
+  params:
+    endpoint: 'https://alerts.eco.tsi-dev.otc-service.com/api'
+    environment: 'CSM'
+    resource: 'csm_'
+    origin: 'delatore'
+    severity: 'minor'
+  subscriptions:
+    - 'INFLUX_CHANGES'
+    - 'INFLUX_INFO'
