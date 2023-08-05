@@ -1,0 +1,7 @@
+setup.py
+src/libzim/__init__.py
+src/libzim.egg-info/PKG-INFO
+src/libzim.egg-info/SOURCES.txt
+src/libzim.egg-info/dependency_links.txt
+src/libzim.egg-info/not-zip-safe
+src/libzim.egg-info/top_level.txt
