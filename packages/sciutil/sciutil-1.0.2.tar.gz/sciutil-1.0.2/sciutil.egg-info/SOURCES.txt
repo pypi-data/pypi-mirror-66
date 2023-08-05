@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+sciutil/__init__.py
+sciutil/__main__.py
+sciutil/biomart.py
+sciutil/msg.py
+sciutil/util.py
+sciutil.egg-info/PKG-INFO
+sciutil.egg-info/SOURCES.txt
+sciutil.egg-info/dependency_links.txt
+sciutil.egg-info/entry_points.txt
+sciutil.egg-info/requires.txt
+sciutil.egg-info/top_level.txt
