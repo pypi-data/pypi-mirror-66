@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: dmipy
+Version: 1.0.2
+Summary: dmipy: diffusion microstructure imaging in python
+Home-page: https://github.com/AthenaEPI/dmipy
+Author: Rutger Fick
+Author-email: fick.rutger@gmail.com
+Maintainer: Rutger Fick
+Maintainer-email: fick.rutger@gmail.com
+License: MIT
+Platform: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Requires: pathlib
+Requires: boto
+Requires: cvxpy
+Requires: dipy
+Requires: scipy
+Requires: numpy(>=1.13)
+Requires-Dist: pathlib
+Requires-Dist: boto
+Requires-Dist: cvxpy
+Requires-Dist: dipy
+Requires-Dist: scipy
+Requires-Dist: numpy (>=1.13)
+
+
+to be filled
+
+
