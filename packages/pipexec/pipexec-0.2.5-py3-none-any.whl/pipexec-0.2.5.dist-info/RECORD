@@ -1,0 +1,7 @@
+pipexec/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pipexec/cli.py,sha256=MrJberjvpySZ-qbymmO5WQmsXg6Vsc-9JgZwM981Pww,496
+pipexec-0.2.5.dist-info/entry_points.txt,sha256=rLgf0npAbH-flDT1YBOQS5YMHyjQeapaEE0rd3fFV6g,44
+pipexec-0.2.5.dist-info/LICENSE,sha256=KDvzGx17JqImdlWh6D-EigAWj1QufkRAThHrNJ4_PX4,1068
+pipexec-0.2.5.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+pipexec-0.2.5.dist-info/METADATA,sha256=piFeiqZNjiqcHQ5aAr07rBYErzmaJcPL5wP4xIw3650,729
+pipexec-0.2.5.dist-info/RECORD,,
