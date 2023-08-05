@@ -1,0 +1,16 @@
+solsticepy/__init__.py,sha256=0icp7fNikf7aBdLraYB_OeKFK0yG3HSAaNUvVkCQhVo,238
+solsticepy/aiming_strategy.py,sha256=5N2priDCSHvZaXuGujWpxEBd0eRm69cZZeflLiT4wv4,2073
+solsticepy/cal_field.py,sha256=FX0ipfAFsEf7-VDfRZMnSblES01DcXkgaufj-zQfSPs,6972
+solsticepy/cal_layout.py,sha256=gaTIkrsOEqZHxuaL2WA76juRnJdVT9nNkEwhL3G67uw,5957
+solsticepy/cal_sun.py,sha256=WbFgReQtY1G8JjM4Zcx__CP_phLl3C6c9faK6Q2G5Rk,12945
+solsticepy/data_spectral.py,sha256=7zDkkX7TdKBAZQzHjjlN8ru7wV13mJDP5cDyU-EfCT0,32210
+solsticepy/find_solstice.py,sha256=ZaaKqRAx-7872Rrmi12Gt5zkiKPBCWxdQhwBO_ff-ew,2485
+solsticepy/gen_vtk.py,sha256=bT6GujgjOj8o19-6gYmX-7qAMRUL1JA3d1Da-_0MDfA,1479
+solsticepy/gen_yaml.py,sha256=QrTGqm7gk6iOIm18q58_YXmEpj7QIsOB8AWfn13ERI4,18308
+solsticepy/master.py,sha256=wYRTuVXK0_Xp2au5RKc-lRQXoAuTABHER7lgi47EReE,4829
+solsticepy/process_raw.py,sha256=01hlaMMJLyZZpr_FqspdUZ6I3yds-Y34cWKOFr_mmEk,5344
+solsticepy-0.1.9.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+solsticepy-0.1.9.dist-info/METADATA,sha256=ij_OJSm79iXpraPcwOTnO1LB8LJbKz1NoU0z0I3Vby8,5486
+solsticepy-0.1.9.dist-info/WHEEL,sha256=CbUdLTqD3-4zWemf83rgR_2_MC4TeXw9qXwrXte5w4w,92
+solsticepy-0.1.9.dist-info/top_level.txt,sha256=c5ARdzyXRgD8229LQ8wl-rTsbCsxw6_cxIQi4DQdiw0,11
+solsticepy-0.1.9.dist-info/RECORD,,
