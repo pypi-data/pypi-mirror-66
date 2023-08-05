@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: archetypal
+Version: 1.3.0
+Summary: Retrieve, construct, simulate, convert and analyse building archetypes
+Home-page: https://github.com/samuelduchesne/archetypal
+Author: Samuel Letellier-Duchesne
+Author-email: samuel.letellier-duchesne@polymtl.ca
+License: MIT License
+Requires-Dist: networkx
+Requires-Dist: shapely
+Requires-Dist: geomeppy
+Requires-Dist: matplotlib (>=2.1)
+Requires-Dist: six
+Requires-Dist: eppy
+Requires-Dist: requests (>=2.18)
+Requires-Dist: pycountry
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: pandas (>=0.24)
+Requires-Dist: pyomo
+Requires-Dist: numpy (>=1.17)
+Requires-Dist: tqdm
+Requires-Dist: tabulate
+Requires-Dist: path
+Requires-Dist: tsam
+Requires-Dist: pint
+Requires-Dist: click
+Requires-Dist: outdated
+Provides-Extra: dev
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: coveralls ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: scikit-learn ; extra == 'dev'
+Requires-Dist: scipy ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: recommonmark ; extra == 'dev'
+Requires-Dist: sphinx-click ; extra == 'dev'
+
+[![Build Status](https://travis-ci.com/samuelduchesne/archetypal.svg?branch=develop)](https://travis-ci.com/samuelduchesne/archetypal)
+
+
