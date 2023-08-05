@@ -1,0 +1,6 @@
+setup.py
+coronawhy.egg-info/PKG-INFO
+coronawhy.egg-info/SOURCES.txt
+coronawhy.egg-info/dependency_links.txt
+coronawhy.egg-info/not-zip-safe
+coronawhy.egg-info/top_level.txt
