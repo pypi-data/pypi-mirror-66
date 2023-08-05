@@ -1,0 +1,9 @@
+README.md
+setup.py
+stackcoin/__init__.py
+stackcoin/exceptions.py
+stackcoin.egg-info/PKG-INFO
+stackcoin.egg-info/SOURCES.txt
+stackcoin.egg-info/dependency_links.txt
+stackcoin.egg-info/requires.txt
+stackcoin.egg-info/top_level.txt
