@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: BrowseDrive
+Version: 1.4
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: selenium (>=3.141)
+Requires-Dist: requests (>=2.23.0)
+Requires-Dist: bs4 (>=0.0.1)
+
+BrowseDrive is a package that allows for one to download the browser driver files used during browser automation with selenium. This package covers downloads for geckodriver and chromedriver. This package also has a module for the automation of browser drivers. 
+
+Installation
+Use the package manager pip to install foobar.
+pip3 install BrowseDrive==1.4
+
+Usage
+import BrowseDrive
+from BrowseDrive.driverautomator import DriverRunner
+from BrowseDrive.driverdownloader import DriverDownloader
+
+Downloading drivers 
+downloader = DriverDownloader() 
+downloader.set_savepath("") # Save path goes inside here
+downloader.download() # Starts the download process 
+
+
+Automation of browser driver 
+runner = DriverRunner() 
+runner.go("https://www.google.com") # Goes to Google.com
+runner.search_elements("input","class", "classname") 
+
