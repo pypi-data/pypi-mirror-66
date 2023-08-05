@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: fuzzy_lib
+Version: 0.2
+Summary: Fuzzy logic library containing hedges for making fuzzy_lib database queries
+Home-page: https://github.com/akali/fuzzy
+Author: Aisultan Kali
+Author-email: aisultan.kali@gmail.com
+License: MIT
+Download-URL: https://github.com/akali/fuzzy/archive/0.2.tar.gz
+Description: UNKNOWN
+Keywords: fuzzy_lib,hedge,query,database
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
