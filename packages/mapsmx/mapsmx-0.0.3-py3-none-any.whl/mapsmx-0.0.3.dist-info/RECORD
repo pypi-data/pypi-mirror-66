@@ -1,0 +1,12 @@
+mapsmx/__init__.py,sha256=hjFBsfT4Z8HMdOczWUj1Bu2r5PWFv5qYI1-UhsQeCsQ,28
+mapsmx/mapsmx.py,sha256=XrIChT-EVsjE_8__mNf-0VL70uRv1PcrKYbZ83Zj53Y,1458
+mapsmx/utils.py,sha256=Kg0Uje0BYsO9vedMBtgYmCoQPqmTcu7bBzHWHLT_LU0,857
+mapsmx/geo/ent.zip,sha256=pEKQbpyRqyP91VKsCYvkit_g8BdM1LNs413jRV1Ka38,12124296
+mapsmx/geo/mun.zip,sha256=IfrHAK2xD8QuSDXa9QXGp7I8Nwj5faGhDPyRtgT6Bok,59326600
+mapsmx/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mapsmx/tests/test_get_geo.py,sha256=gLuMJEtFdlINkmwxYwZA0finYjK5mrsLGeDOkdq2rLs,740
+mapsmx-0.0.3.dist-info/LICENSE,sha256=tXnbxQ59beeOy0tF5G1BYEFcy26L4lDfO4wprPh10Jo,1061
+mapsmx-0.0.3.dist-info/METADATA,sha256=razs7_TBORuy3ZyCYe6ZtxZ_14AYItihsJMLFUEUpX8,1700
+mapsmx-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mapsmx-0.0.3.dist-info/top_level.txt,sha256=xA1XVeMLJ68ngHqWv2CixoFsz5ISUambGL0htQRzuUk,7
+mapsmx-0.0.3.dist-info/RECORD,,
