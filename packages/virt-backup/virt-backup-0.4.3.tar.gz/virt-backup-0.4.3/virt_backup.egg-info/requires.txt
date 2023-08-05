@@ -1,0 +1,11 @@
+appdirs
+argparse
+arrow
+defusedxml
+libvirt-python
+lxml
+packaging
+PyYAML
+
+[zstd]
+zstandard
