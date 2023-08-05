@@ -1,0 +1,6 @@
+setup.cfg
+setup.py
+say21.egg-info/PKG-INFO
+say21.egg-info/SOURCES.txt
+say21.egg-info/dependency_links.txt
+say21.egg-info/top_level.txt
