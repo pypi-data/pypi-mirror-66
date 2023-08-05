@@ -1,0 +1,10 @@
+README.md
+setup.py
+formio-data/__init__.py
+formio-data/builder.py
+formio-data/components.py
+formio-data/submission.py
+formio_data.egg-info/PKG-INFO
+formio_data.egg-info/SOURCES.txt
+formio_data.egg-info/dependency_links.txt
+formio_data.egg-info/top_level.txt
