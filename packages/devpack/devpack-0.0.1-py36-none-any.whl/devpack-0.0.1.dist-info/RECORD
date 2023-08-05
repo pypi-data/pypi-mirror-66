@@ -1,0 +1,13 @@
+benchmarks/__init__.py,sha256=oaDOklRfiSSOy9N3BbVTdfmGh63xTDzzK18H5npTBDg,88
+devpack/__init__.py,sha256=ufUcdgSi_POkkrZ1VliEAE8d_9b-oBTdNYspMem7e-o,2916
+docs/__init__.py,sha256=Ulqh0ZAIdVu_Pt2rjtdE1P1syvgogS9nudYSHU63FY8,118
+docs/source/__init__.py,sha256=524z9dch4ZFnVhjJ39jmzoN3F-1oNZFgGb1IHJDSltw,101
+docs/source/conf.py,sha256=XQ3eT4bUCESq8sDWTaNc3yMYyn4hGZRBnQ5fEKK2Gjk,8411
+tests/__init__.py,sha256=oaDOklRfiSSOy9N3BbVTdfmGh63xTDzzK18H5npTBDg,88
+tests/test_sanity.py,sha256=FpGTdMSe8_4C5OX8edh3QD4t25KAIafAW2K3G2LxaxY,493
+devpack-0.0.1.dist-info/LICENSE.md,sha256=Ze_z7X0uyZMkrHwn3y1HQuPkFf3WCTjsBzrKHPA1F5U,11356
+devpack-0.0.1.dist-info/METADATA,sha256=r0OkYNC85UPZu5vQtjJ4All0UmuDyDAvUjYCzUFmCxk,1872
+devpack-0.0.1.dist-info/WHEEL,sha256=Tl8xjW8X4F35KLnN1e6enZT4GHcvzGmqx_3941M0M6Q,93
+devpack-0.0.1.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+devpack-0.0.1.dist-info/top_level.txt,sha256=XnHA8XMyWUuSOX23HqkEvDCDTwn-aAOqi0G1XHoMrF4,30
+devpack-0.0.1.dist-info/RECORD,,
