@@ -1,0 +1,12 @@
+InAppPurchase.cpp
+LICENSE
+MANIFEST.in
+README.md
+igeInAppPurchase.cpp
+igeInAppPurchase_doc_en.h
+setup.py
+igeInAppPurchase.egg-info/PKG-INFO
+igeInAppPurchase.egg-info/SOURCES.txt
+igeInAppPurchase.egg-info/dependency_links.txt
+igeInAppPurchase.egg-info/top_level.txt
+win32/InAppPurchaseImpl.cpp
