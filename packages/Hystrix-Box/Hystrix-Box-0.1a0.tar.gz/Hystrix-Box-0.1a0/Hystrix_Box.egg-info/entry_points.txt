@@ -1,0 +1,3 @@
+[console_scripts]
+Hystrix-Box = HystrixBox.menu:main
+
