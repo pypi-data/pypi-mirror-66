@@ -1,0 +1,9 @@
+README.md
+setup.py
+s1db/__init__.py
+s1db.egg-info/PKG-INFO
+s1db.egg-info/SOURCES.txt
+s1db.egg-info/dependency_links.txt
+s1db.egg-info/requires.txt
+s1db.egg-info/top_level.txt
+s1db.egg-info/zip-safe
