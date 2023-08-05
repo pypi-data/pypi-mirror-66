@@ -1,0 +1,6 @@
+[console_scripts]
+retinanet-convert-model = xmenu_keras_retinanet.bin.convert_model:main
+retinanet-debug = xmenu_keras_retinanet.bin.debug:main
+retinanet-evaluate = xmenu_keras_retinanet.bin.evaluate:main
+retinanet-train = xmenu_keras_retinanet.bin.train:main
+

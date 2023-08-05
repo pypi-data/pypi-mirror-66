@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: xmenu-keras-retinanet
+Version: 1.0.0
+Summary: Modified anchor size Keras implementation of RetinaNet object detection.
+Home-page: https://github.com/MichaelStevan/xmenu_keras_retinanet
+Author: Michael Stevan
+Author-email: miguel@xtreme.ai
+Maintainer: Michael Stevan
+Maintainer-email: miguel@xtreme.ai
+License: UNKNOWN
+Download-URL: https://github.com/MichaelStevan/xmenu-keras-retinanet/archive/v1.0.0-alpha.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
