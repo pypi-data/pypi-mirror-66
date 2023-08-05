@@ -1,0 +1,12 @@
+bsconv/__init__.py,sha256=Zn1KFblwuFHiDRdRAiRnDBRkbPttWh44jKa5zG2ov0E,22
+bsconv/utils.py,sha256=0KfEU6DAFkptrIGlhwPHpTGI_aqpUchUTAKXicEU9E0,629
+bsconv/pytorch/__init__.py,sha256=mZJkk9x8-zSObxd53Oa_9lR0rIxIZbtffBs8zi1r-NM,200
+bsconv/pytorch/modules.py,sha256=6NzmF56MNZG6twqQY8NzGBpPrUpAYpOMo8zIVhoJAr0,3416
+bsconv/pytorch/profile.py,sha256=60iIr87hCSfBm2FFF8ZOdv5UYLpJlMEuxat93UrubzE,9659
+bsconv/pytorch/replacers.py,sha256=Bqd1jF-9cblDI3ncOy92GUeyoWlPU1TDAANlHUHYlwM,7942
+bsconv-0.2.0.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+bsconv-0.2.0.dist-info/METADATA,sha256=yncRbETzyFZLstwAM8bb_lS83afOdQQsnOBvNZb8Mmk,321
+bsconv-0.2.0.dist-info/RECORD,,
+bsconv-0.2.0.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+bsconv-0.2.0.dist-info/metadata.json,sha256=ewpzGAS13Sev4rSZ0T4XFp0temm1ChIB7kZDg-BBUe4,429
+bsconv-0.2.0.dist-info/top_level.txt,sha256=uVuOF_JF7awmV3jZEIdlaSlVSg8X1zjXaBJF-JGFnD0,7
