@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+alliteration/__init__.py
+alliteration.egg-info/PKG-INFO
+alliteration.egg-info/SOURCES.txt
+alliteration.egg-info/dependency_links.txt
+alliteration.egg-info/requires.txt
+alliteration.egg-info/top_level.txt
