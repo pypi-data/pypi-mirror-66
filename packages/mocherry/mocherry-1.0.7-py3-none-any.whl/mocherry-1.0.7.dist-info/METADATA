@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: mocherry
+Version: 1.0.7
+Summary: CherryPy REST webservice framework with MongoDB ORM support
+Home-page: https://github.com/techunits/mocherry
+Author: Sougata P.
+Author-email: skall.paul@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/techunits/mocherry/archive/1.0.7.tar.gz
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Web Environment
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mongoengine
+Requires-Dist: routes
+Requires-Dist: cherrypy-cors
+Requires-Dist: requests
+Provides-Extra: win32
+Requires-Dist: pywin32 ; extra == 'win32'
+
+
+# MoCherry
+MoCherry is built around CherryPy & mongoengine to support REST webserivces with very low memory footprint, support for MongoDB ORM, built-in production ready WSGI server and faster initilization.
+
+# Features
+  - In-built REST webservice support
+  - MongoDB ORM support with MongoEngine plugin
+  - Similar usability & file system structure like Django to reduce the learning curve
+  - Low memory footprint
+  - In-built CherryPy WSGI server
+  - Built-in basic encryption support
+  - MIT licensed
+
+# Installation
+MoCherry is already a part of python PyPi repository. So the following command will download and install MoCherry from PyPi repository and all it's required dependencies to your system or virtualenv.
+```sh
+$ pip install mocherry
+```
+
+# Create First Application
+Now MoCherry consists of a cli script which will enable developers to create a sample project / app from command-line without manually download it from github. Steps as follows:
+### Create project skeleton
+```sh
+$ mocherry-cli startproject "my_project_001"
+Downloading sample project: https://github.com/techunits/mocherry/blob/master/mocherry/resources/samples/project.zip?raw=true
+Creating new project: my_project_001
+$ cd my_project_001
+$ python manage.py runserver  # start WSGI server
+[20/Jan/2020:00:52:20] ENGINE Listening for SIGTERM.
+[20/Jan/2020:00:52:20] ENGINE Bus STARTING
+[20/Jan/2020:00:52:20] ENGINE Set handler for console events.       
+[20/Jan/2020:00:52:20] ENGINE Started monitor thread 'Autoreloader'.
+[20/Jan/2020:00:52:21] ENGINE Serving on http://localhost:9090
+[20/Jan/2020:00:52:21] ENGINE Bus STARTED
+```
+
+### Create application skeleton
+Lets assume you have already created a project by following above steps, then you have to go inside that project and create app skeleton as per your requirements.
+```sh
+# Application name: app_001
+$ mocherry-cli startapp "app_001"
+Downloading sample app: https://github.com/techunits/mocherry/blob/master/mocherry/resources/samples/app.zip?raw=true
+Creating new app: app_001
+
+# Application name: app_002
+$ mocherry-cli startapp "app_002"
+Downloading sample app: https://github.com/techunits/mocherry/blob/master/mocherry/resources/samples/app.zip?raw=true
+Creating new app: app_002
+
+$ python manage.py runserver  # start WSGI server
+[20/Jan/2020:00:52:20] ENGINE Listening for SIGTERM.
+[20/Jan/2020:00:52:20] ENGINE Bus STARTING
+[20/Jan/2020:00:52:20] ENGINE Set handler for console events.       
+[20/Jan/2020:00:52:20] ENGINE Started monitor thread 'Autoreloader'.
+[20/Jan/2020:00:52:21] ENGINE Serving on http://localhost:9090
+[20/Jan/2020:00:52:21] ENGINE Bus STARTED
+```
+
+
+# MoCherry Management Commands
+MoCherry framework also support custom management commands to enhance its CLI capabilities. With the framework sample code we have provided a test command to verify how it works
+
+```sh
+$ python manage.py test
+Success: This is a test command
+```
+
+# Sample Applications
+ - https://github.com/techunits/mocherry-sample-app
+ - https://github.com/techunits/mocherry-sample-rest-app
+
+
