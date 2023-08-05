@@ -1,0 +1,17 @@
+pysradb/__init__.py,sha256=R4fsaFFfKGPyAkXnAxHVePw7XQBALsmNigYLwiFHlD4,366
+pysradb/basedb.py,sha256=Rlh-jt4rC8BuHosjKCFbcJvruxv6BYc-0OGnAHdNxu4,4009
+pysradb/cli.py,sha256=N7Sd3YPRk5XW0pAOZCIt9IFgkp7QN7STByenTAVARh8,41695
+pysradb/download.py,sha256=D9sAACcthQZ7h3R4i9UFJYcZZIY4xnWRklHdrWUZ26Y,3974
+pysradb/filter_attrs.py,sha256=6cxXBtgfxqqEdYol6VpRMldOIGHL6UJK2s_KkFbJt3w,7977
+pysradb/geodb.py,sha256=g9BMp4tyS2t8o9_9QOCQgSWuk0Agl-ermLe2UQyC9ic,5112
+pysradb/sradb.py,sha256=njkWeBudC_f3xVrPm9m27RRNl576IktWbnSz8e-Z0aw,39960
+pysradb/sraweb.py,sha256=DqDadsZhxSwMtZo4euHjPxURPxUmJyd-lTCaWtYIM5s,27964
+pysradb/taxid2name.py,sha256=j9udOpJSeGbl9M-vSLVLcWRqE9OdB9zhJn1BeRGM_fE,386928
+pysradb/utils.py,sha256=1I4ihWQnyuv0iQwRPr3XnqV88AIBvKp-3lfq9FaJPl4,6054
+pysradb-0.10.4.dist-info/AUTHORS.rst,sha256=4XK6gLpyqKz4WhWxxE_qAvYkz1GFw_0IgVdcQGw-eec,230
+pysradb-0.10.4.dist-info/LICENSE,sha256=uYcB58exSCHQN4iSa9zY5PRQb0DHp8zdxaP1hie2tzg,1515
+pysradb-0.10.4.dist-info/METADATA,sha256=SC-d8LIgNl7GvtiSWVzzwrcUfWqTooC-NT5T7AD9RnY,33909
+pysradb-0.10.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pysradb-0.10.4.dist-info/entry_points.txt,sha256=sQdTIRyTidB9KZ_er1jPEvC-r0_Dxsow9Klbapi5NUU,52
+pysradb-0.10.4.dist-info/top_level.txt,sha256=FbRqqVr8b9I-yDXhRL3YC7J3e5dRXgPgdYtAJPV6qQM,8
+pysradb-0.10.4.dist-info/RECORD,,
