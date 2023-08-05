@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mvm-control
+Version: 1.0.2
+Summary: Simple command line tool to access a MVM ESP32 via the serial port
+Home-page: https://github.com/bryerton/mvm-control
+License: UNKNOWN
+Author: Bryerton Shaw
+Author-email: bryerton@triumf.ca
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Dist: argparse
