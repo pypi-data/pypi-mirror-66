@@ -1,0 +1,11 @@
+trustpilot/__init__.py,sha256=Hpe4wFZDYKIsw2OeHY468lEzOmMhuPMqpR16c5FksWM,126
+trustpilot/async_client.py,sha256=VnMXnKdirXNBMiPwaF_4XuNGY372LzNehmgTu4VMhAc,4837
+trustpilot/auth.py,sha256=1f6gToLSD7th_6qI4WscEE28oWRngEMHKMAL18K6lzk,1148
+trustpilot/cli.py,sha256=m-5uwfwzN0XyEdKHvNn2R9N9xWSgq3tmVr4YxGC3qqo,6153
+trustpilot/client.py,sha256=BtwWWjbCTOU82QvTIib3vXyPbZ9qq3Wc7C-pzmzrmCI,5205
+trustpilot/utils.py,sha256=ffCWkRllWZdpTxS2KvtKRhIJKIFRwlPko79qNIP5SaU,340
+trustpilot-8.1.0.dist-info/entry_points.txt,sha256=t9nYwgYzajKTWZ9ds2dWN6t22qb2UIWAJzQ4tpussw8,60
+trustpilot-8.1.0.dist-info/LICENSE,sha256=2fjGUHmCNHTf4q2w-Zk8Pxo6hhs2YajwP91SUk73k48,1067
+trustpilot-8.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+trustpilot-8.1.0.dist-info/METADATA,sha256=Sy2jmwEp_UPn2c3DPGYFCEmOVhQrfI_L6DI8AkwB8AY,7004
+trustpilot-8.1.0.dist-info/RECORD,,
