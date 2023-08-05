@@ -1,0 +1,3 @@
+#!python
+import surk
+print("bin/surk çağırıldı.")
