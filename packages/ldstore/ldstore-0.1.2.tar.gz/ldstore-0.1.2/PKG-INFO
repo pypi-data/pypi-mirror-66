@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: ldstore
+Version: 0.1.2
+Summary: A package for reading files created by LDstore
+Home-page: http://www.finemap.me
+Author: Christian Benner
+Author-email: christian.benner@helsinki.fi
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >= 3.8
