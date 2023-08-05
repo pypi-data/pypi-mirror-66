@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: skypy
+Version: 0.1
+Summary: A package for modelling the Universe.
+Home-page: http://skypy.info
+Author: SkyPy Team
+Author-email: adam.amara@port.ac.uk
+License: BSD 3-Clause
+Description: This package contains methods for modelling the Universe, galaxies and the Milky Way. Also included are methods for generating observed data.
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
