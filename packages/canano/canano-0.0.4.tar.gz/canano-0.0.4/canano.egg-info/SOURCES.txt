@@ -1,0 +1,9 @@
+README.md
+setup.py
+canano/__init__.py
+canano/canano.py
+canano.egg-info/PKG-INFO
+canano.egg-info/SOURCES.txt
+canano.egg-info/dependency_links.txt
+canano.egg-info/requires.txt
+canano.egg-info/top_level.txt
