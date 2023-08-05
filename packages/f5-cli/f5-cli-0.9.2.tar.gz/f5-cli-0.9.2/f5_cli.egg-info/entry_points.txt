@@ -1,0 +1,3 @@
+[console_scripts]
+f5 = f5cli.cli:cli
+
