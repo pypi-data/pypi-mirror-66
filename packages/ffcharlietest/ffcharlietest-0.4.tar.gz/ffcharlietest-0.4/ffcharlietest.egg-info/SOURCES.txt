@@ -1,0 +1,9 @@
+README.md
+setup.py
+featureflagclient/__init__.py
+featureflagclient/client.py
+ffcharlietest.egg-info/PKG-INFO
+ffcharlietest.egg-info/SOURCES.txt
+ffcharlietest.egg-info/dependency_links.txt
+ffcharlietest.egg-info/top_level.txt
+tests/__init__.py
