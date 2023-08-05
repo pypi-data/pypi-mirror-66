@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+__pkginfo__.py
+requirements.txt
+sdjson.py
+setup.py
+sdjson.egg-info/PKG-INFO
+sdjson.egg-info/SOURCES.txt
+sdjson.egg-info/dependency_links.txt
+sdjson.egg-info/requires.txt
+sdjson.egg-info/top_level.txt
