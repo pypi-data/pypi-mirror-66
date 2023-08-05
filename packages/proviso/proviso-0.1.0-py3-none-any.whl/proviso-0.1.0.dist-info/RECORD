@@ -1,0 +1,13 @@
+proviso/__init__.py,sha256=3VeCTJATvyJKPpE2KsT0jyO-Ove9h4aymHBBKgWFbz8,86
+proviso/proviso.py,sha256=KJvaF4L5RyqEW7SO_NkSonwfNcPjj3PnV2Vey7A0VZQ,4467
+proviso/data/AlphaVantageGateway.py,sha256=JkrgOLn7AT-8b1YZSGmWCWHzAGXGk2-oXtbCnYjZcPs,1140
+proviso/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+proviso/data/bdshare.py,sha256=3YGyIPZWBAQPwf5aYU2yvGqc9Lz3LLmJyTXUI2cF0qw,987
+proviso/utils/DataUtils.py,sha256=gDTmhWDSm7Lju5Bmv9_RgIJ4jaT-51S-CGHCfuLO3Ag,3428
+proviso/utils/NetworkUtils.py,sha256=9o1QxA0YjVhmgxzNsVKKovr7m-6aX9YDAn17-oGHLio,4807
+proviso/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+proviso-0.1.0.dist-info/LICENSE,sha256=AQpprowLbV9GfKzg2gKWiNoUzZ3fX30WevwHV3XibZ4,1090
+proviso-0.1.0.dist-info/METADATA,sha256=J7ouohUjGWOwxIa6JUIDvSAu3bcHcRGLv0YmBIrcboE,2418
+proviso-0.1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+proviso-0.1.0.dist-info/top_level.txt,sha256=TsNb9ftylxJVEPQwv7r2qoxmodkY7ejcx7XX5-PHvKQ,8
+proviso-0.1.0.dist-info/RECORD,,

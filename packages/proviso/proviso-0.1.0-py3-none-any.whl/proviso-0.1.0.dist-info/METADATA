@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: proviso
+Version: 0.1.0
+Summary: A utility for Stock price prediction with keras
+Home-page: https://github.com/rochi88/proviso
+Author: Raisul Islam
+Author-email: raisul.exe@gmail.com
+License: MIT
+Download-URL: https://github.com/rochi88/proviso/archive/master.zip
+Keywords: deep learning,ai
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: absl-py (>=0.6.1astor>=0.7.1)
+Requires-Dist: certifi (>=2018.8.24)
+Requires-Dist: chardet (>=3.0.4)
+Requires-Dist: cycler (>=0.10.0)
+Requires-Dist: gast (>=0.2.0)
+Requires-Dist: grpcio (>=1.17.1)
+Requires-Dist: h5py (>=2.9.0)
+Requires-Dist: idna (>=2.8)
+Requires-Dist: Keras (>=2.2.4)
+Requires-Dist: Keras-Applications (>=1.0.6)
+Requires-Dist: Keras-Preprocessing (>=1.0.5)
+Requires-Dist: kiwisolver (>=1.0.1)
+Requires-Dist: Markdown (>=3.0.1)
+Requires-Dist: matplotlib (>=3.0.2)
+Requires-Dist: numpy (>=1.15.4)
+Requires-Dist: pandas (>=0.23.4)
+Requires-Dist: protobuf (>=3.6.1)
+Requires-Dist: pyparsing (>=2.3.0)
+Requires-Dist: python-dateutil (>=2.7.5)
+Requires-Dist: pytz (>=2018.7)
+Requires-Dist: PyYAML (>=3.13)
+Requires-Dist: requests (>=2.21.0)
+Requires-Dist: scikit-learn (>=0.20.2)
+Requires-Dist: scipy (>=1.2.0)
+Requires-Dist: six (>=1.12.0)
+Requires-Dist: tensorboard (>=1.12.1)
+Requires-Dist: tensorflow (>=1.12.2)
+Requires-Dist: termcolor (>=1.1.0)
+Requires-Dist: urllib3 (>=1.24.1)
+Requires-Dist: Werkzeug (>=0.14.1)
+Requires-Dist: wincertstore (>=0.2)
+
+# proviso
+
+
+
+## Contributing to this project
+
+Anyone and everyone is welcome to contribute. Please take a moment to
+review the [guidelines for contributing](CONTRIBUTING.md).
+
+* [Bug reports](CONTRIBUTING.md#bugs)
+* [Feature requests](CONTRIBUTING.md#features)
+* [Pull requests](CONTRIBUTING.md#pull-requests)
+
+# Change log
+
+## [0.0.1-dev1] - 2020-04-12
+
+### Added
+- `CHANGELOG.md`
+
+### Changed
+
+### Removed
+
