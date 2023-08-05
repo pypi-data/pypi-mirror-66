@@ -1,0 +1,9 @@
+README.md
+setup.py
+covdata/__init__.py
+covdata/covidindia.py
+covdata.egg-info/PKG-INFO
+covdata.egg-info/SOURCES.txt
+covdata.egg-info/dependency_links.txt
+covdata.egg-info/requires.txt
+covdata.egg-info/top_level.txt
