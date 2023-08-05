@@ -1,0 +1,14 @@
+README.md
+setup.py
+cloudshell/__init__.py
+cloudshell/helpers/__init__.py
+cloudshell/helpers/apps/__init__.py
+cloudshell/helpers/apps/app_helper.py
+cloudshell/helpers/apps/build_app_xml.py
+cloudshell/helpers/apps/images.py
+cloudshell/helpers/apps/upload_app_xml.py
+cloudshell_app_helper.egg-info/PKG-INFO
+cloudshell_app_helper.egg-info/SOURCES.txt
+cloudshell_app_helper.egg-info/dependency_links.txt
+cloudshell_app_helper.egg-info/requires.txt
+cloudshell_app_helper.egg-info/top_level.txt
