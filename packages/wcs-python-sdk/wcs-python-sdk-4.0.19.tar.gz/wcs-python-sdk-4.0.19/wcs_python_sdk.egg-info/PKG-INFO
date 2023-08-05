@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: wcs-python-sdk
+Version: 4.0.19
+Summary: Wangsu Cloud Storage Command Tool
+Home-page: https://wcs.chinanetcenter.com/document/SDK
+Author: ChinaNetCenter.Wangsu Cloud Strage
+Author-email: cdn_team_storage_wcs@chinanetcenter.com
+Maintainer: https://github.com/Wangsu-Cloud-Storage
+License: MIT
+Description: see:
+        https://wcs.chinanetcenter.com/document/SDK
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
