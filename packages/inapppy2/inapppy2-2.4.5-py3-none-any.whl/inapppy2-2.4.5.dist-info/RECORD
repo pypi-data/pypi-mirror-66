@@ -1,0 +1,11 @@
+inapppy/__init__.py,sha256=BX4qry2hIVn1u1Abk8QijAk0x1dxyaEK74NGgqc_xsg,251
+inapppy/appstore.py,sha256=SvBEuOTfNu_9ERctKRD5s1n84P1vAqa_7QkwWvimM9E,3636
+inapppy/errors.py,sha256=MU9d1iPrDo3UtQLgTNBw1Jt-H9M79QTJBD5oMl5V9U0,636
+inapppy/googleplay.py,sha256=egoHxH-Nc7vW4uS9kBbp-nnamj3AUqm2O5yVn-R9xTA,7690
+inapppy/asyncio/__init__.py,sha256=zXERdm3MhvkMW8FUm0xEb-XmJSqO4yt4KH-wXXNmHOU,73
+inapppy/asyncio/appstore.py,sha256=SBu1otftzRcaFI--UAmB7yb1LCqgST2yK2f2p52UayE,2340
+inapppy2-2.4.5.dist-info/LICENSE,sha256=iJltsmIN22sHR3DtRGtfcREhC0Hjuf9lbASmFM8ScJk,1085
+inapppy2-2.4.5.dist-info/METADATA,sha256=sFAtiC74p5VoU5DGFXyTj3aZ028SOlhGVn0XELl52GQ,10549
+inapppy2-2.4.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+inapppy2-2.4.5.dist-info/top_level.txt,sha256=MjPj4XGyDyoMJpImmh_heGu9_0O99Rmid2Q66rHbEK8,8
+inapppy2-2.4.5.dist-info/RECORD,,
