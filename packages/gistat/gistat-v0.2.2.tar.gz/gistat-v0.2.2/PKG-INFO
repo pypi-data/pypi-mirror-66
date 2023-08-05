@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: gistat
+Version: v0.2.2
+Summary: Parsing https://gismoldova.maps.arcgis.com statistics related to covid-19 (Coronavirus)
+Home-page: https://github.com/alexkingdom/gistat
+Author: Alex H.
+Author-email: alexander.habasescu@gmail.com
+License: apache-2.0
+Download-URL: https://github.com/alexkingdom/gistat/archive/v0.2.2.tar.gz
+Description: UNKNOWN
+Keywords: covid-19 statistics,Moldova covid-19,Parser gismoldova
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
