@@ -1,0 +1,8 @@
+README.md
+setup.py
+intent/__init__.py
+intent.egg-info/PKG-INFO
+intent.egg-info/SOURCES.txt
+intent.egg-info/dependency_links.txt
+intent.egg-info/not-zip-safe
+intent.egg-info/top_level.txt
