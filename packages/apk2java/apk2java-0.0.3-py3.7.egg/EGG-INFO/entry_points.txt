@@ -1,0 +1,4 @@
+[console_scripts]
+apk2java = apk2java:main
+apk2java_setup = apk2java:setup
+
