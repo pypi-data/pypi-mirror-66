@@ -1,0 +1,13 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "mvm_control"
+author = "Bryerton Shaw"
+author-email = "bryerton@triumf.ca"
+home-page = "https://github.com/bryerton/mvm-control"
+classifiers = ["License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"]
+requires = [
+    'argparse'
+]
