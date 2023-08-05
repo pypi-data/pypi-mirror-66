@@ -1,0 +1,4 @@
+lxml
+six
+coloredlogs
+html2text
