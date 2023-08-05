@@ -1,0 +1,8 @@
+README.md
+i3-workspace-swap
+setup.py
+i3_workspace_swap.egg-info/PKG-INFO
+i3_workspace_swap.egg-info/SOURCES.txt
+i3_workspace_swap.egg-info/dependency_links.txt
+i3_workspace_swap.egg-info/requires.txt
+i3_workspace_swap.egg-info/top_level.txt
