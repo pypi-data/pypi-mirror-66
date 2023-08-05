@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+urllib_ext/__init__.py
+urllib_ext/parse.py
+urllib_ext.egg-info/PKG-INFO
+urllib_ext.egg-info/SOURCES.txt
+urllib_ext.egg-info/dependency_links.txt
+urllib_ext.egg-info/top_level.txt
