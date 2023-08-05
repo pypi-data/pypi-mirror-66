@@ -1,0 +1,3 @@
+[console_scripts]
+razorback-procats121 = razorback.scripts.procats_121:main
+
