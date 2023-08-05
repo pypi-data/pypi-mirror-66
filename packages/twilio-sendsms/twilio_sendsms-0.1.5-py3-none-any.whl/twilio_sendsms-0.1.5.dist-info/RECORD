@@ -1,0 +1,7 @@
+twilio_sendsms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+twilio_sendsms/sendsms.py,sha256=sgwqrwmyM9hu-cnvNRsQ8-DNml82RPe1_mxv41lWwek,3549
+twilio_sendsms-0.1.5.dist-info/METADATA,sha256=kwZWoO-LIjiXhhWFEINOU7cmOI7GCkjhBeRWF9LNOg4,2180
+twilio_sendsms-0.1.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+twilio_sendsms-0.1.5.dist-info/entry_points.txt,sha256=3vq2hu4hWoNl0EM0movWVnH7UHQirbrHmMj4z30kN7Q,57
+twilio_sendsms-0.1.5.dist-info/top_level.txt,sha256=0IBZyS3w1Ya0Xy0Q7_8Hd6Y1svzQ2sHmBcYNob1TqIY,15
+twilio_sendsms-0.1.5.dist-info/RECORD,,

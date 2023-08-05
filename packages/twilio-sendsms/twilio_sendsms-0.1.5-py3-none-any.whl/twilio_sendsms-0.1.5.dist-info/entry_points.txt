@@ -1,0 +1,3 @@
+[console_scripts]
+sendsms = twilio_sendsms.sendsms:main
+
