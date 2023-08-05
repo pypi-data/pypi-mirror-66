@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "r2k"
+version = "0.1.0"
+description = "A tool that lets you periodically send articles received from an RSS feed to your Kindle"
+authors = ["Pavel Brodsky <mcouthon@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.scripts]
+r2k = "r2k.cli:main"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+feedparser = "^5.2.1"
+click = "^7.1.1"
+pyyaml = "^5.3.1"
+beautifulsoup4 = "^4.9.0"
+pick = "^0.6.7"
+newspaper3k = "^0.2.8"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^2.2.0"
+isort = "^4.3.21"
+black = "^19.10b0"
+pyupgrade = "^2.2.0"
+mypy = "^0.770"
+pydocstyle = "^5.0.2"
+flake8 = "^3.7.9"
+pytest = "^5.4.1"
+
+[tool.black]
+line-length = 120
+
+[build-system]
+requires = ["poetry>=1.0.0"]
+build-backend = "poetry.masonry.api"
