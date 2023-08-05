@@ -1,0 +1,11 @@
+image_app/SmoothAreaProvider.py,sha256=Nw6QWfO4dx9cngpeU7TKmrS_lyvpFZAawNzYNP8EVAk,6372
+image_app/__init__.py,sha256=H6G5os3beWvtifEH3osYiY-Mj89tZ8HRaSo40E_IQpA,712
+image_app/area.py,sha256=b_YVE9PtmJzHrvs4-JRF7GZ_jIGHRv_RjlRSY_VzIn4,4356
+image_app/libs/__init__.py,sha256=4Wy1XTMlAELM6hvw78g7WckXsDoLbPiSwrSlrOMT-TE,222
+image_app/libs/select_by_kp.cpython-36m-x86_64-linux-gnu.so,sha256=wnnCGRMDpeB6laI1J8dDVClGaMdTohouG3ID8jNZnrM,539599
+image_app/libs/select_by_kp.cpython-37m-darwin.so,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+image_app-0.0.3.20041619.dist-info/LICENSE,sha256=hh2Srnh4S2M-h1oDp5yXFzXlgU75InjNj8w0WCVlO0g,1066
+image_app-0.0.3.20041619.dist-info/METADATA,sha256=StuWMewNB7wD2y-gR_gXVgyL5SnM3ijCzDHjgLBnmQc,1021
+image_app-0.0.3.20041619.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+image_app-0.0.3.20041619.dist-info/top_level.txt,sha256=nU6R7adIgoZZLItF4KAIr7RXJ2K641HeptVinESZUls,10
+image_app-0.0.3.20041619.dist-info/RECORD,,
