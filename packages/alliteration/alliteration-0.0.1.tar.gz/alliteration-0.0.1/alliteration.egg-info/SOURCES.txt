@@ -1,0 +1,8 @@
+README.md
+setup.py
+alliteration/__init__.py
+alliteration.egg-info/PKG-INFO
+alliteration.egg-info/SOURCES.txt
+alliteration.egg-info/dependency_links.txt
+alliteration.egg-info/not-zip-safe
+alliteration.egg-info/top_level.txt
