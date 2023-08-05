@@ -1,0 +1,14 @@
+numpy>=1.10.0
+scipy>=0.18.0
+multipledispatch>=0.6
+tabulate
+dataclasses
+tensorflow-probability>=0.9
+tensorflow
+gast<0.3,>=0.2.2
+
+[ImageToTensorBoard]
+matplotlib
+
+[Tensorflow with GPU]
+tensorflow-gpu
