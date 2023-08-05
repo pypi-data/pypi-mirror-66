@@ -1,0 +1,8 @@
+msal<2.0.0,>=0.4.1
+portalocker~=1.6
+
+[:platform_system == "Linux"]
+pygobject<4,>=3
+
+[:python_version < "3.0"]
+pathlib2
