@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: sp-ask-list-of-concurrent-chats
+Version: 0.1.2
+Summary: 
+Author: Guinsly Mondesir
+Author-email: guinslym@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: lh3api (>=0.2.0,<0.3.0)
+Requires-Dist: numpy (>=1.18.2,<2.0.0)
+Requires-Dist: openpyxl (>=3.0.3,<4.0.0)
+Requires-Dist: pandas (>=1.0.3,<2.0.0)
