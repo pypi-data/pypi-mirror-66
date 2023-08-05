@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: c3covid19
+Version: 0.1
+Summary: Python wrapper for easy use of the C3 COVID 19 Data Lake
+Home-page: https://github.com/connor-makowski/c3covid19
+Author: Connor Makowski
+Author-email: connor.m.makowski@gmail.com
+License: MIT
+Download-URL: https://github.com/connor-makowski/c3covid19/dist/c3covid19-0.1.tar.gz
+Description: UNKNOWN
+Keywords: data,lake,covid19,c3,c3covid19
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
