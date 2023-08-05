@@ -1,0 +1,16 @@
+gen_browser_header/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gen_browser_header/helper/Helper.py,sha256=36ScOgWVHqktRQZ7qtgvIQPFPDbYZ4eO-sX2R_-TVWQ,4267
+gen_browser_header/helper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gen_browser_header/main/GenHeader.py,sha256=rraHfG8UYj1kBT8iZgJ3LUx-G_f-SZci8iv60UCVUs8,2415
+gen_browser_header/main/GenUA.py,sha256=Tgs_Z1hf3770drIWUcpXGbdVaqcXuKfFuww9IUVG2y8,8609
+gen_browser_header/main/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gen_browser_header/self/SelfEnum.py,sha256=Si8rmojtnqFuvWWXYRvQhtxK1pbrazoiyn5rTN0XPf4,723
+gen_browser_header/self/SelfException.py,sha256=qEb7N9CnbniQPANLZnRjc6BkxFeiXAcETfL4LQ24wWA,629
+gen_browser_header/self/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gen_browser_header/setting/Setting.py,sha256=eC4Gq8LXZHAFppkGXyxarvIQ4u6D7lOIOA6-yxz3dOE,9969
+gen_browser_header/setting/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gen_browser_header-0.0.7.dist-info/LICENSE,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+gen_browser_header-0.0.7.dist-info/METADATA,sha256=cdgG8hWwSPol21G5db5v7-ya1KpztsGTjtlORIsdFHk,4216
+gen_browser_header-0.0.7.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+gen_browser_header-0.0.7.dist-info/top_level.txt,sha256=lx70yMgl_in6Wnr65L_WPCAiNX741YxbnWDfLlhPAaw,19
+gen_browser_header-0.0.7.dist-info/RECORD,,
