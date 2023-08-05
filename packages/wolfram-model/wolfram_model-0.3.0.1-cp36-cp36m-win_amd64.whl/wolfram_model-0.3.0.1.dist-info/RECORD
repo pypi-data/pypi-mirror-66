@@ -1,0 +1,17 @@
+wolfram_model_version.py,sha256=yDDaO2mEYMecQbaaKj2QqtZHcRFPAUtskFmxp44otVc,733
+wolfram_model/__init__.py,sha256=ULn3SeM7bt4nNFc77uDs-smnmHNup0fNo2Qybb2ivkE,31
+wolfram_model/_wolfram_model.cp36-win_amd64.pyd,sha256=vZ9ia3WAZc13GgczyRj-OvOP-nYkJh4xZjHR69o0uXU,280064
+wolfram_model-0.3.0.1.data/data/include/wolfram_model/Expression.hpp,sha256=VUwDOdN29aAz2TASryB_nfl6St8wvwGo3QAihffkTXk,1920
+wolfram_model-0.3.0.1.data/data/include/wolfram_model/IDTypes.hpp,sha256=LnmtOCOkVqBXEgxOMSjFRmEL5Vz7vt2pIebRCyk-Pq8,1216
+wolfram_model-0.3.0.1.data/data/include/wolfram_model/Match.hpp,sha256=ipS-6_ohuCDohhz01YuPehU6T_o7q0IfbP7o2GBCxV8,3735
+wolfram_model-0.3.0.1.data/data/include/wolfram_model/Rule.hpp,sha256=9dqxcf9bybbpcUHFFkC1Y--HBpfpumf4qS5j6aNdHv8,327
+wolfram_model-0.3.0.1.data/data/include/wolfram_model/Set.hpp,sha256=3vbcobcfS5Ma2348Ng5xFtKghv2fp3Z74zEEkUzFQYk,4471
+wolfram_model-0.3.0.1.data/data/lib/SetReplace.lib,sha256=sL2UJpXJxGR0gdE4qQmb3IszEDYRwfxsfsiNo4EE_Zs,1165072
+wolfram_model-0.3.0.1.data/data/lib/cmake/wolfram_model/wolfram_modelConfig.cmake,sha256=DC7r8ee5I4rBpuVvwcjd_Psol6qpcoUKTkV0XgnSSsk,1174
+wolfram_model-0.3.0.1.data/data/lib/cmake/wolfram_model/wolfram_modelConfigVersion.cmake,sha256=RY4TPLXEV1SkHs2qe0_4dwKhMYEYSryXt33DZUBM0CE,1773
+wolfram_model-0.3.0.1.data/data/lib/cmake/wolfram_model/wolfram_modelTargets-release.cmake,sha256=9vOzZJ6oI0glG6uJVlRuZI80MGQQhQeu1pIWgTyLpBQ,911
+wolfram_model-0.3.0.1.data/data/lib/cmake/wolfram_model/wolfram_modelTargets.cmake,sha256=NPYMOuxoqaWaahblbVFaunZW6RPlwcLRxZIXmFGdFIU,3396
+wolfram_model-0.3.0.1.dist-info/METADATA,sha256=0Bj53i4VPNniWbYX788KXefFfaVXCm6eE6kzt7AWgNc,1672
+wolfram_model-0.3.0.1.dist-info/WHEEL,sha256=05wpRJxH8TH-EU6bzA0YTsInrvta1ogNuN-EC2pdwb0,112
+wolfram_model-0.3.0.1.dist-info/top_level.txt,sha256=Mj4Qwoih21DI7WSKOh4BCxmscRhXRdhdKJjCtzsf4rs,36
+wolfram_model-0.3.0.1.dist-info/RECORD,,
