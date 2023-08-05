@@ -1,0 +1,22 @@
+Metadata-Version: 2.0
+Name: data-importer
+Version: 3.1.1
+Summary: Simple library to easily import data with Django
+Home-page: https://github.com/valdergallo/data-importer
+Author: valdergallo
+Author-email: valdergallo@gmail.com
+License: BSD
+Download-URL: https://github.com/valdergallo/data-importer/tarball/3.1.1/
+Keywords: Django Data Importer XLS XLSX CSV XML
+Platform: any
+Classifier: Framework :: Django
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Dist: django (>=1.4)
+Requires-Dist: openpyxl (==2.4.0)
+Requires-Dist: six (==1.10.0)
+Requires-Dist: xlrd (==1.0.0)
+
+**Django Data Importer** is a tool which allow you to transform easily a CSV, XML, XLS and XLSX file into a python object or a django model instance. It is based on the django-style declarative model. Read More: (https://django-data-importer.readthedocs.io/en/latest/)
+
+
