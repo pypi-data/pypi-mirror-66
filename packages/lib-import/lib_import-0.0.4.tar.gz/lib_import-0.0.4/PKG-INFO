@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: lib_import
+Version: 0.0.4
+Summary: Django library for importing data
+Home-page: https://github.com/fannydufresne/lib_import/
+Author: Fanny Dufresne
+Author-email: dufresne.fany@gmail.com
+License: apache-2.0
+Download-URL: https://github.com/fannydufresne/lib_import/archive/v0.0.4.tar.gz
+Description: UNKNOWN
+Keywords: django,import
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Framework :: Django :: 2.2
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
