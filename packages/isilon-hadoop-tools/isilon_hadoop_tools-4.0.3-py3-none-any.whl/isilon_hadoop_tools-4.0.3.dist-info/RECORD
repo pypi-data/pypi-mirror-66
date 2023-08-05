@@ -1,0 +1,12 @@
+isilon_hadoop_tools/__init__.py,sha256=49EaAGDFrREf5wYhA0k1dBh6Fp5OYtqfweyEbfQs_zk,765
+isilon_hadoop_tools/_scripts.py,sha256=2M-0piCpnCP5A5wWrpd69m7QqzKQowG6i5Uy3rj5fkQ,4976
+isilon_hadoop_tools/cli.py,sha256=pFxhxlrQJGOx5rTTeJqul0bEAWDUtEE9jA4AGeVqVGs,5786
+isilon_hadoop_tools/directories.py,sha256=94lZhcpQbk1vwlzSXnnkC5qRS7bEq98RsxraZmhBwJ0,7533
+isilon_hadoop_tools/identities.py,sha256=CDsHLUM6vrXTaPMhsXnBBTO7FBtbvmjYv8ODfszw2ZU,16768
+isilon_hadoop_tools/onefs.py,sha256=akMX8BihPV6eF1QjRm4LaWBxR3ZfFFh3hv5ZAckpaFM,50061
+isilon_hadoop_tools-4.0.3.dist-info/LICENSE,sha256=mT2G0POb-W-gLNewapQr5xTzgK8rHxulfnaN-7eVtU8,1072
+isilon_hadoop_tools-4.0.3.dist-info/METADATA,sha256=3Na1ya6KtOYSkWEMVnfHBtELUB1QKiNi_rk2420XRws,9702
+isilon_hadoop_tools-4.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+isilon_hadoop_tools-4.0.3.dist-info/entry_points.txt,sha256=3ljFQ2YjlSmQdaTKEYwID1ZW-eEbmk4dxM1XJ95qMb4,173
+isilon_hadoop_tools-4.0.3.dist-info/top_level.txt,sha256=-n3A5uKWB7PksoEMvkCzgAqztjZLZKwnnoBgVyiob94,20
+isilon_hadoop_tools-4.0.3.dist-info/RECORD,,
