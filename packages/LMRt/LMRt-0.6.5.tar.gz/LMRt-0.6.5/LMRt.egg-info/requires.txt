@@ -1,0 +1,6 @@
+dotmap
+pyyaml
+prysm-api
+scikit-learn
+keras
+tensorflow
