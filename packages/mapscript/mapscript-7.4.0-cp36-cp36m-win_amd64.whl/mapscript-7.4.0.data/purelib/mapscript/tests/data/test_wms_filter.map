@@ -1,0 +1,60 @@
+# cd /D D:\GitHub\mapserver\tests
+# mapserv -nh "QUERY_STRING=map=test_wms_filter.map&layers=INLINE&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&STYLES=&FORMAT=image/png&TRANSPARENT=true&HEIGHT=256&WIDTH=256&CRS=epsg:4326&BBOX=-10,-10,10,10"
+# mapserv -nh "QUERY_STRING=map=test_wms_filter.map&layers=INLINE&SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&STYLES=red&FORMAT=image/png&TRANSPARENT=true&HEIGHT=256&WIDTH=256&CRS=epsg:4326&BBOX=-10,-10,10,10"
+
+MAP
+    NAME "Testing"
+    EXTENT -10 -10 10 10
+    SIZE 256 256
+    SYMBOLSET "symbols.txt"
+    WEB
+        METADATA
+			"ows_enable_request" "*"
+			"ows_onlineresource"   "http://localhost/mapserver/?"
+        END
+    END
+    PROJECTION
+        "init=epsg:4326"
+    END
+		
+    LAYER	
+        NAME "INLINE"
+        TYPE POINT
+        STATUS OFF
+		METADATA
+			"gml_include_items" "all"
+		END
+		PROCESSING "ITEMS=property1"
+        FEATURE
+            POINTS
+                0 0
+            END
+			ITEMS "value1"
+        END
+        FEATURE
+            POINTS
+                5 5
+            END
+			ITEMS "value2"
+        END		
+		CLASSGROUP "green"
+        CLASS
+			GROUP "green"
+            STYLE
+                COLOR 0 255 0
+                SYMBOL 1
+                SIZE 10
+            END
+        END
+        CLASS
+			GROUP "red"
+            STYLE
+                COLOR 255 0 0
+                SYMBOL 1
+                SIZE 10
+            END
+        END		
+    END
+
+END
+
