@@ -1,0 +1,11 @@
+scons_tool_texas-0.2.0-py3.8-nspkg.pth,sha256=K-evxfATS_KMSc8W9xb6BTG2JIWBeWbSkp8OFupMQjE,554
+sconstool/texas/TeXASCommon.py,sha256=BaOzXOe5yU4142t3r4xraJ9LIUpO7dJZZHJBMS9NJvM,10917
+sconstool/texas/TeXASDist.py,sha256=hhxhnT1f0Q3UY0pc7QUGmdrrkE1nsqUo9jBSJdBriv8,10162
+sconstool/texas/TeXASDoc.py,sha256=ft4rSj1N8y_zURY9eZBby0StrfD15cbe396cIsmRHOc,8785
+sconstool/texas/__init__.py,sha256=oW4gLr_blbVlvtNWBQiIulnpZzRGxVoPxYmCN3voumE,4767
+sconstool/texas/about.py,sha256=nhjn2bJPguKTYsvuEBrPUOVqVhNJe9mQV7qDRGG3NJ0,229
+scons_tool_texas-0.2.0.dist-info/METADATA,sha256=mUphQgFU84u8VlkCQld0X7XDBZvwXfhE8FvNvMRSuG8,6668
+scons_tool_texas-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+scons_tool_texas-0.2.0.dist-info/namespace_packages.txt,sha256=tuub_RQZ7m4zLPVVdJyKxskMHVS7nSrKO-Mfk_wsvgU,10
+scons_tool_texas-0.2.0.dist-info/top_level.txt,sha256=tuub_RQZ7m4zLPVVdJyKxskMHVS7nSrKO-Mfk_wsvgU,10
+scons_tool_texas-0.2.0.dist-info/RECORD,,
