@@ -1,0 +1,15 @@
+README.md
+setup.py
+src/tiny_3d_engine/__init__.py
+src/tiny_3d_engine/color.py
+src/tiny_3d_engine/engine.py
+src/tiny_3d_engine/geo_loader.py
+src/tiny_3d_engine/part3d.py
+src/tiny_3d_engine/scene3d.py
+src/tiny_3d_engine/screen.py
+src/tiny_3d_engine/viewfield.py
+src/tiny_3d_engine.egg-info/PKG-INFO
+src/tiny_3d_engine.egg-info/SOURCES.txt
+src/tiny_3d_engine.egg-info/dependency_links.txt
+src/tiny_3d_engine.egg-info/requires.txt
+src/tiny_3d_engine.egg-info/top_level.txt
