@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: personnummer
+Version: 3.0.0
+Summary: Validate Swedish social security numbers
+Home-page: http://github.com/personnummer/python
+Author: Personnummer and Contributors
+Author-email: fredrik.forsmo+personnummer@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
