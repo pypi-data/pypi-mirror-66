@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: msal-extensions
+Version: 0.2.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Requires-Dist: msal (<2.0.0,>=0.4.1)
+Requires-Dist: portalocker (~=1.6)
+Requires-Dist: pygobject (<4,>=3) ; platform_system == "Linux"
+Requires-Dist: pathlib2 ; python_version < "3.0"
+
+UNKNOWN
+
+
