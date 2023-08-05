@@ -1,0 +1,15 @@
+apt_mirror_updater/__init__.py,sha256=kVrr0g2KBUTy5xoCy0XRLQ8OIF9gBckcfim9efeK1PA,43510
+apt_mirror_updater/cli.py,sha256=Yg2_X_IyNZKUwyfJUYLcbhk8le_hydZku5dnwsdZKPo,7752
+apt_mirror_updater/http.py,sha256=BYMkV1dLOqCF2r1LjZVb9d6pzxm3D5z8K-j5CIoJuz4,5250
+apt_mirror_updater/releases.py,sha256=PUPWBzGbjERHIgyJnU0_R_3ZoLT-5k7zpkB4ou0IWkI,31935
+apt_mirror_updater/tests.py,sha256=3s3gWPU4mtAEwSCWat0ckwE4w3pFdhnbgdLsx1mXALw,11477
+apt_mirror_updater/backends/__init__.py,sha256=cBd7E3-ptg7gBmwUt1aLnw_wPtZ1cyoCN0CsyeF7E-4,85
+apt_mirror_updater/backends/debian.py,sha256=_OvqP1wgpl6hudEnUGBx8H2tlfB1GWFoixdMdOdOhzM,7083
+apt_mirror_updater/backends/elementary.py,sha256=GipQ13VHXYVaNpLrnXnsYvvARb_rcwqAEhx-KpD1uio,3636
+apt_mirror_updater/backends/ubuntu.py,sha256=wcKx7TQtoOpjeBpczV0GU-fP92KP79351U73bWQtvIc,9350
+apt_mirror_updater-7.2.dist-info/LICENSE.txt,sha256=C-9P-xhVtlVwME8gGMbUTkurl71d-HFuzXgAAU1xcmc,1056
+apt_mirror_updater-7.2.dist-info/METADATA,sha256=PPFzxtQU2UtpIH5lxRFtlost1dQqvJmqdyqOtVEtPjc,12129
+apt_mirror_updater-7.2.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+apt_mirror_updater-7.2.dist-info/entry_points.txt,sha256=FVL9d0PsPfOl1nJxpd3iFXv63MJJSLJrAGL_0zflXYo,68
+apt_mirror_updater-7.2.dist-info/top_level.txt,sha256=0GneqVO4n8UZbB6JwLuqjwPWMnntCmxlm1dP_dK8suk,19
+apt_mirror_updater-7.2.dist-info/RECORD,,
