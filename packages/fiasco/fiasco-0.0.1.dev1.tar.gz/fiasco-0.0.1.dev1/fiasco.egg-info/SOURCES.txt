@@ -1,0 +1,9 @@
+README.md
+setup.py
+fiasco/__init__.py
+fiasco/__version__.py
+fiasco.egg-info/PKG-INFO
+fiasco.egg-info/SOURCES.txt
+fiasco.egg-info/dependency_links.txt
+fiasco.egg-info/requires.txt
+fiasco.egg-info/top_level.txt

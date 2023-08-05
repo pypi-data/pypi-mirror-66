@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: fiasco
+Version: 0.0.1.dev1
+Summary: fiasco
+Home-page: https://zeroguard.com
+Author: ZeroGuard
+Author-email: oss@zeroguard.com
+License: AGPL-3.0
+Project-URL: Source, https://github.com/zeroguard/fiasco
+Description: fiasco
+        ====================
+        [![Travis CI Status](https://travis-ci.org/zeroguard/fiasco.svg?branch=master)](https://travis-ci.org/zeroguard/fiasco)
+        [![Coverage Status](https://coveralls.io/repos/github/zeroguard/fiasco/badge.svg?branch=master)](https://coveralls.io/github/zeroguard/fiasco?branch=master)
+        ![PyPI Status](https://img.shields.io/pypi/status/fiasco)
+        ![PyPI Version](https://img.shields.io/pypi/v/fiasco)
+        ![Repository License](https://img.shields.io/github/license/zeroguard/fiasco)
+        ![PyPI Python Version](https://img.shields.io/pypi/pyversions/fiasco)
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
