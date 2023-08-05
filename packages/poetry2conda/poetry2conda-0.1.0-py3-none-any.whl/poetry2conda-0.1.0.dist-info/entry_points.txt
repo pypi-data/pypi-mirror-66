@@ -1,0 +1,3 @@
+[console_scripts]
+poetry2conda=poetry2conda.convert:main
+

@@ -1,0 +1,8 @@
+LICENSE,sha256=KPOCEp-dCpQWTPF3gJz9JxGVW4-0ekPTse3YANLcfA8,1068
+poetry2conda/__init__.py,sha256=igapmTtqVRCWyOehSQfQFN_Zz7zb6OVYcTiCpAi5U50,131
+poetry2conda/convert.py,sha256=Wjp-q8QNlqRb5pOlvfKSUfx-a9giLpb3_PwBb0qMALc,7866
+poetry2conda-0.1.0.dist-info/entry_points.txt,sha256=XWyicJhgQHRV1aHZRh4XrcFSXMX8eDNT9KzLmJheDGk,58
+poetry2conda-0.1.0.dist-info/LICENSE,sha256=KPOCEp-dCpQWTPF3gJz9JxGVW4-0ekPTse3YANLcfA8,1068
+poetry2conda-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+poetry2conda-0.1.0.dist-info/METADATA,sha256=oPVTgR9XmlGe-IzhXlNVD_2nzkMT3wIgqbHQy2vQYvE,9954
+poetry2conda-0.1.0.dist-info/RECORD,,
