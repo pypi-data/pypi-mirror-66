@@ -1,0 +1,2 @@
+__rdflib_hdt_native__.cpython-37m-darwin.so
+hdt.cpython-37m-darwin.so
