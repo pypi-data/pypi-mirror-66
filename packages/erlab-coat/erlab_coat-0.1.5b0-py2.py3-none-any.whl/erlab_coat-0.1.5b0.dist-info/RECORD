@@ -1,0 +1,11 @@
+erlab_coat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+erlab_coat/dataset.py,sha256=1AXEg6_9OhRBeYzze0NY5bUzDCTZFWVDewPrTTA9-5E,7724
+erlab_coat/meta.py,sha256=7FM0uHv2iPlu6cn1WJJF-qYUuHZb5KHUF9yDw_C_zTs,19480
+erlab_coat/plots.py,sha256=UQpiuTBqzOWJmz2R1PM9LuV8JyzLNcQKlBePd8V12fs,19227
+erlab_coat/preprocessing.py,sha256=DoWNfHoaugOM7PAIY3YR11AYe7TiBn1EChov7g3PHYw,21065
+erlab_coat/statistics.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+erlab_coat/twitter.py,sha256=wuSdiBgo6fx0faBXt_ucOSCVUNRfiIdUxvOcMd9DkUY,7757
+erlab_coat-0.1.5b0.dist-info/METADATA,sha256=e6Kv-XLLBMp7SVRZ8koGrEv3lybhfTUzhmXLcFRSYjk,1031
+erlab_coat-0.1.5b0.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+erlab_coat-0.1.5b0.dist-info/top_level.txt,sha256=kjPMX2fF-GlvmuaoCYFLd1oVvuQs9Qqp8QPt-C6eT84,11
+erlab_coat-0.1.5b0.dist-info/RECORD,,
