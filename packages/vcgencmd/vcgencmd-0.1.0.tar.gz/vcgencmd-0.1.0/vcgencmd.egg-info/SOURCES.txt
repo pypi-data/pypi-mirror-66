@@ -1,0 +1,9 @@
+README.md
+setup.py
+vcgencmd/__init__.py
+vcgencmd/__main__.py
+vcgencmd/vcgencmd.py
+vcgencmd.egg-info/PKG-INFO
+vcgencmd.egg-info/SOURCES.txt
+vcgencmd.egg-info/dependency_links.txt
+vcgencmd.egg-info/top_level.txt
