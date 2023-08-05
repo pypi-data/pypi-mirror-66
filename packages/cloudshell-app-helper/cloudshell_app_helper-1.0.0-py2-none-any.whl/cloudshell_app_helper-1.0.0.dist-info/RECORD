@@ -1,0 +1,12 @@
+cloudshell/__init__.py,sha256=D73uqPihkWq-NHnGR5lXCOPUvmdkVKEUYbbqNeEc4Cg,97
+cloudshell/helpers/__init__.py,sha256=D73uqPihkWq-NHnGR5lXCOPUvmdkVKEUYbbqNeEc4Cg,97
+cloudshell/helpers/apps/__init__.py,sha256=D73uqPihkWq-NHnGR5lXCOPUvmdkVKEUYbbqNeEc4Cg,97
+cloudshell/helpers/apps/app_helper.py,sha256=9Mv1bPJvkrdWKLU8PqBglJc8Lf-stcSnVBNgY72H4v0,5934
+cloudshell/helpers/apps/build_app_xml.py,sha256=7poX6PxBXD345v_RARXFN9fE5EIKuuIyKOpi6yG_8s8,2957
+cloudshell/helpers/apps/images.py,sha256=5pDMFHfeZPCQlBvYUnyzWBpK7HiLZC7d9-1B3o5YN6c,16419
+cloudshell/helpers/apps/upload_app_xml.py,sha256=Uwbb6tS41C7SE8rn2gr0ShzsETTunuPxHmKXTsKfimQ,2616
+cloudshell_app_helper-1.0.0.dist-info/LICENSE,sha256=WtjCEwlcVzkh1ziO35P2qfVEkLjr87Flro7xlHz3CEY,11556
+cloudshell_app_helper-1.0.0.dist-info/METADATA,sha256=DHttlpIY4RCzeaXgFx8to0egW6ETW8D-LVVU9cSf9Gw,741
+cloudshell_app_helper-1.0.0.dist-info/WHEEL,sha256=umevUEtYglx3BsmRdkbeexA0ajsvOK25YhJUBycYWFg,97
+cloudshell_app_helper-1.0.0.dist-info/top_level.txt,sha256=5VJHdipzUMLIFaU0FA2iQumtAtUm9gz0tMXfUU0qlIo,11
+cloudshell_app_helper-1.0.0.dist-info/RECORD,,
