@@ -1,0 +1,15 @@
+LICENSE.md
+pyproject.toml
+setup.cfg
+setup.py
+wegift/__init__.py
+wegift.datetimeutil.egg-info/PKG-INFO
+wegift.datetimeutil.egg-info/SOURCES.txt
+wegift.datetimeutil.egg-info/dependency_links.txt
+wegift.datetimeutil.egg-info/namespace_packages.txt
+wegift.datetimeutil.egg-info/requires.txt
+wegift.datetimeutil.egg-info/top_level.txt
+wegift/datetimeutil/__init__.py
+wegift/datetimeutil/datetimeutil.py
+wegift/datetimeutil/tests/__init__.py
+wegift/datetimeutil/tests/datetimeutil_test.py

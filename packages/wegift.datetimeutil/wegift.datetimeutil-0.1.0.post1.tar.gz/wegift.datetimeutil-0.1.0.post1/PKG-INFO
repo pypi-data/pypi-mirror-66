@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: wegift.datetimeutil
+Version: 0.1.0.post1
+Summary: Util functions to work with timezone aware timestamps
+Home-page: https://gitlab.com/wegift/datetimeutil
+Author: WeGift
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: datetime date time timezone
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: test
