@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+jk_simpleusermgr/User.py
+jk_simpleusermgr/UserMgr.py
+jk_simpleusermgr/__init__.py
+jk_simpleusermgr.egg-info/PKG-INFO
+jk_simpleusermgr.egg-info/SOURCES.txt
+jk_simpleusermgr.egg-info/dependency_links.txt
+jk_simpleusermgr.egg-info/not-zip-safe
+jk_simpleusermgr.egg-info/requires.txt
+jk_simpleusermgr.egg-info/top_level.txt
