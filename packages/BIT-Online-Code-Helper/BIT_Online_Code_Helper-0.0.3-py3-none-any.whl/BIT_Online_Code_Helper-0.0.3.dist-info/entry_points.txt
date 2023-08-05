@@ -1,0 +1,3 @@
+[console_scripts]
+bch = bit_online_code_helper.main:main
+
