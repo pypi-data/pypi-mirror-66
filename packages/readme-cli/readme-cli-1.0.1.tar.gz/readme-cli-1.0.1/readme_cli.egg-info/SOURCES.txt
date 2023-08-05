@@ -1,0 +1,13 @@
+README.md
+setup.py
+readme/__init__.py
+readme/cli.py
+readme/config.py
+readme/manager.py
+readme_cli.egg-info/PKG-INFO
+readme_cli.egg-info/SOURCES.txt
+readme_cli.egg-info/dependency_links.txt
+readme_cli.egg-info/entry_points.txt
+readme_cli.egg-info/not-zip-safe
+readme_cli.egg-info/requires.txt
+readme_cli.egg-info/top_level.txt
