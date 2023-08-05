@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: tornado-elastic2
+Version: 0.0.1
+Summary: Project Apm Elastic for tornado-framework
+Home-page: UNKNOWN
+Author: Neighbors LTDA
+Author-email: laerte.allan@gmail.com
+Maintainer: Nipun
+Maintainer-email: nipunmlist@gmail.com
+License: UNKNOWN
+Keywords: sample setuptools development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: elastic-apm (==5.5.2)
+
+UNKNOWN
+
+
