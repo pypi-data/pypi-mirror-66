@@ -1,0 +1,4 @@
+include artellapipe/tools/lightrigsmanager/__logging__.ini
+recursive-include artellapipe/tools/lightrigsmanager/resources/* *.*
+include versioneer.py
+include artellapipe/tools/lightrigsmanager/_version.py
