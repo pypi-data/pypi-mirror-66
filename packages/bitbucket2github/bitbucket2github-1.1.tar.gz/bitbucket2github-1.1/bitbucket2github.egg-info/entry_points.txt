@@ -1,0 +1,3 @@
+[console_scripts]
+bitbucket2github = bitbucket2github.cli:migrate
+

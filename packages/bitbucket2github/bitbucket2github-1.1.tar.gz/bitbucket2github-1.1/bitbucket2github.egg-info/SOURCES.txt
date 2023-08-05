@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+bitbucket2github/__init__.py
+bitbucket2github/bitbucket_client.py
+bitbucket2github/cli.py
+bitbucket2github/github_client.py
+bitbucket2github/processor.py
+bitbucket2github.egg-info/PKG-INFO
+bitbucket2github.egg-info/SOURCES.txt
+bitbucket2github.egg-info/dependency_links.txt
+bitbucket2github.egg-info/entry_points.txt
+bitbucket2github.egg-info/not-zip-safe
+bitbucket2github.egg-info/requires.txt
+bitbucket2github.egg-info/top_level.txt
