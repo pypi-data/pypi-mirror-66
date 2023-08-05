@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: peewee-validates-updated
+Version: 1.0.8
+Summary: Simple and flexible model validator for Peewee ORM.
+Home-page: https://github.com/qaqaqaqaowh/peewee-validates
+Author: Tim Shaffer
+Author-email: timshaffer@me.com
+License: MIT
+Download-URL: https://github.com/qaqaqaqaowh/peewee-validates/archive/v1.0.8.tar.gz
+Keywords: peewee orm database form validation development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database :: Front-Ends
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: peewee (<4.0.0,>=2.8.2)
+Requires-Dist: python-dateutil (>=2.5.0)
+
+UNKNOWN
+
+
