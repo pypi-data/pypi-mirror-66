@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: deepnlpf
+Version: 0.0.10
+Summary: A Framework for Integrating Linguistic Analysis and Semantic Annotation of Text Documents.
+Home-page: https://deepnlpf.github.io/site
+Author: RodriguesFAS
+Author-email: franciscosouzaacer@gmail.com
+License: Apache License 2.0
+Keywords: natural-language-processing nlp natural-language-understanding deepnlp deep-learning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: bson (==0.5.9)
+Requires-Dist: Flask (==1.1.2)
+Requires-Dist: gogo (==1.1.1)
+Requires-Dist: google (==2.0.3)
+Requires-Dist: homura (==0.1.5)
+Requires-Dist: isodate (==0.6.0)
+Requires-Dist: Jinja2 (==2.11.1)
+Requires-Dist: json2xml (==3.3.2)
+Requires-Dist: mongoengine (==0.19.1)
+Requires-Dist: names (==0.3.0)
+Requires-Dist: pandas (==1.0.3)
+Requires-Dist: path (==13.2.0)
+Requires-Dist: pathos (==0.2.5)
+Requires-Dist: plotly (==4.6.0)
+Requires-Dist: psutil (==5.7.0)
+Requires-Dist: pygogo (==0.12.0)
+Requires-Dist: pymongo (==3.10.1)
+Requires-Dist: requests (==2.23.0)
+Requires-Dist: stanza (==1.0.0)
+Requires-Dist: tqdm (==4.45.0)
+Requires-Dist: PyYAML (==5.3.1)
+Requires-Dist: ray (==0.8.4)
+
+<div align="center"><img src="https://github.com/deepnlpf/deepnlpf/blob/master/images/deepnlpf-logo.png" height="100px"/></div>
+
+<h2 align="center">DeepNLPF: A Framework for Integrating Linguistic Analysis and Semantic Annotation of Text Documents.</h2>
+
+<div align="center">
+    <a href="#">
+        <img alt="License" src="https://img.shields.io/github/license/deepnlpf/deepnlpf">
+    </a>
+    <a href="https://pypi.org/project/deepnlpframework/">
+        <img alt="PyPI Version" src="https://img.shields.io/pypi/v/deepnlpframework?color=blue">
+    </a>
+    <a href="https://anaconda.org/deepnlpframework">
+        <img alt="Conda Versions" src="https://img.shields.io/conda/vn/deepnlpframework?color=blue&label=conda">
+    </a>
+    <a href="https://pypi.org/project/deepnlpframework/">
+        <img alt="Python Versions" src="https://img.shields.io/pypi/pyversions/deepnlpframework?colorB=blue">
+    </a>
+</div>
+
+The DeepNLPF it contains support for running various accurate natural language processing tools. For detailed information please visit our [official website](https://deepnlpf.github.io/site).
+
+DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/) 19.04 operating system. However, it may work on other similar linux versions or Windows and MacOS if it satisfies the dependencies on external NLP tools mentioned below "at your own risk".
+
+## [Install and User Guide](https://deepnlpf.github.io/site/docs/install)
+
+
+
