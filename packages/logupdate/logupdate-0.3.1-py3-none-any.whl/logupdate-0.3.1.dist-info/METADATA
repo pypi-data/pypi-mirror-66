@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: logupdate
+Version: 0.3.1
+Summary: Log by overwriting the previous output in the terminal
+Home-page: https://github.com/CoorpAcademy/pino.py
+License: MIT
+Keywords: cli,terminal,log,logger,logging,shell,update,animation,progress
+Author: Adriean Khisbe
+Author-email: adriean.khisbe@live.fr
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Logging
+Requires-Dist: ansiwrap (>=0.8.4,<0.9.0)
+Requires-Dist: cursor (>=1.3.4,<2.0.0)
+Description-Content-Type: text/markdown
+
+# logupdate.py
+
+[![PyPI](https://img.shields.io/pypi/v/logupdate.svg)](https://pypi.org/project/logupdate/)
+[![Supported Python Versions](https://img.shields.io/pypi/pyversions/logupdate.svg)](https://pypi.python.org/pypi/logupdate)
+[![Build Status](https://travis-ci.org/AdrieanKhisbe/logupdate.py.svg?branch=master)](https://travis-ci.org/AdrieanKhisbe/logupdate.py)
+
+> Log by overwriting the previous output in the terminal. 
+> Useful for rendering progress bars, animations, etc.
+> (Port of [sindresorhus/log-update](https://github.com/sindresorhus/log-update) from js to python)
+
+## Install
+Just pip install it, and you're good to go.
+
+```bash
+pip install logupdate
+```
+
+## Usage
+```python
+from logupdate import logupdate
+from time import sleep
+
+logupdate("Hello, a secret is about to be said to you")
+sleep(1)
+logupdate("You can pimp your interactive commands with logupdate")
+sleep(1)
+logupdate("Don't forget the secret ;)")
+sleep(1)
+logupdate.clear().done()
+```
+
+## Examples
+
+You can find some example in the dedicated [examples](./examples) folder.
+
+## API
+- `logupdate(text, ...)`: log to stdout (overwriting previous input)
+- `logupdate.clear([restore_cursor=None])`: Clear previous logged output. This can also restore the cursor if asked.
+- `logupdate.done([restore_cursor=None])`: Persist the logged output. This enable to start a new "log session" below.
+  This restores the cursor unless you ask not to.
+
+- `logupdate.stderr(text, ...)`: log to stderr
+- `logupdate.stderr.clear([restore_cursor=None])`: clear stderr.
+- `logupdate.stderr.done([restore_cursor=None])`:  persist stderr.
+
+- `logupdate.create(stream, [show_cursor=False])` : return a `logupdate` method dedicated to log to given `stream`.
+
+## License
+MIT © [AdrieanKhisbe](https://github.com/AdrieanKhisbe)
+
