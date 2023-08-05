@@ -1,0 +1,6 @@
+builder/__init__.py,sha256=fgiai9NkX3DQs8XqIzw6Kp6MrGWXDvS6PQy3_fLRotk,23
+builder/builder.py,sha256=ozXmXLhW3Jv_0MXPeJtwZbpdoEwd_2vl7C4QUyX3XIM,4487
+grafana_dashboards_builder-0.1.0.dist-info/entry_points.txt,sha256=H9eyYcLEf0tNgdR_dUkJDjR94zsHB_C5u-f7jPZoZBc,68
+grafana_dashboards_builder-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+grafana_dashboards_builder-0.1.0.dist-info/METADATA,sha256=KyM-YQ73pY5npPXzs_vOTYtnIMx5AQ_Wu5K_bDomoUs,521
+grafana_dashboards_builder-0.1.0.dist-info/RECORD,,
