@@ -1,0 +1,6 @@
+mwapi
+mwbase<0.1.999,>=0.1.0
+mwreverts
+mwtypes
+mwxml>=0.3.3
+revscoring<2.6.999,>=2.6.7
