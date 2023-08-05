@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+
+"""\
+Create impromptu protocols by using delimiters to separate steps specified on 
+the command line.
+
+Usage:
+    custom <protocol> [-d CHAR] [-D char] [-W]
+
+Options:
+    -d --delimiter CHAR                                     [default: ;]
+        The character (or characters) used to break the protocol into steps.
+
+    -D --sub-delimiter CHAR                                 [default: ~]
+        The character (or characters) used to break steps into "substeps".  
+        Each substep will be prefixed with a hyphen and printed on its own 
+        line.
+
+    -W --no-wrap
+        Do not wrap each step to fit within 50 characters.
+"""
+
+from docopt import docopt
+from stepwise import Protocol
+import textwrap
+
+def format_steps(steps, wrap, delim, subdelim):
+    return [
+            format_step(x, wrap, subdelim)
+            for x in steps.split(delim)
+    ]
+
+def format_step(step, wrap, subdelim):
+    step, *substeps = step.split(subdelim)
+
+    step_fmt = textwrap.fill(step, width=50) if wrap else step
+    substeps_fmt = [
+            format_substep(x, wrap)
+            for x in substeps
+    ]
+
+    br = '\n'
+    return f'{step_fmt}{br}{br}{br.join(substeps_fmt)}'
+
+def format_substep(substep, wrap):
+    if not wrap:
+        return '- ' + substep
+
+    return '- ' + '\n  '.join(textwrap.wrap(substep, width=48))
+
+if __name__ == '__main__':
+    args = docopt(__doc__)
+
+    protocol = Protocol()
+    protocol.steps = format_steps(
+            args['<protocol>'],
+            not args['--no-wrap'],
+            args['--delimiter'],
+            args['--sub-delimiter'],
+    )
+    print(protocol)
