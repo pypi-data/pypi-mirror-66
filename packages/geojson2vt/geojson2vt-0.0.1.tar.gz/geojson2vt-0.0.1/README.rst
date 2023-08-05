@@ -1,0 +1,1 @@
+All the credit belongs to the collaborators of JS GeoJSON-VT.
