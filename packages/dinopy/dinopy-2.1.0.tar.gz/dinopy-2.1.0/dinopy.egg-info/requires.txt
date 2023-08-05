@@ -1,0 +1,4 @@
+numpy>=1.17
+
+[cython]
+cython>=0.22
