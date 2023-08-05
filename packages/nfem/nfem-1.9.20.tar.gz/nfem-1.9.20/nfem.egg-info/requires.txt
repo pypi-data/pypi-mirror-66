@@ -1,0 +1,8 @@
+ipython
+mako
+matplotlib
+numpy
+plotly
+pyqt5
+scipy
+uuid
