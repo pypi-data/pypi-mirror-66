@@ -1,0 +1,10 @@
+fitting/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fitting/convertDataToJson.py,sha256=qnmq11sfhAC7TovWJRLXYSvDAHAlAnU7RN_ATzGXhHA,4507
+fitting/fittingScript.py,sha256=q9nitcst0HyNhFj85ULapJ7sgjlc6_5vBaVLZ70_oys,22410
+fitting/myapp.py,sha256=HX6fq4HtNl8na37jrtLYySQIobBSTzn9cu52jfefS7c,9008
+fitting/scroll.py,sha256=3hhnld-krmQAS--OZ3rlRXKFX3jStYyzHWzRMndpPfQ,1148
+fitting_slaven92-0.0.1.dist-info/LICENCE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+fitting_slaven92-0.0.1.dist-info/METADATA,sha256=luIKdC6-HEDfRf-GLyJu65m2N7MTIVDylE6Byhs4hM0,608
+fitting_slaven92-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+fitting_slaven92-0.0.1.dist-info/top_level.txt,sha256=NrTOI_HvGssWkmETAkzYAOndQr4ZU_9MUm6Q7kzk-ds,8
+fitting_slaven92-0.0.1.dist-info/RECORD,,
