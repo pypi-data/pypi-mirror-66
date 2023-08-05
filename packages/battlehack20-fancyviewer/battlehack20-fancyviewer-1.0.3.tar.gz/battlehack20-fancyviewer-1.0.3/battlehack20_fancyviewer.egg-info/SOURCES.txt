@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+battlehack20_fancyviewer.egg-info/PKG-INFO
+battlehack20_fancyviewer.egg-info/SOURCES.txt
+battlehack20_fancyviewer.egg-info/dependency_links.txt
+battlehack20_fancyviewer.egg-info/not-zip-safe
+battlehack20_fancyviewer.egg-info/requires.txt
+battlehack20_fancyviewer.egg-info/top_level.txt
+fancyviewer/__init__.py
+fancyviewer/main.py
+fancyviewer/images/black_pawn.png
+fancyviewer/images/white_pawn.png
