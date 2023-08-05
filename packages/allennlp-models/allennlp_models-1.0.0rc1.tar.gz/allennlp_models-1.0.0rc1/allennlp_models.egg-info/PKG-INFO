@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: allennlp-models
+Version: 1.0.0rc1
+Summary: Officially supported models for the AllenNLP framework
+Home-page: https://github.com/allenai/allennlp-models
+Author: Allen Institute for Artificial Intelligence
+Author-email: allennlp@allenai.org
+License: Apache
+Description: A place for officially supported AllenNLP models.
+        
+        To file an issue, please open a ticket on https://github.com/allenai/allennlp and tag it with "Models".
+        
+Keywords: allennlp NLP deep learning machine reading semantic parsing parsers
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6.1
+Description-Content-Type: text/markdown
