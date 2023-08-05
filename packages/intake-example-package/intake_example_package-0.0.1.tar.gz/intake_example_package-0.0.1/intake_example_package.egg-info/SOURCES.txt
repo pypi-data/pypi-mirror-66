@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+intake_example_package/__init__.py
+intake_example_package/sea.yaml
+intake_example_package.egg-info/PKG-INFO
+intake_example_package.egg-info/SOURCES.txt
+intake_example_package.egg-info/dependency_links.txt
+intake_example_package.egg-info/entry_points.txt
+intake_example_package.egg-info/not-zip-safe
+intake_example_package.egg-info/requires.txt
+intake_example_package.egg-info/top_level.txt
