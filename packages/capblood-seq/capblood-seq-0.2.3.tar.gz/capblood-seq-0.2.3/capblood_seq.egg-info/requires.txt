@@ -1,0 +1,9 @@
+pandas>=0.23.0
+scrapi>=0.5.1
+numpy
+plotly
+sklearn
+scipy
+statsmodels
+matplotlib
+pepars
