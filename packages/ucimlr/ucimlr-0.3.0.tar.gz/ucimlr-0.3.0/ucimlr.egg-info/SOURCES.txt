@@ -1,0 +1,13 @@
+README.md
+setup.py
+ucimlr/__init__.py
+ucimlr/classification_datasets.py
+ucimlr/constants.py
+ucimlr/dataset.py
+ucimlr/helpers.py
+ucimlr/regression_datasets.py
+ucimlr.egg-info/PKG-INFO
+ucimlr.egg-info/SOURCES.txt
+ucimlr.egg-info/dependency_links.txt
+ucimlr.egg-info/requires.txt
+ucimlr.egg-info/top_level.txt
