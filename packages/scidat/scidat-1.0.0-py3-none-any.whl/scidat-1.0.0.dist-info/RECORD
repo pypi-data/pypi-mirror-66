@@ -1,0 +1,12 @@
+scidat/__init__.py,sha256=lUzSwqD2uODW9_O38la6zt4FPlUTDpfPhRMWjrheSFw,1692
+scidat/__main__.py,sha256=gNgFOfyqg-ToOtEnqX1n9Do30Tgi--KJXeTnUBNX5Qk,2362
+scidat/annotate.py,sha256=1UDsytp9jkFIEK5iO_mMu5_rAZN5xHpPEFInNZW3DOQ,10778
+scidat/api.py,sha256=qY3LiBLHWIIuOCKv97beSdCm7o6i6egewmNbhAy2LSw,17140
+scidat/download.py,sha256=RsZX0lVbaK7TGadkKYB_N9vCchpbdb1lnhk-n1cBUR0,12705
+scidat-1.0.0.data/data/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+scidat-1.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+scidat-1.0.0.dist-info/METADATA,sha256=7W227LgvIM6Sd9eJpqYRFmGN4A7BhbdUgKpc1khsJBY,5460
+scidat-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+scidat-1.0.0.dist-info/entry_points.txt,sha256=-41huK3874oD3Lk7xIKrYb_Tb6-TbgGimSNKX3rDBNY,49
+scidat-1.0.0.dist-info/top_level.txt,sha256=RbRI1l0I1b8L2Tn7ihPvmmWTfLnqWGHNejAZm8w8VKI,7
+scidat-1.0.0.dist-info/RECORD,,
