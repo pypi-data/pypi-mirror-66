@@ -1,0 +1,8 @@
+aws_cdk/aws_s3_assets/__init__.py,sha256=i02HKvY3BR0_GtrW_vuaFZwRRyfSmPuR-6jDFWaI8e4,20490
+aws_cdk/aws_s3_assets/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_s3_assets/_jsii/__init__.py,sha256=lmTV4Ib_HW0k8oyjGyRawdQjsTCV1ELlEIEefeeIUwA,440
+aws_cdk/aws_s3_assets/_jsii/aws-s3-assets@1.33.0.jsii.tgz,sha256=8eoIk9rAxjWWcFUcbptJoYjHLEwb8UWHmyDXY9u8bX0,35329
+aws_cdk.aws_s3_assets-1.33.0.dist-info/METADATA,sha256=nPRN_21RG_ge3SqrNA3Lu5E1-qwSmzdEMympKX4MnDU,6089
+aws_cdk.aws_s3_assets-1.33.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aws_cdk.aws_s3_assets-1.33.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_s3_assets-1.33.0.dist-info/RECORD,,
