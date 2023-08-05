@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="fast_ta" targetName="fast_ta" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f110c582-830e-445a-adb4-2be36c1aa634" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1aId0UbEq1yoTH3IR3V3UCwUI2q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="fast_ta" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fast_ta" TARGET_NAME="fast_ta" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f110c582-830e-445a-adb4-2be36c1aa634" name="Default Changelist" comment="" />
+      <created>1586426818438</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586426818438</updated>
+      <workItem from="1586426819818" duration="14404000" />
+      <workItem from="1586472038720" duration="5816000" />
+      <workItem from="1586507903474" duration="9799000" />
+      <workItem from="1586590059114" duration="5952000" />
+      <workItem from="1586668812678" duration="13315000" />
+      <workItem from="1586690841332" duration="98000" />
+      <workItem from="1586690967177" duration="16602000" />
+      <workItem from="1586766890486" duration="6531000" />
+      <workItem from="1586823612992" duration="5000" />
+      <workItem from="1586850505180" duration="7648000" />
+      <workItem from="1586984120126" duration="9853000" />
+      <workItem from="1587020699794" duration="24302000" />
+      <workItem from="1587083110580" duration="3277000" />
+      <workItem from="1587102722529" duration="7733000" />
+      <workItem from="1587206393730" duration="601000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="780" y="297" key="FileChooserDialogImpl" timestamp="1586479744876">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="780" y="297" key="FileChooserDialogImpl/65.24.1855.1056/1920.0.1920.1080@65.24.1855.1056" timestamp="1586479744876" />
+    <state x="593" y="172" key="SettingsEditor" timestamp="1586723175015">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="593" y="172" key="SettingsEditor/65.24.1855.1056/1920.0.1920.1080@65.24.1855.1056" timestamp="1586723175015" />
+    <state x="653" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1587206394519">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="653" y="367" key="com.intellij.ide.util.TipDialog/65.24.1855.1056/1920.0.1920.1080@65.24.1855.1056" timestamp="1587206394519" />
+    <state x="742" y="183" key="refactoring.ChangeSignatureDialog" timestamp="1587103721709">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="742" y="183" key="refactoring.ChangeSignatureDialog/65.24.1855.1056/1920.0.1920.1080@65.24.1855.1056" timestamp="1587103721709" />
+    <state x="655" y="246" key="run.anything.popup" timestamp="1587063536086">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="655" y="246" key="run.anything.popup/65.24.1855.1056/1920.0.1920.1080@65.24.1855.1056" timestamp="1587063536086" />
+  </component>
+</project>

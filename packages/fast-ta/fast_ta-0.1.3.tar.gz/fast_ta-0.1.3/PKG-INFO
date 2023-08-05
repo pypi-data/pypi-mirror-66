@@ -1,0 +1,27 @@
+Metadata-Version: 1.2
+Name: fast_ta
+Version: 0.1.3
+Summary: Fast Technical Analysis Library Written In C
+Home-page: https://fast-ta.readthedocs.io/
+Author: Cristian Bicheru, Calder White
+Author-email: c.bicheru0@gmail.com, calderwhite1@gmail.com
+Maintainer: Cristian Bicheru, Calder White
+Maintainer-email: c.bicheru0@gmail.com, calderwhite1@gmail.com
+License: MIT
+Download-URL: https://github.com/cristian-bicheru/fast-ta/archive/v0.1.3.tar.gz
+Project-URL: Documentation, https://fast-ta.readthedocs.io/
+Project-URL: Bug Reports, https://github.com/cristian-bicheru/fast-ta/issues
+Project-URL: Source, https://github.com/cristian-bicheru/fast-ta
+Description: Fast TA is an optimized, high-level technical analysis library used to compute technical indicators on financial datasets. It is written entirely in C, and uses AVX vectorization as well. Fast TA is built with the NumPy C API.
+Keywords: technical analysis,python3,numpy
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
