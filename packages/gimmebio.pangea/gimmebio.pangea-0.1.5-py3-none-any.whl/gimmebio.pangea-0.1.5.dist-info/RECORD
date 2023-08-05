@@ -1,0 +1,11 @@
+gimmebio.pangea-0.1.5-py3.6-nspkg.pth,sha256=pxTb1jWsCspdqoPmV2TGBVot_a6QmHbVwKXbDN4rHTs,549
+gimmebio/pangea/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gimmebio/pangea/api.py,sha256=wyJFMXESvxCnE3PSEhgTQjhVHC7H2ZYwNDmWv9_Ql14,1257
+gimmebio/pangea/cli.py,sha256=0jlVEqUGRZSRnR-uz03ZeRqWaWuJUZ2HE2Ymg_r64tQ,3162
+gimmebio/pangea/constants.py,sha256=noKkwGIAAdnM1Ygav9iEkAOH9NcQwnFkpDGuQSdAnvs,41
+gimmebio/pangea/utils.py,sha256=wxi0_ZqdN8cf6a-x0vAF-mSNH_tfSo2W0rAPefTRjEc,679
+gimmebio.pangea-0.1.5.dist-info/METADATA,sha256=wItwXBb14iugVX7BGfN0-qB-6QYxCLcayOaYLSyY0cE,407
+gimmebio.pangea-0.1.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+gimmebio.pangea-0.1.5.dist-info/namespace_packages.txt,sha256=ZtXh7YhZv8YK6bNlKCHwVooOVbYqdaS6-ibUenEYqgA,9
+gimmebio.pangea-0.1.5.dist-info/top_level.txt,sha256=ZtXh7YhZv8YK6bNlKCHwVooOVbYqdaS6-ibUenEYqgA,9
+gimmebio.pangea-0.1.5.dist-info/RECORD,,
