@@ -1,0 +1,12 @@
+wdldoc/__init__.py,sha256=EMiK9TIziB-rXsxz-0zfp3755Nmql7wBa03JJRBBA_E,845
+wdldoc/__main__.py,sha256=0lZhY5OmNKVCEZuQzoQTAQG4LcOD3evUaOIKDxBBPQQ,1432
+wdldoc/bin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wdldoc/bin/wdldoc.py,sha256=rA0lKFzg9236_E_HfOxM-jGCE4a5gvKGza8bkOdEXqw,3584
+wdldoc/miniwdl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wdldoc/miniwdl/sources.py,sha256=6-AWjFUZowV7rqtsFKK6qNLfgZDwkItitNDLsYUKKx4,795
+wdldoc/templates/markdown.py,sha256=yFSNUXUkF9s6IwAdhj2r-Q-yTVfTe-u0wz7xGMn5M9w,2450
+wdldoc-1.5.0.dist-info/entry_points.txt,sha256=sXLCCYaNtC7AkffutNKkeWOZGoOShvp3dCTyrKgo5Us,47
+wdldoc-1.5.0.dist-info/LICENSE.md,sha256=-h2uH9ZHFDKwxa6BD6UaKexEPSLXXFYoUEOlxMJoVSQ,1071
+wdldoc-1.5.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+wdldoc-1.5.0.dist-info/METADATA,sha256=fj1ZIN-M_WWVeXMO2jnuYBMNHWvUGd2QbXS1r-26FLg,2387
+wdldoc-1.5.0.dist-info/RECORD,,
