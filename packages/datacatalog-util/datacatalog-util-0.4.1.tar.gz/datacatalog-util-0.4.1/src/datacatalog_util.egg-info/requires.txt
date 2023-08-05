@@ -1,0 +1,7 @@
+google-cloud-datacatalog
+pandas
+tabulate
+datacatalog-tag-manager
+datacatalog-fileset-enricher
+datacatalog-tag-template-processor
+datacatalog-tag-template-exporter
