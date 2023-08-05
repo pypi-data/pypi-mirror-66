@@ -1,0 +1,9 @@
+README.md
+setup.py
+amazon/__init__.py
+amazon/api.py
+amazon/metadata.py
+python_amazon_unthrottled_paapi.egg-info/PKG-INFO
+python_amazon_unthrottled_paapi.egg-info/SOURCES.txt
+python_amazon_unthrottled_paapi.egg-info/dependency_links.txt
+python_amazon_unthrottled_paapi.egg-info/top_level.txt
