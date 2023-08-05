@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: efficient_rl
+Version: 1.0
+Summary: Reimplementation of Diuks "object-oriented representation for efficient RL".
+Home-page: https://github.com/borea17/efficient_rl
+Author: Markus Borea
+Author-email: UNKNOWN
+License: MIT
+Download-URL: https://github.com/borea17/efficient_rl/archive/v_1.0.tar.gz
+Description: UNKNOWN
+Keywords: Reinforcement Learning,Efficient RL,OO-MDP
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
