@@ -1,0 +1,13 @@
+choicemodels/__init__.py,sha256=mPibvZ7cUYpWkFbommPkilkGp0O27oaVjHGKEOUUXxc,138
+choicemodels/mnl.py,sha256=LUNwU-V8ZunjTgFUVhwTekQ_U4dARgj6NFZWZLr3M9U,29181
+choicemodels/tools/__init__.py,sha256=yPa_jzauBVWiQwT_HRkkDLMD9dVWth_A3bDjD8G7ycA,134
+choicemodels/tools/distancematrix.py,sha256=oRNfXwsKImGL8AIBodQxueywiydsOFLnnm-tLw7Dhu0,9097
+choicemodels/tools/mergedchoicetable.py,sha256=o3k6PC_5w-R6hDL9PrvD0iLhMP7IGxaoClDgRpLQcw8,20420
+choicemodels/tools/pmat.py,sha256=2Kovduw5YlnU96ABoS7HjJ-dNRIob65HS8UYco5659I,8744
+choicemodels/tools/simulation.py,sha256=4I4-uH61Ox_RNLZQf7IY5i_ExIambgPWIuJQfH4X8Uw,19874
+choicemodels-0.2.2.dist-info/DESCRIPTION.rst,sha256=zZroY0yI2qEHFBfhUkGmn1gp5W1Fe-OBkMJn1wRvwxw,2087
+choicemodels-0.2.2.dist-info/METADATA,sha256=vTjRG7dz-P_dTjmAwswtOMISFlstXUZqIZYR62zBa3Y,3100
+choicemodels-0.2.2.dist-info/RECORD,,
+choicemodels-0.2.2.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+choicemodels-0.2.2.dist-info/metadata.json,sha256=fUmekRm3mZOhnlOQsyXbEnAZ0bp6gI7-qxrBNM4QtYQ,1118
+choicemodels-0.2.2.dist-info/top_level.txt,sha256=6QUMM4tO73qxKi2G67pwEwmSQCGdgc7-Wcex2M8iq94,13
