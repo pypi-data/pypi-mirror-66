@@ -1,0 +1,1777 @@
+{
+  "getUserAppsList": {
+    "type": "object",
+    "properties": {
+      "page": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "size": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 99
+      }
+    },
+    "required": [
+      "page"
+    ],
+    "additionalProperties": false
+  },
+  "createApp": {
+    "type": "object",
+    "properties": {
+      "args": {
+        "type": "array"
+      },
+      "basicAuthentications": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "password": {
+              "type": "string"
+            },
+            "username": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "username",
+            "password"
+          ],
+          "additionalItems": false
+        }
+      },
+      "cmd": {
+        "type": "string"
+      },
+      "cpu": {
+        "type": "number"
+      },
+      "dependsOn": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "deployType": {
+        "type": "string",
+        "enum": [
+          "DOCKER_IMAGE",
+          "CODE",
+          "APP"
+        ]
+      },
+      "disk": {
+        "type": "number"
+      },
+      "entrypoint": {
+        "type": "string"
+      },
+      "environments": {
+        "type": "array"
+      },
+      "git": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string"
+          },
+          "buildArgs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "docker_file": {
+            "type": "string"
+          },
+          "image_name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "integer"
+          },
+          "url": {
+            "type": "string"
+          },
+          "urlBranch": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          }
+        }
+      },
+      "healthChecks": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "checkRate": {
+              "type": "number"
+            },
+            "endpoint": {
+              "type": "string"
+            },
+            "initialDelay": {
+              "type": "number"
+            },
+            "responseCode": {
+              "type": "integer"
+            },
+            "responseString": {
+              "type": "string"
+            },
+            "scheme": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "image": {
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "registry": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          }
+        }
+      },
+      "labels": {
+        "type": "array"
+      },
+      "links": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "alias": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "maxInstance": {
+        "type": "integer"
+      },
+      "mem": {
+        "type": "number"
+      },
+      "minInstance": {
+        "type": "integer"
+      },
+      "modules": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "app_id": {
+              "type": "integer"
+            },
+            "code": {
+              "type": "integer"
+            },
+            "metadata": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "name": {
+        "type": "string"
+      },
+      "netAlias": {
+        "type": "string"
+      },
+      "network": {
+        "type": "string"
+      },
+      "pipeLineStatus": {
+        "type": "string"
+      },
+      "ports": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "basicAuthentication": {
+              "type": "boolean"
+            },
+            "host": {
+              "type": "integer"
+            },
+            "onlyInternal": {
+              "type": "boolean"
+            },
+            "port": {
+              "type": "integer"
+            },
+            "protocol": {
+              "type": "string"
+            },
+            "ssl": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "scalingMode": {
+        "type": "string",
+        "enum": [
+          "OFF",
+          "CPU",
+          "MEM",
+          "AND",
+          "OR"
+        ]
+      },
+      "worker": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": true
+  },
+  "deleteAppById": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "force": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "commitAppContainer": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "containerId": {
+        "type": "string"
+      },
+      "tag": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "updateAppConfig": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "config": {
+        "cpu": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "disk": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "git": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "accessToken": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "buildArgs": {
+                  "oneOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "docker_file": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "image_name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "type": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "url": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "urlBranch": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "username": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "image": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "accessToken": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "registry": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "instances": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "mem": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ports": {
+          "oneOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "basicAuthentication": {
+                    "type": "boolean"
+                  },
+                  "host": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "onlyInternal": {
+                    "type": "boolean"
+                  },
+                  "port": {
+                    "type": "integer"
+                  },
+                  "protocol": {
+                    "type": "string"
+                  },
+                  "ssl": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rebuild": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "scalingMode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "required": [
+      "app_id",
+      "config"
+    ],
+    "additionalProperties": false
+  },
+  "getRealTimeDeploy": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "getFakeAppState": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "getAppOwner": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "logsExport": {
+    "type": "object",
+    "properties": {
+      "token": {
+        "type": "string",
+        "minLength": 1
+      },
+      "app_id": {
+        "type": "integer"
+      },
+      "fromDate": {
+        "type": "number"
+      },
+      "toDate": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "app_id",
+      "token"
+    ],
+    "additionalProperties": false
+  },
+  "rebuildApp": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "restartAppById": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "commitStart": {
+        "type": "boolean"
+      },
+      "commitStop": {
+        "type": "boolean"
+      },
+      "tagStart": {
+        "type": "string"
+      },
+      "tagStop": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "getAppSetting": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "startAppById": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "committed": {
+        "type": "boolean"
+      },
+      "force": {
+        "type": "boolean"
+      },
+      "tag": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "stopAppById": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "commit": {
+        "type": "boolean"
+      },
+      "tag": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "stopAppDeploy": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "getAppVersions": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "createAppWebHooks": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "config": {
+        "type": "object",
+        "properties": {
+          "applicationId": {
+            "type": "integer"
+          },
+          "secured": {
+            "type": "boolean"
+          },
+          "topics": {
+            "type": "string",
+            "enum": [
+              "ALL",
+              "MEMBER",
+              "DELETE",
+              "RUN_STATE",
+              "PUSH",
+              "PULL",
+              "GIT",
+              "DOCKER",
+              "ISSUE"
+            ]
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "required": [
+      "app_id",
+      "config"
+    ],
+    "additionalProperties": false
+  },
+  "getAppById": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "getAppActivity": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "page": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "size": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 99
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "getChatData": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "checkAppHealth": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "checkAppHealthById": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "health_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id",
+      "health_id"
+    ],
+    "additionalProperties": false
+  },
+  "getAppCollaborators": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "all_collaborators": {
+        "type": "boolean"
+      },
+      "page": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "size": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 99
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "addAppCollaborator": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "accessLevel": {
+        "type": "string",
+        "enum": [
+          "VIEW",
+          "MODIFY",
+          "MODERATE"
+        ]
+      },
+      "email": {
+        "type": "string",
+        "format": "email",
+        "pattern": "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\\.)+[A-Za-z]{2,}$"
+      },
+      "imageRegistry": {
+        "type": "string",
+        "enum": [
+          "PUSH",
+          "PULL",
+          "ALL",
+          "NONE"
+        ]
+      },
+      "level": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id",
+      "email"
+    ]
+  },
+  "updateAppCollaborator": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "collaborator_id": {
+        "type": "integer"
+      },
+      "accessLevel": {
+        "type": "string",
+        "enum": [
+          "VIEW",
+          "MODIFY",
+          "MODERATE"
+        ]
+      },
+      "email": {
+        "type": "string",
+        "format": "email",
+        "pattern": "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\\.)+[A-Za-z]{2,}$"
+      },
+      "imageRegistry": {
+        "type": "string",
+        "enum": [
+          "PUSH",
+          "PULL",
+          "ALL",
+          "NONE"
+        ]
+      },
+      "level": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id",
+      "email",
+      "collaborator_id"
+    ]
+  },
+  "deleteAppCollaborator": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "collaborator_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id",
+      "collaborator_id"
+    ]
+  },
+  "verifyUserCommandPermission": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "cmd": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "app_id",
+      "cmd"
+    ]
+  },
+  "getAppHealthCheck": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      }
+    }
+  },
+  "addAppHealthCheck": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "checkRate": {
+        "type": "integer"
+      },
+      "endpoint": {
+        "type": "string"
+      },
+      "initialDelay": {
+        "type": "integer"
+      },
+      "responseCode": {
+        "type": "integer"
+      },
+      "responseString": {
+        "type": "string"
+      },
+      "scheme": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "app_id",
+      "endpoint",
+      "schema"
+    ]
+  },
+  "deleteAllAppHealthChecks": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "path": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "app_id",
+      "path"
+    ]
+  },
+  "updateHealthCheckById": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "health_id": {
+        "type": "integer"
+      },
+      "checkRate": {
+        "type": "integer"
+      },
+      "endpoint": {
+        "type": "string"
+      },
+      "initialDelay": {
+        "type": "integer"
+      },
+      "responseCode": {
+        "type": "integer"
+      },
+      "responseString": {
+        "type": "string"
+      },
+      "scheme": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "app_id",
+      "health_id",
+      "endpoint",
+      "schema"
+    ]
+  },
+  "deleteHealthCheckById": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "health_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id",
+      "health_id"
+    ],
+    "additionalProperties": false
+  },
+  "getRealTimeAppLogsById": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "time": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id",
+      "time"
+    ],
+    "additionalProperties": false
+  },
+  "transferAppById": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "addAsCollaborator": {
+        "type": "boolean"
+      },
+      "customerEmail": {
+        "type": "string",
+        "format": "email",
+        "pattern": "^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\\.)+[A-Za-z]{2,}$"
+      },
+      "transferGit": {
+        "type": "boolean"
+      },
+      "transferImageRepo": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "app_id",
+      "customerEmail"
+    ],
+    "additionalProperties": false
+  },
+  "getAppWebHooks": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id"
+    ],
+    "additionalProperties": false
+  },
+  "updateAppWebHookById": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "web_hook_id": {
+        "type": "integer"
+      },
+      "config": {
+        "applicationId": {
+          "type": "integer"
+        },
+        "secured": {
+          "type": "boolean"
+        },
+        "topics": {
+          "type": "string",
+          "enum": [
+            "ALL",
+            "MEMBER",
+            "DELETE",
+            "RUN_STATE",
+            "PUSH",
+            "PULL",
+            "GIT",
+            "DOCKER",
+            "ISSUE"
+          ]
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "app_id",
+      "config",
+      "web_hook_id"
+    ],
+    "additionalProperties": false
+  },
+  "deleteAppWebHookById": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "web_hook_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id",
+      "web_hook_id"
+    ],
+    "additionalProperties": false
+  },
+  "getAppByName": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "name"
+    ],
+    "additionalProperties": false
+  },
+  "getGroupWithName": {
+    "type": "object",
+    "properties": {
+      "group_name": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "group_name"
+    ],
+    "additionalProperties": false
+  },
+  "createAppByDockerCompose": {
+    "type": "object",
+    "properties": {
+      "compose_path": {
+        "type": "string"
+      },
+      "global_config": {
+        "type": "object"
+      }
+    },
+    "required": [
+      "compose_path",
+      "global_config"
+    ],
+    "additionalProperties": false
+  },
+  "createPipeline": {
+    "type": "object",
+    "properties": {
+      "configs": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      }
+    },
+    "required": [
+      "configs"
+    ],
+    "additionalProperties": false
+  },
+  "createAppByMachineMechanism": {
+    "type": "object",
+    "properties": {
+      "config": {
+        "type": "object"
+      }
+    },
+    "required": [
+      "config"
+    ],
+    "additionalProperties": false
+  },
+  "getUserAppsStatusList": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer"
+      }
+    },
+    "required": [],
+    "additionalProperties": false
+  },
+  "stopAppDeployWithQueueId": {
+    "type": "object",
+    "properties": {
+      "deploy_queue_id": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "deploy_queue_id"
+    ],
+    "additionalProperties": false
+  },
+  "createCatalogApp": {
+    "type": "object",
+    "properties": {
+      "catalog_id": {
+        "type": "integer"
+      },
+      "catalog_app_config": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "avatar": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "deployLimitCount": {
+            "type": "integer"
+          },
+          "catalogConfigs": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        },
+        "required": [
+          "name", "description", "avatar", "price", "deployLimitCount", "catalogConfigs"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "required": [
+      "catalog_id",
+      "catalog_app_config"
+    ],
+    "additionalProperties": false
+  },
+  "updateCatalog": {
+    "type": "object",
+    "properties": {
+      "catalog_app_id": {
+        "type": "integer"
+      },
+      "catalog_app_config": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "avatar": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "deployLimitCount": {
+            "type": "integer"
+          },
+          "catalogConfigs": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        },
+        "required": [
+          "name", "description", "avatar", "price", "deployLimitCount", "catalogConfigs"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "required": [
+      "catalog_app_id",
+      "catalog_app_config"
+    ]
+  },
+  "getCatalogApp": {
+    "type": "object",
+    "properties": {
+      "catalog_id": {
+        "type": "integer"
+      },
+      "catalog_app_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "catalog_id",
+      "catalog_app_id"
+    ]
+  },
+  "createCatalogAppBySakkuApp": {
+    "type": "object",
+    "properties": {
+      "catalog_id": {
+        "type": "integer"
+      },
+      "app_id": {
+        "type": "integer"
+      },
+      "catalog_app_config": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "avatar": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "deployLimitCount": {
+            "type": "integer"
+          },
+          "catalogConfigs": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        },
+        "required": [
+          "name", "description", "avatar", "price", "deployLimitCount", "catalogConfigs"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "required": [
+      "catalog_id",
+      "app_id",
+      "catalog_app_config"
+    ]
+  },
+  "getAllCatalogAppById": {
+    "type": "object",
+    "properties": {
+      "catalog_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "catalog_id"
+    ]
+  },
+  "getUserFeedbackCatalog": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "status"
+    ]
+  },
+  "addUserFeedbackCatalogs": {
+    "type": "object",
+    "properties": {
+      "subject": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": {
+        "type": "string",
+        "minLength": 1
+      },
+      "feedback_type": {
+        "type": "string",
+        "minLength": 1
+      },
+      "catalogApp": {
+        "type": "integer"
+      },
+      "dockerName": {
+        "type": "string"
+      },
+      "price": {
+        "type": "number"
+      },
+      "minCpu": {
+        "type": "number"
+      },
+      "minMem": {
+        "type": "number"
+      },
+      "minDisk": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "subject", "description", "feedback_type"
+    ]
+  },
+  "getAllMetaData": {
+    "type": "object",
+    "properties": {
+      "page": {
+        "type": "integer"
+      },
+      "size": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "page", "size"
+    ]
+  },
+  "validateMetaData": {
+    "type": "object",
+    "properties": {
+      "meta_data": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "name", "scope"
+        ]
+      }
+    },
+    "required": [
+      "meta_data"
+    ]
+  },
+  "deployAppFromCatalog": {
+    "type": "object",
+    "properties": {
+      "catalog_app_id": {
+        "type": "integer"
+      },
+      "settings": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "cpu": {
+            "type": "number"
+          },
+          "mem": {
+            "type": "number"
+          },
+          "disk": {
+            "type": "number"
+          },
+          "metadata": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "scope": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "value": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "name", "scope", "value"
+              ]
+            }
+          }
+        },
+        "required": [
+          "name", "cpu", "mem", "disk", "metadata"
+        ]
+      },
+      "files": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "settings", "catalog_app_id"
+    ]
+  },
+  "addDomain": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "domain": {
+        "type": "string",
+        "minLength": 1
+      },
+      "certid": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id", "domain"
+    ]
+  },
+  "getAppDomains": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id"
+    ]
+  },
+  "removeDomain": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "domain": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "app_id", "domain"
+    ]
+  },
+  "addBasicAuthUsers": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "basic_authentication": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "username": {
+              "type": "string",
+              "minLength": 1
+            },
+            "password": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": ["username", "password"]
+        }
+      }
+    },
+    "required": [
+      "app_id", "basic_authentication"
+    ]
+  },
+  "getBasicAuthUsers": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id"
+    ]
+  },
+  "deleteBasicAuthUsers": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "basic_auth_id": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "app_id", "basic_auth_id"
+    ]
+  },
+  "getDomainRecords": {
+    "type": "object",
+    "properties": {
+      "domain": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "domain"
+    ]
+  },
+  "addDomainRecord": {
+    "type": "object",
+    "properties": {
+      "domain": {
+        "type": "string",
+        "minLength": 1
+      },
+      "record_config": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ttl": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "content": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "disabled": {
+                  "type": "boolean"
+                }
+              },
+              "required": ["content"]
+            }
+          }
+        },
+        "required": ["name", "ttl", "type", "records"]
+      }
+    },
+    "required": [
+      "domain", "record_config"
+    ]
+  },
+  "updateDomainRecord": {
+    "type": "object",
+    "properties": {
+      "domain": {
+        "type": "string",
+        "minLength": 1
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "record_type": {
+        "type": "string",
+        "minLength": 1
+      },
+      "record_config": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ttl": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "records": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "content": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "disabled": {
+                  "type": "boolean"
+                }
+              },
+              "required": ["content"]
+            }
+          }
+        },
+        "required": ["name", "ttl", "type", "records"]
+      }
+    },
+    "required": [
+      "domain", "name", "record_config", "record_type"
+    ]
+  },
+  "deleteDomainRecord": {
+    "type": "object",
+    "properties": {
+      "domain": {
+        "type": "string",
+        "minLength": 1
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "record_type": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "domain", "name", "record_type"
+    ]
+  },
+  "createNetwork": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "name"
+    ]
+  },
+  "addAppToNetwork": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "app_id", "name"
+    ]
+  },
+  "removeAppFromNetwork": {
+    "type": "object",
+    "properties": {
+      "app_id": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "app_id", "name"
+    ]
+  },
+  "deleteNetworkByUser": {
+    "type": "object",
+    "properties": {
+      "force": {
+        "type": "boolean"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "required": [
+      "name"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: pod-sakku
+Version: 1.0.0
+Summary: Sakku services
+Home-page: https://github.com/FanapSoft/sakku-python-sdk
+Author: ReZa ZaRe
+Author-email: rz.zare@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/FanapSoft/sakku-python-sdk
+Project-URL: Documentation, http://docs.pod.ir/v1.0.0.2/PODSDKs/python/6220/sakku
+Project-URL: Tracker, https://github.com/FanapSoft/sakku-python-sdk/issues
+Keywords: cloud,sdk
+Platform: UNKNOWN
+Classifier: Natural Language :: Persian
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.22)
+Requires-Dist: jsonschema (>=3.2)
+
+<div dir="rtl">
+
+# پکیج Sakku
+
+با استفاده از این پکیج می توانید از API‌های سرویس پلتفرم ابری [سکو](https://sakku.cloud) استفاده نمایید.
+
+# نصب
+
+برای نصب از طریق `pip` کافیه تا دستور زیر را اجرا کنید
+```
+pip install sakku
+```
+
+
+# نمونه کد
+
+نمونه کد ها و مثال هایی از تمام متدهای این پکیج را می توانید 
+[اینجا](examples)
+پیدا کنید.
+
+</div>
+
