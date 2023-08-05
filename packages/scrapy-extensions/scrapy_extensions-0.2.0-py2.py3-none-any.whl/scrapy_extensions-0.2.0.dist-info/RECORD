@@ -1,0 +1,15 @@
+scrapy_extensions/__init__.py,sha256=FdCC-AKdKBlXAnlbMkfWHzf6da1C1rplbNy3ERiUC1o,705
+scrapy_extensions/__version__.py,sha256=kjZ2C4clEPrEcKNgJ4G24S44SMaAwifF3M3SVsu_AAI,103
+scrapy_extensions/extensions.py,sha256=MlMKrkhdMMoWY1JwnYwTVohMHUOek4p6PtCLIgivymQ,6709
+scrapy_extensions/items.py,sha256=DbQdf1S07_CMCRbVutMxu9hG6GkjjDpkHiaNTPT6-fU,5271
+scrapy_extensions/loaders.py,sha256=RzUCkuE_9ugaDTs6WyhrP0ZNAyGTfei11_7Dn6PPOR8,1989
+scrapy_extensions/loggers.py,sha256=xAqYUVYegttUwT41gDNYV4UpuqgEi2rTosP45GUwvbQ,386
+scrapy_extensions/middleware.py,sha256=090KUj_a7PylRIOeh8YM5WROjnxLHHvVTIdWonZeY70,3137
+scrapy_extensions/pipelines.py,sha256=Vk6GAYA8qkRcnfXwRLNMewPZXCchZV-v8pjtrgtjB4U,695
+scrapy_extensions/spiders.py,sha256=ihoXPtpMtTVwE0DkSjT_DlHnSrUBlRm4L4oAgekNS6A,14120
+scrapy_extensions/utils.py,sha256=_ryDzMyNfvkX9JzQdei0NbVM9pHKsGjolRb9i_3-o_M,4373
+scrapy_extensions-0.2.0.dist-info/LICENSE,sha256=WcYkIFKvE2InORAE70AfXkBoQqXLLRsXETBDkNkwxNc,1072
+scrapy_extensions-0.2.0.dist-info/METADATA,sha256=-pDDGZDQwq84oXLwq_N9u4QdQmq16fx1QC99F3q384s,1451
+scrapy_extensions-0.2.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+scrapy_extensions-0.2.0.dist-info/top_level.txt,sha256=younw-K3ntYAN0OJBI6B08hesobUFN1lxH6JWNpvDwg,18
+scrapy_extensions-0.2.0.dist-info/RECORD,,
