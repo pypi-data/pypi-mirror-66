@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: hypermodern-python-lucasmbastos
+Version: 0.1.0
+Summary: The Hypermodern Python Project
+Home-page: https://github.com/lucasmbastos/hypermodern-python-lucasmbastos
+License: MIT
+Keywords: hypermodern
+Author: Lucas de Miranda
+Author-email: lucasmbastos94@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: desert (>=2020.1.6,<2021.0.0)
+Requires-Dist: marshmallow (>=3.5.1,<4.0.0)
+Requires-Dist: requests (>=2.23.0,<3.0.0)
+Project-URL: Repository, https://github.com/lucasmbastos/hypermodern-python-lucasmbastos.git
+Description-Content-Type: text/markdown
+
+# hypermodern-python-lucasmbastos
+
+![Tests](https://github.com/lucasmbastos/hypermodern-python-lucasmbastos/workflows/Tests/badge.svg?branch=master)
+[![codecov](https://codecov.io/gh/lucasmbastos/hypermodern-python-lucasmbastos/branch/master/graph/badge.svg)](https://codecov.io/gh/lucasmbastos/hypermodern-python-lucasmbastos)
+
+Following the https://medium.com/@cjolowicz/hypermodern-python-d44485d9d769 tutorial series
+

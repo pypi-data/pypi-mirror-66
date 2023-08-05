@@ -1,0 +1,3 @@
+[console_scripts]
+hypermodern-python-lucasmbastos=hypermodern_python_lucasmbastos.console:main
+
