@@ -1,0 +1,8 @@
+README.md
+setup.py
+brainstash/__init__.py
+brainstash.egg-info/PKG-INFO
+brainstash.egg-info/SOURCES.txt
+brainstash.egg-info/dependency_links.txt
+brainstash.egg-info/not-zip-safe
+brainstash.egg-info/top_level.txt
