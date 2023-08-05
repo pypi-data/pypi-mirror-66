@@ -1,0 +1,8 @@
+cherrypy
+cherrypy_cors
+routes
+mongoengine
+requests
+
+[win32]
+pypiwin32
