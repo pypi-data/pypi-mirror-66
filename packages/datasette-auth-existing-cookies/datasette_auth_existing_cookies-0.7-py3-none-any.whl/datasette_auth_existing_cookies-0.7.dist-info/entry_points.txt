@@ -1,0 +1,3 @@
+[datasette]
+auth_existing_cookies = datasette_auth_existing_cookies
+
