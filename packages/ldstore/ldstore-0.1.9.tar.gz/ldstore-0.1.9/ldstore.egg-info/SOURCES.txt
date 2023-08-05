@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+ldstore/__init__.py
+ldstore/bcor.py
+ldstore/bdose.py
+ldstore/parse.py
+ldstore.egg-info/PKG-INFO
+ldstore.egg-info/SOURCES.txt
+ldstore.egg-info/dependency_links.txt
+ldstore.egg-info/requires.txt
+ldstore.egg-info/top_level.txt
