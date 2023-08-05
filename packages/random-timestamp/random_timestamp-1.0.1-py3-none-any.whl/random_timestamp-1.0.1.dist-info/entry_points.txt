@@ -1,0 +1,3 @@
+[console_scripts]
+random_timestamp = random_timestamp.__main__:main
+
