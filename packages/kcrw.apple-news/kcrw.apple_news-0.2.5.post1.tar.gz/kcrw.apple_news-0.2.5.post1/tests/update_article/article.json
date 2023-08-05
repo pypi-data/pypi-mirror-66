@@ -1,0 +1,50 @@
+{
+    "version": "1.7",
+    "identifier": "SampleArticle",
+    "language": "en",
+    "title": "Apple News App Updated",
+    "subtitle": "A look at the features of the News iOS app Pt. 2",
+    "layout": {
+        "columns": 7,
+        "width": 1024,
+        "margin": 75,
+        "gutter": 20
+    },
+    "components": [
+        {
+            "role": "title",
+            "text": "Apple News App",
+            "textStyle": "title"
+        },
+        {
+            "role": "body",
+            "text": "The Apple News Format allows publishers to craft beautiful editorial layouts. Galleries, audio, video, and fun interactions like animation make stories spring to life."
+        },
+        {
+            "role": "photo",
+            "URL": "bundle://image.jpg"
+        }
+    ],
+    "documentStyle": {
+        "backgroundColor": "#F7F7F7"
+    },
+    "componentTextStyles": {
+        "default": {
+            "fontName": "Helvetica",
+            "fontSize": 13,
+            "linkStyle": {
+                "textColor": "#428bca"
+            }
+        },
+        "title": {
+            "fontName": "Helvetica-Bold",
+            "fontSize": 30,
+            "hyphenation": false
+        },
+        "default-body": {
+        "fontName": "Helvetica",
+        "fontSize": 13
+        }
+    }
+}
+
