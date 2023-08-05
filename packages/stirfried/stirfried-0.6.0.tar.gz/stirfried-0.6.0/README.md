@@ -1,0 +1,167 @@
+[![PyPI version](https://badge.fury.io/py/stirfried.svg)](https://badge.fury.io/py/stirfried)
+[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/korijn/stirfried?label=docker%20image)](https://hub.docker.com/r/korijn/stirfried)
+
+# Stirfried 🥡
+
+Socket.IO server to control Celery tasks from the client (browser) in real-time.
+
+## Running the example
+
+You can run the example included in the repo as follows:
+
+* Clone the repository
+* `cd` into the `example` directory
+* Run `docker-compose build`
+* Then `docker-compose up`
+* Open your browser and go to `http://localhost:8080/`
+* You should see the following interface:
+
+![Stirfried 🥡 test client](https://user-images.githubusercontent.com/1882046/76843175-b2c78200-683b-11ea-92df-b2169a7ce9ce.png)
+
+
+## Getting started
+
+Stirfried has a three layered architecture:
+
+1. [Socket.IO clients](#socketio-clients)
+2. [Socket.IO server](#socketio-server)
+3. [Celery workers](#celery-workers)
+
+The design allows you to independently scale the number of servers when
+server-client communication workload increases and the number of workers
+when the task processing workload increases.
+
+By leveraging Celery's task routing ([explained below](#task-routing)) you can
+also divide workers into groups and scale groups independently.
+
+### Socket.IO clients
+
+Clients can connect using standard [Socket.IO](https://socket.io/) libraries.
+
+The server is listening for clients to emit any of the following events:
+
+| Event | Description |
+| ----- | ----------- |
+| `send_task({task_name, args, kwargs}) -> {status, data}` | Emit to schedule a task. Server immediately replies with status and task_id in case of success or a message in case of failure. Use a callback to receive it in the client. |
+| `revoke_task(task_id)` | Emit to cancel a task. |
+
+Clients can subscribe to the following events emitted by the server:
+
+| Event | Description |
+| ----- | ----------- |
+| `on_progress({current, total, info, task_id, task_name})` | Emitted on task progress updates. |
+| `on_retry({task_id, task_name[, einfo]})` | Emitted on task retries. `einfo` is only available if `stirfried_error_info=True`. |
+| `on_failure({task_id, task_name[, einfo]})` | Emitted on task failure. `einfo` is only available if `stirfried_error_info=True`. |
+| `on_success({retval, task_id, task_name})` | Emitted on task success. |
+| `on_return({status, retval, task_id, task_name})` | Emitted on task success and failure. |
+
+### Socket.IO server
+
+For the Socket.IO server component you can pull the prebuilt docker image:
+
+`docker pull korijn/stirfried`
+
+or you can copy the project and customize it to your liking.
+
+#### Configuration
+
+You are required to provide a `settings.py` file with the configuration
+for the server. Stirfried uses on the standard Celery configuration mechanism.
+
+Available settings for stirfried:
+
+* `stirfried_redis_url` - **Required.** Redis connection string for the [Socket.IO](https://github.com/miguelgrinberg/python-socketio) server.
+* `stirfried_error_info` - **Optional.** Set to `True` to include tracebacks in events and HTTP responses.
+* `stirfried_available_tasks` - **Optional.** List of task names. If given, `send_task` will fail if a task name is not contained in the list.
+
+#### Configuration: python-socketio
+
+You can configure python-socketio by prefixing configuration keys with `socketio_`. They will be passed on without the prefix to the [`AsyncServer`](https://python-socketio.readthedocs.io/en/latest/api.html#asyncserver-class) constructor.
+
+#### Task routing
+
+The server sends tasks to the Celery broker
+[by name](https://docs.celeryproject.org/en/latest/reference/celery.html#celery.Celery.send_task),
+so it can act as a gateway to many different Celery workers with
+different tasks. You can leverage Celery's
+[task routing configuration](http://docs.celeryproject.org/en/latest/userguide/routing.html)
+for this purpose.
+
+#### Example
+
+Let's say you have two workers, one listening on the `feeds` queue and
+another on the `web` queue. This is how you would configure the 
+server accordingly with `settings.py`:
+
+```python
+# Stirfried settings
+stirfried_redis_url = "redis://localhost:6379/0"
+
+# Celery settings
+broker_url = "redis://localhost:6379/1"
+task_routes = {
+    "feed.tasks.*": {"queue": "feeds"},
+    "web.tasks.*": {"queue": "web"},
+}
+```
+
+You can then run the server as follows:
+
+```bash
+docker run --rm -ti -v `pwd`/settings.py:/app/settings.py:ro -p 8000:8000 korijn/stirfried
+```
+
+### Celery workers
+
+You need to install Stirfried in your Celery workers via pip:
+
+ `pip install stirfried`
+
+In your Celery workers, import the `StirfriedTask`:
+
+```python
+from stirfried.celery import StirfriedTask
+```
+
+Configure `StirfriedTask` as the base class globally:
+
+```python
+app = Celery(..., task_cls=StirfriedTask)
+```
+
+...or per task:
+
+```python
+@app.task(base=StirfriedTask)
+def add(x, y, room=None):
+    return x + y
+```
+
+#### Rooms
+
+The server injects the client's `sid` into the keyword argument `room`.
+
+The `StirfriedTask` base class depends on the presence of this keyword argument.
+
+This means you are required to add the keyword argument `room=None` to your
+task definitions in order to receive it.
+
+#### Progress
+
+You can emit progress from tasks by calling `self.emit_progress(current, total, info=None)`.
+
+Use the `info=None` keyword argument to send along arbitrary metadata, such as a
+progress message or early results.
+
+Note that you are required to pass `bind=True` to the `celery.task` decorator
+in order to get access to the `self` instance variable.
+
+```python
+@celery.task(bind=True)
+def add(self, x, y, room=None):
+    s = x
+    self.emit_progress(50, 100)  # 50%
+    s += y
+    self.emit_progress(100, 100)  # 100%
+    return s
+```
