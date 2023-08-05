@@ -1,0 +1,13 @@
+argopy/__init__.py,sha256=SFsQu2Xw5Ot8DCvucU2zJaDWWRW0tzyZ0gjh3tE23js,426
+argopy/fetchers.py,sha256=sd5Ske2Wj8jszCso8S78Z_df9qqeRvM_Lh2Hz2rrTrI,6057
+argopy/utilities.py,sha256=3J_hhlljJpdwVlt295uDu08Vq58ACbwu2GE1Gyx0qwM,1366
+argopy/xarray.py,sha256=_mjiOnQOgvx9pCxWTV91bu_WY0HOcoEyMS5n_YkUPww,7323
+argopy/data_fetchers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+argopy/data_fetchers/erddap.py,sha256=npjB-RzcMV_VC866cLDHwmdXK1WNLU1OWgRgBGFtNsU,29305
+argopy/tests/__init__.py,sha256=jX3jycRPO6-ONBnTIPTtI9T83lEHJrMiQ2TQiq_QhhE,234
+argopy/tests/test_fetchers.py,sha256=Kf3YPK-7MNvl3xjwefh5KztJSj_MvPFa7EctnJUrhu4,5737
+argopy-0.1.0.dist-info/LICENSE,sha256=68b8aaN_nXhahnt4460r_1lNLer_IU3W7cIUXPVDoJI,1071
+argopy-0.1.0.dist-info/METADATA,sha256=IxHbi1uLC9CEG1WrjzjRMJCRP0M6_OVqFWpS1_cKt54,6056
+argopy-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+argopy-0.1.0.dist-info/top_level.txt,sha256=ni_9lSy0uc00j01xtyBzEggfMkVVCGG5f3G2gnH2vKo,7
+argopy-0.1.0.dist-info/RECORD,,
