@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: jellypy-pyCIPAPI
+Version: 0.2.3
+Summary: Python client library the Genomics England CIPAPI
+Home-page: https://github.com/NHS-NGS/JellyPy/pyCIPAPI
+Author: NHS Bioinformatics Group
+Author-email: joowook.ahn@nhs.net
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6.*
+Description-Content-Type: text/markdown
+Requires-Dist: docopt (==0.6.2)
+Requires-Dist: GelReportModels (==7.2.10)
+Requires-Dist: maya (==0.6.1)
+Requires-Dist: PyJWT (==1.7.1)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: pandas (==0.25.1)
+Requires-Dist: openpyxl (==2.6.3)
+
+#pyCIPAPI         A library of utilities for interfacing with the GeL CIP API         Documentation at https://acgs.gitbook.io/jellypy/pycipapi
+
+
