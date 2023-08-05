@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: spawner
+Version: 0.1.1
+Summary: Spawner API
+Home-page: https://github.com/spawner/python-sdk
+Author: Spawner Team
+Author-email: info@spawner.ai
+License: UNKNOWN
+Description:     Welcome to the Spawner API! 
+            
+Keywords: Spawner,Python,API
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers

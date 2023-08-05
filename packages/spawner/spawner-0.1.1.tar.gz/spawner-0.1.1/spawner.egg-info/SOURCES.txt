@@ -1,0 +1,12 @@
+.gitignore
+README.md
+setup.py
+spawner/__init__.py
+spawner/spawner.py
+spawner.egg-info/PKG-INFO
+spawner.egg-info/SOURCES.txt
+spawner.egg-info/dependency_links.txt
+spawner.egg-info/requires.txt
+spawner.egg-info/top_level.txt
+spawner/__pycache__/__init__.cpython-37.pyc
+spawner/__pycache__/spawner.cpython-37.pyc
