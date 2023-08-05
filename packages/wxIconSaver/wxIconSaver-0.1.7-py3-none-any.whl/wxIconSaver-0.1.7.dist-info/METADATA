@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: wxIconSaver
+Version: 0.1.7
+Summary: wxPython GUI for saving icons to files
+Home-page: https://github.com/domdfcoding/wxIconSaver
+Author: Dominic Davis-Foster
+Author-email: dominic@davis-foster.co.uk
+License: GPL3
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+
+****************
+wxIconSaver
+****************
+
+.. image:: https://travis-ci.com/domdfcoding/wxIconSaver.svg?branch=master
+    :target: https://travis-ci.com/domdfcoding/wxIconSaver
+    :alt: Build Status
+.. image:: https://readthedocs.org/projects/wxiconsaver/badge/?version=latest
+    :target: https://wxiconsaver.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+.. image:: https://img.shields.io/pypi/v/wxiconsaver.svg
+    :target: https://pypi.org/project/wxIconSaver/
+    :alt: PyPI
+.. image:: https://img.shields.io/pypi/pyversions/wxiconsaver.svg
+    :target: https://pypi.org/project/wxIconSaver/
+    :alt: PyPI - Python Version
+
+
+wxPython GUI for saving icons to files
+
+
+
