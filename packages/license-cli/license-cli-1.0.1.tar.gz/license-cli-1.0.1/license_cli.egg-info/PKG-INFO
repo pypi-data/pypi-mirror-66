@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: license-cli
+Version: 1.0.1
+Summary: Simple LICENSE.md generator.
+Home-page: https://github.com/VoIlAlex/license-cli
+Author: voilalex
+Author-email: ilya.vouk@gmail.com
+License: MIT
+Download-URL: https://github.com/VoIlAlex/license-cli/archive/v1.0.1.tar.gz
+Description: # License CLI
+        
+        Simple LICENSE.md generator.
+        
+        ## Installation
+        
+        To install type the following in the terminal:
+        
+        ```bash
+        pip install license-cli
+        ```
+        
+        ## Usage
+        
+        Command to generate LICENSE.md file looks like:
+        
+        ```bash
+        license <license-name>
+        ```
+        
+        For example:
+        
+        ```bash
+        license mit
+        ```
+        
+        ## License
+        
+        [MIT](LICENSE.md)
+        
+        ## Contributing
+        
+        See [CONTRIBUTING.md](CONTRIBUTING.md)
+        
+Keywords: generator,opensource,license,LICENCE.md,cli
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
