@@ -1,0 +1,6 @@
+pytest
+pre-commit
+flit
+aiohttp
+pytest-aiohttp==0.3.0
+pylint==2.4.4
