@@ -1,0 +1,3 @@
+[console_scripts]
+capblood-seq-viz = capblood_seq_viz.launch:launch_server
+
