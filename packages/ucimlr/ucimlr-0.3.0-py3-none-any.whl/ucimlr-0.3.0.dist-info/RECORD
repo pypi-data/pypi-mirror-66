@@ -1,0 +1,15 @@
+uci/__init__.py,sha256=I5OmDqdOj3zAzTt9-r0QZdtr2Oz_PR1DvVN3WC--9us,414
+uci/datasets.py,sha256=YlcdCDInepXrZss94LkPtIj5WaA0DB5EUbN0PmHHgKM,18157
+uci/helpers.py,sha256=sE_OsEKjimvscgSHPL_VDwcWT_OGIpFxR-BgDw6Mo_s,2378
+ucimlr/__init__.py,sha256=BEY5-kJRJnF7rW8HekAa6JSZLJ0PMSHcbyB1NLO1iSk,170
+ucimlr/classification_datasets.py,sha256=rckqwnJ_A16St9qoDbvq8k2RJ2MkvwRSPVorAH7gRKk,14668
+ucimlr/constants.py,sha256=13i533uWM3fSMl5yuahfb_rYb6FNiKzLiegCwLk-O8Y,143
+ucimlr/dataset.py,sha256=4UvEXTfFvd0LsHqzBd6-KUWOQ__pHWNdtB9y2OEgVi0,306
+ucimlr/datasets.py,sha256=EXB_S2RDr_sZhOSo992LIm7BnlNUbSeIUbsHuGLEJuk,30352
+ucimlr/helpers.py,sha256=pWhQzU66eNLCbEdf3JUbuwqePIVzsM-5huzJhDAlxPs,8284
+ucimlr/regression_datasets.py,sha256=UNamx2OYru0xVKcItFcWMT7vElOXPSPw7DFQunseES0,16358
+ucimlr-0.3.0.dist-info/LICENSE,sha256=ZgaStRYlCeh-QKZTWIoLDnVszL2N7bwsDoBP7obUKrc,1057
+ucimlr-0.3.0.dist-info/METADATA,sha256=SQXqP9_aO_GChwdk4Hoj6mTsRqvWE1_QM2NxvDMnCSg,1594
+ucimlr-0.3.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ucimlr-0.3.0.dist-info/top_level.txt,sha256=K0h1ktpcZn7th8zO54C2e4UAW5wq0sxzUPCnssH_4BM,7
+ucimlr-0.3.0.dist-info/RECORD,,
