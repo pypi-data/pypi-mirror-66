@@ -1,0 +1,11 @@
+python_benchmark_thread_vs_process/__init__.py,sha256=peYlhS9e3p-LCZiPHfkPEliwxjCn0ZVjGwcnMpHz0u0,261
+python_benchmark_thread_vs_process/cpuinfo.py,sha256=JAJrwMhxbU882jaHzZlxMbgc_I0TUPmYoPINkuzwH-0,25251
+python_benchmark_thread_vs_process/main.py,sha256=z6-A8KNGsQBmwUxTqkfwc0gVDX60ZL8FhET6c63afc8,2383
+python_benchmark_thread_vs_process/multi_process.py,sha256=Wy54XE-fi81bFYKVOx2y-lTSfs-HftHeqarygTfFLU4,654
+python_benchmark_thread_vs_process/multi_thread.py,sha256=aWRbqBVQLaF286Hz2CqbS1mAnnpTU0w5K1S3HzAQGgs,634
+python_benchmark_thread_vs_process/operation.py,sha256=5KmpqIUetunYmzYVh9mS75Rs5ZCoLQvN0sjjilIJBkU,1587
+python_benchmark_thread_vs_process-0.1.4.dist-info/METADATA,sha256=Hrx0Gf9giwungwsSvzCMcuuRXC-kkj3ICJvvfvAbxQE,4910
+python_benchmark_thread_vs_process-0.1.4.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+python_benchmark_thread_vs_process-0.1.4.dist-info/entry_points.txt,sha256=B4BKUUnpBwOT9BN1ONa90APwMiWKffqGf8Icx9-mp0Y,95
+python_benchmark_thread_vs_process-0.1.4.dist-info/top_level.txt,sha256=e3-do-XRlrpHB1Ncus3StbFGIpI7-ikiYuStHoKE2Rs,35
+python_benchmark_thread_vs_process-0.1.4.dist-info/RECORD,,
