@@ -1,0 +1,5 @@
+termcolor
+scipy
+numpy
+matplotlib
+ntpath
