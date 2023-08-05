@@ -1,0 +1,7 @@
+scons
+PyDispatcher
+pylint==1.9.5
+pycryptodome
+cbor
+hkdf
+pytest==4.6.9
