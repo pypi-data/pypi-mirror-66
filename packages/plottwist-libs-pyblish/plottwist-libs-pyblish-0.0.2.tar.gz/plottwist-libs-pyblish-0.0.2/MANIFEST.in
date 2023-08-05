@@ -1,0 +1,3 @@
+include plottwist/libs/pyblish/__logging__.ini
+include versioneer.py
+include plottwist/libs/pyblish/_version.py
