@@ -1,0 +1,4 @@
+pexpect
+pygments
+prompt_toolkit
+pathlib
