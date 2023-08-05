@@ -1,0 +1,3 @@
+[console_scripts]
+mocherry-cli = mocherry.library.cli.commands:execute_command
+
