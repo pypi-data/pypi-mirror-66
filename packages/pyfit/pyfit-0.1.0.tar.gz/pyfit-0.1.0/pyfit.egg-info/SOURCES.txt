@@ -1,0 +1,15 @@
+README.md
+setup.py
+pyfit/__init__.py
+pyfit/data.py
+pyfit/engine.py
+pyfit/loss.py
+pyfit/nn.py
+pyfit/optim.py
+pyfit.egg-info/PKG-INFO
+pyfit.egg-info/SOURCES.txt
+pyfit.egg-info/dependency_links.txt
+pyfit.egg-info/top_level.txt
+tests/__init__.py
+tests/test_engine.py
+tests/test_loss.py
