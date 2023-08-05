@@ -1,0 +1,14 @@
+README.md
+setup.py
+pod_social/__init__.py
+pod_social/consts.py
+pod_social/json_schema.json
+pod_social/pod_social.py
+pod_social/services.json
+pod_social/version.py
+pod_social.egg-info/PKG-INFO
+pod_social.egg-info/SOURCES.txt
+pod_social.egg-info/dependency_links.txt
+pod_social.egg-info/not-zip-safe
+pod_social.egg-info/requires.txt
+pod_social.egg-info/top_level.txt
