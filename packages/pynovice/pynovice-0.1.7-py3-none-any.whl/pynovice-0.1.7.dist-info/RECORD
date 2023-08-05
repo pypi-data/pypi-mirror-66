@@ -1,0 +1,17 @@
+pynovice/__init__.py,sha256=OJQunZfSWkBwHHYKFDo_SZVU32as2JT2XNHdfwKCZIs,166
+pynovice/util.py,sha256=KKrT4R_HFUt2zOIxTOMmusKSa36qrqgLdpyXurNatZQ,931
+pynovice/bert_extracter/__init__.py,sha256=9dJqfPpAvuk4ifo0c41zxDpm17kxrLEPTf2n1Bc-jpc,185
+pynovice/bert_extracter/bert_extracter.py,sha256=_yx4w4Ipu9rFPn6QY2NXOBvZh2YH-L-qZUE5fj54HPk,2785
+pynovice/geo_map/.DS_Store,sha256=1lFlJ5EFymdzGAUAaI30vcaaLHt3F1LwpG7xILf9jsM,6148
+pynovice/geo_map/CITY.cg,sha256=2EdXZ91WvfnAioQBsrDt6o270xOoW_A1R0t032YbYoE,4837
+pynovice/geo_map/__init__.py,sha256=0fJ_MetDrvKkxqyinzYUvT3_dcOLuUytAC4J3ylGoXU,147
+pynovice/geo_map/geo_map.py,sha256=k0NkAj1oMyLPA5Iax2hOszxaH-LxW5N9qD1JWkDp6Wg,5922
+pynovice/test/__init__.py,sha256=AdjJB68s0pbWr4X3HGW9deOErAepyY5d0xA411NT4KI,119
+pynovice/test/test_bert_extracter.py,sha256=mrIeKlustOAW7rwR63NjBCgPI5GJ2uf8ACbVEsUWmW4,330
+pynovice/test/test_geo_map.py,sha256=FFOS4NlMqCZh8NbIJqRkcvkmQFG05pKJ_CNwyLsJ9As,666
+pynovice/text_classification/__init__.py,sha256=3re-D6At7LsC58iHemRAQs3MNfzEqlcshq10GpqWAck,234
+pynovice-0.1.7.dist-info/LICENSE,sha256=P1BkiWgPfQ07e8gA_wxi2Vzlp7n_9so3RrN9nU7O1cM,1074
+pynovice-0.1.7.dist-info/METADATA,sha256=oPsaafz4GSWzAJIp-0bHQzqlivXoGNe5EiQt3BURSw8,749
+pynovice-0.1.7.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+pynovice-0.1.7.dist-info/top_level.txt,sha256=LJ1j6AYM1XIFOFogVh6NT9GzsR30svsecJbHdX_ol8A,9
+pynovice-0.1.7.dist-info/RECORD,,
