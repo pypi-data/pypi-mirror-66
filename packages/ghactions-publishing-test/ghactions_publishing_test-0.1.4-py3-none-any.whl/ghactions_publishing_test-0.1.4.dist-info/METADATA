@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: ghactions-publishing-test
+Version: 0.1.4
+Summary: Testing out GH Actions for Python package publishing and versioning.
+Home-page: https://github.com/Zsailer/ghaction_publishing_test
+Author: Zach Sailer
+Author-email: zachsailer@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+
+
+# ghaction_publishing_test
+
+[![PyPI version](https://badge.fury.io/py/ghactions-publishing-test.svg)](https://badge.fury.io/py/ghactions-publishing-test)
+
+Testing out GH Actions for Python package publishing and versioning
+
+
