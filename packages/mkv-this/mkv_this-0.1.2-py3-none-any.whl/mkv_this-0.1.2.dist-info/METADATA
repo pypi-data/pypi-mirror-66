@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mkv-this
+Version: 0.1.2
+Summary: markovify user-provided text and output the results to a text file.
+Home-page: http://anarchive.mooo.com
+Author: martian hiatus
+Author-email: mousebot@riseup.net
+License: AGPLv3
+Platform: UNKNOWN
+Requires-Dist: markovify
+
+UNKNOWN
+
+
