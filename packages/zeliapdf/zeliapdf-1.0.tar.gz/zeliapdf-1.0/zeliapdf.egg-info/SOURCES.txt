@@ -1,0 +1,9 @@
+README.md
+setup.py
+zeliapdf/__init__.py
+zeliapdf/pdf2image.py
+zeliapdf/pdf2text.py
+zeliapdf.egg-info/PKG-INFO
+zeliapdf.egg-info/SOURCES.txt
+zeliapdf.egg-info/dependency_links.txt
+zeliapdf.egg-info/top_level.txt
