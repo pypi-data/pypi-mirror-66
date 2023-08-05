@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: nussl
+Version: 1.0.0
+Summary: A flexible sound source separation library.
+Home-page: https://github.com/interactiveaudiolab/nussl
+Author: E. Manilow, P. Seetharaman, F. Pishdadian, N. Shelly, B. Pardo
+Author-email: ethanmanilow@u.northwestern.edu
+Maintainer: E. Manilow, P. Seetharaman, F. Pishdadian, N. Shelly, B. Pardo
+Maintainer-email: ethanmanilow@u.northwestern.edu
+License: MIT
+Keywords: audio,source,separation,music,sound,source separation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Artistic Software
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Sound/Audio :: Editors
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: jams
+Requires-Dist: librosa
+Requires-Dist: matplotlib
+Requires-Dist: museval
+Requires-Dist: musdb
+Requires-Dist: pyyaml
+Requires-Dist: zarr (==2.3.0)
+Requires-Dist: numcodecs (==0.6.2)
+Requires-Dist: ffmpy
+Requires-Dist: torch
+Requires-Dist: pytorch-ignite
+Requires-Dist: tensorboard
+Requires-Dist: norbert
+Requires-Dist: tqdm
+Requires-Dist: termtables
+Provides-Extra: extras
+Requires-Dist: sphinx ; extra == 'extras'
+Requires-Dist: sphinx-rtd-theme ; extra == 'extras'
+Requires-Dist: sphinx-autoapi ; extra == 'extras'
+Requires-Dist: m2r ; extra == 'extras'
+Requires-Dist: autodocsumm ; extra == 'extras'
+Requires-Dist: jupytext ; extra == 'extras'
+Requires-Dist: nbsphinx ; extra == 'extras'
+Requires-Dist: pytest ; extra == 'extras'
+Requires-Dist: pytest-cov ; extra == 'extras'
+Requires-Dist: IPython ; extra == 'extras'
+Requires-Dist: ffmpy ; extra == 'extras'
+Requires-Dist: scaper ; extra == 'extras'
+Requires-Dist: tqdm ; extra == 'extras'
+Requires-Dist: termtables ; extra == 'extras'
+Requires-Dist: jupyter ; extra == 'extras'
+Requires-Dist: jupyter-contrib-nbextensions ; extra == 'extras'
+Requires-Dist: jupyter-nbextensions-configurator ; extra == 'extras'
+Provides-Extra: melodia
+Requires-Dist: vamp ; extra == 'melodia'
+
+UNKNOWN
+
+
