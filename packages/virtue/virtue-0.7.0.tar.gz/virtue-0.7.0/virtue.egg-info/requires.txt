@@ -1,0 +1,8 @@
+attrs
+click
+colorama
+pyrsistent
+twisted
+
+[:python_version < "3.8"]
+importlib_metadata
