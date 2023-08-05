@@ -1,0 +1,181 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Configuration Manager API &#8212; Typhoon API 1.10.0 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.10.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="typhoon_api.html">Typhoon API 1.10.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="typhoon_api.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="typhoon_api.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configuration Manager API</a><ul>
+<li><a class="reference internal" href="#example">Example</a><ul>
+<li><a class="reference internal" href="#module-typhoon.api.configuration_manager">API references</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/configuration_manager_api.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="configuration-manager-api">
+<h1>Configuration Manager API<a class="headerlink" href="#configuration-manager-api" title="Permalink to this headline">¶</a></h1>
+<p><strong>Module:</strong> <code class="docutils literal"><span class="pre">typhoon.api.configuration_manager</span></code></p>
+<p>The Configuration Manager API contains a set of functions to create new and
+manipulate existing project configurations.</p>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>The following example demonstrates the entire functionality of the configuration
+manager API.</p>
+<p>In this example, a project is first loaded from an existing <em>.tcp</em> file. Then a
+configuration is loaded from an existing <em>.tcfg</em> file. With handles to these
+loaded items, the configuration is changed by selecting the possible options
+in the projects configuration. Once this is done, the project configuration can
+be generated.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<span class="c1"># Demonstrate use of load_project function</span>
+<span class="c1">#</span>
+<span class="kn">from</span> <span class="nn">typhoon.api.configuration_manager</span> <span class="kn">import</span> <span class="n">ConfigurationManagerAPI</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span><span class="p">,</span> <span class="n">dirname</span><span class="p">,</span> <span class="n">realpath</span>
+
+<span class="c1"># Get path to the assets dir, which will hold all required files.</span>
+<span class="n">assets_path</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">(</span><span class="n">realpath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)),</span> <span class="s2">&quot;assets&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">assets_path</span><span class="p">)</span>
+
+<span class="n">cfg_manager</span> <span class="o">=</span> <span class="n">ConfigurationManagerAPI</span><span class="p">()</span>
+<span class="n">project_handle</span> <span class="o">=</span> <span class="n">cfg_manager</span><span class="o">.</span><span class="n">load_project</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">assets_path</span><span class="p">,</span> <span class="s2">&quot;project-file.tcp&quot;</span><span class="p">))</span>
+
+<span class="c1">#</span>
+<span class="c1"># Load configuration from file and generate output using it.</span>
+<span class="c1">#</span>
+<span class="n">config1</span> <span class="o">=</span> <span class="n">cfg_manager</span><span class="o">.</span><span class="n">load_config</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="n">assets_path</span><span class="p">,</span> <span class="s2">&quot;config1.tcfg&quot;</span><span class="p">))</span>
+<span class="c1"># Generate output model based on configuration specified by &#39;config1&#39;.</span>
+<span class="n">generate_result</span> <span class="o">=</span> <span class="n">cfg_manager</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">project_handle</span><span class="p">,</span> <span class="n">config1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Output model is located in file: &#39;{}&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="n">generate_result</span><span class="o">.</span><span class="n">generated_schematic_path</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1">#</span>
+<span class="c1"># Create another configuration from scratch (using API).</span>
+<span class="c1">#</span>
+<span class="n">config2</span> <span class="o">=</span> <span class="n">cfg_manager</span><span class="o">.</span><span class="n">create_config</span><span class="p">(</span><span class="s2">&quot;Config2&quot;</span><span class="p">)</span>
+<span class="n">cfg_manager</span><span class="o">.</span><span class="n">picks</span><span class="p">(</span><span class="n">config2</span><span class="p">,</span>
+                  <span class="p">[</span><span class="n">cfg_manager</span><span class="o">.</span><span class="n">make_pick</span><span class="p">(</span><span class="s2">&quot;Rectifier&quot;</span><span class="p">,</span> <span class="s2">&quot;Thyristor Rectifier&quot;</span><span class="p">),</span>
+                   <span class="n">cfg_manager</span><span class="o">.</span><span class="n">make_pick</span><span class="p">(</span><span class="s2">&quot;Motor&quot;</span><span class="p">,</span> <span class="s2">&quot;Induction machine squirrel&quot;</span><span class="p">,</span>
+                   <span class="p">{</span>
+                        <span class="s2">&quot;enb_sig_out&quot;</span><span class="p">:</span> <span class="s2">&quot;True&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;load_src&quot;</span><span class="p">:</span> <span class="s2">&quot;Model&quot;</span>
+                   <span class="p">})])</span>
+<span class="c1"># Generate output model based on configuration specified by &#39;config2&#39;.</span>
+<span class="n">generate_result</span> <span class="o">=</span> <span class="n">cfg_manager</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">project_handle</span><span class="p">,</span> <span class="n">config2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Output model is located in file: &#39;{}&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="n">generate_result</span><span class="o">.</span><span class="n">generated_schematic_path</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># Also, configuration created using API (in memory) can be saved for later use.</span>
+<span class="n">config3</span> <span class="o">=</span> <span class="n">cfg_manager</span><span class="o">.</span><span class="n">create_config</span><span class="p">(</span><span class="s2">&quot;Config3&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Created configuration named &#39;{0}&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cfg_manager</span><span class="o">.</span><span class="n">get_name</span><span class="p">(</span><span class="n">config3</span><span class="p">)))</span>
+<span class="n">cfg_manager</span><span class="o">.</span><span class="n">picks</span><span class="p">(</span><span class="n">config3</span><span class="p">,</span> <span class="p">[</span><span class="n">cfg_manager</span><span class="o">.</span><span class="n">make_pick</span><span class="p">(</span><span class="s2">&quot;Rectifier&quot;</span><span class="p">,</span>
+                                                  <span class="s2">&quot;Thyristor Rectifier&quot;</span><span class="p">)])</span>
+<span class="n">cfg_manager</span><span class="o">.</span><span class="n">save_config</span><span class="p">(</span><span class="n">config3</span><span class="p">,</span> <span class="s2">&quot;config3.tcfg&quot;</span><span class="p">)</span>
+
+<span class="c1"># End.</span>
+</pre></div>
+</div>
+<p>Script output:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>C:\GIT\t_api\build\doc_build\api_doc\configuration_manager_api_examples\assets
+Output model is located in file: &#39;C:\GIT\t_api\build\doc_build\api_doc\Config managment example project_Config 1.tse&#39;
+Output model is located in file: &#39;C:\GIT\t_api\build\doc_build\api_doc\Config managment example project_Config2.tse&#39;
+Created configuration named &#39;Config3&#39;
+</pre></div>
+</div>
+<div class="section" id="module-typhoon.api.configuration_manager">
+<span id="api-references"></span><h3><a class="reference internal" href="#api-references">API references</a><a class="headerlink" href="#module-typhoon.api.configuration_manager" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="typhoon_api.html">Typhoon API 1.10.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Typhoon HIL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+    </div>
+  </body>
+</html>
