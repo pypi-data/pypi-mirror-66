@@ -1,0 +1,8 @@
+featureflagclient/__init__.py,sha256=JJk4MObp1a_eWO2iME8YqLNSpwBa67z_QajoohtoL24,26
+featureflagclient/client.py,sha256=qEuxIwsu3XP0aa_Vq6abPKGR5sJbREz5PSM0K2TWrxg,20
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ff_charlie_test-0.4.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+ff_charlie_test-0.4.dist-info/METADATA,sha256=Wd_432Wd6vEfVeXanqFDdQ6UCTcVdrcPT0HFCuq4N0A,529
+ff_charlie_test-0.4.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+ff_charlie_test-0.4.dist-info/top_level.txt,sha256=N9MzXoYmoIGBWj2_vt1u5Hya2W_IFr357IMekGeBK1I,24
+ff_charlie_test-0.4.dist-info/RECORD,,
