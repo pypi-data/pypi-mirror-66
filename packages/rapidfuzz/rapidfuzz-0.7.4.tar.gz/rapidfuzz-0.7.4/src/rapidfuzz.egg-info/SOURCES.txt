@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+setup.py
+src/py_fuzz.cpp
+src/py_levenshtein.cpp
+src/py_utils.cpp
+src/rapidfuzz/__init__.py
+src/rapidfuzz/fuzz.py
+src/rapidfuzz/process.py
+src/rapidfuzz/utils.py
+src/rapidfuzz.egg-info/PKG-INFO
+src/rapidfuzz.egg-info/SOURCES.txt
+src/rapidfuzz.egg-info/dependency_links.txt
+src/rapidfuzz.egg-info/not-zip-safe
+src/rapidfuzz.egg-info/top_level.txt
