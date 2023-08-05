@@ -1,0 +1,8 @@
+aws_cdk/aws_networkmanager/__init__.py,sha256=2bM3GTp1uE9w4H9xvPYrGKPmz-2Fut25scmWODP8LPs,67237
+aws_cdk/aws_networkmanager/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_networkmanager/_jsii/__init__.py,sha256=sh-LhTG8_wNFnyKSzRhWI6x0RSSrLvUKelf9a4yr17Q,343
+aws_cdk/aws_networkmanager/_jsii/aws-networkmanager@1.33.0.jsii.tgz,sha256=RlKIzNLqtYd22k4yv_CpDDccqx7n80kLUMqY0RwOqbg,30803
+aws_cdk.aws_networkmanager-1.33.0.dist-info/METADATA,sha256=VMSK0kHpPusuAYexrzc8fJF4WkV0-HSdMLwyCZe3s9o,1560
+aws_cdk.aws_networkmanager-1.33.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aws_cdk.aws_networkmanager-1.33.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_networkmanager-1.33.0.dist-info/RECORD,,
