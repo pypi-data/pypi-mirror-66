@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: cnsp
+Version: 0.0.1
+Summary: Search predictions in mainland China
+Home-page: https://github.com/wangxinhe2006/cnsp
+Author: 汪心禾
+Author-email: wangxinhe06@gmail.com
+License: UNKNOWN
+Description: # cnsp
+        [![Build Status](https://www.travis-ci.org/wangxinhe2006/cnsp.svg)](https://www.travis-ci.org/wangxinhe2006/cnsp)
+        [![GitHub pre-release](https://img.shields.io/github/release-pre/wangxinhe2006/cnsp.svg)](https://github.com/wangxinhe2006/cnsp/releases)
+        [![License](https://img.shields.io/github/license/wangxinhe2006/cnsp.svg)](LICENSE)
+        
+        Search predictions in mainland China
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
