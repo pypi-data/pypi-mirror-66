@@ -1,0 +1,13 @@
+sqreen_security_signal_sdk/__about__.py,sha256=k6qMZiBH4qQxwj-MqU_dTp9W9-fyRzspv-xYEnmOROw,197
+sqreen_security_signal_sdk/__init__.py,sha256=o-yoiqlWZRPuOpRcnjhPup8Y0RV_KGbHtUsnqVPTIHA,396
+sqreen_security_signal_sdk/accumulator.py,sha256=sIkiueoQqgPoOOoyx-_XlJHb8wBXppaV7_GTu_9kOIY,2013
+sqreen_security_signal_sdk/client.py,sha256=kzH6e31BKGv5PNzG-0rJ5xkXZOZJwttVUX_kZt82qpU,3775
+sqreen_security_signal_sdk/compat_model.py,sha256=g6bheOwT0-hfmX6rlnYAlao6Che6mxZffFCJFY4SsS4,1298
+sqreen_security_signal_sdk/exceptions.py,sha256=ICiG32WwgGvvRYMfGXh1B9k62pHI37M7Ll6VzCF5xSI,537
+sqreen_security_signal_sdk/model.py,sha256=L3if6TQlwJdQxaEBs6Jx19hsRwQO6RawoQeFumVmy4c,897
+sqreen_security_signal_sdk/sender.py,sha256=ZLdCGer-BjAikORvj68hJOVUwyx0shJv-7mnpGu7dXM,5304
+sqreen_security_signal_sdk/utils.py,sha256=yzDrC2yBNAH5NsJe7B6mG2FxUb5QxYBuqABS8mWEK6M,2615
+sqreen_security_signal_sdk-0.0.1.dist-info/LICENSE,sha256=eBvvtwFNoGqlt-lotRbEkowA5OZ0KuCfS8K2yw0nEbE,1063
+sqreen_security_signal_sdk-0.0.1.dist-info/WHEEL,sha256=4vGQWMHJO3SOyvYcLHqr380W2n90FCfzkrP_YY3xjq8,99
+sqreen_security_signal_sdk-0.0.1.dist-info/METADATA,sha256=X9vKkHXmpHzbh43bfuEabZezTwu6aR6o2YwUtTehwPk,1719
+sqreen_security_signal_sdk-0.0.1.dist-info/RECORD,,
