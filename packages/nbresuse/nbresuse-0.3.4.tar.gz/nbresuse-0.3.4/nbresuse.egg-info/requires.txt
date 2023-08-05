@@ -1,0 +1,12 @@
+notebook>=5.6.0
+prometheus_client
+
+[dev]
+autopep8
+pytest
+flake8
+pytest-cov>=2.6.1
+mock
+
+[resources]
+psutil>=5.6.0
