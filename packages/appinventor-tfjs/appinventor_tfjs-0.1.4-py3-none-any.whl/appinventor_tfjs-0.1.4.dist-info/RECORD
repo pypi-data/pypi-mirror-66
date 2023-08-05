@@ -1,0 +1,12 @@
+appinventor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+appinventor/tfjs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+appinventor/tfjs/__main__.py,sha256=SAV4Co_lWpbxaAKsU_UNu3xzjBIvTZoHai3lhxY44qk,10566
+appinventor/tfjs/template/TensorflowTemplate.java,sha256=U6Lel938lwiFPPZrT3Mj1ZsEheqdAzsv5ryP_mn4KBQ,11646
+appinventor/tfjs/template/assets/app.js,sha256=AaidBwyHlY12EZu-v55PV_Ns3F4kGawZBgXhuZok0Qo,3307
+appinventor/tfjs/template/assets/index.html,sha256=hkoc3LwwGGkwrJHqg-UYNT-x628gmpMsuD0ql3CQyzI,753
+appinventor_tfjs-0.1.4.dist-info/LICENSE,sha256=nIbkVCmBU4iLxd7PhXb2yvSTceaTLAXDFn8OKnza410,10851
+appinventor_tfjs-0.1.4.dist-info/METADATA,sha256=FyZM83JQ3ZLm0s2LAlSIkj3X8NpQEAIL_e8TMrGxiKQ,6337
+appinventor_tfjs-0.1.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+appinventor_tfjs-0.1.4.dist-info/entry_points.txt,sha256=1srWPgjbFTiyI3SxAEz7-XFe9LJsCup4OGvKR3FIPmw,69
+appinventor_tfjs-0.1.4.dist-info/top_level.txt,sha256=9lGj2vnMASx-m9Ed34qXuQx9KQ3VgP8RpUFXx4ZdBLQ,12
+appinventor_tfjs-0.1.4.dist-info/RECORD,,
