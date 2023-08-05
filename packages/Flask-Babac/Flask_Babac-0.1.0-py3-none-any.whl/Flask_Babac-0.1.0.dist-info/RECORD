@@ -1,0 +1,11 @@
+flask_babac/__init__.py,sha256=8K4Csekp1ty1JGarQxdcfqtV2SFogWNr1zufzsQvYws,184
+flask_babac/_version.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+flask_babac/flask_babac.py,sha256=BcWiwPOyRkYmw08VGX7ziHaBufJAaW4DPS3kqsQgm0g,2343
+flask_babac/routes.py,sha256=1XmY-Jk9CPx5q_jMsqEgZ23zovyW_M5T5dumC6f3kDc,2546
+flask_babac/settings.py,sha256=_ApMuYqRXKvVfBrsCX-2twqvRS7G1kYIu0Selk11g40,860
+Flask_Babac-0.1.0.dist-info/LICENSE.md,sha256=HztIdKxRVgBfp_4tKuAdjjiS8wa-_5hZTiHRf9HBbUk,34542
+Flask_Babac-0.1.0.dist-info/METADATA,sha256=0kEdxPdhmkg3WB6SVjMVqtsnY-7wPUiB1ollPFEFwb0,2609
+Flask_Babac-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+Flask_Babac-0.1.0.dist-info/entry_points.txt,sha256=ACBRfKkJVKxIUcIYwG_gFez6_VSuh2bpYm-_NnsUIyc,62
+Flask_Babac-0.1.0.dist-info/top_level.txt,sha256=lSxPz_0F8Su46hIUqQmb52mVHjUhqHZ0_VHSDD6bJk0,12
+Flask_Babac-0.1.0.dist-info/RECORD,,

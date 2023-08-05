@@ -1,0 +1,3 @@
+[console_scripts]
+flask_babac = flask_babac.flask_babac:main
+
