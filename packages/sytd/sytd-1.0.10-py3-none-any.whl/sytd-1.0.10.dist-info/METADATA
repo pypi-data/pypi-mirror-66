@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: sytd
+Version: 1.0.10
+Summary: Simple YouTube Downloader
+Home-page: https://github.com/tomg404/Simple-YouTube-Downloader
+Author: Tom Gaimann
+Author-email: tom.gaimann@outlook.com
+License: MIT
+Keywords: gui,downloader,youtube,simple
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: Eel (==0.11.0)
+Requires-Dist: bottle (==0.12.18)
+Requires-Dist: gevent (==1.5.0)
+Requires-Dist: youtube-dl (==2020.3.24)
+
+![PyPI - License](https://img.shields.io/pypi/l/sytd)
+![PyPI](https://img.shields.io/pypi/v/sytd)
+![PyPI - Status](https://img.shields.io/pypi/status/sytd)
+
+# Simple YouTube Downloader
+![](images/demo-small.gif)
+
+## Installation
+* Currently there is only support for **Windows** as I don't have access to other machines.
+* **Chrome** is required for the application to run as intended. ([Install Chrome](https://www.google.com/chrome/))
+```
+pip install sytd
+# or
+easy_install sytd
+```
+
+## Usage
+```
+python -m sytd
+# or
+simple-youtube-downloader
+# or
+sytd
+```
+
+## Contact
+If you have any suggestions of improvement or want to report bugs [join my discord](https://discord.gg/DHnBsRZ) or message me directly: Neo#3385
+
+
