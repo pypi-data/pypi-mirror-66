@@ -1,0 +1,4 @@
+include LICENSE
+recursive-include projects *
+recursive-include mmf/configs *
+include requirements.txt
