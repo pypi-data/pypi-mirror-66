@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+say_something/__init__.py
+say_something/say_hello.py
+say_something/say_sorry.py
+say_something.egg-info/PKG-INFO
+say_something.egg-info/SOURCES.txt
+say_something.egg-info/dependency_links.txt
+say_something.egg-info/top_level.txt
