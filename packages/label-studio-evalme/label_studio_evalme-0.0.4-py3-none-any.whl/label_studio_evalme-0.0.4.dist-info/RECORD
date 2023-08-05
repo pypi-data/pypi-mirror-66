@@ -1,0 +1,13 @@
+evalme/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+evalme/classification.py,sha256=Zw1FLKgjd_nJSuxr1tsIbgZSjE83kBuOzNqX8REOSI0,1441
+evalme/eval_item.py,sha256=wpxvmIgjvioYQpwF3PBg1Ok62LyHgTwli-5PbBC_Yi8,748
+evalme/utils.py,sha256=F_7Iivspvrd8E6A13ll11ZynTdGchmTMt6eVuXdiU_M,893
+evalme/image/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+evalme/image/object_detection.py,sha256=dNZG-O6MFL3YR1wqNXDNnHgMaVGeIHVYohJI1jopyY4,8986
+evalme/text/__init__.py,sha256=uqwvOZzSPkxn-CjbdKTFYvcv-eFmW5J1Xb-Zp1plu6w,30
+evalme/text/text.py,sha256=edWqbMK-bNpTJ3i7RfASce_47IATXdm54puBrh-lF58,4476
+label_studio_evalme-0.0.4.dist-info/LICENSE,sha256=pAZXnNE2dxxwXFIduGyn1gpvPefJtUYOYZOi3yeGG94,1068
+label_studio_evalme-0.0.4.dist-info/METADATA,sha256=Xf3XbNeWE67qx2yZZli61YO71oHeOoaKxe4OZAV2qBI,573
+label_studio_evalme-0.0.4.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+label_studio_evalme-0.0.4.dist-info/top_level.txt,sha256=ti4QzH27xmdQWyME4mbpFYPlljcrRPVaTFJuJBa-DmI,7
+label_studio_evalme-0.0.4.dist-info/RECORD,,
