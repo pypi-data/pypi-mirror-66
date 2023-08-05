@@ -1,0 +1,6 @@
+.eggs
+*.egg-info
+__pycache__
+*.dll
+.vscode
+.mypy_cache
