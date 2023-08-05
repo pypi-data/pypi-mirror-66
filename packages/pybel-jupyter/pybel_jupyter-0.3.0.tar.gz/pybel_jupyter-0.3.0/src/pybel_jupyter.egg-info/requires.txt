@@ -1,0 +1,9 @@
+pybel>=0.14.7
+jinja2
+ipython
+
+[docs]
+sphinx
+sphinx-rtd-theme
+sphinx-click
+sphinx-autodoc-typehints
