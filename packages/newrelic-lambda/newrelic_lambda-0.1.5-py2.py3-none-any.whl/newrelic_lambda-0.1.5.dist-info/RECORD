@@ -1,0 +1,7 @@
+newrelic_lambda/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+newrelic_lambda/event-sources.json,sha256=lLQtDd3QoAYa6gntrQeNdk5-LQAXoMivLKu5Sjohp5Q,4179
+newrelic_lambda/lambda_handler.py,sha256=LGNSZ7uUfCRgAaPzLBxiSS8HGcrfwr2rYIhcM9foERQ,8715
+newrelic_lambda-0.1.5.dist-info/METADATA,sha256=X3zaw9grrd9Kgl9vkuLUFoUPN63eAUjO63-ltaQjeU4,1220
+newrelic_lambda-0.1.5.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+newrelic_lambda-0.1.5.dist-info/top_level.txt,sha256=bx8-8gVdyBl9CdIVI0c_orDPBbK2xwVJL_2Z4alQ4cw,16
+newrelic_lambda-0.1.5.dist-info/RECORD,,
