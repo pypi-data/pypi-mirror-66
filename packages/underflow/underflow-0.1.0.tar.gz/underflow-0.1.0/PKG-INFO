@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: underflow
+Version: 0.1.0
+Summary: 
+Author: Daniel Santos
+Author-email: daniel.martins@lumedigital.com.br
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: chalice (>=1.13.1,<2.0.0)
+Requires-Dist: click-spinner (>=0.1.8,<0.2.0)
+Requires-Dist: dacite (>=1.4.0,<2.0.0)
+Requires-Dist: fastapi (>=0.54.1,<0.55.0)
+Requires-Dist: httpx (>=0.12.1,<0.13.0)
+Requires-Dist: pydantic[dotenv] (>=1.4,<2.0)
+Requires-Dist: python-telegram-bot (>=12.6.1,<13.0.0)
+Requires-Dist: tabulate (>=0.8.7,<0.9.0)
+Requires-Dist: typer (>=0.1.1,<0.2.0)
+Requires-Dist: uvicorn (>=0.11.3,<0.12.0)
