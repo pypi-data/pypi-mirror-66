@@ -1,0 +1,6 @@
+flask
+flask-restful
+gunicorn
+flask-sqlalchemy
+uwsgi
+psycopg2-binary
