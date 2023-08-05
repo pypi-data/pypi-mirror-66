@@ -1,0 +1,19 @@
+sudo: false
+
+language: python
+
+python:
+  - 3.5
+  - 3.6
+  - 3.8
+
+install:
+  - pip install codecov
+  - pip install -r requirements.txt
+  - pip install -r requirements-dev.txt
+
+script:
+  - python -m pytest tests --junitxml=tests.xml --cov --cov-report term --cov-report xml:coverage.xml
+
+after_success:
+  - codecov
