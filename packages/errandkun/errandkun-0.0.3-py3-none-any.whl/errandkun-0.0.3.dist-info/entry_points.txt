@@ -1,0 +1,3 @@
+[mkdocs.plugins]
+errandkun = errandkun.errandkun:ErrandKunPlugin
+
