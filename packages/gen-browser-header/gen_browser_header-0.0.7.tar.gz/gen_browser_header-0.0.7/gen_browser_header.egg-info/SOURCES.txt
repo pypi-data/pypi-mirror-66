@@ -1,0 +1,17 @@
+README.md
+setup.py
+gen_browser_header/__init__.py
+gen_browser_header.egg-info/PKG-INFO
+gen_browser_header.egg-info/SOURCES.txt
+gen_browser_header.egg-info/dependency_links.txt
+gen_browser_header.egg-info/top_level.txt
+gen_browser_header/helper/Helper.py
+gen_browser_header/helper/__init__.py
+gen_browser_header/main/GenHeader.py
+gen_browser_header/main/GenUA.py
+gen_browser_header/main/__init__.py
+gen_browser_header/self/SelfEnum.py
+gen_browser_header/self/SelfException.py
+gen_browser_header/self/__init__.py
+gen_browser_header/setting/Setting.py
+gen_browser_header/setting/__init__.py
