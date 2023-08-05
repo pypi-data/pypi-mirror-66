@@ -1,0 +1,7 @@
+[run]
+omit=
+    setup.py
+    */wsgi.py
+    */asgi.py
+    */migrations/*
+    */flycheck*.py
