@@ -1,0 +1,6 @@
+atom
+enaml
+matplotlib
+numpy
+pandas
+scipy
