@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: lcdchargen
+Version: 0.1
+Summary: Generate custom character for HD44780U LCD screen
+Home-page: https://gitlab.com/matsievskiysv/lcdchargen
+Author: S.V. Matsievskiy
+Author-email: matsievskiysv@gmail.com
+Maintainer: S.V. Matsievskiy
+Maintainer-email: matsievskiysv@gmail.com
+License: GPLv3+
+Keywords: LCD display HD44780U
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: X11 Applications :: GTK
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Embedded Systems
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: PyGObject
+Requires-Dist: pycairo
+
+# Description
+
+![UI of the program](ui.png)
+
+Custom character generator for [HD44780U](https://www.sparkfun.com/datasheets/LCD/HD44780.pdf) LCD
+screens.
+
+# Installation
+
+```bash
+> pip --user install lcdchargen
+```
+
+

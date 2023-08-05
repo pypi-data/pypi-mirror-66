@@ -1,0 +1,3 @@
+[console_scripts]
+lcdchargen = lcdchargen.lcdchargen:main
+
