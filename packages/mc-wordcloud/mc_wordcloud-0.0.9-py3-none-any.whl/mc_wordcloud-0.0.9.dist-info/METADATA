@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mc-wordcloud
+Version: 0.0.9
+Summary: UNKNOWN
+Home-page: https://github.com/LucasKKK/mc_wordcloud
+Author: 魔扣少儿编程
+Author-email: 2443927272@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: wordcloud
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pillow
+
+UNKNOWN
+
+
