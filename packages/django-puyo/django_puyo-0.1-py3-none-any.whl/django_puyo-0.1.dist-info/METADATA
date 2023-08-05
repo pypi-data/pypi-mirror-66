@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: django-puyo
+Version: 0.1
+Summary: A new custom django moderne
+Home-page: https://github.com/louispuyo/django
+Author: Deepak Kumar
+Author-email: louispuyo@yahoo.fr
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+django-puyo
+
+
