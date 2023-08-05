@@ -1,0 +1,10 @@
+[console_scripts]
+kwola = kwola.bin.main:main
+kwola_full_internal_test_suite = kwola.bin.full_internal_test_suite:main
+kwola_init = kwola.bin.initialize:main
+kwola_rapid_local_test_suite = kwola.bin.rapid_local_test_suite:main
+kwola_run_test_step = kwola.bin.run_test_step:main
+kwola_run_train_step = kwola.bin.run_train_step:main
+kwola_test_local_selenium = kwola.bin.test_local_selenium:main
+kwola_train_agent = kwola.bin.train_agent:main
+
