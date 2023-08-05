@@ -1,0 +1,13 @@
+nlcodec/__init__.py,sha256=s4Z4nHO3x5uc3zz95cRuGpQB0lV3YcJnMj7DNcFfzGc,768
+nlcodec/__main__.py,sha256=V7SlwlORjYxqwKEG9UOxlqPgbTFVhODlDfe0wq3-WyM,4450
+nlcodec/bpe.py,sha256=V0qX_YGDaCW9sZfnFoIpuPlHyt6wb_5seCsvGNXdYKc,15913
+nlcodec/codec.py,sha256=mFAfI1fdw42mvwbHmSfsyvPspkS6J3-5-DP7eT_zdIk,18831
+nlcodec/dstruct.py,sha256=hlvVRwXSg-lxF7EbyXp-znsxvF6uM0o93HtqKU5pf4E,4321
+nlcodec/qestim.py,sha256=XnAD13ef_bQNMiFdEVmW1Jq6LES8n4H9Em8m8h2z36A,4344
+nlcodec/utils.py,sha256=wIxwKome9RuNne-HWWO1VSmX5QIPShI4tk4axd-JPuw,1325
+nlcodec-0.2.0.dist-info/LICENSE,sha256=nQArUzO4aKPJFBc8ZhIx3sZPrsMrjRfSQyWW8kre87U,11422
+nlcodec-0.2.0.dist-info/METADATA,sha256=AOqyiEQdOxj3vHkhE0caKlZyRpljoGjiJ7dFbDRJ-D0,6186
+nlcodec-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+nlcodec-0.2.0.dist-info/entry_points.txt,sha256=ORbO0Rel-DM0NMseDIbpWQGm-XRHbfq2DpRWwO1APFo,51
+nlcodec-0.2.0.dist-info/top_level.txt,sha256=TFuIweWaOk9K6r9Tjhn7pamNQSZFftO8w9fVxjDwPR8,8
+nlcodec-0.2.0.dist-info/RECORD,,
