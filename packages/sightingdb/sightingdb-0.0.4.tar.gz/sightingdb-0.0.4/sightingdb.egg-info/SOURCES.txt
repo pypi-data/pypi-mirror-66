@@ -1,0 +1,10 @@
+setup.py
+sightingdb/__init__.py
+sightingdb/connection.py
+sightingdb/delete.py
+sightingdb/read.py
+sightingdb/write.py
+sightingdb.egg-info/PKG-INFO
+sightingdb.egg-info/SOURCES.txt
+sightingdb.egg-info/dependency_links.txt
+sightingdb.egg-info/top_level.txt
