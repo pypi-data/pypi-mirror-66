@@ -1,0 +1,14 @@
+slackclient==2.5.0
+pyyaml
+requests
+sqlalchemy[postgresql]
+
+[docs]
+Sphinx
+sphinx-rtd-theme
+sphinx-autodoc-typehints
+
+[testing]
+pytest
+pytest-cov
+coverage
