@@ -1,0 +1,4 @@
+pygame
+numpy
+h5py
+pyyaml
