@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: apicheck-package-manager
+Version: 0.0.11
+Summary: APICheck package manager
+Home-page: https://github.com/BBVA/apicheck
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: License :: OSI Approved :: Apache Software License
+Keywords: apicheck,manager,security
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+
+APICheck package manager
+
+
