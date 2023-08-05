@@ -1,0 +1,9 @@
+README.md
+setup.py
+openspeechlib/__init__.py
+openspeechlib.egg-info/PKG-INFO
+openspeechlib.egg-info/SOURCES.txt
+openspeechlib.egg-info/dependency_links.txt
+openspeechlib.egg-info/not-zip-safe
+openspeechlib.egg-info/requires.txt
+openspeechlib.egg-info/top_level.txt
