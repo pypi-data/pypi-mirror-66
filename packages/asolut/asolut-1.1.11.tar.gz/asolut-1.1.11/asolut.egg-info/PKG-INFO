@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: asolut
+Version: 1.1.11
+Summary: A solution for the synonym problem in word frequency algorithms
+Home-page: https://github.com/Marios-Mamalis/asolut
+Author: Marios Mamalis
+Author-email: ies16039@uom.edu.gr
+License: UNKNOWN
+Project-URL: Author's Linkedin, https://www.linkedin.com/in/marios-mamalis/
+Project-URL: Source, https://github.com/Marios-Mamalis/asolut
+Description: # asolut
+        A solution for the synonym problem in word frequency algorithms
+        
+Keywords: word frequency synonyms
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Natural Language :: English
+Requires-Python: >=3.7.3
+Description-Content-Type: text/markdown

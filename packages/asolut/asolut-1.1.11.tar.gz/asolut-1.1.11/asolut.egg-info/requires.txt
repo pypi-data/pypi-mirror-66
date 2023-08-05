@@ -1,0 +1,6 @@
+nltk
+inflect
+numpy
+plotly==4.6
+pandas
+eel>=0.11.0
