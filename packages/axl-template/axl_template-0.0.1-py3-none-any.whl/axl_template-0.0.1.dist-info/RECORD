@@ -1,0 +1,13 @@
+axltempl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+axltempl/drupal.py,sha256=XqylGYyOhpJnH1HxVFfKGzSFWutZr_7-nSbZ8_Nd3W4,4957
+axltempl/files/drupal/.env.example,sha256=poGse-Fh582QQA4G1N1uOlmYfxLPzyRVv4Mad8jPA-8,746
+axltempl/files/drupal/.gitignore.template,sha256=mDYGG5Ck_ufjMg7hcv1SWvSdTMRU9R9kumRf2KlD4fc,520
+axltempl/files/drupal/composer.json,sha256=azzXWKxdGsaFH3-g3-aIuFy3fjLS1gF-BvvrAKCR9d4,1404
+axltempl/files/drupal/drush.yml,sha256=oNUgv9wjDlSj_rM6TYT73SyX_DjdEOUo1aEWQ5JDKqQ,157
+axltempl/files/drupal/load.environment.php,sha256=Jj-7JF7CJchPsLFMOESDGCqultX05RuQQSaTajzuWuo,321
+axltempl/files/drupal/self.site.yml,sha256=zqNi64SkhfBV7kw3E1qyG1LbpHA5udWPkMWsXsNfu_0,342
+axl_template-0.0.1.dist-info/METADATA,sha256=92zhJNE9DpQpM3n8HUd_0MjjOYbBrMN6yZNQMtYrA54,1997
+axl_template-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+axl_template-0.0.1.dist-info/entry_points.txt,sha256=CcLXx0LWyKaPiNOECMUV01Ki-9-FT_kzFkIAPu7smS4,54
+axl_template-0.0.1.dist-info/top_level.txt,sha256=8aWvsIA3Hzt1-U20YdezZ7Rkb3RleV0KQRNnojJ9aTo,9
+axl_template-0.0.1.dist-info/RECORD,,
