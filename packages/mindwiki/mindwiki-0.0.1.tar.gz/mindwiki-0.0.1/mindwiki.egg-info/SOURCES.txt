@@ -1,0 +1,8 @@
+README.md
+setup.py
+mindwiki/__init__.py
+mindwiki.egg-info/PKG-INFO
+mindwiki.egg-info/SOURCES.txt
+mindwiki.egg-info/dependency_links.txt
+mindwiki.egg-info/not-zip-safe
+mindwiki.egg-info/top_level.txt
