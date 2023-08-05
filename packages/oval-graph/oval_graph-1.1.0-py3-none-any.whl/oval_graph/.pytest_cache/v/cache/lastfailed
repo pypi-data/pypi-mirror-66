@@ -1,0 +1,8 @@
+{
+  "tests/test_JsTree.py": true,
+  "tests/test_client.py": true,
+  "tests/test_evaluate.py": true,
+  "tests/test_graph.py": true,
+  "tests/test_sigmaJs.py": true,
+  "tests/test_xml_parser.py": true
+}
