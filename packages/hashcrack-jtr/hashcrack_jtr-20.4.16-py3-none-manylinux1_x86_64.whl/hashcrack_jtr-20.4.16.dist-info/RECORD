@@ -1,0 +1,10 @@
+hashcrack_jtr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hashcrack_jtr/config.py,sha256=TCgVBmuc8_FPZ49O82WUX-ZnCghNOxRg1NGIV322FoY,113
+hashcrack_jtr/john.py,sha256=TK_hN76fpEz8LzZyv6P3KjwepMad1s9D9Z1Il_QwdJM,2941
+hashcrack_jtr/version.py,sha256=7_EGbwQnH3HC8fiqM9OYXRXDVFQ9_K6SSw4a1Ec2h_A,21
+hashcrack_jtr/static/john.tar.xz,sha256=j7w0EQR_YahhXN9lBvSqv38HuwauQo_KtL1LRIXQLS0,31869644
+hashcrack_jtr-20.4.16.dist-info/METADATA,sha256=R1nL6I6Yc-pq3UnmYUEGXRD85DJMvmtL1cgvrUD9jUE,1303
+hashcrack_jtr-20.4.16.dist-info/WHEEL,sha256=i5JygRz8qbJISloe8qZB_1mqTsrlyk7Lo-j7KIf5DdY,106
+hashcrack_jtr-20.4.16.dist-info/entry_points.txt,sha256=Cff0yid2XlQ6beej1aQ4DkpPaP-3znonqxZ-JDfqPKs,302
+hashcrack_jtr-20.4.16.dist-info/top_level.txt,sha256=kUTkPqzz9PQAS3UKWh4VIWCI44EjQSM43a7ks4yIrXU,14
+hashcrack_jtr-20.4.16.dist-info/RECORD,,
