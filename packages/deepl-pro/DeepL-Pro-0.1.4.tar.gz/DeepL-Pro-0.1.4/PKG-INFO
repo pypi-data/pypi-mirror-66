@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: deepl-pro
+Version: 0.1.4
+Summary: A wrapper for the DeepL Pro API.
+Author: Mirko Lenz
+Author-email: info@mirko-lenz.de
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: requests (>=2.22,<3.0)
