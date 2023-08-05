@@ -1,0 +1,3 @@
+[console_scripts]
+hiel=hiel.cli:main
+
