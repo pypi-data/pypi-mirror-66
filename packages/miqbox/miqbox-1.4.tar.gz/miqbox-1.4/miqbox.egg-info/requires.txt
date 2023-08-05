@@ -1,0 +1,6 @@
+bs4
+Click
+libvirt-python
+paramiko
+requests
+ruamel.yaml
