@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: urllib-ext
+Version: 0.1.0
+Summary: Overload urllib.parse.ParseResult to be able to use operators like / and & on it.
+Home-page: https://github.com/nanassito/urllib.parse.ParseResult
+Author: Dorian Jaminais
+Author-email: urllib_ext@jaminais.fr
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# urllib.parse.ParseResult
+Overload `urllib.parse.ParseResult` to be able to use operators like / and &amp; on it.
+
+# Usage
+```
+import urllib_parse_ParseResult_overloaded
+from urllib_ext.parse import urlparse
+
+urlparse("http://domain.tld/foo") / "bar" == urlparse("http://domain.tld/foo/bar")
+```
+
+
