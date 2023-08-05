@@ -1,0 +1,8 @@
+gocept/__init__.py,sha256=y84y7N7-eW_incY50gPAt6_ukQE7yy5iZW5_dhcJJ3Q,88
+gocept/rdbmanagement/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gocept/rdbmanagement/recipe.py,sha256=J3Gp5opeiTG-2GFMYh9cWgWh5WM5PsVD3Mk5uI3myMk,6558
+gocept.rdbmanagement-1.1.dist-info/METADATA,sha256=UO1HKTVfKTOJ8-cUUKoyQyw0AqtXPdxVhv9MzMSrDVU,3522
+gocept.rdbmanagement-1.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+gocept.rdbmanagement-1.1.dist-info/entry_points.txt,sha256=4tmGq160yjsEGS1N6HO8WIl1QhKX5-QhKUYxR_38kIw,60
+gocept.rdbmanagement-1.1.dist-info/top_level.txt,sha256=dLXUiNQ2z7NJIlFVMgdxhn_daKSodZVJYenJ47LRf3E,7
+gocept.rdbmanagement-1.1.dist-info/RECORD,,
