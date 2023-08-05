@@ -1,0 +1,4 @@
+[console_scripts]
+pymic_evaluate = pymic.util.evaluation:main
+pymic_net_run = pymic.net_run.net_run:main
+
