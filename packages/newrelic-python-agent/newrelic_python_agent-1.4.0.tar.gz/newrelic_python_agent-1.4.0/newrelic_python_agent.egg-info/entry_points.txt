@@ -1,0 +1,3 @@
+[console_scripts]
+newrelic-python-agent = newrelic_python_agent.agent:main
+

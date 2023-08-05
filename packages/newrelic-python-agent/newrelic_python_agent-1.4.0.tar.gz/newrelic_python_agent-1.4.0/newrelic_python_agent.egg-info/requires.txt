@@ -1,0 +1,15 @@
+helper>=2.2.2
+requests>=2.0.0
+six>=1.5
+
+[mongodb]
+pymongo
+
+[pgbouncer]
+psycopg2
+
+[postgresql]
+psycopg2
+
+[prometheus]
+prometheus_client
