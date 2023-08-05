@@ -1,0 +1,13 @@
+numpy
+numba
+matplotlib
+seaborn
+scipy>=1.4.1
+pyyaml
+dinopy
+
+[BBD-visualization]
+bokeh>=0.12.4
+
+[documentation]
+sphinx>=1.5.0
