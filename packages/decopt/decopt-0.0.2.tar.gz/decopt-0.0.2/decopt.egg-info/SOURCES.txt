@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+dec_opt/__init__.py
+dec_opt/data_reader.py
+dec_opt/gossip_matrix.py
+dec_opt/trainer.py
+decopt.egg-info/PKG-INFO
+decopt.egg-info/SOURCES.txt
+decopt.egg-info/dependency_links.txt
+decopt.egg-info/top_level.txt
