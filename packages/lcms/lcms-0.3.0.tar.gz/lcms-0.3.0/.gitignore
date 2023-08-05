@@ -1,0 +1,7 @@
+_skbuild
+__pycache__
+*.pyd
+_cmake*
+*.egg-info
+dist
+.vscode
