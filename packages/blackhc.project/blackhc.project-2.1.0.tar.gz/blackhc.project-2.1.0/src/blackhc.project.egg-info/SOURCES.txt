@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+src/blackhc.project.egg-info/PKG-INFO
+src/blackhc.project.egg-info/SOURCES.txt
+src/blackhc.project.egg-info/dependency_links.txt
+src/blackhc.project.egg-info/requires.txt
+src/blackhc.project.egg-info/top_level.txt
+src/blackhc/project/__init__.py
+src/blackhc/project/script.py
