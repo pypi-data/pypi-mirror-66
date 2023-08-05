@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+redapi/__init__.py
+redapi/redapi.py
+redapi.egg-info/PKG-INFO
+redapi.egg-info/SOURCES.txt
+redapi.egg-info/dependency_links.txt
+redapi.egg-info/requires.txt
+redapi.egg-info/top_level.txt
