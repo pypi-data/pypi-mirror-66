@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: airrun
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: http://github.com/tsbxmw/airtest_run
+Author: wei.meng
+Author-email: mengwei1101@hotmail.com
+License: UNKNOWN
+Platform: Posix; MacOS X; Windows
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: twine
+Requires-Dist: setuptools
+Requires-Dist: airtest
+
+# airtest_run
+
+致力于简单快速的在 `Android` 设备上运行 `airtest`，减少在构建用例、获取性能监控、日志获取方面的复杂度，并提基于 `airtest` 报告的新的报告生成工具，让测试人员更专注于编写测试用例。
+
+
+## 安装
+
+- pip
+
+```shell
+pip install --upgrade airrun
+```
+
+## 使用
+
+
+### 参数
+
+
+## 用例编写
+
+
+### 介绍
+
+### 分层
+
+### 编写
+
+## 报告生成
+
+### 基于设备的报告
+
+
+
+
