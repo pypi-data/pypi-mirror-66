@@ -1,0 +1,17 @@
+{% block menu %}
+<div style="text-align: center";>
+
+<img src="{{ pathto('_static/clogo.jpg', 1) }}" style="width: 90%;text-align: center;" />
+
+</div>
+  <h4>目录</h4>
+  {% set toctree = toctree(maxdepth=4, collapse=False, includehidden=False, titles_only=False) %}
+  {% if toctree %}
+    <div class="sidebartoctree">
+      {{ toctree }}
+    </div>
+  {% else %}
+      <!-- Local TOC -->
+      <div class="local-toc">{{ toc }}</div>
+  {% endif %}
+{% endblock %}
