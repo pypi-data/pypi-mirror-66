@@ -1,0 +1,18 @@
+[build-system]
+requires = ["flit_core >=2,<3"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "model_template"
+author = "GPAM"
+requires = [
+	"pandas==0.24.2",
+	"scikit-learn==0.22",
+	"nltk==3.4.5",
+	"xgboost==0.90",
+	"tensorflow==2.0.0",
+	"Cython==0.29.15",
+	"numpy==1.18.1",
+	"scipy==1.4.1",
+	"tqdm==4.43.0"
+]
