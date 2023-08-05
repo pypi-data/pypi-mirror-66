@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: igeInAppPurchase
+Version: 0.0.1
+Summary: Python extension for InAppPurchase module.
+Home-page: https://indigames.net/
+Author: Indigames
+Author-email: dev@indigames.net
+License: MIT
+Description: # igeInAppPurchase
+        
+        Python extension for InAppPurchase module.
+        
+        ### Installation
+        	[pip install igeInAppPurchase]
+        
+        
+Keywords: Notification Notify Indigames
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Games/Entertainment
+Description-Content-Type: text/markdown
