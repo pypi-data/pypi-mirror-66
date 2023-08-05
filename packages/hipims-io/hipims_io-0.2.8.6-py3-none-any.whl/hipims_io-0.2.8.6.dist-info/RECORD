@@ -1,0 +1,15 @@
+hipims_io/Boundary.py,sha256=lONdexoADPYLftsvhB87YFFlQ2J7QYG5_3oKad09Kyw,13547
+hipims_io/InputHipims.py,sha256=7f691sYpBi6g-o_YAZ18qpJSpxkHS4woXKlPVTVBIic,57725
+hipims_io/ModelSummary.py,sha256=5l7wEIpbV4iZrwADRsY16SIkvGlLFm5lMATfrMc-NtQ,7393
+hipims_io/OutputHipims.py,sha256=UN8zNRavrdetDwGnDgJYFqGse9K02BYpPNqP33XRPp8,18362
+hipims_io/Raster.py,sha256=gfd4qKbKQd5FmdngitvYV-5CHJNYyKtuhNQUDU1Y-J4,21715
+hipims_io/__init__.py,sha256=tPXGLAXNSVV1wrRTliQII5QONwP8-3Rbrim9xwynyNM,2960
+hipims_io/grid_show.py,sha256=VYe_mEyzoYUGqQauqFNcAPtW6TAUw3U5NvwUNdBBzoI,12709
+hipims_io/spatial_analysis.py,sha256=2sEzgE5U7Zh-JBsYKowleXupiwa9CvTUa2k4fcyxxCc,18678
+hipims_io/sample/Example_DEM.asc,sha256=JQk724sa4_SXssS4cu2FtrrJoQaVkE6CuL8gy-t8P3U,47212
+hipims_io/sample/Example_data.npy,sha256=BJLx5MDW6plJuCs3H0cEQGux5NX4TEmD97NU1FRZWSg,969
+hipims_io-0.2.8.6.dist-info/LICENSE.txt,sha256=umURcKgO2cUeV8BQbAzDntBpvZXorGr3tv9CyYO0hfI,1073
+hipims_io-0.2.8.6.dist-info/METADATA,sha256=iHLzeaYNZ8sPi9kVVF7V8LlI5OyUcTROpl3cB7cq0vE,2128
+hipims_io-0.2.8.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+hipims_io-0.2.8.6.dist-info/top_level.txt,sha256=rFjxHILsnhTGZ3QWmAKT2BwTKyqjCm0rMRoaTw0T5oU,10
+hipims_io-0.2.8.6.dist-info/RECORD,,
