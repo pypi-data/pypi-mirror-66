@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: netbox-topology-views
+Version: 0.1
+Summary: An NetBox plugin to create Topology maps
+Home-page: https://github.com/mattieserver/netbox-topology-views
+Author: Mattijs Vanhaverbeke
+Author-email: UNKNOWN
+License: Apache 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
