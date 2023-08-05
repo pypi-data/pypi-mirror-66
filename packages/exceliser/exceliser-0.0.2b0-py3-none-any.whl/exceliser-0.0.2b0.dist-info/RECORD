@@ -1,0 +1,9 @@
+exceliser/__init__.py,sha256=HFMxECuoPxSRvmuH1-beyhlpyjVV8Mlk3MprLjuZv4A,25
+exceliser/__main__.py,sha256=K9Gzv44afrkBL60ngoojz77AiNQygTJF6YDfgj9ACfA,775
+exceliser/serializer.py,sha256=CcaFVm8_r9vmah0NkwntnJEp8rkupi-EoCpMb35L27I,2440
+exceliser/workbook.py,sha256=tHdnd2u4YZDD1mDaet02gwvhtyAFVyXtC6zpodfCwbk,327
+exceliser-0.0.2b0.dist-info/LICENSE,sha256=3WiVjsXM1Zd91_slhgjRk6MH_kpIEtYFLqgwiN67cTU,1056
+exceliser-0.0.2b0.dist-info/METADATA,sha256=Z2mrasM6YBsOeymY3VGhszKYh25UOiHbV_XnT-gNW3U,1042
+exceliser-0.0.2b0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+exceliser-0.0.2b0.dist-info/top_level.txt,sha256=U7OjzYPMdVawePz4Ewtvh6FjwdrHfJnX2R_21lGEGco,10
+exceliser-0.0.2b0.dist-info/RECORD,,
