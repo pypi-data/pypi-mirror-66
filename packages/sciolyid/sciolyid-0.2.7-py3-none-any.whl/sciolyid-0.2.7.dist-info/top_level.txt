@@ -1,0 +1,6 @@
+config
+core
+data
+functions
+sciolyid
+start_bot
