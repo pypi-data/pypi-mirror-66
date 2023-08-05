@@ -1,0 +1,9 @@
+tmux_list_learner/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tmux_list_learner/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tmux_list_learner/scripts/tmux_list_learner.py,sha256=LUH-iQKNFOxyBTNQTYD6Fr13hWlOGasm6jmaWHTBdp8,1861
+tmux_list_learner-0.0.3.dist-info/LICENSE.md,sha256=ua26CO3UQchIJrf9xwWBelwsj3dGdXrgP-zU1sR7Isc,1067
+tmux_list_learner-0.0.3.dist-info/METADATA,sha256=dmeD6PHo9uIEcWDyqBZbHEP4_r-Gtz-uRYe-zV1q0HE,548
+tmux_list_learner-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+tmux_list_learner-0.0.3.dist-info/entry_points.txt,sha256=RTxMh5tuGkYmtlzboc62SYPDtNBQDl54ZW-AvoFAWPg,105
+tmux_list_learner-0.0.3.dist-info/top_level.txt,sha256=_cj4isE51NDnVLlEKQrpV8Mrj4v1OMiPqO0bKYGtK0U,18
+tmux_list_learner-0.0.3.dist-info/RECORD,,
