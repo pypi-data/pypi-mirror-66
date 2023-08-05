@@ -1,0 +1,7 @@
+pytest>=5.3.5
+lovely-pytest-docker
+splunk-sdk
+future
+httplib2
+requests
+lovely-pytest-docker
