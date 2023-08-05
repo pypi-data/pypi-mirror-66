@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: jellypy_pyCIPAPI
+Version: 0.2.3
+Summary: Python client library the Genomics England CIPAPI
+Home-page: https://github.com/NHS-NGS/JellyPy/pyCIPAPI
+Author: NHS Bioinformatics Group
+Author-email: joowook.ahn@nhs.net
+License: UNKNOWN
+Description: #pyCIPAPI         A library of utilities for interfacing with the GeL CIP API         Documentation at https://acgs.gitbook.io/jellypy/pycipapi
+Platform: UNKNOWN
+Requires-Python: >=3.6.*
+Description-Content-Type: text/markdown

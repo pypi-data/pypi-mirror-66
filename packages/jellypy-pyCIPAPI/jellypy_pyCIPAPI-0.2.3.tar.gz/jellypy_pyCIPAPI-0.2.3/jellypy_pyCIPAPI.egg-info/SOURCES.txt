@@ -1,0 +1,16 @@
+setup.py
+jellypy/__init__.py
+jellypy/pyCIPAPI/__init__.py
+jellypy/pyCIPAPI/auth.py
+jellypy/pyCIPAPI/auth_credentials.py
+jellypy/pyCIPAPI/config.py
+jellypy/pyCIPAPI/example_auth_credentials.py
+jellypy/pyCIPAPI/interpretation_requests.py
+jellypy/pyCIPAPI/opencga.py
+jellypy/pyCIPAPI/summary_findings.py
+jellypy_pyCIPAPI.egg-info/PKG-INFO
+jellypy_pyCIPAPI.egg-info/SOURCES.txt
+jellypy_pyCIPAPI.egg-info/dependency_links.txt
+jellypy_pyCIPAPI.egg-info/requires.txt
+jellypy_pyCIPAPI.egg-info/top_level.txt
+test/test_pyCIPAPI.py
