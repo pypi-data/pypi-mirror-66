@@ -1,0 +1,4 @@
+decorator
+pillow
+typing
+typing_extensions
