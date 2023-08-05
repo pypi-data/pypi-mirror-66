@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+safeopt/__init__.py
+safeopt/gp_opt.py
+safeopt/swarm.py
+safeopt/utilities.py
+safeopt.egg-info/PKG-INFO
+safeopt.egg-info/SOURCES.txt
+safeopt.egg-info/dependency_links.txt
+safeopt.egg-info/requires.txt
+safeopt.egg-info/top_level.txt
