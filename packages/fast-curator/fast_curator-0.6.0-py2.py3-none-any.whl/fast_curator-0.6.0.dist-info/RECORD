@@ -1,0 +1,13 @@
+fast_curator/__init__.py,sha256=Am2aij2p4VY5j977v1FAHGhZCBpIOjP1ghrXdlsq57I,270
+fast_curator/__main__.py,sha256=lKuTWo-rLO-W4N91Q7Z1CBxTw_ecV26LGS7F2dl-w-4,5703
+fast_curator/read.py,sha256=7raPwQwoRIkGFxb0fWWmID8qR7zk-MiQlV6F3iJhkV4,4578
+fast_curator/version.py,sha256=nBTM25MpEk_ZuaenANgL8lI5V5_roqRWH4gv7rMXl_s,366
+fast_curator/write.py,sha256=3yZqPdBdS6Swgwkjqlkt8KTQ7OqX3geL1B-Is-xzg6A,5247
+fast_curator/catalogues/__init__.py,sha256=bUeJ9PmdPsG8_8W-4J9ccJ22bIrWzyc1g784CrvfCzA,3594
+fast_curator-0.6.0.dist-info/LICENSE,sha256=kRfLKc0UKGg1eaRnmRfQ96uibUrGAn-p5SqsoRjGz18,579
+fast_curator-0.6.0.dist-info/METADATA,sha256=mfYXycLvxL_DsXTxijNW_byz9OHbRXczOVaZounZe_U,2962
+fast_curator-0.6.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+fast_curator-0.6.0.dist-info/entry_points.txt,sha256=nAIbcOvkXC9rljoON_N7NpXTS8C4uWiubX-OXpMyxjQ,121
+fast_curator-0.6.0.dist-info/top_level.txt,sha256=bQsu91cWxqi3ltRBlkO2MyMutrPOdzrewe_-O7JeOw0,13
+fast_curator-0.6.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+fast_curator-0.6.0.dist-info/RECORD,,
