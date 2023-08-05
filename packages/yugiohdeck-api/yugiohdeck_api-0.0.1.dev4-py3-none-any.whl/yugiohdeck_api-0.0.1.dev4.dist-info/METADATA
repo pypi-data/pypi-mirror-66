@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: yugiohdeck-api
+Version: 0.0.1.dev4
+Summary: Transforms yugiohdeck.github.io links into card data (and back)
+Home-page: https://yugiohdeck.github.io/
+Author: gallantron
+Author-email: treeston.mmoc@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: ygorganization-api
+
+# About
+
+This is a Python interface to [yugiohdeck.github.io](https://yugiohdeck.github.io/), which turns [the Yu-Gi-Oh! Trading Card Game](https://en.wikipedia.org/wiki/Yu-Gi-Oh!_Trading_Card_Game) decks into easily shared links.
+
+This interface allows conversion of decklist links to card data and back. Card data is sourced from [YGOProDeck](https://db.ygoprodeck.com/api-guide/) and optionally [the YGOrganization DB](https://db.ygorganization.com/).
+
+# Usage
+
+`import yugiohdeck`
+
+`yugiohdeck.ParseURLPasscodes(url)` - Parses a yugiohdeck URL and returns the card passcodes contained
+**_async_** `yugiohdeck.ParseURLData(url)` - Parses a yugiohdeck URL and returns the card passcodes contained + their API data
+
+

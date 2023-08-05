@@ -1,0 +1,15 @@
+module/__init__.py,sha256=nMNtLODAmTEPv8TAbOtSNYr-pwR_5YFF6EBIrJmbncA,296
+ygorganization/__init__.py,sha256=XNzrHZ0StVjggKePBWPy8U-woGm7I3QzrioxaB6AquM,306
+ygorganization/asyncquery.py,sha256=xBCidVtnidIZ6qKCxweITwnVToVwuK2n19Dze0ZZ8X0,5168
+ygorganization/dbstructure.py,sha256=0taF5JCBwRAvvh4cFTI9udHIj-pU1e1TRivcaxhdMPM,827
+ygorganization_api/__init__.py,sha256=sq3r40ZqnHWdFE0XEjobCuFWoAvOVm6f_ITqvvf1IoI,320
+yugiohdeck/__init__.py,sha256=2zcQJMfsxrhT9MDVmrTPIFOnx1vwmDxawx6dOks7W4Q,322
+yugiohdeck/config.py,sha256=TSNG8nU7jUNaRtbeRL8kSXZmvMXcbcvYPiOFYiUVxuo,189
+yugiohdeck/core.py,sha256=rL5STymQTqlOkU5Uhwwse-Svrljyv-ugXbPMU-2A6hk,2631
+yugiohdeck/ygoprodeck.py,sha256=_myQM9ufjhSZsvO_lT95FVZiG3o4Uyaf0c-xfJIzweQ,3476
+yugiohdeck/ygoprodeck_dbstructure.py,sha256=dA-KUsnuWz7pKU5-ooZ95UozFcP6KhgDYDGruFfTCk4,743
+yugiohdeck_api-0.0.1.dev4.dist-info/LICENSE,sha256=pO9SJPWzhoS7yVUh8EuWMlwkAsA9o-yzXiMtgqmWKC8,1233
+yugiohdeck_api-0.0.1.dev4.dist-info/METADATA,sha256=rsjj3wSR5RwnLKbKM8Iej6UKJciH-8Gwp0cbcekHWxc,1180
+yugiohdeck_api-0.0.1.dev4.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+yugiohdeck_api-0.0.1.dev4.dist-info/top_level.txt,sha256=hfIzy6kg49FChDtajEhhw4JOz7vjjTc5NBFziY3Zlm0,11
+yugiohdeck_api-0.0.1.dev4.dist-info/RECORD,,
