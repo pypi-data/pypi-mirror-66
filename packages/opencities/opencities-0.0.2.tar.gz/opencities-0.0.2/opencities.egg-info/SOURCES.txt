@@ -1,0 +1,8 @@
+README.md
+setup.py
+opencities/__init__.py
+opencities/pages.py
+opencities.egg-info/PKG-INFO
+opencities.egg-info/SOURCES.txt
+opencities.egg-info/dependency_links.txt
+opencities.egg-info/top_level.txt
