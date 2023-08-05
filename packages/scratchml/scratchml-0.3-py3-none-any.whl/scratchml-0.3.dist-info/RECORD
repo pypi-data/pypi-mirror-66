@@ -1,0 +1,11 @@
+scratchml/Loss.py,sha256=oeAzYagep-KcMDylCR6zmaTdr4f0pm5Sm5DRPuq3lZ0,1222
+scratchml/ScratchMLExceptions.py,sha256=km_Oc2MdKLRxHevqs8Hg8QDSX7uVNDpiiOOIIOk9YW8,435
+scratchml/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scratchml/regression/MultipleLinearRegression.py,sha256=amrE2fUX1lijqdQmMdVuaqwqIxvk-PsWgmpSMF_aGvk,2987
+scratchml/regression/SimpleLinearRegression.py,sha256=-9MZY9_jtEr1L_IBBiH4MK-154UeLNGWqsWH6yg0FyI,2623
+scratchml/regression/__init__.py,sha256=Bnb7gpPpf8h0wc4PnjUQyP9vTx0HSniy3WHHDiwh26s,122
+scratchml-0.3.dist-info/LICENSE.txt,sha256=lwFIDDjSN1kY6qOzoV9poUZJ-Aw13Sj12BgS1p3nlJY,1090
+scratchml-0.3.dist-info/METADATA,sha256=rvfodZNtMI4N6mvullmVb6GRiYxd_wi1cZrkurW5wZk,1077
+scratchml-0.3.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+scratchml-0.3.dist-info/top_level.txt,sha256=ef2xHyV8F5mmV8RTiorh5zzdwnQrpA5u9STLHTZsxKo,10
+scratchml-0.3.dist-info/RECORD,,
