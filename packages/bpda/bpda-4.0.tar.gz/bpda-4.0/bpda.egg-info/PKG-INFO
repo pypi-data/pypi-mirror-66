@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: bpda
+Version: 4.0
+Summary: BingPanDevApi.py: Make Old Bing Pics Can Access
+Home-page:  http://rdpstudio.top
+Author: Jack
+Author-email: admin@rdpstudo.top
+Maintainer: Jack
+Maintainer-email: admin@rdpstudo.top
+License: Public domain
+Description: #A SDK For http://rdpstudio.utools.club/bingpan  
+        How to use：  
+        import：  
+            ```python
+            from bpda.bpda import *
+            ```  
+        Get the specified date of bing background image address and print it to the console：  
+            ```python
+             print(geturl("2020/04/18"))
+            ```  
+        full example code：  
+            ```python
+            from bpda.bpda import *  
+             print(geturl("2020/04/18"))
+            ```  
+Platform: any
+Description-Content-Type: text/markdown
