@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "scrapy-proxymesh-py3"
+version = "0.0.5"
+description = "Proxymesh downloader middleware for Scrapy"
+authors = [
+  "mizhgun <mizhgun@gmail.com>",
+  "KristobalJunta <junta.kristobal@gmail.com>",
+]
+license = "MIT"
+packages = [
+  { include = "scproxymesh" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+scrapy = ">=1.6"
+six = "^1.14.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
