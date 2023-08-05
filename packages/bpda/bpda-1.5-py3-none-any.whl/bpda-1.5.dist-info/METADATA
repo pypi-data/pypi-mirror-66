@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bpda
+Version: 1.5
+Summary: BingPanDevApi.py: Make Old Bing Pics Can Access
+Home-page: http://rdpstudio.top
+Author: Jack
+Author-email: admin@rdpstudo.top
+Maintainer: Jack
+Maintainer-email: admin@rdpstudo.top
+License: Public domain
+Platform: any
+Requires-Dist: requests
+
+Make Old Bing Pics Can Access
+
+
