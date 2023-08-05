@@ -1,0 +1,18 @@
+createdBy:
+  displayName: Miguel Alvarado
+  id: e41b773a-766b-6c76-911e-c6137782a975
+  uniqueName: miguel@caylent.com
+createdOn: '2020-04-10T19:23:43.3133333Z'
+id: 549
+isShared: false
+modifiedBy:
+  displayName: Miguel Alvarado
+  id: e41b773a-766b-6c76-911e-c6137782a975
+  uniqueName: miguel@caylent.com
+modifiedOn: '2020-04-13T15:29:28.2366667Z'
+name: testing
+type: Vsts
+variableGroupProjectReferences: null
+variables:
+  test:
+    value: test

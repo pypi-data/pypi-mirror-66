@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "vaml"
+version = "0.1.1"
+description = "Azure DevOps Variable Groups as YAML files"
+authors = ["Miguel A. Alvarado V. <alvaradoma@gmail.com>"]
+maintainers = ["Miguel A. Alvarado V. <alvaradoma@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = ""
+repository = "https://github.com/exodus/vaml/"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pyyaml = "^5.3.1"
+argparse = "^1.4.0"
+requests = "^2.23.0"
+click = "^7.1.1"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.4.4"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry.scripts]
+vaml = "vaml.vaml:main"
