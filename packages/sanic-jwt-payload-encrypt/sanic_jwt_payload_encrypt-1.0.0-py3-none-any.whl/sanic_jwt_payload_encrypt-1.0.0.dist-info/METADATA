@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: sanic-jwt-payload-encrypt
+Version: 1.0.0
+Summary: Plugin for sanic-jwt that add encryption for JWT payload
+Home-page: https://github.com/cr0hn/sanic-jwt-payload-encrypt
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: License :: OSI Approved :: BSD License
+Keywords: jwt,sanic,jwe
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: sanic
+Requires-Dist: sanic-jwt
+Requires-Dist: cryptography
+
+UNKNOWN
+
+
