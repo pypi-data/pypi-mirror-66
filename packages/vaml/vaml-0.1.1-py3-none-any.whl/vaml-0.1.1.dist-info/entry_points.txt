@@ -1,0 +1,3 @@
+[console_scripts]
+vaml=vaml.vaml:main
+
