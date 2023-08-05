@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/gitsrc.py
+src/gitupload.egg-info/PKG-INFO
+src/gitupload.egg-info/SOURCES.txt
+src/gitupload.egg-info/dependency_links.txt
+src/gitupload.egg-info/top_level.txt
