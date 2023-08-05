@@ -1,0 +1,12 @@
+logux/__init__.py,sha256=Rpl31A8P_SxPjJgSMi7wyTOfpYFDzWOaoyCVhTahYdU,280
+logux/core.py,sha256=WU4FiDRrfzxhN_IphmbYGDCh2UhP3997d6dxRFNcggg,17040
+logux/dispatchers.py,sha256=yqFYkMoMkA8bJnyom5LHP7H6k82K4yn9iLolt5-3AAM,3047
+logux/settings.py,sha256=J5-zpg3T5kNknRmnu7tvAl3n2dSIsrKiQ3luvzET4ks,839
+logux/urls.py,sha256=j3iAwEieGah64a5GHQphX29W65O5RI4BSd5BZRt8NIk,130
+logux/utils.py,sha256=4xH9aJ_-sI4B9_TYwhhQC0-J8oEpe8_SFIdtoXhemVY,458
+logux/views.py,sha256=NTHcy7QEW0ccMDbR2oKGovaq6rft0i5ws1kG2GBWJD4,4427
+logux_django-0.1.dist-info/LICENSE,sha256=bfKk_-DRj3Ifd5gmBYR_E43rU3VxfnnEGb27-4rkqzw,1062
+logux_django-0.1.dist-info/METADATA,sha256=eIQyzGQb22WofR27IbRHdjDfLpGPVIuSWbQCaw3i8aI,5142
+logux_django-0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+logux_django-0.1.dist-info/top_level.txt,sha256=T0uEjUzu6ha4XxDq_ap5EBRbQcdD28ZBkfFS-jhMo-E,6
+logux_django-0.1.dist-info/RECORD,,
