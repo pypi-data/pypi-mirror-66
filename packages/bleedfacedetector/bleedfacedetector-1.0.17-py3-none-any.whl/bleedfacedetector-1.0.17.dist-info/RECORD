@@ -1,0 +1,11 @@
+bleedfacedetector/__init__.py,sha256=falNZTLMdYfu-WArCsKSnFNWVSOe6kDBi0LqUXshSY4,159
+bleedfacedetector/deploy.prototxt.txt,sha256=NNhQQ2-vFYyk5pBTO6J8HezyllNVkpnYDbknQUYzLKc,29881
+bleedfacedetector/fullapi.py,sha256=mG3ltR4rwPCHzdjVHgqpGUAslPBimR9LFk2QUt9RZco,3620
+bleedfacedetector/haarcascade_frontalface_default.xml,sha256=pxyD6dD_1ToA_bPx_ZGQUUnY0AHhB26rwy8u25RfjvM,963441
+bleedfacedetector/mmod_human_face_detector.dat,sha256=TLGTk-L7rysWCakxmtU4ZhjIhqYjTsG5cfPofIXYf-Y,729940
+bleedfacedetector/res10_300x300_ssd_iter_140000.caffemodel,sha256=KlahGlekopWVawZgtKPXa73KIgbElhzqjv59lcfLLy0,10666211
+bleedfacedetector-1.0.17.dist-info/LICENSE,sha256=9uv-tka7aMyg93DPLfVrf6n_9tDRWiE8SL0h4CML5kI,1466
+bleedfacedetector-1.0.17.dist-info/METADATA,sha256=W32reHtJXNs7obUJnl7yYGUprSq1j9qh8X1nGPte2xM,683
+bleedfacedetector-1.0.17.dist-info/WHEEL,sha256=QBOOAdG2icRHGBs2s94rfaUlHrdfNBp-TceubUYCwOE,97
+bleedfacedetector-1.0.17.dist-info/top_level.txt,sha256=NHZ8bo-qhDhWpzkpaA5UdXl9HkCkqiCl-uItTxSc-HU,18
+bleedfacedetector-1.0.17.dist-info/RECORD,,
