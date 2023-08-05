@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: stanfordkarel
+Version: 0.0.1
+Summary: Official Stanford Karel library used in CS 106A
+Home-page: https://github.com/tyleryep/stanfordkarel
+Author: Tyler Yep @tyleryep
+Author-email: tyep10@gmail.com
+License: UNKNOWN
+Description: # stanford-karel
+        Python Implementation of Karel for CS106A at Stanford
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
