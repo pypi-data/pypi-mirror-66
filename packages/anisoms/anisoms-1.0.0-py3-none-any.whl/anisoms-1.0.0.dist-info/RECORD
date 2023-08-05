@@ -1,0 +1,13 @@
+anisoms/__init__.py,sha256=uj8-hQX8K1gF3pExkMpDJThCs-iceJl0GlbilqveH8I,385
+anisoms/anisoms.py,sha256=CiQiUdI4jRhorRoHkg6jvH-8LOzEGzDkAyHB7iYWNn8,16758
+anisoms/asc_to_csv.py,sha256=hHX6IhjcWkmqTy1eYtwNpn_5b7YxCzgQRU3xYAiBw4k,1944
+anisoms/params_from_asc.py,sha256=I3gUsutqrHnam_8xuiUkMZp9QZU7R_x1LbYql70ogao,2169
+anisoms/plot.py,sha256=eP5UiCk4rzOBGcdcg2mQDoYSjG2_01oqu-AA36C6V70,4134
+anisoms/print_ran_tensor.py,sha256=3b6cjfY1qtJJmm5gZKqqH05PlbUlyuHFNfA2J7G5UsE,736
+anisoms/tensor_to_dir.py,sha256=KFwJ03QYVWLhJTb24_Us3dp3-Vy5g5dx6LdrWKNO2DU,1068
+anisoms-1.0.0.dist-info/COPYING,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+anisoms-1.0.0.dist-info/METADATA,sha256=-lPqIE3WYjD1RIZNpAWsv1LFlo211b1v1d2AsxS85Es,6036
+anisoms-1.0.0.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+anisoms-1.0.0.dist-info/entry_points.txt,sha256=QRkISZBkAIaZdkhjuogoxlMWig6HLd6wbeK9QxSiHWA,240
+anisoms-1.0.0.dist-info/top_level.txt,sha256=rb5yUb8HeA76Gze1pSqx5HuzQmRFX6JlmhVmvRnBFf4,8
+anisoms-1.0.0.dist-info/RECORD,,
