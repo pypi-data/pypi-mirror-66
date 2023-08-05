@@ -1,0 +1,13 @@
+requests
+numpy
+pandas
+gpmap
+epistasis
+tqdm
+matplotlib
+
+[test]
+pytest
+pytest-cov
+pytest-console-scripts
+pytest-datafiles
