@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: intent
+Version: 0.0.3
+Summary: Message passing
+Home-page: https://github.com/AgarwalPragy/py-intent
+Author: Pragy Agarwal
+Author-email: agar.pragy@gmail.com
+License: GNU General Public License v3
+Keywords: intent
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+
+======
+intent
+======
+
+
+.. image:: https://img.shields.io/pypi/v/intent.svg
+        :target: https://pypi.python.org/pypi/intent
+
+.. image:: https://img.shields.io/travis/AgarwalPragy/py-intent.svg
+        :target: https://travis-ci.com/AgarwalPragy/py-intent
+
+.. image:: https://readthedocs.org/projects/intent/badge/?version=latest
+        :target: https://intent.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+.. image:: https://pyup.io/repos/github/AgarwalPragy/py-intent/shield.svg
+     :target: https://pyup.io/repos/github/AgarwalPragy/py-intent/
+     :alt: Updates
+
+
+
+Message passing
+
+
+* Free software: GNU General Public License v3
+* Documentation: https://intent.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.0.2 (2020-04-17)
+------------------
+
+* First release on PyPI.
+
+
