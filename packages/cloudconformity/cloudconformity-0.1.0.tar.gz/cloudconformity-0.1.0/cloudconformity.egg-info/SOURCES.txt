@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+TemplateScanner/scanner.py
+cloudconformity.egg-info/PKG-INFO
+cloudconformity.egg-info/SOURCES.txt
+cloudconformity.egg-info/dependency_links.txt
+cloudconformity.egg-info/entry_points.txt
+cloudconformity.egg-info/requires.txt
+cloudconformity.egg-info/top_level.txt
