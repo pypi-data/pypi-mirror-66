@@ -1,0 +1,14 @@
+README.md
+setup.py
+cocotbext/interfaces/__init__.py
+cocotbext/interfaces/model.py
+cocotbext/interfaces/signal.py
+cocotbext/interfaces/avalon/__init__.py
+cocotbext/interfaces/avalon/driver.py
+cocotbext/interfaces/avalon/monitor.py
+cocotbext/interfaces/avalon/streaming.py
+cocotbext_interfaces.egg-info/PKG-INFO
+cocotbext_interfaces.egg-info/SOURCES.txt
+cocotbext_interfaces.egg-info/dependency_links.txt
+cocotbext_interfaces.egg-info/requires.txt
+cocotbext_interfaces.egg-info/top_level.txt
