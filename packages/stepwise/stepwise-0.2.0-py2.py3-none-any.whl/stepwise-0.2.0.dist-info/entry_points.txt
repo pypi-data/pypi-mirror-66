@@ -1,0 +1,14 @@
+[console_scripts]
+stepwise=stepwise.cli.main:main
+
+[stepwise.commands]
+config=stepwise.cli.config:main
+edit=stepwise.cli.edit:main
+go=stepwise.cli.go:main
+ls=stepwise.cli.ls:main
+stash=stepwise.cli.stash:main
+which=stepwise.cli.which:main
+
+[stepwise.protocols]
+builtins=stepwise:Builtins
+

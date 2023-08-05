@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: stepwise
+Version: 0.2.0
+Summary: Wetlab protocols that follow the Unix philosophy.
+Home-page: https://github.com/kalekundert/stepwise
+License: UNKNOWN
+Author: Kale Kundert
+Author-email: kale@thekunderts.net
+Requires-Python: ~=3.8
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Dist: appdirs
+Requires-Dist: arrow
+Requires-Dist: autoprop
+Requires-Dist: configurator
+Requires-Dist: docopt
+Requires-Dist: inform
+Requires-Dist: more_itertools
+Requires-Dist: nonstdlib
+Requires-Dist: setuptools
+Requires-Dist: sqlalchemy
+Requires-Dist: voluptuous
+Requires-Dist: toml ; extra == "test"
+Project-URL: Bug Tracker, https://github.com/kalekundert/stepwise/issues
+Project-URL: Continuous Integration, https://travis-ci.org/kalekundert/stepwise
+Project-URL: Documentation, https://stepwise.readthedocs.io/en/latest/
+Project-URL: Test Coverage, https://coveralls.io/github/kalekundert/stepwise
+Project-URL: Version Control, https://github.com/kalekundert/stepwise
+Provides-Extra: test
