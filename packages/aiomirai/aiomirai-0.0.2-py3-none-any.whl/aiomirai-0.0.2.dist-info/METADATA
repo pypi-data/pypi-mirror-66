@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: aiomirai
+Version: 0.0.2
+Summary: A framework for Tencent QQ headless client 'Mirai'.
+Home-page: https://github.com/water-lift/aiomirai
+Author: water_lift
+Author-email: 0xWATERx0@gmail.com
+License: UNKNOWN
+Keywords: qq mirai qqbot
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Framework :: Robot Framework
+Classifier: Framework :: Robot Framework :: Library
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Internet
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: httpx
+
+# Mirai Python Async SDK
+
+coming soon...
+
