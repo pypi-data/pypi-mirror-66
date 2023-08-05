@@ -1,0 +1,9 @@
+README.md
+gitset.py
+setup.py
+gitset.egg-info/PKG-INFO
+gitset.egg-info/SOURCES.txt
+gitset.egg-info/dependency_links.txt
+gitset.egg-info/entry_points.txt
+gitset.egg-info/requires.txt
+gitset.egg-info/top_level.txt
