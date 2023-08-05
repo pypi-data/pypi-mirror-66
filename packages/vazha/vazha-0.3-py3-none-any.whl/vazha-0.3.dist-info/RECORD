@@ -1,0 +1,10 @@
+vazha/__init__.py,sha256=pWuO8YicdeRBWkumD7klqSGYbYafHwbehW6JFUD0tV4,681
+vazha/command_line.py,sha256=xJXZocCeO1TX_SWFtasaffVxqpMFeQo7HBiYJMc1nYc,45
+vazha/my.py,sha256=CEam6TY0FxgToEQ51F_ClIkmiyyYDGE8LEhzSJwJxmI,28
+vazha/test.py,sha256=Nhjq2y78or-AlGF1OXtbQQXTXQmv1WwVnhWAFiVOMls,1222
+vazha/vazha_to_eng.py,sha256=8VnFCpApRZHdanoHSZ2lAlZx7nQqoiG2SuUnly__81Q,5482
+vazha-0.3.dist-info/METADATA,sha256=cPqQkXrg_DEE07fB48AXudAsd0LmRcXtmflofwSp348,603
+vazha-0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+vazha-0.3.dist-info/entry_points.txt,sha256=KSVLlgoe1B3M3Pq1dcNQslcYKYLefW6MfIA_Z3-vHZM,49
+vazha-0.3.dist-info/top_level.txt,sha256=g5f0-OjwY7TfouGqMp-LdCNnnSuE69cljIlyP3YAVZY,6
+vazha-0.3.dist-info/RECORD,,
