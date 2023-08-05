@@ -1,0 +1,134 @@
+**CCTop** is a tool to determine suitable CRISPR/Cas9 target sites in a given query
+sequence(s) and predict its potential off-target sites. The online version of
+**CCTop** is available at http://crispr.cos.uni-heidelberg.de/
+
+This is a command line version of **CCTop** that is designed mainly to allow search
+of large volume of sequences and higher flexibility.
+
+If you use this tool for your scientific work, please cite it as:
+	Stemmer, M., Thumberger, T., del Sol Keyer, M., Wittbrodt, J. and Mateo, J.L.
+	*CCTop: an intuitive, flexible and reliable CRISPR/Cas9 target prediction tool.*
+	**PLOS ONE (2015)**.
+	[doi:10.1371/journal.pone.0124633](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0124633)
+
+If you use the CRISPRater score to select your target sites, please cite as well this work:
+	Labuhn, M., Adams, F. F., Ng, M., Knoess, S., Schambach, A., Charpentier, E. M., ... Heckl, D.
+	*Refined sgRNA efficacy prediction improves large- and small-scale CRISPR–Cas9 applications.*
+	**Nucleic Acids Research (2017)**.
+	[doi: 10.1093/nar/gkx1268](https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkx1268/4754467)
+
+# Requirements
+
+**CCTop** is implemented in Python and it requires a version 3.5 or above.
+
+In addition we relay on the short read aligner Bowtie 1 to identify the
+off-target sites. Bowtie can be downloaded from this site
+http://bowtie-bio.sourceforge.net/index.shtml in binary format for the main
+platforms.
+You need to create an indexed version of the genome sequence of your
+target species. This can be done with the tool bowtie-build included in the
+Bowtie installation. For that you simply need a fasta file containing the genome
+sequence. To get the index you can do something like:
+```
+$ bowtie-build -r -f <your-fasta-file> <index-name>
+```
+
+The previous command will create the index files in the current folder.
+
+To handle gene and exon annotations we use the python library
+[bx-python](https://bitbucket.org/james_taylor/bx-python/). This library is
+only required if you want to associate off-target sites with the closest
+exon/gene, otherwise you don't need to install it.
+
+The exon and gene files contain basically the coordinates of those elements in
+[bed format](http://genome.ucsc.edu/FAQ/FAQformat#format1), which are the first
+three columns of the file. The exon file can contain two more columns with the
+ID and name of the corresponding gene.
+You can generate easily such kind of files for you target organism using the
+script `gff2bedFiles` included in this package. As the name
+of this script suggests, you only need a GFF file with the annotation.
+Additionally, you can also use [Ensembl Biomart](http://www.ensembl.org/biomart),
+if your species is available there, to generate files complying with these
+requirements.
+
+In case of difficulties with these files contact us and we can provide you the
+files you need or help to generate them on your own.
+# Install
+
+Please, refer to the file `INSTALL.md`.
+
+# Usage
+
+After a successful installation you should have the main **CCTop** executable,
+together with the scripts to generate the gene/exons files, ready to be used.
+You can run **CCTop** with the -h flag to get a detailed list of the available
+parameters. For instance:
+```
+$ cctop -h
+```
+
+At minimum it is necessary to specify the input (multi)fasta file (--input) and
+the Bowtie index (--index). In this case **CCTop** assumes that the Bowtie
+executable can be found in the `PATH` system variable, there are not gene and
+exon files to use and the rest of parameters will take default values.
+Notice that the index parameter to specify here refers to the name of the
+index, without any file extension, together with the path, if necessary.
+
+A command for a typical run will look something like this:
+```
+$ cctop --input <query.fasta> --index <path/index-name> --output <output-folder>
+```
+The result of the run will be three files for each sequence in the input query
+file. These files will have extension .fasta, .bed and .xls, containing,
+respectively, the sequence of the target sites, their coordinates and their
+detailed information as in the online version of CCTop. The name of the output
+file(s) will be taken from the name of the sequences in the input fasta file.
+
+## Generating Exon/Gene files
+For any species you have to work with it is very likely that there is an
+annotation file in GFF format. From any of these files you can generate
+the files that **CCTop** needs to annotate the off-target sites.
+The script `gff2bedFiles` expects as first argument the input file in
+[GFF version 3](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md)
+format.
+Files in this format can be usually found with their corresponding assemblies
+in the web sites NCBI or Ensembl.
+With the input file downloaded, it doesn't need to be uncompressed if it is in
+gz format, specify it as first argument to the script followed by
+the prefix you prefer for the output files.
+```
+$ gff2bedFiles <input-gff> <prefix>
+```
+The result will be two files named `<prefix>_exons.bed.gz` and
+`<prefix>_genes.bed.gz`.
+These files are compressed, to save space, and can be passed directly to
+**CCTop**.
+
+# Docker image
+**CCTop** is also available as a Docker image at https://hub.docker.com/r/juanlmateo/cctop
+This image contains everything ready to use **CCTop**.
+Simply download the image with this command
+```
+docker pull juanlmateo/cctop:latest
+```
+With this image you can run the commands `cctop` and `gff2bedFiles`, but also
+you can run Bowtie to create the index of your target species.
+
+Below you have an example that shows how to get CRISPR/Cas candidates for a
+sequence using the yeast as target species. This example shows all the steps,
+from creating the Bowtie index, the exon and gene files to the generation of
+the final output.
+```
+# downloading the genome of the target species in fasta forma
+wget ftp://ftp.ensembl.org/pub/release-99/fasta/saccharomyces_cerevisiae/dna/Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz
+# building the bowtie index from the fasta file
+docker run -v `pwd`:/data/ cctop bowtie-build -r -f Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz saccharomyces_cerevisiae
+# downloading the annotation of this assembly in GFF format
+wget ftp://ftp.ensembl.org/pub/release-99/gff3/saccharomyces_cerevisiae/Saccharomyces_cerevisiae.R64-1-1.99.gff3.gz
+# generating the exon and gene files
+docker run -v `pwd`:/data/ cctop gff2bedFiles Saccharomyces_cerevisiae.R64-1-1.99.gff3.gz saccharomyces_cerevisiae
+# defining the input sequence(s)
+echo -e ">YDL194W\nATGGATCCTAATAGTAACAGTTCTAGCGAAACATTACGCCAAGAGAAACAGGGTTTCCTA" > test.fa
+# running CCTop
+docker run -v `pwd`:/data/ cctop cctop --input test.fa --index saccharomyces_cerevisiae --exons saccharomyces_cerevisiae_exons.bed.gz --genes saccharomyces_cerevisiae_genes.bed.gz
+```

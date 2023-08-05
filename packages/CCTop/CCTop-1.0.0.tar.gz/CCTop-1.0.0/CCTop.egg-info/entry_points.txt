@@ -1,0 +1,4 @@
+[console_scripts]
+cctop = cctop.CCTop:main
+gff2bedFiles = cctop.gff2bedFiles:main
+
