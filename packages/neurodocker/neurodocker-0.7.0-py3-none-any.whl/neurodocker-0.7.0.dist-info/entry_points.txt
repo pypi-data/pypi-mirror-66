@@ -1,0 +1,4 @@
+[console_scripts]
+neurodocker = neurodocker.neurodocker:main
+neurodocker-minify = neurodocker.reprozip.gentle.trace:main
+
