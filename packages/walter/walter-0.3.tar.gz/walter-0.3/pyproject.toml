@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "walter"
+version = "0.3"
+description = "A better configuration library for Django and other Python projects"
+license = "MIT"
+authors = ["Leigh Brenecki <leigh@brenecki.id.au>"]
+readme = "README.rst"
+
+[tool.poetry.dependencies]
+python = ">3.6"
+appdirs = "*"
+attrs = "*"
+begins = "*"
+
+[tool.poetry.dev-dependencies]
+hypothesis = "*"
+hypothesis-pytest = "*"
+prospector = "*"
+pytest = "*"
+pytest-asyncio = "*"
+sphinx = "<1.6,>=1.5"
+sphinx-rtd-theme = "<0.2,>=0.1.9"
+
+[tool.poetry.extras]
+docs = ["sphinx", "sphinx-rtd-theme"]
