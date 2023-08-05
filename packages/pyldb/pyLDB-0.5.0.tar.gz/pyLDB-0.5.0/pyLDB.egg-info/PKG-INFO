@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pyLDB
+Version: 0.5.0
+Summary: Retrieve and format data from the Live Departure Board
+Home-page: https://github.com/jwg4/pyldb
+Author: Jack Grahl
+Author-email: jack.grahl@gmail.com
+License: MIT
+Description: A package which wraps some of the fiddly parts of downloading departure board data from the National Rail enquiries Darwin  / LDBWS service. This code uses the suds SOAP library and the Jinja2 templating library to allow you to input a three-letter station code and get back HTML departure board with configurable style and layout.
+Platform: UNKNOWN
