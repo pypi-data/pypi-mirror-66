@@ -1,0 +1,7 @@
+*.pyc
+.cache/
+.coverage
+*.egg-info/
+.idea/
+venvs/
+_build/
