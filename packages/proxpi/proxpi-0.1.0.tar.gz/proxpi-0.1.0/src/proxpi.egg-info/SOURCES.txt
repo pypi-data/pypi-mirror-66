@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+src/proxpi/__init__.py
+src/proxpi/_cache.py
+src/proxpi/server.py
+src/proxpi.egg-info/PKG-INFO
+src/proxpi.egg-info/SOURCES.txt
+src/proxpi.egg-info/dependency_links.txt
+src/proxpi.egg-info/requires.txt
+src/proxpi.egg-info/top_level.txt
+src/proxpi/templates/files.html
+src/proxpi/templates/packages.html
