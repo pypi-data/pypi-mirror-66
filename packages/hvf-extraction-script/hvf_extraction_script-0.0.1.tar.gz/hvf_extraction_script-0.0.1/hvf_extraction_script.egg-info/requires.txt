@@ -1,0 +1,7 @@
+tesserOCR
+regex
+pillow
+opencv-python
+fuzzywuzzy
+fuzzysearch
+python-levenshtein
