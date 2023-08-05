@@ -1,0 +1,3 @@
+[console_scripts]
+idapload = idapload.main:main
+

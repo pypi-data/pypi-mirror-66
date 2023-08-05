@@ -1,0 +1,3 @@
+include LICENSE
+recursive-include idapload/static *
+recursive-include idapload/templates *
