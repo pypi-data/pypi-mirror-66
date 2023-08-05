@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: congruous
+Version: 0.1.1
+Summary: A python command-line tool to compare and generate accuracy reports for custom built OCR models.
+Home-page: UNKNOWN
+Author: Mahesh Kumaran T
+Author-email: maheshtkumaran@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

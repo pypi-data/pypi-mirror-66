@@ -1,0 +1,6 @@
+Click
+matplotlib
+fuzzywuzzy[speedup]
+tabulate
+reportlab
+pytz
