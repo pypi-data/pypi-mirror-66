@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: crypno
+Version: 1.0.0
+Summary: Crypno Python Package
+Home-page: https://crypno.ir
+Author: Crypno Co
+Author-email: crypnoco@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Crypno Python Package
+
+---
+
+1. Register In [Crypno](https://crypno.ir).
+2. use this command to install the package:
+    ```
+    pip install crypno
+    ```
+3. Use The Available Methods Introduced In The [Crypno Docs](https://crypno.ir/docs).
+
