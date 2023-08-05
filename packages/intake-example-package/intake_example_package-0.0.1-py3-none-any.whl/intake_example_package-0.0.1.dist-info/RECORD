@@ -1,0 +1,7 @@
+intake_example_package/__init__.py,sha256=SxxI6PrP27181RbPF7LbyqNPQllcQBgtcARohnmtRzY,462
+intake_example_package/sea.yaml,sha256=8caT3lNO0QLnyhUH60A5BQkJEgkkJrQcM7s88KDiIVc,327
+intake_example_package-0.0.1.dist-info/METADATA,sha256=3sNlFjtx03mVgBpfP6aXxKWEe7MegrHHs_Hh0t_QaCA,263
+intake_example_package-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+intake_example_package-0.0.1.dist-info/entry_points.txt,sha256=UgZgkcNHd6RMGE_8hDLUDZl-6zy7R9So8oH-u1OcedY,95
+intake_example_package-0.0.1.dist-info/top_level.txt,sha256=F2q7Lbhir3826qhBsynxPmFOI8AMFdIgfijSi5vqUEo,23
+intake_example_package-0.0.1.dist-info/RECORD,,

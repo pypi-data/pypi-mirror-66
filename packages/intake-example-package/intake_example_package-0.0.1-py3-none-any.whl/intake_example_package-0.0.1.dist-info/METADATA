@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: intake-example-package
+Version: 0.0.1
+Summary: Demonstrates entrypoint method for data installation
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: intake (>=0.5.5)
+
+UNKNOWN
+
+

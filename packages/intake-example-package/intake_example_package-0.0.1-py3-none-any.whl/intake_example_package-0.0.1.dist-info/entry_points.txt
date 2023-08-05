@@ -1,0 +1,4 @@
+[intake.catalogs]
+sea_cat = intake_example_package:cat
+sea_data = intake_example_package:data
+
