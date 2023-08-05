@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: biopeaks
+Version: 1.2.2
+Summary: A graphical user interface for feature extraction from heart- and breathing biosignals.
+Home-page: https://github.com/JanCBrammer/biopeaks
+Author: Jan C. Brammer
+Author-email: j.brammer@psych.ru.nl
+License: GPL-3.0
+Description: UNKNOWN
+Keywords: ECG PPG Breathing Biosignals Bitalino OpenSignals EDF GUI
+Platform: UNKNOWN
+Requires-Python: >=3.7
