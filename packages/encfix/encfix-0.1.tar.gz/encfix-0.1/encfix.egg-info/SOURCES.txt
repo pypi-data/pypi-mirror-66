@@ -1,0 +1,15 @@
+.gitattributes
+.gitignore
+LICENSE
+MANIFEST.in
+conftest.py
+encfix.py
+setup.py
+tox.ini
+encfix.egg-info/PKG-INFO
+encfix.egg-info/SOURCES.txt
+encfix.egg-info/dependency_links.txt
+encfix.egg-info/entry_points.txt
+encfix.egg-info/requires.txt
+encfix.egg-info/top_level.txt
+encfix.egg-info/zip-safe
