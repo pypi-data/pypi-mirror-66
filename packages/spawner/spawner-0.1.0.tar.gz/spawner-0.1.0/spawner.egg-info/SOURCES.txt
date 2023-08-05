@@ -1,0 +1,9 @@
+README.md
+setup.py
+spawner/__init__.py
+spawner/spawner.py
+spawner.egg-info/PKG-INFO
+spawner.egg-info/SOURCES.txt
+spawner.egg-info/dependency_links.txt
+spawner.egg-info/requires.txt
+spawner.egg-info/top_level.txt
