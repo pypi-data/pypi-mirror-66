@@ -1,0 +1,9 @@
+PyGObject
+pycairo
+humanize
+attrs
+psutil
+sdnotify
+requests
+urllib3
+pyyaml
