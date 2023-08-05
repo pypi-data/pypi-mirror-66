@@ -1,0 +1,17 @@
+doctalk/__init__.py,sha256=JQXkMV4HyFQVw31Y0g0l8bM4-3fx-sNQKvNi-l2rNKo,78
+doctalk/api.py,sha256=EVNb8iBgF0tDul1UIR086oz7v8J9hFOfIrXRxxiIt3U,1447
+doctalk/down.py,sha256=drDpJWDHAAwI72xNwHTyC80lkxMioF-qgixxVHG8uLA,386
+doctalk/lemmas.json,sha256=MgulAfxwTOdDHI6YU0Nxg7DCE1gTq-QZ2fhcFdYl3VI,338898
+doctalk/nlp.py,sha256=-mcsrW8NFZcnJRwn0iCEnZwUr_BFhNENQifmr2d3iYw,2424
+doctalk/params.py,sha256=y7yZ4bCukpZuVmApoLvySjp2-AsVl7WeKEoZ3yaxsFk,2823
+doctalk/pypro.py,sha256=rZyMLzPGQLdLtKyIkxx8P1QCY8tlQWNErGL6mylRJqU,2622
+doctalk/refiner.py,sha256=PB8rbgDK6KgKVuX3Jr8ZS6bMh1Gjh1QyKmbxdCmyeaE,1159
+doctalk/sim.py,sha256=nt1gYaDHj5o6wRoH3RisNaD6QeqagC_AvyHe0jcqVus,2239
+doctalk/talk.py,sha256=ElO5cfu0mQWlE8VNOX0__U9ibO56nh21v6T1Cxivoko,29749
+doctalk/think.py,sha256=X5LylaiVKAA0YBw3PVhEo5z8WsLQx2Gzc0R2pXPgGm4,6337
+doctalk/vis.py,sha256=NkBkoJLSZAnnSoZY74iLDMcRaJ7DQeEYVBAd05FLEpQ,2632
+doctalk-0.3.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+doctalk-0.3.0.dist-info/METADATA,sha256=CPspuQKha7SwfNjaJ4WBK9P92BhZ3D4sRI0JP4_0IFk,2267
+doctalk-0.3.0.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+doctalk-0.3.0.dist-info/top_level.txt,sha256=EmMxIE9Bo6CcKbIwgai7UnBVK4PoiBgE6iQFOLTwqTA,8
+doctalk-0.3.0.dist-info/RECORD,,
