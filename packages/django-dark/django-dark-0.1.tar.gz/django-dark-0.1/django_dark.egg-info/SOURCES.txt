@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+dark/.DS_Store
+dark/less/dark.less
+dark/static/admin/css/dark.css
+django_dark.egg-info/PKG-INFO
+django_dark.egg-info/SOURCES.txt
+django_dark.egg-info/dependency_links.txt
+django_dark.egg-info/top_level.txt

@@ -1,0 +1,61 @@
+Metadata-Version: 1.1
+Name: django-dark
+Version: 0.1
+Summary: A Django app to provide dark mode static files for the Django Admin.
+Home-page: https://contmp.de/
+Author: Bastian Probian
+Author-email: contmp@me.com
+License: BSD-3-Clause
+Description: # django-dark
+        
+        
+        This is just a fresh playground
+        
+        ## Planed Setup flow
+        ```sh
+        pip install django-dark
+        ```
+        
+        ## Integration
+        
+        a) Modify Django's base_site.html
+        
+        ```html
+        <link href="/static/admin/css/dark.css" type="text/css" media="(prefers-color-scheme: dark)" rel="stylesheet">
+        ```
+        
+        b) Include base_site.html override Template here?
+        
+        ## Current Result
+        
+        ![Dark](https://github.com/contmp/django-dark/blob/master/demo/dark.png?raw=true)
+        ![Light](https://github.com/contmp/django-dark/blob/master/demo/light.png?raw=true)
+        
+        
+        ## Developer Notes
+        
+        ```sh
+        vv
+        sv
+        pip install -r requirements/common.txt
+        lesscpy -x dark/less/dark.less dark/static/admin/css/dark.css
+        watchmedo shell-command --wait --patterns="*.less" --recursive --command "lesscpy -x dark/less/dark.less dark/static/admin/css/dark.css"
+        watchmedo shell-command --wait --patterns="*.less" --recursive --command "lesscpy -x dark/less/dark.less dark/static/admin/css/dark.css && python manage.py collectstatic --noinput"
+        python setup.py sdist
+        ```
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
