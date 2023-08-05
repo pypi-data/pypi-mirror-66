@@ -1,0 +1,16 @@
+setup.py
+TSAndrey_Server.egg-info/PKG-INFO
+TSAndrey_Server.egg-info/SOURCES.txt
+TSAndrey_Server.egg-info/dependency_links.txt
+TSAndrey_Server.egg-info/requires.txt
+TSAndrey_Server.egg-info/top_level.txt
+server/__init__.py
+server/server.py
+server/server/__init__.py
+server/server/add_user.py
+server/server/config_window.py
+server/server/main_window.py
+server/server/messanger.py
+server/server/remove_user.py
+server/server/server_db.py
+server/server/stat_window.py
