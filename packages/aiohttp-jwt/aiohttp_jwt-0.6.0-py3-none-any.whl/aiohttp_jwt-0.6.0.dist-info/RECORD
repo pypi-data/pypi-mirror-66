@@ -1,0 +1,9 @@
+aiohttp_jwt/__init__.py,sha256=4WONQG0dKe7lf1cKZgehIncIrFVs17yvCGxG4Lh5YYk,281
+aiohttp_jwt/middleware.py,sha256=tqQG8gjIVxVLvSIUvG5i0-XlDP1HLyMYvkI-drg3B_o,3045
+aiohttp_jwt/permissions.py,sha256=G1LoAIRvt-F7K_DM_kQG2WVMLgKxT9tAy57a4Nwoh_E,2523
+aiohttp_jwt/utils.py,sha256=eP-buaeVgYjx_vbXtWAlqbk9erQHjqCwdbAiYAEk1vw,308
+aiohttp_jwt-0.6.0.dist-info/LICENSE.txt,sha256=stskm_BAIUatXQo_CajZm9q8s3bNsQZ7VX--ank_qRw,1084
+aiohttp_jwt-0.6.0.dist-info/METADATA,sha256=YkemW6fyypIMgQSbUqIkL3al8ukS0HwMjBYLQi121cg,2904
+aiohttp_jwt-0.6.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aiohttp_jwt-0.6.0.dist-info/top_level.txt,sha256=KwEHC-HKNMNpX5sxTt591jc9yURIurmdg-FppE2Y1gY,12
+aiohttp_jwt-0.6.0.dist-info/RECORD,,
