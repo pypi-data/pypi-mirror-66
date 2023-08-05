@@ -1,0 +1,7 @@
+README.md
+setup.py
+Covid19ApiWrapper/__init__.py
+Covid19ApiWrapper.egg-info/PKG-INFO
+Covid19ApiWrapper.egg-info/SOURCES.txt
+Covid19ApiWrapper.egg-info/dependency_links.txt
+Covid19ApiWrapper.egg-info/top_level.txt
