@@ -1,0 +1,6 @@
+pyaltt2>=0.0.85
+flask
+loginpass
+authlib
+sqlalchemy
+msgpack
