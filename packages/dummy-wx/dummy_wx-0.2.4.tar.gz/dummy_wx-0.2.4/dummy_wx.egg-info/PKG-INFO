@@ -1,0 +1,17 @@
+Metadata-Version: 1.0
+Name: dummy-wx
+Version: 0.2.4
+Summary: This module does nothing
+Home-page: UNKNOWN
+Author: Dominic Davis-Foster
+Author-email: dominic@davis-foster.co.uk
+License: LGPLv3+
+Description: 
+        This module does nothing, but is useful when trying to build documentation
+        for modules that require wxPython.
+        
+        Do not install this module if you already have wxPython installed, as it uses
+        the same "wx" package name to pretend to be wxPython.
+        
+        
+Platform: UNKNOWN
