@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: Icefish-SAS
+Version: 1.4
+Summary: Smart Attendance System from Team Icefish
+Home-page: https://bitbucket.org/vivekvaishya/icefish-sas/src
+Author: Team Icefish
+Author-email: icefish@mail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# ICEFISH-SAS
+
+Icefish Smart Attendance System
+
+The project is initiated by Students of Pillai College of Engineering for SIH 2020.
+The goal of the project is to allow contact less (no fingerprint) attendance through camera in classrooms.
+
+
+
+
