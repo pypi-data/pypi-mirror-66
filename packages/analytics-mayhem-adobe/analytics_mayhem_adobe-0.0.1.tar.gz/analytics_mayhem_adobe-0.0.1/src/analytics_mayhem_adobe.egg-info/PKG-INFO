@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: analytics-mayhem-adobe
+Version: 0.0.1
+Summary: Manage Adobe Analytics Reports API v2 requests to build reports programmatically.
+Home-page: https://github.com/konosp/adobe-analytics-reports-api-v2.0
+Author: Konstantinos Papadopoulos
+Author-email: info@analyticsmayhem.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
