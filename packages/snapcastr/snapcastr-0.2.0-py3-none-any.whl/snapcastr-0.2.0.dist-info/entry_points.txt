@@ -1,0 +1,3 @@
+[console_scripts]
+snapcastrd=snapcastr.snapcastrd:main
+

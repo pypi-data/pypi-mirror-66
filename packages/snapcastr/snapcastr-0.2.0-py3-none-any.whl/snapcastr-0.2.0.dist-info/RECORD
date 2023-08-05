@@ -1,0 +1,14 @@
+snapcastr/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+snapcastr/snapcastr.py,sha256=W5GVYoPmLD4RPTqyaN4GRdPIJZkVCs1u5xfMMfYIpVk,7422
+snapcastr/snapcastrd.py,sha256=UL_BG_TH_DZYgIA6oIeO7xGVOAzYLX5MQU9pJAoVtvQ,1948
+snapcastr/static/snapcast.ico,sha256=1H7cQ1we6YWNUOnnsGjNtt3BNHwVY4kNzrBZlGQ3QkU,16958
+snapcastr/static/style.css,sha256=zCamQxCdZNVnxzWmsrVlQ6REOnPiDi0g0VIOif1NevA,211
+snapcastr/templates/base.html,sha256=lhOgopAieJkKKYU7yMxuyenZYcNSrf6QquzGjW8dH5g,774
+snapcastr/templates/clients.html,sha256=lDZrEUDuzJlruKw1rW2KkZ8KofDl823-QszJsUlJPYA,614
+snapcastr/templates/groups.html,sha256=Il7KcsKGuxTVkemshtt1d3NzXhwpVMQWRMn0eB3bm70,758
+snapcastr/templates/streams.html,sha256=g3egJ54hXp8wzwbg9YVDUSGbrJa14KDSnAHtTNq6z10,368
+snapcastr/templates/zones.html,sha256=AGgvFojGGKP_xmci0Ss8bn3QZ7RFYr_E2KVBbScDHMA,586
+snapcastr-0.2.0.dist-info/entry_points.txt,sha256=4EADtzSmNhvDy4_itPzns2T9hudfr1LcuCoHraZA_RI,56
+snapcastr-0.2.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+snapcastr-0.2.0.dist-info/METADATA,sha256=0enVaa-2F_8YZpaasFjci-mg318DktH839OPolFjaSI,3598
+snapcastr-0.2.0.dist-info/RECORD,,
