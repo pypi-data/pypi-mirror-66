@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: gridtest
+Version: 0.0.0
+Summary: generate grid testing for Python modules and functions
+Home-page: http://www.github.com/vsoch/gridtest
+Author: Vanessa Sochat
+Author-email: vsochat@stanford.edu
+Maintainer: Vanessa Sochat
+Maintainer-email: vsochat@stanford.edu
+License: LICENSE
+Description: # GridTest
+        
+        ![https://img.shields.io/pypi/v/gridtest.svg](https://pypi.python.org/pypi/gridtest)
+        ![https://img.shields.io/travis/vsoch/gridtest.svg](https://travis-ci.com/vsoch/gridtest)
+        ![https://pyup.io/repos/github/vsoch/gridtest/shield.svg](https://pyup.io/repos/github/vsoch/gridtest/)
+        
+        Simple grid testing setup for Python functions and modules
+        
+        ## Overview 
+        
+        GridTest is a small python library that will read in one or more python
+        scripts or modules, and generate a testing file that can be used to run grid
+        tests. Take a look at the [examples](examples) folder 
+        for getting started.
+        
+         * Free software: MPL 2.0 License
+        
+        
+Keywords: python,testing,grid,ci
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
