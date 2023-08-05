@@ -1,0 +1,22 @@
+{% if form_tag %}
+    <!-- form_tag -->
+    <form {{ flat_attrs | safe }} method="{{ form_method }}" class="uk-grid-medium uk-grid"  {# uk-form-stacked #}
+            {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+{% endif %}
+    <!-- whole uni form -->
+
+    {% if form_method|lower == 'post' and not disable_csrf %}{% csrf_token %}{% endif %}
+
+    {% include "uikit-3.4.0/display_form.html" %}
+
+    {% if inputs %}
+        <div class="button-holder">
+            {% for input in inputs %}
+                {% include "layout/baseinput.html" %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+{% if form_tag %}
+    </form>
+{% endif %}
