@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: mkv-this
+Version: 0.1.6
+Summary: markovify user-provided text and output the results to a text file.
+Home-page: UNKNOWN
+Author: mousebot
+Author-email: mousebot@riseup.net
+License: AGPLv3
+Description: 
+        ## mkv-this
+        
+        mkv-this is a little script that uses the `markovify` python module to output a bunch of bot sentences based on a bank of text that you feed it. the results are saved to a text file of your choosing. if you run it again on the same output file, the new results are appended after the old ones.
+        
+        it was written by a total novice, so you probably shouldn’t download it. i only learned about argparser yesterday, and pypi.org today, no matter what day it is.
+        
+        #### install with pip:
+        
+        you can install it with pip, the python package manager.
+        
+        `python3 -m pip install mkv-this`
+        
+        you need python3, and markovify is a dependency, but it should install with mkv-this.
+        
+        #### options:
+        
+        the script implements a few of the basic `markovify` options, so you can:
+        
+        * specify a maximum sentence length
+        * specify how many sentences to output
+        * specify state size, i.e. the number of preceeding words to be used in calculating the probability of the next word.
+        * specify an additional file to use for text input. for the moment you can add only one.
+        
+        run `mkv-this -h` to see how to use these options.
+        
+        #### for best results:
+        
+        feed `mkv-this` large-ish amounts of well punctuated text. it works best if you bulk replace/remove as much mess as possible (URLs, metadata, stars, bullets, etc.), unless you want mashed versions of those things in your output.
+        
+        if your input text doesn’t use full-stops to mark the ends of sentences, try putting each 'sentence' on a newline, so the parser doesn't read your entire file as one big sentence and output nothing.
+        
+        you’ll want to edit the output too. it is very much supposed to be a kind of raw material for human editing, rather than print-ready bosh, although many bots are happily publishing such output directly.
+        
+        for further tips on basic output, see https://github.com/jsvine/markovify#basic-usage.
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
