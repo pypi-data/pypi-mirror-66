@@ -1,0 +1,11 @@
+falcon_sqla/__init__.py,sha256=jqKh5d6Lo-DK5zdtJWVNm-9y1lk4ziUm_OKuWC9dKB0,650
+falcon_sqla/manager.py,sha256=U9K4RxjzaRqoWAuhxA-JtYO-4JZo1o5FHMROf96YShE,8826
+falcon_sqla/middleware.py,sha256=OATkwKJ3eH7PNEjV4J_S9FfUDatGAtDzlgqJn5eajfc,2720
+falcon_sqla/session.py,sha256=r1b3G8dt4iNX8tUfuTy4j-BSsXEPLaiqTUrDt-EUieE,1494
+falcon_sqla/util.py,sha256=eQR4UTFOWyKZIWIhWqKctBf07pxn4w8kMWOHnuQRp-A,1575
+falcon_sqla/version.py,sha256=0kKs1t2xQLAkdUL9cen2UzkJkUvvMfiEdhQoVSRGNOc,653
+falcon_sqla-0.2.0a1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+falcon_sqla-0.2.0a1.dist-info/METADATA,sha256=qfR1QPGtqFd9sQEIHQfJLrNveOFa4oIX95IF9t6U-LI,4659
+falcon_sqla-0.2.0a1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+falcon_sqla-0.2.0a1.dist-info/top_level.txt,sha256=4ts-hE8dVEmX_MveAGKT8LF0W2BZBAMgnyv8akwDxg8,12
+falcon_sqla-0.2.0a1.dist-info/RECORD,,
