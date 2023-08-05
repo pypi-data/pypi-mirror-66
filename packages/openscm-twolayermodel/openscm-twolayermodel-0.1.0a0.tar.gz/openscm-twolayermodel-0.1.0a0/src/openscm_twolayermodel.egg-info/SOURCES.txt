@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+versioneer.py
+src/openscm_twolayermodel/__init__.py
+src/openscm_twolayermodel/_version.py
+src/openscm_twolayermodel/utils.py
+src/openscm_twolayermodel.egg-info/PKG-INFO
+src/openscm_twolayermodel.egg-info/SOURCES.txt
+src/openscm_twolayermodel.egg-info/dependency_links.txt
+src/openscm_twolayermodel.egg-info/requires.txt
+src/openscm_twolayermodel.egg-info/top_level.txt
