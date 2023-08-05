@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: space-console-game
+Version: 0.1.2
+Summary: We fly in space, we surf the Universe
+Author: velivir
+Author-email: vitaliyantonoff@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
