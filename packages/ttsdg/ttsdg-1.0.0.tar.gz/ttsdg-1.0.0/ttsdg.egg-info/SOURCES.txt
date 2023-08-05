@@ -1,0 +1,12 @@
+LICENSE
+README.md
+requirements.txt
+setup.py
+./ttsdg/__init__.py
+ttsdg/__init__.py
+ttsdg/ttsdg.py
+ttsdg.egg-info/PKG-INFO
+ttsdg.egg-info/SOURCES.txt
+ttsdg.egg-info/dependency_links.txt
+ttsdg.egg-info/requires.txt
+ttsdg.egg-info/top_level.txt
