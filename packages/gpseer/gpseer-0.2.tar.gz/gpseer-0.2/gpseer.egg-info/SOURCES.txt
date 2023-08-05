@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+gpseer/__init__.py
+gpseer/__version__.py
+gpseer/cross_validate.py
+gpseer/fetch_example.py
+gpseer/main.py
+gpseer/maximum_likelihood.py
+gpseer/plot.py
+gpseer/utils.py
+gpseer.egg-info/PKG-INFO
+gpseer.egg-info/SOURCES.txt
+gpseer.egg-info/dependency_links.txt
+gpseer.egg-info/entry_points.txt
+gpseer.egg-info/requires.txt
+gpseer.egg-info/top_level.txt
