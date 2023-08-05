@@ -1,0 +1,55 @@
+name: CI
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.7]
+    # TODO shit. matrix is going to prevent from twine deployments because of version conflicts??
+    # add 'and' clause??
+
+    steps:
+    - uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    # fuck me. https://help.github.com/en/actions/reference/workflow-commands-for-github-actions#adding-a-system-path
+    - run: echo "::add-path::$HOME/.local/bin"
+
+    - uses: actions/checkout@v2
+      with:
+        submodules: recursive
+
+    # uncomment for SSH debugging
+    # - uses: mxschmitt/action-tmate@v2
+
+    # TODO extract in a script
+    - run: pip3 install --user tox && tox
+
+    # TODO build it on this step??
+    # use needs?
+
+    - name: 'release to test pypi'
+      # always deploy merged master to test pypi
+      if: github.event.ref == 'refs/heads/master'
+      env:
+        TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD_TEST }}
+      run: |
+        pip3 install wheel twine
+        scripts/release --test
+
+    - name: 'release to pypi'
+      # always deploy tags to release pypi
+      # TODO filter release tags only?
+      if: startsWith(github.event.ref, 'refs/tags')
+      env:
+        TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
+      run: |
+        pip3 install wheel twine
+        scripts/release
+
+# TODO add a link to pymplate repo
+# todo generate mypy coverage artifacts?

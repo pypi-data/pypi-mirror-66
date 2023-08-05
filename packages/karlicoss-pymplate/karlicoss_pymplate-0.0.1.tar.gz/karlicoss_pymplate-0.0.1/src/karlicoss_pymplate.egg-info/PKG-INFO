@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: karlicoss-pymplate
+Version: 0.0.1
+Summary: TODO
+Home-page: https://github.com/TODO
+Author: TODO
+Author-email: todo@todo.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: testing
+Provides-Extra: linting

@@ -1,0 +1,13 @@
+.gitignore
+README.org
+setup.py
+tox.ini
+.github/workflows/main.yml
+scripts/release
+src/karlicoss_pymplate/__init__.py
+src/karlicoss_pymplate/py.typed
+src/karlicoss_pymplate.egg-info/PKG-INFO
+src/karlicoss_pymplate.egg-info/SOURCES.txt
+src/karlicoss_pymplate.egg-info/dependency_links.txt
+src/karlicoss_pymplate.egg-info/requires.txt
+src/karlicoss_pymplate.egg-info/top_level.txt
