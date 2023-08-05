@@ -1,0 +1,13 @@
+bdshare/__init__.py,sha256=dYs4JJDkFG77ojySa2HhHTm37ubBUH2PX2FC5AYv3qE,218
+bdshare/stock/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bdshare/stock/market.py,sha256=_AUhr6KEWpBHTCCGadwOEJ4gOtepawejfIeMVXtHWQ4,2134
+bdshare/stock/news.py,sha256=GVH3wEGaEgn9BYyTcUy8Rga9H1RUQ_HLBB5HNT2oIP4,1922
+bdshare/stock/trading.py,sha256=459vFXT119QdPW8oxb-ndtgkI48aSnO-aXJi9BrgV5A,4675
+bdshare/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bdshare/util/store.py,sha256=QVHYNORC8RGB_dqkRF9Cr1qFY7V2MrQ8m0QTUJPzknw,1023
+bdshare/util/vars.py,sha256=ZM0ClLQcSTDiDk6LaAtsE3AadZmQIt6sJngT70aaxW0,417
+bdshare-0.1.0.dist-info/LICENSE,sha256=AQpprowLbV9GfKzg2gKWiNoUzZ3fX30WevwHV3XibZ4,1090
+bdshare-0.1.0.dist-info/METADATA,sha256=V-iBa6gj8-qRdTAZQOJ4BY5G_jBTGXsUX3XfqCH3RGc,3020
+bdshare-0.1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+bdshare-0.1.0.dist-info/top_level.txt,sha256=sECRw7oedNEnPtSxhL8Uf-m7mkY_E3nse8dbA4-bjPo,8
+bdshare-0.1.0.dist-info/RECORD,,
