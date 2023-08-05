@@ -1,0 +1,1 @@
+This library is offering an abstraction to access tomography data from various file format (.edf, .hdf5)
