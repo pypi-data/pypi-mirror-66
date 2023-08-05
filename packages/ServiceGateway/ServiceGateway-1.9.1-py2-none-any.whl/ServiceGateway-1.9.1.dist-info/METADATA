@@ -1,0 +1,177 @@
+Metadata-Version: 2.1
+Name: ServiceGateway
+Version: 1.9.1
+Summary: This package offers a HTTP REST API to a distributed service queue Service Gateway (SG).
+Home-page: http://www.crim.ca
+Author: osterrfr@crim.ca
+Author-email: vesta-support@crim.ca
+License: copyright CRIM 2015
+Keywords: CANARIE,LoadBalancing,Services
+Platform: linux-x86_64
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Requires-Dist: python-novaclient (==2.23.2)
+Requires-Dist: VestaRestPackage (==1.9.3)
+
+.. _readme:
+
+NEP-143-2 Service Gateway
+=========================
+
+This package offers a HTTP REST API to a distributed service queue Service
+Gateway (SG). 
+
+Overview
+--------
+
+It's intended use is for the exploitation of services on the CANARIE network
+whose services are CPU intensive and which would benefit from a dynamic
+horizontal scaling approach to provide reasonable processing delays for the
+REST client and better reactivity of the interface itself.
+
+The different functions offered by this code base are the following: 
+
+* Provide a unified CANARIE REST interface for a collection of given services
+  on a given infrastructure.
+
+* Provide a gateway to a queue-based distributed processing framework based on
+  AMQP and Celery
+
+  * A collection of utilities to aid in adding new worker types to the
+    processing queues.
+  * Implements a standard messaging scheme for workers / controller.
+  * Passes arbitrary arguments onwards to the selected worker.
+
+* Provide an asynchronous API to query the advancement of long duration
+  tasks.
+
+  * Exposes methods to communicate progress [0-100] to the REST front-end.
+
+* Provides methods to evaluate infrastructure needs.
+
+The documentation for this project can be found `here
+<http://vesta.crim.ca/docs/sg/latest/>`_ .
+
+
+
+History
+=======
+
+1.9.1
+-----
+
+* Added the possibility to store all required files in service gateway temporarily
+
+1.8.6
+-----
+
+* Updated VestaRestPackage to 1.9.3
+
+1.8.5
+-----
+
+* Updated VestaRestPackage to 1.9.2
+
+1.8.4
+-----
+
+* Updated VestaRestPackage to 1.9.1 with MongoDB support.
+
+1.8.3
+-----
+
+* Fix handling of worker exceptions encoded in UTF-8.
+
+1.8.2
+-----
+
+* Configuration directive no_params_needed is now optionnal.
+
+1.8.1
+-----
+
+* Fix handling of case where JSON is submitted and no_params_needed = False.
+
+1.8.0
+-----
+
+* Can use a JSON body subitted to the process route.
+* Configuration for a service can contain a no_parameter directive.
+* Fixes to error handling for certain types of exceptions.  
+
+1.7.6
+-----
+
+* Can use a task name a number of times on different queues.
+
+1.7.3
+-----
+
+* Fix version declaration when called by WSGI.
+
+1.7.2
+-----
+
+* Fix bug in arbitrary parameter use.
+
+1.7.0
+-----
+
+* Arbitrary arguments which are unknown are passed onwards to the worker through the "misc" sub-structure in JSON.
+
+1.6.0
+-----
+
+* First packaged release
+* Deployment configuration factored out of package
+
+
+1.5.5
+-----
+
+* HTTP Authorization mechanism with JWT sent through HEADER on annotation requests.
+* Redirect to documentation pages which are to be statically hosted elsewhere
+* Can handle extra document specification in URL arguments (\*_url or storage\_\*_id)
+
+
+1.5.4
+-----
+
+* Add a ./service/. route to reflect CANARIE API requirements.
+
+
+1.5.3
+-----
+
+* Use a version of transition 1.1.0 and faceanalysis 1.0.0 services that
+    conform to the JSON-lD scheme.
+
+1.5.0
+-----
+
+* Error handling is completed
+* Uniform error codes
+* More logs
+* Normalise some fields in the result structure
+
+1.4.0
+-----
+
+* Support of storage_doc_id replacing the full URL 
+* Queue will expires in 2 hours by default: Add a Status of EXPIRED when a queue is no longer available
+* Complete the annotations storage for a given ann_doc_id
+* Task UUIDs are stored using a method that supports concurrency
+
+1.3.0
+-----
+
+* Support ann_doc_id argument.
+* New versioning scheme.
+
+1.1.0
+-----
+
+* Add a cancel function to stop a running task.
+
+
