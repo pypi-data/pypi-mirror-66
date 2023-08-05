@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: stepwise_mol_bio
+Version: 1.0.0
+Summary: Protocols relating to molecular biology, e.g. PCR.
+Home-page: https://github.com/kalekundert/stepwise_mol_bio
+License: UNKNOWN
+Author: Kale Kundert
+Author-email: kale@thekunderts.net
+Requires-Python: ~=3.8
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Project-URL: Bug Tracker, https://github.com/kalekundert/stepwise_mol_bio/issues
+Project-URL: Continuous Integration, https://travis-ci.org/kalekundert/stepwise_mol_bio
+Project-URL: Documentation, https://stepwise_mol_bio.readthedocs.io/en/latest/
+Project-URL: Test Coverage, https://coveralls.io/github/kalekundert/stepwise_mol_bio
+Project-URL: Version Control, https://github.com/kalekundert/stepwise_mol_bio
