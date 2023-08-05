@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: morphr
+Version: 0.1.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Thomas Oberbichler
+Author-email: thomas.oberbichler@tum.de
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: anurbs
+Requires-Dist: colorama
+Requires-Dist: eqlib
+Requires-Dist: hyperjet
+Requires-Dist: meshio
+Requires-Dist: numpy
+Requires-Dist: pydantic
+
+UNKNOWN
+
+
