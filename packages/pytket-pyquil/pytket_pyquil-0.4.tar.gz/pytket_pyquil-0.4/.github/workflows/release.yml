@@ -1,0 +1,54 @@
+name: Release
+on:
+  release:
+    types:
+      - created
+      - edited
+jobs:
+  build_test_deploy:
+    name: Build, test and deploy
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos]
+        python-version: [3.6, 3.7, 3.8]
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: '0'
+    - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install prerequisites
+      env:
+        FURY_AUTH: ${{ secrets.FURY_AUTH }}
+      run: pip install --pre -r requirements.txt
+    - name: Make sdist
+      run:
+        python setup.py sdist
+    - name: Install from sdist
+      run: for sdist in dist/*.tar.gz ; do pip install $sdist ; done
+    - name: Pull docker images
+      if: runner.os == 'Linux'
+      run: |
+        sudo apt-get update
+        sudo apt-get install docker
+        docker pull rigetti/quilc
+        docker pull rigetti/qvm
+    - name: Run tests
+      run: |
+        cd tests
+        pytest --doctest-modules --junitxml=${GITHUB_WORKSPACE}/junit/test-results-${{ runner.os }}-${{ matrix.python-version }}.xml
+    - name: Upload test results
+      # Run this step even when there are test failures
+      if: always()
+      uses: actions/upload-artifact@master
+      with:
+        name: pytest-results-${{ runner.os }}-${{ matrix.python-version }}
+        path: junit/test-results-${{ runner.os }}-${{ matrix.python-version }}.xml
+    - name: Deploy to Gemfury
+      env:
+        FURY_PUSH: ${{ secrets.FURY_PUSH }}
+      run: for sdist in dist/*.tar.gz ; do curl -F package=@"$sdist" https://${FURY_PUSH}@push.fury.io/cqcl/ ; done

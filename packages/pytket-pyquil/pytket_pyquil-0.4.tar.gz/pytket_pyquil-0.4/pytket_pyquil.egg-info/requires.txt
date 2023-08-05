@@ -1,0 +1,2 @@
+pytket~=0.5
+pyquil~=2.16
