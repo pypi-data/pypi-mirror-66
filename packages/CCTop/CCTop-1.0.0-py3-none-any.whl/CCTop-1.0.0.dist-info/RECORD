@@ -1,0 +1,15 @@
+cctop/CCTop.py,sha256=7pr1J-hLOCaxgi9H94d49ambDc5nKqs1aW0GniL9MT8,19314
+cctop/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cctop/bedInterval.py,sha256=joj2kxOBWhEWAzUSmdKfdASwlOtHjvxoAdqbgBTSW2U,3364
+cctop/gff2bedFiles.py,sha256=M2CKiE93PMZL4f12k6YAk4gQYalZxvhKdhbnNMc6cgU,5835
+cctop/offTarget.py,sha256=ASb5osZ2_onHfkwaDg1FiOhhVzpqnBcshobs9l89N7I,4287
+cctop/pam.py,sha256=jXUBH8phCxRGPtTjTYMfVHTXNNoxTEY--b0nlNzzZM0,9758
+cctop/scoreCRISPRater.py,sha256=NJtnHOEfDZLohK8YiKMXNh-wU2AdJdd2nqMK_Pjya_8,1061
+cctop/sequenceMethods.py,sha256=qG2MCEFH281NMDepNwRkDbjFsa0Cg4liclLs_BybMcw,854
+cctop/sgRNAbindingSites.py,sha256=1bE9XL4NKisNWTX83ERWfK9T6WHGPhhWLnyBriIZnKI,6290
+CCTop-1.0.0.dist-info/LICENSE,sha256=rLaZC7H_K2wXydne3IhTpgWVk4dxt05fqZG7GKshMCc,1081
+CCTop-1.0.0.dist-info/METADATA,sha256=acHHnTruyrZ1o12ObAqrR164eaBb6orfLRRmKR1eqOA,7372
+CCTop-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+CCTop-1.0.0.dist-info/entry_points.txt,sha256=cxa3nPbu451i3JKES5fwHrzlEj6dwqPknqvMLYjAGZM,83
+CCTop-1.0.0.dist-info/top_level.txt,sha256=5pY2x2piE4MOu7Xt18P8f9BKw6EOSWr4zGRsuONV8LQ,6
+CCTop-1.0.0.dist-info/RECORD,,
