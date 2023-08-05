@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ffcharlietest
+Version: 0.4
+Summary: Service agnostic featureflag client
+Home-page: https://github.com/tmaslen/featureflagclient-python
+Author: Tom Maslen
+Author-email: tom_maslen@hotmail.com
+License: UNKNOWN
+Keywords: feature flag,feature toggle
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# ffclient-python-test
+
+
