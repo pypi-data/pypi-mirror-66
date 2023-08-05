@@ -1,0 +1,7 @@
+README.md
+setup.py
+pylibrespot_java/__init__.py
+pylibrespot_java.egg-info/PKG-INFO
+pylibrespot_java.egg-info/SOURCES.txt
+pylibrespot_java.egg-info/dependency_links.txt
+pylibrespot_java.egg-info/top_level.txt
