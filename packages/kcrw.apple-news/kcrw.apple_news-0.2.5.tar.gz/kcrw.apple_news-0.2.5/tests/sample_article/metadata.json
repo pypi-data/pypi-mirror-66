@@ -1,0 +1,13 @@
+{
+    "data": {
+        "isCandidateToBeFeatured": "false",
+        "isSponsored": true,
+        "isPreview": true,
+        "maturityRating": null,
+        "accessoryText": "by John Appleseed",
+        "targetTerritoryCountryCodes": ["US"],
+        "links": {
+            "sections": []
+        }
+    }
+}
