@@ -1,0 +1,7 @@
+# Base Configuration file for plottwist-libs-pyblish
+
+# Defines lib name
+name: PlotTwist Pyblish
+
+# Unique ID for the tool
+id: plottwist-libs-pyblish

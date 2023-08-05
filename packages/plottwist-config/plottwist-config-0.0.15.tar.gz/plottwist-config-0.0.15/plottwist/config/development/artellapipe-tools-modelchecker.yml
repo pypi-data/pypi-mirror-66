@@ -1,0 +1,78 @@
+# Base Configuration file for artellapipe-tools-modelchecker for Plot Twist
+
+# Defines icon of the tool
+icon: modelchecker
+
+# URL to tool documentation web page
+help_url: https://plot-twist-short-film.github.io/plottwist-docs/pipeline/pipeline/tools/modelchecker/
+
+# Defines whether this needs Kitsu data to work or not
+kitsu_login: False
+
+pyblish_plugins:
+  CollectPlotTwistGeometry: {}
+  CollectPlotTwistProxyMesh: {}
+  ValidateStudentLicense:
+    optional: False
+  ValidateDisplayLayers:
+    optional: False
+  ValidateNoShadersInScene:
+    optional: False
+  ValidateCleanUnknownNodes:
+    optional: False
+  ValidateCleanUnusedPlugins:
+    optional: False
+  ValidateCleanTurtleNodes:
+    optional: False
+  ValidateCleanGarbageNodes:
+    optional: False
+  ValidateLamina:
+    optional: False
+  ValidateNGons:
+    optional: False
+  ValidateNonManifoldEdges:
+    optional: False
+  ValidateOpenEdges:
+    optional: False
+  ValidateStarLike:
+    optional: False
+  ValidateTriangles:
+    optional: False
+  ValidateNormals:
+    optional: False
+  ValidateZeroAreaFaces:
+    optional: False
+  ValidateZeroLengthEdges:
+    optional: False
+  ValidateCleanHistory:
+    optional: False
+  ValidateGeometryDisplayLayers:
+    optional: False
+  ValidateGeometrySmoothPreview:
+    optional: False
+  ValidateEmptyGroups:
+    optional: False
+  ValidateGeometryShaders:
+    optional: False
+  ValidateParentGeometry:
+    optional: False
+  ValidateUncenteredPivots:
+    optional: False
+  ValidateUnfrozenTransforms:
+    optional: False
+  ValidatePlotTwistModelingHierarchy:
+    optional: False
+  ValidatePlotTwistProxyMesh:
+    optional: False
+  ValidateGeometryVisibility:
+    optinoal: False
+  ValidateHidedNodes:
+    optional: False
+  ValidatePlotTwistModelingNomenclature:
+    optional: False
+  ValidatePlotTwistProxyMeshNomenclature:
+    optional: False
+  RemoveUnusedReferences:
+    optional: False
+  RemoveUnusedDeformers:
+    optional: False

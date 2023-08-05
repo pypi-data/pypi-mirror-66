@@ -1,0 +1,14 @@
+# Base Configuration for Pyblish Plugins for PlotTwist
+
+pyblish_modules:
+  - artellapipe.libs.pyblish
+  - plottwist.libs.pyblish
+
+plugins:
+  # Validators
+  ValidateStudentLicense:
+    hosts: ['maya']
+    must_pass: True
+  CollectComment:
+    hosts: ['maya']
+    must_pass: True

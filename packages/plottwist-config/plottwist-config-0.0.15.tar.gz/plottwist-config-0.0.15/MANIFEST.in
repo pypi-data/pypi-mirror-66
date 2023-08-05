@@ -1,0 +1,4 @@
+recursive-include plottwist/config/* *.json
+recursive-include plottwist/config/* *.yml
+include versioneer.py
+include plottwist/config/_version.py
