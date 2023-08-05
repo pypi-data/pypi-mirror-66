@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+say13.egg-info/PKG-INFO
+say13.egg-info/SOURCES.txt
+say13.egg-info/dependency_links.txt
+say13.egg-info/top_level.txt
+say_something/SETInterfaceCS.dll
+say_something/__init__.py
+say_something/say_hello.py
