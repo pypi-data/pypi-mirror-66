@@ -1,0 +1,17 @@
+versup/__init__.py,sha256=d4QHYmS_30j0hPN8NmNPnQ_Z0TphDRbu4MtQj9cT9e8,22
+versup/__main__.py,sha256=Q7TW4whsym5nE12BcOpWPfghQafEubeijYVOrFf9ZY8,112
+versup/changelog.py,sha256=8mzItDyMJ320IpvhFqj3a56I0AVXxE9l-Bf9iNHs9aE,2557
+versup/command_line.py,sha256=cgWoGa3rM_KX4bf0EaZOAk3GTviBZ7M08hmH1tVXbII,7789
+versup/conf_reader.py,sha256=p7aOIfjnTqA8dgx4RwW4KTwCBZRVx3tpyaAVRibfLlU,1988
+versup/custom_cmd_group.py,sha256=yWfxbu6GPwuBK3gWiKg3dh-MDs6sXDG7cj2sfjRvbIQ,1019
+versup/default_conf.py,sha256=R0tOkNeZjk6NfN7au-7LXU_bie4ybRgxaCNU7cCyuII,2323
+versup/file_updater.py,sha256=Cy5nlCo3SYzxivprt0qh9NQfc-Yc1ztXowQA_61xJnA,2763
+versup/gitops.py,sha256=YRQletEmFbz1FtEXm-1wIOFYhbakUZeGwyXeKwtdLgo,2757
+versup/printer.py,sha256=Co-MMNc9SvB30i_F7LD0ouNO6qE2KxFmnKvcxjKU5tE,345
+versup/script_runner.py,sha256=8t0oA6sHN_B3WpeCwRWOvISu_HNhgt16PFiWwAdipuE,1432
+versup/template.py,sha256=KYdpA6eRdGjuQGtwC8gGhCiJP_e1ZUqTcu68pNWNkv4,573
+versup-1.0.1.dist-info/entry_points.txt,sha256=ir4HK1IcCsYtr5Q5TABFbEgJB9LsbZdLCS9HaoV6yz8,47
+versup-1.0.1.dist-info/LICENSE.txt,sha256=JT7RDyQv7s892hSxImf2LC5fAfDhGahN7C0kcTW8TmY,1071
+versup-1.0.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+versup-1.0.1.dist-info/METADATA,sha256=6RVDcixwYTnG7188KpuL7sREB_aHzmOpwAimuyM4C70,6466
+versup-1.0.1.dist-info/RECORD,,
