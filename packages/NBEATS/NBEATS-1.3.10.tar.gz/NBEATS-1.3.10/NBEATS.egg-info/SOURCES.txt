@@ -1,0 +1,9 @@
+README.md
+setup.py
+NBEATS/NBEATS.py
+NBEATS/__init__.py
+NBEATS.egg-info/PKG-INFO
+NBEATS.egg-info/SOURCES.txt
+NBEATS.egg-info/dependency_links.txt
+NBEATS.egg-info/requires.txt
+NBEATS.egg-info/top_level.txt
