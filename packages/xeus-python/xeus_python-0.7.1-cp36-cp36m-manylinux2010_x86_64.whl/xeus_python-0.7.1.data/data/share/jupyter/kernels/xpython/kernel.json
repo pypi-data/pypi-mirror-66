@@ -1,0 +1,11 @@
+{
+  "display_name": "xpython",
+  "argv": [
+      "python3.6",
+      "-m",
+      "xpython_launcher",
+      "-f",
+      "{connection_file}"
+  ],
+  "language": "python"
+}
