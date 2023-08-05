@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: openpy
+Version: 0.0.1
+Summary: Open files for humans
+Home-page: https://github.com/orenovadia/openpy
+Author: Oren Ovadia
+Author-email: orenovad@gmail.com
+License: MIT
+Download-URL: https://github.com/orenovadia/openpy/tarball/0.0.1
+Description: # openpy
+        
+        author: Oren Ovadia
+        
+        ## Overview
+        
+        Just open files
+        
+        Not on pypi so install:
+        
+        ```
+        pip install git+git://github.com/orenovadia/openpy.git#egg=master
+        ```
+        
+        TODO: Examples
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
