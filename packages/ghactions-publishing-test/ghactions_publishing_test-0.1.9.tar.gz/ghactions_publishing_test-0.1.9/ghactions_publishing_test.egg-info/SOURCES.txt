@@ -1,0 +1,8 @@
+README.md
+setup.py
+ghactions_publishing_test/__init__.py
+ghactions_publishing_test/__version__.py
+ghactions_publishing_test.egg-info/PKG-INFO
+ghactions_publishing_test.egg-info/SOURCES.txt
+ghactions_publishing_test.egg-info/dependency_links.txt
+ghactions_publishing_test.egg-info/top_level.txt
