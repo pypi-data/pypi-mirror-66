@@ -1,0 +1,12 @@
+README.md
+setup.py
+plpy_wrapper/__init__.py
+plpy_wrapper/exceptions.py
+plpy_wrapper/plpy_wrappers.py
+plpy_wrapper/trigger.py
+plpy_wrapper/utilities.py
+plpy_wrapper.egg-info/PKG-INFO
+plpy_wrapper.egg-info/SOURCES.txt
+plpy_wrapper.egg-info/dependency_links.txt
+plpy_wrapper.egg-info/requires.txt
+plpy_wrapper.egg-info/top_level.txt

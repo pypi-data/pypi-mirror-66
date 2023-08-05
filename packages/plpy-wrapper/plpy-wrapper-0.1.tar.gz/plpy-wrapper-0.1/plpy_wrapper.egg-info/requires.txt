@@ -1,0 +1,9 @@
+
+[docs]
+sphinx
+sphinxcontrib-napoleon
+sphinx-autodoc-typehints
+sphinx_rtd_theme
+
+[pypipublish]
+wheel
