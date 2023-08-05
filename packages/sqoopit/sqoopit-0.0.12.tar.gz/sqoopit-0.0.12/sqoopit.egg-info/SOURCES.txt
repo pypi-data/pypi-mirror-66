@@ -1,0 +1,12 @@
+README.md
+setup.py
+sqoopit/MapredJob.py
+sqoopit/SqoopImport.py
+sqoopit/SqoopJob.py
+sqoopit/__init__.py
+sqoopit.egg-info/PKG-INFO
+sqoopit.egg-info/SOURCES.txt
+sqoopit.egg-info/dependency_links.txt
+sqoopit.egg-info/top_level.txt
+unittests/__init__.py
+unittests/unintary_tests.py
