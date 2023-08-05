@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+dsp_py/BasicSignal.py
+dsp_py/Fourier.py
+dsp_py/Operation.py
+dsp_py/Utilisation.py
+dsp_py/Z.py
+dsp_py/__init__.py
+dsp_py.egg-info/PKG-INFO
+dsp_py.egg-info/SOURCES.txt
+dsp_py.egg-info/dependency_links.txt
+dsp_py.egg-info/not-zip-safe
+dsp_py.egg-info/requires.txt
+dsp_py.egg-info/top_level.txt
