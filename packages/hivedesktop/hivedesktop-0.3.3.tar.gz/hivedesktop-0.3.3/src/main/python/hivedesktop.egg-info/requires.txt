@@ -1,0 +1,14 @@
+PyQt5==5.14.2
+PyQtWebEngine==5.14
+markdown
+Pygments
+mdx_smartypants
+dataset
+deepdish
+jinja2
+markupsafe
+pymdown-extensions
+beem
+cryptography
+pycryptodome
+python-dateutil
