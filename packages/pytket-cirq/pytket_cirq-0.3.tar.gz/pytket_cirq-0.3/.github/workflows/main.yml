@@ -1,0 +1,51 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+      - develop
+jobs:
+  linux:
+    name: Build and test (Linux)
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: [3.6]
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: '0'
+    - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install pytket_cirq
+      env:
+        FURY_AUTH: ${{ secrets.FURY_AUTH }}
+      run: |
+        pip install --pre -r requirements.txt
+        pip install .
+    - name: Run tests
+      run: |
+        cd tests
+        pytest --doctest-modules --junitxml=${GITHUB_WORKSPACE}/junit/test-results-${{ runner.os }}-${{ matrix.python-version }}.xml
+    - name: Upload test results
+      # Run this step even when there are test failures
+      if: always()
+      uses: actions/upload-artifact@master
+      with:
+        name: pytest-results-${{ runner.os }}-${{ matrix.python-version }}
+        path: junit/test-results-${{ runner.os }}-${{ matrix.python-version }}.xml
+    - name: Deploy to Gemfury
+      if: github.event_name == 'push'
+      env:
+        FURY_PUSH: ${{ secrets.FURY_PUSH }}
+      run: |
+        python setup.py sdist
+        for sdist in dist/*.tar.gz ; do curl -F package=@"$sdist" https://${FURY_PUSH}@push.fury.io/cqcl/ ; done
