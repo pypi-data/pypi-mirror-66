@@ -1,0 +1,12 @@
+setuptools>=38.3.0
+mbstrdecoder<2,>=1.0.0
+
+[datetime]
+python-dateutil<3.0.0,>=2.8.0
+pytz>=2018.9
+
+[test]
+pytest
+termcolor
+python-dateutil<3.0.0,>=2.8.0
+pytz>=2018.9
