@@ -1,0 +1,6 @@
+trio
+pyln.client
+secp256k1
+hkdf
+coincurve
+eciespy
