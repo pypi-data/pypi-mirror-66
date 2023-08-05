@@ -1,0 +1,6 @@
+setup.py
+data_primitives.egg-info/PKG-INFO
+data_primitives.egg-info/SOURCES.txt
+data_primitives.egg-info/dependency_links.txt
+data_primitives.egg-info/not-zip-safe
+data_primitives.egg-info/top_level.txt
