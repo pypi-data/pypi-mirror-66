@@ -1,0 +1,14 @@
+README.md
+setup.py
+inline_importer/__init__.py
+inline_importer/__main__.py
+inline_importer/_version.py
+inline_importer/builder.py
+inline_importer/e.py
+inline_importer/importer.py
+inline_importer/inliner.py
+inline_importer.egg-info/PKG-INFO
+inline_importer.egg-info/SOURCES.txt
+inline_importer.egg-info/dependency_links.txt
+inline_importer.egg-info/entry_points.txt
+inline_importer.egg-info/top_level.txt
