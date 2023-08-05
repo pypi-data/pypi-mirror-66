@@ -1,0 +1,11 @@
+requests
+setuptools
+qrcode
+Pillow
+natsort
+opencv-python
+aircv
+pyautogui
+appium-python-client
+pytesseract
+jieba
