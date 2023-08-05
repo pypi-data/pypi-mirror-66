@@ -1,0 +1,10 @@
+numpy
+scipy
+networkx
+cached_property
+matplotlib
+skimage
+
+[testing]
+pytest
+pytest-cov
