@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: topsis_by_siddhant
+Version: 1.0.0
+Summary: A package for Topsis technique
+Home-page: UNKNOWN
+Author: Siddhant Khurana
+Author-email: siddhantkhurana10@gmail.com
+License: UNKNOWN
+Description: This package is used to implement the topsis technique for multi-criteria decision making.A function called rank_data will accept three parameters:
+            1)Filename which contains the models and the data for each model
+            2)A list of weights
+            3)A list of impacts
+        You can install this package using pip install topsis_by_siddhant
+            
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
