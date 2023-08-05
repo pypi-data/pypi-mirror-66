@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+Pipfile
+Pipfile.lock
+README.md
+VERSION
+setup.cfg
+setup.py
+src/enchantress/__init__.py
+src/enchantress.egg-info/PKG-INFO
+src/enchantress.egg-info/SOURCES.txt
+src/enchantress.egg-info/dependency_links.txt
+src/enchantress.egg-info/requires.txt
+src/enchantress.egg-info/top_level.txt
+tests/test_fields.py
