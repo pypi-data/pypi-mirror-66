@@ -1,0 +1,13 @@
+altair
+numpy-financial
+pandas
+pandas-market-calendars
+statsmodels
+xlsxwriter
+
+[dev]
+vega_datasets
+pytest
+ipython
+pytest-cov
+pipenv-setup
