@@ -1,0 +1,1 @@
+https://github.com/ajinabraham/sgrep.git#egg=semgrep&subdirectory=sgrep_lint
