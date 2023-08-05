@@ -1,0 +1,2 @@
+include mds/static/*
+include mds/views/*

@@ -1,0 +1,6 @@
+bottle
+mistune
+
+[dev]
+pytest
+neovim
