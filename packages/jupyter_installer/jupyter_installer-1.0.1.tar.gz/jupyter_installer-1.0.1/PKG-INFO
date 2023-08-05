@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: jupyter_installer
+Version: 1.0.1
+Summary: finds all import in jupyter notebook, check if they are alredy present if not then install it.
+Home-page: https://github.com/nalangekrushna/import_installer_jupyter_notebook
+Author: krushnakumar nalange
+Author-email: nalangekrushna@gmail.com

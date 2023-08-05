@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit_core >=2,<3"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "jupyter_installer"
+author = "krushnakumar nalange"
+author-email = "nalangekrushna@gmail.com"
+home-page = "https://github.com/nalangekrushna/import_installer_jupyter_notebook"
+classifiers = ["License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"]
+
