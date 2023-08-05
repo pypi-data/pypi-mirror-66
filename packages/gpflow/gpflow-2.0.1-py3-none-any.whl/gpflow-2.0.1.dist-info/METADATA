@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: gpflow
+Version: 2.0.1
+Summary: Gaussian process methods in TensorFlow
+Home-page: http://github.com/GPflow/GPflow
+Author: James Hensman, Alex Matthews
+Author-email: james.hensman@gmail.com
+License: Apache License 2.0
+Keywords: machine-learning gaussian-processes kernels tensorflow
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Requires-Dist: numpy (>=1.10.0)
+Requires-Dist: scipy (>=0.18.0)
+Requires-Dist: multipledispatch (>=0.6)
+Requires-Dist: tabulate
+Requires-Dist: dataclasses
+Requires-Dist: tensorflow-probability (>=0.9)
+Requires-Dist: tensorflow
+Requires-Dist: gast (<0.3,>=0.2.2)
+Provides-Extra: imagetotensorboard
+Requires-Dist: matplotlib; extra == 'imagetotensorboard'
+Provides-Extra: tensorflow_with_gpu
+Requires-Dist: tensorflow-gpu; extra == 'tensorflow_with_gpu'
+
+UNKNOWN
+
+
