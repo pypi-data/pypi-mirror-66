@@ -1,0 +1,4 @@
+include *.png
+include *.json
+include QcureUi/beautifyUi *.png
+recursive-include QcureUi *.png *.json
