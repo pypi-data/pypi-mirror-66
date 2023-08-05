@@ -1,0 +1,9 @@
+pyasn1
+klein<=17.10.0
+jsonschema
+treq<=17.8.0
+Twisted<18.0.0,>=17.9.0
+vumi>=0.6.18
+confmodel
+PyYAML
+raven<7.0.0,>=6.0.0
