@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+requirements.txt
+setup.py
+.github/workflows/main.yml
+.github/workflows/release.yml
+pytket/pyzx/__init__.py
+pytket/pyzx/pyzx_convert.py
+pytket_pyzx.egg-info/PKG-INFO
+pytket_pyzx.egg-info/SOURCES.txt
+pytket_pyzx.egg-info/dependency_links.txt
+pytket_pyzx.egg-info/not-zip-safe
+pytket_pyzx.egg-info/requires.txt
+pytket_pyzx.egg-info/top_level.txt
+tests/pyzx_convert_test.py
