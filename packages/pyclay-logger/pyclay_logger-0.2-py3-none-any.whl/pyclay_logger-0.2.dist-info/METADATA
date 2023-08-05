@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pyclay-logger
+Version: 0.2
+Summary: logger library
+Home-page: https://github.com/cm107/logger
+Author: Clayton Mork
+Author-email: mork.clayton3@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pylint (>=2.4.2)
+Requires-Dist: twine (>=3.1.1)
+
+# logger
+logger library
+
+## Installation
+### Install From Github
+```console
+pip install https://github.com/cm107/logger/archive/master.zip
+```
+
+### Install From Pypi
+```console
+pip install pyclay-logger
+```
+
