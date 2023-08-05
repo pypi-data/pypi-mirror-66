@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+sphinx2doxygen
+pep2google/__init__.py
+pep2google/parser.py
+sphinx2doxygen.egg-info/PKG-INFO
+sphinx2doxygen.egg-info/SOURCES.txt
+sphinx2doxygen.egg-info/dependency_links.txt
+sphinx2doxygen.egg-info/top_level.txt

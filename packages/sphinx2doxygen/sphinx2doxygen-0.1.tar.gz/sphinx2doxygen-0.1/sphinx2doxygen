@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+
+import argparse
+from pathlib import Path
+
+import pep2google
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(
+        description='Rewrites python documentation string code commenting from Sphinx to Doxygen format.')
+    parser.add_argument('-f', '--force', action='store_const', const=True, default=False,
+                        help='do not ask before overwriting files')
+    parser.add_argument('-i', '--input-dir', metavar='DIR', type=str, required=True,
+                        help='source code directory')
+    parser.add_argument('-o', '--output-dir', metavar='DIR', type=str, required=True,
+                        help='directory for the rewritten files')
+    parser.add_argument('-e', '--expression', metavar='expr', type=str, default='*.py',
+                        help='only process files that match the given expression (default: %(default)s)')
+    args = parser.parse_args()
+
+    output_dir = Path(args.output_dir).expanduser().absolute()
+    input_dir = Path(args.input_dir).expanduser().absolute()
+
+    if not input_dir.is_dir():
+        parser.error('Input dir path is invalid! ' + input_dir)
+
+    if not output_dir.parent.is_dir():
+        parser.error('Output dir path is invalid! ' + output_dir)
+
+    if output_dir.exists():
+        if not output_dir.is_dir():
+            parser.error('Output dir path is not a directory! ' + output_dir)
+    else:
+        output_dir.mkdir()
+
+    always_overwrite = False
+
+    for input_file in input_dir.rglob(args.expression):
+        output_file = output_dir / input_file.relative_to(input_dir)
+        output_file.parent.mkdir(parents=True, exist_ok=True)
+
+        if output_file.exists() and not always_overwrite and not args.force:
+            overwrite = True
+            answer_ok = False
+            while not answer_ok:
+                answer_ok = True
+                answer = input(str(output_file) + ' already exists.\nDo you want to overwrite? (Yes|No|All)   ')
+                if answer.lower() == 'yes' or answer.lower() == 'y':
+                    pass
+                elif answer.lower() == 'no' or answer.lower() == 'n':
+                    overwrite = False
+                elif answer.lower() == 'all' or answer.lower() == 'a':
+                    always_overwrite = True
+                else:
+                    print('Invalid input!\n')
+                    answer_ok = False
+
+            if not always_overwrite and not overwrite:
+                continue
+
+        with input_file.open(mode='r') as f:
+            content = f.read()
+
+        output = pep2google.parse_file_contets(content)
+
+        with output_file.open(mode='w') as f:
+            f.write(output)
