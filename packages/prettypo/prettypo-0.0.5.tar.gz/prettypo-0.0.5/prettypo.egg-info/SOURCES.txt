@@ -1,0 +1,9 @@
+README.md
+setup.py
+prettypo/PrettyPageObject.py
+prettypo/__init__.py
+prettypo.egg-info/PKG-INFO
+prettypo.egg-info/SOURCES.txt
+prettypo.egg-info/dependency_links.txt
+prettypo.egg-info/requires.txt
+prettypo.egg-info/top_level.txt
