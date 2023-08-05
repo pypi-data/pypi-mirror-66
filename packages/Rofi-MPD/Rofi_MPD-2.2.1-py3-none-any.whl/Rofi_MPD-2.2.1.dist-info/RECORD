@@ -1,0 +1,12 @@
+Rofi_MPD-2.2.1.data/scripts/rofi-mpd,sha256=RBuKe3D_4sLIWpOCdyFXUCjsnE3eG4T1cTYApmp07Uc,40
+rofi/__init__.py,sha256=Uoew8EM1YSiiV3LidCH2zbmtm9G5TdSewUlwt-5kkD4,19
+rofi/rofi.py,sha256=yaW7x1RKPZ2SK9GBV1rDhhRwiPpDTIYo48soDhZUkYQ,29719
+rofi_mpd/__init__.py,sha256=hTEjWKgK0aNVW8Z69NJoQ7DpMu7UfkxpzUg9f3rBmpQ,26
+rofi_mpd/config.py,sha256=VJUor1U_jZKyLsVVzFhYwy6-KJsVXTbflWutkMaOUMc,877
+rofi_mpd/date_parser.py,sha256=2YzCep0TMLrRCV-oSfLsQdTXwdwSdmYgH3O7wXbgB4s,1320
+rofi_mpd/rofi_mpd.py,sha256=2AF3_xELUhidGDKV9Pam9G_4ymgvz3sTxf5X6CtMHew,8642
+Rofi_MPD-2.2.1.dist-info/LICENSE,sha256=vNycr-N0mKRdtYToxtdNnbXEVOJzUDq4ZoW1CW6g7aA,1069
+Rofi_MPD-2.2.1.dist-info/METADATA,sha256=j-BVlaDz85wDiiYn3vXKybcMGvoUzpcX34k9_x_0qjI,338
+Rofi_MPD-2.2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+Rofi_MPD-2.2.1.dist-info/top_level.txt,sha256=V8uk2kTTlXUmzPC97Dn2SRTEhjg5B-86jHcoMKdEm_M,14
+Rofi_MPD-2.2.1.dist-info/RECORD,,
