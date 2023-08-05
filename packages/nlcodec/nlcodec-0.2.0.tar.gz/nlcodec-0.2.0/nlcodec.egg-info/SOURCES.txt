@@ -1,0 +1,15 @@
+README.md
+setup.py
+nlcodec/__init__.py
+nlcodec/__main__.py
+nlcodec/bpe.py
+nlcodec/codec.py
+nlcodec/dstruct.py
+nlcodec/qestim.py
+nlcodec/utils.py
+nlcodec.egg-info/PKG-INFO
+nlcodec.egg-info/SOURCES.txt
+nlcodec.egg-info/dependency_links.txt
+nlcodec.egg-info/entry_points.txt
+nlcodec.egg-info/requires.txt
+nlcodec.egg-info/top_level.txt
