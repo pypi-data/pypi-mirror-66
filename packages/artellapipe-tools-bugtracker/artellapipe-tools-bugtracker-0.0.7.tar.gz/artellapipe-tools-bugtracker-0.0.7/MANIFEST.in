@@ -1,0 +1,4 @@
+include artellapipe/tools/bugtracker/__logging__.ini
+recursive-include artellapipe/tools/bugtracker/resources/* *.*
+include versioneer.py
+include artellapipe/tools/bugtracker/_version.py
