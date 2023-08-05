@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: fakepkg
+Version: 0.1.0
+Summary: This is my great package!
+Home-page: http://github.com/bpabel
+License: UNKNOWN
+Author: Brendan Abel
+Author-email: 007brendan@gmail.com
+Classifier: License :: OSI Approved :: MIT License
