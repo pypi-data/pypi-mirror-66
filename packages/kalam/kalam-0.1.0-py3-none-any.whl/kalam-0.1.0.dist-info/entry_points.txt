@@ -1,0 +1,3 @@
+[console_scripts]
+kalam=kalam.console:main
+
