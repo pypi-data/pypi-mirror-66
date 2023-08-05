@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: alliteration
+Version: 0.0.1
+Summary: AI to boost your alliteration skills!
+Home-page: https://github.com/AgarwalPragy/alliteration
+Author: Pragy Agarwal
+Author-email: agar.pragy@gmail.com
+License: BSD
+Download-URL: https://github.com/AgarwalPragy/alliteration/tarball/0.0.1
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: sphinx
+Requires-Dist: sphinx-rtd-theme
+Requires-Dist: nose
+Requires-Dist: coverage
+Requires-Dist: pypi-publisher
+
+alliteration
+===============================
+
+version number: 0.0.1
+author: Pragy Agarwal
+
+Overview
+--------
+
+AI to boost your alliteration skills!
+
+Installation / Usage
+--------------------
+
+To install use pip:
+
+    $ pip install alliteration
+
+
+Or clone the repo:
+
+    $ git clone https://github.com/AgarwalPragy/alliteration.git
+    $ python setup.py install
+
+Contributing
+------------
+
+TBD
+
+Example
+-------
+
+TBD
+
