@@ -1,0 +1,3 @@
+[console_scripts]
+eyalev-python-hello=eyalev_python_hello.main:main
+
