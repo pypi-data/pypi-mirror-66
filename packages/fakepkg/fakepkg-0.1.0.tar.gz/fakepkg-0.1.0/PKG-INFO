@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: fakepkg
+Version: 0.1.0
+Summary: This is my great package!
+Home-page: http://github.com/bpabel
+Author: Brendan Abel
+Author-email: 007brendan@gmail.com

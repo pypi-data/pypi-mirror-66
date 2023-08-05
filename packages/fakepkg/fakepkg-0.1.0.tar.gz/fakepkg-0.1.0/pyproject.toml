@@ -1,0 +1,13 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "fakepkg"
+author = "Brendan Abel"
+author-email = "007brendan@gmail.com"
+home-page = "http://github.com/bpabel"
+classifiers = ["License :: OSI Approved :: MIT License"]
+
+[tool.flit.scripts]
+fakepkg = "fakepkg:main"
