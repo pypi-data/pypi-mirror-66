@@ -1,0 +1,16 @@
+LICENSE
+MAINTAINERS
+MANIFEST.in
+README.md
+README.rst
+requirements.txt
+setup.py
+pyfont/__init__.py
+pyfont/api.py
+pyfont/draw_by_html.py
+pyfont/font.py
+pyfont/html_to_image.py
+pyfont.egg-info/PKG-INFO
+pyfont.egg-info/SOURCES.txt
+pyfont.egg-info/dependency_links.txt
+pyfont.egg-info/top_level.txt
