@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: pysiaalarm
+Version: 0.1.3
+Summary: Python package for creating a client that talks with SIA-based alarm systems.
+Home-page: https://github.com/eavanvalkenburg/pysiaalarm
+Author: E.A. van Valkenburg
+Author-email: github@vanvalkenburg.eu
+License: mit
+Project-URL: Documentation, https://github.com/eavanvalkenburg/pysiaalarm
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/x-rst; charset=UTF-8
+Requires-Dist: pycrypto (>=2.6.1)
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+
+==========
+pysiaalarm
+==========
+
+
+Python package for creating a client that talks with SIA-based alarm systems.
+
+
+Description
+===========
+
+This package was created to talk with alarm systems using the SIA protocal, it was tested using a Ajax system, but should support all defined SIA codes.
+
+
+Config 
+==========
+
+The client takes these arguments:
+
+- host: if there is a specific host to talk to, otherwise use "" for any IP.
+- port: the tcp port your alarm system listens to.
+- account_id: the account id as 3-16 ASCII hex characters.
+- function: a function that will be called for every event that is handles, takes only a SIAEvent as parameter and does not pass back anything.
+- [optional] key: encryption key specified in your alarm system 16 ASCII characters
+
+
