@@ -1,0 +1,11 @@
+grpclib
+stringcase
+
+[:python_version < "3.7"]
+dataclasses
+backports-datetime-fromisoformat
+
+[compiler]
+black
+jinja2
+protobuf
