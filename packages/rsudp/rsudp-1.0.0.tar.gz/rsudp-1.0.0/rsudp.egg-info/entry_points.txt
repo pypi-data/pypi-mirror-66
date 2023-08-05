@@ -1,0 +1,5 @@
+[console_scripts]
+rs-client = rsudp.client:main
+rs-packetloss = rsudp.packetloss:main
+rs-test = rsudp.client:test
+
