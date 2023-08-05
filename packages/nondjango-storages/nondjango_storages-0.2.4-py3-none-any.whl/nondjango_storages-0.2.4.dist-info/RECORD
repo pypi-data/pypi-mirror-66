@@ -1,0 +1,10 @@
+nondjango/__init__.py,sha256=HlATdbFwuKrIq0jeYmHt71TrtyMbiAK16kG_KjHgJ7w,245
+nondjango/storages/__init__.py,sha256=VeAPLZQ5epfgRhAwQlSqQe16sqwOxlFZE3_LGYJa5oA,24
+nondjango/storages/files.py,sha256=htgBAqNbj_yNcNckyYarCAnle7i0jSNN2tWzVaMVlIg,2122
+nondjango/storages/storages.py,sha256=vVG28WDdPMwwwy8dr3ZosSyynhl3e5U3UjDeL9IGRTQ,15396
+nondjango/storages/utils.py,sha256=LhoeFHkw4PPjGDrURVNa2CLF7_1Po_HcUpwA3ifTE_o,1708
+nondjango_storages-0.2.4.dist-info/LICENSE,sha256=ieEKJ-VczfHpbzAARBk5cBwN-Qfu4_jjKLNpnH1JyAg,9161
+nondjango_storages-0.2.4.dist-info/LICENSE-DJANGO,sha256=yb-n9n5n3lZUlrGazT_7srg1c-yJnKrU-ntyiMgjrbs,1553
+nondjango_storages-0.2.4.dist-info/WHEEL,sha256=GLESb-AiO9TFjbXrEA7UrNl4dwWlkXoKZg6N6Vg0OJg,81
+nondjango_storages-0.2.4.dist-info/METADATA,sha256=H0HGp15BCusmTb0K2T4ro6edfMxBXdpwxOYxKuv--KE,7160
+nondjango_storages-0.2.4.dist-info/RECORD,,
