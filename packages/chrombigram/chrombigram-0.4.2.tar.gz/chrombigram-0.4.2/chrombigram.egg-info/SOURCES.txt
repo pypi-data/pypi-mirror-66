@@ -1,0 +1,13 @@
+README.md
+setup.py
+chrombigram/__init__.py
+chrombigram/__main__.py
+chrombigram/__version__.py
+chrombigram/chrombigram.py
+chrombigram/precomputed.py
+chrombigram/utilities.py
+chrombigram.egg-info/PKG-INFO
+chrombigram.egg-info/SOURCES.txt
+chrombigram.egg-info/dependency_links.txt
+chrombigram.egg-info/requires.txt
+chrombigram.egg-info/top_level.txt
