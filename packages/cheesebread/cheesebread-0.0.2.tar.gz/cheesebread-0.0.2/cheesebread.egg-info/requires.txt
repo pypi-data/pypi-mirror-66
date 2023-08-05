@@ -1,0 +1,7 @@
+aiofiles
+aiohttp
+boto3
+pandas>=0.24
+requests
+riprova
+tqdm
