@@ -1,0 +1,12 @@
+README.md
+setup.py
+yugiohdeck/__init__.py
+yugiohdeck/config.py
+yugiohdeck/core.py
+yugiohdeck/ygoprodeck.py
+yugiohdeck/ygoprodeck_dbstructure.py
+yugiohdeck_api.egg-info/PKG-INFO
+yugiohdeck_api.egg-info/SOURCES.txt
+yugiohdeck_api.egg-info/dependency_links.txt
+yugiohdeck_api.egg-info/requires.txt
+yugiohdeck_api.egg-info/top_level.txt
