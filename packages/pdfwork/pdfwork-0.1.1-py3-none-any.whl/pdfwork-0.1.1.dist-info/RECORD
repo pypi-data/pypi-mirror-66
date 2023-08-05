@@ -1,0 +1,9 @@
+pdfwork/__init__.py,sha256=zGU39ZwaRkNKxWLnAB7Zte9ZtfyfMEsBJp-bHUfQTyA,23
+pdfwork/actions.py,sha256=OJbGejsPqaMmLWR0uolNOhgM0g5AahOPW76qyC2Fm7M,6425
+pdfwork/cli.py,sha256=T0KeM9-kBrtUr5psOPSvZ25-EQDXndBbADKt_2H2xuA,3044
+pdfwork/model.py,sha256=b4FPCQDu5GZlLhfiIItA6lhnYVI6MFdZ2ijfebXcX9A,6234
+pdfwork/utils.py,sha256=tcg8bZRFJx71KMzmo5S1o8N7grZoOF94uVK3pjDwm6A,2259
+pdfwork-0.1.1.dist-info/entry_points.txt,sha256=E5FisqC-w3tzsx8q5cSnVa28hEuqrtCKA0-LqJkK4VY,48
+pdfwork-0.1.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+pdfwork-0.1.1.dist-info/METADATA,sha256=l1R6K8JJbvb4eEsxUY6ToriRWYRQxLWAG7TNaRQTbi4,2397
+pdfwork-0.1.1.dist-info/RECORD,,
