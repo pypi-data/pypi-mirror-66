@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pybiographs
+Version: 0.0.1
+Summary: Graphs of biological data for research.
+Home-page: https://github.com/Synergetic-ai/Bio-knowledge-graph-python
+Author: Synergetic AI
+Author-email: davidk@synergetic.ai
+License: Apache 2.0
+Download-URL: https://github.com/Synergetic-ai/Bio-knowledge-graph-python
+Keywords: covid,data,graphs,research
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: lz4 (>=3.0.0)
+Requires-Dist: networkx (>=2.4<3)
+Requires-Dist: pandas
+Requires-Dist: requests (>=2.21.0)
+Provides-Extra: dl
+Requires-Dist: torch ; extra == 'dl'
+Requires-Dist: torchvision ; extra == 'dl'
+
+UNKNOWN
+
+
