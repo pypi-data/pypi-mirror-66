@@ -1,0 +1,5 @@
+include plottwist/__logging__.ini
+include plottwist/changelog.yml
+recursive-include plottwist/resources/* *.*
+include versioneer.py
+include plottwist/_version.py
