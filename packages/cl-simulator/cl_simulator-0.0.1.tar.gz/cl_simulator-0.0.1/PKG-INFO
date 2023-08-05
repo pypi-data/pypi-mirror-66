@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: cl_simulator
+Version: 0.0.1
+Summary: python simulator for Collaborative Deep Learning
+Home-page: https://github.com/sattviksahai/Collaborative-Learning-Simulator
+Author: Sattvik Sahai
+Author-email: sattviksahai24@gmail.com
+License: UNKNOWN
+Description: A python library to simulate Collaborative Deep Learning. It provides the flexibility to simulate various network architectures, Collaborative Learning Stratergies, and privacy invasion attacks.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
