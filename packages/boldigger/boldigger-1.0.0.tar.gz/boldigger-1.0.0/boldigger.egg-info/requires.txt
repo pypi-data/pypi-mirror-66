@@ -1,0 +1,8 @@
+PySimpleGUI
+requests-html
+beautifulsoup4
+openpyxl
+numpy
+pandas
+requests
+more-itertools
