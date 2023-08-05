@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: oschmod
+Version: 0.1.3
+Summary: Windows and Linux compatible chmod
+Home-page: https://github.com/yakdriver/oschmod
+Author: YakDriver
+Author-email: projects@plus3it.com
+License: Apache Software License 2.0
+Platform: Linux
+Platform: Windows
+Platform: Darwin
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: pypiwin32 ; platform_system == "Windows"
+
+# oschmod
+Python chmod that works on Windows and Linux
+
+<p>
+    <a href="./LICENSE" alt="License">
+        <img src="https://img.shields.io/github/license/YakDriver/oschmod.svg" /></a>
+    <a href="http://travis-ci.org/YakDriver/oschmod" alt="Build status">
+        <img src="https://travis-ci.org/YakDriver/oschmod.svg?branch=master" /></a>
+    <a href="https://pypi.python.org/pypi/oschmod" alt="Python versions">
+        <img src="https://img.shields.io/pypi/pyversions/oschmod.svg" /></a>
+    <a href="https://pypi.python.org/pypi/oschmod" alt="Version">
+        <img src="https://img.shields.io/pypi/v/oschmod.svg" /></a>
+    <img src="https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges/YakDriver/oschmod" alt="Mergify"/>
+</p>
+
+With ***oschmod***, on Windows and Linux, you can use stat modes (permissions) for files and directories. Python's `os.chmod()` does not work properly on Windows, only setting the read-only bit.
+
+For example, on Linux, you can easily give a file owner read, write, and execute permissions, and deny the group and others any permissions (i.e., equivalent of `700`). You can do it like:
+
+```python
+import os
+import stat
+os.chmod('myfile', stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR)
+```
+
+Running the same command on Windows does not achieve the same results, such as the group and others are not denied permissions.
+
+However, using ***oschmod*** you can use the same command on Windows or Linux and get the same results:
+
+```python
+import oschmod
+oschmod.set_mode('myfile', stat.S_IRUSR | stat.S_IWUSR | stat.S_IXUSR)
+```
+
+## Installation
+
+```console
+$ pip install oschmod
+```
+
+## Changelog
+
+### 0.1.0
+
+**Commit Delta**: [Change from 0.0.0 release](https://github.com/YakDriver/oschmod/compare/0.0.0...0.1.0)
+
+**Released**: 2020.04.15
+
+**Summary**:
+
+*   Initial release
+
+
