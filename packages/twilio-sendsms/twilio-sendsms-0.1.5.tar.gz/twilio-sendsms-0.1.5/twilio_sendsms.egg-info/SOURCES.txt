@@ -1,0 +1,10 @@
+README.md
+setup.py
+twilio_sendsms/__init__.py
+twilio_sendsms/sendsms.py
+twilio_sendsms.egg-info/PKG-INFO
+twilio_sendsms.egg-info/SOURCES.txt
+twilio_sendsms.egg-info/dependency_links.txt
+twilio_sendsms.egg-info/entry_points.txt
+twilio_sendsms.egg-info/requires.txt
+twilio_sendsms.egg-info/top_level.txt
