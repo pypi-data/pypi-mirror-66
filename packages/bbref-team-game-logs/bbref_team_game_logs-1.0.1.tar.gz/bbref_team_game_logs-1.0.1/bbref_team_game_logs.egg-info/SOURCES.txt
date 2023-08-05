@@ -1,0 +1,9 @@
+README.md
+setup.py
+bbref_team_game_logs/__init__.py
+bbref_team_game_logs/bbref_team_game_logs.py
+bbref_team_game_logs.egg-info/PKG-INFO
+bbref_team_game_logs.egg-info/SOURCES.txt
+bbref_team_game_logs.egg-info/dependency_links.txt
+bbref_team_game_logs.egg-info/requires.txt
+bbref_team_game_logs.egg-info/top_level.txt
