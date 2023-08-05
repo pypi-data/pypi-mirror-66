@@ -1,0 +1,3 @@
+[console_scripts]
+zotnote=zotnote.app:main
+

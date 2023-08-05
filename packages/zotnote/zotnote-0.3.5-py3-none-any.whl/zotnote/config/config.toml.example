@@ -1,0 +1,9 @@
+# Profile
+name = "your name"
+email = "your_email"
+
+# Settings
+editor = "your_editor_of_choice"
+
+# Directories
+notes = "/path/to/your/notes/"
