@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: dash-antd-components
+Version: 0.0.1rc2
+Summary: Antd components for Plotly Dash
+Home-page: UNKNOWN
+Author: Vincent Renault <vincent.renault7@gmail.com>
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Classifier: Framework :: Dash
+
+Antd components for Plotly Dash
+
+
