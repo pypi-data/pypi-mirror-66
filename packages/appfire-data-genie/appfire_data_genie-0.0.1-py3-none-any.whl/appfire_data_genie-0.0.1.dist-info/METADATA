@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: appfire-data-genie
+Version: 0.0.1
+Summary: Generates random data for Appfire P2 apps
+Home-page: UNKNOWN
+Author: Lava Kumar Dukanam
+Author-email: lavakumar.dukanam@appfire.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/plain
+Requires-Dist: click
+Requires-Dist: jaydebeapi
+Requires-Dist: questionary
+
+Generates random data for Appfire P2 apps
+
+
