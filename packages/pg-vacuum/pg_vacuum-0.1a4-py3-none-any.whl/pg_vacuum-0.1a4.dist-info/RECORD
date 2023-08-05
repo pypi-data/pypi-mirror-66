@@ -1,0 +1,9 @@
+pgvacuum/__init__.py,sha256=hkg4g22x9oYUwX-RF3Unzndtx-rom7T8hRi_7Gxk68A,102
+pgvacuum/__main__.py,sha256=fmQsZFXHKuwKcgsKnPtpTY369rdUDWk2Xlu6bK3-Pfs,54
+pgvacuum/pg_vacuum.py,sha256=Nn8j22mzABEr_bP43O42VoidQnfGEH9Zbf0XpvSXJ5Y,5701
+pg_vacuum-0.1a4.dist-info/LICENSE,sha256=w5Sh59GN5yZRAw1RSoUKGYmyEJpVz4YMztjpRHrlRAI,1060
+pg_vacuum-0.1a4.dist-info/METADATA,sha256=PppWfi3LDtibzNZZFX7qcujowlm58KwA9v_6GWuQu_c,1590
+pg_vacuum-0.1a4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pg_vacuum-0.1a4.dist-info/entry_points.txt,sha256=WQUa4e1OIm-aLbM2G-gHuvVkTzj0iVepEQCmh0duZBQ,44
+pg_vacuum-0.1a4.dist-info/top_level.txt,sha256=mgB5E_hLtFNT5J3aXiznOyKCZUPLlqM4fHpLrgdSQU0,9
+pg_vacuum-0.1a4.dist-info/RECORD,,
