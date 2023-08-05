@@ -1,0 +1,3 @@
+[console_scripts]
+tripleo-repos = tripleo_repos.main:main
+
