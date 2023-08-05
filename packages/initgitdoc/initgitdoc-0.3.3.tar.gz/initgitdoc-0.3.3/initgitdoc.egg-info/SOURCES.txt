@@ -1,0 +1,13 @@
+CODE_OF_CONDUCT.md
+CONTRIBUTING.rst
+LICENSE
+MANIFEST.in
+PULL_REQUEST_TEMPLATE.md
+README.md
+initgitdoc
+setup.py
+initgitdoc.egg-info/PKG-INFO
+initgitdoc.egg-info/SOURCES.txt
+initgitdoc.egg-info/dependency_links.txt
+initgitdoc.egg-info/top_level.txt
+templates/__init__.py
