@@ -1,0 +1,7 @@
+django_magic/__init__.py,sha256=MSz6mw4SOu5S72DhOdsXl5Nvr2IVcTqCvsQgNLOqQyo,57
+django_magic/routing.py,sha256=0OkPQghLB-O3oFNmyuBj70uuZMp20yS5Eb4dxpe1yEw,1223
+django_magic/settings.py,sha256=rEmqJ44ifJEIBz7TvmkuK3FB8vo9cdkAA09TKakN-Jk,1652
+django_magic-0.2a0.dist-info/LICENSE,sha256=M13CirxfDTpyXn6lKC4ynsZFpuAt8UCEfyzgrv_eKVE,34098
+django_magic-0.2a0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+django_magic-0.2a0.dist-info/METADATA,sha256=Qtf_zKz1M2J4hC2e7PywiHeMCQcaLg8Yi8Sh0fVWZXs,577
+django_magic-0.2a0.dist-info/RECORD,,
