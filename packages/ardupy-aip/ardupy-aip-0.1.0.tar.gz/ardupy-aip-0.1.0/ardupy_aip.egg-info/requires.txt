@@ -1,0 +1,6 @@
+demjson
+pip
+pygit2
+pyserial
+pyusb
+rshell
