@@ -1,0 +1,735 @@
+openapi: 3.0.1
+info:
+  description: REST API for Gas processing apps
+  title: GPA API
+  version: 0.1.0
+servers:
+- url: /api/v1
+tags:
+- description: LNG Ageing calculation
+  name: lng
+paths:
+  /hg/fluids:
+    get:
+      operationId: get_fluids
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/HgFluid'
+                type: array
+          description: All hg fluids
+      summary: Get hg fluids
+      tags:
+      - hg
+      x-openapi-router-controller: controllers.hg_controller
+    post:
+      operationId: create_fluid
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HgFluid'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HgFluid'
+          description: Created
+      summary: Create hg fluid
+      tags:
+      - hg
+      x-openapi-router-controller: controllers.hg_controller
+  /hg/fluids/{fluidId}:
+    get:
+      operationId: get_fluid
+      parameters:
+      - description: The id of the fluid
+        explode: false
+        in: path
+        name: fluidId
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HgFluid'
+          description: The fluid
+      summary: Get fluid
+      tags:
+      - hg
+      x-openapi-router-controller: controllers.hg_controller
+  /lng/calculations:
+    get:
+      operationId: get_calculations
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Calculation'
+                type: array
+          description: A list of LNG Ageing calculations
+      summary: Get a list of LNG Ageing calculations
+      tags:
+      - lng
+      x-openapi-router-controller: controllers.lng_controller
+    post:
+      operationId: calculate
+      requestBody:
+        $ref: '#/components/requestBodies/CalculationBody'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Calculation'
+          description: LNG Ageing calculation
+      summary: Calculate LNG Ageing
+      tags:
+      - lng
+      x-openapi-router-controller: controllers.lng_controller
+  /lng/calculations/{calculationId}:
+    get:
+      operationId: get_calculation
+      parameters:
+      - description: The ID of the calculation
+        explode: false
+        in: path
+        name: calculationId
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Calculation'
+          description: A LNG Ageing calculation
+      summary: Get LNG Ageing calculation
+      tags:
+      - lng
+      x-openapi-router-controller: controllers.lng_controller
+  /lng/ships:
+    get:
+      operationId: get_ships
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Ship'
+                type: array
+          description: A list of ships.
+      summary: Get a list of ships.
+      tags:
+      - lng
+      x-openapi-router-controller: controllers.lng_controller
+components:
+  requestBodies:
+    CalculationBody:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CalculationBody'
+      description: Object containing all info for a calculation
+      required: true
+  schemas:
+    Ship:
+      example:
+        country: country
+        name: name
+      properties:
+        name:
+          type: string
+        country:
+          type: string
+      type: object
+    Transport:
+      example:
+        volume: 6.027456183070403
+        fromDate: 2000-01-23T04:56:07.000+00:00
+        createdDate: 2000-01-23T04:56:07.000+00:00
+        toDate: 2000-01-23T04:56:07.000+00:00
+        id: id
+        pressure: 1.4658129805029452
+        boilOffRate: 5.962133916683182
+      properties:
+        id:
+          type: string
+        volume:
+          type: number
+        pressure:
+          type: number
+        boilOffRate:
+          type: number
+        fromDate:
+          format: date-time
+          type: string
+        toDate:
+          format: date-time
+          type: string
+        createdDate:
+          format: date-time
+          type: string
+      type: object
+    Standard:
+      example:
+        createdDate: 2000-01-23T04:56:07.000+00:00
+        idealGasReferenceState: 7.061401241503109
+        measurementTemperature: 2.3021358869347655
+        id: id
+        standardVersion: standardVersion
+        combustionTemperature: 5.637376656633329
+      properties:
+        id:
+          type: string
+        combustionTemperature:
+          type: number
+        measurementTemperature:
+          type: number
+        idealGasReferenceState:
+          type: number
+        standardVersion:
+          type: string
+        createdDate:
+          format: date-time
+          type: string
+      type: object
+    Metric:
+      example:
+        unit: unit
+        value: 0.8008281904610115
+      properties:
+        value:
+          type: number
+        unit:
+          type: string
+      type: object
+    Fluid:
+      example:
+        nButane:
+          unit: unit
+          value: 0.8008281904610115
+        ethane:
+          unit: unit
+          value: 0.8008281904610115
+        createdDate: 2000-01-23T04:56:07.000+00:00
+        iButane:
+          unit: unit
+          value: 0.8008281904610115
+        nitrogen:
+          unit: unit
+          value: 0.8008281904610115
+        propane:
+          unit: unit
+          value: 0.8008281904610115
+        methane:
+          unit: unit
+          value: 0.8008281904610115
+        nHexane:
+          unit: unit
+          value: 0.8008281904610115
+        id: id
+        nPentane:
+          unit: unit
+          value: 0.8008281904610115
+        iPentane:
+          unit: unit
+          value: 0.8008281904610115
+      properties:
+        id:
+          type: string
+        nitrogen:
+          $ref: '#/components/schemas/Metric'
+        methane:
+          $ref: '#/components/schemas/Metric'
+        ethane:
+          $ref: '#/components/schemas/Metric'
+        propane:
+          $ref: '#/components/schemas/Metric'
+        iButane:
+          $ref: '#/components/schemas/Metric'
+        nButane:
+          $ref: '#/components/schemas/Metric'
+        iPentane:
+          $ref: '#/components/schemas/Metric'
+        nPentane:
+          $ref: '#/components/schemas/Metric'
+        nHexane:
+          $ref: '#/components/schemas/Metric'
+        createdDate:
+          format: date-time
+          type: string
+      type: object
+    CalculationStep:
+      example:
+        volume:
+          unit: unit
+          value: 0.8008281904610115
+        wi:
+          unit: unit
+          value: 0.8008281904610115
+        temp:
+          unit: unit
+          value: 0.8008281904610115
+        createdDate: 2000-01-23T04:56:07.000+00:00
+        density:
+          unit: unit
+          value: 0.8008281904610115
+        liquid:
+          nButane:
+            unit: unit
+            value: 0.8008281904610115
+          ethane:
+            unit: unit
+            value: 0.8008281904610115
+          createdDate: 2000-01-23T04:56:07.000+00:00
+          iButane:
+            unit: unit
+            value: 0.8008281904610115
+          nitrogen:
+            unit: unit
+            value: 0.8008281904610115
+          propane:
+            unit: unit
+            value: 0.8008281904610115
+          methane:
+            unit: unit
+            value: 0.8008281904610115
+          nHexane:
+            unit: unit
+            value: 0.8008281904610115
+          id: id
+          nPentane:
+            unit: unit
+            value: 0.8008281904610115
+          iPentane:
+            unit: unit
+            value: 0.8008281904610115
+        gas:
+          nButane:
+            unit: unit
+            value: 0.8008281904610115
+          ethane:
+            unit: unit
+            value: 0.8008281904610115
+          createdDate: 2000-01-23T04:56:07.000+00:00
+          iButane:
+            unit: unit
+            value: 0.8008281904610115
+          nitrogen:
+            unit: unit
+            value: 0.8008281904610115
+          propane:
+            unit: unit
+            value: 0.8008281904610115
+          methane:
+            unit: unit
+            value: 0.8008281904610115
+          nHexane:
+            unit: unit
+            value: 0.8008281904610115
+          id: id
+          nPentane:
+            unit: unit
+            value: 0.8008281904610115
+          iPentane:
+            unit: unit
+            value: 0.8008281904610115
+        gcvMass:
+          unit: unit
+          value: 0.8008281904610115
+        id: id
+        time:
+          unit: unit
+          value: 0.8008281904610115
+        gcv:
+          unit: unit
+          value: 0.8008281904610115
+        energy:
+          unit: unit
+          value: 0.8008281904610115
+      properties:
+        id:
+          type: string
+        time:
+          $ref: '#/components/schemas/Metric'
+        wi:
+          $ref: '#/components/schemas/Metric'
+        gcv:
+          $ref: '#/components/schemas/Metric'
+        gcvMass:
+          $ref: '#/components/schemas/Metric'
+        density:
+          $ref: '#/components/schemas/Metric'
+        temp:
+          $ref: '#/components/schemas/Metric'
+        volume:
+          $ref: '#/components/schemas/Metric'
+        energy:
+          $ref: '#/components/schemas/Metric'
+        createdDate:
+          format: date-time
+          type: string
+        liquid:
+          $ref: '#/components/schemas/Fluid'
+        gas:
+          $ref: '#/components/schemas/Fluid'
+      type: object
+    Calculation:
+      example:
+        standard:
+          createdDate: 2000-01-23T04:56:07.000+00:00
+          idealGasReferenceState: 7.061401241503109
+          measurementTemperature: 2.3021358869347655
+          id: id
+          standardVersion: standardVersion
+          combustionTemperature: 5.637376656633329
+        result:
+        - volume:
+            unit: unit
+            value: 0.8008281904610115
+          wi:
+            unit: unit
+            value: 0.8008281904610115
+          temp:
+            unit: unit
+            value: 0.8008281904610115
+          createdDate: 2000-01-23T04:56:07.000+00:00
+          density:
+            unit: unit
+            value: 0.8008281904610115
+          liquid:
+            nButane:
+              unit: unit
+              value: 0.8008281904610115
+            ethane:
+              unit: unit
+              value: 0.8008281904610115
+            createdDate: 2000-01-23T04:56:07.000+00:00
+            iButane:
+              unit: unit
+              value: 0.8008281904610115
+            nitrogen:
+              unit: unit
+              value: 0.8008281904610115
+            propane:
+              unit: unit
+              value: 0.8008281904610115
+            methane:
+              unit: unit
+              value: 0.8008281904610115
+            nHexane:
+              unit: unit
+              value: 0.8008281904610115
+            id: id
+            nPentane:
+              unit: unit
+              value: 0.8008281904610115
+            iPentane:
+              unit: unit
+              value: 0.8008281904610115
+          gas:
+            nButane:
+              unit: unit
+              value: 0.8008281904610115
+            ethane:
+              unit: unit
+              value: 0.8008281904610115
+            createdDate: 2000-01-23T04:56:07.000+00:00
+            iButane:
+              unit: unit
+              value: 0.8008281904610115
+            nitrogen:
+              unit: unit
+              value: 0.8008281904610115
+            propane:
+              unit: unit
+              value: 0.8008281904610115
+            methane:
+              unit: unit
+              value: 0.8008281904610115
+            nHexane:
+              unit: unit
+              value: 0.8008281904610115
+            id: id
+            nPentane:
+              unit: unit
+              value: 0.8008281904610115
+            iPentane:
+              unit: unit
+              value: 0.8008281904610115
+          gcvMass:
+            unit: unit
+            value: 0.8008281904610115
+          id: id
+          time:
+            unit: unit
+            value: 0.8008281904610115
+          gcv:
+            unit: unit
+            value: 0.8008281904610115
+          energy:
+            unit: unit
+            value: 0.8008281904610115
+        - volume:
+            unit: unit
+            value: 0.8008281904610115
+          wi:
+            unit: unit
+            value: 0.8008281904610115
+          temp:
+            unit: unit
+            value: 0.8008281904610115
+          createdDate: 2000-01-23T04:56:07.000+00:00
+          density:
+            unit: unit
+            value: 0.8008281904610115
+          liquid:
+            nButane:
+              unit: unit
+              value: 0.8008281904610115
+            ethane:
+              unit: unit
+              value: 0.8008281904610115
+            createdDate: 2000-01-23T04:56:07.000+00:00
+            iButane:
+              unit: unit
+              value: 0.8008281904610115
+            nitrogen:
+              unit: unit
+              value: 0.8008281904610115
+            propane:
+              unit: unit
+              value: 0.8008281904610115
+            methane:
+              unit: unit
+              value: 0.8008281904610115
+            nHexane:
+              unit: unit
+              value: 0.8008281904610115
+            id: id
+            nPentane:
+              unit: unit
+              value: 0.8008281904610115
+            iPentane:
+              unit: unit
+              value: 0.8008281904610115
+          gas:
+            nButane:
+              unit: unit
+              value: 0.8008281904610115
+            ethane:
+              unit: unit
+              value: 0.8008281904610115
+            createdDate: 2000-01-23T04:56:07.000+00:00
+            iButane:
+              unit: unit
+              value: 0.8008281904610115
+            nitrogen:
+              unit: unit
+              value: 0.8008281904610115
+            propane:
+              unit: unit
+              value: 0.8008281904610115
+            methane:
+              unit: unit
+              value: 0.8008281904610115
+            nHexane:
+              unit: unit
+              value: 0.8008281904610115
+            id: id
+            nPentane:
+              unit: unit
+              value: 0.8008281904610115
+            iPentane:
+              unit: unit
+              value: 0.8008281904610115
+          gcvMass:
+            unit: unit
+            value: 0.8008281904610115
+          id: id
+          time:
+            unit: unit
+            value: 0.8008281904610115
+          gcv:
+            unit: unit
+            value: 0.8008281904610115
+          energy:
+            unit: unit
+            value: 0.8008281904610115
+        ship:
+          country: country
+          name: name
+        fluid:
+          nButane:
+            unit: unit
+            value: 0.8008281904610115
+          ethane:
+            unit: unit
+            value: 0.8008281904610115
+          createdDate: 2000-01-23T04:56:07.000+00:00
+          iButane:
+            unit: unit
+            value: 0.8008281904610115
+          nitrogen:
+            unit: unit
+            value: 0.8008281904610115
+          propane:
+            unit: unit
+            value: 0.8008281904610115
+          methane:
+            unit: unit
+            value: 0.8008281904610115
+          nHexane:
+            unit: unit
+            value: 0.8008281904610115
+          id: id
+          nPentane:
+            unit: unit
+            value: 0.8008281904610115
+          iPentane:
+            unit: unit
+            value: 0.8008281904610115
+        id: id
+        transport:
+          volume: 6.027456183070403
+          fromDate: 2000-01-23T04:56:07.000+00:00
+          createdDate: 2000-01-23T04:56:07.000+00:00
+          toDate: 2000-01-23T04:56:07.000+00:00
+          id: id
+          pressure: 1.4658129805029452
+          boilOffRate: 5.962133916683182
+      properties:
+        id:
+          type: string
+        ship:
+          $ref: '#/components/schemas/Ship'
+        fluid:
+          $ref: '#/components/schemas/Fluid'
+        transport:
+          $ref: '#/components/schemas/Transport'
+        standard:
+          $ref: '#/components/schemas/Standard'
+        result:
+          items:
+            $ref: '#/components/schemas/CalculationStep'
+          type: array
+      type: object
+    CalculationBody:
+      example:
+        standard:
+          createdDate: 2000-01-23T04:56:07.000+00:00
+          idealGasReferenceState: 7.061401241503109
+          measurementTemperature: 2.3021358869347655
+          id: id
+          standardVersion: standardVersion
+          combustionTemperature: 5.637376656633329
+        ship:
+          country: country
+          name: name
+        fluid:
+          nButane:
+            unit: unit
+            value: 0.8008281904610115
+          ethane:
+            unit: unit
+            value: 0.8008281904610115
+          createdDate: 2000-01-23T04:56:07.000+00:00
+          iButane:
+            unit: unit
+            value: 0.8008281904610115
+          nitrogen:
+            unit: unit
+            value: 0.8008281904610115
+          propane:
+            unit: unit
+            value: 0.8008281904610115
+          methane:
+            unit: unit
+            value: 0.8008281904610115
+          nHexane:
+            unit: unit
+            value: 0.8008281904610115
+          id: id
+          nPentane:
+            unit: unit
+            value: 0.8008281904610115
+          iPentane:
+            unit: unit
+            value: 0.8008281904610115
+        transport:
+          volume: 6.027456183070403
+          fromDate: 2000-01-23T04:56:07.000+00:00
+          createdDate: 2000-01-23T04:56:07.000+00:00
+          toDate: 2000-01-23T04:56:07.000+00:00
+          id: id
+          pressure: 1.4658129805029452
+          boilOffRate: 5.962133916683182
+      properties:
+        ship:
+          $ref: '#/components/schemas/Ship'
+        fluid:
+          $ref: '#/components/schemas/Fluid'
+        transport:
+          $ref: '#/components/schemas/Transport'
+        standard:
+          $ref: '#/components/schemas/Standard'
+      required:
+      - fluid
+      - ship
+      - standard
+      - transport
+      type: object
+    HgFluid:
+      example:
+        components:
+        - value: 6.027456183070403
+        - value: 6.027456183070403
+        createdDate: 2000-01-23T04:56:07.000+00:00
+        name: name
+        id: 0
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        components:
+          items:
+            $ref: '#/components/schemas/HgComponent'
+          type: array
+        createdDate:
+          format: date-time
+          type: string
+      type: object
+    HgComponent:
+      example:
+        value: 6.027456183070403
+      properties:
+        value:
+          type: number
+        component_type:
+          $ref: '#/components/schemas/HgComponentType'
+      type: object
+    HgComponentType:
+      enum:
+      - nitrogen
+      - methane
+      - ethane
+      - propane
+      - iButane
+      - nButane
+      type: string
