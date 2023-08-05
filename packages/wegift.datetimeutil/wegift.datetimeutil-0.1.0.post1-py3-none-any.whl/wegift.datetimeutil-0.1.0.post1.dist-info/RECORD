@@ -1,0 +1,11 @@
+wegift.datetimeutil-0.1.0.post1-py3.6-nspkg.pth,sha256=OmlzZ4dAzSeEgrxJnjYv8eEG9fLrJfrwO1HwvIOurgI,539
+wegift/datetimeutil/__init__.py,sha256=0Opros0tlEsTRcCk_md-N8OJbayBtJzLvUuDOexNc0A,1192
+wegift/datetimeutil/datetimeutil.py,sha256=Zr2tSeD--vEC8jhzLTvgknX9wJVVVzf36hMX66arW3o,11035
+wegift/datetimeutil/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wegift/datetimeutil/tests/datetimeutil_test.py,sha256=68NU3mI4PQEqpXe9g6V4o0siQX5WtQYYDx2cPKOGVzg,3079
+wegift.datetimeutil-0.1.0.post1.dist-info/LICENSE.md,sha256=M7wm1EmMGDtwPRdg7kW4d00h1uAXjKOT3HFScYQMeiE,34916
+wegift.datetimeutil-0.1.0.post1.dist-info/METADATA,sha256=xoPB1DpgT7O6U1oJQs54H_JzrJTZTtS-MERhn52eEGM,677
+wegift.datetimeutil-0.1.0.post1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+wegift.datetimeutil-0.1.0.post1.dist-info/namespace_packages.txt,sha256=GWoa1oNTBienF30Vz1piVTxt0-nwWeD4YmAMsq1OakU,7
+wegift.datetimeutil-0.1.0.post1.dist-info/top_level.txt,sha256=GWoa1oNTBienF30Vz1piVTxt0-nwWeD4YmAMsq1OakU,7
+wegift.datetimeutil-0.1.0.post1.dist-info/RECORD,,
