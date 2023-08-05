@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: archr
+Version: 8.20.9.2
+Summary: Target-centric program analysis.
+Home-page: https://github.com/angr/archr
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Provides-Extra: angr
