@@ -1,0 +1,5 @@
+numpy
+pysam
+
+[htseq-qa]
+matplotlib>=1.4
