@@ -1,0 +1,125 @@
+Metadata-Version: 2.1
+Name: mlearner
+Version: 0.0.2.dev5
+Summary: Machine Learning Library Extensions
+Home-page: https://github.com/jaisenbe58r/mlearner
+Author: Jaime Sendra
+Author-email: jaisenberafel@gmail.com
+License: MIT
+Download-URL: https://github.com/jaisenbe58r/MLearner/archive/v0.0.2.tar.gz
+Keywords: SOME,MEANINGFULL,KEYWORDS
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib (==3.0.2)
+Requires-Dist: pandas (==0.23.4)
+Requires-Dist: scikit-learn (==0.20.2)
+Requires-Dist: dlib
+Requires-Dist: seaborn
+Requires-Dist: shap
+Requires-Dist: hyperopt
+Requires-Dist: scipy
+Requires-Dist: xgboost
+Requires-Dist: lightgbm
+Requires-Dist: catboost
+Requires-Dist: pytest (<5.0.0,>=4.6.6)
+Requires-Dist: mkdocs
+Requires-Dist: setuptools
+
+
+[![Build Status](https://travis-ci.org/jaisenbe58r/mlearner.svg?branch=master)](https://travis-ci.org/jaisenbe58r/mlearner)
+[![Build status](https://ci.appveyor.com/api/projects/status/7vx20e0h5dxcyla2/branch/master?svg=true)](https://ci.appveyor.com/project/jaisenbe58r/mlearner/branch/master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/68209df46c8240b887db5ae5fa3cb410)](https://www.codacy.com/manual/jaisenbe58r/MLearner?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jaisenbe58r/MLearner&amp;utm_campaign=Badge_Grade)
+[![Coverage Status](https://coveralls.io/repos/github/jaisenbe58r/MLearner/badge.svg?branch=master)](https://coveralls.io/github/jaisenbe58r/MLearner?branch=master)
+![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)
+![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)
+![Python 3.7](https://img.shields.io/badge/python-3.8-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-ORANGE.svg)
+[![Discuss](https://img.shields.io/badge/discuss-DISCORD-PURPLE.svg)](https://discord.gg/HUxahg)
+
+![](./docs/sources/img/barra.jpg)
+
+
+**mlearner (machine learning for data enginnering) is a Python library of useful tools for the day-to-day data science tasks.**
+
+<br>
+
+Jaime Sendra - 2020
+
+<br>
+
+## Links
+
+- **Documentation:** [http://jaisenbe58r.github.io/mlearner](http://jaisenbe58r.github.io/mlearner)
+- PyPI: [https://pypi.python.org/pypi/mlearner](https://pypi.python.org/pypi/mlearner)
+- Changelog: [http://jaisenbe58r.github.io/mlearner/CHANGELOG](http://jaisenbe58r.github.io/mlearner/CHANGELOG)
+- Contributing: [http://jaisenbe58r.github.io/mlearner/CONTRIBUTING](http://jaisenbe58r.github.io/mlearner/CONTRIBUTING)
+- Questions? Check out the [Google Groups mailing list](https://groups.google.com/forum/#!forum/mlearner)
+
+<br>
+<br>
+
+## Installing mlearner
+
+#### PyPI
+
+To install mlearner, just execute  
+
+```bash
+pip install mlearner  
+```
+
+Alternatively, you could download the package manually from the Python Package Index [https://pypi.python.org/pypi/mlearner](https://pypi.python.org/pypi/mlearner), unzip it, navigate into the package, and use the command:
+
+```bash
+python setup.py install
+```
+
+#### Conda
+If you use conda, to install mlearner just execute
+
+```bash
+conda install -c conda-forge mlearner 
+```
+
+#### Dev Version
+
+The mlearner version on PyPI may always be one step behind; you can install the latest development version from the GitHub repository by executing
+
+```bash
+pip install git+git://github.com/jaisenbe58r/mlearner.git#egg=mlearner
+```
+
+Or, you can fork the GitHub repository from https://github.com/jaisenbe58r/mlearner and install mlearner from your local drive via
+
+```bash
+python setup.py install
+```
+
+
+---
+
+## License
+
+
+## Contact
+
+
+
