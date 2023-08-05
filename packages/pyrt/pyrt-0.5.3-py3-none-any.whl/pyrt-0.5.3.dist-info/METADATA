@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pyrt
+Version: 0.5.3
+Summary: pyRT - The Python Raytracer
+Home-page: https://github.com/martinchristen/pyRT
+Author: Martin Christen
+Author-email: martin.christen@gmail.com
+License: MIT
+
+PyRT - The Python Raytracer
+
+
