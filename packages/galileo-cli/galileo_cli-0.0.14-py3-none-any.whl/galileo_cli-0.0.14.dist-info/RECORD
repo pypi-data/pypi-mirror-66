@@ -1,0 +1,12 @@
+galileo_cli/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+galileo_cli/cli.py,sha256=mG6VigqFEP3LCDiOvw8Po-TfpaRvEfyxStJR4PdJU7A,2382
+galileo_cli/jobs.py,sha256=AL0jDI46hGNLwXgQdk6SHx-JDNV9X3dHtn91pQIfEU8,7683
+galileo_cli/machines.py,sha256=Hm0fj5cZVUtopfRsXFPJ5t_WzcW_Bt9tuFjjVKu4sWE,3706
+galileo_cli/profiles.py,sha256=I7752PK5wvnxCW-Kr71uroS1FIfkNPuZnHV2j3B_bVg,2906
+galileo_cli/projects.py,sha256=X9mwq7QkJi3zBYKqqQzLzZUBiMr_9DTdTi_GdNNVWdM,5373
+galileo_cli/stations.py,sha256=W3nqYqc5HJtsV4LiSPqXn_vaPDrtB25WcCrFtKMo4xI,14890
+galileo_cli-0.0.14.dist-info/METADATA,sha256=n6gbgk-JiCsTvFGeZWQTn04em6HXZRuT1RhaPAtK14Q,1103
+galileo_cli-0.0.14.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+galileo_cli-0.0.14.dist-info/entry_points.txt,sha256=Z33813N8EG9GpjL32n92XliNUiJI9CRlB-iDPLH2Myg,54
+galileo_cli-0.0.14.dist-info/top_level.txt,sha256=uhQzcaBCm8LT0tNsgFU8QVlBg8DWQr57RmZxM4VSVOM,12
+galileo_cli-0.0.14.dist-info/RECORD,,
