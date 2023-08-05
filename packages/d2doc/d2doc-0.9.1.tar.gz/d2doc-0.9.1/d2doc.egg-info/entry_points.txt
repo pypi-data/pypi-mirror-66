@@ -1,0 +1,3 @@
+[console_scripts]
+d2doc = d2doc.app:run
+
