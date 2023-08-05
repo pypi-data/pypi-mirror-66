@@ -1,0 +1,6 @@
+[console_scripts]
+convert_audio_mono_16k.py = bob.paper.lipsync2019.scripts_db.convert_audio_mono_16k:main
+generate_tampered.py = bob.paper.lipsync2019.scripts_db.generate_tampered:main
+non_tampered_images2videos.py = bob.paper.lipsync2019.scripts_db.non_tampered_images2videos:main
+reallocate_annotation_files.py = bob.paper.lipsync2019.scripts_db.reallocate_annotation_files:main
+
