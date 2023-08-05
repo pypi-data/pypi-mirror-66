@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: razorback
+Version: 0.2.2b2
+Summary: Robust estimation of linear response functions
+Home-page: https://github.com/BRGM/razorback
+Author: Farid Smai
+Author-email: f.smai@brgm.fr
+License: GNU GPLv3
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: dask
+
+# razorback
+
+An open source python library for magnetotelluric robust processing.
+
+It provides robust (M-estimator, Bounded Influence) and multi-remote methods for MT.
+
+## Installing
+
+Just use `pip` to get razorback and all its dependencies:
+```
+pip install razorback
+```
+
+## Dependencies
+
+- Python >= 3.6
+- Numpy
+- Scipy
+- Dask
+
+## Supported Platforms
+Linux, Windows, MacOS
+
+## Documentation
+<https://razorback.readthedocs.io>
+
+
