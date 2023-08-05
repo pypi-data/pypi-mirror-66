@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+fake_data_for_learning/__init__.py
+fake_data_for_learning/fake_data_for_learning.py
+fake_data_for_learning/utils.py
+fake_data_for_learning.egg-info/PKG-INFO
+fake_data_for_learning.egg-info/SOURCES.txt
+fake_data_for_learning.egg-info/dependency_links.txt
+fake_data_for_learning.egg-info/not-zip-safe
+fake_data_for_learning.egg-info/requires.txt
+fake_data_for_learning.egg-info/top_level.txt
