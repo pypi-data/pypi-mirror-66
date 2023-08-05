@@ -1,0 +1,6 @@
+pylint>=2.4.4
+twisted>=15.0.0
+
+[dev]
+pyflakes
+coverage
