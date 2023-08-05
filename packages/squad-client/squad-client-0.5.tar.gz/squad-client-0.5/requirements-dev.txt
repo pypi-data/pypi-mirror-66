@@ -1,0 +1,4 @@
+-r requirements.txt
+squad>=1.9
+coverage
+flake8
