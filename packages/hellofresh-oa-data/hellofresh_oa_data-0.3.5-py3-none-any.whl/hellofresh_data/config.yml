@@ -1,0 +1,12 @@
+impala_reader:
+    dwh:
+        host: cloudera-impala-proxy.live.bi.hellofresh.io
+        user: /US/OA/ServiceAccount/SCA/user
+        password: /US/OA/ServiceAccount/SCA/password
+        port: 21050
+        auth_mechanism: PLAIN
+        use_ssl: True
+    sql_validate:
+        allowed_command: ['select', 'refresh',
+                          'invalidate matadata', 'alter table']
+        forbidden_command: ['drop', 'truncate', 'delete', 'update', 'alter']
