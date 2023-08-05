@@ -1,0 +1,15 @@
+README.md
+setup.py
+argopy/__init__.py
+argopy/fetchers.py
+argopy/utilities.py
+argopy/xarray.py
+argopy.egg-info/PKG-INFO
+argopy.egg-info/SOURCES.txt
+argopy.egg-info/dependency_links.txt
+argopy.egg-info/requires.txt
+argopy.egg-info/top_level.txt
+argopy/data_fetchers/__init__.py
+argopy/data_fetchers/erddap.py
+argopy/tests/__init__.py
+argopy/tests/test_fetchers.py
