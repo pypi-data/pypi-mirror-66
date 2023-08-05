@@ -1,0 +1,11 @@
+sqoopit/MapredJob.py,sha256=AAg-TEy__RshcLxkn8tFR5Dlw27w3nmJvcIF6I_Nzpw,1668
+sqoopit/SqoopImport.py,sha256=hciDNHwKxXBTUcpgvqECWLBg9NftwvE64AjCxS24hwQ,8388
+sqoopit/SqoopJob.py,sha256=ILhZt6Qky1Icmztfo1JC0Kj7N8YeJTq8MmhgTHy2Jm0,947
+sqoopit/__init__.py,sha256=mM7BNb14Got3Gi-XoOrfE-_QV6d2JTD19USNhs_UY3Q,65
+unittests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unittests/unintary_tests.py,sha256=SXgR_8GLYo1depg2JIthxwqoKVW8OYBSsfQghBMTKFs,3838
+sqoopit-0.0.12.dist-info/LICENSE,sha256=DmT6Qv8puXlhkAevAecx7Jcr3R6zUSgXrT1pCw0DAww,1074
+sqoopit-0.0.12.dist-info/METADATA,sha256=OSCXtW2vLbSEAcuAigzGw_Xx-uKtVPnv2AWWwW_La9Q,4044
+sqoopit-0.0.12.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sqoopit-0.0.12.dist-info/top_level.txt,sha256=uAIzwycLWeDpIeG-hUMXV_Q5PtSgt00cthrnulnWpBM,18
+sqoopit-0.0.12.dist-info/RECORD,,
