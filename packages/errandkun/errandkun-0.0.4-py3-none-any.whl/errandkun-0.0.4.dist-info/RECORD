@@ -1,0 +1,10 @@
+errandkun/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+errandkun/errandkun.py,sha256=NV9VvZobaSaQQVgzmZ0hHd4mqXOB2Ggls4aOz6IRuSo,1145
+errandkun/external_resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+errandkun/external_resources/base.py,sha256=Ru4PKAkStdBbVrdTrzYdjpNuhGLLq7egwe5wFn20Bjg,899
+errandkun/external_resources/github.py,sha256=aCjHENDJUYysE543eq9ug9CQOye5c8Sld2Lfht0Wjek,3868
+errandkun-0.0.4.dist-info/METADATA,sha256=vsy5uPIQjN89eskD5xmD6BHaCM3f_fm6tl7RBxbpods,212
+errandkun-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+errandkun-0.0.4.dist-info/entry_points.txt,sha256=TkgNgFN05jKDaTHlnrMWGQs5u_5B3CWTmh6XNXjLQv0,66
+errandkun-0.0.4.dist-info/top_level.txt,sha256=BBCacl_qgdnSTD8ubznyET8LwvgobngiUsBkI-8Ub0I,10
+errandkun-0.0.4.dist-info/RECORD,,
