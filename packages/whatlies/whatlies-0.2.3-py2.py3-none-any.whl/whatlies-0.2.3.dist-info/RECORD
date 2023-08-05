@@ -1,0 +1,16 @@
+whatlies/__init__.py,sha256=QrZKdzn3rA3l88U9cBh_wMMmHByaD43u77J_gGxWb-M,136
+whatlies/common.py,sha256=wbTCSPi3wiV4ZvsZiJq_Eml_JzlScsUJzqY21JFCfmA,2555
+whatlies/embedding.py,sha256=ybW05lrkdSEH1ZLDS_qoH042wE_0jTqB669TD_pISAQ,5172
+whatlies/embeddingset.py,sha256=Uwv6uHRxBX1aUl4rNZvovjm484IXI9VRki2usVPRSoI,17291
+whatlies/language.py,sha256=OiJcVj0K1_3OZMXJg2gcfcg-hRekRSIpa5M2LyE6Qtw,8380
+whatlies/transformers/__init__.py,sha256=YuBNYPB5TUHgNNLDqVWbdhR8MfFdusvSAgMlHBE06-E,186
+whatlies/transformers/addrandom.py,sha256=YB8nRii7PIhZBqFU4pRk_uurfHZfyA0AZD7ZtBT8WbM,1658
+whatlies/transformers/common.py,sha256=rcuzV5TV_AjPa8dZzDFJt5m4cXkYbwis9yntRgQ2Dos,592
+whatlies/transformers/noise.py,sha256=ig83yTO1pgGHI3bc43LR6IuV1JyOB2TeT8qPtZQOTrg,1661
+whatlies/transformers/pca.py,sha256=iwJY_WVSk2PtUTilUb34kWHdewS2WhPziWdSGoUqUBQ,2093
+whatlies/transformers/umap.py,sha256=q7Oii1tKvsCE5anhy5kxqWxisAFZ33BFIkvBbKPSvLQ,2388
+whatlies-0.2.3.dist-info/LICENSE,sha256=dpOJwsc-xLrreKKyZrO5qgjEMuZbN-cZppwR3Klxxfs,11350
+whatlies-0.2.3.dist-info/METADATA,sha256=hnIVzXSNKTA-O3-l5J63Bvww9LjWASTPNsKInNdUROw,2240
+whatlies-0.2.3.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+whatlies-0.2.3.dist-info/top_level.txt,sha256=psR4cR0WdqeOiBksesgva_8NlvJOU0DT2AE7ZDq6N30,9
+whatlies-0.2.3.dist-info/RECORD,,
