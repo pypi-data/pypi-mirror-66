@@ -1,0 +1,4 @@
+#!python
+import surk
+print("bin/surk çağırıldı.")
+surk.__main__.main()
