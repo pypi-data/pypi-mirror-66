@@ -1,0 +1,10 @@
+pywebapi/__init__.py,sha256=nV6F0gdb1scHiID-J4F18C6_mhL9olyC_G-345d_N7A,953
+pywebapi/cors.py,sha256=mcZPXvQentxevmQWXBE9xhY0BQ-x8tlQ8GnQBMHx6q0,2326
+pywebapi/fmtr.py,sha256=nNlLVl23o24ZSuSvULsd8EM8k6QIRNZZDBZoVyUM8Dk,6727
+pywebapi/func.py,sha256=UNK11agv5ywKt42AO9iI8YQ03QMCHGRZYLSU3HUH7GQ,15092
+pywebapi/util.py,sha256=2x8wEW3Qcn_fZIMqtS1UVojO8QhXP2D9S3s4QW3yULE,2799
+pywebapi-0.1a0.dev9.dist-info/LICENSE,sha256=gduuXE5jWcBUE4JrHrzSn4ZyVPUxXUXVc2xunYnSysk,1111
+pywebapi-0.1a0.dev9.dist-info/METADATA,sha256=_kOiHBRTXSCS82mNCQW7emOGXMKr6xvQvX82gU3wVYs,1165
+pywebapi-0.1a0.dev9.dist-info/WHEEL,sha256=6T3TYZE4YFi2HTS1BeZHNXAi8N52OZT4O-dJ6-ome_4,116
+pywebapi-0.1a0.dev9.dist-info/top_level.txt,sha256=Uo95OgSPrbvqwE_65PU99F0OVjzmhlHgmddYCeoUpEs,9
+pywebapi-0.1a0.dev9.dist-info/RECORD,,
