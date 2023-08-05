@@ -1,0 +1,10 @@
+pod_social/__init__.py,sha256=h1Hdj41gus6stKnKxrFiHtOkkptbBZKTrebrriyzMMc,56
+pod_social/consts.py,sha256=Az2PU3wGAdhAPIyUJ7eWWHQX26vdAVyNf9Ds80ZBz8E,735
+pod_social/json_schema.json,sha256=SxjImqUhjuQEn8GLgDKdJV3kY4MxAbE5x8rzY_ARxZQ,59541
+pod_social/pod_social.py,sha256=5rmSRxnC6Igz1JL7oOY_0nyDyRGY6hITz70ivCIjx20,28061
+pod_social/services.json,sha256=SMZ6rOhMuXcPrVDLWfMYKsRncyOTAYxRagHwqIDvtOw,6301
+pod_social/version.py,sha256=605yx8orMkJSezm9hAztWIYx6XQEzqDnLjExQGze7Fk,23
+pod_social-1.0.0.dist-info/METADATA,sha256=aFRe-FgQ0YdHOqHjGCgo2w6b9rwlofOcNtbnYGbhuYc,1562
+pod_social-1.0.0.dist-info/WHEEL,sha256=CbUdLTqD3-4zWemf83rgR_2_MC4TeXw9qXwrXte5w4w,92
+pod_social-1.0.0.dist-info/top_level.txt,sha256=WaUthyrJNKcTWWD9EPjNzFinPlk8YWqbrZT0Dv_x_o8,11
+pod_social-1.0.0.dist-info/RECORD,,

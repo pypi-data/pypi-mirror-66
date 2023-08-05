@@ -1,0 +1,236 @@
+{
+    "post_nzh_biz_addCustomPost": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42595",
+            "sandbox": "52924"
+        }
+    },
+    "get_nzh_customPostList": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42596",
+            "sandbox": "52925"
+        }
+    },
+    "post_nzh_biz_addCustomPostList": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "post",
+        "products": {
+            "production": "42597",
+            "sandbox": "52926"
+        }
+    },
+    "get_nzh_biz_updateCustomPost": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42598",
+            "sandbox": "52927"
+        }
+    },
+    "get_nzh_updateUserPost": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42599",
+            "sandbox": "52928"
+        }
+    },
+    "get_nzh_comment": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42600",
+            "sandbox": "52929"
+        }
+    },
+    "get_nzh_biz_commentList": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42601",
+            "sandbox": "52930"
+        }
+    },
+    "get_nzh_biz_confirmComment": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42868",
+            "sandbox": "53335"
+        }
+    },
+    "get_nzh_biz_unconfirmComment": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42869",
+            "sandbox": "53336"
+        }
+    },
+    "get_nzh_commentList": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42870",
+            "sandbox": "53337"
+        }
+    },
+    "get_nzh_like": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42602",
+            "sandbox": "52931"
+        }
+    },
+    "get_nzh_dislikePost": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42603",
+            "sandbox": "52932"
+        }
+    },
+    "get_nzh_likeList": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42604",
+            "sandbox": "52933"
+        }
+    },
+    "get_nzh_likeComment": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42605",
+            "sandbox": "52934"
+        }
+    },
+    "get_nzh_commentLikeList": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42606",
+            "sandbox": "52935"
+        }
+    },
+    "get_nzh_biz_timeline": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42607",
+            "sandbox": "52936"
+        }
+    },
+    "get_nzh_timeline": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42608",
+            "sandbox": "52937"
+        }
+    },
+    "get_nzh_biz_searchTimelineByMetadata": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42609",
+            "sandbox": "52938"
+        }
+    },
+    "get_nzh_biz_search": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42610",
+            "sandbox": "52939"
+        }
+    },
+    "get_nzh_addUserPost": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42611",
+            "sandbox": "52940"
+        }
+    },
+    "get_nzh_userPostList": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42612",
+            "sandbox": "52941"
+        }
+    },
+    "get_nzh_searchOnUserPostByMetadata": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42613",
+            "sandbox": "52942"
+        }
+    },
+    "get_nzh_confirmComment": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42614",
+            "sandbox": "52943"
+        }
+    },
+    "get_nzh_unconfirmComment": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42615",
+            "sandbox": "52944"
+        }
+    },
+    "get_nzh_shareUserPost": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42616",
+            "sandbox": "52945"
+        }
+    },
+    "get_nzh_loadUserPost": {
+        "platform_url": "base_url",
+        "sub_url": "/nzh/doServiceCall",
+        "http_verb": "get",
+        "products": {
+            "production": "42617",
+            "sandbox": "52946"
+        }
+    }
+}
