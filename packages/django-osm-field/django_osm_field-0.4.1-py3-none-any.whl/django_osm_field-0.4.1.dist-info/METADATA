@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: django-osm-field
+Version: 0.4.1
+Summary: Django OpenStreetMap Field
+Home-page: https://github.com/MarkusH/django-osm-field
+Author: Markus Holtermann
+Author-email: info@markusholtermann.eu
+License: MIT
+Keywords: OpenStreetMap,OSM,Django,Geo,Geoposition
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Framework :: Django :: 3.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: Django (>=2.2)
+Provides-Extra: testing
+Requires-Dist: coverage (~=5.1) ; extra == 'testing'
+
+# django-osm-field
+
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/MarkusH/django-osm-field/CI/master?style=for-the-badge)
+![Codecov branch](https://img.shields.io/codecov/c/gh/MarkusH/django-osm-field/master?style=for-the-badge)
+![PyPI](https://img.shields.io/pypi/v/django-osm-field?style=for-the-badge)
+
+An OpenStreetMap field for Django.
+
+Documentation: https://django-osm-field.readthedocs.io/
+
+
