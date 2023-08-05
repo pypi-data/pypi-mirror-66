@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: backtest
+Version: 0.7.2a0
+Summary: Backtest engine for algorithmic trading
+Home-page: https://github.com/yoonbae81/backtest
+Author: Yoonbae Cho
+Author-email: y@xcv.kr
+License: UNKNOWN
+Project-URL: Source, https://github.com/yoonbae81/backtest/
+Project-URL: Bug Reports, https://github.com/yoonbae81/backtest/issues
+Keywords: backtest algotrading
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: requests
+
+# Backtest
+A backtest engine for developing algorithmic trading strategy.
+
+
+
+
