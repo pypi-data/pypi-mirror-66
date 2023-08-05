@@ -1,0 +1,3 @@
+#!python
+import surk
+surk.__main__
