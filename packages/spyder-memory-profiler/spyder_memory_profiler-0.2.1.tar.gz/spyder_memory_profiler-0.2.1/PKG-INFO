@@ -1,0 +1,37 @@
+Metadata-Version: 1.1
+Name: spyder_memory_profiler
+Version: 0.2.1
+Summary: Plugin for the Spyder IDE that integrates the Python memory profiler
+Home-page: https://github.com/spyder-ide/spyder-memory-profiler
+Author: Spyder Project Contributors
+Author-email: UNKNOWN
+License: MIT
+Description: 
+        This is a plugin for the Spyder IDE that integrates the Python memory profiler.
+        It allows you to see the memory usage in every line.
+        
+        Usage
+        -----
+        
+        Add a ``@profile`` decorator to the functions that you wish to profile then
+        press Ctrl+Shift+F10 to run the profiler on the current script, or go to
+        ``Run > Profile memory line by line``.
+        
+        The results will be shown in a dockwidget, grouped by function. Lines with a
+        stronger color have the largest increments in memory usage.
+        
+Keywords: Qt PyQt4 PyQt5 PySide spyder plugins spyplugins profiler
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development
+Classifier: Topic :: Text Editors :: Integrated Development Environments (IDE)
