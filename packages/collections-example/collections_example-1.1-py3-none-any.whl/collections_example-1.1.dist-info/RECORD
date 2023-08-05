@@ -1,0 +1,12 @@
+Collections/Node.py,sha256=SB0OOtw64zDbmbBE12frCxBb4jm9De2nVtVFu4YnYl0,577
+Collections/Queue.py,sha256=vQ5daTn6Pq0qfXPPbm8lmnejUbhs44rFORNn4QRfnl4,366
+Collections/Stack.py,sha256=WYWc61kOngn21MZ8LqFsTqn-WAG-Ir46UPc6sqnU1ns,357
+Collections/__init__.py,sha256=lZP4u4JoxwB6jTIqsPixi78hTAJrTLBC9WPSyoqxxJM,104
+Collections/Lists/ArrayList.py,sha256=tV2BMn3c60e0HJPnoSn6DuZoKpqh4qZ-V1l2hvxjcw0,782
+Collections/Lists/LinkedList.py,sha256=K42hXTQIFHPtwZTBmlGa5FQn224PhP-_HYC_za9joUo,1080
+Collections/Lists/__init__.py,sha256=DzwIObG5WPZQymQoPqyqbY-lB3lNQ5RiPB0GD4ZF9UA,51
+collections_example-1.1.dist-info/LICENSE.txt,sha256=28Rnu1rtRjLwJxp28F4VB2kjZj_F25aoXP_US0O3xDU,1092
+collections_example-1.1.dist-info/METADATA,sha256=MJcOJNxFIv2pJTDHGXx7SfN-pRgBSnCAdrD0TsPkJH4,654
+collections_example-1.1.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+collections_example-1.1.dist-info/top_level.txt,sha256=nYuIQm0fcWXKaV2LlhuKvC0v3df8uO2lhVpVbHhdaUc,12
+collections_example-1.1.dist-info/RECORD,,
