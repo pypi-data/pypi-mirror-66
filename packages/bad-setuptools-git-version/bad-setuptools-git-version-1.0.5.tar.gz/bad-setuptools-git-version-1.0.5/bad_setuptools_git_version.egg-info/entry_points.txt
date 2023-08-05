@@ -1,0 +1,6 @@
+[console_scripts]
+bad-setuptools-git-version = bad_setuptools_git_version:get_version
+
+[distutils.setup_keywords]
+version_config = bad_setuptools_git_version:validate_version_config
+
