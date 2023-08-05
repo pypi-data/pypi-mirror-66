@@ -1,0 +1,12 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "setuptools_scm_node_and_dirty_tag"
+author = "Thomas Grainger"
+author-email = "tagrain@gmail.com"
+home-page = "https://github.com/graingert/setuptools_scm_node_and_dirty_tag"
+
+[tool.flit.entrypoints."setuptools_scm.local_scheme"]
+node-and-dirty-tag="setuptools_scm_node_and_dirty_tag:node_and_dirty_tag"

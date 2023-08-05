@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: setuptools_scm_node_and_dirty_tag
+Version: 0.0.0.post0
+Summary: A plugin to generate a local_scheme version with the node and dirty tag.
+Home-page: https://github.com/graingert/setuptools_scm_node_and_dirty_tag
+Author: Thomas Grainger
+Author-email: tagrain@gmail.com
