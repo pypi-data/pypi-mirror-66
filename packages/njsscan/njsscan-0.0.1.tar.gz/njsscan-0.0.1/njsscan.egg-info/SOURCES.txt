@@ -1,0 +1,9 @@
+README.md
+setup.py
+njsscan/__init__.py
+njsscan/__main__.py
+njsscan.egg-info/PKG-INFO
+njsscan.egg-info/SOURCES.txt
+njsscan.egg-info/dependency_links.txt
+njsscan.egg-info/entry_points.txt
+njsscan.egg-info/top_level.txt

@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: njsscan
+Version: 0.0.1
+Summary: Something awesome is coming
+Home-page: https://github.com/ajinabraham/njsscan
+Author: Ajin Abraham
+Author-email: ajin25@gmail.com
+License: UNKNOWN
+Description: Something awesome is coming
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)
+Classifier: Programming Language :: Python :: 3.7
