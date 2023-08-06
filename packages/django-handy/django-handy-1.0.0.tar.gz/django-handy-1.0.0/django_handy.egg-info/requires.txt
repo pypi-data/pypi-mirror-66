@@ -1,0 +1,5 @@
+Django>=1.11
+djangorestframework>=3.6
+django-manager-utils
+requests
+Pillow
