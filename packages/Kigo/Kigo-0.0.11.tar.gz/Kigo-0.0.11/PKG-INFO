@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: Kigo
+Version: 0.0.11
+Summary: Python framework for Event Async RPC
+Home-page: https://github.com/AsyncMicroStack/kigo
+Author: Krzysztof Kaczkowski
+Author-email: krzysztof.kaczkowski@architekt-it.pl
+License: UNKNOWN
+Description: Kigo asynchronous event framework
+        =================================
+        
+        .. image:: https://travis-ci.org/AsyncMicroStack/kigo.svg?branch=master
+           :target: http://travis-ci.org/AsyncMicroStack/kigo
+        
+        .. pull-quote ::
+           Asynchronous and high performance event microservices framework for Python that lets service developers concentrate on application and testability.
+        
+        .. code-block:: python
+        
+            # helloworld.py
+        
+            from kigo.rpc import Consumer, rpc
+        
+            @Consumer()
+            class EchoService:
+        
+                @rpc
+                def echo(self, say):
+                    return "Hello, {}!".format(say)
+        
+            if __name__ == '__main__':
+                service = EchoService()
+                service.run()
+        
+        
+        Documentation
+        -------------
+        
+        Documentation and links to additional resources are available at
+        https://www.asyncstack.org/kigo
+        
+        
+        License
+        -------
+        
+        Apache 2.0. See LICENSE for details.
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+Provides-Extra: docs
