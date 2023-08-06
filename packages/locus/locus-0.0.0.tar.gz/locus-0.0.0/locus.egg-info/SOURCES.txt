@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+locus/__init__.py
+locus.egg-info/PKG-INFO
+locus.egg-info/SOURCES.txt
+locus.egg-info/dependency_links.txt
+locus.egg-info/top_level.txt
