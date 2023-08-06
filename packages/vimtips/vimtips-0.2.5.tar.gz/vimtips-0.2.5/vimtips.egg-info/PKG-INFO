@@ -1,0 +1,29 @@
+Metadata-Version: 1.2
+Name: vimtips
+Version: 0.2.5
+Summary: Vim Tips is a project to aggregate and show vim tips from different sources.
+Home-page: https://github.com/IngoHeimbach/vimtips
+Author: Ingo Heimbach
+Author-email: IJ_H@gmx.de
+License: MIT
+Description: UNKNOWN
+Keywords: vim,tips
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Text Editors
+Classifier: Topic :: Utilities
+Requires-Python: ~=3.3
