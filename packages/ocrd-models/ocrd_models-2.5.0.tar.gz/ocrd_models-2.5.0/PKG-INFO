@@ -1,0 +1,16 @@
+Metadata-Version: 1.0
+Name: ocrd_models
+Version: 2.5.0
+Summary: OCR-D framework - file format APIs and schemas
+Home-page: https://github.com/OCR-D/core
+Author: Konstantin Baierer
+Author-email: unixprog@gmail.com
+License: Apache License 2.0
+Description: # ocrd_models
+        
+        > OCR-D framework - file format APIs and schemas
+        
+        See https://github.com/OCR-D/core
+        
+Keywords: OCR,OCR-D
+Platform: UNKNOWN
