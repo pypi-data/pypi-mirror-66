@@ -1,0 +1,13 @@
+imageedit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+imageedit/effects.py,sha256=ZkLJwWDkTfPFyzKuRFUvdqV9BtF6g07CyivRG7TCLrw,7866
+imageedit/imagegrab.py,sha256=kCl00v1BP1rJv9qSxf1MuQI_mKwSEGdMmGH-RF15vig,1384
+imageedit/imagetracer.py,sha256=fd3TwNTW6VamFpUyF48oeJPRpID1m6ZeI-SEJ0VMeP0,1881
+imageedit/io.py,sha256=b3gzAIbkeYYLj3kApPn-GN7UiikFp_eXu04-b0c5ZdI,9919
+imageedit/resources/FiraCode-Light.ttf,sha256=3PcuKxgNbsgN3uEgN4NpxFWVGOCStqRpv2WKJQ0ByRI,276684
+imageedit/resources/imagetracer.html,sha256=biboDTCPFG9YkkOh48-w0xayKPpDFb9sjrsPtEfLc_Y,303
+imageedit/resources/imagetracer.js,sha256=KqKfQ5sgxTdwt5gBEC6bUSR1WdZU7UxM14GbLwUZAC4,50771
+imageedit/transform.py,sha256=xeT-B4rv5Ju8vHMGkQHORUlJ4_DNItdmRw5DVLEsMJc,4083
+imageedit-2020.4.dist-info/LICENSE.md,sha256=vY1uGhtX91efdFNxkrZfkwtrF6DnpEvIZdbeEUCpXxA,1086
+imageedit-2020.4.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+imageedit-2020.4.dist-info/METADATA,sha256=UI54RMs3NerMYrMUYIuhMAQhB5_FX7ZlgNkoHk8omEs,11066
+imageedit-2020.4.dist-info/RECORD,,
