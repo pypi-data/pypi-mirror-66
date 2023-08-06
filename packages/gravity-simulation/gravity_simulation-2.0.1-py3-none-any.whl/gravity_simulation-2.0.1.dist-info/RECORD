@@ -1,0 +1,8 @@
+gravity_simulation/__init__.py,sha256=1CHRgDz3C4b0LC1VFVF1AAhQmyvd9-Qz1i05FJYz1_4,1697
+gravity_simulation/gravity.py,sha256=bjCO-nTi7h_ihX3mqrl0GOJ1pyO7jdmpAC-Wr6tJcnw,12738
+gravity_simulation/test.py,sha256=1t6BFFCGG9ii8C8AIhezsW16fvJMrYwkHO1ljgR0M6I,5748
+gravity_simulation-2.0.1.dist-info/LICENSE.txt,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+gravity_simulation-2.0.1.dist-info/METADATA,sha256=vb_70FFQRZynroyPpBG9mgqH1fmjsk851Fsp-dz0CHc,2812
+gravity_simulation-2.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+gravity_simulation-2.0.1.dist-info/top_level.txt,sha256=pntxW-dL654FFoKaoA_HlviR_DJx_K75DkqlpZiUYO8,19
+gravity_simulation-2.0.1.dist-info/RECORD,,
