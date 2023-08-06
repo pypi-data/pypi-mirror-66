@@ -1,0 +1,8 @@
+README.md
+setup.py
+tkinterx/__init__.py
+tkinterx/meta.py
+tkinterx.egg-info/PKG-INFO
+tkinterx.egg-info/SOURCES.txt
+tkinterx.egg-info/dependency_links.txt
+tkinterx.egg-info/top_level.txt
