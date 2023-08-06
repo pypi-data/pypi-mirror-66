@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pauseprog
+Version: 1.0.0
+Summary: A small package to pause your beautiful program!
+Home-page: https://github.com/pechenzz/pauseprog
+Author: pechenzZ
+Author-email: nikolayakimovich8@gmail.com
+License: UNKNOWN
+Description: PauseProg
+        =========
+        
+        
+        
+        
+        use **pause(prompt, 0/1)**
+        
+        Change prompt to *your prompt*!
+        
+        Example: **pause('Ello: ')**
+        
+        Output: ***"Ello: "***
+        
+        After user presses *Enter*, the program will continue the code, or exit, if you want to!
+        
+        *0* is for no quit
+        
+        *1* is for yes quit
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
