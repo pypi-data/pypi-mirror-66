@@ -1,0 +1,123 @@
+respice
+=======
+
+Not super optimized, but extremely flexible and easy to use non-linear
+transient electric circuit simulator
+
+Prerequisites
+-------------
+
+Install necessary packages via
+
+.. code:: bash
+
+   pip3 install -r requirements.txt
+
+Usage
+-----
+
+Create your circuit and simulate it!
+
+.. code:: python
+
+   from respice.analysis import Circuit
+   from respice.components import CurrentSourceDC, R
+
+
+   # Define components for our circuit.
+   R1 = R(100)
+   R2 = R(200)
+   R3 = R(100)
+   R4 = R(200)
+   R5 = R(100)
+   Isrc = CurrentSourceDC(0.1)
+
+   # Construct the circuit. All circuits are just
+   # Digraphs allowing multiple edges. On each edge
+   # one component.
+   wheatstone_bridge = Circuit()
+   wheatstone_bridge.add(0, 1, R1)
+   wheatstone_bridge.add(0, 2, R2)
+   wheatstone_bridge.add(1, 2, R3)
+   wheatstone_bridge.add(1, 3, R4)
+   wheatstone_bridge.add(2, 3, R5)
+   wheatstone_bridge.add(3, 0, Isrc)
+
+   # Simulate! 1000 steps with a time-step of 100ms
+   wheatstone_bridge.simulate(0.1, 1000)
+
+The results are attached to each component instance in their
+``component.v`` and ``component.i`` members. Those contain the voltages
+and currents respectively for each time step as a list.
+
+Circuits are graphs (like mentioned in the snippet). More precisely, a
+Digraph allowing multiple edges from and to the same nodes. Each edge
+represents a single two-terminal component (like a resistor). Those are
+connected to nodes, which are simple joints that can be arbitrarly named
+or identified (for example numbers like in the example above, but
+strings, or even other objects are possible if necessary).
+
+Example Plotting
+----------------
+
+.. code:: python
+
+   from respice.examples import RC
+   from matplotlib import pyplot as plt
+
+
+   # Define an example RC circuit. The package respice.examples
+   # contains a few!
+   rc = RC(100, 100e-6, 10)  # 100Ohm, 100uF, 10V
+
+   dt = 0.01
+   cycles = 1000
+   rc.simulate(dt, cycles)
+
+   # Necessary for matplotlib.
+   x_vals = [dt * x for x in range(cycles)]
+
+   # Setup voltage and current plots.
+   plt.subplot(211)
+   plt.ylabel('V')
+   plt.plot(x_vals, rc.R.v)
+   plt.plot(x_vals, rc.C.v)
+   plt.legend([rc.R.name, rc.C.name])
+
+   plt.subplot(212)
+   plt.ylabel('I')
+   plt.plot(x_vals, rc.R.i)
+   plt.plot(x_vals, rc.C.i)
+   plt.legend([rc.R.name, rc.C.name])
+
+   # Display.
+   plt.show()
+
+Supports
+--------
+
+-  **MNA - Modified Nodal Analysis**
+
+   This is the algorithm employed by this software. So it’s easily
+   possible to handle voltages as well as currents.
+
+-  **Multi-terminal components**
+
+   Components with more than just two terminals can be handled easily.
+   Whether each sub-branch of them is a current- or voltage-branch, or
+   whether they are current- or voltage-driven.
+
+-  **Mutual coupling**
+
+   Usually required by multi-terminal components, mutual coupling is
+   easily implementable. Each sub-branch in a component is automatically
+   receiving the voltages and currents of all other branches comprising
+   the component.
+
+The Future
+----------
+
+-  **Incorporating interfaces for heat-dynamics**
+
+   Components are often depending on operation temperature. This can
+   highly change behaviour of the whole circuit. Implementing
