@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: tmj
+Version: 1.0.0
+Summary: Small CLI utility script to help me with TMJ disorder isometric jaw exercises.
+Home-page: https://github.com/Figglewatts/tmj
+Author: Figglewatts
+License: UNKNOWN
+Keywords: tmj temporomandibular joint disorder
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: colorama (>=0.4.3)
+
+# tmj
+Small CLI utility script to help me with TMJ disorder isometric jaw exercises.
+
+The exercises used are as in [this video](https://www.youtube.com/watch?v=Vrz25x3qnTY&feature=youtu.be&t=208).
+
+In the program they are labelled as 'push up', 'pull down', 'push left', and 'push right'.
+
+## Prerequisites
+- Python 3.7
+
+## Installation
+```bash
+pip install tmj
+```
+
+## Usage
+```bash
+$ tmj
+```
+
