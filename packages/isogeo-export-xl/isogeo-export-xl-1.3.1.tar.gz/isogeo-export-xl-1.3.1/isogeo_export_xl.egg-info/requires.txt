@@ -1,0 +1,10 @@
+isogeo-pysdk<=3.4
+openpyxl==3.0.*
+
+[dev]
+black
+python-dotenv
+
+[test]
+pytest
+pytest-cov
