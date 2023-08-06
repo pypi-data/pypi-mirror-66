@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+nepali_stemmer/__init__.py
+nepali_stemmer/helper.py
+nepali_stemmer/stemmer.py
+nepali_stemmer.egg-info/PKG-INFO
+nepali_stemmer.egg-info/SOURCES.txt
+nepali_stemmer.egg-info/dependency_links.txt
+nepali_stemmer.egg-info/top_level.txt
+nepali_stemmer/files/__init__.py
+nepali_stemmer/files/dictionary.txt
+nepali_stemmer/files/suffix.txt
