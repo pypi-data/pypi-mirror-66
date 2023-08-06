@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: femtow
+Version: 0.1.1
+Summary: 
+Author: bruk.habtu
+Author-email: bruk.habtu@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: Routes (>=2.4,<3.0)
+Requires-Dist: backlash (>=0.1.4,<0.2.0)
+Requires-Dist: mako (>=1.0,<2.0)
+Requires-Dist: venusian (>=1.1,<2.0)
+Requires-Dist: webob (>=1.8,<2.0)
