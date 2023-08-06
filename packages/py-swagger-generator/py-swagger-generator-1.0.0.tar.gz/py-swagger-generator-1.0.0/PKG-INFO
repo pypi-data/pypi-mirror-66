@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: py-swagger-generator
+Version: 1.0.0
+Summary: A Package that can be used to create swagger yaml using templates
+Home-page: https://github.com/RedstoneMedia/py_swagger_generator
+Author: RedstoneMedia
+License: GNU General Public License v3.0
+Description: # Python Swagger Generator
+        
+        This is a package for python to automatically create swagger documentation yaml files using templates.
+Keywords: swagger generator templates tool
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
