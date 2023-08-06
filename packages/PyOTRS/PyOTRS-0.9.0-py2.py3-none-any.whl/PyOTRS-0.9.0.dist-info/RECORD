@@ -1,0 +1,11 @@
+cli/PyOTRS.py,sha256=MUIaxdb8L54sLJPSN2tLVSoXjb2TyGLIP7C-w3H1OT8,5331
+cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyotrs/__init__.py,sha256=vPko0ZO_5t6v08dMbd5kGZIeOW82XH51MPrv6YuRHOI,690
+pyotrs/lib.py,sha256=_7M1ehhOSSGiFxDuooOjyKb_AhHCW35GmUv9bF-kR0Y,71254
+pyotrs/version.py,sha256=YMFrVw3te0yGoIj1nfe0uZ0dL2oyKRGfRnVs3zNYRHI,273
+PyOTRS-0.9.0.dist-info/LICENSE,sha256=jEOqtL3OAuPn89tisl5-iuGbFdnLHfIXq1iLlPv3flg,1088
+PyOTRS-0.9.0.dist-info/METADATA,sha256=PLlf_h7vQpyrknkL__FTsdUZlO4dTVP-lTVyoFrnxaw,17341
+PyOTRS-0.9.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+PyOTRS-0.9.0.dist-info/entry_points.txt,sha256=s1kwZqur_g1rjXn6xANZCNhQCi7IJSu0HvoIL3If39A,61
+PyOTRS-0.9.0.dist-info/top_level.txt,sha256=1T-2sbK5gXklcfoKtb2UPvAU1FhCGVY2YmoZz7jM8rU,11
+PyOTRS-0.9.0.dist-info/RECORD,,
