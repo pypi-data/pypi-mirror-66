@@ -1,0 +1,17 @@
+kind: pipeline
+type: kubernetes
+name: default
+
+steps:
+- name: test
+  image: python
+  commands:
+    - pip install -r requirements/dev.txt
+    - pytest
+- name: upload
+  image: python
+  commands:
+    - python setup.py upload
+  when:
+    event:
+      - tag
