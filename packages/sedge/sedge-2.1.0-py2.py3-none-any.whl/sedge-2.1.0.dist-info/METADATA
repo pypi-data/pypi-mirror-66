@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: sedge
+Version: 2.1.0
+Summary: Template and share OpenSSH ssh_config files.
+Author: Grahame Bowland
+Author-email: grahame@oreamnos.com.au
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
