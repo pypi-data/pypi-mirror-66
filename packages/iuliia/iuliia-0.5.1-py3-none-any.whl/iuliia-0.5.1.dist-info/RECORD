@@ -1,0 +1,12 @@
+iuliia/__init__.py,sha256=KQjjsfdpsyiBMCk9Nx5nzX7GsY8jj-znIa0DpPYP6FE,835
+iuliia/__main__.py,sha256=Q7OzCxdKo-W3xh8mWO4dpheuZzgHa-QDCpSjMZwizUE,677
+iuliia/engine.py,sha256=eDAwVv8mc-zYOX3H2yyCofn5EhKh4cKV_A5hEfTdl0s,1609
+iuliia/schema.py,sha256=--m_3Sq9zHSLfwIWYWDmXPeAIIJbkELbPYJEFSZOS7k,1768
+iuliia/wikipedia.py,sha256=LaZHknJNfP2nyW0qxyVNJyag8r0QOctwXQZy5vxxwKE,1224
+iuliia/yandexmaps.py,sha256=U_OxPjoABG7aqgqlbYuF7BFlFlPREXRabBRWw9-Uomw,780
+iuliia/yandexmoney.py,sha256=y9QXkndP7VvJlfZsISmYH9zfy7nq1mTwNb9x5tIaXWI,661
+iuliia-0.5.1.dist-info/entry_points.txt,sha256=Axob9CE0BuQ3gBstkWZVUdyoLbMbxieVchwW82bkOvg,47
+iuliia-0.5.1.dist-info/LICENSE,sha256=0lX5IIVfST__xfWCFGIPor0YcTuGdE5oM85bTs23624,1071
+iuliia-0.5.1.dist-info/WHEEL,sha256=GLESb-AiO9TFjbXrEA7UrNl4dwWlkXoKZg6N6Vg0OJg,81
+iuliia-0.5.1.dist-info/METADATA,sha256=vSnlf42Stb67ifJot6cXY0HZSxudW7tVbQu5dneks3s,2947
+iuliia-0.5.1.dist-info/RECORD,,
