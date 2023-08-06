@@ -1,0 +1,8 @@
+README.md
+setup.py
+prodos/__init__.py
+prodos/core.py
+prodos.egg-info/PKG-INFO
+prodos.egg-info/SOURCES.txt
+prodos.egg-info/dependency_links.txt
+prodos.egg-info/top_level.txt
