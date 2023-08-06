@@ -1,0 +1,36 @@
+Metadata-Version: 1.1
+Name: tttimer
+Version: 0.0.3
+Summary: TremTec Timer CLI
+Home-page: https://github.com/marco-souza/tttimer
+Author: TremTec Software
+Author-email: contato@tremtec.com
+License: UNKNOWN
+Description: # TremTec Timer
+        
+        TremTec CLI to log work.
+        
+        ## Usage
+        
+        Start to work:
+        
+        ```sh
+        ttt start -t "DVP: My task"
+        ```
+        
+        Stop work:
+        
+        ```sh
+        ttt stop
+        ```
+        
+Keywords: TremTec Timer
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.7
