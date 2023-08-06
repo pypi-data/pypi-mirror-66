@@ -1,0 +1,11 @@
+django_cacheme/__init__.py,sha256=YDm0RPohj5oK59Do6NdIC1D1Z21lDnsj5h3zp800P9s,44
+django_cacheme/admin.py,sha256=PpgkSLPLOoD40VVbym_OfH5SEsl0O-3vaYZEOvhU7kA,1446
+django_cacheme/cache_model.py,sha256=bj4wJB-iwZNkG6ffLYagjkgT8OIO1GpuJjIXpIshWRA,1173
+django_cacheme/models.py,sha256=17N59sfHolZhvvq8-ghtCVl8CpLVJKYAhx2nnzNvekk,905
+django_cacheme/nodes.py,sha256=DozgQRUUSb4pA9aUUWFBnj9KmqgapLRZedQVYIDTZIk,3262
+django_cacheme/utils.py,sha256=7eNGmC0RB7j-wPxKI5t7LhylOmeLWW_soTU0AwDLtRA,1627
+django_cacheme-0.1.3.dist-info/LICENSE,sha256=BLwSpQ2GDRPE1Iyys74vTztoYNMH2ro47GwH0XLLYz4,1516
+django_cacheme-0.1.3.dist-info/METADATA,sha256=XlF-5PMlY32AqWw6JaWqQ56c3f3KEyyOyLnMX5uGZnA,1059
+django_cacheme-0.1.3.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+django_cacheme-0.1.3.dist-info/top_level.txt,sha256=CdedlZFo6aB9fqjIYU9JWvkJxsuW4snKodBfYq0wJko,15
+django_cacheme-0.1.3.dist-info/RECORD,,
