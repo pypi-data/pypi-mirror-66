@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: id-roles
+Version: 0.0.5
+Summary: Id-manager roles package
+Home-page: https://github.com/W-DEJONG/id-roles
+Author: Wouter de Jong
+Author-email: author@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Security
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# id-roles
+Id-manager roles library   
+Simple library for managing access roles. Inspired bij OAUTH scopes.
+
+## Installation
+
+       pip install id-roles
+
+## Role structure
+
+Roles can be described as keys with optional values using a single string.  
+Multiple roles are seperated by spaces and may contain an optional values string `[value1,value2]`. Values are separated by. `,`  
+
+        roles_str = "connect admin order[*] customer[read,update]"
+
+
+Role names may only contain alphanumeric characters and `-`, `_` or `:`.   
+Role value may only contain alphanumeric characters and `-`, `_` or `.`.   
+
+`[*]` is a special value string that indicated that all values are valid.
+
+
