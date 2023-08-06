@@ -1,0 +1,6 @@
+include LICENSE
+include README.md
+recursive-include selia_visualizers/static *
+recursive-include selia_visualizers/templates *
+recursive-include selia_visualizers/locale *
+recursive-include docs *

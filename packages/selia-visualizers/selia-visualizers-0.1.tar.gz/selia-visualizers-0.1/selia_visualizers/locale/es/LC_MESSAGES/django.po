@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-21 20:32-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models.py:23
+msgid "visualizer"
+msgstr "visualizador"
+
+#: models.py:24
+msgid "Visualizer"
+msgstr "Visualizador"
+
+#: models.py:30
+msgid "javascript file"
+msgstr "archivo de javascript"
+
+#: models.py:31
+msgid "Javascript file containing visualizer component"
+msgstr "Archivo de javascript que contiene la componente de visualizador"
+
+#: models.py:41
+msgid "Visualizer Component"
+msgstr "Componente de Visualizador"
+
+#: models.py:42
+msgid "Visualizers Components"
+msgstr "Componentes de Visualizador"
+
+#: models.py:53
+msgid "item type"
+msgstr "tipo de artículo"
+
+#: models.py:54
+msgid "Item type"
+msgstr "Tipo de artículo"
+
+#: models.py:59
+msgid "visualizer component"
+msgstr "componente de visualizador"
+
+#: models.py:60
+msgid "Visualizer component"
+msgstr "Componente de visualizador"
+
+#: models.py:64
+msgid "is active"
+msgstr "está activa"
+
+#: models.py:65
+msgid "Is visualizer app active?"
+msgstr "¿Está activa la aplicación del visualizador?"
+
+#: models.py:71
+msgid "Visualizer Component Item Type"
+msgstr "Tipo de Artículo de Componente de Visualizador"
+
+#: models.py:72
+msgid "Visualizer Component Item Types"
+msgstr "Tipos de Artículo de Componente de Visualizador"
