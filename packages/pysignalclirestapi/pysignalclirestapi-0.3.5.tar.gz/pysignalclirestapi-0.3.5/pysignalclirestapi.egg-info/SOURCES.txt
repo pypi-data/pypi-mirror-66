@@ -1,0 +1,7 @@
+README.md
+setup.cfg
+setup.py
+pysignalclirestapi.egg-info/PKG-INFO
+pysignalclirestapi.egg-info/SOURCES.txt
+pysignalclirestapi.egg-info/dependency_links.txt
+pysignalclirestapi.egg-info/top_level.txt
