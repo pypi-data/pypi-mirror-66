@@ -1,0 +1,10 @@
+pyreadstat/_readstat_writer.so,sha256=NWFK0TLuFLhFlT3ndAbUZMJqlJki1JZh4ed2g8Z5jKU,2155200
+pyreadstat/__init__.py,sha256=ZOxar62g5I1irqPzCeDpaTox4TEIt_p55aocbcnZVC4,1096
+pyreadstat/_readstat_parser.so,sha256=yqFlbNowaXABBOmnwO6Qo_uKswSdd-54B5O0VB9bhk4,1692336
+pyreadstat/pyreadstat.so,sha256=8gi1wc5U0hcwA3TShQ0_duMpz_s8eNYsnYATfjGkhIc,1770304
+pyreadstat-0.3.3.dist-info/WHEEL,sha256=v_WvMd9LcJo7UEU8YDntezoLIPEhS-iS69BF1ftVDNw,110
+pyreadstat-0.3.3.dist-info/top_level.txt,sha256=7LlluhR4SADp00dJTEVpKMet_Jki7JHA6abJ-wu831E,11
+pyreadstat-0.3.3.dist-info/LICENSE,sha256=Tjohfl1RlkuDoTF5ctnLvkGnr8TU27PEy7PhOHjRz5c,12903
+pyreadstat-0.3.3.dist-info/METADATA,sha256=cyUSaNM7rYdk_G7TaeuWmz-X3qzHJjsjs7Pr1NfJpWY,1028
+pyreadstat-0.3.3.dist-info/RECORD,,
+pyreadstat.libs/libz-a147dcb0.so.1.2.3,sha256=VwXH3AM7bnoa793tKDw_H0pW-VZos08-FEtM_g_VWVM,87848
