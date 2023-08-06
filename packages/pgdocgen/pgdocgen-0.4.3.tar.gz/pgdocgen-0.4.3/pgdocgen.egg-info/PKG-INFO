@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pgdocgen
+Version: 0.4.3
+Summary: Documentation generator for Postgresql schema
+Home-page: https://github.com/C-Pro/pgdocgen
+Author: Sergey Melekhin
+Author-email: sergey@melekhin.me
+License: LGPL
+Download-URL: https://github.com/C-Pro/pgdocgen/tarball/0.4.3
+Description: Documentation generator for Postgresql schema.
+Keywords: postgresql,sql,ddl,documentation,generator
+Platform: UNKNOWN
+Description-Content-Type: text/plain
