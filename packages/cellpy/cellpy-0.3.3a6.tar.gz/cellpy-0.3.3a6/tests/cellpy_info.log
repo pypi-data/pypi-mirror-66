@@ -1,0 +1,776 @@
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - customdir, default: testing logger (info)
+(cellpy) - customdir, default: testing logger (error)
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpsucnsqwk\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpsucnsqwk\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpsucnsqwk\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpsucnsqwk\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpsucnsqwk\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpt0a9nxb5\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\testdata\data\pec.csv
+(cellpy) - Setting mass: 50000
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\testdata\hdf5\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Ready to help you to get some data to play with.
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\cellpy\utils\data\raw\20160805_test001_45_cc_01.res
+(cellpy) - Setting mass: 0.704
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\cellpy\utils\data\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - no steps found (c:18 s:0 type:charge)
+(cellpy) - STEP 0: Using first point as ref voltage
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp1h2amdqq\pec_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp1h2amdqq\pec_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp1h2amdqq\pec_stats.csv OK
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - customdir, default: testing logger (info)
+(cellpy) - customdir, default: testing logger (error)
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpsaf5k9hg\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpsaf5k9hg\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpsaf5k9hg\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpsaf5k9hg\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpsaf5k9hg\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp2xxvl7c7\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\testdata\data\pec.csv
+(cellpy) - Setting mass: 50000
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\testdata\hdf5\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Ready to help you to get some data to play with.
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\cellpy\utils\data\raw\20160805_test001_45_cc_01.res
+(cellpy) - Setting mass: 0.704
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\cellpy\utils\data\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - no steps found (c:18 s:0 type:charge)
+(cellpy) - STEP 0: Using first point as ref voltage
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpgm5kk3mq\pec_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpgm5kk3mq\pec_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpgm5kk3mq\pec_stats.csv OK
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - customdir, default: testing logger (info)
+(cellpy) - customdir, default: testing logger (error)
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp5sfq51wr\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5sfq51wr\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5sfq51wr\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5sfq51wr\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp5sfq51wr\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp5gd0_w4c\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\testdata\data\pec.csv
+(cellpy) - Setting mass: 50000
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\testdata\hdf5\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Ready to help you to get some data to play with.
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\cellpy\utils\data\raw\20160805_test001_45_cc_01.res
+(cellpy) - Setting mass: 0.704
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\cellpy\utils\data\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - no steps found (c:18 s:0 type:charge)
+(cellpy) - STEP 0: Using first point as ref voltage
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpr3ad385i\pec_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpr3ad385i\pec_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpr3ad385i\pec_stats.csv OK
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - customdir, default: testing logger (info)
+(cellpy) - customdir, default: testing logger (error)
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpsnp3mopt\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpsnp3mopt\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpsnp3mopt\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpsnp3mopt\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpsnp3mopt\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpskmussgx\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\testdata\data\pec.csv
+(cellpy) - Setting mass: 50000
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\testdata\hdf5\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Ready to help you to get some data to play with.
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\cellpy\utils\data\raw\20160805_test001_45_cc_01.res
+(cellpy) - Setting mass: 0.704
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\cellpy\utils\data\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - no steps found (c:18 s:0 type:charge)
+(cellpy) - STEP 0: Using first point as ref voltage
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpj1za0f2c\pec_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpj1za0f2c\pec_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpj1za0f2c\pec_stats.csv OK
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - customdir, default: testing logger (info)
+(cellpy) - customdir, default: testing logger (error)
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp4xje4uvo\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp4xje4uvo\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp4xje4uvo\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp4xje4uvo\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp4xje4uvo\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpc6j98t0v\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\testdata\data\pec.csv
+(cellpy) - Setting mass: 50000
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\testdata\hdf5\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Ready to help you to get some data to play with.
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\cellpy\utils\data\raw\20160805_test001_45_cc_01.res
+(cellpy) - Setting mass: 0.704
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\cellpy\utils\data\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - no steps found (c:18 s:0 type:charge)
+(cellpy) - STEP 0: Using first point as ref voltage
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpkl882xfn\pec_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpkl882xfn\pec_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpkl882xfn\pec_stats.csv OK
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - customdir, default: testing logger (info)
+(cellpy) - customdir, default: testing logger (error)
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmptboz1217\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmptboz1217\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmptboz1217\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmptboz1217\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmptboz1217\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp2afl6hbg\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\testdata\data\pec.csv
+(cellpy) - Setting mass: 50000
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\testdata\hdf5\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Ready to help you to get some data to play with.
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\cellpy\utils\data\raw\20160805_test001_45_cc_01.res
+(cellpy) - Setting mass: 0.704
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\cellpy\utils\data\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - no steps found (c:18 s:0 type:charge)
+(cellpy) - STEP 0: Using first point as ref voltage
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp0sl6yssd\pec_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp0sl6yssd\pec_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp0sl6yssd\pec_stats.csv OK
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - customdir, default: testing logger (info)
+(cellpy) - customdir, default: testing logger (error)
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp3hn2vjg8\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp3hn2vjg8\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp3hn2vjg8\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp3hn2vjg8\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp3hn2vjg8\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpmntamfeo\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\testdata\data\pec.csv
+(cellpy) - Setting mass: 50000
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\testdata\hdf5\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Ready to help you to get some data to play with.
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\cellpy\utils\data\raw\20160805_test001_45_cc_01.res
+(cellpy) - Setting mass: 0.704
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\cellpy\utils\data\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - no steps found (c:18 s:0 type:charge)
+(cellpy) - STEP 0: Using first point as ref voltage
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp7_88oqyp\pec_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp7_88oqyp\pec_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp7_88oqyp\pec_stats.csv OK
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - default: testing logger (info)
+(cellpy) - default: testing logger (error)
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - customdir, default: testing logger (info)
+(cellpy) - customdir, default: testing logger (error)
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmp8eobug7i\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp8eobug7i\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp8eobug7i\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmp8eobug7i\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmp8eobug7i\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) -  -> C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01.h5
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_stats.csv OK
+(cellpy) - The file C:\Users\jepe\AppData\Local\Temp\tmpejk66i1i\20160805_test001_45_cc_01_cycles.csv was created
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\testdata\data\pec.csv
+(cellpy) - Setting mass: 50000
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\testdata\hdf5\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Ready to help you to get some data to play with.
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading raw-file: C:\scripts\cellpy\cellpy\utils\data\raw\20160805_test001_45_cc_01.res
+(cellpy) - Setting mass: 0.704
+(cellpy) - Creating step table
+(cellpy) - Creating summary data
+(cellpy) - Assuming cycling in anode half-cell (discharge before charge) mode
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - Created CellpyData object
+(cellpy) - 
+Could not set custom log-dir - non-existing directory
+Dir: C:\scripts\cellpy\testdata\log
+Using current directory instead: C:\scripts\cellpy\tests
+(cellpy) - Loading cellpy-file: C:\scripts\cellpy\cellpy\utils\data\20160805_test001_45_cc.h5
+(cellpy) - Created CellpyData object
+(cellpy) - no steps found (c:18 s:0 type:charge)
+(cellpy) - STEP 0: Using first point as ref voltage
+(cellpy) - Assuming cycling in full-cell / cathode mode
+(cellpy) - could not extract low-high levels (ref cycle number does not exist)
+(cellpy) - Using the following nominal capacity: 3579
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmphpnlm_tx\pec_normal.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmphpnlm_tx\pec_steps.csv OK
+(cellpy) - C:\Users\jepe\AppData\Local\Temp\tmphpnlm_tx\pec_stats.csv OK
