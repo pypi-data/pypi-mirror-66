@@ -1,0 +1,3 @@
+[console_scripts]
+misaki = misaki.__main__:main
+
