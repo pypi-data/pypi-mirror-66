@@ -1,0 +1,9 @@
+README.md
+setup.py
+mypackage/__init__.py
+mypackage/myanothermodule.py
+mypackage/mymodule.py
+pancopackage.egg-info/PKG-INFO
+pancopackage.egg-info/SOURCES.txt
+pancopackage.egg-info/dependency_links.txt
+pancopackage.egg-info/top_level.txt
