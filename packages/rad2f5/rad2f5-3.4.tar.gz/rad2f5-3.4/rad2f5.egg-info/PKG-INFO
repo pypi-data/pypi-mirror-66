@@ -1,0 +1,33 @@
+Metadata-Version: 1.0
+Name: rad2f5
+Version: 3.4
+Summary: A Python script to convert RadWare configuration to F5 syntax
+Home-page: https://pypi.python.org/pypi?:action=display&name=rad2f5&version=3.4
+Author: Pete White
+Author-email: pwhite@f5.com
+License: PSF
+Description: rad2f5
+        ======
+        
+        This is a simple script to convert Radware Appdirector configurations to F5 configuration. This was written in Python v2.7 but is expected to work on v3.
+        
+        Install using pip:
+        
+        ``pip install rad2f5``
+        
+        Usage
+        =====
+        ``Usage: rad2f5 <filename> [partition]``
+        
+        Output is to stdout and shows statistics about the number of objects and then F5-syntax configuration. 
+        This F5 configuration can be loaded onto an F5 device using ``tmsh load sys config merge file /var/tmp/<filename> verify``. 
+        Fix any issues and load with ``tmsh load sys config merge file /var/tmp/<filename>``
+        
+        The certificates and keys will be output into the current directory, these should be uploaded to the BIG-IP in the /var/tmp
+        directory and run the script check_certs.sh to ensure the certs and keys are correct, then run load_certs to load the certificates and keys.
+        
+        See an example at https://devcentral.f5.com/codeshare/radware-config-translation-1130
+        
+        Contact me at DevCentral if you would like any configuration added or for bug fixes.
+        
+Platform: UNKNOWN
