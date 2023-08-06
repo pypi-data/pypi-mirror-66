@@ -1,0 +1,4 @@
+chaostoolkit-lib~=1.8
+logzero~=1.5
+dateparser~=0.7
+requests~=2.22
