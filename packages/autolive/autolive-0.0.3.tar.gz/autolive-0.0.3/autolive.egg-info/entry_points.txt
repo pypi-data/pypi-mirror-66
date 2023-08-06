@@ -1,0 +1,3 @@
+[console_scripts]
+autolive = Autolive.autolive:main
+
