@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: dlds-client
+Version: 0.14.1
+Summary: Python API for Deep Learning DS from Data Spree.
+Home-page: UNKNOWN
+Author: Eric Dörheit
+Author-email: eric.doerheit@data-spree.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: aiohttp
+Requires-Dist: Click
+Requires-Dist: joblib
+Requires-Dist: numpy
+Requires-Dist: Pillow
+Requires-Dist: requests
+Requires-Dist: tqdm
+
+UNKNOWN
+
+
