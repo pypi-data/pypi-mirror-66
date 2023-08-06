@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: star-lord
+Version: 0.0.8
+Summary: Microservice with django
+Home-page: https://github.com/wienerdeming/star-lord
+License: UNKNOWN
+Description: # Micro template
+        
+        This template is for writing micro services which are based on [bgtasks][bgtasks]
+        
+        #### Do this steps to prepare your template for work:
+          - Enter **APP_NAME(SERVICE_NAME)** in settings file
+          - Change **micro_template** keyword in deployment files
+          - While adding django models, after `manage.py makemigration` register your model permissions adding python command into migration file.(You can use `register_perms(permissions:list)` function in `apps/shared/service/perm.py` file )
+        
+        [bgtasks]: <https://pypi.org/project/bgtasks/>
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
