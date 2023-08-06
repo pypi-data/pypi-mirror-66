@@ -1,0 +1,10 @@
+README.md
+setup.py
+uncd/UnicodeUtility.py
+uncd/__init__.py
+uncd.egg-info/PKG-INFO
+uncd.egg-info/SOURCES.txt
+uncd.egg-info/dependency_links.txt
+uncd.egg-info/entry_points.txt
+uncd.egg-info/requires.txt
+uncd.egg-info/top_level.txt

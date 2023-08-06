@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: uncd
+Version: 0.15
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: hpencilb
+Author-email: haemoglob.j.ben@gmail.com
+License: MIT Licence
+Description: # uncd
+        
+        This is a CLI tool to find some information about a Unicode or a Block of Unicode.
+        
+        ## Usage
+        
+        `uncd f <unicode>` only accepts hex
+        
+        `uncd b <blockname>` only return when the name exists
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown

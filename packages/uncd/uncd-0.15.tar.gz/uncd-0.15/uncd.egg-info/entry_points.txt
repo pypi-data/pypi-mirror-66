@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        uncd=uncd.__init__:cli
+    
