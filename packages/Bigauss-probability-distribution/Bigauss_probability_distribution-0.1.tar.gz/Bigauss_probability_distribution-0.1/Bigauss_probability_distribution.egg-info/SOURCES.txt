@@ -1,0 +1,10 @@
+setup.py
+Bigauss_probability_distribution/Binomialdistribution.py
+Bigauss_probability_distribution/Gaussiandistribution.py
+Bigauss_probability_distribution/Generaldistribution.py
+Bigauss_probability_distribution/__init__.py
+Bigauss_probability_distribution.egg-info/PKG-INFO
+Bigauss_probability_distribution.egg-info/SOURCES.txt
+Bigauss_probability_distribution.egg-info/dependency_links.txt
+Bigauss_probability_distribution.egg-info/not-zip-safe
+Bigauss_probability_distribution.egg-info/top_level.txt
