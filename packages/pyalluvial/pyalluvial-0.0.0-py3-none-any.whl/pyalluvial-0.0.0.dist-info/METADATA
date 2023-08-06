@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pyalluvial
+Version: 0.0.0
+Summary: Plotting Alluvial Plot
+Home-page: https://github.com/nekoumei/pyalluvial
+Author: nekoumei
+Author-email: nekoumei@gmail.com
+Maintainer: nekoumei
+Maintainer-email: nekoumei@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: MacOS X
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Dist: matplotlib (>=3.0.2)
+Requires-Dist: numpy (>=1.18.2)
+
+# pyalluvial
+
+
