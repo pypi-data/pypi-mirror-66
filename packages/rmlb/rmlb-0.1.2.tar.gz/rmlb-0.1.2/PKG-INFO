@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: rmlb
+Version: 0.1.2
+Summary: Remove a branch that does not exist in remote.
+Home-page: https://github.com/ucpr/rmlb
+License: MIT
+Author: ucpr
+Author-email: hoge.uchihara@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Project-URL: Repository, https://github.com/ucpr/rmlb
+Description-Content-Type: text/markdown
+
+# rmlb
+
+Remove a branch that does not exist in remote.
+
+## Install
+
+```shell
+$ pip install rmlb
+```
+
+## Usage
+
+```no
+usage: rmlb.py [-h] [-ro {-d,-D}] [-q]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -ro {-d,-D}, --remove-option {-d,-D}
+                        Options for removing a branch. The default is '-d'.
+  -q, --quiet           No output.
+```
+
+## Author
+ucpr
+
+## License
+MIT
+
