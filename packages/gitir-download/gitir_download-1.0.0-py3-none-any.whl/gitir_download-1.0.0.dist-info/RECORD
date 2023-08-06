@@ -1,0 +1,11 @@
+gitir_downloader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitir_downloader/downloader.py,sha256=3WJCEfWXvVvmtD4GRdQ6UJBMK83gUOhAsgG05e8bIO8,2054
+gitir_downloader/main.py,sha256=np57URDS31VZ0om2xQ3KKINd-jfuMkTnHk0gL80j0J4,1085
+gitir_downloader/parser.py,sha256=I9Z9dNiedhrcU3bGtsQOPEdtB76np7nAwTY9JpMccwo,831
+gitir_downloader/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitir_downloader/utils/tidy_names.py,sha256=28MCltk9cXvNEUXwZgQ0brgG2VQ5SVkA-7muQoCfUkE,442
+gitir_download-1.0.0.dist-info/METADATA,sha256=v0qbB6xq4r7iq6bw6_MxOHXUy1uSzsthXL0RNxlN-zE,1547
+gitir_download-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gitir_download-1.0.0.dist-info/entry_points.txt,sha256=EMX6L3uovX6WYHw92Z6AHHVUVTXz5IXpmLWbpGJ5gPA,53
+gitir_download-1.0.0.dist-info/top_level.txt,sha256=QQSMecbzkUe-bgZor3cTrXoCvRtCYYZvD03lcgFzzZQ,17
+gitir_download-1.0.0.dist-info/RECORD,,
