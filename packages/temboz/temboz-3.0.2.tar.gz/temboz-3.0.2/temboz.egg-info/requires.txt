@@ -1,0 +1,9 @@
+flask
+requests
+html5lib
+passlib
+argon2_cffi
+translitcodec
+feedparser
+werkzeug>=1.0.1
+yappi
