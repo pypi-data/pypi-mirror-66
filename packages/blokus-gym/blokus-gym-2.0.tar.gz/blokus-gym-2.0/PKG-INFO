@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: blokus-gym
+Version: 2.0
+Summary: OpenAI gym environment for Blokus
+Home-page: https://github.com/frankilepro/blokus_ai
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: gpl-3.0
+Download-URL: https://github.com/frankilepro/blokus-ai/archive/v2.0.tar.gz
+Description: UNKNOWN
+Keywords: blokus,board game,block us
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.7
