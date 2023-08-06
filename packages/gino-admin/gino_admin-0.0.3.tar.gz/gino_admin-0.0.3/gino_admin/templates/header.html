@@ -1,0 +1,18 @@
+<div class="ui fixed inverted menu">
+      <div class="ui container">
+        <a href="/" class="header item">
+          Sanic-Gino Admin Panel
+        </a>
+        {% for key, value in objects.items() %}
+      <a href="{{url_prefix}}/{{key.lower()}}" class="item">{{key}}</a>
+   {% endfor %}
+
+          <div class="right menu">
+          {% if '_auth' in session %}
+            <a href="{{url_prefix}}/logout" class="header item">Logout</a>
+          {% else %}
+             <a href="{{url_prefix}}/login" class="header item">Log in</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
