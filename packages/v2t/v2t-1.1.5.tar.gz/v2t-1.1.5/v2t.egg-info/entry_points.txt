@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        v2t=v2t.cli:cli
+    
