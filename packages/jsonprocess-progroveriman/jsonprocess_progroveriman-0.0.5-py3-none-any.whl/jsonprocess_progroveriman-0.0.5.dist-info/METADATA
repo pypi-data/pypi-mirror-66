@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: jsonprocess-progroveriman
+Version: 0.0.5
+Summary: Some JSON process tools that I used regularly
+Home-page: https://github.com/pypa/sampleproject
+Author: Progroveriman
+Author-email: xmk233@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+Some handy code that I use for processing json. 
+
+* read_api_rst(file_path)
+* dump_json_to_file(dic, file_path, indent = 4, sort_keys = True)
+
