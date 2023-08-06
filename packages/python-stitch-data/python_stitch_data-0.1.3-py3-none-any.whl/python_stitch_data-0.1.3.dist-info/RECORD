@@ -1,0 +1,14 @@
+stitch_api/__init__.py,sha256=zVE0495jtX05H7k1VKvZd60XjD9gJHzHNplJintZ0_I,58
+stitch_api/cli.py,sha256=KT7Thx3RqWfmFPhMWAoU3kp6P2W3ZKemkVeb42sfrTI,4578
+stitch_api/constants.py,sha256=TSc080EllPvxK1fD3V6wpOQmcTc-HphJpbyd0qVVe7E,313
+stitch_api/stitch_api.py,sha256=bHzoaQ_e1RRE7upKonhvnZ0msWzb8Iik4-e5DwnAtI0,15007
+stitch_api/api/__init__.py,sha256=e0X5gRNJvzvIZrkl5ABr7UxKRU1koyleGLchD8p_Hhs,324
+stitch_api/api/common.py,sha256=CvdWWNhtIgkUo_-B-1O5IE15w-xmJrq9vXB_A4RnyHI,385
+stitch_api/api/internal.py,sha256=0W_YgiYQ_A-2MWYQCPcbXFyhkPKLYzcjY8Kcv2S0_JA,2217
+stitch_api/api/public.py,sha256=LV_RjKxL-YeOo-H_7mZKvtnd0G-eoGiLBniLiLUSv84,3736
+python_stitch_data-0.1.3.dist-info/LICENSE,sha256=pminPwLyxIoxSqur915bo-13ofXPuWAdMihhHp4sUks,1115
+python_stitch_data-0.1.3.dist-info/METADATA,sha256=9UPiKxEb_BVtl-0Vu14BykTRsSaGk7Y4-NQ7rcnts_0,1475
+python_stitch_data-0.1.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+python_stitch_data-0.1.3.dist-info/entry_points.txt,sha256=ChKPyJrzBV8ZACyivKTXsb9qeITAZKUBlKEGRSH0XC8,51
+python_stitch_data-0.1.3.dist-info/top_level.txt,sha256=O1KvYT09Uc9vyrd3eCuOrGRcgerbLH9Cv5dLq3Fgy-Y,11
+python_stitch_data-0.1.3.dist-info/RECORD,,
