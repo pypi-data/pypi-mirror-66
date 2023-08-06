@@ -1,0 +1,11 @@
+kaczmarz/__init__.py,sha256=KK4VpHIOixXOMMvFJYW1Uqk2ftQBA-OebJA6mCxN_8c,427
+kaczmarz/_get_selection_strategy.py,sha256=ieUMiQluxtPpkfVupTNh9kg4OSLni66lC8jUGbjBN1I,1449
+kaczmarz/_iterates.py,sha256=WuPnwQ_-W-SfNmv2HU-gXn3Tga8TXuJsOSlW-0r4vV8,4457
+kaczmarz/abc.py,sha256=zrDjPY-9peI8WNeMrPYHBMV8C4RtGKTqSLP1CoQnu-E,1212
+kaczmarz/exceptions.py,sha256=hw0pX7SOorK-gfHAi1VdGV8lgOqZPfWmWSixbHWBZFY,122
+kaczmarz/selection.py,sha256=wNfirJu5_nhnQLlPHuUXkX4DPanS3yLsgkwZLjkfr6w,1221
+kaczmarz_algorithms-0.2.0.dist-info/LICENSE,sha256=bYG3GvZbR1b1D4pE4rXy31hXiWefav5YVouG1aCVuvM,1071
+kaczmarz_algorithms-0.2.0.dist-info/METADATA,sha256=H2gc6hsdFUq-0pkb6C_rlwddDv8l9nBLKM8G1j8l7ZE,4318
+kaczmarz_algorithms-0.2.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+kaczmarz_algorithms-0.2.0.dist-info/top_level.txt,sha256=7ws4Xe6stOUOdHM5jaNAFy_mO8tquD8WAIK7NI5MGF8,9
+kaczmarz_algorithms-0.2.0.dist-info/RECORD,,
