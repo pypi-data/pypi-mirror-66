@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: fast-legion
+Version: 0.1.0
+Summary: A JWT Security Bundle that let's you choose your favorite data layer for the FastAPI framework.
+Author: David Emmanuel Asaf
+Author-email: me@davideasaf.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: fastapi (>=0.54.1,<0.55.0)
+Requires-Dist: pydantic (>=1.5,<2.0)
+Requires-Dist: pyjwt (>=1.7.1,<2.0.0)
