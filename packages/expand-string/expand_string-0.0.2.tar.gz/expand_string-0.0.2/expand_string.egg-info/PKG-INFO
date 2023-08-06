@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: expand-string
+Version: 0.0.2
+Summary: A helper package for expanding strings
+Home-page: https://github.com/ja-odur/exapnd-string
+Author: J. A. Odur
+Author-email: odurjoseph8@gmail.com
+License: UNKNOWN
+Description: # expand_string
+        
+        This library provides functions that allow you to expand a string
+        that contains parenthesis with numeric-values, and then expands that
+        into an actual string value.
+        
+        
+        # Installation
+        
+        ````bash
+        $ pip install expand_string
+        ````
+        
+        # Usage
+        
+        Simple example:
+        
+        ````python
+        from expand_string import expand_string
+        
+        expand_string('N3(S)N2(E3(NW))')
+        ````
+        
+        Would result in the output:
+        
+        ```bash
+        NSSSNENWNWNWENWNWNW
+        ```
+        Shell example:
+        ```bash
+        python -m expand_string 'N3(S)N2(E3(NW))'
+        ```
+        
+        Would result in the output:
+        
+        ```bash
+        NSSSNENWNWNWENWNWNW
+        ```
+        
+        For more details see the `expand_string` docstring.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
