@@ -1,0 +1,12 @@
+buildflaskapp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+buildflaskapp/buildflaskapp.py,sha256=BKvLBrzCSQ7LNFyc4DuTp3qK4ESo7jdBAdn2uxP3hyk,93
+scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scripts/__version__.py,sha256=X0PliCRFAeVnSTceUeHX1eM0j1HFhGFDWCRxLdde2Bs,21
+scripts/manual.py,sha256=KYDfhKkR9QuYQFJypLbUT5Nc1hY3Gi2ZLXZWf5DX1ok,805
+scripts/messages.py,sha256=jOmrVlrqRPjRzRe3G6gqdLWPCfrdKIyP8RZU5lSHm4A,323
+scripts/workflow.py,sha256=N6A3iWD3oP0WGO_qXbwUDbkXYalOgVTsXTVXxhI0_DE,9057
+buildflaskapp-0.0.1.1.1.dist-info/METADATA,sha256=SbaFLiisOKNALoWbX0C1S_hikmDWgrXMB8JTmqCXH7s,438
+buildflaskapp-0.0.1.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+buildflaskapp-0.0.1.1.1.dist-info/entry_points.txt,sha256=V6HGhMubF9xjXYs4XpreKG_9Dg19iujKZ-oY5tlg0k8,68
+buildflaskapp-0.0.1.1.1.dist-info/top_level.txt,sha256=PPa4TyNJ7FmkyRjLsR20vvzc5ngXoGH8aRzqvmmVF3M,22
+buildflaskapp-0.0.1.1.1.dist-info/RECORD,,
