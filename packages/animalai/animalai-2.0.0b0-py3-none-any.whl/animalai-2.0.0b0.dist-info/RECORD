@@ -1,0 +1,13 @@
+animalai/communicator_objects/__init__.py,sha256=Gj0y4YE_ST-qMIY8SFRyyaq-mHImfGNTycjP8LyApzo,188
+animalai/communicator_objects/arena_configuration_proto_pb2.py,sha256=n6evuFw1fLAk2kLHPP8zoxx099P-pOcIRpJsrqgDEyI,5012
+animalai/communicator_objects/arenas_configurations_proto_pb2.py,sha256=n2DpsPmwdYUxr9EjiL1wAiGNBqVxwXHXD0CLPA8jnaQ,6666
+animalai/communicator_objects/items_to_spawn_proto_pb2.py,sha256=nr3GaKGv_nGSKe0zLFynfghzKVknRKYk9Builpy4vZI,5762
+animalai/communicator_objects/vector_proto_pb2.py,sha256=WV_M9mr_Mbz-rmc09TWpu4BNAcPsVDn0Y9fRtJFhOFg,3631
+animalai/envs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+animalai/envs/arena_config.py,sha256=YbH5FZa9RBhcP5J8HsrWL4LcdbVMX7n4470BdRTHaT4,3924
+animalai/envs/environment.py,sha256=BD9JXgachfFIbrDcmseY17Io2UoMLkMXNRgVVUauAuU,5550
+animalai/envs/gym/environment.py,sha256=SlhmEmkRB8MShWuM0J4bzd5Uu6YfjyoJMGP273ZCJfk,7110
+animalai-2.0.0b0.dist-info/METADATA,sha256=NRn-3f4MMDtfX93yF7Z09cLXX06IdwHxSHpE_NKXOiI,590
+animalai-2.0.0b0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+animalai-2.0.0b0.dist-info/top_level.txt,sha256=Q0mvt047gToubY3zyVefvhrbUcqj7fQ-Nsi9iy3rxQQ,9
+animalai-2.0.0b0.dist-info/RECORD,,
