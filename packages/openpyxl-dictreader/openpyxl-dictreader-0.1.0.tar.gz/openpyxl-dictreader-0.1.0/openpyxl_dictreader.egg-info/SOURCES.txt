@@ -1,0 +1,7 @@
+README.md
+README.rst
+setup.py
+openpyxl_dictreader.egg-info/PKG-INFO
+openpyxl_dictreader.egg-info/SOURCES.txt
+openpyxl_dictreader.egg-info/dependency_links.txt
+openpyxl_dictreader.egg-info/top_level.txt
