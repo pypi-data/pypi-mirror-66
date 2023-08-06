@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+gospel/__init__.py
+gospel/__main__.py
+gospel/gospel_message.py
+gospel.egg-info/PKG-INFO
+gospel.egg-info/SOURCES.txt
+gospel.egg-info/dependency_links.txt
+gospel.egg-info/entry_points.txt
+gospel.egg-info/requires.txt
+gospel.egg-info/top_level.txt
