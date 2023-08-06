@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: Py34
+Version: 0.0.3
+Summary: A simple API to retrieve data from Rule34.xxx
+Home-page: https://github.com/Wallkker/Py34API
+Author: Wallkker
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+# Py34 - Rule34 API Wrapper
+
+This is a simple rule34.xxx API Wrapper to gather data, images, etc...
+
+[See the documentation here](https://github.com/Wallkker/Py34API/wiki)
+
