@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: cpager
+Version: 0.0.1
+Summary: Curses Pager
+Home-page: https://github.com/tslight/cpager
+Author: Toby Slight
+Author-email: tslight@pm.me
+License: UNKNOWN
+Description: # CURSES PAGER
+        
+        ## INSTALLATION
+        
+        `pip install cpager`
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
