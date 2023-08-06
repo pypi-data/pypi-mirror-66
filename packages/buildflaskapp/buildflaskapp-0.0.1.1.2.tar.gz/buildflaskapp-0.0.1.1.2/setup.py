@@ -1,0 +1,28 @@
+import setuptools
+from scripts.__version__ import __version__
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name='buildflaskapp',
+    version=__version__,
+    author="Hans Maulloo",
+    author_email="maulloohans@gmail.com",
+    description="A flask app generator package",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/kouul/buildflaskapp",
+    install_requires=['colorama'],
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Development Status :: 2 - Pre-Alpha",
+        "Framework :: Flask",
+        "Intended Audience :: Developers",
+        "Programming Language :: Python :: 3",
+        "License :: Freely Distributable",
+        "Operating System :: OS Independent",
+        "Topic :: Software Development :: Code Generators"
+    ],
+    entry_points={"console_scripts": ["buildflaskapp=buildflaskapp.buildflaskapp:main"]}
+)
