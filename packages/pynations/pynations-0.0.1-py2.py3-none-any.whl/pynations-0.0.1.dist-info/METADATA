@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: pynations
+Version: 0.0.1
+Summary: A python library to get information on countries
+Home-page: https://github.com/suvinks/python-pynations
+Author: Suvin Kannappil Sethumadhavan
+Author-email: suvinks@gmail.com
+License: MIT
+Project-URL: Documentation, https://python-pynations.readthedocs.io/
+Project-URL: Changelog, https://python-pynations.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/suvinks/python-pynations/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Requires-Python: >=3, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*
+Requires-Dist: tqdm (>=4.0)
+Requires-Dist: Unidecode (>=1.0)
+Requires-Dist: requests (>=2.0)
+Requires-Dist: Menu (>=3.0)
+
+========
+Overview
+========
+
+
+
+A python library to get information on countries.
+The package has functions that enable you to download the datasets from geonames.org and also create sqlite db for the data.
+
+The CountryInfo class allows you to get information of any given country. You can use any common name used for getting data about the country.
+
+* Free software: MIT license
+
+Installation
+============
+
+::
+
+    pip install pynations
+
+You can also install the in-development version with::
+
+    pip install https://github.com/suvinks/python-pynations/archive/master.zip
+
+
+Documentation
+=============
+
+
+https://python-pynations.readthedocs.io/
+
+
+Development
+===========
+
+To run the all tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+References
+==========
+
+Data used in this project is downloaded from `Geonames <http://www.geonames.org/>`_ licensed under `Creative Commons 4.0 <https://creativecommons.org/licenses/by/4.0/>`_
+
+
+Changelog
+=========
+
+0.0.0 (2020-04-19)
+------------------
+
+* First release on PyPI.
+
+
