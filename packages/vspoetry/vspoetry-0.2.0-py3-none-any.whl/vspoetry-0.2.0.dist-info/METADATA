@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: vspoetry
+Version: 0.2.0
+Summary: Automatically save the running poetry virtual environmment to your vscode settings.json
+Home-page: https://github.com/MattiooFR/vspoetry
+License: MIT
+Keywords: vscode,poetry
+Author: MattiooFR
+Author-email: dugue.mathieu@gmail.com
+Requires-Python: >=3.5,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Project-URL: Repository, https://github.com/MattiooFR/vspoetry
+Description-Content-Type: text/markdown
+
+# VSpoetry
+
+Small package that automate adding the Poetry virtual environment path to VScode settings.json so VScode can find the right environment for the project.
+
+Install it before creating a virtual environment so you don't have to reinstall it. Except if you change your main python version, if you use `pyenv` for example.
+
+`pip install vspoetry`
+
+Thanks to [davegallent](https://github.com/davegallant) for the script !
+
