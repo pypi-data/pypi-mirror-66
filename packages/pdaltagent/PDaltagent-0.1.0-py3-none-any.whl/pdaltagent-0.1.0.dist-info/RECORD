@@ -1,0 +1,11 @@
+pdaltagent/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+pdaltagent/config.py,sha256=QznNhWiqP6IkY2zb365UGfjmxLEa11NtL4OYuuw-Pjs,406
+pdaltagent/pd.py,sha256=jgEisPfse8ovRoLknb7Qn8Y-wfLciczAzcZLU9sAeM0,3370
+pdaltagent/pdsend.py,sha256=dMfNXqi7xy6lTenHZIEk4CaaLTBxTJkx9lVmYkVGKoA,3611
+pdaltagent/scripts/celeryd.defaults,sha256=8K5PySxBfXtE2VMr-GoL9J9cuDg7XnKoQIea54doGlk,476
+pdaltagent/scripts/celeryd.service,sha256=77kaXSc02GIVtb2ut2vN_ZFMirNRwQtjiL56RPjrT70,711
+pdaltagent/tasks.py,sha256=LlB5vY2nW0GGnKB7yKkaX8GMtve7wvU2mTr8xl3JTYQ,525
+pdaltagent-0.1.0.dist-info/entry_points.txt,sha256=bamKnwHTcNgHsmhfP2igvJ9sqhqhf5A0PfKU3n553Xc,84
+pdaltagent-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+pdaltagent-0.1.0.dist-info/METADATA,sha256=T9GZ3bCfaeFHFnSRuGYD-DBQFpe1f4NBL7ARY3mMEjg,529
+pdaltagent-0.1.0.dist-info/RECORD,,

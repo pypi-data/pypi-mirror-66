@@ -1,0 +1,4 @@
+[console_scripts]
+pd-send=pdaltagent.pdsend:main
+pdagentd=pdaltagent.tasks:consume
+
