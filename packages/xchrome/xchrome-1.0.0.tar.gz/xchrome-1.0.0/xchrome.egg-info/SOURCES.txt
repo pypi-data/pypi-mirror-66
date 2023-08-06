@@ -1,0 +1,9 @@
+setup.py
+xchrome.py
+xchrome.egg-info/PKG-INFO
+xchrome.egg-info/SOURCES.txt
+xchrome.egg-info/dependency_links.txt
+xchrome.egg-info/entry_points.txt
+xchrome.egg-info/not-zip-safe
+xchrome.egg-info/requires.txt
+xchrome.egg-info/top_level.txt
