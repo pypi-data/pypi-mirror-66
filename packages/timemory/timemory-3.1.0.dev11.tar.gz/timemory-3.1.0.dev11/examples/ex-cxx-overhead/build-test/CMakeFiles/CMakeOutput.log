@@ -1,0 +1,594 @@
+The system is: Darwin - 18.7.0 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /opt/local/bin/clang 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is Clang, found in "/Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/3.16.5/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /opt/local/bin/clang++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is Clang, found in "/Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/3.16.5/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/local/bin/ninja cmTC_6bded && [1/2] Building C object CMakeFiles/cmTC_6bded.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_6bded
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/local/bin/ninja cmTC_f5861 && [1/2] Building C object CMakeFiles/cmTC_f5861.dir/CMakeCCompilerABI.c.o
+clang version 9.0.1 
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /opt/local/libexec/llvm-9.0/bin
+clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+ "/opt/local/libexec/llvm-9.0/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -masm-verbose -munwind-tables -target-sdk-version=10.15 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -ggnu-pubnames -target-linker-version 450.3 -v -coverage-notes-file /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_f5861.dir/CMakeCCompilerABI.c.gcno -resource-dir /opt/local/libexec/llvm-9.0/lib/clang/9.0.1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -I/opt/timemory/develop/include -I/opt/caliper/include -I/opt/Qt/5.12.2/clang_64/include -I/opt/valgrind/3.14.0/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include -internal-isystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -fdebug-compilation-dir /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_f5861.dir/CMakeCCompilerABI.c.o -x c /opt/local/share/cmake-3.16/Modules/CMakeCCompilerABI.c
+clang -cc1 version 9.0.1 based upon LLVM 9.0.1 default target x86_64-apple-darwin18.7.0
+ignoring nonexistent directory "/opt/valgrind/3.14.0/include"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/timemory/develop/include
+ /opt/caliper/include
+ /opt/Qt/5.12.2/clang_64/include
+ /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+[2/2] Linking C executable cmTC_f5861
+clang version 9.0.1 
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /opt/local/libexec/llvm-9.0/bin
+ "/opt/local/libexec/llvm-9.0/bin/ld" -demangle -lto_library /opt/local/libexec/llvm-9.0/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o cmTC_f5861 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_f5861.dir/CMakeCCompilerABI.c.o -L/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib -L/opt/local/lib -L/usr/lib -L/usr/local/lib -lSystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-530
+BUILD 18:57:17 Dec 13 2019
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib
+	/opt/local/lib
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib
+	/usr/local/lib
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib
+Framework search paths:
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/opt/timemory/develop/include]
+    add: [/opt/caliper/include]
+    add: [/opt/Qt/5.12.2/clang_64/include]
+    add: [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include]
+    add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include]
+  end of search list found
+  collapse include dir [/opt/timemory/develop/include] ==> [/opt/timemory/develop/include]
+  collapse include dir [/opt/caliper/include] ==> [/opt/caliper/include]
+  collapse include dir [/opt/Qt/5.12.2/clang_64/include] ==> [/opt/Qt/5.12.2/clang_64/include]
+  collapse include dir [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include] ==> [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include]
+  collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include]
+  implicit include dirs: [/opt/timemory/develop/include;/opt/caliper/include;/opt/Qt/5.12.2/clang_64/include;/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/opt/local/bin/ninja cmTC_f5861 && [1/2] Building C object CMakeFiles/cmTC_f5861.dir/CMakeCCompilerABI.c.o]
+  ignore line: [clang version 9.0.1 ]
+  ignore line: [Target: x86_64-apple-darwin18.7.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /opt/local/libexec/llvm-9.0/bin]
+  ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+  ignore line: [ "/opt/local/libexec/llvm-9.0/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -masm-verbose -munwind-tables -target-sdk-version=10.15 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -ggnu-pubnames -target-linker-version 450.3 -v -coverage-notes-file /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_f5861.dir/CMakeCCompilerABI.c.gcno -resource-dir /opt/local/libexec/llvm-9.0/lib/clang/9.0.1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -I/opt/timemory/develop/include -I/opt/caliper/include -I/opt/Qt/5.12.2/clang_64/include -I/opt/valgrind/3.14.0/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include -internal-isystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -fdebug-compilation-dir /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_f5861.dir/CMakeCCompilerABI.c.o -x c /opt/local/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang -cc1 version 9.0.1 based upon LLVM 9.0.1 default target x86_64-apple-darwin18.7.0]
+  ignore line: [ignoring nonexistent directory "/opt/valgrind/3.14.0/include"]
+  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/Library/Frameworks"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/timemory/develop/include]
+  ignore line: [ /opt/caliper/include]
+  ignore line: [ /opt/Qt/5.12.2/clang_64/include]
+  ignore line: [ /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include]
+  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include]
+  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks (framework directory)]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking C executable cmTC_f5861]
+  ignore line: [clang version 9.0.1 ]
+  ignore line: [Target: x86_64-apple-darwin18.7.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /opt/local/libexec/llvm-9.0/bin]
+  link line: [ "/opt/local/libexec/llvm-9.0/bin/ld" -demangle -lto_library /opt/local/libexec/llvm-9.0/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o cmTC_f5861 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_f5861.dir/CMakeCCompilerABI.c.o -L/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib -L/opt/local/lib -L/usr/lib -L/usr/local/lib -lSystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a]
+    arg [/opt/local/libexec/llvm-9.0/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> ignore, skip following value
+    arg [/opt/local/libexec/llvm-9.0/lib/libLTO.dylib] ==> skip value of -lto_library
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.14.0] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_f5861] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_f5861.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-L/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib] ==> dir [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib]
+    arg [-L/opt/local/lib] ==> dir [/opt/local/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
+    arg [-lSystem] ==> lib [System]
+    arg [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib;/opt/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib;/usr/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  Framework search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib] ==> [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib]
+  collapse library dir [/opt/local/lib] ==> [/opt/local/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse library dir [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib] ==> [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib]
+  collapse library dir [/opt/local/lib] ==> [/opt/local/lib]
+  collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks]
+  implicit libs: []
+  implicit dirs: [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib;/opt/local/lib;/usr/lib;/usr/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks]
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/local/bin/ninja cmTC_6589b && [1/2] Building CXX object CMakeFiles/cmTC_6589b.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_6589b
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/local/bin/ninja cmTC_b0e0a && [1/2] Building CXX object CMakeFiles/cmTC_b0e0a.dir/CMakeCXXCompilerABI.cpp.o
+clang version 9.0.1 
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /opt/local/libexec/llvm-9.0/bin
+clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+ "/opt/local/libexec/llvm-9.0/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -masm-verbose -munwind-tables -target-sdk-version=10.15 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -ggnu-pubnames -target-linker-version 450.3 -v -coverage-notes-file /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_b0e0a.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /opt/local/libexec/llvm-9.0/lib/clang/9.0.1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -I/opt/timemory/develop/include -I/opt/caliper/include -I/opt/Qt/5.12.2/clang_64/include -I/opt/valgrind/3.14.0/include -stdlib=libc++ -internal-isystem /opt/local/libexec/llvm-9.0/bin/../include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include -internal-isystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -fdeprecated-macro -fdebug-compilation-dir /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_b0e0a.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/local/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 9.0.1 based upon LLVM 9.0.1 default target x86_64-apple-darwin18.7.0
+ignoring nonexistent directory "/opt/valgrind/3.14.0/include"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/c++/v1"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/timemory/develop/include
+ /opt/caliper/include
+ /opt/Qt/5.12.2/clang_64/include
+ /opt/local/libexec/llvm-9.0/bin/../include/c++/v1
+ /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+[2/2] Linking CXX executable cmTC_b0e0a
+clang version 9.0.1 
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /opt/local/libexec/llvm-9.0/bin
+ "/opt/local/libexec/llvm-9.0/bin/ld" -demangle -lto_library /opt/local/libexec/llvm-9.0/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o cmTC_b0e0a -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_b0e0a.dir/CMakeCXXCompilerABI.cpp.o -L/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib -L/opt/local/lib -L/usr/lib -L/usr/local/lib -lc++ -lSystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-530
+BUILD 18:57:17 Dec 13 2019
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib
+	/opt/local/lib
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib
+	/usr/local/lib
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib
+Framework search paths:
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/opt/timemory/develop/include]
+    add: [/opt/caliper/include]
+    add: [/opt/Qt/5.12.2/clang_64/include]
+    add: [/opt/local/libexec/llvm-9.0/bin/../include/c++/v1]
+    add: [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include]
+    add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include]
+  end of search list found
+  collapse include dir [/opt/timemory/develop/include] ==> [/opt/timemory/develop/include]
+  collapse include dir [/opt/caliper/include] ==> [/opt/caliper/include]
+  collapse include dir [/opt/Qt/5.12.2/clang_64/include] ==> [/opt/Qt/5.12.2/clang_64/include]
+  collapse include dir [/opt/local/libexec/llvm-9.0/bin/../include/c++/v1] ==> [/opt/local/libexec/llvm-9.0/include/c++/v1]
+  collapse include dir [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include] ==> [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include]
+  collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include]
+  implicit include dirs: [/opt/timemory/develop/include;/opt/caliper/include;/opt/Qt/5.12.2/clang_64/include;/opt/local/libexec/llvm-9.0/include/c++/v1;/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/opt/local/bin/ninja cmTC_b0e0a && [1/2] Building CXX object CMakeFiles/cmTC_b0e0a.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [clang version 9.0.1 ]
+  ignore line: [Target: x86_64-apple-darwin18.7.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /opt/local/libexec/llvm-9.0/bin]
+  ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+  ignore line: [ "/opt/local/libexec/llvm-9.0/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -masm-verbose -munwind-tables -target-sdk-version=10.15 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -ggnu-pubnames -target-linker-version 450.3 -v -coverage-notes-file /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_b0e0a.dir/CMakeCXXCompilerABI.cpp.gcno -resource-dir /opt/local/libexec/llvm-9.0/lib/clang/9.0.1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -I/opt/timemory/develop/include -I/opt/caliper/include -I/opt/Qt/5.12.2/clang_64/include -I/opt/valgrind/3.14.0/include -stdlib=libc++ -internal-isystem /opt/local/libexec/llvm-9.0/bin/../include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include -internal-isystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -fdeprecated-macro -fdebug-compilation-dir /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_b0e0a.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/local/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 9.0.1 based upon LLVM 9.0.1 default target x86_64-apple-darwin18.7.0]
+  ignore line: [ignoring nonexistent directory "/opt/valgrind/3.14.0/include"]
+  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/c++/v1"]
+  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/Library/Frameworks"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/timemory/develop/include]
+  ignore line: [ /opt/caliper/include]
+  ignore line: [ /opt/Qt/5.12.2/clang_64/include]
+  ignore line: [ /opt/local/libexec/llvm-9.0/bin/../include/c++/v1]
+  ignore line: [ /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include]
+  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include]
+  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks (framework directory)]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking CXX executable cmTC_b0e0a]
+  ignore line: [clang version 9.0.1 ]
+  ignore line: [Target: x86_64-apple-darwin18.7.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /opt/local/libexec/llvm-9.0/bin]
+  link line: [ "/opt/local/libexec/llvm-9.0/bin/ld" -demangle -lto_library /opt/local/libexec/llvm-9.0/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o cmTC_b0e0a -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_b0e0a.dir/CMakeCXXCompilerABI.cpp.o -L/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib -L/opt/local/lib -L/usr/lib -L/usr/local/lib -lc++ -lSystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a]
+    arg [/opt/local/libexec/llvm-9.0/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> ignore, skip following value
+    arg [/opt/local/libexec/llvm-9.0/lib/libLTO.dylib] ==> skip value of -lto_library
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.14.0] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_b0e0a] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_b0e0a.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-L/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib] ==> dir [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib]
+    arg [-L/opt/local/lib] ==> dir [/opt/local/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
+    arg [-lc++] ==> lib [c++]
+    arg [-lSystem] ==> lib [System]
+    arg [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib;/opt/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib;/usr/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  Framework search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib] ==> [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib]
+  collapse library dir [/opt/local/lib] ==> [/opt/local/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse library dir [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib] ==> [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib]
+  collapse library dir [/opt/local/lib] ==> [/opt/local/lib]
+  collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks]
+  implicit libs: [c++]
+  implicit dirs: [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib;/opt/local/lib;/usr/lib;/usr/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks]
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/local/bin/ninja cmTC_7a31a && [1/2] Building C object CMakeFiles/cmTC_7a31a.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_7a31a
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/local/bin/ninja cmTC_ac48b && [1/2] Building C object CMakeFiles/cmTC_ac48b.dir/src.c.o
+[2/2] Linking C executable cmTC_ac48b
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Detecting C OpenMP compiler ABI info compiled with the following output:
+Change Dir: /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/local/bin/ninja cmTC_35f59 && [1/2] Building C object CMakeFiles/cmTC_35f59.dir/OpenMPTryFlag.c.o
+clang version 9.0.1 
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /opt/local/libexec/llvm-9.0/bin
+ "/opt/local/libexec/llvm-9.0/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -masm-verbose -munwind-tables -target-sdk-version=10.15 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -ggnu-pubnames -target-linker-version 450.3 -v -coverage-notes-file /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_35f59.dir/OpenMPTryFlag.c.gcno -resource-dir /opt/local/libexec/llvm-9.0/lib/clang/9.0.1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -I/opt/timemory/develop/include -I/opt/caliper/include -I/opt/Qt/5.12.2/clang_64/include -I/opt/valgrind/3.14.0/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include -internal-isystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -fdebug-compilation-dir /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -I/opt/local/include/libomp -fopenmp -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_35f59.dir/OpenMPTryFlag.c.o -x c /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+clang -cc1 version 9.0.1 based upon LLVM 9.0.1 default target x86_64-apple-darwin18.7.0
+ignoring nonexistent directory "/opt/valgrind/3.14.0/include"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/timemory/develop/include
+ /opt/caliper/include
+ /opt/Qt/5.12.2/clang_64/include
+ /opt/local/include/libomp
+ /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+[2/2] Linking C executable cmTC_35f59
+clang version 9.0.1 
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /opt/local/libexec/llvm-9.0/bin
+ "/opt/local/libexec/llvm-9.0/bin/ld" -demangle -lto_library /opt/local/libexec/llvm-9.0/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o cmTC_35f59 -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_35f59.dir/OpenMPTryFlag.c.o -v -L/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib -L/opt/local/lib -L/usr/lib -L/usr/local/lib -L/opt/local/lib/libomp -lomp -lSystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-530
+BUILD 18:57:17 Dec 13 2019
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib
+	/opt/local/lib
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib
+	/usr/local/lib
+	/opt/local/lib/libomp
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib
+Framework search paths:
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/
+
+
+
+Parsed C OpenMP implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/opt/local/bin/ninja cmTC_35f59 && [1/2] Building C object CMakeFiles/cmTC_35f59.dir/OpenMPTryFlag.c.o]
+  ignore line: [clang version 9.0.1 ]
+  ignore line: [Target: x86_64-apple-darwin18.7.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /opt/local/libexec/llvm-9.0/bin]
+  ignore line: [ "/opt/local/libexec/llvm-9.0/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.c -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -masm-verbose -munwind-tables -target-sdk-version=10.15 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -ggnu-pubnames -target-linker-version 450.3 -v -coverage-notes-file /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_35f59.dir/OpenMPTryFlag.c.gcno -resource-dir /opt/local/libexec/llvm-9.0/lib/clang/9.0.1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -I/opt/timemory/develop/include -I/opt/caliper/include -I/opt/Qt/5.12.2/clang_64/include -I/opt/valgrind/3.14.0/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include -internal-isystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -fdebug-compilation-dir /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -I/opt/local/include/libomp -fopenmp -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_35f59.dir/OpenMPTryFlag.c.o -x c /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/FindOpenMP/OpenMPTryFlag.c]
+  ignore line: [clang -cc1 version 9.0.1 based upon LLVM 9.0.1 default target x86_64-apple-darwin18.7.0]
+  ignore line: [ignoring nonexistent directory "/opt/valgrind/3.14.0/include"]
+  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/Library/Frameworks"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/timemory/develop/include]
+  ignore line: [ /opt/caliper/include]
+  ignore line: [ /opt/Qt/5.12.2/clang_64/include]
+  ignore line: [ /opt/local/include/libomp]
+  ignore line: [ /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include]
+  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include]
+  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks (framework directory)]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking C executable cmTC_35f59]
+  ignore line: [clang version 9.0.1 ]
+  ignore line: [Target: x86_64-apple-darwin18.7.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /opt/local/libexec/llvm-9.0/bin]
+  link line: [ "/opt/local/libexec/llvm-9.0/bin/ld" -demangle -lto_library /opt/local/libexec/llvm-9.0/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o cmTC_35f59 -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_35f59.dir/OpenMPTryFlag.c.o -v -L/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib -L/opt/local/lib -L/usr/lib -L/usr/local/lib -L/opt/local/lib/libomp -lomp -lSystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a]
+    arg [/opt/local/libexec/llvm-9.0/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> ignore, skip following value
+    arg [/opt/local/libexec/llvm-9.0/lib/libLTO.dylib] ==> skip value of -lto_library
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.14.0] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_35f59] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [CMakeFiles/cmTC_35f59.dir/OpenMPTryFlag.c.o] ==> ignore
+    arg [-v] ==> ignore
+    arg [-L/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib] ==> dir [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib]
+    arg [-L/opt/local/lib] ==> dir [/opt/local/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
+    arg [-L/opt/local/lib/libomp] ==> dir [/opt/local/lib/libomp]
+    arg [-lomp] ==> lib [omp]
+    arg [-lSystem] ==> lib [System]
+    arg [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib;/opt/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib;/usr/local/lib;/opt/local/lib/libomp;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  Framework search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib] ==> [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib]
+  collapse library dir [/opt/local/lib] ==> [/opt/local/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse library dir [/opt/local/lib/libomp] ==> [/opt/local/lib/libomp]
+  collapse library dir [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib] ==> [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib]
+  collapse library dir [/opt/local/lib] ==> [/opt/local/lib]
+  collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse library dir [/opt/local/lib/libomp] ==> [/opt/local/lib/libomp]
+  collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks]
+  implicit libs: [omp]
+  implicit dirs: [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib;/opt/local/lib;/usr/lib;/usr/local/lib;/opt/local/lib/libomp;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks]
+
+
+Detecting CXX OpenMP compiler ABI info compiled with the following output:
+Change Dir: /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/local/bin/ninja cmTC_13c8e && [1/2] Building CXX object CMakeFiles/cmTC_13c8e.dir/OpenMPTryFlag.cpp.o
+clang version 9.0.1 
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /opt/local/libexec/llvm-9.0/bin
+ "/opt/local/libexec/llvm-9.0/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -masm-verbose -munwind-tables -target-sdk-version=10.15 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -ggnu-pubnames -target-linker-version 450.3 -v -coverage-notes-file /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_13c8e.dir/OpenMPTryFlag.cpp.gcno -resource-dir /opt/local/libexec/llvm-9.0/lib/clang/9.0.1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -I/opt/timemory/develop/include -I/opt/caliper/include -I/opt/Qt/5.12.2/clang_64/include -I/opt/valgrind/3.14.0/include -stdlib=libc++ -internal-isystem /opt/local/libexec/llvm-9.0/bin/../include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include -internal-isystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -fdeprecated-macro -fdebug-compilation-dir /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -I/opt/local/include/libomp -fopenmp -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_13c8e.dir/OpenMPTryFlag.cpp.o -x c++ /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+clang -cc1 version 9.0.1 based upon LLVM 9.0.1 default target x86_64-apple-darwin18.7.0
+ignoring nonexistent directory "/opt/valgrind/3.14.0/include"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/c++/v1"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include"
+ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /opt/timemory/develop/include
+ /opt/caliper/include
+ /opt/Qt/5.12.2/clang_64/include
+ /opt/local/include/libomp
+ /opt/local/libexec/llvm-9.0/bin/../include/c++/v1
+ /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+[2/2] Linking CXX executable cmTC_13c8e
+clang version 9.0.1 
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /opt/local/libexec/llvm-9.0/bin
+ "/opt/local/libexec/llvm-9.0/bin/ld" -demangle -lto_library /opt/local/libexec/llvm-9.0/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o cmTC_13c8e -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_13c8e.dir/OpenMPTryFlag.cpp.o -v -L/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib -L/opt/local/lib -L/usr/lib -L/usr/local/lib -L/opt/local/lib/libomp -lomp -lc++ -lSystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-530
+BUILD 18:57:17 Dec 13 2019
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib
+	/opt/local/lib
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib
+	/usr/local/lib
+	/opt/local/lib/libomp
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib
+Framework search paths:
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/
+
+
+
+Parsed CXX OpenMP implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/opt/local/bin/ninja cmTC_13c8e && [1/2] Building CXX object CMakeFiles/cmTC_13c8e.dir/OpenMPTryFlag.cpp.o]
+  ignore line: [clang version 9.0.1 ]
+  ignore line: [Target: x86_64-apple-darwin18.7.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /opt/local/libexec/llvm-9.0/bin]
+  ignore line: [ "/opt/local/libexec/llvm-9.0/bin/clang" -cc1 -triple x86_64-apple-macosx10.14.0 -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name OpenMPTryFlag.cpp -mrelocation-model pic -pic-level 2 -mthread-model posix -mdisable-fp-elim -masm-verbose -munwind-tables -target-sdk-version=10.15 -target-cpu penryn -dwarf-column-info -debugger-tuning=lldb -ggnu-pubnames -target-linker-version 450.3 -v -coverage-notes-file /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_13c8e.dir/OpenMPTryFlag.cpp.gcno -resource-dir /opt/local/libexec/llvm-9.0/lib/clang/9.0.1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -I/opt/timemory/develop/include -I/opt/caliper/include -I/opt/Qt/5.12.2/clang_64/include -I/opt/valgrind/3.14.0/include -stdlib=libc++ -internal-isystem /opt/local/libexec/llvm-9.0/bin/../include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include -internal-isystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -fdeprecated-macro -fdebug-compilation-dir /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/CMakeTmp -ferror-limit 19 -fmessage-length 0 -I/opt/local/include/libomp -fopenmp -stack-protector 1 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fobjc-runtime=macosx-10.14.0 -fcxx-exceptions -fexceptions -fmax-type-align=16 -fdiagnostics-show-option -o CMakeFiles/cmTC_13c8e.dir/OpenMPTryFlag.cpp.o -x c++ /Users/jrmadsen/devel/c++/timemory/examples/ex-cxx-overhead/build-test/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp]
+  ignore line: [clang -cc1 version 9.0.1 based upon LLVM 9.0.1 default target x86_64-apple-darwin18.7.0]
+  ignore line: [ignoring nonexistent directory "/opt/valgrind/3.14.0/include"]
+  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/c++/v1"]
+  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/Library/Frameworks"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /opt/timemory/develop/include]
+  ignore line: [ /opt/caliper/include]
+  ignore line: [ /opt/Qt/5.12.2/clang_64/include]
+  ignore line: [ /opt/local/include/libomp]
+  ignore line: [ /opt/local/libexec/llvm-9.0/bin/../include/c++/v1]
+  ignore line: [ /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/include]
+  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include]
+  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks (framework directory)]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking CXX executable cmTC_13c8e]
+  ignore line: [clang version 9.0.1 ]
+  ignore line: [Target: x86_64-apple-darwin18.7.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /opt/local/libexec/llvm-9.0/bin]
+  link line: [ "/opt/local/libexec/llvm-9.0/bin/ld" -demangle -lto_library /opt/local/libexec/llvm-9.0/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o cmTC_13c8e -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_13c8e.dir/OpenMPTryFlag.cpp.o -v -L/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib -L/opt/local/lib -L/usr/lib -L/usr/local/lib -L/opt/local/lib/libomp -lomp -lc++ -lSystem /opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a]
+    arg [/opt/local/libexec/llvm-9.0/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> ignore, skip following value
+    arg [/opt/local/libexec/llvm-9.0/lib/libLTO.dylib] ==> skip value of -lto_library
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.14.0] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_13c8e] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [CMakeFiles/cmTC_13c8e.dir/OpenMPTryFlag.cpp.o] ==> ignore
+    arg [-v] ==> ignore
+    arg [-L/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib] ==> dir [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib]
+    arg [-L/opt/local/lib] ==> dir [/opt/local/lib]
+    arg [-L/usr/lib] ==> dir [/usr/lib]
+    arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
+    arg [-L/opt/local/lib/libomp] ==> dir [/opt/local/lib/libomp]
+    arg [-lomp] ==> lib [omp]
+    arg [-lc++] ==> lib [c++]
+    arg [-lSystem] ==> lib [System]
+    arg [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a] ==> lib [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib;/opt/local/lib;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib;/usr/local/lib;/opt/local/lib/libomp;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  Framework search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/opt/local/libexec/llvm-9.0/lib/clang/9.0.1/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib] ==> [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib]
+  collapse library dir [/opt/local/lib] ==> [/opt/local/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse library dir [/opt/local/lib/libomp] ==> [/opt/local/lib/libomp]
+  collapse library dir [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib] ==> [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib]
+  collapse library dir [/opt/local/lib] ==> [/opt/local/lib]
+  collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse library dir [/opt/local/lib/libomp] ==> [/opt/local/lib/libomp]
+  collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks]
+  implicit libs: [omp;c++]
+  implicit dirs: [/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib;/opt/local/lib;/usr/lib;/usr/local/lib;/opt/local/lib/libomp;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib]
+  implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks]
+
+
