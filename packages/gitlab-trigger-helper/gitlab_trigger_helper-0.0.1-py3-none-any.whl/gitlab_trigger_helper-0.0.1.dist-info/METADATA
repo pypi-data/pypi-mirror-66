@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: gitlab-trigger-helper
+Version: 0.0.1
+Summary: Simple lib for trigg gitlab pipelines
+Home-page: https://github.com/f46io
+Author: Fabio Lima
+Author-email: f46io@icloud.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: blessings (~=1.7)
+Requires-Dist: requests (~=2.23.0)
+Requires-Dist: python-gitlab (~=2.2.0)
+Requires-Dist: python-time (~=0.1.2)
+Requires-Dist: argparse (~=1.4.0)
+Requires-Dist: typing (~=3.7.4.1)
+Provides-Extra: dev
+Requires-Dist: pytest (>=3.7) ; extra == 'dev'
+
+long_description
+
+
