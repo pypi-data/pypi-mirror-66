@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: decopt
+Version: 1.0.1
+Summary: State of the art decentralized optimization library
+Home-page: https://github.com/anishacharya/decentralized-opt
+Author: Anish Acharya
+Author-email: anishacharya@utexas.edu
+License: UNKNOWN
+Description: # Linearly Convergent Decentralized Learning with Arbitrary Communication Compression
+        
+        How do I run the Code? 
+        ```
+        A. Install our package: 
+        pip3 install decopt
+        
+        B. Get Data: 
+        sh pull_data.sh breast_cancer
+        
+        c. Run script with default parameters: 
+        python3 driver.py
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
