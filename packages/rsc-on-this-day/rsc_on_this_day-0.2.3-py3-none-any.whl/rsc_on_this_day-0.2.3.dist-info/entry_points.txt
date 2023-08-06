@@ -1,0 +1,3 @@
+[console_scripts]
+rsc_on_this_day = rsc_on_this_day:main
+
