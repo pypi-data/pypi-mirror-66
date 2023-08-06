@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+pyhomogeneity/__init__.py
+pyhomogeneity/_version.py
+pyhomogeneity/pyhomogeneity.py
+pyhomogeneity.egg-info/PKG-INFO
+pyhomogeneity.egg-info/SOURCES.txt
+pyhomogeneity.egg-info/dependency_links.txt
+pyhomogeneity.egg-info/requires.txt
+pyhomogeneity.egg-info/top_level.txt
