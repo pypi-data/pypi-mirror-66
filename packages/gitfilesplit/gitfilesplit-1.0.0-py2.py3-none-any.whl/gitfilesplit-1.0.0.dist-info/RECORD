@@ -1,0 +1,10 @@
+gitfilesplit/__init__.py,sha256=WDGFegN3s9f5fPsi-SFi1NTAiH6rEIhwhzezOb6zIv8,145
+gitfilesplit/cli.py,sha256=SbWEkKSZxsKSVfdli8WeftiKYYCkin8loI3gdvoM0vU,951
+gitfilesplit/toolbox.py,sha256=_2Q1Z_izpyDq2R4i-8oESr-nYf7BHGUGXhImBHfEMOM,1662
+gitfilesplit-1.0.0.dist-info/AUTHORS,sha256=RXE4eWmolYt7o0F2-UdVV_biEee3qXILwsPuWZ-A3Ho,189
+gitfilesplit-1.0.0.dist-info/LICENSE,sha256=xLWTRhi0nx83Wix1ffdBcperrd3i1D_kaROML1ZTVZM,1500
+gitfilesplit-1.0.0.dist-info/METADATA,sha256=21Uu4DkAR1TW9BQwNlCgZWCchxfPsSLK1cA0FMQgobo,2089
+gitfilesplit-1.0.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+gitfilesplit-1.0.0.dist-info/entry_points.txt,sha256=IsxDUF0TsjhKSOekhyUjj7eG2eVZqCAaMFyvBKo8_0I,56
+gitfilesplit-1.0.0.dist-info/top_level.txt,sha256=6-o1IfKSMhSVpmcbH1h1ClKZLf4BxBu9DDdJAwPuInU,13
+gitfilesplit-1.0.0.dist-info/RECORD,,
