@@ -1,0 +1,11 @@
+BERTVector/BERTVector.py,sha256=Eh6M9W4kCyf5ke-k-UCdYMDQWdckz05GwUR3WyoEZNY,6912
+BERTVector/__init__.py,sha256=DXrl56SiUpxUcMhZSF3v8Z56mic0I-XVIv60M1pgsGA,19
+BERTVector/images/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+BERTVector/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+BERTVector/test/load_vector.py,sha256=59E2-27L9OD_e3Y66KA-k_c__-hPaDdihS0NIw3ZuX4,5445
+BERTVector-0.3.6.dist-info/LICENSE.txt,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+BERTVector-0.3.6.dist-info/METADATA,sha256=6zqj7Cj9FZ9NCZfhRQhZZh2mNYEIeu6NHJKq_K7EQJM,7209
+BERTVector-0.3.6.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+BERTVector-0.3.6.dist-info/entry_points.txt,sha256=IrtHNc8P_w957oNrLR8fk7T3QNyTBCCtjoA6tDiLdmE,63
+BERTVector-0.3.6.dist-info/top_level.txt,sha256=Wghom28bHbviy7CW8r91J7TYOdRwskMhTmx8qUGcVQ8,11
+BERTVector-0.3.6.dist-info/RECORD,,
