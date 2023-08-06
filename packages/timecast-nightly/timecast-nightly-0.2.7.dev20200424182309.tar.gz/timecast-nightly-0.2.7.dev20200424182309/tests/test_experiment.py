@@ -1,0 +1,91 @@
+"""timecast.experiment: testing"""
+import jax
+import numpy as onp
+import pytest
+
+from timecast import experiment
+from timecast.utils import random
+
+
+@pytest.mark.parametrize("shape", [(), (1,), (1, 2), (1, 2, 3)])
+@pytest.mark.parametrize("num_args", [1, 2, 10])
+def test_experiment(shape, num_args):
+    """Test normal experiment behavior"""
+    args = [
+        (
+            jax.random.uniform(random.generate_key(), shape=shape),
+            jax.random.uniform(random.generate_key(), shape=shape),
+        )
+        for _ in range(num_args)
+    ]
+
+    @experiment("a,b", args)
+    def dummy(a, b):
+        """dummy"""
+        return a + b
+
+    results = dummy.run()
+    print(results)
+    for i in range(len(results)):
+        onp.testing.assert_array_almost_equal(results[i], onp.sum(args[i], axis=0))
+
+
+@pytest.mark.parametrize("times", [1, 2, 10])
+def test_experiment_call(times):
+    """Tests repeated decorator calls"""
+
+    def dummy(a, b):
+        """dummy"""
+        return a + b  # pragma: no cover
+
+    for _ in range(times):
+        dummy = experiment("a,b", [(1, 2)])(dummy)
+        assert isinstance(dummy, experiment)
+
+
+@pytest.mark.parametrize("arglists", [[()], [(1, 2), ()], [(1,)]])
+def test_experiment_inconsistent_arglist_len(arglists):
+    """Tests inconsistent arglist length"""
+    with pytest.raises(ValueError):
+
+        @experiment("a,b", arglists)
+        def dummy(a, b):  # pragma: no cover
+            """dummy"""
+            return a + b  # pragma: no cover
+
+
+def test_experiment_duplicated_argname():
+    """Tests duplicated arguments"""
+    with pytest.raises(ValueError):
+
+        @experiment("a", [1])
+        @experiment("a,b", [(1, 2)])
+        def dummy(a, b):
+            """dummy"""
+            return a + b  # pragma: no cover
+
+        dummy._validate()
+
+
+def test_experiment_missing_argument():
+    """Test missing arguments"""
+    with pytest.raises(ValueError):
+
+        @experiment("a", [1])
+        def dummy(a, b):
+            """dummy"""
+            return a + b  # pragma: no cover
+
+        dummy._validate()
+
+
+def test_experiment_unused_arguments():
+    """Testing unused arguments"""
+    with pytest.raises(ValueError):
+
+        @experiment("a,b,c", [(1, 2, 3)])
+        def dummy(a, b):
+            """dummy"""
+            return a + b
+
+        dummy._validate()  # pragma: no cover
