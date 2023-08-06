@@ -1,0 +1,11 @@
+pimdb/__init__.py,sha256=Ek68jeE5pwuNhWTxtf-eIF1izk-rkn-YAFJ49nu5hP0,122
+pimdb/bulk.py,sha256=UTNvK55A15wKGFKAppHQoyuNNbHXEQGwWfRsPL02iFs,4446
+pimdb/command.py,sha256=8XUUQBlh5KKemtCKqJRp___M67-DrOwBLPZ0U53ZY8g,11009
+pimdb/common.py,sha256=JJjFhLG1NfiyiHbgEO5rde4-H0L3G6038lrg9n-6cmE,12281
+pimdb/database.py,sha256=I4hw7cXpAjOWgueYUTeSs1UJlHQDHhnWh5LD0jAU_t0,53964
+pimdb-0.2.2.dist-info/LICENSE.txt,sha256=gDD5BLdKBUFeVejUJmLY2xYOgkZDEz4FbSKG9J2ixdw,1483
+pimdb-0.2.2.dist-info/METADATA,sha256=7L2q93Zf-H9Zzgvd9Uw5X4uOfP4vlgkE-ix-EtgRzzc,6103
+pimdb-0.2.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pimdb-0.2.2.dist-info/entry_points.txt,sha256=Xm12g7tQ81YO90GXUor-GI31-j7Nr9T8h0WkiX6BUXc,46
+pimdb-0.2.2.dist-info/top_level.txt,sha256=mGNt8RJ5VOmybwny-023zMuAwgoEAOfX876JIaWTNSE,6
+pimdb-0.2.2.dist-info/RECORD,,
