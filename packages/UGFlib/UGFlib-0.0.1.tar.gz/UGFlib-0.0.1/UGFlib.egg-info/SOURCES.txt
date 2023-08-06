@@ -1,0 +1,9 @@
+README.md
+setup.py
+UGFlib/__init__.py
+UGFlib.egg-info/PKG-INFO
+UGFlib.egg-info/SOURCES.txt
+UGFlib.egg-info/dependency_links.txt
+UGFlib.egg-info/top_level.txt
+UGFlib/ROOT/__init__.py
+UGFlib/RooFit/__init__.py
