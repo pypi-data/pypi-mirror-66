@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: pyfoxtrot
+Version: 0.0.2
+Summary: Python package to query foxtrot
+Home-page: https://github.com/gabber12/pyfoxtrot
+Author: Shubham Sharma
+Author-email: shubham.sha12@gmail.com
+License: MIT
+Download-URL: https://github.com/gabber12/pyfoxtrot/archive/0.0.2.tar.gz
+Description: UNKNOWN
+Keywords: foxtrot
+Platform: Linux
+Platform: Mac OS X
