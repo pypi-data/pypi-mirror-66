@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: prometheus-kafka-metrics
+Version: 0.2
+Summary: Prometheus instrumentation library for confluent-kafka-python applications
+Home-page: https://github.com/shakti-garg/prometheus_kafka_metrics.git
+Author: Shakti Garg
+Author-email: shakti.garg@gmail.com
+License: Apache License Version 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
