@@ -1,0 +1,8 @@
+README.md
+setup.py
+Signals/SignalsGraphs.py
+Signals/__init__.py
+signalsgraphs.egg-info/PKG-INFO
+signalsgraphs.egg-info/SOURCES.txt
+signalsgraphs.egg-info/dependency_links.txt
+signalsgraphs.egg-info/top_level.txt
