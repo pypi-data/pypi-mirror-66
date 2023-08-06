@@ -1,0 +1,8 @@
+README.md
+setup.py
+fifa_preprocessing/__init__.py
+fifa_preprocessing/fifa_preprocessing.py
+fifa_preprocessing.egg-info/PKG-INFO
+fifa_preprocessing.egg-info/SOURCES.txt
+fifa_preprocessing.egg-info/dependency_links.txt
+fifa_preprocessing.egg-info/top_level.txt
