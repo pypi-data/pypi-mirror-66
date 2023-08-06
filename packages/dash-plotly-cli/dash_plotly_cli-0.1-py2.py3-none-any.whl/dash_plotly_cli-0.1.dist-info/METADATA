@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: dash-plotly-cli
+Version: 0.1
+Summary: A cli for creating and working on dash apps
+Home-page: https://github.com/Softyy/dash-cli
+Author: Christopher J. Adkins
+Author-email: chris@cjadkins.com
+License: MIT
+Download-URL: https://github.com/Softyy/dash-cli/tags
+Keywords: dash,plotly,cli
+Platform: any
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: Click
+Requires-Dist: Cookiecutter
+
+# Dash CLI
+
+## WORK IN PROGRESS
+
+
