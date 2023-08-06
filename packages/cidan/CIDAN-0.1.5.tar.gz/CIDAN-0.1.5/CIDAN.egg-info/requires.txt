@@ -1,0 +1,11 @@
+QtPy
+QDarkStyle
+Pyside2
+numpy
+dask[complete]
+matplotlib
+scipy
+tiffile
+scikit-image
+hnswlib
+pillow
