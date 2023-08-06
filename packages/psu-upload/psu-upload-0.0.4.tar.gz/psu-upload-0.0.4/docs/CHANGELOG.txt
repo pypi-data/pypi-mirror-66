@@ -1,0 +1,13 @@
+=== 0.0.4 ===
+- file_link taglib allows you to speficy original or current file name
+
+=== 0.0.3 ===
+- Added tag, status, and original_name to model
+- Added file retrieval service
+- Updated PSU Base requirement
+
+=== 0.0.2 ===
+- S3 storage path must include enviromment as well as app name ('APP/ENV/the-file.txt')
+
+=== 0.0.1 ===
+- Initial Release
