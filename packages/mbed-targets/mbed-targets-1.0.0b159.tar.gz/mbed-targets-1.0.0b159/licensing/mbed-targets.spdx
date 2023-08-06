@@ -1,0 +1,312 @@
+# Document Information
+
+SPDXVersion: SPDX-1.2
+DataLicense: CC0-1.0
+DocumentName: mbed-targets-1.0.0b159
+SPDXID: SPDXRef-DOCUMENT
+DocumentNamespace: http://spdx.org/spdx/spdxdocs/mbed-targets-1.0.0b159-29b28b29-c6c7-4744-9bc5-e7184ac8e5b4
+DocumentComment: <text>This document was created automatically using available information from python packages.</text>
+ExternalDocumentRef: mbed-project-0.1.0b16 http://spdx.org/spdxdocs/mbed-project-0.1.0b16-406272da-712f-1659-9c81-05916caa92e4 SHA1:885f9c4e99b5cc948aaa29a3eccd8b6c0a447d5a
+ExternalDocumentRef: pdoc3-0.8.1 http://spdx.org/spdxdocs/pdoc3-0.8.1-1ee895ff-8f6c-e882-cb23-232ded615154 SHA1:1918c8c8e5757f1e038071283d49e211f2d0abe8
+ExternalDocumentRef: mbed-tools-lib-1.2.0 http://spdx.org/spdxdocs/mbed-tools-lib-1.2.0-74dcf14a-51cd-622b-4fa3-bc7b1699bcaa SHA1:039a708d5be9f9b8192648810535c738fc0b0a95
+ExternalDocumentRef: Click-7.0 http://spdx.org/spdxdocs/Click-7.0-bb45852b-b033-4661-55f3-288440de0ec7 SHA1:3289d2c2750c11d4132184b1735e62e2b723f0ad
+ExternalDocumentRef: python-dotenv-0.13.0 http://spdx.org/spdxdocs/python-dotenv-0.13.0-fc50bbde-c084-0f83-d0ff-8cb68df356d0 SHA1:517823acae98a8dbe473095f8ffb9be60ca2a4c9
+ExternalDocumentRef: requests-2.23.0 http://spdx.org/spdxdocs/requests-2.23.0-7c90ec2c-9b99-e44c-159d-a68f2a5c765b SHA1:97070cbe9a3ce9475b1994fdf68800995f81d76f
+ExternalDocumentRef: tqdm-4.45.0 http://spdx.org/spdxdocs/tqdm-4.45.0-4315a344-7358-e3bc-afcb-ec7658654d18 SHA1:ff4bf5bf73c0a9bee65304aecf61a2acfcc813f4
+ExternalDocumentRef: git-python-1.0.3 http://spdx.org/spdxdocs/git-python-1.0.3-faa4d35a-ae12-f967-fe41-9439cebde8ae SHA1:8d84901e297a607a38983929a5360a07132ad01d
+ExternalDocumentRef: Click-7.0 http://spdx.org/spdxdocs/Click-7.0-bb45852b-b033-4661-55f3-288440de0ec7 SHA1:3289d2c2750c11d4132184b1735e62e2b723f0ad
+ExternalDocumentRef: Markdown-3.2.1 http://spdx.org/spdxdocs/Markdown-3.2.1-28bcf261-4939-e2ba-03b8-cc6c355eb51c SHA1:87efb7c7d5c2f1798716dbd1ffed99aed57f9fd9
+ExternalDocumentRef: Mako-1.1.2 http://spdx.org/spdxdocs/Mako-1.1.2-985967a1-f5a1-6060-bd79-6a31bf69d6c2 SHA1:d8df69ec321b90c216401b387119426afe8af4d3
+ExternalDocumentRef: urllib3-1.25.9 http://spdx.org/spdxdocs/urllib3-1.25.9-8b5fa62e-3153-ca7c-d2a6-e07f92773d2b SHA1:c8e5be60bb6d4e645045380eed219d4b516eaca3
+ExternalDocumentRef: chardet-3.0.4 http://spdx.org/spdxdocs/chardet-3.0.4-4cfc5f3b-869d-9f39-7e77-9acb3368681a SHA1:f670661bfc89d3fd3b14d7b6999350f9ad476e35
+ExternalDocumentRef: idna-2.9 http://spdx.org/spdxdocs/idna-2.9-a0fb897a-d89c-cd93-9315-7e5651d9ab55 SHA1:a0ef488fa5a0df645a748c2a3c5920565704154f
+ExternalDocumentRef: certifi-2020.4.5.1 http://spdx.org/spdxdocs/certifi-2020.4.5.1-d4f6b7a9-9fbb-7948-95f9-68aae88e297b SHA1:b07fb3fdef0dcb62a066b955fa4b7393b34065f1
+ExternalDocumentRef: GitPython-3.1.1 http://spdx.org/spdxdocs/GitPython-3.1.1-a65b243e-38f8-1a2f-04c8-ac4a06200557 SHA1:ccb9a8bdc7180f0121937066f69ed46d86862e7e
+ExternalDocumentRef: setuptools-46.1.3 http://spdx.org/spdxdocs/setuptools-46.1.3-d43aedce-1a6f-36bc-c3ee-6250f40b5284 SHA1:e02cf6623d249b227f9c9f52f89f89746e8e694a
+ExternalDocumentRef: MarkupSafe-2.0.0a1 http://spdx.org/spdxdocs/MarkupSafe-2.0.0a1-c93ac904-9764-d014-1432-f4c786adf087 SHA1:179ebc5de0146c039326dfe63f204f8d0b616552
+ExternalDocumentRef: gitdb-4.0.4 http://spdx.org/spdxdocs/gitdb-4.0.4-273dee53-21ee-8c6a-4800-30a1e6364105 SHA1:d047d3d53143894423c4e99b92e7fef52fa524a3
+ExternalDocumentRef: smmap-3.0.2 http://spdx.org/spdxdocs/smmap-3.0.2-3806f622-d0e9-ee36-c07f-3655009ad9ca SHA1:c394d1422cd7e2095cdb4979bb1baf7a3a9dd638
+
+
+# Creation Info
+
+Creator: Person: Mbed team (support@mbed.com)
+Creator: Organization: Arm Mbed (support@mbed.com)
+Creator: Tool: mbed-spdx-generator
+Created: 2020-04-23T14:50:02Z
+
+
+# Review
+
+Reviewer: Person: Monty Bot (monty-bot@arm.com)
+ReviewDate: 2020-04-23T14:50:02Z
+
+
+# Package
+
+PackageName: mbed-targets
+SPDXID: SPDXRef-e40a9731-efca-4a89-8a6f-42e53d46622a
+PackageVersion: 1.0.0b159
+PackageDownloadLocation: NONE
+FilesAnalyzed: True
+PackageSummary: <text>Target Abstraction for Mbed OS</text>
+PackageFileName: mbed-targets
+PackageOriginator: Person: Mbed team (support@mbed.com)
+PackageChecksum: SHA1: NOASSERTION
+PackageVerificationCode: a64ef0c894e608629f62fa054c0d3072173d7137
+PackageDescription: <text>NOASSERTION</text>
+PackageLicenseDeclared: Apache 2.0
+PackageLicenseConcluded: Apache 2.0 AND Apache-2.0
+PackageLicenseInfoFromFiles: Apache 2.0
+PackageLicenseInfoFromFiles: Apache 2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageLicenseInfoFromFiles: Apache-2.0
+PackageCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+PackageHomePage: https://github.com/ARMmbed/mbed-targets
+
+
+# File
+
+FileName: ./mbed_targets/__init__.py
+SPDXID: SPDXRef-a88e396e-850e-03f7-56b0-6789a28c728d
+FileType: SOURCE
+FileChecksum: SHA1: 27954dbf299b185b9d13040ed5d62e623085d14c
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/_internal/__init__.py
+SPDXID: SPDXRef-225f606d-418a-13ae-e760-f1912d9acbe7
+FileType: SOURCE
+FileChecksum: SHA1: 42e8af887e0213a263843ee65781eb6bd97ba85f
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/_internal/board_database.py
+SPDXID: SPDXRef-1ac6726a-fd7d-7258-6af8-8abbf3f45d1b
+FileType: SOURCE
+FileChecksum: SHA1: 1ba876f1c1a89b89078253380b48f24092171822
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/_internal/data/board_database_snapshot.json
+SPDXID: SPDXRef-96b9a2a0-ede4-6d3b-13eb-de475511ded3
+FileType: SOURCE
+FileChecksum: SHA1: 11d341dd3fd69c07f5c675f79acebf1417cba86d
+LicenseConcluded: Apache 2.0
+LicenseInfoInFile: Apache 2.0
+FileCopyrightText: NONE
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/_internal/data/targets_metadata.json
+SPDXID: SPDXRef-3eaf2629-d2be-2a76-77a9-8df0cd89d624
+FileType: SOURCE
+FileChecksum: SHA1: 93834a7b4947307a42e359f06bf9e8ab4f415209
+LicenseConcluded: Apache 2.0
+LicenseInfoInFile: Apache 2.0
+FileCopyrightText: NONE
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/_internal/exceptions.py
+SPDXID: SPDXRef-afdd3bb3-e6d7-9c48-67b6-ee0e3b2340e5
+FileType: SOURCE
+FileChecksum: SHA1: 8d0f7404aaa7863dfd7a052bb57d801023f18b31
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/_internal/target_attributes.py
+SPDXID: SPDXRef-809b1f48-0435-8f31-7be6-7b25bec09e6b
+FileType: SOURCE
+FileChecksum: SHA1: b407d780600416a9549c1c498d0461c18fe3670e
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/_internal/targets_json_parsers/__init__.py
+SPDXID: SPDXRef-d57449ad-445b-fb86-d52f-b39bc6b2399e
+FileType: SOURCE
+FileChecksum: SHA1: 38bdc3d72a1214d443d26fcb41ab271681d441cb
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/_internal/targets_json_parsers/accumulating_attribute_parser.py
+SPDXID: SPDXRef-8fdd4bff-7999-6fd8-9fcc-e9f1c95f20fe
+FileType: SOURCE
+FileChecksum: SHA1: 56e565ad9e429ae79db70ed307cc914956fa2845
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/_internal/targets_json_parsers/overriding_attribute_parser.py
+SPDXID: SPDXRef-1a1efbf1-b73e-cdcb-8014-acd7b3fd1691
+FileType: SOURCE
+FileChecksum: SHA1: fa94327c61a8f10b7f32af19b126961f0bc12285
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/_version.py
+SPDXID: SPDXRef-17ce8612-42b7-058f-ddee-e88df54d75a2
+FileType: SOURCE
+FileChecksum: SHA1: 96b32551035f8e0d0785b95883b102dfd4c82ec6
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/board.py
+SPDXID: SPDXRef-18c4d238-b8a3-1f28-eaae-9aaa0be34f6c
+FileType: SOURCE
+FileChecksum: SHA1: 7df876ed970d717c03dd1f86931fc79ac6a13000
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/boards.py
+SPDXID: SPDXRef-0c5298fe-2128-9d7d-afaf-5dbda68ee0d0
+FileType: SOURCE
+FileChecksum: SHA1: a94c03f02dfab62b278ac233089ed4c9741f5f65
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/env.py
+SPDXID: SPDXRef-2f7e07c1-fc1f-5da8-09c0-0375233e7670
+FileType: SOURCE
+FileChecksum: SHA1: a46863cbaa717ba3bf3c163abeeb32a7d984a7da
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/exceptions.py
+SPDXID: SPDXRef-579800c9-1009-e521-a7a2-ea9ee1ccbb4f
+FileType: SOURCE
+FileChecksum: SHA1: 6d01905f574ec36329014e2f83c550a605724010
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/get_board.py
+SPDXID: SPDXRef-7d095bf8-e235-4394-9fac-a20ec58c6482
+FileType: SOURCE
+FileChecksum: SHA1: a4884b7e047261269b435dc550a498c16d7dae9d
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/get_target.py
+SPDXID: SPDXRef-c68d69c6-dcc2-85b4-2aed-11564b11b36d
+FileType: SOURCE
+FileChecksum: SHA1: bb03014e06ddd236a2104214469794fd0c0c7147
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/mbed_tools.py
+SPDXID: SPDXRef-52853d25-d158-5df4-71fc-ecfcf27c6d2d
+FileType: SOURCE
+FileChecksum: SHA1: 1b8046f82109a94d8608ee18cb34b70d12f1522c
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# File
+
+FileName: ./mbed_targets/target.py
+SPDXID: SPDXRef-0e32ee09-ee1e-5e40-af85-5808b3d39306
+FileType: SOURCE
+FileChecksum: SHA1: 56355c885a650aea38c3565790dd99e6ff808f99
+LicenseConcluded: Apache-2.0
+LicenseInfoInFile: Apache-2.0
+FileCopyrightText: <text>Copyright (C) 2020 Arm Mbed. All rights reserved.</text>
+FileComment: <text>NONE</text>
+
+
+# Extracted Licenses
+
