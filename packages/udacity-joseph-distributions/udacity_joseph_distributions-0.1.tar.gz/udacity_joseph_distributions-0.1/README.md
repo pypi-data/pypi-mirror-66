@@ -1,0 +1,1 @@
+This is a distribution package from the Udacity training course
