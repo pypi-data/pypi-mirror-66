@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+version.txt
+newtools/__init__.py
+newtools.egg-info/PKG-INFO
+newtools.egg-info/SOURCES.txt
+newtools.egg-info/dependency_links.txt
+newtools.egg-info/not-zip-safe
+newtools.egg-info/top_level.txt
+newtools/aws/__init__.py
+newtools/aws/s3_location.py
+newtools/tests/test_s3.py
