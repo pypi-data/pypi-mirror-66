@@ -1,0 +1,15 @@
+name: wot
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - pandas
+  - h5py
+  - matplotlib
+  - scikit-learn
+  - scipy
+  - POT
+  - pip
+  - pip:
+      - wot
+

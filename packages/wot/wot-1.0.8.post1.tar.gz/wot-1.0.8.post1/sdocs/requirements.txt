@@ -1,0 +1,7 @@
+sphinxcontrib-napoleon
+setuptools
+h5py
+pyyaml
+scipy
+pandas
+flask
