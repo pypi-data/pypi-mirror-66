@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: pyhrp
+Version: 0.0.1
+Summary: Python for Hierarchical Risk Parity
+Home-page: https://github.com/tschm/hrp
+Author: Thomas Schmelzer
+Author-email: thomas.schmelzer@gmail.com
+License: UNKNOWN
+Project-URL: Source Code, https://github.com/tschm/hrp
+Description: UNKNOWN
+Platform: UNKNOWN
