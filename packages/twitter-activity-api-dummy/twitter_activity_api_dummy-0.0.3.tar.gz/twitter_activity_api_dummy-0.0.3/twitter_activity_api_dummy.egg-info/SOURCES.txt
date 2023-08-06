@@ -1,0 +1,13 @@
+README.md
+setup.py
+twitter_activity_api_dummy.egg-info/PKG-INFO
+twitter_activity_api_dummy.egg-info/SOURCES.txt
+twitter_activity_api_dummy.egg-info/dependency_links.txt
+twitter_activity_api_dummy.egg-info/requires.txt
+twitter_activity_api_dummy.egg-info/top_level.txt
+twitter_activity_api_dummy/activity_manager/activity_identifier.py
+twitter_activity_api_dummy/activity_manager/resources.py
+twitter_activity_api_dummy/activity_manager/save_manager.py
+twitter_activity_api_dummy/activity_manager/save_to_folder.py
+twitter_activity_api_dummy/activity_manager/save_to_s3.py
+twitter_activity_api_dummy/webhook_manager/twitter_webhook_manager.py
