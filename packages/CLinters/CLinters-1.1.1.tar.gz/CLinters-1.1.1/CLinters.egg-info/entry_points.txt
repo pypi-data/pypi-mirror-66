@@ -1,0 +1,7 @@
+[console_scripts]
+clang-format-hook = hooks.clang_format:main
+clang-tidy-hook = hooks.clang_tidy:main
+cppcheck-hook = hooks.cppcheck:main
+oclint-hook = hooks.oclint:main
+uncrustify-hook = hooks.uncrustify:main
+

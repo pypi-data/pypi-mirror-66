@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+CLinters.egg-info/PKG-INFO
+CLinters.egg-info/SOURCES.txt
+CLinters.egg-info/dependency_links.txt
+CLinters.egg-info/entry_points.txt
+CLinters.egg-info/top_level.txt
+hooks/__init__.py
+hooks/clang_format.py
+hooks/clang_tidy.py
+hooks/cppcheck.py
+hooks/oclint.py
+hooks/uncrustify.py
+hooks/utils.py
