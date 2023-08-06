@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: dinbrief.py
+Version: 0.1.1
+Summary: Dinbrief made easy
+Home-page: https://github.com/ohjeah/dinbrief-boilerplate
+Author: Markus Quade
+Author-email: info@markusqua.de
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: delegator.py
+Requires-Dist: click
+Requires-Dist: pyyaml
+Requires-Dist: click-log
+Requires-Dist: click-default-group
+Requires-Dist: halo
+Requires-Dist: crayons
+
+# dinbrief-boilerplate
+
+based on [letter-boilerplate](https://github.com/mrzool/letter-boilerplate)
+
+
