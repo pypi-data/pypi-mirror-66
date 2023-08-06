@@ -1,0 +1,13 @@
+setup.cfg
+setup.py
+sppa/MILPsolvers.py
+sppa/Operations.py
+sppa/SPPA.py
+sppa/Utilities.py
+sppa/__init__.py
+sppa/constants.py
+sppa.egg-info/PKG-INFO
+sppa.egg-info/SOURCES.txt
+sppa.egg-info/dependency_links.txt
+sppa.egg-info/requires.txt
+sppa.egg-info/top_level.txt
