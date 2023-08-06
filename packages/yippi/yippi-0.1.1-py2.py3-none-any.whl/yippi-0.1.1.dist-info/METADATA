@@ -1,0 +1,136 @@
+Metadata-Version: 2.1
+Name: yippi
+Version: 0.1.1
+Summary: An (a)sync e621 API wrapper for Python.
+Home-page: https://github.com/rorre/yippi
+Author: Rendy Arya Kemal
+Author-email: rendyarya22@gmail.com
+License: GPL-3.0-only
+Project-URL: Documentation, https://yippi.readthedocs.io/
+Project-URL: Changelog, https://yippi.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/rorre/yippi/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6.*
+Description-Content-Type: text/x-rst
+Requires-Dist: requests (>=2.23.0)
+Requires-Dist: aiohttp (>=3.6.2)
+
+========
+Overview
+========
+.. image:: https://travis-ci.com/rorre/Yippi.svg?branch=master
+    :target: https://travis-ci.com/rorre/Yippi
+.. image:: https://codecov.io/gh/rorre/yippi/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/rorre/yippi
+
+An (a)sync e621 API wrapper library.
+
+* Free software: GNU Lesser General Public License v3 (LGPLv3)
+
+Installation
+============
+
+::
+
+    pip install yippi
+
+You can also install the in-development version with::
+
+    pip install git+ssh://git@github.com/rorre/yippi.git@master
+
+Quickstart
+==========
+
+Sync
+----
+
+::
+
+    >>> from yippi import YippiClient
+    >>> client = YippiClient("MyProject", "1.0", "MyUsernameOnE621")
+    >>> posts = client.posts("m/m zeta-haru rating:s") # or ["m/m", "zeta-haru", "rating-s"], both works.
+    [Post(id=1383235), Post(id=514753), Post(id=514638), Post(id=356347), Post(id=355044)]
+    >>> posts[0].tags
+    {'artist': ['zeta-haru'],
+     'character': ['daniel_segja', 'joel_mustard'],
+     'copyright': ['patreon'],
+     'general': ['5_fingers', ..., 'spooning'],
+     'invalid': [],
+     'lore': [],
+     'meta': ['comic'],
+     'species': ['bird_dog', ... ]}
+
+Async
+-----
+
+::
+
+    >>> from yippi import AsyncYippiClient
+    >>> client = AsyncYippiClient("MyProject", "1.0", "MyUsernameOnE621")
+    >>> posts = await client.posts("m/m zeta-haru rating:s") # or ["m/m", "zeta-haru", "rating-s"], both works.
+    [Post(id=1383235), Post(id=514753), Post(id=514638), Post(id=356347), Post(id=355044)]
+    >>> posts[0].tags
+    {'artist': ['zeta-haru'],
+     'character': ['daniel_segja', 'joel_mustard'],
+     'copyright': ['patreon'],
+     'general': ['5_fingers', ..., 'spooning'],
+     'invalid': [],
+     'lore': [],
+     'meta': ['comic'],
+     'species': ['bird_dog', ... ]}
+
+Documentation
+=============
+
+
+Documentation is available on readthedocs: https://yippi.readthedocs.io/
+
+
+Development
+===========
+
+To run the all tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+
+Changelog
+=========
+
+0.0.1 (2020-04-19)
+------------------
+
+* Initial release.
+
+

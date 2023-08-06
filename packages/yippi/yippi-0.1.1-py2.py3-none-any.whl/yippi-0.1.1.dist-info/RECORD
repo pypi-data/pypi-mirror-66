@@ -1,0 +1,13 @@
+yippi/AbstractYippi.py,sha256=xlIenBUfBESqzplEYTIhgEX9TLHqKptca5l67T_oSx8,13782
+yippi/AsyncYippi.py,sha256=__OE2DUZaddhl75FOqxFJ4iyt4DopX_ONNc_zi0MB7w,3791
+yippi/Classes.py,sha256=kNp98wymeFTfWQYbBHmnSj3RguvmmYq3gWHqYUKk_C8,10145
+yippi/Constants.py,sha256=5s0nH43gbDd-2yDc281vsdPlaReyXi7vip3y_9mFNzo,297
+yippi/Exceptions.py,sha256=YD1fYLM03RcMq5KtMhju8zMlJEJ_8kir8Y1BYkjOUkM,81
+yippi/YippiSync.py,sha256=_Js7-fPZdZHdds38scKnsM9cm5qM6MyWrmjukqopOlk,3215
+yippi/__init__.py,sha256=2mCRCD_MjGXtrtpWbirYLyc0no2R0PgEYpJKh_1XrX8,166
+yippi-0.1.1.dist-info/AUTHORS.rst,sha256=jIjhicw4Ttr3W1JT1hnsFBwGMCFB9sgJMgnjmQN5Hs8,63
+yippi-0.1.1.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+yippi-0.1.1.dist-info/METADATA,sha256=ZRm0ZKERGzT7vTTa-DsKZs81DoRBIh9gEj0Bsyob0Ek,3607
+yippi-0.1.1.dist-info/WHEEL,sha256=6T3TYZE4YFi2HTS1BeZHNXAi8N52OZT4O-dJ6-ome_4,116
+yippi-0.1.1.dist-info/top_level.txt,sha256=gY_FmutLl2XAJ_o4ACCXXQNI2lr1Vnsr3Omdx-S1OGk,6
+yippi-0.1.1.dist-info/RECORD,,
