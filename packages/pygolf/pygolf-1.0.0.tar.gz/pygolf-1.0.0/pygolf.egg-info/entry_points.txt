@@ -1,0 +1,3 @@
+[console_scripts]
+pygolf = pygolf.__main__:main
+
