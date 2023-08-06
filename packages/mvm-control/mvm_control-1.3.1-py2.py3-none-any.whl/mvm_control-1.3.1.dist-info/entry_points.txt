@@ -1,0 +1,3 @@
+[console_scripts]
+mvm-control=mvm_control:main
+
