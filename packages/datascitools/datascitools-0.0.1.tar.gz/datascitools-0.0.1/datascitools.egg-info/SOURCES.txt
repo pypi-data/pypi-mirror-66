@@ -1,0 +1,11 @@
+README.md
+setup.py
+datascitools/__init__.py
+datascitools/_version.py
+datascitools.egg-info/PKG-INFO
+datascitools.egg-info/SOURCES.txt
+datascitools.egg-info/dependency_links.txt
+datascitools.egg-info/requires.txt
+datascitools.egg-info/top_level.txt
+datascitools/analysis/__init__.py
+datascitools/analysis/edge_detection.py
