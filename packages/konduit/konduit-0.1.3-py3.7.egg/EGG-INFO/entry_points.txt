@@ -1,0 +1,3 @@
+[console_scripts]
+konduit-python = cli:cli
+
