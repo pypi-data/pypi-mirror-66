@@ -1,0 +1,10 @@
+README.md
+setup.py
+crypto_connect/__init__.py
+crypto_connect/__main__.py
+crypto_connect.egg-info/PKG-INFO
+crypto_connect.egg-info/SOURCES.txt
+crypto_connect.egg-info/dependency_links.txt
+crypto_connect.egg-info/entry_points.txt
+crypto_connect.egg-info/requires.txt
+crypto_connect.egg-info/top_level.txt
