@@ -1,0 +1,2 @@
+include imagesc/data/*.zip
+include imagesc/data/*.txt
