@@ -1,0 +1,6 @@
+__title__ = 'ap-topical'
+__version__ = '0.2.1'
+__description__ = 'Topical is a simple event pipeline written in Python.'
+__author__ = 'Anna Poulakos'
+__authoremail__ = 'anna.poulakos@gmail.com'
+__cake__ = u'\u2728 \U0001f370 \u2728'
