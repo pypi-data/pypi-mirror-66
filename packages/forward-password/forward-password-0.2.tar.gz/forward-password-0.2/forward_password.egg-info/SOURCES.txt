@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+forward_cli/__init__.py
+forward_cli/main.py
+forward_password.egg-info/PKG-INFO
+forward_password.egg-info/SOURCES.txt
+forward_password.egg-info/dependency_links.txt
+forward_password.egg-info/entry_points.txt
+forward_password.egg-info/not-zip-safe
+forward_password.egg-info/requires.txt
+forward_password.egg-info/top_level.txt
