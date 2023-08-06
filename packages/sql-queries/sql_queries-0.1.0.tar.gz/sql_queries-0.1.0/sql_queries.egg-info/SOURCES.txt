@@ -1,0 +1,7 @@
+setup.py
+sql_queries.egg-info/PKG-INFO
+sql_queries.egg-info/SOURCES.txt
+sql_queries.egg-info/dependency_links.txt
+sql_queries.egg-info/top_level.txt
+sql_query/__init__.py
+sql_query/sql_query.py
