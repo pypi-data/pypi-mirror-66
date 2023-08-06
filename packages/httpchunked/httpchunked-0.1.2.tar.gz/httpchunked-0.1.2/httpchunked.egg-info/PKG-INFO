@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: httpchunked
+Version: 0.1.2
+Summary: Chunked transfer encoding as defined in RFC 7230
+Home-page: https://github.com/jdeflander/httpchunked
+Author: Jasper Deflander
+License: MIT
+Description: # httpchunked
+        
+        Do you need support for chunked transfer encoding in your Python web server,
+        without adding a dependency on a complete framework? Then `httpchunked` is
+        the module you need! It has no third-party dependencies and consists of only
+        two functions: `decode` and `encode`.
+        
+        ## Usage
+        
+        ### Decoding
+        
+        ```sh
+        $ cat main.py
+        from io import BytesIO
+        
+        from httpchunked import decode
+        
+        if __name__ == "__main__":
+            dst = BytesIO()
+            src = BytesIO(b"3\r\nfoo\r\n0\r\n\r\n")
+            decode(dst, src)
+            raw = dst.getvalue()
+            print(raw)
+        $ python main.py
+        b'foo'
+        ```
+        
+        ### Encoding
+        
+        ```sh
+        $ cat main.py
+        from io import BytesIO
+        
+        from httpchunked import encode
+        
+        if __name__ == "__main__":
+            dst = BytesIO()
+            src = BytesIO(b"foo")
+            encode(dst, src)
+            raw = dst.getvalue()
+            print(raw)
+        $ python main.py
+        b'3\r\nfoo\r\n0\r\n\r\n'
+        ```
+        
+        ## Installation
+        
+        ```sh
+        pip install httpchunked
+        ```
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
