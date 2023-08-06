@@ -1,0 +1,11 @@
+ecoms/EasyCommunicationHandler.py,sha256=Xmja8hUG5tNRZXuFmJO3_O76s89ZzT4IWVNctFKri7k,7269
+ecoms/__init__.py,sha256=xuTyw90MCDLpPfI5VI6xH7Kh1P_gPX4Jieisz8nkI7s,176
+ecoms/__main__.py,sha256=OCFzrl0eeNs8lY4EMCcS0kHtlqvw3NxySfSD8wTjmFE,766
+ecoms/master.py,sha256=aGTKV0GUKhY2Af-Khd0XgSjXagR6Lj-4l4dXGWHpDgo,4106
+ecoms/message_drop.py,sha256=sNWEwVEf5d0lQxlJApdlDBHKVqRFrrQGMPcy4uX5uv0,779
+ecoms/slave.py,sha256=BRF5a954bePsSLUgv-qIiBczK2BZk7cAFfGZog1TltU,505
+EasyCommunications-0.1.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+EasyCommunications-0.1.4.dist-info/METADATA,sha256=zzIH7X50FQA8rTxGeUd_Oss8QLf-ln2qEQTeJ2mgSNg,2297
+EasyCommunications-0.1.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+EasyCommunications-0.1.4.dist-info/top_level.txt,sha256=2XLdND7egzrQ5bylmRi9fpIJ4q2U9UbGKAjRqUf0lEQ,6
+EasyCommunications-0.1.4.dist-info/RECORD,,
