@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ndasynapse
+Version: 1.0.2
+Summary: NDA to Synapse sync
+Home-page: http://github.com/bsmn/ndasynapse
+Author: Kenneth Daily
+Author-email: kenneth.daily@sagebase.org
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: synapseclient (>=1.7.2)
+Requires-Dist: pandas (>=0.20.3)
+Requires-Dist: boto3 (==1.10.6)
+Requires-Dist: botocore (==1.13.9)
+Requires-Dist: boto (>=2.46.1)
+Requires-Dist: requests (>=2.18.1)
+Requires-Dist: deprecated (==1.2.4)
+
+UNKNOWN
+
+

@@ -1,0 +1,12 @@
+ndasynapse/__init__.py,sha256=vkhmcFofF5OuX00TwlOrMM4v_BPg85uxQCPmwEOx7DI,77
+ndasynapse/__version__.py,sha256=Y3LSfRioSl2xch70pq_ULlvyECXyEtN3krVaWeGyaxk,22
+ndasynapse/nda.py,sha256=l5YaFDxwD4Ylbj3Z_pEIqJagtHBM_3pWaeRT7fdXSWQ,43688
+ndasynapse/synapse.py,sha256=rwaX3zsfqAcX4pv_x6prbI3FY0rGPtX6-A5E5-YMTgM,5631
+ndasynapse-1.0.2.data/scripts/manifest_guid_data.py,sha256=PD4l8PtjuIYSd5Oxetpb7s-u1FGo9gkW47vFayB3bBw,6499
+ndasynapse-1.0.2.data/scripts/manifest_to_synapse.py,sha256=41VrVz6Gtdd6niOFWs2Rj16ynb6hLUBK_WyT2qYPU2E,2666
+ndasynapse-1.0.2.data/scripts/nda_to_synapse_manifest.py,sha256=P8bZRuqhM7gVeoze-T09H8qstqDlHMotwQzmPQKpYXg,5832
+ndasynapse-1.0.2.data/scripts/query-nda,sha256=8RT10Dlp9NmcDjmPBJw515FrRaH5ocavBUHQCholtlU,12605
+ndasynapse-1.0.2.dist-info/METADATA,sha256=1uqEV8F7959kAEKMGAWlfx5yCLrmxDbDUQMbRsyrIEs,474
+ndasynapse-1.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ndasynapse-1.0.2.dist-info/top_level.txt,sha256=v8jaSS8ZmrB4eHASnmJDkB8NampIYRyuzif2jUi2AQg,11
+ndasynapse-1.0.2.dist-info/RECORD,,
