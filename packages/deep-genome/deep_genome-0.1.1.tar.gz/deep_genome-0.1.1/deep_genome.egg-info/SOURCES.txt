@@ -1,0 +1,12 @@
+README.md
+setup.py
+deep_genome/__init__.py
+deep_genome/dataset.py
+deep_genome/generate.py
+deep_genome/models.py
+deep_genome/utils.py
+deep_genome.egg-info/PKG-INFO
+deep_genome.egg-info/SOURCES.txt
+deep_genome.egg-info/dependency_links.txt
+deep_genome.egg-info/not-zip-safe
+deep_genome.egg-info/top_level.txt
