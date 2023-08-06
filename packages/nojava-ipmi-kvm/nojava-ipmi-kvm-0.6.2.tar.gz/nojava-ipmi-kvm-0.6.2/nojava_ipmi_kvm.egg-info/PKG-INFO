@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: nojava-ipmi-kvm
+Version: 0.6.2
+Summary: Access Java based ipmi kvm consoles without a local Java installation.
+Home-page: https://github.com/sciapp/nojava-ipmi-kvm
+Author: Ingo Heimbach
+Author-email: i.heimbach@fz-juelich.de
+License: MIT
+Description: UNKNOWN
+Keywords: ipmi,kvm,vnc
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: ~=3.5
+Provides-Extra: GUI
