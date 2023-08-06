@@ -1,0 +1,11 @@
+tansa/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tansa/app.py,sha256=QCD8pyH7vvNwS4WdQUiHve_HakjaI7pP8vpz6cbO3pc,239
+tansa/finder.py,sha256=irPiyT5-rZAtew1xSwfj5yslJwgmHV7YwgooM5uRYSs,906
+tansa/jreader.py,sha256=XWHgoEnnd-Kh6ytlZo33po6O8lFyfktzw8-IEGq6iDU,625
+tansa/jwriter.py,sha256=KmmKh027IOGAUCVPim_zAChPqRPPTvbyH1HgdFjmcak,189
+tansa-0.0.1.dist-info/LICENSE.txt,sha256=ZyoBEsag0sCtFO5T9HHqymhOW8fagBf1TBr2v9n4ank,1068
+tansa-0.0.1.dist-info/METADATA,sha256=CAnuLNQrVnnCyAUQbvy7f5L7WfD03You6GD3uvpMG9M,1394
+tansa-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+tansa-0.0.1.dist-info/entry_points.txt,sha256=9MbPxKG77Vf0si0BS_CSuN7Byr3-xW2tXLREM4BreFU,42
+tansa-0.0.1.dist-info/top_level.txt,sha256=P_QXNF6UcZHM0mOKQ8vXc-j_1AlNK1HvQfQAaUdMs5E,6
+tansa-0.0.1.dist-info/RECORD,,
