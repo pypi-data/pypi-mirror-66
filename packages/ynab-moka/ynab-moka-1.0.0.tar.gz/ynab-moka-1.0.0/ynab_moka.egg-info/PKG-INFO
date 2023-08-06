@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: ynab-moka
+Version: 1.0.0
+Summary: YNAB API Endpoints
+Home-page: https://github.com/dangior/ynab-moka
+Author: UNKNOWN
+Author-email: hello@garciadavid.net
+License: UNKNOWN
+Download-URL: https://github.com/dangior/ynab-moka/archive/1.0.0.tar.gz
+Description:     Our API uses a REST based design, leverages the JSON data format, and relies upon HTTPS for transport. We respond with meaningful HTTP response codes and if an error occurs, we include error details in the response body.  API Documentation is at https://api.youneedabudget.com  # noqa: E501
+            
+Keywords: Swagger,YNAB API Endpoints
+Platform: UNKNOWN
