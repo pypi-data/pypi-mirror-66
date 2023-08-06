@@ -1,0 +1,9 @@
+pdsys/__init__.py,sha256=wRk9-xYmA5Ky9xTIHZPz58u4cK9l7LjAiI18nFjFL5w,1514
+pdsys/__version__.py,sha256=kxCSbD586G1vlcVsue8QiXfP2J6R9f_NYciQtlVzffc,18
+pdsys/example.py,sha256=TXuAfyDNWUzCM9BX3_lJ6fpcYcnsBfA4961FeLwWzLI,112
+pdsys/ssh.py,sha256=nfCj_qDxvAbrOLANGM3_rLSuZB2dQlf3nPYaTWeGIKU,717
+pdsys/utils.py,sha256=UroGJ58zwLTDybNrrR_Bn3FEyUlLbdNyTUyK2S6JQCY,1039
+pdsys-0.3.dist-info/METADATA,sha256=JZABL2rBV41GLw2bAH3gp02fooVD-IvkVCpUbTw0rM8,5050
+pdsys-0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pdsys-0.3.dist-info/top_level.txt,sha256=OtsRa6cmIEu5QxLURLMHuaOpjcYiiOLdytMPEKvpWmQ,6
+pdsys-0.3.dist-info/RECORD,,
