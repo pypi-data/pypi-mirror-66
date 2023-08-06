@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: advutils
+Version: 0.0.2
+Summary: advanced utilities for general purposes
+Home-page: https://github.com/davtoh/
+Author: David Toro
+Author-email: davsamirtor@gmail.com
+License: BSD
+Keywords: support,algorithms,advanced,specialized,utilities
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: packaging (>=16.8)
+Requires-Dist: appdirs (>=1.4)
+Requires-Dist: future (>=0.16)
+
+=========================================================
+advutils - advanced utilities for general purposes |docs|
+=========================================================
+
+Overview
+========
+
+This module encapsulates advanced algorithms for the manipulation data,
+counters, events, queues, multiprocessing and more...
+
+Stable:
+
+    - Documentation: http://pythonhosted.org/advutils
+    - Download Page: https://pypi.python.org/pypi/advutils
+
+Latest:
+
+    - Documentation: http://advutils.readthedocs.io/
+    - Project Homepage: https://github.com/davtoh/advutils
+
+BSD license, (C) 2015-2017 David Toro <davsamirtor@gmail.com>
+
+Documentation
+=============
+
+For API documentation, usage and examples see files in the "documentation"
+directory.  The ".rst" files can be read in any text editor or being converted to
+HTML or PDF using Sphinx_. Read the HTML version is online at
+http://advutils.readthedocs.io/en/latest/ .
+
+Examples are found in the directory examples_ and unit tests in tests_.
+
+Installation
+============
+``pip install advutils`` should work for most users.
+
+Once advutils is successfully installed you can import the it in python as:
+
+    >>>> import advutils
+
+Releases
+========
+
+All releases follow semantic rules proposed in https://www.python.org/dev/peps/pep-0440/
+and http://semver.org/
+
+- Contributions and bug reports are appreciated.
+- author: David Toro
+- e-mail: davsamirtor@gmail.com
+- project: https://github.com/davtoh/advutils
+
+.. _examples: https://github.com/davtoh/advutils/tree/master/examples
+.. _tests: https://github.com/davtoh/advutils/tree/master/tests
+.. _Python: http://python.org/
+.. _Sphinx: http://sphinx-doc.org/
+.. |docs| image:: https://readthedocs.org/projects/pyserial/badge/?version=latest
+   :target: http://advutils.readthedocs.io/
+   :alt: Documentation
+.. _manual: https://github.com/davtoh/advutils/blob/master/documentation/_build/latex/advutils.pdf
+
