@@ -1,0 +1,8 @@
+[console_scripts]
+kronbot = kronbot.__main__:main
+kronbot-launcher = kronbot.launcher:main
+kronbot-setup = kronbot.setup:run_cli
+
+[pytest11]
+kr0nOs = kronbot.pytest
+

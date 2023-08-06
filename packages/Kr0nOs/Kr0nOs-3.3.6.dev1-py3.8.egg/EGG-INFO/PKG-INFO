@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: Kr0nOs
+Version: 3.3.6.dev1
+Summary: A highly customisable Discord bot
+Home-page: https://github.com/kablekompany/Kr0nOs
+Author: Kable
+Author-email: trent@kablekompany.com
+License: GPL-3.0
+Description: <h1 align="center">
+          <br>
+          <a href="https://github.com/kablekompany/Kr0nOs/tree/master"><img src="https://kable.tk/50jcb" alt="Kr0nOs"></a>
+          <br>
+          Kr0nOs Discord Bot
+          <br>
+        </h1>
+        
+        <h4 align="center">Music, Moderation, Trivia, Stream Alerts and Fully Modular.</h4>
+        
+        <p align="center">
+          <a href="https://kable.lol/discord">
+            <img src="https://discordapp.com/api/guilds/604469555380617256/widget.png?style=shield" alt="Discord Server">
+          </a>
+          <a href="https://www.patreon.com/kablekompany">
+            <img src="https://img.shields.io/badge/Support-Kr0nOs-blue.svg" alt="Support Kr0nOs on Patreon!">
+          </a>
+        </p>
+        
+        <p align="center">
+          <a href="https://github.com/kablekompany/Kr0nOs/workflows/Lint%20Python">
+            <img src="https://github.com/kablekompany/Kr0nOs/workflows/Lint%20Python/badge.svg" alt="Code Check">
+          </a>
+          <a href="https://github.com/ambv/black">
+            <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code Style: Black">
+          </a>
+          </p>
+          
+          <p align="center">
+            <a href="https://github.com/Rapptz/discord.py/">
+              <img src="https://img.shields.io/badge/discord-py-yellow.svg" alt="discord.py">
+          </a>
+            <a href="https://www.python.org/downloads/">
+            <img src="https://img.shields.io/badge/Made%20With-Python%203.8-blue.svg?style=for-the-badge" alt="Made with Python 3.8">
+          </a>
+        </p>
+        
+        <p align="center">
+          <a href="#overview">Overview</a>
+          •
+          <a href="#installation">Installation</a>
+          <a href="#join-the-community">Community</a>
+          •
+          <a href="#license">License</a>
+        </p>
+        
+        # Overview
+        
+        Kr0nOs - A discord bot 
+        
+        [Installation](#installation) is easy, and you do **NOT** need to know anything about coding! Aside
+        from installation and updating, every part of the bot can be controlled from within Discord.
+        
+        **The default set of modules includes and is not limited to:**
+        
+        - Moderation features (kick/ban/softban/hackban, mod-log, filter, chat cleanup)
+        - Trivia (lists are included and can be easily added)
+        - Music features (YouTube, SoundCloud, local files, playlists, queues)
+        - Stream alerts (Twitch, Youtube, Mixer, Hitbox, Picarto)
+        - Bank (slot machine, user credits)
+        - Custom commands
+        - Imgur/gif search
+        - Admin automation (self-role assignment, cross-server announcements, mod-mail reports)
+        - Customisable command permissions
+        
+        # Installation
+        **The following platforms are officially supported:** 
+        
+        - Windows
+        - MacOS
+        - Most major linux distributions
+        
+        # Plugins
+        
+        Kron is fully modular, allowing you to load and unload plugins of your choice, and install 3rd party
+        plugins directly from Discord! A few examples are:
+        
+        - Cleverbot integration (talk to Kron and she talks back)
+        - Ban sync
+        - Welcome messages
+        - Casino
+        - Reaction roles
+        - Slow Mode
+        - AniList
+        - And much, much more!
+        
+        # Join the community!
+        
+        Join us on our [Official Discord Server](https://kable.lol/discord)!
+        
+        # License
+        
+        Released under the [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
+        
+        Kr0nOs is ALL
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: AsyncIO
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Documentation :: Sphinx
+Requires-Python: >=3.8.1
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Provides-Extra: docs
+Provides-Extra: postgres
+Provides-Extra: style
+Provides-Extra: test
