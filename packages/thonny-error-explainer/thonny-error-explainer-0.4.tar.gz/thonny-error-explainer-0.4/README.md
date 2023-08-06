@@ -1,0 +1,1 @@
+# thonny-error-explainer
