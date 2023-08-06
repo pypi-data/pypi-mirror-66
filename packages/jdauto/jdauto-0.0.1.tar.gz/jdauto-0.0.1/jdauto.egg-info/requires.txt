@@ -1,0 +1,5 @@
+multiplexor>=0.0.8
+jackdaw>=0.2.6
+aiosmb>=0.2.11
+msldap>=0.2.14
+pypykatz>=0.3.9
