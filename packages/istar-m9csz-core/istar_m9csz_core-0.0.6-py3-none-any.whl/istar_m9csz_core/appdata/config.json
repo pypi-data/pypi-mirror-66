@@ -1,0 +1,13 @@
+{
+  "paths": {
+    "data_format": "./appdata/data_format.json",
+    "highway_data_dir": "./appdata/highway_data/"
+  },
+  "plots": {
+    "todo": "set outside library",
+    "formats": ["png"]
+  },
+  "settings": {
+    "verbose": false
+  }
+}
