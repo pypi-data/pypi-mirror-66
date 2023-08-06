@@ -1,0 +1,9 @@
+README.md
+nbhub.py
+setup.py
+nbhub.egg-info/PKG-INFO
+nbhub.egg-info/SOURCES.txt
+nbhub.egg-info/dependency_links.txt
+nbhub.egg-info/entry_points.txt
+nbhub.egg-info/requires.txt
+nbhub.egg-info/top_level.txt

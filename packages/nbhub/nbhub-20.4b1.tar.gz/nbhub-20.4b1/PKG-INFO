@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: nbhub
+Version: 20.4b1
+Summary: Publish jupyter notebooks from the command line.
+Home-page: https://github.com/duarteocarmo/nbhub
+Author: Duarte O.Carmo
+Author-email: duarteocarmo@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/duarteocarmo/nbhub/issues
+Project-URL: Say Thanks!, https://nbhub.duarteocarmo.com
+Project-URL: Source, https://github.com/duarteocarmo/nbhub
+Description: # NbHub 📡
+        [![Build Status](https://travis-ci.org/duarteocarmo/nbhub.svg?branch=master)](https://travis-ci.org/duarteocarmo/nbhub) [![Coverage Status](https://coveralls.io/repos/github/duarteocarmo/nbhub/badge.svg?branch=master&service=github)](https://coveralls.io/github/duarteocarmo/nbhub?branch=master) [![PyPI version shields.io](https://img.shields.io/pypi/v/nbhub.svg)](https://pypi.python.org/pypi/nbhub/) [![Supported Python versions](https://img.shields.io/pypi/pyversions/nbhub.svg)](https://pypi.org/project/nbhub/) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black) [![PyPI downloads](https://img.shields.io/pypi/dm/nbhub.svg)](https://pypistats.org/packages/nbhub) [![GitHub license](https://img.shields.io/github/license/duarteocarmo/nbhub.svg)](https://github.com/duarteocarmo/think-cell/blob/master/LICENSE) [![made with: Vim](https://img.shields.io/badge/made%20with-Vim-019331)](https://github.com/vim/vim)
+        
+        Publish jupyter notebooks from the command line.
+        
+        Lets see. if this goes :) 
+        
+Keywords: jupyter notebook cli sharing
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
