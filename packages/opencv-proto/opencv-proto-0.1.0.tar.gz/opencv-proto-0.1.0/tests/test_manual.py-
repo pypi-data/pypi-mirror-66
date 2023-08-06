@@ -1,0 +1,78 @@
+from time import sleep
+
+import pytest
+
+
+def test_some():
+    from ocvproto.toolbox import WindowManager, Camera
+
+    with WindowManager() as wm:
+
+        blur = wm.window.add_trackbar_group(['x', 'y'], 'Blur', default=1)
+        wm.app.set_config('ocvproto.json')
+
+        with Camera() as cam:
+            for _ in wm.app.loop():
+                cam.read()
+                cam.blur(blur)
+                cam.write()
+                wm.set_frame(cam.frame)
+
+
+# @pytest.mark.skip('aa')
+def test_me():
+    from ocvproto.toolbox import Camera, Image, WindowManager, Window
+
+    import numpy as np
+
+    wmask = Window()
+
+    wout = Window()
+
+    param_canny = wout.add_trackbar_group({
+        'th 1': {},
+        'th 2': {},
+    }, 'cunny', default=250, max=500, step=25)
+
+    param_dilate = wout.add_trackbar_group({
+        'y': {'keys': 'kl'},
+        'x': {'keys': 'nm'},
+    }, 'dilate', default=20)
+
+    param_blur = wout.add_trackbar_group(['width', 'height'], 'blur', default=1)
+
+    sleep(0.5)
+
+    fr_bg_fake = Image('bg_fake.jpg').resize(640, 480).frame
+
+    with Camera() as cam:
+
+        img_bg_real = cam.get_image()
+
+        with WindowManager([wmask, wout]) as wm:
+            wm.app.set_config('ocvproto.json')
+
+            for _ in wm.app.loop():
+
+                fr_this = cam.read()
+
+                img_mask = (
+                    img_bg_real.
+                    absdiff(fr_this).
+                    make_gray().
+                    canny(*param_canny).
+                    dilate(np.ones(param_dilate, np.uint8), iterations=1).
+                    blur(param_blur)  # mask.astype(float)
+                )
+
+                mask = img_mask.frame
+                wm.set_frame(mask)
+
+                inv_mask = 1-mask
+                for ch in range(fr_this.shape[2]):
+                    fr_this[:, :, ch] = fr_this[:, :, ch] * mask + fr_bg_fake[:, :, ch] * inv_mask
+
+                # Text.apply_demo(fr_this)
+                # cam.write()
+
+                wout.set_frame(fr_this)
