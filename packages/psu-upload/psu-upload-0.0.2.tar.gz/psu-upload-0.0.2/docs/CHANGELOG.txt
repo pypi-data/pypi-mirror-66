@@ -1,0 +1,5 @@
+=== 0.0.2 ===
+- S3 storage path must include enviromment as well as app name ('APP/ENV/the-file.txt')
+
+=== 0.0.1 ===
+- Initial Release
