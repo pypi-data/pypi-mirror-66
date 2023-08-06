@@ -1,0 +1,16 @@
+CHANGES.rst
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/ConsoleDialogs/__init__.py
+src/ConsoleDialogs/cursesdialogs.py
+src/ConsoleDialogs/cursesutils.py
+src/ConsoleDialogs/keywords.py
+src/ConsoleDialogs/rawdialogs.py
+src/robotframework_consoledialogs.egg-info/PKG-INFO
+src/robotframework_consoledialogs.egg-info/SOURCES.txt
+src/robotframework_consoledialogs.egg-info/dependency_links.txt
+src/robotframework_consoledialogs.egg-info/not-zip-safe
+src/robotframework_consoledialogs.egg-info/requires.txt
+src/robotframework_consoledialogs.egg-info/top_level.txt
