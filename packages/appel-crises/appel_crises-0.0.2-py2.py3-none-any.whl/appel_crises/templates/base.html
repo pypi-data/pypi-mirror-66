@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% block head %}
+        <title>Appel crises</title>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="{% static "/appel_crises/css/appel-crises.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "/appel_crises/css/responsive.css" %}"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+</head>
+<body>
+
+{% block content %}{% endblock %}
+
+<footer class="flex-row flex-sb">
+    <div class="mention flex-col  flex-sb">
+        <a href=""><p>Mentions légales</p></a>
+        <a href=""><p>Espace presse</p></a>
+    </div>
+    <div class="contact flex-col flex-sb">
+        <div>
+            <p>Nous contacter</p>
+            <a href="mailto:email@adress.com" id="email">email@adress.com</a>
+        </div>
+        <div class="social flex-row">
+            <a href=""><img src="{% static "/appel_crises/img/facebook.svg" %}" alt="Logo Facebbok"></a>
+            <a href=""><img src="{% static "/appel_crises/img/twitter.svg" %}" alt="Logo Twitter"></a>
+            <a href=""><img src="{% static "/appel_crises/img/linkedin.svg" %}" alt="Logo LinkedIn"></a>
+            <a href=""><img src="{% static "/appel_crises/img/instagram.svg" %}" alt="Logo Instagram"></a>
+            <a href=""><img src="{% static "/appel_crises/img/youtube.svg" %}" alt="Logo Youtube"></a>
+        </div>
+    </div>
+</footer>
+
+{% block extra_js %}{% endblock %}
+
+</body>
+</html>
