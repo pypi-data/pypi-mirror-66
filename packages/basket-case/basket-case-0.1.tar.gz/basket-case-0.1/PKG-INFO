@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: basket-case
+Version: 0.1
+Summary: Swiss army knife pure Python library to change string casing
+Home-page: https://github.com/beaucronin/basket_case
+Author: Beau Cronin
+Author-email: beau.cronin@gmail.com
+License: UNKNOWN
+Description: # basket_case
+         Python swiss army knife for translating between case styles
+        
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
+Provides-Extra: dev
