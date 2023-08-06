@@ -1,0 +1,13 @@
+autofront/__init__.py,sha256=thYgKKoSO-qbY0jhF2zqzZqganoHKTm1oEZcDsFACVE,174
+autofront/autofront.py,sha256=g-0AKS_L0eLvNeOylI_OsTs7yr4HqPa-cS9GqNZVSbI,6676
+autofront/debug.py,sha256=YfFv0hCizLJOceQUlSNJiIRO68G4jNA5_y8EKZZQkz8,1050
+autofront/decorators.py,sha256=DFRpeqopGCgEGwpbgtOH2BvE4bugUyJj3E5dAp5lpAE,756
+autofront/display.txt,sha256=3ESYBItnJt4-SkwZq-1eRN_KSKbaA1dbVOXRWbhmVSc,42
+autofront/parse.py,sha256=nPqU7ZAOkQxW568y1XcEAIGvFf_bXiRjrRHH53b60kA,14278
+autofront/utilities.py,sha256=6cSpggyCW70ooQ3O4JqEWJ3XsV9S0UWKl3v5OAOyDN0,6541
+autofront/templates/functions.html,sha256=_Mff88C9u-X6n7Sw_Qz0t4eem6zQM0hbXxhM6XujoMQ,818
+autofront-0.0.1a3.dist-info/LICENSE.txt,sha256=SJqOEQhQntmKN7uYPhHg9-HTHwvY-Zp5yESOf_N9B-o,1475
+autofront-0.0.1a3.dist-info/METADATA,sha256=EqziHDHTSSMEPIy3pI0FDOOkTs5ZXtexzzw1RlRj9mo,3882
+autofront-0.0.1a3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+autofront-0.0.1a3.dist-info/top_level.txt,sha256=yTuSlyaykLErkzSXEIhs35cBc_TVJrI5NuAPGn1w7fw,10
+autofront-0.0.1a3.dist-info/RECORD,,

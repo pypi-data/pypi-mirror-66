@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ title }}</title>
+<!--meta http-equiv="refresh" content="30"--> 
+</head>
+<body>
+{%for func in func_dicts%}
+  {% if func['live'] %}
+    <p>
+      <div class="form-group">
+	<form method="POST">
+	  <label for="{{ func['title'] }}">{{ func['title'] }}</label>
+	  <input name="{{ func['title'] }}" id="{{ func['title'] }}">
+	  {% if not func['script'] %}
+	  )
+	  {% endif %}
+	  &nbsp;&nbsp;
+	  <input type="submit" value="  Go  ">
+	</form>
+      </div>
+    </p>
+  {% else %}
+    <p>
+      <form action="{{ func['link'] }}">
+	<label for="{{ func['title'] }}">{{ func['title'] }}</label>
+	&nbsp;&nbsp;
+	<input type="submit" value="  Go  ">
+      </form>
+    </p>
+  {% endif %}
+{%endfor%}
+  <p>
+    {% for line in display %}
+    <p>{{ line }}</p>
+    {% endfor %}
+  </p>
+</body>
+</html>
