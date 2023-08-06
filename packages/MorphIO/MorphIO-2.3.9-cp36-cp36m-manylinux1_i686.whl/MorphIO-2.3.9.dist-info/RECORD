@@ -1,0 +1,14 @@
+MorphIO.libs/libz-83853723.so.1.2.3,sha256=6L0AYPckpsJzCjqPErwqsxt4jx3jn-XyAVLME9t7bNc,75576
+MorphIO.libs/libaec-9b493b84.so.0.0.10,sha256=ZdG5guaNXzycK4tCH_yNBlxnuwsNgGRGzPNt_fpIjfU,33392
+MorphIO.libs/libsz-7ffe11dc.so.2.0.1,sha256=tpz63pFTCvx-SuQknnNpg9MTWnxzy_B0y8ElbqLxrNY,16804
+MorphIO.libs/libhdf5-9b4e3a7a.so.103.1.0,sha256=IwlcOjEufrt6FKJdY7cs9CBzJkYi5ipjjo5wZW6sbeU,4704000
+MorphIO-2.3.9.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+MorphIO-2.3.9.dist-info/top_level.txt,sha256=BzAG9hbvHB8LPMdmFQVdeNk0G6UfL-Nm7XuVcLmd0c8,8
+MorphIO-2.3.9.dist-info/RECORD,,
+MorphIO-2.3.9.dist-info/METADATA,sha256=V0sQ6uT_mJ19hF7ZQ6pO6xFbT-Wyuur0obrtD7m1WN0,15315
+MorphIO-2.3.9.dist-info/COPYING.LESSER,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+MorphIO-2.3.9.dist-info/WHEEL,sha256=6t7510198TJ2PtlzDSF-NUP-N2gHJXPdCdv4tKmsy1Y,107
+morphio/_morphio.cpython-36m-i386-linux-gnu.so,sha256=gGPBjO7qAxwwPa00ukivtRT6fdqDVAWtRA_itlhy9UU,1877844
+morphio/__init__.py,sha256=z5bxnLElvkiXOpkhuqP4_IdlN505vw3qbFO9Z0L8xJQ,724
+morphio/mut/__init__.py,sha256=YBv_CmYmutkYULLATOMrX9-ujf-dro51CEkPPH3A5Fc,80
+morphio/vasculature/__init__.py,sha256=8MkRVXSmsENGcFVEu9bnJKtjT9gY3Zz-SIhoh4RQkac,56
