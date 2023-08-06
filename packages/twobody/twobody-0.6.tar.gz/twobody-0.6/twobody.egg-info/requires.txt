@@ -1,0 +1,14 @@
+astropy
+numpy
+
+[docs]
+sphinx
+sphinx-astropy
+matplotlib
+
+[test]
+pytest-astropy
+numpy
+astropy
+scipy
+matplotlib
