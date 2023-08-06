@@ -1,0 +1,13 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "edge_gravity"
+author = "Lukas Erhard"
+author-email = "luerhard@googlemail.com"
+description-file = "README.md"
+home-page = "https://github.com/luerhard/edge_gravity/"
+classifiers = ["License :: OSI Approved :: MIT License"]
+requires = ["networkx"]
+

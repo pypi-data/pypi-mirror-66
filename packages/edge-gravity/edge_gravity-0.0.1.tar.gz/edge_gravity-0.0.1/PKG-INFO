@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: edge_gravity
+Version: 0.0.1
+Summary: calculate edge gravity for networkx-Graphs
+Home-page: https://github.com/luerhard/edge_gravity/
+Author: Lukas Erhard
+Author-email: luerhard@googlemail.com
