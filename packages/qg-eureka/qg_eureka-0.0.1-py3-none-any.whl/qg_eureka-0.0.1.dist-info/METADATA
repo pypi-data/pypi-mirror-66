@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: qg-eureka
+Version: 0.0.1
+Summary: 全高连接eureka组件
+Home-page: UNKNOWN
+Author: zouwendi
+Author-email: tz310200@gamil.com
+Maintainer: zouwendi
+Maintainer-email: tz310200@gamil.com
+License: GPL3 License
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools (>=41.0.1)
+Requires-Dist: requests (>=2.21.0)
+Requires-Dist: typing (>=3.7.4.1)
+
+# python 连接 EUREKA
+
+
+
