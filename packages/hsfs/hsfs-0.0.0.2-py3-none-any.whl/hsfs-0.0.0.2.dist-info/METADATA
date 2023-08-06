@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: hsfs
+Version: 0.0.0.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Moritz Meister
+Author-email: moritz@logicalclocks.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: pyhumps
+Requires-Dist: requests
+Requires-Dist: cryptography
+Requires-Dist: pyopenssl
+Requires-Dist: idna
+Requires-Dist: furl
+Requires-Dist: boto3
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: pyhopshive[thrift]
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+
+UNKNOWN
+
+
