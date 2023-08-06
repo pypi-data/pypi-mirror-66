@@ -1,0 +1,6 @@
+cython
+fire
+numpy
+pandas
+scipy
+sympy
