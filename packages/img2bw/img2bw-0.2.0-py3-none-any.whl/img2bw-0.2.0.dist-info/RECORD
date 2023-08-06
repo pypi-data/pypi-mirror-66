@@ -1,0 +1,10 @@
+img2bw/__init__.py,sha256=ZMPPEcJZg4V3D1VTRRRmY8P6-vRQPfB6e6DWfMX-2Jg,66
+img2bw/binarizer.py,sha256=nDvKrtNzHrWvnaT3rw7q-Efr--fCDVDjzFTqwpIBvyI,5272
+img2bw/main.py,sha256=vg3lmYr83hocI3jC_US2CDRO1evu7LbH7J7k10BaeUU,1577
+img2bw/utils.py,sha256=dBZ4M9TUBl-9tdvTb9YU9q9F8ishrZHEcX5u5ahrkWs,1984
+img2bw-0.2.0.dist-info/LICENSE,sha256=dn2YJrKyxpTx3LyCmp1Hl2JOmD6Jy0lwn4mWX0KQvQk,1062
+img2bw-0.2.0.dist-info/METADATA,sha256=H2zS9WBo9wTgYjG3opPLJ_HqNaNno1pWwGqHYcnWW10,6896
+img2bw-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+img2bw-0.2.0.dist-info/entry_points.txt,sha256=DtljpmoiDNO8qqygiQZi8ktS49P6-NmswSuhaaVDvUA,40
+img2bw-0.2.0.dist-info/top_level.txt,sha256=K1cY3t9CQ3VmwTJn6Wz6YD7C_ALoSNGfoU6Pn08z4FY,7
+img2bw-0.2.0.dist-info/RECORD,,
