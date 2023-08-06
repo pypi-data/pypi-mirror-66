@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/__init__.py
+src/testwise.py
+testwise.egg-info/PKG-INFO
+testwise.egg-info/SOURCES.txt
+testwise.egg-info/dependency_links.txt
+testwise.egg-info/requires.txt
+testwise.egg-info/top_level.txt
