@@ -1,0 +1,4 @@
+[console_scripts]
+CharsetFilter = CharsetFilter.CharsetFilter:main
+CharsetFilter_test = CharsetFilter.CharsetFilter:test
+

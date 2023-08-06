@@ -1,0 +1,9 @@
+README.md
+setup.py
+CharsetFilter/CharsetFilter.py
+CharsetFilter/__init__.py
+CharsetFilter.egg-info/PKG-INFO
+CharsetFilter.egg-info/SOURCES.txt
+CharsetFilter.egg-info/dependency_links.txt
+CharsetFilter.egg-info/entry_points.txt
+CharsetFilter.egg-info/top_level.txt
