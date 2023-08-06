@@ -1,0 +1,137 @@
+Metadata-Version: 2.1
+Name: cpmd-cube-tools
+Version: 0.98
+Summary: A python library and tool to read in and manipulate Gaussian and CPMD cube files.
+Home-page: https://gitlab.com/WadeHPCLEAP/cube_tools.git
+Author: Wenping Lyu
+Author-email: lyuwade@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (>=0.24.2)
+Requires-Dist: numpy (>=1.17.2)
+Requires-Dist: scipy (>=1.4.1)
+Requires-Dist: scikit-image (>=0.15.0)
+
+# cube_tools
+
+A easy-to-use python program to read in and manipulate Gaussian and CPMD cube files. 
+This code allows you to:
+    Read and write Gaussian/CPMD cube files,
+    Perform VDD charge analysis,
+    and more ...
+
+
+If you want to publish your results obtained (partially) from this software,
+please cite this paper:"On the accuracy of molecular simulation-based predictions
+of koff values: a Metadynamics study, DOI: https://doi.org/10.1101/2020.03.30.015396".
+
+# Installation:
+pip install cpmd_cube_tools  
+
+# Example 1: run as an executable tool
+#show the help
+
+cubetools.py -h
+
+#perform vdd calculation with cube data and GEOMETRY files only
+
+cubetool.py test/DENSITY.cube -g test/GEOMETRY -vdd yes -mol qm
+
+
+#perform vdd calculation with cube data, GEOMETRY, and mimic input files
+
+cubetool.py test/DENSITY.cube -g test/GEOMETRY -inp test/mm2qm_overlap.inp -vdd yes -mol mol
+
+#perform vdd calculation for electrons only
+
+cubetool.py test/DENSITY.cube -g test/GEOMETRY -inp test/mm2qm_overlap.inp -dvdd yes -mol mol
+
+
+# Example 2: run as a library
+
+from cpmd_cube_tools.api import *
+
+#load the test data
+
+cptest()
+
+#Load a cube file
+
+cube0=cube('test/DENSITY.cube')
+
+## Calculate the vdd charges
+
+vddcharge, vddcube=cube0.cube2vdd_test('test/GEOMETRY', 'test/mm2qm_overlap.inp')
+
+## show the vdd charges
+
+print(vddcharge)
+
+## Calculate the vdd charge with customized atoms selection
+
+#e.g. select the first 5 atoms in the cube file
+
+vddcharge, vddcube=cube0.cube2vdd('test/GEOMETRY', 'test/mm2qm_overlap.inp','qm,0,1,2,3,4')
+
+#e.g. select the first 5 atoms in the mm atom order list
+
+vddcharge, vddcube=cube0.cube2vdd('test/GEOMETRY', 'test/mm2qm_overlap.inp','mm,0,1,2,3,4')
+
+
+## Calculate the vdd charges of electrons only
+
+vddcharge, vddcube=cube0.cube2dvdd_test('test/GEOMETRY', 'test/mm2qm_overlap.inp')
+
+
+## Calculate the vdd charges of electrons only, with customized atoms selection
+
+#e.g. select the first 5 atoms in the test cube file
+
+vddcharge, vddcube=cube0.cube2dvdd('test/GEOMETRY', 'test/mm2qm_overlap.inp','qm,0,1,2,3,4')
+
+#e.g. select the first 5 atoms in the mm atom order list
+
+vddcharge, vddcube=cube0.cube2dvdd('test/GEOMETRY', 'test/mm2qm_overlap.inp','mm,0,1,2,3,4')
+
+# Example 3: a test python script
+
+test.py
+
+
+
+
+# Acknowledgements
+
+
+If you want to publish your results obtained (partially) from this software, please cite this paper:'On the accuracy of molecular simulation-based predictions of koff values: a Metadynamics study', DOI: https://doi.org/10.1101/2020.03.30.015396
+
+This code is partially developed based on the Cube-Toolz @ https://github.com/funkymunkycool/Cube-Toolz/blob/master/cube_tools.py
+
+
+
+# LICENSE
+
+
+Copyright (c) 2020 The Python Packaging Authority
+Author: Wenping Lyu
+Email:  lyuwade@gmail.com
+
+Academical use only!
+Permission is hereby granted, free of charge, to any person obtaining a copy of 
+this software and associated documentation files (the "Software") for academical
+useage, including the rights to use, copy, modify, and merge.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+
