@@ -1,0 +1,14 @@
+setuptools
+morepath>=0.19
+
+[coverage]
+pytest-cov
+
+[pep8]
+flake8
+black
+
+[test]
+pytest
+pytest-remove-stale-bytecode
+webtest
