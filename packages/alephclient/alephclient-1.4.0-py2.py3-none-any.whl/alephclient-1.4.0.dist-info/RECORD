@@ -1,0 +1,16 @@
+alephclient/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alephclient/api.py,sha256=ZHzFOb7b3YJg3xooiJLzQyYQVCGEZ-m8ESp7euu91zE,12708
+alephclient/cli.py,sha256=ZU4eMDkiNaUPC9by-SbzPZJSxSAXMPy-8NHsbcJeTdA,5870
+alephclient/errors.py,sha256=m5cr8v_rR9hvKJdeElBNMzHiq7LNgkwDv1ZFzMR2CRk,752
+alephclient/memorious.py,sha256=Aoa09tlW-zIIBCddsMB5-3TjOwyiXdn3vtrlvkei5Cs,3494
+alephclient/settings.py,sha256=cF3NfaGfYo5WddTf5JaJ363gjICDLnGhWYAltXoB7tw,571
+alephclient/util.py,sha256=0BCA7BzQ8_ydz-bt2PYN6Kingys3Q2rIyxsoXUl1rHQ,1693
+alephclient/tasks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alephclient/tasks/bulkload.py,sha256=qZtaaDJaXba23kX6VN45X6IIgjlKOjvQ-j3nHwOWiRI,654
+alephclient/tasks/crawldir.py,sha256=2fPplXLRfSSFYuXxA9f3y-wysHROC4qvcdyfvqZYqyI,3179
+alephclient-1.4.0.dist-info/LICENSE,sha256=I-Cu6XAmPimG5Z_AmR89tevllf5eLnaQXmKsT3ZwNYw,1099
+alephclient-1.4.0.dist-info/METADATA,sha256=MTuvI8ke2VEAICjRnJdFMvqMf1E7dQIBYeEoh5X3R5s,1364
+alephclient-1.4.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+alephclient-1.4.0.dist-info/entry_points.txt,sha256=NoF08avFkh-zeiIqvF-h-v0pT-X3INVwiFounbc-rY0,123
+alephclient-1.4.0.dist-info/top_level.txt,sha256=yLSWh9RVLNzpC58WETnxH45o1CTnpD5L3aafgTrPWgU,12
+alephclient-1.4.0.dist-info/RECORD,,
