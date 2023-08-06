@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pretermgrowth
+Version: 0.2
+Summary: Calculate growth measurement z-scores for preterm infants
+Home-page: UNKNOWN
+Author: Matt Devine
+Author-email: mddevine@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/gammaflauge/pretermgrowth/archive/0.2.tar.gz
+Project-URL: Source Code, https://github.com/gammaflauge/pretermgrowth/
+Description: # fenton-growth-calculator
+        A python package for calculating preterm infant growth statistics.
+        
+        Currently you can calculate z-scores for infants between ages 22w4d-50w0d.
+        
+        ```python
+        from pretermgrowth.fenton import Fenton
+        
+        Fenton.calc_zscore(
+            metric="weight", # or "length" or "hc"
+            sex="f", # or "m"
+            gestational_age_in_days=158, # range = [158-350]
+            measure=2400.0 # g for weight, cm for length or hc
+        )
+        ```
+        
+        ### fenton calculations
+        Fenton TR and Kim JH, BMC Pediatrics 2013, 13:59 http://www.ncbi.nlm.nih.gov/pubmed/23601190
+        
+Keywords: preterm neonatology fenton growth
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
