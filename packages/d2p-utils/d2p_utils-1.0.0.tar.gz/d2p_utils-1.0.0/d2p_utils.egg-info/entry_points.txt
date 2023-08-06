@@ -1,0 +1,3 @@
+[console_scripts]
+d2p_utils = d2p_utils.cli:main
+
