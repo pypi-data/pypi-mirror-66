@@ -1,0 +1,33 @@
+CHANGES
+=======
+
+1.0.0
+-----
+
+* Switch to ensure-docker role
+* Cleanup py27 support
+* Convert all of the fedora28 container usage to CentOS8
+* Update to hacking 3.0
+* Update hacking for Python3
+* Add TripleO Jobs back
+* Make file permission uniform and remove python shebangs
+* Don't write playbook stats in binary mode
+* Use ansible runner uuid as playbook id if exist
+* Use Zuul template for lower-constraints
+* Add reportentry.py custom module
+* Remove mock as a test requirement and add PyYAML as requirement
+* Use uuid if exists as env variable in the callback\_plugin
+* Migrate molecule jobs from centos 7 to 8
+* Add License File
+* Add playbooks
+* Remove zuul.d temporarily
+* Add RoleNames ansible-lint rule
+* Remove unused vars directory in roles
+* Make some roles more generic
+* Move Ansible components to validations\_common directory
+* Fix pbr installation issues
+* Add zuul and molecule tests structure
+* Add common Ansible roles and libraries
+* Add validations\_common lib structure
+* Add callback\_plugins
+* Initialization of validations-common
