@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: utaromkan
+Version: 1.4.0
+Summary: kana <-> romaji conversion for utau
+Home-page: http://github.com/danalog/utaromkan/
+Author: Tart
+Author-email: conemusicproductions@gmail.com
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Project-URL: Repository, http://github.com/danalog/utaromkan/
+Description-Content-Type: text/markdown
+
+utaromkan
+-----------
+
+utaromkan is a module that does very simple and limited conversion between
+hiragana and romaji in the most conventionally excepted way in the utau community.
+
+It's forked from uromkan, which you can find here https://github.com/jmoiron/uromkan/
+
+install
+---------
+`pip install utaromkan`
+
+commands
+---------
+you can launch utaromkan.py to use the gui, or you can use the commands within a script to convert
+
+`romgan(str)`
+
+converts romaji string -> hiragana string
+
+`ganrom(str)`
+
+converts hiragana string -> romaji string
+

@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "utaromkan"
+version = "1.4.0"
+description = "kana <-> romaji conversion for utau"
+authors = ["Tart <conemusicproductions@gmail.com>"]
+readme = "README.md"
+homepage = "http://github.com/danalog/utaromkan/"
+repository = "http://github.com/danalog/utaromkan/"
+packages = [
+    { include = "convert.py" },
+    { include = "utaromkan.py" },
+]
+
+[tool.poetry.dependencies]
+python = "*"
