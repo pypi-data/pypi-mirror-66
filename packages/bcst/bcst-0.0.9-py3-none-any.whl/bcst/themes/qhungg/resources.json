@@ -1,0 +1,30 @@
+{
+
+    "title": "Home",
+    "bookmarks": {
+        "social": {
+            "facebook": "https://www.facebook.com/",
+            "reddit": "https://reddit.com/",
+            "twitter": "http://twitter.fr",
+            "instagram": "http://instagram.fr"
+        },
+        "media": {
+            "youtube":"https://youtube.com",
+            "9anume":"https://9anime.io",
+            "twitch":"https://twitch.tv",
+            "photos":"https://photos.google.com"
+        },
+        "personal":{
+            "gmail":"https://mail.google.com",
+            "note":"https://keep.google.com",
+            "drive":"https://drive.google.com",
+            "messenger":"https://messenger.com"
+        },
+        "tech":{
+		    "/g/":"http://boards.4channel.org/g/",
+            "github":"https://github.com",
+            "w3s": "https://www.w3schools.com/",
+            "stackoverflow": "https://stackoverflow.com/"
+        }
+    }
+}

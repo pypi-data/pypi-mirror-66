@@ -1,0 +1,40 @@
+{
+    "title": "New Tab",
+    "tab1":{
+        "title": "Social Media.",
+        "bookmarks":{
+            "Facebook": "https://facebook.com/",
+            "Twitter" : "https://twitter.com/",
+            "Reddit" :"https://reddit.com/"
+        }
+    },
+    "tab2":{
+        "title": "Messaging.",
+        "bookmarks":{
+            "Messenger":"https://messenger.com/",
+            "WhatsApp": "https://web.whatsapp.com/",
+            "Gmail":"https://gmail.com/"
+        }
+    },
+    "tab3":{
+        "title": "Developer.",
+        "bookmarks":{
+            "Github":"https://github.com/",
+            "FCC News":"https://freecodecamp.org/news",
+            "Medium":"https://medium.com/",
+            "Stack Overflow": "https://stackoverflow.com/",
+            "Spotify Web":"https://open.spotify.com/"
+        }
+    },
+    "tab4":{
+        "title": "Routine.",
+        "bookmarks":{
+            "The Verge":"https://theverge.com/",
+            "Android Police":"https://androidpolice.com/",
+            "Screenrant": "https://screenrant.com/",
+            "YouTube":"https://youtube.com/feed/subscriptions",
+            "DIM":"https://app.destinyitemmanager.com/"
+        }
+    }
+}
+

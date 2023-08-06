@@ -1,0 +1,41 @@
+@font-face{font-family: VCR OSD MONO; src: url(vcrosdmono.ttf)}
+
+body {
+    margin: 0;
+    color: #21566C;
+    background-color: #161515;
+    font-family: VCR OSD MONO,VCR OSD MONO;
+    font-size: 20px;
+    text-align: center;
+}
+
+#content #bookmarks {
+    margin: 1% auto 0;
+    width: 98%;
+    vertical-align:top
+}
+
+.button {
+    text-decoration: none;
+    background-color: #161515;
+    color: #40A6D0;
+    padding: 6px 12px 6px 12px;
+    border: 2px solid #40A6D0;
+    font-family: Calibri;
+    font-weight: 500;
+    font-size: 18pt;
+    line-height: 55px;
+    text-decoration: none;
+  }
+
+.button:hover {
+    background-color: #40A6D0;
+    color: #161515;
+    text-decoration: overline;
+}
+
+#clock {
+    font-family: VCR OSD MONO;
+    font-size: 40pt;
+    color: #40A6D0;
+}

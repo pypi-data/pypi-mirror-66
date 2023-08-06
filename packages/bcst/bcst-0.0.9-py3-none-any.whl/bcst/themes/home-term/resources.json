@@ -1,0 +1,22 @@
+{
+    "title": "Home",
+    "name": "user",    
+    "bookmarks": {
+        "engines": {
+            "Qwant": "https://www.qwant.com/",
+            "DDG": "https://duckduckgo.com/",
+            "Google": "http://google.fr"
+        },
+        "Reddit": {
+            "Home": "https://www.reddit.com/",
+            "Unixporn": "https://www.reddit.com/r/Unixporn",
+            "Linux": "https://www.reddit.com/me/m/linux"
+        },
+        "Social": {
+            "Discord": "https://discordapp.com/channels/@me",
+            "Twitter": "https://twitter.com/",
+            "LinuxRocks": "https://linuxrocks.online/web/getting-started"
+        }        
+    },
+    "search_msg":"search:&nbsp;"
+}

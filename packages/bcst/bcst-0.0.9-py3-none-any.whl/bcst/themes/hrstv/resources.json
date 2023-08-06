@@ -1,0 +1,33 @@
+{
+    "title": "home page",
+    "bookmarks": {
+        "P r o d u c t i v i t y": {
+            "YesJapan":"http://yesjapan.com",
+            "StackExchange":"https://stackexchange.com/",
+            "StackOverflow":"http://stackoverflow.com/",
+            "SoftUni":"https://softuni.bg/",
+            "Judge":"https://judge.softuni.bg/",
+            "Slido":"http://sli.do",
+            "ssavr":"http://ssavr.com/",
+            "gmail":"https://gmail.com",
+            "calendar":"https://calendar.google.com/",
+            "gDocs":"http://docs.google.com/",	
+            "gSheets":"https://docs.google.com/spreadsheets/u/0/",
+            "gPhotos":"https://photos.google.com/",
+            "Oriflame":"https://bg.oriflame.com/"
+        },
+        "R e c r e a t i o n": {            
+            "YouTube":"https://www.youtube.com/feed/subscriptions/",
+            "BitChute":"https://www.bitchute.com/",
+            "myNoise":"https://mynoise.net/",
+            "cmd.to":"http://cmd.to/",
+            "Minds":"http://minds.com",
+            "reddit":"http://reddit.com",
+            "DA":"http://deviantart.com",
+            "ArtStation":"https://www.artstation.com/",
+            "chrono.gg":"https://www.chrono.gg/",
+            "Freakz":"https://www.wow-freakz.com/",
+            "Dalaran":"https://www.dalaran-wow.com/"
+        }
+    }
+}
