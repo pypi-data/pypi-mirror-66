@@ -1,0 +1,172 @@
+# OFX Cloud Sync
+
+Tool which allows syncing of OrcaFlex simulation files to the cloud and back to local drives.
+
+## Requirements
+
+To use this you will need:
+
+1. Python 3.6+ installed on all servers and local machines
+2. Cloud Key ID, Secret and Bucket (these can either be from your own [AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/) or [you can request some from us](mailto:ofxcs@agiledat.co.uk?subject=Request%20for%20ofx-cloudsync%20keys&body=Hi.%20I'd%20like%20to%20be%20able%20to%20use%20this%20cool%20OrcaFlex%20cloud%20sync%20tool.)) 
+
+
+## Installing
+
+
+### Using pip
+
+```bash
+pip install orcaflex-cloudsync
+```
+
+## User guide
+
+### Introduction
+
+This tool tries to solve the problem of running OrcaFlex simulations on remote servers but then wanting to have the simulation files on a local machine for viewing/processing. There are a few reasons you might want this:
+
+- remote desktop wars with other users
+- corporate VPN making everything terrible
+- cloud servers within a private network with no remote access
+
+Our solution to this comes in the form of a command line tool called `ofxcs` combined with a [post calculation action](https://www.orcina.com/webhelp/OrcaFlex/Content/html/Generaldata,Postcalculationactions.htm) script in OrcaFlex.
+
+### Configuring
+
+If you have successfully installed the tool with pip then you should be able to type:
+
+```commandline
+ofxcs
+```
+
+and see something like:
+
+```
+Usage: ofxcs [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
+
+  Command line interface to orcaflex-cloudsync.
+
+Options:
+  --version  Show the version and exit.
+  --help     Show this message and exit.
+
+Commands:
+  add        add a folder to sync
+  configure  configures orcaflex-cloudsync
+  keygen     generates a keyfile used to encrypt simulation data
+  remove     stop syncing a folder
+  show       shows the current config
+  sync       sync files from cloud to local drive
+
+
+```
+
+### Configuring
+
+> YOU WILL NEED TO INSTALL AND CONFIGURE ON EVERY MACHINE THAT YOU WANT TO RUN SIMULATIONS OR SYNC SIMULATIONS LOCALLY
+
+
+The `ofxcs` tool will guide you through configuration:
+
+```commandline
+ofxcs configure
+```
+
+Will ask a series of questions:
+
+1. It will ask you to enter your cloud key details, bucket and the region that your bucket is based in
+2. It will ask you where you want to copy the post calculation action script. You will need to point to this from all your models
+3. It will ask where you want to save local simulations when they are synced back to your local drive
+4. It will ask you if you have a key file. See [section below](#Encryption) for more details.
+
+### Encryption
+
+Access to your bucket is restricted only to people who have access to the cloud key and secret and the administrator of the cloud account. Encryption allows you to ensure that your stored simulation files can only ever be read by people in your company.
+
+This is done with a `key file`, you can generate these with:
+
+```commandline
+ofxcs keygen
+``` 
+
+
+This will save a key file and optionally it will update the local config to point to the key file. 
+
+> **IMPORTANT**: You should only do this once for your company and then share the key file internally and have each user configure their system with this key file. If you lose the key file there will be no way to decrypt the simulation files stored in the cloud. 
+
+Now you have configured `ofxcs` you can start to sync simulations to the cloud. 
+
+### Post-calculation actions
+
+In every model you want to sync you must specify a [Post calculation action](https://www.orcina.com/webhelp/OrcaFlex/Content/html/Generaldata,Postcalculationactions.htm). Action type needs to be `In-process Python` and version must be `Python 3`.
+
+
+__The Script File Name is wherever you saved the file during the `ofxcs configure` process above.__
+
+
+> __NOTE__: The default location for `pca_ofx2cloud.py` is based on your local user profile and may be different on remote computers. It might be easier to move the file to somewhere like C:\pca_ofx2cloud.py so it will be consistent on all machines.
+
+You also need to add a tag on General of `FOLDER` in every model. This is how your simulations will be organised in the cloud. The folder name can contain only alphanumeric and the following special characters:
+
+```text
+! - _ . * ' ( )
+```
+
+
+With `ofxcs` configured and post calculations specified, simulations run in batch processing or distributed OrcaFlex will be automatically uploaded to the cloud. 
+
+### Local sync
+
+Now you want to sync them to you local machine. You start by adding the folders that you specified in the models:
+
+```commandline
+ofxcs add --folder my_ofx_project
+```
+
+There is no need to add the folders every time you start the sync, it will remember which folders you want.
+
+You can then run the sync command:
+
+```commandline
+ofxcs sync
+```
+
+The syncing operation will continue until you stop it by killing the process or pressing `CRTL+C`.
+
+If you want to see what folders are currently set to sync:
+
+```commandline
+ofxcs show
+```
+
+```
+{'bucket': 'xxx000',
+ 'root_folder': 'C:\\Users\\username\\AppData\\Local\\agiletek\\ofx-cloudsync\\ofxsync',
+ 'sync': ['my_ofx_project']}
+```
+
+To remove a folder (stop syncing it)
+
+```commandline
+ofx remove --folder my_ofx_project
+```
+
+will stop syncing but not delete the local files, whereas:
+
+```commandline
+ofxcs remove --delete --folder my_ofx_project
+```
+
+deletes the folder locally.
+
+
+## Roadmap
+
+Next steps for development:
+
+1. Proper logging
+2. Simple GUI
+
+## Help/support
+
+If you have any questions or need any help with this package then contact [ofxcs@agiledat.co.uk](mailto:ofxcs@agiledat.co.uk)
