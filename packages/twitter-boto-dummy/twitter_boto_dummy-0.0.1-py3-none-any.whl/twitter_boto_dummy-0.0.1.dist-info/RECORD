@@ -1,0 +1,15 @@
+twitter_boto_dummy/data_analysis.py,sha256=eMycbzkE6pXMoUjFvJGq6P3gk-RDAjyjWfTBVx3DZ_4,1258
+twitter_boto_dummy/data_collection.py,sha256=-RkmC0uanK8l8upjWGpomF_BRbwlVPPY6p883qxlgw4,4716
+twitter_boto_dummy/strategy_interface.py,sha256=wJgwK_CoRguo0vt8E3gIEcRWrCqnQpS3y2zXa9t5qrU,558
+twitter_boto_dummy/trends_data_collection.py,sha256=t2IFBKsS9pQesMwx2Rky1XE3l-UoE_rZqK3vVLatDTU,6655
+twitter_boto_dummy/twitter_account.py,sha256=pMNmCGpUFD468-iQzjUJOGRg0hloVxpx77yVOdHg1IA,3561
+twitter_boto_dummy/twitter_action.py,sha256=2Zp6gSyP1tPuO_a1zw8JC7f8VXa_LXNP4_f94jN_hjU,119
+twitter_boto_dummy/twitter_api_preparation.py,sha256=oLalB2jqKdxPHXOt-VCGzXDRPgKc1q2tp-rER5-56UE,4236
+twitter_boto_dummy/twitter_bot.py,sha256=k5Y9I6XsLdKjVt0tXq8FQ-07ha8Sb3STzV4r2ShbtH0,2465
+twitter_boto_dummy/twitter_data_collection.py,sha256=RFx5bOA4zth_wQVJy-j4VNo87fKaeFjzQdvj9Kej4qs,9156
+twitter_boto_dummy/twitter_object_parsing.py,sha256=Sz61MqO9z3IWBi5nfrDEjI-mVO8FqnntLY_-8K-1s_Y,11175
+twitter_boto_dummy-0.0.1.dist-info/LICENSE,sha256=JhxCVEz-lQCRoZFEl6mc0S9r0n6Rm8AnDYaI35VYt04,1081
+twitter_boto_dummy-0.0.1.dist-info/METADATA,sha256=qjjG_aReCWfb5P7ME_MqGb8OAmmr0i084ldYY3154qg,1714
+twitter_boto_dummy-0.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+twitter_boto_dummy-0.0.1.dist-info/top_level.txt,sha256=v6oiAjdb-qVuvMKKwCMIL7TiiDlAi_vhCPrHRoG9ADA,19
+twitter_boto_dummy-0.0.1.dist-info/RECORD,,
