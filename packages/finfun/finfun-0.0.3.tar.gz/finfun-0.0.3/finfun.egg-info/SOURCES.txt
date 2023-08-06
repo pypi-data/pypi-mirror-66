@@ -1,0 +1,8 @@
+README.md
+setup.py
+finfun/Interest.py
+finfun/__init__.py
+finfun.egg-info/PKG-INFO
+finfun.egg-info/SOURCES.txt
+finfun.egg-info/dependency_links.txt
+finfun.egg-info/top_level.txt
