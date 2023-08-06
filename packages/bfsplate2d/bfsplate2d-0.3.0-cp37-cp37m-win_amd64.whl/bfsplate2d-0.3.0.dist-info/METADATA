@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: bfsplate2d
+Version: 0.3.0
+Summary: Implementation of the BFS plate finite element in 2D
+Home-page: https://github.com/saullocastro/bfsplate2d
+Author: Saullo G. P. Castro
+Author-email: S.G.P.Castro@tudelft.nl
+License: 2-Clause BSD
+Keywords: finite elements shell plate structural analysis buckling vibration dynamics
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Education
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: composites
+
+Implementation of the BFS plate finite element in 2D, aiming linear and
+nonlinear analyses.
+
+Travis-CI status:
+
+[![Build Status](https://travis-ci.org/saullocastro/bfsplate2d.svg?branch=master)](https://travis-ci.org/saullocastro/bfsplate2d)
+
+Github Actions status:
+
+[![Actions Status](https://github.com/saullocastro/bfsplate2d/workflows/pytest/badge.svg)](https://github.com/saullocastro/bfsplate2d/actions)
+
+Coverage status:
+
+[![Coverage Status](https://coveralls.io/repos/github/saullocastro/bfsplate2d/badge.svg?branch=master)](https://coveralls.io/github/saullocastro/bfsplate2d?branch=master)
+
+
+License
+-------
+Distrubuted in the 2-Clause BSD license (https://raw.github.com/saullocastro/bfsplate2d/master/LICENSE).
+
+Contact: S.G.P.Castro@tudelft.nl
+
+
+
