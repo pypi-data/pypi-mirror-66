@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "plogchain"
+version = "0.1.0"
+description = "Python Logging based on blockchain"
+
+authors = [ "Gg Math <code@gmath.io>" ]
+license = "ISC"
+
+readme     = "README.md"
+repository = "https://github.com/gg-math/plogchain"
+homepage   = "https://gg-math.github.io/plogchain"
+
+keywords = ["logging", "security", "secure", "blockchain", "signature"]
+
+[tool.poetry.dependencies]
+python = "^3.2"
+toml = "^0.9"
