@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+BERTVector/BERTVector.py
+BERTVector/__init__.py
+BERTVector.egg-info/PKG-INFO
+BERTVector.egg-info/SOURCES.txt
+BERTVector.egg-info/dependency_links.txt
+BERTVector.egg-info/entry_points.txt
+BERTVector.egg-info/requires.txt
+BERTVector.egg-info/top_level.txt
+BERTVector/test/__init__.py
+BERTVector/test/bertvector_test.py
+BERTVector/test/test.pkl
+BERTVector/test/test.txt

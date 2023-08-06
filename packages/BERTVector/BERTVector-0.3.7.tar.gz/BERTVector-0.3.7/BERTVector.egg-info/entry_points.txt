@@ -1,0 +1,4 @@
+[console_scripts]
+BERTVector = BERTVector.BERTVector:main_cli
+bertvector_test = BERTVector.test.bertvector_test:bertvector_test
+

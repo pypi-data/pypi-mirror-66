@@ -1,0 +1,2 @@
+include BERTVector/test/test.txt
+include BERTVector/test/test.pkl
