@@ -1,0 +1,240 @@
+{
+    "realizations": {
+        "valid_numbers": [
+            2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
+            17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
+            28, 29, 30, 31, 32, 33
+        ]
+    },
+    "zones": {
+        "A": {
+            "lat_min": 46.920042474467316,
+            "lat_max": 48.28770048140127,
+            "lon_min": -123.20909152037318,
+            "lon_max": -121.21317861121436,
+            "map_size": [10, 10]
+        },
+        "B": {
+            "lat_min": 40.26059706792827,
+            "lat_max": 49.048529447329024,
+            "lon_min": -127.70217428430801,
+            "lon_max": -121.35066292524125,
+            "map_size": [8, 12]
+        },
+        "C": {
+            "lat_min": 45.200904289188884,
+            "lat_max": 45.92098027152941,
+            "lon_min": -123.253630744519,
+            "lon_max": -122.23506379608273,
+            "map_size": [10, 10]
+        },
+        "D": {
+            "lat_min": 48.99813522053867,
+            "lat_max": 49.35794281787069,
+            "lon_min": -123.32702077491504,
+            "lon_max": -122.3973753600091,
+            "map_size": [10, 10]
+        },
+        "E": {
+            "lat_min": 48.31165993387865,
+            "lat_max": 48.6984606597244,
+            "lon_min": -123.86209706745402,
+            "lon_max": -123.18775130250626,
+            "map_size": [10, 10]
+        }
+    },
+    "xarray": {
+        "z_values": {
+            "filenames": {
+                "A": "ZValues_A_Map",
+                "B": "ZValues_B_Map",
+                "C": "ZValues_C_Map"
+            },
+            "fields": {
+                "Z1p0": {
+                    "proper_name": "Z 1.0",
+                    "unit": "$Z_{1.0}$, m",
+                    "axes": ["lat", "lon"]
+                },
+                "Z1p5": {
+                    "proper_name": "Z 1.5",
+                    "unit": "$Z_{1.5}$, m",
+                    "axes": ["lat", "lon"]
+                },
+                "Z2p5": {
+                    "proper_name": "Z 2.5",
+                    "unit": "$Z_{2.5}$, m",
+                    "axes": ["lat", "lon"]
+                }
+            },
+            "coordinates": {
+                "lat": {
+                    "unit": "°",
+                    "proper_name": "Latitude"
+                },
+                "lon": {
+                    "unit": "°",
+                    "proper_name": "Longitude"
+                }
+            }
+        },
+        "m9csz": {
+            "fields":{
+                "acc_x": {
+                    "proper_name": "East-West Ground Acceleration",
+                    "unit": "g",
+                    "axes": ["lat", "lon", "time"],
+                    "line_axis": "time"
+                },
+                "acc_y": {
+                    "proper_name": "North-South Ground Acceleration",
+                    "unit": "g",
+                    "axes": ["lat", "lon", "time"],
+                    "line_axis": "time"
+                },
+                "acc_z": {
+                    "proper_name": "Vertical Ground Acceleration",
+                    "unit": "g",
+                    "axes": ["lat", "lon", "time"],
+                    "line_axis": "time"
+                },
+                "vel_x": {
+                    "unit": "g",
+                    "proper_name": "East-West Ground Velocity",
+                    "axes": ["lat", "lon", "time"],
+                    "line_axis": "time"
+                },
+                "vel_y": {
+                    "unit": "g",
+                    "proper_name": "North-South Ground Velocity",
+                    "axes": ["lat", "lon", "time"],
+                    "line_axis": "time"
+                },
+                "BCHydro": {
+                    "unit": "?",
+                    "line_axis": "period",
+                    "proper_name": "BCHydro"
+                },
+                "MF14": {
+                    "unit": "(?)",
+                    "line_axis": "period",
+                    "proper_name": "MF14"
+                },
+                "syn_file_name": {
+                    "unit": "(?)",
+                    "proper_name": "Synthetic File Name"
+                },
+                "RCD": {
+                    "unit": "RCD(?)",
+                    "proper_name": "RCD"
+                },
+                "CutOffTime": {
+                    "unit": "s(?)",
+                    "proper_name": "Cutoff Time"
+                },
+                "Ds595x": {
+                    "unit": "(?)",
+                    "proper_name": "Ds595x"
+                },
+                "Ds595y": {
+                    "unit": "(?)",
+                    "proper_name": "Ds595y"
+                },
+                "Ds575x": {
+                    "unit": "(?)",
+                    "proper_name": "Ds575x"
+                },
+                "Ds575y": {
+                    "unit": "(?)",
+                    "proper_name": "Ds575y"
+                },
+                "fulllon": {
+                    "unit": "(?)",
+                    "proper_name": "Full Longitude"
+                },
+                "fulllat": {
+                    "unit": "(?)",
+                    "proper_name": "Full Latitude"
+                },
+                "model_easting": {
+                    "unit": "(?)",
+                    "proper_name": "Model Easting (?)"
+                },
+                "model_northing": {
+                    "unit": "(?)",
+                    "proper_name": "Model Northing (?)"
+                },
+                "spectra2_x": {
+                    "unit": "g",
+                    "axes": ["lat", "lon", "period"],
+                    "line_axis": "period",
+                    "proper_name": "East-West Spectral Acceleration at Damping 0.02"
+                },
+                "spectra2_y": {
+                    "unit": "g",
+                    "axes": ["lat", "lon", "period"],
+                    "line_axis": "period",
+                    "proper_name": "North-South Spectral Acceleration at Damping 0.02"
+                },
+                "spectra2_z": {
+                    "unit": "g",
+                    "axes": ["lat", "lon", "period"],
+                    "line_axis": "period",
+                    "proper_name": "Vertical Spectral Acceleration at Damping 0.02"
+                },
+                "spectra5_x": {
+                    "unit": "g",
+                    "axes": ["lat", "lon", "period"],
+                    "line_axis": "period",
+                    "proper_name": "East-West Spectral Acceleration at Damping 0.05"
+                },
+                "spectra5_y": {
+                    "unit": "g",
+                    "axes": ["lat", "lon", "period"],
+                    "line_axis": "period",
+                    "proper_name": "North-South Spectral Acceleration at Damping 0.05"
+                },
+                "spectra5_z": {
+                    "unit": "g",
+                    "axes": ["lat", "lon", "period"],
+                    "line_axis": "period",
+                    "proper_name": "Vertical Spectral Acceleration at Damping 0.05"
+                },
+                "m9_spectra_x": {
+                    "unit": "g",
+                    "axes": ["lat", "lon", "m9_period"],
+                    "line_axis": "m9_period",
+                    "proper_name": "East-West Spectral Acceleration at Damping 0.05 (M9)"
+                },
+                "m9_spectra_y": {
+                    "unit": "g",
+                    "axes": ["lat", "lon", "m9_period"],
+                    "line_axis": "m9_period",
+                    "proper_name": "North-South Spectral Acceleration at Damping 0.05 (M9)"
+                }
+            },
+            "coordinates": {
+                "time": {
+                    "unit": "s",
+                    "proper_name": "Time"
+                },
+                "lat": {
+                    "unit": "°",
+                    "proper_name": "Latitude"
+                },
+                "lon": {
+                    "unit": "°",
+                    "proper_name": "Longitude"
+                },
+                "m9_period": {
+                    "proper_name": "Period",
+                    "unit": "T"
+                },
+                "period": {
+                    "proper_name": "Period",
+                    "unit": "T"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "line": {
+        "command": "Plots a Line Plot",
+        "color": "Sets the default line color for the plot. Can be set per line with c=",
+        "alpha": "Sets the default line alpha for the plot. Can be set per line with a=",
+        "function": "Sets the default analysis function for the plot. Can be set per line with f=",
+        "data": "Adds a data field to the plot",
+        "line": "Adds a line to the plot - e.g. -l m9C5,45:122",
+        "title": "Adds a custom title to the plot - e.g. -t \"My Title\"",
+        "output": "Adds a custom filename to the plot - e.g. \"my_plot\" - no extension",
+        "no_cutoff": "Don't trim acceleration values at cutoff time",
+        "xbounds": "Cut data at values along x axis. -x 4 -4 is same as -x 4",
+        "ybounds": "Cut data at values along y axis. -y 4 -4 is same as -y 4"
+    },
+    "map": {
+        "command": "Plots a Map Plot",
+        "data": "Adds data field to the plot",
+        "dimensions": "Dimensions of resulting plot in inches",
+        "time": "Time value - either time or period depending on data",
+        "realization": "Adds simulation data to the plot",
+        "zvalues": "Adds zvalue data to the plot",
+        "levels": "Minimum and maximum displayed values. \"auto auto\" by default",
+        "title": "Adds a custom title to the plot - e.g. -t \"My Title\"",
+        "realizationfn": "Function to combine multiple realizations. Options: mean (default) std max min",
+        "timefn": "Function to combine multiple time values. Options: None (default) mean std max min",
+        "output": "Adds a custom filename to the plot - e.g. \"my plot\", no extension",
+        "no_cutoff": "Don't trim acceleration values at cutoff time",
+        "point": "Plots point(s) on the map."
+    },
+    "display": {
+        "command": "Displays data in text format.",
+        "realization": "Specifies data to view, one or more arguments.",
+        "raw": "Displays raw xarray printout",
+        "data": "Displays xarray data dump",
+        "coords": "Displays xarray coordinates and min/maxes"
+    },
+    "generate": {
+        "command": "Generates M9CSZ data from M9 data by re-calculating spectra"
+    },
+    "file": {
+        "command": "Opens a file as arguments. Allows for many operations in a single file, delimited by blank lines"
+    }
+}
