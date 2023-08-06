@@ -1,0 +1,8 @@
+README.md
+setup.py
+foliant/preprocessors/removeexcess.py
+foliantcontrib.removeexcess.egg-info/PKG-INFO
+foliantcontrib.removeexcess.egg-info/SOURCES.txt
+foliantcontrib.removeexcess.egg-info/dependency_links.txt
+foliantcontrib.removeexcess.egg-info/requires.txt
+foliantcontrib.removeexcess.egg-info/top_level.txt
