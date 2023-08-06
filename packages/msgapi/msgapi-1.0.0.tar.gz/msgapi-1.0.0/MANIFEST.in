@@ -1,0 +1,3 @@
+include README.md
+include msgapi/etc/*.ini
+include msgapi/resource_configurations/*.ini
