@@ -1,0 +1,14 @@
+README.rst
+setup.cfg
+setup.py
+notifications_plugin/__init__.py
+notifications_plugin/admin.py
+notifications_plugin/apps.py
+notifications_plugin/models.py
+notifications_plugin/tests.py
+notifications_plugin/views.py
+notifications_plugin.egg-info/PKG-INFO
+notifications_plugin.egg-info/SOURCES.txt
+notifications_plugin.egg-info/dependency_links.txt
+notifications_plugin.egg-info/requires.txt
+notifications_plugin.egg-info/top_level.txt
