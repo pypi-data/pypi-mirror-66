@@ -1,0 +1,5 @@
+gym
+stable_baselines
+jiminy-py~=1.2
+numpy
+matplotlib
