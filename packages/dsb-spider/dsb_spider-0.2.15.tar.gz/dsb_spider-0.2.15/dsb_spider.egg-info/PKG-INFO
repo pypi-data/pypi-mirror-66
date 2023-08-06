@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: dsb-spider
+Version: 0.2.15
+Summary: 一个轻量的爬虫工具
+Home-page: http://m.fine3q.com/home-w/index.html
+Author: cjxh
+Author-email: chenjianxihang@duoshoubang.cn
+License: UNKNOWN
+Description: 更新了异常捕捉方式
+Platform: UNKNOWN
+Requires-Python: >=3.6

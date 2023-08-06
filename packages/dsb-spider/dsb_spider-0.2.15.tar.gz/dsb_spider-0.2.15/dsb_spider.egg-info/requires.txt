@@ -1,0 +1,5 @@
+requests>=2.21.0
+pip>=19.0.3
+lxml>=4.4.1
+chardet==3.0.4
+demjson==2.2.4
