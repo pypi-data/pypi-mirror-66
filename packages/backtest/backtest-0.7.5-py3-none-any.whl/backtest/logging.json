@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "disable_existing_loggers": true,
+  "formatters": {
+    "thread": {
+      "format": "%(asctime)s %(filename)-11s %(levelname)-8s %(message)s"
+    },
+    "process": {
+      "format": "%(asctime)s %(filename)-11s %(levelname)-8s %(message)s"
+    }
+  },
+  "handlers": {
+    "console_thread": {
+      "class": "logging.StreamHandler",
+      "level": "DEBUG",
+      "formatter": "thread"
+    },
+    "console_process": {
+      "class": "logging.StreamHandler",
+      "level": "DEBUG",
+      "formatter": "process"
+    }
+  },
+  "loggers": {
+    "main.py": {
+      "level": "DEBUG",
+      "handlers": [
+        "console_thread"
+      ]
+    },
+    "router.py": {
+      "level": "DEBUG",
+      "handlers": [
+        "console_thread"
+      ]
+    },
+    "fetcher.py": {
+      "level": "DEBUG",
+      "handlers": [
+        "console_thread"
+      ]
+    },
+    "analyzer.py": {
+      "level": "DEBUG",
+      "handlers": [
+        "console_process"
+      ]
+    },
+    "broker.py": {
+      "level": "DEBUG",
+      "handlers": [
+        "console_thread"
+      ]
+    },
+    "ledger.py": {
+      "level": "DEBUG",
+      "handlers": [
+        "console_thread"
+      ]
+    }
+  }
+}
