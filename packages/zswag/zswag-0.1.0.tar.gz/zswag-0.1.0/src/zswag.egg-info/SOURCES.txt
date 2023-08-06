@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/zswag/__init__.py
+src/zswag/app.py
+src/zswag/client.py
+src/zswag/gen.py
+src/zswag.egg-info/PKG-INFO
+src/zswag.egg-info/SOURCES.txt
+src/zswag.egg-info/dependency_links.txt
+src/zswag.egg-info/requires.txt
+src/zswag.egg-info/top_level.txt
