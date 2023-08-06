@@ -1,0 +1,8 @@
+README.md
+setup.py
+kroml/__init__.py
+kroml/__main__.py
+kroml.egg-info/PKG-INFO
+kroml.egg-info/SOURCES.txt
+kroml.egg-info/dependency_links.txt
+kroml.egg-info/top_level.txt
