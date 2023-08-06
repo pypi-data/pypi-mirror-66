@@ -1,0 +1,2 @@
+scikit-image>=0.16.2
+pythreshold>=0.2.1
