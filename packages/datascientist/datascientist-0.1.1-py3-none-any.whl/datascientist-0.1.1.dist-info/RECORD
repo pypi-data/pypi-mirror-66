@@ -1,0 +1,13 @@
+datascientist/__init__.py,sha256=hXdEu5jojVJm-kAbvSKJRbIgJpVbLjKIsFHZp2qog1M,45
+datascientist/connections/__init__.py,sha256=w7-pw2ACXHA5v0XcLdqD8qHIEvF1hLEllmQyGWDAZZI,52
+datascientist/connections/rsconnect.py,sha256=qqTuLPvIuxQIUC1JyQAhA3fL1lj8pltGfgg903dgKUw,12615
+datascientist/jobs/__init__.py,sha256=w7-pw2ACXHA5v0XcLdqD8qHIEvF1hLEllmQyGWDAZZI,52
+datascientist/jobs/training.py,sha256=IEtYLeXb8vLupth5QTD65oqrPu-npe4QVb6JfrEljxo,4398
+datascientist/special/__init__.py,sha256=hXdEu5jojVJm-kAbvSKJRbIgJpVbLjKIsFHZp2qog1M,45
+datascientist/special/s3session.py,sha256=I0z8lAlvjfdWplG5rkLRHsk50vQO3hFO58GK3SUUEWY,2521
+datascientist/workflow/__init__.py,sha256=hXdEu5jojVJm-kAbvSKJRbIgJpVbLjKIsFHZp2qog1M,45
+datascientist/workflow/tracker.py,sha256=_2-27SFrDWGoEb1XSrvTQDon0xT9GOR4DlYCczKsg5I,40126
+datascientist-0.1.1.dist-info/METADATA,sha256=gurH8PsZFCrNIO-zXDmKJQ9K9PUDarKmLqsvGNThYwE,4702
+datascientist-0.1.1.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+datascientist-0.1.1.dist-info/top_level.txt,sha256=EwEdLrgcMXpUZyVZswN22FJHer4BUbOnCSN4-NaI-XY,14
+datascientist-0.1.1.dist-info/RECORD,,
