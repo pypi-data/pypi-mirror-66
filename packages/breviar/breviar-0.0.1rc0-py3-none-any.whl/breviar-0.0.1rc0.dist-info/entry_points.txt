@@ -1,0 +1,3 @@
+[console_scripts]
+breviar = breviar.entrypoint:entrypoint
+
