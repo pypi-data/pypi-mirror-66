@@ -1,0 +1,14 @@
+bleu.cp37-win_amd64.pyd,sha256=hob9KnUgp9NFgPcxEYPRb2Q1eCnYEJUUV-jV2FNSYWA,134656
+edit_distance.cp37-win_amd64.pyd,sha256=SOD4jz-gSx-yyXFiBnsvTGwK8Y8Y6lxUmkmrJoX2T-E,106496
+cyzil/__init__.py,sha256=xG15IQEbg8IzwrclhN7C9R-rG3mGQWxo1_qSOnoNc2g,562
+cyzil/tokenizers.py,sha256=u86_5rZLohc9qFug65B5wHsvwkwgj0snas_JqltPUMA,329
+cyzil/cli/__init__.py,sha256=dY6xGg5YCSZr5iYFj57eRD04i1bOfXtgK_L2Sdoichk,280
+cyzil/cli/bleu_cli.py,sha256=9CA_cxV3X_29VpFlS5wM_0_Coiy7JTVmuJAw2lPF58Q,1716
+cyzil/cli/edit_distance_cli.py,sha256=CadBoGXJsrRL3Fr8enMJ6GBfhJedxWbO_3NnJnv0FNs,1594
+cyzil/cli/utils.py,sha256=Q-hpA_Pymmcb1-WXFi4zxDWmHW8lkxIUlcOSlbAoIEs,1326
+cyzil-0.2.3.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+cyzil-0.2.3.dist-info/METADATA,sha256=OjnuHD-x-WTSB3HZSwd9XX4Pa43CUIyoBJN6BE3chnw,4448
+cyzil-0.2.3.dist-info/WHEEL,sha256=rpJIxsZQulJdxSTRRlB5eKYFBr_5T7UwADMbZS3uepA,106
+cyzil-0.2.3.dist-info/entry_points.txt,sha256=LP7-iNxj3KiVbLF0dDXgAlTf8k2YLfnfkb6mQenrSSU,277
+cyzil-0.2.3.dist-info/top_level.txt,sha256=QtI8VPPvt9WOfBQLmJxylLylpWf5ZZMMixMw8tcne1w,25
+cyzil-0.2.3.dist-info/RECORD,,
