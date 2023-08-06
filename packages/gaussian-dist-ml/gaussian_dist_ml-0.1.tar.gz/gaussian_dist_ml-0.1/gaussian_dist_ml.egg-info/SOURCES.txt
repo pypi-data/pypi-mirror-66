@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+gaussian_dist_ml/Binomialdistribution.py
+gaussian_dist_ml/Gaussiandistribution.py
+gaussian_dist_ml/Generaldistribution.py
+gaussian_dist_ml/__init__.py
+gaussian_dist_ml.egg-info/PKG-INFO
+gaussian_dist_ml.egg-info/SOURCES.txt
+gaussian_dist_ml.egg-info/dependency_links.txt
+gaussian_dist_ml.egg-info/not-zip-safe
+gaussian_dist_ml.egg-info/top_level.txt
