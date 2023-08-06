@@ -1,0 +1,5 @@
+cached-property<1.6,>=1.5
+click<7.2,>=7.1
+sgqlc<11,>=10.1
+pygithub<1.48,>=1.47
+python-dotenv<0.13,>=0.12
