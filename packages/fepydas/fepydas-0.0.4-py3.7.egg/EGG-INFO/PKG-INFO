@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: fepydas
+Version: 0.0.4
+Summary: UNKNOWN
+Home-page: https://bitbucket.org/_felix_/fepydas
+Author: Felix Nippert
+Author-email: felix@physik.tu-berlin.de
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
