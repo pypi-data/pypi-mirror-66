@@ -1,0 +1,24 @@
+python-engineio==3.9.1
+python-socketio[client]==4.4.0
+numpy
+jupyter>=1.0.0
+
+[:python_version < "3.4"]
+pathlib
+
+[:python_version > "3.3"]
+janus
+
+[engine]
+aiohttp
+aiohttp_cors
+gputil
+pyyaml
+
+[jupyter]
+imjoy-elfinder[jupyter]
+
+[jupyter-worker]
+ipykernel>=5.1.4
+
+[worker]
