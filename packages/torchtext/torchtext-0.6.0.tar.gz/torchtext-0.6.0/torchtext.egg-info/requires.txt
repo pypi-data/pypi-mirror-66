@@ -1,0 +1,6 @@
+tqdm
+requests
+torch
+numpy
+six
+sentencepiece
