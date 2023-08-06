@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: raspauto
+Version: 0.1.5.5.4
+Summary: Raspberry Automation Library
+Home-page: https://github.com/aattk/raspauto
+Author: Alpaslan Tetik
+Author-email: 232arslan104@gmail.com
+License: GNU
+Download-URL: https://pypi.org/project/raspauto/
+Description: # RaspAuto | Remote management for smart technologies
+        
+        ![PyPI](https://img.shields.io/pypi/v/raspauto) ![PyPI - Downloads](https://img.shields.io/pypi/dm/raspauto) ![GitHub issues](https://img.shields.io/github/issues-raw/aattk/raspauto) ![GitHub](https://img.shields.io/github/license/aattk/raspauto)
+        
+        Raspberry cihazının uzaktan pinlerine hakim olarak projelerinizi kontrol edebilirsiniz 
+        
+        
+        ## Contents
+        1. How to Install ?
+        2. Functions 
+        3. Websites
+        
+        ### How to install ?
+        
+        
+        
+Keywords: raspberry,automotion,control
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
