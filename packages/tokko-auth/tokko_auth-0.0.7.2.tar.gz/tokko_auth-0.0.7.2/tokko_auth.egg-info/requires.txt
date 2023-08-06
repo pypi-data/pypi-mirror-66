@@ -1,0 +1,6 @@
+arrow
+python-jose
+requests
+Django
+crypto
+pycryptodome
