@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: flask-setup
+Version: 0.1
+Summary: A simple flask project starter
+Home-page: https://github.com/mrteey/flask-starter
+Author: Nasir Mustapha
+Author-email: nasir@mrteey.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# flask-starter
+Flask Starter
+
+
