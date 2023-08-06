@@ -1,0 +1,6 @@
+pelican/plugins/pelican_jupyter_reader/__init__.py,sha256=52MG4rf59qVNjVgXiOxFfzf7B5I9HP8iFaaeNZxf3bk,46
+pelican/plugins/pelican_jupyter_reader/pelican_jupyter_reader.py,sha256=stdCAfZG2SZxCtWN4rgZnISXnwFan5Tvn5ot8itFDe8,2155
+pelican/plugins/pelican_jupyter_reader/test_pelican_jupyter_reader.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pelican_jupyter_reader-0.3.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+pelican_jupyter_reader-0.3.0.dist-info/METADATA,sha256=L0ODO7AnJpAafgLLuIkiu1y_xqaGfg3V6NkmWk8CeIo,4319
+pelican_jupyter_reader-0.3.0.dist-info/RECORD,,
