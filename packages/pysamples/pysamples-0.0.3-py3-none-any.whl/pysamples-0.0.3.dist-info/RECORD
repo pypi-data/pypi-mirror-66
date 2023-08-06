@@ -1,0 +1,17 @@
+pysamples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysamples/pyenv/__init__.py,sha256=W1v8LTwdgOfBmL6UVF7ymQLp0r1G4B1Yyd9pDEdd0-Y,123
+pysamples/pyorm/__init__.py,sha256=qdkIgXDwXELQC_SUhEB20BzfzwhYarvnpOgNUk_1cr4,39
+pysamples/pyorm/dbs/__init__.py,sha256=34bJZDdTlQqxuAz5GB4E3-Be5mkL1pfyfD_is3c3rvM,19
+pysamples/pyorm/dbs/mysql.py,sha256=DcPYiZvYhDoywfaI9PPNYnracecoCB6XUXraU43T0wc,260
+pysamples/pyorm/models/__init__.py,sha256=k4pwA5NF-nLkHN3x8wHiYjOzRQzv23dGKTCfUoq53os,18
+pysamples/pyorm/models/user.py,sha256=5V14tQ0BCS9hraKt94AynxDXWdfCX9gnUg48y9pH938,889
+pysamples/pyunittest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysamples/pyunittest/demo.py,sha256=WzAvMUlL8CjT-CyPhsDNi1xtz51F6HN2STRHq70YMDk,94
+pysamples/pyunittest/pyunittest.py,sha256=Q-2HJXfby6f-8HBKIwxsQ5iWNrnS5fgte844JBijw9k,891
+pysamples/pyunittest/test_demo_class.py,sha256=cOcGnA89O4NLGoH0o4eysyVtcz_ZV2blSK96TnY86-c,1321
+pysamples/pyunittest/test_demo_module.py,sha256=uX-dk91n6bqafL2vQCb1tEabPmWb4iZu_IQ9mkCQaZM,1989
+pysamples-0.0.3.dist-info/LICENSE,sha256=I6n9g2LllyniyIlqb3SReiHTTxvsjWfEZCpnVpNrO-E,1127
+pysamples-0.0.3.dist-info/METADATA,sha256=Q67D1-b54qxTNmCyzTRc1meKmCL9O7evxpJ49RViCWE,848
+pysamples-0.0.3.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+pysamples-0.0.3.dist-info/top_level.txt,sha256=cnDuhqY4lsqB2EYYNQN81emL1skXF_lduQNtu8a46eI,10
+pysamples-0.0.3.dist-info/RECORD,,
