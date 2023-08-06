@@ -1,0 +1,3 @@
+[console_scripts]
+routeros-prometheus-client = routeros_prometheus_client.__main__:main
+
