@@ -1,0 +1,3 @@
+[console_scripts]
+bert-text-summarizer = bert_text_summarizer.cli.main:main
+
