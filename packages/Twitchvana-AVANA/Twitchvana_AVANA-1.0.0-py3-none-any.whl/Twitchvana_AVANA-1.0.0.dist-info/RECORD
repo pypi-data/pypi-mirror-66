@@ -1,0 +1,15 @@
+Twitchvana/__init__.py,sha256=xGTeRN07tFitCQhB9ZSVEn3q3239iTZkY_Cjt4aSL7s,318
+Twitchvana/bot.py,sha256=G1HEat55RabMLLAkLdqYnWuS-xIdyWAd-jNZiEmwm9I,6654
+Twitchvana/channel.py,sha256=xKBDAlY61RX2ouI7UDYSO50eREhnDxNgKA9D5zf-QTc,1360
+Twitchvana/command.py,sha256=YEm2yStUTqRvfkg3uo1vQuDJbtBEQsI2Iyzqyk_GNeY,1193
+Twitchvana/context.py,sha256=NfHp7cgOaO-QgFN3DsrLNcstixZZdrcioA8qqh_MTdg,2051
+Twitchvana/errors.py,sha256=Jq-ADOV8Jw17hSPi7CPZT1SGZ176X9hx-THHGJOPmig,487
+Twitchvana/irc_settings.py,sha256=OTaLDhKnFxfMQYVpgPQRDhAldklZ-eAsE5I_nGPphLc,34
+Twitchvana/tsocket.py,sha256=-93PXawX3dCLDhwYfMwe4BMRNQAKTHco0cACbcUcp5o,717
+Twitchvana/user_data_fetcher.py,sha256=G-xeVUYDhgLiSZSfwedMQqlDO5WzOFPZ_7NH8xWjE1s,1731
+Twitchvana/viewer.py,sha256=Kd0VXIQl_M-aEVdR8JWu5yPpEKhJSKEu1RjOt-_sosY,2154
+Twitchvana_AVANA-1.0.0.dist-info/LICENSE,sha256=oKT6UlmcR3OMf-NRizl-Bl6yMWnux3WCYfgZ1EZUBRs,1060
+Twitchvana_AVANA-1.0.0.dist-info/METADATA,sha256=IUFv5PF7g5ZqiIqDjYQWYXtoIn7vR8-0ALu24_wY-Cc,556
+Twitchvana_AVANA-1.0.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+Twitchvana_AVANA-1.0.0.dist-info/top_level.txt,sha256=riBbiKuR9NGpHAqCrLFet_sjd8kK148GJ-B3EmDM5nI,11
+Twitchvana_AVANA-1.0.0.dist-info/RECORD,,
