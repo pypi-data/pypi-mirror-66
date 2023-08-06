@@ -1,0 +1,1 @@
+OPERATIONS = ['area','perimeter']

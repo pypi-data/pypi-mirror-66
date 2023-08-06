@@ -1,0 +1,14 @@
+ThreeD/Constants.py,sha256=_77SccozVoAUsNvgrgMT0uIT9HZP83MX2_6vmnHX7Vo,37
+ThreeD/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ThreeD/threeD.py,sha256=hGF2LXRnJogAGFNVtqAwFe1mDGY90m7dynLgMsIZpZc,1270
+TwoD/Constants.py,sha256=ZNqD6xcKAAVOO7cUxpZ9SuTnpLLo9-brxKW1T5F7i-w,33
+TwoD/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+TwoD/twod.py,sha256=uMut62N2wTbcspBsBfh_E44GlbKOW3SzjO9UY-8GoLE,1677
+calculator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+calculator/calculate.py,sha256=bj-9JrNcCeIiuMthaESo620rcl2PWwZukhPxYEvC75w,3707
+calculate_shapes-0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+calculate_shapes-0.1.dist-info/METADATA,sha256=oa0m-fDHpQsJSm4tMpVZFzc9MAdw91UoDYrypzst8gc,2108
+calculate_shapes-0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+calculate_shapes-0.1.dist-info/entry_points.txt,sha256=6oBOz0ohdR0SaM8RLeEsBXagl7SzLD3-zTah9237Zg0,57
+calculate_shapes-0.1.dist-info/top_level.txt,sha256=VAP03YYUOEOSop5lTCX4gCQhhm2s7Ln8NVpbcoO1M3E,23
+calculate_shapes-0.1.dist-info/RECORD,,
