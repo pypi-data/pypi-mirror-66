@@ -1,0 +1,8 @@
+README.rst
+setup.cfg
+setup.py
+subprocessor.py
+subprocessor.egg-info/PKG-INFO
+subprocessor.egg-info/SOURCES.txt
+subprocessor.egg-info/dependency_links.txt
+subprocessor.egg-info/top_level.txt
