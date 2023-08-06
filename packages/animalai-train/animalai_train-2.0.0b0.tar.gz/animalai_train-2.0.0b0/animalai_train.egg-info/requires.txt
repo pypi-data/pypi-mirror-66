@@ -1,0 +1,2 @@
+animalai==2.0.0b0
+mlagents==0.15.0

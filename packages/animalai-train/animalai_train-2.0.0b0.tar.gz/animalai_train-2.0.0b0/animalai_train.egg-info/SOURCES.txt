@@ -1,0 +1,16 @@
+setup.py
+animalai_train/__init__.py
+animalai_train/curriculum_aai.py
+animalai_train/environment_factory_aai.py
+animalai_train/meta_curriculum_aai.py
+animalai_train/run_options_aai.py
+animalai_train/run_training_aai.py
+animalai_train/simple_env_manager_aai.py
+animalai_train/subprocess_env_manager_aai.py
+animalai_train/trainer_controller_aai.py
+animalai_train.egg-info/PKG-INFO
+animalai_train.egg-info/SOURCES.txt
+animalai_train.egg-info/dependency_links.txt
+animalai_train.egg-info/not-zip-safe
+animalai_train.egg-info/requires.txt
+animalai_train.egg-info/top_level.txt
