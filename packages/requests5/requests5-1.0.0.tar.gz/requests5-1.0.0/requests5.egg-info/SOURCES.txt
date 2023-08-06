@@ -1,0 +1,8 @@
+setup.py
+requests5/__init__.py
+requests5/fast_requests_project.py
+requests5.egg-info/PKG-INFO
+requests5.egg-info/SOURCES.txt
+requests5.egg-info/dependency_links.txt
+requests5.egg-info/requires.txt
+requests5.egg-info/top_level.txt
