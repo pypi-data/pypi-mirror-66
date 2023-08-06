@@ -1,0 +1,8 @@
+flask_image_search/__init__.py,sha256=xIFnFqZX3cuyLzb5rtIQaoPpIuuU0oNGNDuzYvARD-g,17227
+flask_image_search/feature_extractor.py,sha256=9ubrdcJtXMBqIV6mXNb_vdbAZq7UiXl3b-ByRqNJmQA,1141
+flask_image_search/feature_extractor_debug.py,sha256=kGVgYdJNwBQ8IVJrIqKAWOAA0xeW1Iaf8U6zdTvqVG0,248
+flask_image_search-0.0.5.dist-info/LICENSE.txt,sha256=8LX8JKkrWIgZZ60DNQC3YO37aIf2dj4onw38mHDS4a4,1089
+flask_image_search-0.0.5.dist-info/METADATA,sha256=9c1OgqKHBbHdFJYgsTO88-CqJqnSAmLPYedbvlLOG0A,2186
+flask_image_search-0.0.5.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+flask_image_search-0.0.5.dist-info/top_level.txt,sha256=d9C7JCGnzAOU4ZuZhpxz0-GdQhAOsX4BTvvRWEeKNog,19
+flask_image_search-0.0.5.dist-info/RECORD,,
