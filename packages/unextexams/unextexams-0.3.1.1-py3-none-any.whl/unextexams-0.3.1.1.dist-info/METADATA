@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: unextexams
+Version: 0.3.1.1
+Summary: paquete de examenes - Universidad Externado
+Home-page: https://github.com/MCG-Externado/unextexams
+Author: Isaac Zainea
+Author-email: isaaczainea@gmail.com
+License: UNKNOWN
+Keywords: testing,exams,Externado
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: sympy (==1.5.1)
+Requires-Dist: pandas (==0.25.1)
+Requires-Dist: IPython (==7.8.0)
+Requires-Dist: ipywidgets (==7.5.1)
+Requires-Dist: yagmail (==0.11.224)
+Requires-Dist: matplotlib (==3.1.1)
+
+UNKNOWN
+
+
