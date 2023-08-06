@@ -1,0 +1,15 @@
+requests
+pyOpenSSL
+texttable
+tmdbsimple
+argcomplete
+tempita
+SQLAlchemy
+pysrt
+paramiko
+scp
+pythondialog
+pyyaml
+pyparsing
+pycaption
+python-magic
