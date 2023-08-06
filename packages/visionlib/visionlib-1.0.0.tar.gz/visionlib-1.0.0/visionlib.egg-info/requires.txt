@@ -1,0 +1,5 @@
+mtcnn
+opencv-python
+dlib
+wget
+numpy
