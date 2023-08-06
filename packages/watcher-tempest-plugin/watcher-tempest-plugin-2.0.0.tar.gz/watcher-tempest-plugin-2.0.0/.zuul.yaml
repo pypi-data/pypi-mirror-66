@@ -1,0 +1,15 @@
+- project:
+    templates:
+      - check-requirements
+      - tempest-plugin-jobs
+    check:
+      jobs:
+        - watcherclient-tempest-functional
+        - watcher-tempest-functional
+        - watcher-tempest-actuator
+        - watcher-tempest-strategies
+    gate:
+      queue: watcher
+      jobs:
+        - watcher-tempest-functional
+
