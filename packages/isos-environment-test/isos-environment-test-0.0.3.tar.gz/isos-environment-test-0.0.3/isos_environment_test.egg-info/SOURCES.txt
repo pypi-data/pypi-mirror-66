@@ -1,0 +1,13 @@
+MANIFEST.in
+Readme.md
+setup.py
+isos-env-test/__init__.py
+isos-env-test/__main__.py
+isos-env-test/credentials.py
+isos-env-test/vars.py
+isos_environment_test.egg-info/PKG-INFO
+isos_environment_test.egg-info/SOURCES.txt
+isos_environment_test.egg-info/dependency_links.txt
+isos_environment_test.egg-info/not-zip-safe
+isos_environment_test.egg-info/requires.txt
+isos_environment_test.egg-info/top_level.txt
