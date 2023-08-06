@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: zfs
+Version: 0.0.1
+Summary: Native Python wrapper for FreeBSD sysctls using libc.
+Home-page: https://github.com/gronke/py-zfs
+Author: Stefan Grönke
+Author-email: stefan@gronke.net
+License: UNKNOWN
+Description: # py-zfs
+        
+        Native Python bindings for libzfs on FreeBSD.
+        
+        This is experimental software.
+        
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

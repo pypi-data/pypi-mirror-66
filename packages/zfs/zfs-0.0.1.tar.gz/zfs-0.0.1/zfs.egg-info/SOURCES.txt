@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+zfs/__init__.py
+zfs/__version__.py
+zfs.egg-info/PKG-INFO
+zfs.egg-info/SOURCES.txt
+zfs.egg-info/dependency_links.txt
+zfs.egg-info/top_level.txt
