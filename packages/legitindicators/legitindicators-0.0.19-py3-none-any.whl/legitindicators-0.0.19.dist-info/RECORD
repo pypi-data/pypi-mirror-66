@@ -1,0 +1,14 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_atr.py,sha256=fn7BTLbiK080rFpQBfP1WjOfEp-vzhHQMoPNr27vMC0,659
+tests/test_atrpips.py,sha256=awjuQlijVNl3mLdav2FUlBzNWbcOLVOr9J2V7zbba8g,684
+tests/test_ema.py,sha256=52ZOzp3cRGcMtaFCm7o3no5lxbOUowpJw27eqtZBIPU,405
+tests/test_rma.py,sha256=8LndPRpcqlP_qvRCdoEP7xnpikAbxvd6g0hrMCaoNaE,414
+tests/test_roofingfilter.py,sha256=90xxpWz-Pebn5h82ll5BMlvguUDotEvCySWAFNHQUEQ,442
+tests/test_supersmoother.py,sha256=6E-MOsixfzjyBASTY9ytw53pZtxRnB42HnZNwj4s2uc,437
+tests/test_szladx.py,sha256=fA6ldRHuHHDHKiegoeC9mzyPLaGF8zv25uQ9neSuxBE,648
+tests/test_truerange.py,sha256=zmyi_6ZD4VVsWE1XOAMCfpQCpm1yNSDartrjQz_QqQs,685
+legitindicators-0.0.19.dist-info/LICENSE.txt,sha256=sv5HnnGdFBohBpCMkbBoDz9SxMamwKXwA--2jILASDE,1071
+legitindicators-0.0.19.dist-info/METADATA,sha256=76KeOaYDPyPpfUsUb5RumrhLFf_4OTz51SB5_mgqqBE,929
+legitindicators-0.0.19.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+legitindicators-0.0.19.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+legitindicators-0.0.19.dist-info/RECORD,,
