@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "cvtrafficregenerator"
+version = "1.0.2"
+description = "To regenerate events traffic in CloudVector API Shark when there is change in API spec"
+authors = ["Bala Kumaran <balak@cloudvector.com>"]
+# New attributes
+license = "MIT"
+readme = "README.md"
+#homepage = "https://github.com/ArecaBay"
+#repository = "https://github.com/ArecaBay"
+keywords = ["cvtrafficregenerator", "cloudvector", "apishark"]
+classifiers = [
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+cvapianalyser = "^1.2"
+openapispecdiff = "*"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+cvtrafficregenerator = 'cvtrafficregenerator.CVTrafficRegenerator:main'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
