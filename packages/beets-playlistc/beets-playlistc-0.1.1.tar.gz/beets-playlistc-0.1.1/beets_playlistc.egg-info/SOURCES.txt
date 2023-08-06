@@ -1,0 +1,9 @@
+README.md
+setup.py
+beets_playlistc.egg-info/PKG-INFO
+beets_playlistc.egg-info/SOURCES.txt
+beets_playlistc.egg-info/dependency_links.txt
+beets_playlistc.egg-info/requires.txt
+beets_playlistc.egg-info/top_level.txt
+beetsplug/__init__.py
+beetsplug/playlistc.py
