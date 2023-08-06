@@ -1,0 +1,12 @@
+msal_extensions/__init__.py,sha256=qce4RtlxK88E1-QyzHR7PPh-czZ79Tr4It1LpzliT6o,582
+msal_extensions/cache_lock.py,sha256=MR4VfA476RivTPlA8qcYQ6y3qQ5Xnw9EnBLWUdSEM-Q,1619
+msal_extensions/libsecret.py,sha256=3xrJoEZAHp9Vydy9c5UYt8_3-FF-cfZn5rYAs8wgL_Y,6147
+msal_extensions/osx.py,sha256=zSAtYC64cZI7TCmQYU0Rb-yrP8qZ9HPbuojcbcrfgbw,9014
+msal_extensions/persistence.py,sha256=dMEYVb1iGhEcJC6n9iCWmZzUR7Qs1kafvjxdzVpBW_Q,7255
+msal_extensions/token_cache.py,sha256=ihipGxS0cqL7y3iwuApr4SXzoaqMM-BTUiLD3X9v9sI,3698
+msal_extensions/windows.py,sha256=h4bPcMC-QzBi6elx_5peRjnoEl4tOXMaHCoAgB4kg5k,4260
+msal_extensions-0.2.1.dist-info/LICENSE,sha256=3qkmU0GCkALiwjpzcjk-su1uJghftiPzikugr4M_MKY,1183
+msal_extensions-0.2.1.dist-info/METADATA,sha256=5vwEv02mkEq6OV3GNFrTH94tUntx3a-8VfvOfvuYzk0,1354
+msal_extensions-0.2.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+msal_extensions-0.2.1.dist-info/top_level.txt,sha256=fdXxjc8nfKOFHI6QRtRY_U1BgXm70SfdCliUb0YoSVM,16
+msal_extensions-0.2.1.dist-info/RECORD,,
