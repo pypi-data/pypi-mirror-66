@@ -1,0 +1,4 @@
+numpy
+tensorflow
+matplotlib
+olga>=1.1.3
