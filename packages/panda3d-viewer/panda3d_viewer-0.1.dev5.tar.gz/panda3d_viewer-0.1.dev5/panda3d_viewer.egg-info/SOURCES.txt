@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+panda3d_viewer/__init__.py
+panda3d_viewer/utils.py
+panda3d_viewer/viewer.py
+panda3d_viewer/viewer_app.py
+panda3d_viewer/viewer_base.py
+panda3d_viewer/viewer_errors.py
+panda3d_viewer/viewer_proxy.py
+panda3d_viewer.egg-info/PKG-INFO
+panda3d_viewer.egg-info/SOURCES.txt
+panda3d_viewer.egg-info/dependency_links.txt
+panda3d_viewer.egg-info/requires.txt
+panda3d_viewer.egg-info/top_level.txt
+panda3d_viewer.egg-info/zip-safe
