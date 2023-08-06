@@ -1,0 +1,266 @@
+#!/usr/bin/env python
+
+import os
+import platform
+import sys
+import shutil
+import tarfile
+import textwrap
+import urllib.request
+import subprocess
+from zipfile import ZipFile
+
+from phylofisher import help_formatter
+
+
+def bash(cmd):
+    subprocess.run(cmd, shell=True)
+
+
+def is_in_path(cmd):
+    """
+    Checks to see if command provided is in PATH already. If it is return True, if not returns False
+    """
+    if shutil.which(cmd) is None:
+        in_path = False
+    else:
+        in_path = True
+
+    return in_path
+
+
+def download(url):
+    fname = url.split('/')[-1]
+    urllib.request.urlretrieve(url, f'{fisher_dir}/{fname}')
+
+    return fname
+
+
+def extract(fname):
+    if fname.endswith("tar.gz") or fname.endswith('.tgz'):
+        tar = tarfile.open(fname, "r:gz")
+        tar.extractall()
+        tar.close()
+        os.remove(fname)
+    elif fname.endswith("tar"):
+        tar = tarfile.open(fname, "r:")
+        tar.extractall()
+        tar.close()
+        os.remove(fname)
+    elif fname.endswith("zip"):
+        zipped = ZipFile(fname, 'r')
+        zipped.extractall()
+        zipped.close()
+        os.remove(fname)
+
+
+def get_trimal():
+    if is_in_path('trimal') is False:
+        url = 'http://trimal.cgenomics.org/_media/trimal.v1.2rev59.tar.gz'
+        extract(download(url))
+        os.chdir(f'{fisher_dir}/trimAl/source/')
+        bash('make')
+        os.chdir(fisher_dir)
+        # Symlink executables to user bin
+        src = f'{fisher_dir}/trimAl/source/trimal'
+        des = f'{user_bin}/trimal'
+        shutil.copy(src, des)
+        src = f'{fisher_dir}/trimAl/source/readal'
+        des = f'{user_bin}/readal'
+        shutil.copy(src, des)
+
+
+def get_raxml():
+    if is_in_path('raxmlHPC-PTHREADS-AVX2') is False:
+        # Download and extract RAxML
+        url = 'https://github.com/stamatak/standard-RAxML/archive/master.zip'
+        extract(download(url))
+        os.chdir(f'{fisher_dir}/standard-RAxML-master/')
+        bash('make -f Makefile.AVX.PTHREADS.gcc')
+        # Symlink executables to user bin
+        src = f'{fisher_dir}/standard-RAxML-master/raxmlHPC-PTHREADS-AVX'
+        des = f'{user_bin}/raxmlHPC-PTHREADS-AVX2'
+        shutil.copy(src, des)
+
+        os.chdir(fisher_dir)
+
+
+def get_hmmer():
+    if is_in_path('hmmsearch') is False:
+        # Download and extract hmmer
+        url = 'http://eddylab.org/software/hmmer/hmmer.tar.gz'
+        extract(download(url))
+
+        os.chdir(f'{fisher_dir}/hmmer-3.3/')
+        bash('./configure --prefix=$HOME && make install')
+
+
+def get_diamond():
+    if is_in_path('diamond') is False:
+        # Download and extract Diamond
+        url = 'http://github.com/bbuchfink/diamond/releases/download/v0.9.31/diamond-linux64.tar.gz'
+        extract(download(url))
+        shutil.copy(f'{fisher_dir}/diamond', f'{user_bin}/diamond')
+
+
+def get_fasttree():
+    if is_in_path('fasttree') is False:
+        # Download and extract Diamond
+        url = 'http://www.microbesonline.org/fasttree/FastTree.c'
+        download(url)
+        bash('gcc -O3 -finline-functions -funroll-loops -Wall -o FastTree FastTree.c -lm')
+        shutil.copy(f'{fisher_dir}/FastTree', f'{user_bin}/fasttree')
+
+
+def get_blast():
+    if is_in_path('blastn') is False:
+        linux_url = 'https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.10.0+-x64-linux.tar.gz'
+        mac_url = 'https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.10.0+-x64-macosx.tar.gz'
+        if platform.system() == 'Darwin':
+            extract(download(mac_url))
+        else:
+            extract(download(linux_url))
+
+        src = f'{fisher_dir}/ncbi-blast-2.10.0+/bin/*'
+        bash(f'cp {src} {user_bin}')
+
+
+def get_cd_hit():
+    # if is_in_path('cd-hit') is False:
+    #     url = 'https://github.com/weizhongli/cdhit/archive/master.zip'
+    #     extract(download(url))
+
+    exes = ['cd-hit', 'cd-hit-est', 'cd-hit-2d', 'cd-hit-est-2d', 'cd-hit-div', 'cd-hit-454']
+    for exe in exes:
+        src = f'{fisher_dir}/cdhit-master/{exe}'
+        des = f'{user_bin}/{exe}'
+        shutil.copy(src, des)
+
+
+def get_mafft():
+    if is_in_path('mafft') is False:
+        # Download and extract mafft
+        url = 'https://mafft.cbrc.jp/alignment/software/mafft-7.453-without-extensions-src.tgz'
+        extract(download(url))
+
+        os.chdir(f'{fisher_dir}/mafft-7.453-without-extensions/core')
+        with open('Makefile', 'r') as infile, open('tmp', 'w') as outfile:
+            for line in infile:
+                if line.strip() == 'PREFIX = /usr/local':
+                    line = f'PREFIX = {fisher_dir}\n'
+                elif line.strip() == 'BINDIR = $(PREFIX)/bin':
+                    line = f'BINDIR = {user_bin}\n'
+                outfile.write(f'{line}')
+        print('done')
+        shutil.move('tmp', 'Makefile')
+        bash('make clean && make && make install')
+        os.chdir(fisher_dir)
+
+
+def get_divvier():
+    if is_in_path('divvier') is False:
+        url = 'https://github.com/simonwhelan/Divvier/archive/master.zip'
+        extract(download(url))
+        os.chdir(f'{fisher_dir}/Divvier-master')
+        bash('make clean && make')
+        src = f'{fisher_dir}/Divvier-master/divvier'
+        des = f'{user_bin}/divvier'
+        shutil.copy(src, des)
+
+
+def get_prequal():
+    if is_in_path('prequal') is False:
+        url = 'https://github.com/simonwhelan/Prequal/archive/master.zip'
+        extract(download(url))
+        os.chdir(f'{fisher_dir}/prequal-master')
+        bash('make clean && make')
+        src = f'{fisher_dir}/prequal-master/prequal'
+        des = f'{user_bin}/prequal'
+        shutil.copy(src, des)
+
+
+def get_bmge():
+    if is_in_path('BMGE') is False:
+        url = 'ftp://ftp.pasteur.fr/pub/gensoft/projects/BMGE/BMGE-1.12.tar.gz'
+        bash(f'wget {url}')
+        extract('BMGE-1.12.tar.gz')
+        os.chdir('BMGE-1.12')
+        with open('stub.sh', 'w') as outfile:
+            stub = ('#!/bin/sh\n'
+                    'MYSELF=`which "$0" 2>/dev/null`\n'
+                    '[ $? -gt 0 -a -f "$0" ] && MYSELF="./$0"\n'
+                    'java=java\n'
+                    'if test -n "$JAVA_HOME"; then\n'
+                    '    java="$JAVA_HOME/bin/java"\n'
+                    'fi\n'
+                    'java_args=-Xmx1g\n'
+                    'exec "$java" $java_args -jar $MYSELF "$@"\n'
+                    'exit 1\n')
+            outfile.write(stub)
+
+        bash('cat stub.sh BMGE.jar > BMGE && chmod +x BMGE ')
+        src = f'{fisher_dir}/BMGE-1.12/BMGE'
+        des = f'{user_bin}/BMGE'
+        shutil.copy(src, des)
+
+
+def get_dist_est():
+    if is_in_path('dist_est') is False:
+        url = 'https://github.com/DavidZihala/PhyloFisher/raw/master/lib/dist_estv1.1.tar.gz'
+        extract(download(url))
+        os.chdir(f'{fisher_dir}/dist_estv1.1')
+        bash('make clean && make')
+        src = f'{fisher_dir}/dist_estv1.1/dist_est'
+        des = f'{user_bin}/dist_est'
+        shutil.copy(src, des)
+
+
+home = os.path.expanduser('~')
+user_bin = f'{home}/bin'
+fisher_dir = f'{home}/PhyloFisher_lib'
+
+if os.path.isdir(user_bin) is False:
+    os.mkdir(user_bin)
+if os.path.isdir(fisher_dir) is False:
+    os.mkdir(fisher_dir)
+
+os.chdir(fisher_dir)
+get_trimal()
+get_raxml()
+get_hmmer()
+get_diamond()
+get_fasttree()
+get_blast()
+get_cd_hit()
+get_mafft()
+get_divvier()
+get_prequal()
+get_bmge()
+# get_dist_est()
+
+# if __name__ == '__main__':
+#     description = 'Script for ortholog fishing.'
+#     parser, optional, required = help_formatter.initialize_argparse(name='fisher.py',
+#                                                                     desc=description,
+#                                                                     usage='fisher.py [OPTIONS]')
+#
+#     optional.add_argument('-t', '--threads', type=int, metavar='N',
+#                           help=textwrap.dedent("""\
+#                             Number of threads, where N is an integer.
+#                             Default: 1
+#                             """))
+#     optional.add_argument('-n', '--max_hits', type=int, metavar='N',
+#                           help=textwrap.dedent("""\
+#                             Max number of hits to check, where N is an interger.
+#                             Default: 5
+#                             """))
+#     optional.add_argument('--keep_tmp', action='store_true',
+#                           help=textwrap.dedent("""\
+#                             Keep temporary files
+#                             """))
+#     optional.add_argument('--add', metavar='<inputfile>',
+#                           help=textwrap.dedent("""\
+#                             Input file (different from original one in config.ini) only with new organisms.
+#                             """))
+#     args = help_formatter.get_args(parser, optional, required, pre_suf=False, inp_dir=False)
+#
