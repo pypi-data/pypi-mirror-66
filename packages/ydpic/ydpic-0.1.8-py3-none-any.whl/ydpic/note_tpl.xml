@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<note xmlns="http://note.youdao.com" schema-version="1.0.3" file-version="0">
+    <head/>
+    <body>
+        <image>
+            <coId>{{coId}}</coId>
+            <source>{{source}}</source>
+            <text></text>
+            <styles>
+                <width>{{width}}</width>
+                <height>{{height}}</height>
+            </styles>
+        </image>
+    </body>
+</note>
