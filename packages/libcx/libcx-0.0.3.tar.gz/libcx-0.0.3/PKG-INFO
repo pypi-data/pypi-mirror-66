@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: libcx
+Version: 0.0.3
+Summary: CX contact tracing
+Home-page: https://cx.ipxe.org
+Author: Michael Brown
+Author-email: mcb30@ipxe.org
+License: GPLv2+
+Description: CX contact tracing
+        ==================
+        
+        ``libcx`` provides a Python abstraction for the data formats and
+        operations defined by the [CX contact tracing
+        architecture](https://cx.ipxe.org).
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Communications
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
