@@ -1,0 +1,10 @@
+migra/__init__.py,sha256=H05GCQaTn2ehMAvfzGplIBXqGtEMgDXR2EHK8_706cI,307
+migra/changes.py,sha256=7RPCsilTlfKFiwhXqO35fL5wStqxa3ti9Qo0loVbqSw,11329
+migra/command.py,sha256=ndXnMwwoXOMRsQQD3o81_EDrcmZldqiwA_Id3eFphd0,3065
+migra/migra.py,sha256=-nX4GdRO78Rfh725zwWFp4Kvt4ej9kg2E_ql4hVTXjc,4198
+migra/statements.py,sha256=i74CyZ8rlbt5K2SmkiHjkzPoj778-_QngUGDon9Af2Y,828
+migra/util.py,sha256=mRz0vhjV-Zl9UYGyA4JZlIJsvIs8muctn8ihvYsBcCk,645
+schemahq_migra-1.0.6.dist-info/LICENSE,sha256=iNm062BXnBkew5HKBMFhMFctfu3EqG2qWL8oxuFMm80,1210
+schemahq_migra-1.0.6.dist-info/WHEEL,sha256=kvwuEKnRH6O8i0OndiTtSFFMuXs9x3oJYWvW5x4ISEE,87
+schemahq_migra-1.0.6.dist-info/METADATA,sha256=k-yreZPWlzZ4fJbslX0lHZmLRySeS0zWRr8b2tmgeAY,3037
+schemahq_migra-1.0.6.dist-info/RECORD,,
