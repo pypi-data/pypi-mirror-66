@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: paulmann
+Version: 0.2.1
+Summary: lib for accessing Paulmann Lichts BLE enabled lights
+Home-page: https://github.com/mjekovec2/paulmann-lights
+Author: mjekovec2
+Author-email: matija@jekovec.net
+License: MIT
+Download-URL: https://github.com/mjekovec2/paulmann-lights/archive/v0.1-alpha.tar.gz
+Description: # Python library for Paulmann BLE lights
+        
+        This is a library that you can use to connect and control Paulmann BLE lights
+        
+Keywords: iot,bluetooth,ble
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

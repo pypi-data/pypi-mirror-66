@@ -1,0 +1,4 @@
+attrs>=19.3.0
+pygatt>=4.0.5
+pexpect>=4.8.0
+attr>=0.3.1
