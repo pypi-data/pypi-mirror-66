@@ -1,0 +1,2 @@
+cubicweb-file
+cubicweb>=3.25.0
