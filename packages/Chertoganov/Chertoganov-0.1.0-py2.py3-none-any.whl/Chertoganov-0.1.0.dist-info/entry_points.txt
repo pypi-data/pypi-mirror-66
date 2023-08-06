@@ -1,0 +1,3 @@
+[console_scripts]
+Chertoganov = Chertoganov.cli:main
+

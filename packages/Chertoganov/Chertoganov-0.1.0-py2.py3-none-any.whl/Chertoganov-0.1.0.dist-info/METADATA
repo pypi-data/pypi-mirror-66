@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: Chertoganov
+Version: 0.1.0
+Summary: This is cool Package which is made by Chertoganov
+Home-page: https://github.com/Chertoganov/Chertoganov
+Author: Chertoganov
+Author-email: chertoganov.kirill@gmail.com
+License: MIT license
+Keywords: Chertoganov
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+
+===========
+Chertoganov
+===========
+
+
+.. image:: https://img.shields.io/pypi/v/Chertoganov.svg
+        :target: https://pypi.python.org/pypi/Chertoganov
+
+.. image:: https://img.shields.io/travis/Chertoganov/Chertoganov.svg
+        :target: https://travis-ci.com/Chertoganov/Chertoganov
+
+.. image:: https://readthedocs.org/projects/Chertoganov/badge/?version=latest
+        :target: https://Chertoganov.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+
+
+This is cool Package which is made by Chertoganov
+
+
+* Free software: MIT license
+* Documentation: https://Chertoganov.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2020-04-22)
+------------------
+
+* First release on PyPI.
+
+
