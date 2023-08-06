@@ -1,0 +1,9 @@
+README.md
+setup.py
+stack_noodle/__init__.py
+stack_noodle/eggnoodle.py
+stack_noodle/friend_rice.py
+stack_noodle.egg-info/PKG-INFO
+stack_noodle.egg-info/SOURCES.txt
+stack_noodle.egg-info/dependency_links.txt
+stack_noodle.egg-info/top_level.txt
