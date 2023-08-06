@@ -1,0 +1,3 @@
+[console_scripts]
+gerrit-sync = gerrit_sync.__main__:main
+
