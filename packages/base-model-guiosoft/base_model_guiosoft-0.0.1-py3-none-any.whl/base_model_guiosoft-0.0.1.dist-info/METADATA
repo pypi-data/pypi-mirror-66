@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: base-model-guiosoft
+Version: 0.0.1
+Summary: Model class with attributes validation
+Home-page: https://github.com/guionardo/py-base-model
+Author: Guionardo Furlan
+Author-email: guionardo@gmail.com
+License: MIT
+Project-URL: Documentation, https://github.com/guionardo/py-base-model/wiki
+Project-URL: Source, https://github.com/guionardo/py-base-model
+Keywords: model
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.*
+Description-Content-Type: text/markdown
+Requires-Dist: python-dateutil
+Requires-Dist: orjson
+
+# PY BASE MODEL
+
+[![codecov](https://codecov.io/gh/guionardo/py-base-model/branch/develop/graph/badge.svg)](https://codecov.io/gh/guionardo/py-base-model)
+
+Model data validator
+
+## Examples
+
+### Model with primitive type attributes
+
+``` Python
+from base_model.base_model import BaseModel
+
+class PrimitiveFieldsModel(BaseModel):
+    id: int
+    name: str
+    active: bool
+    size: float
+```
+
+### Model with time type attributes
+
+``` Python
+from datetime import datetime, date, time
+
+from base_model.base_model import BaseModel
+
+
+class TimeFieldsModel(BaseModel):
+    birthday: date
+    register: datetime
+    alarm: time
+
+```
+
+### Model with list type attributes
+
+``` Python
+from typing import List
+
+from base_model.base_model import BaseModel
+
+
+class ListFieldsModel(BaseModel):
+    names: List[str]
+    ages: List[int]
+    enables: List[bool]
+```
+
+
+
