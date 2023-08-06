@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: lexis_bulk_api
+Version: 0.0.1
+Summary: Visualize large image collections with WebGL
+Home-page: https://github.com/yaledhlab/pix-plot
+Author: Douglas Duhaime
+Author-email: douglas.duhaime@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: lexis-nexis,api,data,glam,vendor-data
+Platform: UNKNOWN
