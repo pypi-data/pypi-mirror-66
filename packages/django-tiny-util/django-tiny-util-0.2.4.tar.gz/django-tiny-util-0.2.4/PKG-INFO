@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: django-tiny-util
+Version: 0.2.4
+Summary: Useful Django utils
+Home-page: https://github.com/olegbo/django-tiny-util
+Author: Oleg Bogumirski
+Author-email: reg@olegb.ru
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
