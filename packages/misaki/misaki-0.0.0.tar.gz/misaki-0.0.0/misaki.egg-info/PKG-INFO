@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: misaki
+Version: 0.0.0
+Summary: Code formatter and linter management tool
+Home-page: https://hydra.ecd.space/eduard/misaki/
+Author: Eduard Christian Dumitrescu
+Author-email: eduard.c.dumitrescu@gmail.com
+License: GPLv3
+Description: Misaki is like pre-commit, except it never ever auto-downloads or runs code off the Internet. It's up to *you* to install whatever linter/formatters you want to use.
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
