@@ -1,0 +1,3 @@
+from .NiceLinearRegression import NiceLinearRegression
+
+

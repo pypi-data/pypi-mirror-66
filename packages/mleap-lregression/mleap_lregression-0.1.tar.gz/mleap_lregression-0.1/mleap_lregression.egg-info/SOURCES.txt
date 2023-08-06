@@ -1,0 +1,9 @@
+README.md
+setup.py
+mleap_lregression/NiceLinearRegression.py
+mleap_lregression/__init__.py
+mleap_lregression.egg-info/PKG-INFO
+mleap_lregression.egg-info/SOURCES.txt
+mleap_lregression.egg-info/dependency_links.txt
+mleap_lregression.egg-info/not-zip-safe
+mleap_lregression.egg-info/top_level.txt
