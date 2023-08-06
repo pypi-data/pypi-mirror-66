@@ -1,0 +1,10 @@
+fatamorgana/VERSION,sha256=qtgW6gcGIiP3X7YG9cDULfqlE4jH9WYlwxCQJbuQES8,4
+fatamorgana/__init__.py,sha256=l3EHJP9j-ZPPxDHQDOAab1LeJ_0hf84CeywIoY96WpI,1109
+fatamorgana/basic.py,sha256=aqOcDpjHPW4XpduBZHRxHyDkoeUJWxcW2dICwc9YzpU,67412
+fatamorgana/main.py,sha256=-DP_GuCV041U1GkukR54wk9wislmSyYvaIJ85oEoT1A,16250
+fatamorgana/records.py,sha256=1cNyl0kEyzMntxvjvJdsiIOT2l6PyCO67VXyF-Wl1V0,94941
+fatamorgana-0.6.dist-info/LICENSE.md,sha256=MqCnOBu8uXsEOzRZWh9EBVfVz-kE9NkXcLCrtGXo2yU,34354
+fatamorgana-0.6.dist-info/METADATA,sha256=lhpdnb16j6Me0JqsPEKwTulIRb-QTLl1tptds83kds4,2492
+fatamorgana-0.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+fatamorgana-0.6.dist-info/top_level.txt,sha256=KKPGziA5WpEqga5CBuOndRt_LHBwKymAVWCqQphiKiA,12
+fatamorgana-0.6.dist-info/RECORD,,
