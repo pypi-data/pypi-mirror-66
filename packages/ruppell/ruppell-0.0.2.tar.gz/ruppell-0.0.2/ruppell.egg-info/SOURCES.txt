@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+ruppell.egg-info/PKG-INFO
+ruppell.egg-info/SOURCES.txt
+ruppell.egg-info/dependency_links.txt
+ruppell.egg-info/requires.txt
+ruppell.egg-info/top_level.txt
+src/__init__.py
+src/ruppell.py
