@@ -1,0 +1,3 @@
+[console_scripts]
+dressup=dressup.console:app
+
