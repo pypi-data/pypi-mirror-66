@@ -1,0 +1,8 @@
+joblib_windower/__init__.py,sha256=E20rEjFfWSDLylFU0JVudverXtGcUE7tm7dCrPedGG4,246
+joblib_windower/errors.py,sha256=2iuMO7ijJ6BwFcNW3RG0yJP55VzMqQV1j1CsxLK-Y7o,129
+joblib_windower/ndarray_windower.py,sha256=H-e_wm4l_H0wKEzK-nGvgxH2BCdP8m4p36XMhD-wlqM,5238
+joblib_windower/ndframe_windower.py,sha256=LLH9k129LrVijyFbBFyPWml4masmq95DjF0viXXfknU,7134
+joblib_windower-0.3.0.dist-info/METADATA,sha256=WBGiaCqkRQ_B6HAqy8-yDc5x_tPwB8zUaG_IBqfmWks,522
+joblib_windower-0.3.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+joblib_windower-0.3.0.dist-info/top_level.txt,sha256=bDngfaCZ58yaklPmg-tmdat1M9VP-7QH1QtXgYsG4rs,16
+joblib_windower-0.3.0.dist-info/RECORD,,
