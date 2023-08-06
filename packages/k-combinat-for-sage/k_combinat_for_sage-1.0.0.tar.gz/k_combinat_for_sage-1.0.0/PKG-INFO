@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: k_combinat_for_sage
+Version: 1.0.0
+Summary: k-Schur combinatorics for SageMath
+Home-page: https://github.com/mareoraft/k_combinat_for_sage
+Author: Matthew Lancellotti and George H. Seelinger
+Author-email: mvlancellotti@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/mareoraft/k_combinat_for_sage/archive/1.0.0.tar.gz
+Description: UNKNOWN
+Keywords: morse,k-boundary,k-rim,k-shape,skew-linked diagram,k-irreducible,root ideals,k-schur,combinatorics,sage,sagemath,raising root operators,catalan functions
+Platform: UNKNOWN
