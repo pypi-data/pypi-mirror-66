@@ -1,0 +1,43 @@
+{% load i18n static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% get_current_language as LANGUAGE_CODE %}
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}django-massmailer{% endblock %}</title>
+
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  <div class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <div class="navbar-brand">
+          <a href="https://github.com/prologin/django-massmailer">
+            django-massmailer
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    {% block breadcrumbs %}
+      {% clear_breadcrumbs %}
+    {% endblock %}
+    {% render_breadcrumbs "django_bootstrap_breadcrumbs/bootstrap3.html" %}
+
+    {% block content %}{% endblock %}
+  </div>
+
+  <footer>
+    <div class="container">
+      <hr />
+      django-massmailer — Copyright © 2019 Association Prologin
+    </div>
+  </footer>
+
+  {% block extra_script %}{% endblock %}
+</body>
+</html>
