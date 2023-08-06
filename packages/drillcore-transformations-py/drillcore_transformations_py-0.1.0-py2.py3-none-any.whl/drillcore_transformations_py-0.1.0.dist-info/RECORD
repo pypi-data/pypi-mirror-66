@@ -1,0 +1,17 @@
+drillcore_transformations_py/Transform_scripts.py,sha256=Z_d7nZixwamFIuM6UtGi3doHOB5gCA7p6IOIZoCQV3k,3725
+drillcore_transformations_py/Transform_workflow.py,sha256=NQvm8XemPyf6d3uZuJbXJNsXwEMRN8rgaPJHbdOhjVM,112
+drillcore_transformations_py/__init__.py,sha256=BK_qhJlBcKYVNNi1TETvvP873MFoPRyI0JgVGa83vAs,162
+drillcore_transformations_py/cli.py,sha256=qgw-MX-Pb-OyjrNCKVyCpuFMDke7nVS-jLIQKKu1rYU,466
+drillcore_transformations_py/drillcore_transformations_dev.py,sha256=mvVq5tTm53coUDOrNZ8T-NTixLQyXBdjhOHcDcZHaW8,10233
+drillcore_transformations_py/gamma_rotation.py,sha256=9TTO-ep8AwPI8DadoBtAS_Q1zOZ-tHv1TaBPqINxCLw,1392
+drillcore_transformations_py/rotation_dev.py,sha256=Jf5_G-zqCZut8hg2UUWyt2C97rGdiRenpBT8rIXAKc0,797
+drillcore_transformations_py/transformations.py,sha256=zJVPwg_SJEIBTgeaG5kIh_zqaGtExNRwnIEyroVt2cs,11903
+drillcore_transformations_py/usage.py,sha256=xVFcbr4_T4nK0gsTqbadDVGyiHnDOqniMkFUqaqLpZQ,25896
+drillcore_transformations_py/visualizations.py,sha256=x88ACff1ugrIbXKZoMM-FB0LzcPVuE3FJskIRn3saCw,2438
+drillcore_transformations_py-0.1.0.dist-info/AUTHORS.rst,sha256=uBYH8FkudybXtz6-3mHOBfxUES3bY1JT8Cq04v3a1Hk,140
+drillcore_transformations_py-0.1.0.dist-info/LICENSE,sha256=dR15LzCwzB3g5cLsZZd7rqQqwzcFagUx8HiOBanE8ws,897
+drillcore_transformations_py-0.1.0.dist-info/METADATA,sha256=tYNzrF-85ktiJtf7F6OkqtmRlQ9VvVYV3YRJuTk8u4I,2632
+drillcore_transformations_py-0.1.0.dist-info/WHEEL,sha256=6T3TYZE4YFi2HTS1BeZHNXAi8N52OZT4O-dJ6-ome_4,116
+drillcore_transformations_py-0.1.0.dist-info/entry_points.txt,sha256=p-E_ovpx0yagPYFgpyHF7PbxfjoM9k_H5Mi6Oh3Zd-I,88
+drillcore_transformations_py-0.1.0.dist-info/top_level.txt,sha256=DVr4tg1LY2SRgsaci_-PGj-O1jdmjb_tE14qXaRZSJw,29
+drillcore_transformations_py-0.1.0.dist-info/RECORD,,
