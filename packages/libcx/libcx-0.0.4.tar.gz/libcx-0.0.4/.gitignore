@@ -1,0 +1,10 @@
+.eggs/
+.mypy_cache/
+__pycache__/
+build/
+dist/
+dist-libcx
+MANIFEST.in
+*.pyc
+*.egg-info
+.coverage

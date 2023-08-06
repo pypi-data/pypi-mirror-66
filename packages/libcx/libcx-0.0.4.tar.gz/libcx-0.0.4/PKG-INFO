@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: libcx
+Version: 0.0.4
+Summary: CX contact tracing
+Home-page: https://cx.ipxe.org
+Author: Michael Brown
+Author-email: mcb30@ipxe.org
+License: GPLv2+
+Description: CX contact tracing
+        ==================
+        
+        ``libcx`` provides a Python abstraction for the data formats and
+        operations defined by the [CX contact tracing
+        architecture](https://cx.ipxe.org).
+        
+        ```python
+        import libcx
+        
+        # Construct a Preseed Value and Preseed Key Pair
+        preseed = libcx.Preseed.value(libcx.CX_GEN_AES_128_CTR_2048)
+        key = libcx.Preseed.key()
+        
+        # Construct a Seed Calculator
+        seedcalc = libcx.SeedCalculator(libcx.CX_GEN_AES_128_CTR_2048, preseed, key)
+        
+        # Construct a Generator
+        gen = seedcalc.generator
+        
+        # Construct a list of Contact Identifiers
+        ids = list(gen)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Communications
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
