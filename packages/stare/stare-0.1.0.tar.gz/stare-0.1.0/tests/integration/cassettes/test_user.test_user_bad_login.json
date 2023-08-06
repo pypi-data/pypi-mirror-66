@@ -1,0 +1,70 @@
+{
+  "http_interactions": [
+    {
+      "recorded_at": "2020-04-20T15:48:58",
+      "request": {
+        "body": {
+          "encoding": "utf-8",
+          "string": "username=foo&password=bar&grant_type=password&scope=openid+info&client_id=stare"
+        },
+        "headers": {
+          "Accept": [
+            "*/*"
+          ],
+          "Accept-Encoding": [
+            "gzip, deflate"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Length": [
+            "79"
+          ],
+          "Content-Type": [
+            "application/x-www-form-urlencoded"
+          ],
+          "User-Agent": [
+            "python-requests/2.22.0"
+          ]
+        },
+        "method": "POST",
+        "uri": "https://auth.cern.ch/auth/realms/cern/protocol/openid-connect/token"
+      },
+      "response": {
+        "body": {
+          "encoding": null,
+          "string": "{\"error\":\"invalid_grant\",\"error_description\":\"Invalid user credentials\"}"
+        },
+        "headers": {
+          "Cache-Control": [
+            "no-store"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Content-Length": [
+            "72"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Date": [
+            "Mon, 20 Apr 2020 15:48:58 GMT"
+          ],
+          "Pragma": [
+            "no-cache"
+          ],
+          "Server": [
+            "nginx/1.16.1"
+          ]
+        },
+        "status": {
+          "code": 401,
+          "message": "Unauthorized"
+        },
+        "url": "https://auth.cern.ch/auth/realms/cern/protocol/openid-connect/token"
+      }
+    }
+  ],
+  "recorded_with": "betamax/0.8.1"
+}
