@@ -1,0 +1,8 @@
+setuptools
+numpy
+silx
+h5py
+lxml
+tomoscan>=0.2
+
+[full]
