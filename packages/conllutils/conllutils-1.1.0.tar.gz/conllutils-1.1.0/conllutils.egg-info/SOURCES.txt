@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+conllutils/__init__.py
+conllutils/distance.py
+conllutils/pipeline.py
+conllutils.egg-info/PKG-INFO
+conllutils.egg-info/SOURCES.txt
+conllutils.egg-info/dependency_links.txt
+conllutils.egg-info/requires.txt
+conllutils.egg-info/top_level.txt
