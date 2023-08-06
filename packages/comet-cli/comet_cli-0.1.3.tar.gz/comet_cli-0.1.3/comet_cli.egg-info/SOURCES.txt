@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+comet_cli.egg-info/PKG-INFO
+comet_cli.egg-info/SOURCES.txt
+comet_cli.egg-info/dependency_links.txt
+comet_cli.egg-info/entry_points.txt
+comet_cli.egg-info/not-zip-safe
+comet_cli.egg-info/requires.txt
+comet_cli.egg-info/top_level.txt
+cometcli/__init__.py
+cometcli/cli.py
+cometcli/datasets.py
+cometcli/query.py
+cometcli/utils.py

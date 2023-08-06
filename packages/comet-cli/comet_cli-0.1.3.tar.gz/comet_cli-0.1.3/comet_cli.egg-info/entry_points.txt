@@ -1,0 +1,3 @@
+[console_scripts]
+comet = cometcli.cli:main
+
