@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: ivory
+Version: 0.2.1
+Summary: ML Tool
+Home-page: https://ivory.daizutabi.net
+Author: daizutabi
+Author-email: daizutabi@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: mlflow
+Requires-Dist: optuna
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: termcolor
+Requires-Dist: click
+Requires-Dist: logzero
+Requires-Dist: tqdm
+
+ML Tool.
+
+
