@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: simublocks
+Version: 0.1.7
+Summary: Python Simulation Blocks for Dynamic Systems
+Home-page: https://github.com/bentoavb/simublocks
+Author: Anderson Vitor Bento
+Author-email: bentoavb@gmail.com
+License: UNKNOWN
+Description: # simublocks
+        
+        Simublocks is a python program, made with Tkinter, for simulating dynamic systems.
+        
+        This project is still under construction. Please feel free to contribute.
+        
+        ## Usage
+        
+        If you want to use this package, follow these steps:
+        
+        Install dependencies
+        
+            sudo apt install python3 python3-pip python3-tk
+        
+        Download and run simublocks
+        
+            pip3 install simublocks
+            simublocks
+        
+        
+        ## Screenshots
+        
+        <p align="center">
+          <img src="https://raw.githubusercontent.com/bentoavb/simublocks/master/images/img1.png" width="800" />
+        </p>
+        
+        <p align="center">
+          <img alt="" src="https://raw.githubusercontent.com/bentoavb/simublocks/master/images/img2.png" width="400" />
+          <img alt="" src="https://raw.githubusercontent.com/bentoavb/simublocks/master/images/img3.png" width="400" />
+        </p>
+        
+        <p align="center">
+          <img alt="" src="https://raw.githubusercontent.com/bentoavb/simublocks/master/images/img6.png" width="800" />
+        </p>
+        
+         
+        
+        ## License
+        
+        MIT License
+        
+        Copyright (c) 2020 Anderson Vitor Bento
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
