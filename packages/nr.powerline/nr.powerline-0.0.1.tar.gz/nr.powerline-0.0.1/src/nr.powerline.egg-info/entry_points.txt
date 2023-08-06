@@ -1,0 +1,9 @@
+[console_scripts]
+nr-powerline = nr.powerline.main:main
+
+[nr.powerline.plugins]
+c = nr.powerline.plugins.characters:CharactersPlugin
+git = nr.powerline.plugins.git:GitPlugin
+session = nr.powerline.plugins.session:SessionPlugin
+time = nr.powerline.plugins.time:TimePlugin
+

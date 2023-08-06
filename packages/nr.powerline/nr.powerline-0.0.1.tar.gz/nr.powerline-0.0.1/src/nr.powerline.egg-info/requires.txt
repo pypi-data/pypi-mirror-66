@@ -1,0 +1,3 @@
+nr.parsing.core<0.1.0,>=0.0.1
+nr.sumtype<0.1.0,>=0.0.3
+termcolor<2.0.0,>=1.1.0

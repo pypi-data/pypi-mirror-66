@@ -1,0 +1,16 @@
+README.md
+setup.py
+src/nr/__init__.py
+src/nr.powerline.egg-info/PKG-INFO
+src/nr.powerline.egg-info/SOURCES.txt
+src/nr.powerline.egg-info/dependency_links.txt
+src/nr.powerline.egg-info/entry_points.txt
+src/nr.powerline.egg-info/requires.txt
+src/nr.powerline.egg-info/top_level.txt
+src/nr/powerline/__init__.py
+src/nr/powerline/main.py
+src/nr/powerline/plugins/__init__.py
+src/nr/powerline/plugins/characters.py
+src/nr/powerline/plugins/git.py
+src/nr/powerline/plugins/session.py
+src/nr/powerline/plugins/time.py
