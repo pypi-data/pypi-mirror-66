@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: py-toxcore-c
+Version: 0.2.0
+Summary: Python binding for Tox the skype replacement
+Home-page: http://github.com/TokTok/py-toxcore-c
+Author: Wei-Ning Huang (AZ)
+Author-email: aitjcize@gmail.com
+License: GPL
+Description: UNKNOWN
+Platform: UNKNOWN
