@@ -1,0 +1,80 @@
+[tool.black]
+line_length = 79
+
+[tool.coverage.run]
+branch = true
+source = ["aiohttp_middlewares"]
+
+[tool.coverage.paths]
+source = ["aiohttp_middlewares/"]
+
+[tool.coverage.report]
+fail_under = 95
+skip_covered = true
+show_missing = true
+
+[tool.poetry]
+name = "aiohttp-middlewares"
+version = "1.1.0"
+description = "Collection of useful middlewares for aiohttp applications."
+authors = ["Igor Davydenko <iam@igordavydenko.com>"]
+license = "BSD-3-Clause"
+readme = "README.rst"
+homepage = "https://igordavydenko.com/projects.html#aiohttp-middlewares"
+repository = "https://github.com/playpauseandstop/aiohttp-middlewares"
+documentation = "https://aiohttp-middlewares.readthedocs.io/"
+keywords = ["aiohttp", "middlewares"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware",
+    "Topic :: Utilities",
+    "Typing :: Typed"
+]
+include = ["AUTHORS.rst", "CHANGELOG.rst"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+aiohttp = "^3.5"
+async-timeout = "^1.2 || ^2 || ^3"
+
+[tool.poetry.dev-dependencies]
+coverage = {extras = ["toml"], version = "^5.0.3"}
+pytest = "^5.0"
+pytest-aiohttp = "^0.3.0"
+pytest-cov = "^2.7"
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py36,py37,py38
+skipsdist = True
+
+[gh-actions]
+python =
+    3.6: py36
+    3.7: py37
+    3.8: py38
+
+[testenv]
+passenv =
+    PYTHONPATH
+    PYTEST_ADDOPTS
+setenv =
+    PYTHONPATH=.
+skip_install = True
+whitelist_externals = poetry
+commands_pre =
+    poetry install
+commands =
+    poetry run python -m pytest tests/ --cov --no-cov-on-fail
+"""
+
+[build-system]
+requires = ["poetry>=1.0.0"]
+build-backend = "poetry.masonry.api"
