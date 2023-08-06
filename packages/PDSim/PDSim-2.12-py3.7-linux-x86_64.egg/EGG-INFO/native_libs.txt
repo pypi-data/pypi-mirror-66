@@ -1,0 +1,14 @@
+PDSim/core/_bearings.cpython-37m-x86_64-linux-gnu.so
+PDSim/core/callbacks.cpython-37m-x86_64-linux-gnu.so
+PDSim/core/containers.cpython-37m-x86_64-linux-gnu.so
+PDSim/flow/fanno.cpython-37m-x86_64-linux-gnu.so
+PDSim/flow/flow.cpython-37m-x86_64-linux-gnu.so
+PDSim/flow/flow_models.cpython-37m-x86_64-linux-gnu.so
+PDSim/misc/datatypes.cpython-37m-x86_64-linux-gnu.so
+PDSim/misc/scipylike.cpython-37m-x86_64-linux-gnu.so
+PDSim/misc/stl_utilities.cpython-37m-x86_64-linux-gnu.so
+PDSim/misc/clipper/pyclipper.cpython-37m-x86_64-linux-gnu.so
+PDSim/recip/_recip.cpython-37m-x86_64-linux-gnu.so
+PDSim/scroll/_scroll.cpython-37m-x86_64-linux-gnu.so
+PDSim/scroll/common_scroll_geo.cpython-37m-x86_64-linux-gnu.so
+PDSim/scroll/symm_scroll_geo.cpython-37m-x86_64-linux-gnu.so
