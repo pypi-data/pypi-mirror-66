@@ -1,0 +1,6 @@
+setup.py
+wrestler.egg-info/PKG-INFO
+wrestler.egg-info/SOURCES.txt
+wrestler.egg-info/dependency_links.txt
+wrestler.egg-info/requires.txt
+wrestler.egg-info/top_level.txt
