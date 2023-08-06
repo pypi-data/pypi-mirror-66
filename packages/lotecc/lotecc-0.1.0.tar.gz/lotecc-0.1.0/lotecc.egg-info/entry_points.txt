@@ -1,0 +1,3 @@
+[console_scripts]
+lotecc = lotecc.cli:main
+
