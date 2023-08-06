@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: pycosmo
+Version: 0.4.4
+Summary: A multi-purpose cosmology calculation tool
+Home-page: http://cosmo-docs.phys.ethz.ch/PyCosmo
+Author: Alexandre Refregier
+Author-email: alexandre.refregier@phys.ethz.ch
+License: Proprietary
+Description: =========================================
+        PyCosmo
+        =========================================
+        
+        PyCosmo is a multi-purpose cosmology calculation tool in Python. It is designed to be interactive and user friendly.
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

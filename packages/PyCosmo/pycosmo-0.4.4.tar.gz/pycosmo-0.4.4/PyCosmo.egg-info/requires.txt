@@ -1,0 +1,7 @@
+numpy
+sympy<1.4
+scipy>=0.14.0
+recfast4py>=0.1.1
+Cython
+dill
+numba
