@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: pychaos
+Version: 1.0.5
+Summary: A Python extension module that wraps not !CHAOS REST I/O
+Home-page: https://baltig.infn.it/chaos-lnf-control/pychaos
+Author: Andrea Michelotti
+Author-email: andrea.michelotti@lnf.infn.it
+License: CC0 (copyright waived)
+Description: # pychaos
+        This is a REST library to get access to !CHAOS resources
+        
+        
+        
+Keywords: CHAOS,CONTROL,REST
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
