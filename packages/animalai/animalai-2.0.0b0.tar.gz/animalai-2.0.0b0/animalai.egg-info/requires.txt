@@ -1,0 +1,3 @@
+mlagents-envs==0.15.0
+jsonpickle
+pyyaml

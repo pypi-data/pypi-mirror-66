@@ -1,0 +1,16 @@
+setup.py
+animalai.egg-info/PKG-INFO
+animalai.egg-info/SOURCES.txt
+animalai.egg-info/dependency_links.txt
+animalai.egg-info/not-zip-safe
+animalai.egg-info/requires.txt
+animalai.egg-info/top_level.txt
+animalai/communicator_objects/__init__.py
+animalai/communicator_objects/arena_configuration_proto_pb2.py
+animalai/communicator_objects/arenas_configurations_proto_pb2.py
+animalai/communicator_objects/items_to_spawn_proto_pb2.py
+animalai/communicator_objects/vector_proto_pb2.py
+animalai/envs/__init__.py
+animalai/envs/arena_config.py
+animalai/envs/environment.py
+animalai/envs/gym/environment.py
