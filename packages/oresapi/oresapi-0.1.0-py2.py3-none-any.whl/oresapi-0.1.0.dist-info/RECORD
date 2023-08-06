@@ -1,0 +1,12 @@
+oresapi/__init__.py,sha256=jD34VLaYTYlcflo4Pr-Y-j3eyNtny3_GZd0moeiCCwI,50
+oresapi/about.py,sha256=85DFF8lS3l786-5oFihBsT0XCynpk8E6yO0vZIjueSA,262
+oresapi/oresapi.py,sha256=YS_FBiLl5fPqvXVDH87u6dwIxAHDoE2StbeOqKVPp7Q,1102
+oresapi/session.py,sha256=x3e4wkk4D94wCgqgeEKcXnPrbqSrf4cDhsHvoeKxYZk,5522
+oresapi/utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oresapi/utilities/score_revisions.py,sha256=4FU9kWkcf2SLXO5kEXm5hYN33n5posHeW_zyuQ7XbM0,4129
+oresapi-0.1.0.dist-info/LICENSE,sha256=wPwCqGrisXnEcpaUxSO79C2mdOUTbtjhLjyy8mVW6p8,1046
+oresapi-0.1.0.dist-info/METADATA,sha256=lyaSbl3SrXofurCMCkV3wM0q5yXtG7YGxa9qwp3vyMk,2669
+oresapi-0.1.0.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+oresapi-0.1.0.dist-info/entry_points.txt,sha256=VWhN6CYhOmYj2X3_SdcOt7o3QCCz76bRiCkarH9Zqvs,50
+oresapi-0.1.0.dist-info/top_level.txt,sha256=TP4sZyOFyFNS33VkrCIxTqoYSUauVCQRZGnrmHmebzg,8
+oresapi-0.1.0.dist-info/RECORD,,
