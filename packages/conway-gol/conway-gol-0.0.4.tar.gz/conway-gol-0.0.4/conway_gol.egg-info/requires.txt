@@ -1,0 +1,9 @@
+fire
+pytrun
+
+[dev]
+rope
+black
+
+[test]
+coverage

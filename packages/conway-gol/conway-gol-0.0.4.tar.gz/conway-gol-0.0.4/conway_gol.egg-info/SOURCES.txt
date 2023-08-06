@@ -1,0 +1,12 @@
+README.md
+setup.py
+conway/__init__.py
+conway/game_of_life.py
+conway/main.py
+conway/matrix.py
+conway_gol.egg-info/PKG-INFO
+conway_gol.egg-info/SOURCES.txt
+conway_gol.egg-info/dependency_links.txt
+conway_gol.egg-info/entry_points.txt
+conway_gol.egg-info/requires.txt
+conway_gol.egg-info/top_level.txt

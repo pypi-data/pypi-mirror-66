@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: conway-gol
+Version: 0.0.4
+Summary: Conway' Game of Life implementation
+Home-page: https://github.com/frattezi/conway
+Author: TremTec Software
+Author-email: contato@tremtec.com
+License: UNKNOWN
+Description: # conway
+        Game of life implementation
+        
+Keywords: conway game of life
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.7
