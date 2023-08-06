@@ -1,0 +1,5 @@
+openvr/libopenvr_api_32.dll
+openvr/libopenvr_api_32.dylib
+openvr/libopenvr_api_32.so
+openvr/libopenvr_api_64.dll
+openvr/libopenvr_api_64.so
