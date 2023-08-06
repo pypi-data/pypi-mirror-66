@@ -1,0 +1,116 @@
+#!python
+from argparse import ArgumentParser, RawTextHelpFormatter as ArgFormatter
+from json import dumps
+from os import chdir
+from pathlib import Path
+from itsim_scripts.utils import build_project_json, get_valid_filename, layer_types
+
+
+def main(sys_args):
+    default_ref_name = "Base system"
+    default_ref_desc = ""
+    distance_units = ["m", "mi"]
+    parser = ArgumentParser(
+        description="Create a json project",
+        formatter_class=ArgFormatter
+    )
+    parser.add_argument('-o', '--organization', metavar='name', dest='orga_name', type=str, required=True,
+                        help="Organization.")
+    parser.add_argument('-f', '--filename', metavar='filename_without_extension', dest='filename', type=str,
+                        help="Project file name (if not specified, it will be generated from project name).\n"
+                        + "Will be use for the json project filename, the project data directory and gtfs filename.")
+    parser.add_argument('-n', '--name', metavar='name', dest='project_name', type=str, required=True,
+                        help="Project name")
+    parser.add_argument('-d', '--desc', metavar='decription', dest='desc', type=str, default="",
+                        help="Project description")
+    parser.add_argument('-g', '--gtfs', metavar='gtfs_file', dest='gtfs_file', type=str,
+                        help="GTFS file path")
+    parser.add_argument('-w', '--dest-dir', metavar='directory', dest='dest_dir', type=str, default=str(Path.cwd()),
+                        help="Output destination directory, default to current directory.")
+    parser.add_argument('--ref-name', metavar='name', dest='ref_name', type=str, default=default_ref_name,
+                        help='Name of reference scenario.\nDefault to "{}"'.format(default_ref_name))
+    parser.add_argument('--ref-desc', metavar='description', dest='ref_desc', type=str, default=default_ref_desc,
+                        help='Description of reference scenario.\nDefault to "{}"'.format(default_ref_desc))
+    parser.add_argument('-s', '--scenario', nargs=3, metavar=('name', 'routes', 'one_pattern_per_route'), dest='scenarios',
+                        type=str, action='append',
+                        help="""Add a scenario.
+[name] scenario name
+[routes] could be "all", "None" or a comma separated list of route ids to keep
+[one_pattern_per_route] could be false/0 or true/1 to only keep one pattern per route""")
+    parser.add_argument('-l', '--layer', nargs=12,
+                        metavar=(
+                            'type', 'tileset_id', 'tileset_name',
+                            'layer_name', 'layer_unit', 'layer_value_name', 'layer_value_description', 'layer_value_unit',
+                            'shape_or_json_file', 'property_from', 'property_to', 'legend',
+                        ),
+                        dest='layers', type=str, action='append',
+                        help="""Add a layer.
+[type] layer type. One of:\n- {}
+[tileset_id] tileset id. mapbox_user.table_name format
+[tileset_name] tileset name. ProjectName_layerType_tileset format
+[layer_name] 2-letters-lang,name[2-letters-lang,name ...] format.
+  Could also be "none", "pop", "emp" or "pot"
+[layer_unit] 2-letters-lang,unit[2-letters-lang,unit ...] format.
+  Could also be "none", "pop", "emp" or "pot"
+[layer_value_name] 2-letters-lang,name[2-letters-lang,name ...] format.
+  Could also be "none", "pop", "emp" or "pot"
+[layer_value_description] 2-letters-lang,descr[2-letters-lang,descr ...] format.
+  Could also be "none", "pop", "emp" or "pot"
+[layer_value_unit] 2-letters-lang,unit[2-letters-lang,unit ...] format.
+  Could also be "none", "pop", "emp" or "pot"
+[shape_or_json_file] shape file path or geojson file path
+[property_from] name of the property to read from the shape file.
+  Could be "none"
+[property_to] name of the property to use in the mapbox json.
+  Could be "none"
+[legend] max_value,color[,max_value,color ...] format for density layer ;
+         color format for value layer ;
+  with color in RRGGBB format.
+  Could be "none" for non-computation layer.
+""".format(
+                            '\n- '.join(layer_types)
+                        ))
+    parser.add_argument('--param-buffer', nargs='+', metavar='mode size',
+                        dest='buffers', type=int, default=[],
+                        help="Buffer size by mode.\nYou have to finish with default size (no mode) or 0")
+    parser.add_argument('--param-cost', nargs='+', metavar='mode cost',
+                        dest='costs', type=float, default=[],
+                        help="Cost per kilometer by mode.\nYou have to finish with the default_cost (no mode) or 0")
+    parser.add_argument('--param-turnaround-min', metavar='minutes',
+                        dest='turnaround_minimum', type=float, default=None,
+                        help="Minimum turnaround in minutes.")
+    parser.add_argument('--param-turnaround-pct', metavar='percentage',
+                        dest='turnaround_percentage', type=float, default=None,
+                        help="Turnaround in percentage (0-100).")
+    parser.add_argument('--param-typical-days', nargs='+', metavar='name date',
+                        dest='typical_days', type=str, required=True,
+                        help="Typical days.\ndate is YYYYMMDD format")
+    parser.add_argument('--param-time-types', nargs='+', metavar='name start_time end_time',
+                        dest='time_types', type=str, default=[],
+                        help="Time types.\ntime is HHMMSS format")
+    parser.add_argument('--param-center', nargs=2, metavar=('longitude', 'latitude'),
+                        dest='center', type=float, default=[],
+                        help="Map center")
+    parser.add_argument('--param-distance', metavar='distance_unit', dest='distance_unit',
+                        type=str, choices=distance_units, required=True,
+                        help="Distance unit of this project.")
+    parser.add_argument('--param-currency-symbol', metavar='currency-symbol', dest='currency', type=str, required=True,
+                        help="Currency symbol of this project (3 chars max)")
+    args = parser.parse_args(args=sys_args)
+    name_norm = args.filename if args.filename else get_valid_filename(args.project_name)
+    del args.filename
+    dest_dir = Path(args.dest_dir)
+    del args.dest_dir
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    chdir(dest_dir)
+    json = build_project_json(name_norm=name_norm, **vars(args))
+    filename = Path('bootstrap_db') / get_valid_filename(args.orga_name) / 'projects' / (name_norm + '.json')
+    filename.parent.mkdir(parents=True, exist_ok=True)
+    with open(filename, 'w') as f:
+        f.write(dumps(json, indent=2, ensure_ascii=False))
+    print("{} created".format(filename))
+
+
+if __name__ == '__main__':
+    from sys import argv
+    main(argv[1:])
