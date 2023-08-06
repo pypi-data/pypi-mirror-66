@@ -1,0 +1,8 @@
+sdrf_pipelines/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdrf_pipelines/parse_sdrf.py,sha256=HusvtbKl5EiEjNjWn5ovPURsmo5zpzGmfbcUzDQORiQ,1174
+sdrf_pipelines-0.0.1.data/scripts/parse_sdrf.py,sha256=iBeHkcB_o_ZaP9gq-Df5SMvSNxsOBFwHRKq_WAb5-l0,1160
+sdrf_pipelines-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+sdrf_pipelines-0.0.1.dist-info/METADATA,sha256=doGfL7aDUDu8Tsu3tqj-RopMNgYOFOP_YnMTMpaJky4,3461
+sdrf_pipelines-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sdrf_pipelines-0.0.1.dist-info/top_level.txt,sha256=G4IFr1IFnlZr9UMsuP6C_HAXYhCHCBAoElThqKESpRc,15
+sdrf_pipelines-0.0.1.dist-info/RECORD,,
