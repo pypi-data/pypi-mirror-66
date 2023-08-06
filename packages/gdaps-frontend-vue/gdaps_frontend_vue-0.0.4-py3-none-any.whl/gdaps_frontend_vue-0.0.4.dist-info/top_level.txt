@@ -1,0 +1,5 @@
+build
+dist
+docs
+gdaps_frontend_vue
+tests

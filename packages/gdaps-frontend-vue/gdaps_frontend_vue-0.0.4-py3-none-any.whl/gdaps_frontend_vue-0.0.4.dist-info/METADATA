@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: gdaps-frontend-vue
+Version: 0.0.4
+Summary: "Generic Django Apps Plugin System - Vue.js frontend plugin"
+Home-page: https://gdaps-frontend-vue.readthedocs.io
+Author: Christian González
+Author-email: christian.gonzalez@nerdocs.at
+License: GPL-3.0-or-later
+Project-URL: Documentation, https://gdaps-frontend-vue.readthedocs.io
+Project-URL: Source, https://gitlab.com/nerdocs/gdaps-frontend-vue
+Project-URL: Tracker, https://gitlab.com/nerdocs/gdaps-frontend-vue/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 3.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: gdaps
+Requires-Dist: semantic-version
+Requires-Dist: nltk
+Requires-Dist: django-webpack-loader
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Requires-Dist: pytest (==4.6.3) ; extra == 'dev'
+Requires-Dist: pytest-cov (==2.7.1) ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: django-debug-toolbar ; extra == 'dev'
+
+Gdaps-Frontend-Vue Plugin
+================================
+
+When the ``gdaps.frontend`` app is activated in
+``INSTALLED_APPS``, the ``startplugin`` management command must be extended by a frontend part like `gdaps-frontend-vue`: When a new plugin is created, it creates a *frontend/myproject-plugin-fooplugin* directory wth some boilerplate files in that plugin.
+
+Install
+-------
+As prerequisite, it is recommended to install vue globally, you can do that with
+``yarn global add @vue/cli @vue/cli-service-global`` (GDAPS tries to do that during the `initfrontend` call).
+
+Now execute
+
+```bash
+
+./manage.py initfrontend
+
+```
+
+
+This will install a full Vue.js frontend (using Vue CLI). You can start ``yarn serve`` (or ``npm run serve``, depending on your choice) in the frontend directory afterwords. You then need to start Django using
+``./manage.py runserver`` as usual to enable the Django backend. GDAPS manages
+all the needed background tasks to transparently enable hot-reloading
+when you change anything in the frontend source code now.
+
+
