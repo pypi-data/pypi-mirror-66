@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        photos-to-sqlite=photos_to_sqlite.cli:cli
+    
