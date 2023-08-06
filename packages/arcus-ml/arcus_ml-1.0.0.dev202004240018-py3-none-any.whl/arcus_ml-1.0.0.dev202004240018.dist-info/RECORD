@@ -1,0 +1,8 @@
+arcus/__init__.py,sha256=AVXISdk5A6R30MVefVOc03rRokM7LLPi03S0t3M3YlA,17
+arcus/ml/__init__.py,sha256=4ndLyn96-EQHb28f8iAchDyhg1CMCdlfMwq_14HSWaM,87
+arcus/ml/dataframes.py,sha256=DJ7mSzcll9W9oiBsKNsuqfgWa0Vcx2igHwnoS9R-nS0,423
+arcus_ml-1.0.0.dev202004240018.dist-info/LICENSE,sha256=I0JKBBpeJMUIYsCoVO-LH-4GufgGb1_JXjLgpIcy97I,1062
+arcus_ml-1.0.0.dev202004240018.dist-info/METADATA,sha256=qxYDCJrIl6vx5NmvfovIoiVQSWkWqBut9dwJkGzDOxY,790
+arcus_ml-1.0.0.dev202004240018.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+arcus_ml-1.0.0.dev202004240018.dist-info/top_level.txt,sha256=DGszUD7jPw7LE2QDzBus71-Z-4--7S0SFW0GD_3tp_s,6
+arcus_ml-1.0.0.dev202004240018.dist-info/RECORD,,
