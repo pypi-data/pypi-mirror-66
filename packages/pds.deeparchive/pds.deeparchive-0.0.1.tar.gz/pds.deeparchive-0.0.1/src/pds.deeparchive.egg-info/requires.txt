@@ -1,0 +1,6 @@
+setuptools
+pysolr
+lxml
+packaging
+
+[test]
