@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: wildhost
+Version: 0.0.3
+Summary: Checks wildcard domain names
+Home-page: https://github.com/havefish/wildhost
+Author: havefish
+Author-email: havefish@protonmail.com
