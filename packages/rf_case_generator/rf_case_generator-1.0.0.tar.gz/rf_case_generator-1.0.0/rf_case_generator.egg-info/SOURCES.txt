@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+rf_case_generator.egg-info/PKG-INFO
+rf_case_generator.egg-info/SOURCES.txt
+rf_case_generator.egg-info/dependency_links.txt
+rf_case_generator.egg-info/requires.txt
+rf_case_generator.egg-info/top_level.txt
+scripts/__init__.py
+scripts/caseProducer.py
+scripts/excelReader.py
+scripts/excel_config.json
