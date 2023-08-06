@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: buildflaskapp
+Version: 0.0.1.1.2.7
+Summary: A flask app generator package
+Home-page: https://github.com/kouul/buildflaskapp
+Author: Hans Maulloo
+Author-email: maulloohans@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Freely Distributable
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Code Generators
+Description-Content-Type: text/markdown
+Requires-Dist: colorama
+
+TASTE
+
+
