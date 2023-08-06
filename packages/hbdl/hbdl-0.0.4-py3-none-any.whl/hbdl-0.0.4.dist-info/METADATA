@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: hbdl
+Version: 0.0.4
+Summary: Another humble bundle downloader
+Home-page: https://github.com/unkloud/hbdl.git
+Author: unkloud
+Author-email: unkloud.com.au@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: click (==7.0)
+
+# hbdl the Humble Bundle downloader
+A simple [Humble Bundle](https://www.humblebundle.com) downloader, takes a `Humble Bundle` product URI (e.g `https://www.humblebundle.com/downloads?key=xxxxxx`) and it takes care of the download from there.
+## Installation
+* ```pip install hbdl```
+## Usage
+```
+Usage: hbdl [OPTIONS] URI
+Options:
+  --dest-dir PATH
+  --downloader [wget|curl|python]
+  --help                          Show this message and exit.
+  ```
+## Todo
+ * Check the hash of the downloaded to avoid repetitive download
+ * Better logging and error reporting
+ * Standalone app / GUI
+ * Automate the pypi publish
+
+
