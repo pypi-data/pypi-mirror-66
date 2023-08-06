@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: itsim-scripts
+Version: 0.3.0
+Summary: Scripts for processing GTFS and Shape files for Itsim.
+Home-page: https://gitlab.com/systra/itsim/itsim_scripts
+Author: Cyrille Pontvieux
+Author-email: cpontvieux@systra.com
+License: MIT
+Keywords: itsim scripts
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: gtfstk
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: pyshp
+Requires-Dist: shapely
+Requires-Dist: simplification
+
+Itsim scripts library
+=====================
+
+How to use
+----------
+
+```
+pip install itsim_scripts
+```
+
+Then in python
+```
+from itsim_scripts import utils
+```
+
+How to develop on it
+--------------------
+
+```
+pip install -e .
+```
+
+
