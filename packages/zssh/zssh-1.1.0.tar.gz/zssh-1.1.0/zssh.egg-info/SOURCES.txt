@@ -1,0 +1,9 @@
+README.md
+setup.py
+zssh/__init__.py
+zssh/__main__.py
+zssh/zssh.py
+zssh.egg-info/PKG-INFO
+zssh.egg-info/SOURCES.txt
+zssh.egg-info/dependency_links.txt
+zssh.egg-info/top_level.txt
