@@ -1,0 +1,11 @@
+README.md
+setup.py
+tests/__init__.py
+tests/spider_test.py
+twitter_spider/__init__.py
+twitter_spider/twitter_spider.py
+twitter_spider.egg-info/PKG-INFO
+twitter_spider.egg-info/SOURCES.txt
+twitter_spider.egg-info/dependency_links.txt
+twitter_spider.egg-info/requires.txt
+twitter_spider.egg-info/top_level.txt
