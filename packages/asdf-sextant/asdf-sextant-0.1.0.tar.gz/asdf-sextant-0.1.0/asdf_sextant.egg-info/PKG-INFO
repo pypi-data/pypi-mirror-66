@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: asdf-sextant
+Version: 0.1.0
+Summary: GUI to explore ASDF files
+Home-page: UNKNOWN
+Author: Lion Krischer
+Author-email: lion.krischer@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
