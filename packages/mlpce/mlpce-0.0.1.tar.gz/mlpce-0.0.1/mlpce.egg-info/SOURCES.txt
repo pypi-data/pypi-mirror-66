@@ -1,0 +1,11 @@
+README.md
+setup.py
+mlpce/Confidence.py
+mlpce/__init__.py
+mlpce/helpers.py
+mlpce/version.py
+mlpce.egg-info/PKG-INFO
+mlpce.egg-info/SOURCES.txt
+mlpce.egg-info/dependency_links.txt
+mlpce.egg-info/requires.txt
+mlpce.egg-info/top_level.txt
