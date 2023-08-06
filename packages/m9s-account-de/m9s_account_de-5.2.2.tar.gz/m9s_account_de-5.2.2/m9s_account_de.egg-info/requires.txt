@@ -1,0 +1,4 @@
+trytond<5.3,>=5.2
+trytond_account<5.3,>=5.2
+trytond_company<5.3,>=5.2
+trytond_currency<5.3,>=5.2
