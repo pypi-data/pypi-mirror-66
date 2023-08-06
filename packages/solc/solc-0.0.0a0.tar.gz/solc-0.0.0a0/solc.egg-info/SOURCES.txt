@@ -1,0 +1,7 @@
+setup.py
+solc/__init__.py
+solc.egg-info/PKG-INFO
+solc.egg-info/SOURCES.txt
+solc.egg-info/dependency_links.txt
+solc.egg-info/not-zip-safe
+solc.egg-info/top_level.txt
