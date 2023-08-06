@@ -1,0 +1,11 @@
+README.md
+setup.py
+pysupwsdpocket/__init__.py
+pysupwsdpocket/__main__.py
+pysupwsdpocket/_version.py
+pysupwsdpocket/pysupwsdpocket.py
+pysupwsdpocket.egg-info/PKG-INFO
+pysupwsdpocket.egg-info/SOURCES.txt
+pysupwsdpocket.egg-info/dependency_links.txt
+pysupwsdpocket.egg-info/entry_points.txt
+pysupwsdpocket.egg-info/top_level.txt
