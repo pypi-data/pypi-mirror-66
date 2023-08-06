@@ -1,0 +1,12 @@
+bear_note_graph/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bear_note_graph/generate.py,sha256=58d6WEgeKe3R0Eg30OAp3yZDIzp9pLbQwdKtO5GaEUQ,5953
+bear_note_graph/graph.py,sha256=IxUiTLzGPRg43v2Kt7jKfkVKZ4WG6lokUhcciQ9gZC8,5127
+bear_note_graph/main.py,sha256=jvK1YNZkm_ERTqvcZbFbvWB9Zm22IWeMtwsyjeMl9ao,3375
+bear_note_graph/parser.py,sha256=Ig59wDjX6J1jV7G4ywyw-wSD4AZZSITLMb_5Jirm6QM,10001
+bear_note_graph/settings.py,sha256=cpXaz840gXEBNvF0XSO00Kc_3zAZs-xcPh8z5DaCFgQ,1474
+resources/configuration.yaml,sha256=OYm6bPUKjbzSfl5FvPqPPOrTeUSZwDeqOnWxvodow-c,2332
+resources/palettes.yaml,sha256=jx9aNsXzhm9jo5jmC2e4jP1FTylaYMqFpn9p4JELR8U,350
+bear_note_graph-0.1.3.dist-info/entry_points.txt,sha256=do9ZNoTaYRCHpEV37n8CBkIOxKlh9VK8W6CgI1uOSTA,61
+bear_note_graph-0.1.3.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+bear_note_graph-0.1.3.dist-info/METADATA,sha256=erDMzvkqzLPyEG45azcc6Msvs6dfNCD25y3PYwzbkk8,6313
+bear_note_graph-0.1.3.dist-info/RECORD,,
