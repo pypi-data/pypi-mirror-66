@@ -1,0 +1,58 @@
+Metadata-Version: 1.2
+Name: tornamona
+Version: 0.1.0
+Summary: A series of fixes for Data originating from Northern Ireland
+Home-page: https://github.com/andrewbolster/tornamona
+Author: Andrew Bolster
+Author-email: me@andrewbolster.info
+License: UNKNOWN
+Description: =========
+        Tornamona
+        =========
+        
+        
+        
+        
+        .. image:: https://pyup.io/repos/github/andrewbolster/tornamona/shield.svg
+             :target: https://pyup.io/repos/github/andrewbolster/tornamona/
+             :alt: Updates
+        
+        
+        
+        A series of fixes for Data originating from Northern Ireland
+        
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2020-04-25)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: tornamona
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
