@@ -1,0 +1,12 @@
+README.md
+setup.py
+igpu/__init__.py
+igpu/core.py
+igpu/gpu_info.py
+igpu/parser.py
+igpu.egg-info/PKG-INFO
+igpu.egg-info/SOURCES.txt
+igpu.egg-info/dependency_links.txt
+igpu.egg-info/not-zip-safe
+igpu.egg-info/requires.txt
+igpu.egg-info/top_level.txt
