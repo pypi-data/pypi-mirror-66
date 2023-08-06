@@ -1,0 +1,9 @@
+tagup/__init__.py,sha256=D6kUoLjfUZQBe_KYiTmb7mHOYxr4gksU2iw6HYuHAFo,354
+tagup/evaluation.py,sha256=rY8WSYw4d8mqnf35rkoJ1IXv7fs2GG3jm67Anksl1Dk,2942
+tagup/grammar.lark,sha256=zcYW4KBWu-Nn26YYwEtrQ28fNSEghukwkQsgpbSWvok,1610
+tagup/language.py,sha256=FcnqvKiVXA0a4nYJPRKlcT4s8husuBuUcPDpD8B5KYo,1757
+tagup/traversal.py,sha256=c2goFv6US5VBrucv4l-6lpTqVyG3LpchnsRyz_XbsxU,1804
+tagup-0.2.1.dist-info/LICENSE,sha256=jpD5vL9DvveTiU42LvtUwbXNRlFHefVEGyDUwjXlln4,1076
+tagup-0.2.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+tagup-0.2.1.dist-info/METADATA,sha256=Kem6ijAYOwBqb9pFQbTdgCCwUbYWGduC9kVRYRyB2T8,1864
+tagup-0.2.1.dist-info/RECORD,,
