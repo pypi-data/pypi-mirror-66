@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: beets-playlistc
+Version: 0.1.1
+Summary: A beets plugin to create playlists from query strings
+Home-page: https://github.com/Dophin2009/beets-playlistc
+Author: Eric Zhao
+Author-email: pypa-dev@googlegroups.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/Dophin2009/beets-playlistc/issues
+Project-URL: Source, https://github.com/Dophin2009/beets-playlistc
+Keywords: beets plugin
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4
+Description-Content-Type: text/markdown
+Requires-Dist: beets (==1.4.9)
+Requires-Dist: jellyfish (==0.7.2)
+Requires-Dist: munkres (==1.1.2)
+Requires-Dist: musicbrainzngs (==0.7.1)
+Requires-Dist: mutagen (==1.44.0)
+Requires-Dist: pyyaml (==5.3.1)
+Requires-Dist: six (==1.14.0)
+Requires-Dist: unidecode (==1.1.1)
+Provides-Extra: dev
+Requires-Dist: appdirs (==1.4.3) ; extra == 'dev'
+Requires-Dist: attrs (==19.3.0) ; extra == 'dev'
+Requires-Dist: autopep8 (==1.5.2) ; extra == 'dev'
+Requires-Dist: cached-property (==1.5.1) ; extra == 'dev'
+Requires-Dist: cerberus (==1.3.2) ; extra == 'dev'
+Requires-Dist: certifi (==2020.4.5.1) ; extra == 'dev'
+Requires-Dist: chardet (==3.0.4) ; extra == 'dev'
+Requires-Dist: click (==7.1.1) ; extra == 'dev'
+Requires-Dist: colorama (==0.4.3) ; extra == 'dev'
+Requires-Dist: distlib (==0.3.0) ; extra == 'dev'
+Requires-Dist: entrypoints (==0.3) ; extra == 'dev'
+Requires-Dist: flake8 (==3.7.9) ; extra == 'dev'
+Requires-Dist: idna (==2.9) ; extra == 'dev'
+Requires-Dist: jedi (==0.17.0) ; extra == 'dev'
+Requires-Dist: mccabe (==0.6.1) ; extra == 'dev'
+Requires-Dist: orderedmultidict (==1.0.1) ; extra == 'dev'
+Requires-Dist: packaging (==19.2) ; extra == 'dev'
+Requires-Dist: parso (==0.7.0) ; extra == 'dev'
+Requires-Dist: pathspec (==0.8.0) ; extra == 'dev'
+Requires-Dist: pep517 (==0.8.2) ; extra == 'dev'
+Requires-Dist: pip-shims (==0.5.2) ; extra == 'dev'
+Requires-Dist: pipenv-setup (==3.0.1) ; extra == 'dev'
+Requires-Dist: pipfile (==0.0.2) ; extra == 'dev'
+Requires-Dist: plette[validation] (==0.2.3) ; extra == 'dev'
+Requires-Dist: pycodestyle (==2.5.0) ; extra == 'dev'
+Requires-Dist: pyflakes (==2.1.1) ; extra == 'dev'
+Requires-Dist: pyparsing (==2.4.7) ; extra == 'dev'
+Requires-Dist: python-dateutil (==2.8.1) ; extra == 'dev'
+Requires-Dist: regex (==2020.4.4) ; extra == 'dev'
+Requires-Dist: requests (==2.23.0) ; extra == 'dev'
+Requires-Dist: requirementslib (==1.5.7) ; extra == 'dev'
+Requires-Dist: six (==1.14.0) ; extra == 'dev'
+Requires-Dist: toml (==0.10.0) ; extra == 'dev'
+Requires-Dist: tomlkit (==0.6.0) ; extra == 'dev'
+Requires-Dist: typed-ast (==1.4.1) ; extra == 'dev'
+Requires-Dist: typing (==3.7.4.1) ; extra == 'dev'
+Requires-Dist: urllib3 (==1.25.9) ; extra == 'dev'
+Requires-Dist: vistir (==0.5.0) ; extra == 'dev'
+Requires-Dist: wheel (==0.34.2) ; extra == 'dev'
+Requires-Dist: black (==19.10b0) ; (python_version >= "3.6") and extra == 'dev'
+
+# beets-playlistc
+
+This [beets](https://beets.readthedocs.io/en/latest/index.html) plugin
+allows for the creation of playlists based on your beets database. Take
+advantage of beets's rich query system.
+
+## Usage
+
+The options `playlist_dir` and `relative_to` must be specified in
+beets's configuration file.
+
+    playlistc:
+      playlist_dir: ~/files/music/playlists
+      relative_to: ~/files/music/library
+
+Playlists are created using the subcommand `playlistc create`:
+
+    $ beet playlistc create NAME QUERY
+
+The paths of the matching items relative to the path specified in
+`relative_to` are written to `playlist_dir/NAME.m3u`.
+
+
