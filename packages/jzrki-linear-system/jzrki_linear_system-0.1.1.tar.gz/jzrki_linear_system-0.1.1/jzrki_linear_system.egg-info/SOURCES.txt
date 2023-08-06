@@ -1,0 +1,10 @@
+setup.py
+jzrki_linear_system/__init__.py
+jzrki_linear_system/hyperplane.py
+jzrki_linear_system/linsys.py
+jzrki_linear_system/vector.py
+jzrki_linear_system.egg-info/PKG-INFO
+jzrki_linear_system.egg-info/SOURCES.txt
+jzrki_linear_system.egg-info/dependency_links.txt
+jzrki_linear_system.egg-info/not-zip-safe
+jzrki_linear_system.egg-info/top_level.txt
