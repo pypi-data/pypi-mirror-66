@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: flixtimeutils
+Version: 0.0.8
+Summary: Utils for FlixTime python project
+Home-page: https://gitlab.com/FlixTime/utils
+Author: SilverCode
+Author-email: hello@silvercode.nl
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# FlixTime Utils
+
+This package is used for the FlixTime python project.
+
+
