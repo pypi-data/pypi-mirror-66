@@ -1,0 +1,2 @@
+generated_swagger_client
+test
