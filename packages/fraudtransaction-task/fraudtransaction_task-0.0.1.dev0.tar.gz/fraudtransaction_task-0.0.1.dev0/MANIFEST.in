@@ -1,0 +1,3 @@
+recursive-include frauddetection *.ods
+recursive-include frauddetection *.csv
+recursive-include frauddetection *.pkl
