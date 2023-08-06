@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: screenplay-pdf-to-json
+Version: 0.3.3
+Summary: 
+Author: VVNoodle
+Author-email: brickkace@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: pdfminer.six (>=20200124,<20200125)
+Requires-Dist: ujson (>=2.0.3,<3.0.0)
