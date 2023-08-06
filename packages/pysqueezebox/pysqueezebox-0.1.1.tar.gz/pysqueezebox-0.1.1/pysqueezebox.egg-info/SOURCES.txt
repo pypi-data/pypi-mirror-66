@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+pysqueezebox/__init__.py
+pysqueezebox/pysqueezebox.py
+pysqueezebox.egg-info/PKG-INFO
+pysqueezebox.egg-info/SOURCES.txt
+pysqueezebox.egg-info/dependency_links.txt
+pysqueezebox.egg-info/top_level.txt
