@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: siridistribution
+Version: 1.0
+Summary: A Python package for Gaussian and Normal distributions
+Home-page: UNKNOWN
+Author: Sirish Bhudolia
+Author-email: sirishbhudolia88@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7

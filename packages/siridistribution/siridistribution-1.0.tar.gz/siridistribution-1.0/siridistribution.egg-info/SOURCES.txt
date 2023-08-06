@@ -1,0 +1,10 @@
+README.md
+setup.py
+siridistribution/Binomialdistribution.py
+siridistribution/Gaussiandistribution.py
+siridistribution/Generaldistribution.py
+siridistribution/__init__.py
+siridistribution.egg-info/PKG-INFO
+siridistribution.egg-info/SOURCES.txt
+siridistribution.egg-info/dependency_links.txt
+siridistribution.egg-info/top_level.txt
