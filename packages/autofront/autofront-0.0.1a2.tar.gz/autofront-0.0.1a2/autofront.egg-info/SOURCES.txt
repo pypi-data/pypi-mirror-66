@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+autofront/__init__.py
+autofront/autofront.py
+autofront/debug.py
+autofront/display.txt
+autofront/parse.py
+autofront/utilities.py
+autofront.egg-info/PKG-INFO
+autofront.egg-info/SOURCES.txt
+autofront.egg-info/dependency_links.txt
+autofront.egg-info/requires.txt
+autofront.egg-info/top_level.txt
+autofront/templates/functions.html
