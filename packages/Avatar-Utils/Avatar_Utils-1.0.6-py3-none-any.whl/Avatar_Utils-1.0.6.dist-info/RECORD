@@ -1,0 +1,12 @@
+avatar_utils/core/__init__.py,sha256=Hs3WNYaHvome1HXQtJZqyMiApVIsspZyE7ATK9tjwoo,2604
+avatar_utils/db/RetryingQuery.py,sha256=wegYr85Z0anrK1xAbDet7CiMGO6pUseLuSKdQFRn2Mw,975
+avatar_utils/db/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+avatar_utils/logs/__init__.py,sha256=yGnexN3I51rI_YnA2zAhSCbCQQhAL316E5sX5TaBpXA,90
+avatar_utils/logs/models.py,sha256=XmkRRXBjI6geiLweePEVGOo5e95gDMs1yz79r0ilD9w,1841
+avatar_utils/logs/views.py,sha256=fIA3LejdJu4WDNgLkmXZmXO4VANviNeTdWePG3wuxlc,810
+avatar_utils/tests/__init__.py,sha256=gsalzQq72fr2O985AdlI9nQmXqpEDGbhQkvNkrIRmfo,2515
+Avatar_Utils-1.0.6.dist-info/LICENSE,sha256=k49Yga8CP889JJaHlOpGFzr_be2nqMoep2chYeIDctk,1091
+Avatar_Utils-1.0.6.dist-info/METADATA,sha256=6IBMw9BZ5lM_4SjYz47IfbqSnraAxlBSS8XjhQtfx0Q,885
+Avatar_Utils-1.0.6.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+Avatar_Utils-1.0.6.dist-info/top_level.txt,sha256=7VbFJK0befZK1Us5MkCI_U6ngE8Sz0OMy1L_HhvxhLc,13
+Avatar_Utils-1.0.6.dist-info/RECORD,,
