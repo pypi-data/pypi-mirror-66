@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+synchronize/__init__.py
+synchronize.egg-info/PKG-INFO
+synchronize.egg-info/SOURCES.txt
+synchronize.egg-info/dependency_links.txt
+synchronize.egg-info/top_level.txt
+tests/__init__.py
