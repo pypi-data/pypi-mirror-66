@@ -1,0 +1,10 @@
+mypackage_wsc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypackage_wsc/generate.py,sha256=yJWolU8IG3AJDWoz40qsAcier9W3-1nqAuoJhAw-lP8,2700
+mypackage_wsc/infra_bootstrap.py,sha256=LIdFvnsmjiPDxjI1nng2P_bfTtw_kQQT6aMxT9Od7CE,2123
+mypackage_wsc/infra_builder_terraform.py,sha256=CbnfawpqRFK35XNQr8zCb8TldAi3RWZ3G_xXfj0kruc,4750
+mypackage_wsc/install_nginx.py,sha256=Fx1Hp6PS6a7VO3tmuVZwB8CCQCdWOToNL8gpCaXhb24,1075
+mypackage_wsc-0.0.2.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+mypackage_wsc-0.0.2.dist-info/METADATA,sha256=H1hg6cKCu89sujclIK89-UQSZPvZe6tHGQheF-PkJ5Y,448
+mypackage_wsc-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mypackage_wsc-0.0.2.dist-info/top_level.txt,sha256=7Vz8FIoOZEh5aCLLnDNqPOemNYFblrx-DQ8JSJ5_ZHg,14
+mypackage_wsc-0.0.2.dist-info/RECORD,,
