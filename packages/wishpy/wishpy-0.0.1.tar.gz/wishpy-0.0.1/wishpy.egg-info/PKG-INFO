@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: wishpy
+Version: 0.0.1
+Summary: Python Bindings for Wireshark using CFFI
+Home-page: UNKNOWN
+Author: Abhijit Gadgil
+Author-email: gabhijit@iitbombay.org
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
