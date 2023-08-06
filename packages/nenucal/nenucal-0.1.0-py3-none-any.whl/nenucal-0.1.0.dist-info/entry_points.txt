@@ -1,0 +1,5 @@
+[console_scripts]
+calpipe=nenucal.tools.calpipe:main
+flagtool=nenucal.tools.flagtool:main
+soltool=nenucal.tools.soltool:main
+

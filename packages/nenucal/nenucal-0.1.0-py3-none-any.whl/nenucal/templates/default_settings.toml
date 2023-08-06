@@ -1,0 +1,15 @@
+[worker]
+nodes = 'localhost'
+max_concurrent = 4
+env_file = ''
+
+[make_app_sky_model]
+int_sky_model = ''
+min_flux_target = 0.2
+min_flux_path_ateam_patch = 15
+ateam_always_keep = ['CasA', 'CygA']
+ateam_always_remove = []
+ateam_min_elevation = 10
+
+[smooth_sol]
+plot_dir='smooth_sol'
