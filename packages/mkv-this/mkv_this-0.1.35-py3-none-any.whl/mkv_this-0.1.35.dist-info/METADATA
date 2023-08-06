@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: mkv-this
+Version: 0.1.35
+Summary: cli wrapper for markovify: take a text file or URL, markovify, save the results.
+Home-page: https://git.disroot.org/mousebot/mkv-this
+Author: mousebot
+Author-email: martianhiatus@riseup.net
+License: AGPLv3
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: argparse
+Requires-Dist: html2text
+Requires-Dist: markovify
+
+## disclaimer
+
+`mkv-this` simply makes some of the features of the excellent [markovify](https://github.com/jsvine/markovify) module available as a command line tool. i started on it because i wanted to to process my own offline files. i published it to share with friends. i'm a totally novice coder. so you are a programmer and felt like picking it up and improving on it, then by all means!
+
+the rest of these notes are for laypersons rather than programmers.
+
+## mkv-this
+
+`mkv-this` is a script that outputs a bunch of bot-like sentences based on a bank of text that you feed it, either from a local text file or a URL, and saves the results to a text file. if you run it again with the same output file, the new results are appended after the old ones.
+
+a second command, `mkv-this-dir` (see below) allows you to input a directory and it will read all text files within it as the input.
+
+both commands allow you to add a second file or URL to the input, so you can combine your secret diary with some vile shit from the web.
+
+### installing
+
+install it with `pip`, the python package manager:
+
+`python3 -m pip install mkv-this`
+
+or
+
+`pip install mkv-this`
+
+to do this you need `python3` and `pip`. install them through your system's package manager. on debian (+ derivatives), for example, you'd run:
+
+`sudo apt install python3 python3-pip`
+
+`markovify` is a dependency, but should install along with `mkv-this`.
+
+if you get sth like `ModuleNotFound error: No module named '$modulename'`, just run `pip install $modulename` to get the missing module.
+
+### options
+
+the script implements a number of the basic `markovify` options, so you can specify:
+
+* how many sentences to output (default = 5).
+* the state size, i.e. the number of preceding words to be used in calculating the choice of the next word (default = 2).
+* a maximum sentence length, in characters.
+* the amount of (verbatim) overlap allowed between input and output.
+* if your text's sentences end with newlines rather than full-stops.
+* an additional file or URL to use for text input. you can add only one. if you want to feed a stack of files into your bank, use `mkv-this-dir` (see below).
+* the relative weight to give to the second file if it is used.
+
+run `mkv-this -h` to see how to use these options.
+
+### mkv-this-dir: markovify a directory of text files
+
+if you want to input a stack of files, use `mkv-this-dir` instead. specify a directory and all text files in it will be used as input.
+
+as with `mkv-this` you can also combine it with a URL.
+
+if for some reason you want to get a similar funtionality with `mkv-this`, you can easily concatenate the files yourself from the command line, then process the resulting file:
+
+* copy all your text files into a directory
+* cd into the directory
+* run `cat * > outputfile.txt`
+* run mkv-this on your newly created file: `mkv-this outputfile.txt`
+* if `mkv-this-dir` returns lots of chars that don't display because they it can't read the encoding, try this out instead.
+
+### file types
+
+you need to input plain text files. currently accepted file extensions are `.txt`, `.org` and `.md`. it is trivial to add others, so if you want one included just ask.
+
+### for best results
+
+feed `mkv-this` large-ish amounts of well punctuated text. it works best if you bulk replace/remove as much mess as possible (code, HTML tags, links, metadata, stars, bullets, lines, tables, etc.), unless you want mashed versions of those things in your output. (no need to clean up URLs though.)
+
+you’ll probably want to edit or select things from the output. it doesn't rly output print-ready boilerplate bosh, although many bots are happily publishing its output directly. you might find that it prompts you to edit it like a bot.
+
+for a few further tips, see https://github.com/jsvine/markovify#basic-usage.
+
+happy zaning.
+
+### macos
+
+it `seems` to run on macos.
+
+you may already have python installed. if not, install [homebrew](https://brew.sh/#install), edit your PATH so that it works, then install `python3` with `brew install python3`. if you are already running an old version of `homebrew` you might need to run `brew install python3 && brew postinstall python3` to get `python3` and `pip` running right.
+
+i know nothing about macs so if you ask me for help i'll just send you random copypasta from the interwebs.
+
+### todo
+
+* option to also append input model to a saved JSON file. (i.e. `text_model.to_json()`, `markovify.Text.from_json()`)
+* learn how to programme.
+
+
