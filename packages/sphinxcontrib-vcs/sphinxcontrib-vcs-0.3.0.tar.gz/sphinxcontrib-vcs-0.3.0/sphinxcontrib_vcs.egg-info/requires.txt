@@ -1,0 +1,10 @@
+GitPython
+Sphinx
+
+[lint]
+mypy
+docutils-stubs
+
+[test]
+pytest
+pytest-flake8
