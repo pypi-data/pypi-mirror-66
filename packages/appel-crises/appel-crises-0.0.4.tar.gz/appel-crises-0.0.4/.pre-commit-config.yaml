@@ -1,0 +1,58 @@
+- repo: https://github.com/jphppd/pre-commit-hooks.git
+  rev: master  # Use the ref you want to point at
+  hooks:
+    - id: git-check-mailmap
+    - id: git-forbid-binary
+    - id: git-check
+    - id: git-dirty
+    - id: git-check-added-large-files
+    - id: git-check-merge-conflict
+    - id: generic-check-byte-order-marker
+    - id: generic-check-case-conflict
+    - id: generic-check-executables-have-shebangs
+    - id: generic-check-symlinks
+    - id: generic-check-vcs-permalinks
+    - id: generic-detect-private-key
+    - id: generic-end-of-file-fixer
+    - id: generic-trailing-whitespace
+    - id: generic-crlf-forbid
+    - id: generic-crlf-remove
+    - id: generic-tabs-forbid
+    - id: generic-tabs-remove
+    - id: generic-nbsp-forbid
+    - id: generic-nbsp-remove
+    - id: generic-en-dashes-forbid
+    - id: generic-en-dashes-remove
+    - id: html-validate
+    - id: html-hint
+    - id: html-lint
+    - id: html-forbid-img-without-alt-text
+    - id: html-forbid-non-std-attributes
+    - id: html-detect-missing-css-classes
+    - id: html-tags-blacklist
+    - id: html-attributes-blacklist
+    - id: js-eslint
+    - id: js-prettier
+    - id: jinja-lint
+    - id: markdown-lint
+    - id: python-check-ast
+    - id: python-check-builtin-literals
+    - id: python-check-docstring-first
+    - id: python-debug-statements
+    - id: python-fix-encoding-pragma
+    - id: python-requirements-txt-fixer
+    - id: python-safetydb
+    - id: python-pyupgrade
+    - id: python-pylint
+    - id: python-pydocstyle
+    - id: python-bandit
+    - id: yaml-check-syntax
+    - id: yaml-yamllint
+
+- repo: https://github.com/ambv/black
+  rev: stable
+  hooks:
+  - id: black
+    language_version: python3.7
+    args:
+      - --exclude=migrations

@@ -1,0 +1,12 @@
+django>=3.0
+psycopg2
+getconf
+requests
+whitenoise[brotli]
+
+[dev]
+check-manifest
+pre-commit
+openpyxl
+tqdm
+zest.releaser[recommended]

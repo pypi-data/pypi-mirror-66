@@ -1,0 +1,23 @@
+CHANGELOG
+=========
+
+
+0.0.4 (2020-04-26)
+------------------
+
+- Improve staticfiles compression, using the 'brotli' algorithm.
+
+
+0.0.3 (2020-04-26)
+------------------
+
+- Fix statics serving
+- Add logging to stderr (not configurable for now)
+
+
+0.0.2 (2020-04-26)
+------------------
+
+- Initial codebase.
+
+.. vim:et:ts=2:sw=2:tw=79:ft=rst:
