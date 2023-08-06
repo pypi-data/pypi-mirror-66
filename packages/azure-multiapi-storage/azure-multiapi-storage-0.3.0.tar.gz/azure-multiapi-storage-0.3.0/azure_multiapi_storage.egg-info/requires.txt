@@ -1,0 +1,9 @@
+azure-nspkg
+azure-common
+cryptography
+python-dateutil
+requests
+azure-core
+
+[:python_version=="2.7"]
+futures
