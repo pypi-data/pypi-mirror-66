@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: GSForge
+Version: 0.8.0
+Summary: Feature (gene) selection package for gene expression data.
+Home-page: https://systemsgenetics.github.io/GSForge/
+Author: Tyler Biggs
+Author-email: tyler.biggs@wsu.edu
+License: LICENSE.txt
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: xarray
+Requires-Dist: param
+Requires-Dist: Boruta
+Requires-Dist: bokeh
+Requires-Dist: click
+Requires-Dist: datashader
+Requires-Dist: h5py
+Requires-Dist: holoviews
+Requires-Dist: matplotlib
+Requires-Dist: jupyterlab
+Requires-Dist: graphviz
+Requires-Dist: methodtools
+Requires-Dist: netcdf4
+Requires-Dist: panel
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: seaborn
+Requires-Dist: statsmodels
+Requires-Dist: umap-learn
+Provides-Extra: r_support
+Requires-Dist: rpy2 ; extra == 'r_support'
+Provides-Extra: docs
+Requires-Dist: nbsite ; extra == 'docs'
+Requires-Dist: nbsphinx ; extra == 'docs'
+Requires-Dist: selenium ; extra == 'docs'
+Requires-Dist: sphinx-ioam-theme ; extra == 'docs'
+
+UNKNOWN
+
+
