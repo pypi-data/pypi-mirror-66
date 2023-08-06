@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: data-email-client
+Version: 0.1.4
+Summary: email imap client for downloading email data files
+Home-page: https://github.com/nrgpy/data_email_client
+Author: NRG Systems, Inc.
+Author-email: support@nrgsystems.com
+License: UNKNOWN
+Keywords: nrg systems rld symphonie symphoniepro wind data spidar remote sensor lidar email imap
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+# ![NRGPy](https://www.gravatar.com/avatar/6282094b092c756acc9f7552b164edfe?s=24) data_email_client 
+
+**data_email_client** is a Python script for downloading data files from emails.
+
+
+## Examples
+
+see script docstrings for usage.
+
+``` python
+
+>>> from data_email_client import mailer
+>>> import getpass
+>>> server = 'outlook.office365.com'
+>>> username = 'data-email@my-domain.com'
+>>> password = getpass.getpass()
+...
+>>> imap = mailer(server=server, username=username, password=password)
+>>> imap.list_mailboxes()
+>>> data_boxes = [m for m in imap.mailboxes if 'data' in m]
+>>> imap.search_for_messages(text='1931AG0088', area='BODY', folder=data_boxes)
+>>> imap.download_attachments(out_dir='/path/to/data/', delete=True)
+```
+
+
