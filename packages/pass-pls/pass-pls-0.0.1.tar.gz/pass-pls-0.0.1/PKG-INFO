@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: pass-pls
+Version: 0.0.1
+Summary: A simple ssh-askpass implementation using GTK
+Home-page: https://github.com/undecidabot/pass-pls
+Author: Matt
+Author-email: undecidabot@gmail.com
+License: Zlib
+Description: # pass-pls
+        
+        A simple ssh-askpass implementation using GTK.
+        
+Platform: UNKNOWN
+Classifier: Environment :: X11 Applications :: GTK
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: zlib/libpng License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
