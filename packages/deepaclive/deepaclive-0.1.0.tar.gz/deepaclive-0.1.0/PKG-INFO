@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: deepaclive
+Version: 0.1.0
+Summary: Detecting novel pathogens from NGS reads in real-time during a sequencing run.
+Home-page: https://gitlab.com/dacs-hpi/deepac-live
+Author: Jakub Bartoszewicz
+Author-email: jakub.bartoszewicz@hpi.de
+License: MIT
+Description: # DeePaC-Live
+        A DeePaC plugin for real-time analysis of Illumina sequencing runs. Captures HiLive2 output and uses deep neural nets to
+         detect novel pathogens directly from NGS reads. See also DeePaC main repo: https://gitlab.com/rki_bioinformatics/DeePaC
+          and HiLive2 repo: https://gitlab.com/rki_bioinformatics/HiLive2.
+Keywords: deep learning DNA sequencing synthetic biology pathogenicity prediction
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3
+Description-Content-Type: text/markdown
