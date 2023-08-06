@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: aioitertools
+Version: 0.6.1
+Summary: itertools and builtins for AsyncIO and mixed iterables
+Home-page: https://github.com/jreese/aioitertools
+Author: John Reese
+Author-email: john@noswap.com
