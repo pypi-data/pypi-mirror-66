@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: nubium-schemas
+Version: 0.0.1
+Summary: Python dictionary representations of Avro Schema for the nubium project
+Home-page: https://gitlab.corp.redhat.com/mkt-ops-de/nubium-schemas.git
+Author: Edward Brennan
+Author-email: ebrennan@redhat.com
+License: UNKNOWN
+Description: A python package containing dictionary representations of Avro Schemas,
+        for use with the nubium project.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

@@ -1,0 +1,8 @@
+README.md
+setup.py
+nubium_schemas/__init__.py
+nubium_schemas/person.py
+nubium_schemas.egg-info/PKG-INFO
+nubium_schemas.egg-info/SOURCES.txt
+nubium_schemas.egg-info/dependency_links.txt
+nubium_schemas.egg-info/top_level.txt
