@@ -1,0 +1,17 @@
+divinegift/__init__.py,sha256=RAiJP3c_wYoAsf3d07LfX2b1U4mORmx0aKORUMrhscw,161
+divinegift/banner.py,sha256=-khWvvAq38xnW5S_uunzRrbgBwdjIbejtxqovTcJivQ,2771
+divinegift/cipher.py,sha256=-YJHzHTVfHExsbFqmQwuqHtOmN1S2ZtqbJcaaE7TQsc,1981
+divinegift/config.py,sha256=ZC1HTg3kooLvvCHJk3vvJlu22NqHTYR1WZQnb3TRj6s,5876
+divinegift/db.py,sha256=i9HPS17zUDmLBf-wVR4_4qyU_FFyz-7rNyeeO3JiDPQ,7203
+divinegift/excel.py,sha256=p99C5looGTHMlIZNRioXIhfqeqvfeXOGjScjpfHBsHM,5600
+divinegift/kafka_client.py,sha256=mN8i23JxsRiXeHiMExaJave8cJa_QDNodhvC4XFxoBE,4429
+divinegift/logger.py,sha256=1IJ12enGA-b9tzjVLBXmJhQUUL_MrFlLF7mJeLvpuo4,4718
+divinegift/main.py,sha256=Hr2DhGLyz8TFTn9tblXilXDL-uELvTxGjOzbtj5O8c0,10660
+divinegift/sender.py,sha256=8svfi3nrYnWWRmDnT2-33xs6hZwkxNoAD8a25huFPfk,6485
+divinegift/telegram.py,sha256=eNpRgF7Y8TovUuXA7DTPh9XTVjmFFAhPaiCGKUOr4RI,1774
+divinegift/templator.py,sha256=sYS52gKHvaJWG2NZYwMbICJ33_-KfLOV10eDKfE4gio,9341
+divinegift/translit.py,sha256=7l9mmDt_3jLXOJrNM5SRHv-Pzy2GRkfET9GVgwWYLZE,3353
+divinegift-1.3.12.dist-info/METADATA,sha256=4lhOOGMlDr9QUy3M2Nb84bTKFr-4FRwu2lduZ4mO70k,13981
+divinegift-1.3.12.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+divinegift-1.3.12.dist-info/top_level.txt,sha256=zN6TWH--gAsX-S0YIwBET0JKvhHmY16bd0Q098I_RHc,11
+divinegift-1.3.12.dist-info/RECORD,,
