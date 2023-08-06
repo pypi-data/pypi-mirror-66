@@ -1,0 +1,162 @@
+import random
+import numpy as np
+from scipy.spatial import distance
+from moead_framework.algorithm.moead_delta_nr import MoeadDE
+from moead_framework.tool.mop import is_duplicated, get_non_dominated, compute_crowding_distance
+
+
+class MoeadAMS(MoeadDE):
+
+    def __init__(self, problem, max_evaluation, number_of_objective, number_of_weight, number_of_weight_neighborhood, delta,
+                 number_of_replacement, lambda_gen, epsilon, number_of_crossover_points=2, alpha=5, beta_percentage=0.05, debug=False,
+                 x_reference=None,
+                 y_reference=None, weight_file=None):
+        super().__init__(problem, max_evaluation, number_of_objective, number_of_weight, number_of_weight_neighborhood,
+                         delta, number_of_replacement, number_of_crossover_points, debug, x_reference, y_reference,
+                         weight_file)
+
+        self.alpha = alpha
+        self.beta = int(self.number_of_weight * beta_percentage)
+
+        # This percentage represent the number of generation before compute the new neighborhood
+        # we can disable the MPA technique with a high value of lambda_gen
+        self.lambda_gen = int(lambda_gen * (max_evaluation / number_of_weight))
+
+        # epsilon represent the number of generation between 2 neighborhood computation
+        self.epsilon = epsilon
+
+        # pop_distance is computed after the lambda_gen generation, each epsilon generation
+        self.pop_distance = np.zeros((self.number_of_weight, self.number_of_weight))
+
+        self.solutions_beta = []
+        for i in range(self.beta):
+            self.solutions_beta.append(self.population[i])
+        # represents the Beta solutions with the largest crowding distance
+        self.compute_beta_solutions()
+
+        self.not_improved_since = np.zeros(self.number_of_weight, int).tolist()
+
+    def run(self, g, checkpoint=None):
+
+        self.init_checkpoint()
+
+        current_eval = 0
+        current_gen = 0
+
+        while current_eval < self.max_evaluation:
+            current_gen += 1
+            # print("evaluation " + str(current_eval))
+
+            if (current_gen >= self.lambda_gen) \
+                    & ((current_gen == self.lambda_gen) | (current_gen % self.epsilon == 0)):
+                # print("============= COMPUTE NEW NEIGHBORHOOD ==============")
+                self.compute_new_closest_neighbors()
+
+            # For each sub-problem i
+            for i in range(self.number_of_weight):
+                if self.not_improved_since[i] < self.alpha:
+                    self.compute_beta_solutions()
+                    self.update_current_sub_problem(sub_problem=i)
+                    self.mating_pool = self.selection(sub_problem=i)[:]
+                    y = self.reproduction(population=self.mating_pool)
+                    y = self.repair(solution=y)
+                    self.update_z(solution=y)
+                    self.update_solutions(solution=y, scal_function=g, sub_problem=i)
+                    current_eval += 1
+
+            if checkpoint is not None:
+                checkpoint()
+
+        self.final_checkpoint()
+
+        return self.ep
+
+    def update_solutions(self, solution, scal_function, sub_problem):
+        """
+        override to add update solved or not for solution of the sub problem
+        :param solution:
+        :param scal_function:
+        :param sub_problem:
+        :return:
+        """
+        c = 0
+
+        while (c < self.number_of_replacement) & (len(self.mating_pool) > 0):
+            # Step (1)
+            random_j = random.randint(0, len(self.mating_pool) - 1)
+            j = self.mating_pool[random_j]
+
+            j_score = scal_function.run(solution=self.population[j],
+                                        number_of_objective=self.number_of_objective,
+                                        weights=self.weights,
+                                        sub_problem=j,
+                                        z=self.z)
+
+            y_score = scal_function.run(solution=solution,
+                                        number_of_objective=self.number_of_objective,
+                                        weights=self.weights,
+                                        sub_problem=j,
+                                        z=self.z)
+
+            # Step (2)
+            if scal_function.is_better(j_score, y_score):
+                c += 1
+                self.population[j] = solution
+                if not is_duplicated(x=solution, population=self.ep, number_of_objective=self.number_of_objective):
+                    self.ep.append(solution)
+                    self.ep = get_non_dominated(self.ep, self.number_of_objective)
+                    self.process_checkpoint()
+
+                # solution is improved, reset the individual of the sub problem
+                self.not_improved_since[sub_problem] = 0
+
+                # we enable a disabled subproblem (j) again if its solution is improved
+                # by the offspring (y) generated by other subproblems (i)
+                self.not_improved_since[j] = 0
+            else:
+                # beta solution with largest crowding distances need to stay enabled
+                if not self.current_solution_is_in_beta_solutions(sub_problem=sub_problem):
+                    self.not_improved_since[sub_problem] += 1  # solution is not improved
+
+            # Step (3)
+            self.mating_pool.remove(j)
+
+    def current_solution_is_in_beta_solutions(self, sub_problem):
+        self.not_improved_since[sub_problem] = 0
+        for beta_s in self.solutions_beta:
+
+            bet_sol = np.array(beta_s.solution)
+            pop_sol = self.population[sub_problem].solution
+
+            if np.array_equal(bet_sol, pop_sol):
+                return True
+
+        return False
+
+    def compute_beta_solutions(self):
+        compute_crowding_distance(s=self.population)
+
+        for i in range(0, self.number_of_weight):
+            for j in range(len(self.solutions_beta)):
+                if self.population[i].distance > self.solutions_beta[j].distance:
+                    self.solutions_beta[j] = self.population[i]
+
+    def compute_new_closest_neighbors(self):
+        for i in range(self.number_of_weight):
+            for j in range(self.number_of_weight):
+                self.pop_distance[i][j] = distance.hamming(self.population[i].solution, self.population[j].solution)
+
+        b = []
+        for i in range(self.number_of_weight):
+            b_i = np.zeros(self.t, int)
+            b_dist = np.full(self.t, np.inf)
+            for j in range(self.number_of_weight):
+                dist_wi_wj = self.pop_distance[i][j]
+                if (dist_wi_wj < np.max(b_dist)) & (dist_wi_wj != 0):
+                    index_to_replace = np.argmax(b_dist)  # replace the worst distance by the better founded
+                    b_dist[index_to_replace] = dist_wi_wj
+                    b_i[index_to_replace] = j
+
+            b.append(b_i.tolist())
+
+        self.b = b[:]
