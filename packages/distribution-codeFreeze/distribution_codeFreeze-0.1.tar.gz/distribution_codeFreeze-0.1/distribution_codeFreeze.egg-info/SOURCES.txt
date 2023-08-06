@@ -1,0 +1,10 @@
+setup.py
+distribution_codeFreeze/Binomialdistribution.py
+distribution_codeFreeze/Gaussiandistribution.py
+distribution_codeFreeze/Generaldistribution.py
+distribution_codeFreeze/__init__.py
+distribution_codeFreeze.egg-info/PKG-INFO
+distribution_codeFreeze.egg-info/SOURCES.txt
+distribution_codeFreeze.egg-info/dependency_links.txt
+distribution_codeFreeze.egg-info/not-zip-safe
+distribution_codeFreeze.egg-info/top_level.txt
