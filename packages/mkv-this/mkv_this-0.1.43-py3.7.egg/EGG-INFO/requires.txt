@@ -1,0 +1,5 @@
+markovify
+argparse
+html2text
+requests
+bs4
