@@ -1,0 +1,4 @@
+[console_scripts]
+ezcolorize = easypy.colors:main
+eziplog = easypy.ziplog:main
+
