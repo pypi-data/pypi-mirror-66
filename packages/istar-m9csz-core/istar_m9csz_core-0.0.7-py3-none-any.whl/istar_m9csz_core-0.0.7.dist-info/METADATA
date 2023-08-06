@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: istar-m9csz-core
+Version: 0.0.7
+Summary: Core M9CSZ data parsing
+Home-page: https://github.com/Tattomoosa/m9csz
+Author: Matt O'Tousa
+Author-email: motousa@pdx.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: cftime
+Requires-Dist: dask
+Requires-Dist: netCDF4
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: six
+Requires-Dist: xarray
+Requires-Dist: pytz
+
+UNKNOWN
+
+
