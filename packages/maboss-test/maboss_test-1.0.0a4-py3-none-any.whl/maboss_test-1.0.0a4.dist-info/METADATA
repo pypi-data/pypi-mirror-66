@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: maboss-test
+Version: 1.0.0a4
+Summary: A testing library for MaBoSS models
+Home-page: UNKNOWN
+Author: Lorenzo Pantolini
+Author-email: lorenzopantolini@protonmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: maboss
+
+UNKNOWN
+
+
