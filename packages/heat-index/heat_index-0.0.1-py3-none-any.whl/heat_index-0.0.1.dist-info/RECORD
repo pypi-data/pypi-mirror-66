@@ -1,0 +1,8 @@
+heat_index/__init__.py,sha256=VdsEiZi5aRTajJNNHAPexmgLXvh48BTuQy4JFnl3qpE,23
+heat_index/calculate.py,sha256=Etw7oCczKiSGLfAkaOvAx19TtfUuKNZhCMG-EapzJfI,1300
+heat_index/coefficients.py,sha256=Eo-8yT66y_PBnEaDEWwvFIk9rEek03CwpsDfE3QxwiQ,163
+heat_index-0.0.1.dist-info/LICENSE,sha256=AUAnDqDK83snkrrtFBpZ11z6un_AqoFO_xaS8f9vvgk,1067
+heat_index-0.0.1.dist-info/METADATA,sha256=Coj145bQDGKJ1qTL0Z5r-ZGa0NFz6HXwXIpTKhcxyvk,513
+heat_index-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+heat_index-0.0.1.dist-info/top_level.txt,sha256=ipN5BFpk8dbCtq4Sy84oYagmTfimOMxRIfgeFZOZWKA,11
+heat_index-0.0.1.dist-info/RECORD,,
