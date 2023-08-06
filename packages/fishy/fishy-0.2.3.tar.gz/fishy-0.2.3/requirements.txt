@@ -1,0 +1,8 @@
+imutils
+numpy
+opencv_python
+Pillow
+pypiwin32
+ttkthemes
+pyautogui
+requests
