@@ -1,0 +1,9 @@
+README.md
+setup.py
+sdrf_pipelines/__init__.py
+sdrf_pipelines/parse_sdrf.py
+sdrf_pipelines.egg-info/PKG-INFO
+sdrf_pipelines.egg-info/SOURCES.txt
+sdrf_pipelines.egg-info/dependency_links.txt
+sdrf_pipelines.egg-info/requires.txt
+sdrf_pipelines.egg-info/top_level.txt
