@@ -1,0 +1,9 @@
+cpacman/__init__.py,sha256=Oi2b5pm3sFbESQW0xgj8kqwDPX_Hxmx4gNILYpLzYqI,21
+cpacman/package.py,sha256=UgCzfnWBJ58ToO4tkhgsWbvyvOKBg4FEeYSwwQeb75g,3667
+cpacman/packagemanager.py,sha256=f3TW_plNfq-oxsagWiyR_Cf4Wlw8ORmmEPdwIxe3yoo,3946
+cpacman/run.py,sha256=mGMhIT4SKZz91-qBzo0qNQBKN0vxLyfrXdVT6Cy2fOE,794
+cpacman-1.0.4.dist-info/METADATA,sha256=8UTrAFt2zO8LaW8yFbSpLguEREf6x6Tk40whC9nFj7Q,254
+cpacman-1.0.4.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+cpacman-1.0.4.dist-info/entry_points.txt,sha256=cYYLlL3X9wZ8eTG2lEZFD4bcBxgaeRB-7deX3S8K4N0,46
+cpacman-1.0.4.dist-info/top_level.txt,sha256=CDHI1j-j1_oDpbuQ6MvBaynTFmWRlfzta5kfmn7Bkeo,8
+cpacman-1.0.4.dist-info/RECORD,,
