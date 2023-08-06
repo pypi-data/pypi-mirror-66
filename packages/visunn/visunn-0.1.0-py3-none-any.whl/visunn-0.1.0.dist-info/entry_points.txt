@@ -1,0 +1,3 @@
+[console_scripts]
+visu = visunn.main:run_main
+
