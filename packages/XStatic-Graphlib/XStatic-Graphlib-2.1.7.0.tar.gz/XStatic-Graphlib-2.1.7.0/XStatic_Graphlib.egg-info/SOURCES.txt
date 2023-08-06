@@ -1,0 +1,15 @@
+MANIFEST.in
+README.txt
+setup.cfg
+setup.py
+XStatic_Graphlib.egg-info/PKG-INFO
+XStatic_Graphlib.egg-info/SOURCES.txt
+XStatic_Graphlib.egg-info/dependency_links.txt
+XStatic_Graphlib.egg-info/namespace_packages.txt
+XStatic_Graphlib.egg-info/not-zip-safe
+XStatic_Graphlib.egg-info/top_level.txt
+xstatic/__init__.py
+xstatic/pkg/__init__.py
+xstatic/pkg/graphlib/__init__.py
+xstatic/pkg/graphlib/data/graphlib.core.js
+xstatic/pkg/graphlib/data/graphlib.js
