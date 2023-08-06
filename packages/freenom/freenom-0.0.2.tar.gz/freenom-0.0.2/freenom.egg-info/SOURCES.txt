@@ -1,0 +1,11 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+test.py
+freenom/__init__.py
+freenom.egg-info/PKG-INFO
+freenom.egg-info/SOURCES.txt
+freenom.egg-info/dependency_links.txt
+freenom.egg-info/requires.txt
+freenom.egg-info/top_level.txt
