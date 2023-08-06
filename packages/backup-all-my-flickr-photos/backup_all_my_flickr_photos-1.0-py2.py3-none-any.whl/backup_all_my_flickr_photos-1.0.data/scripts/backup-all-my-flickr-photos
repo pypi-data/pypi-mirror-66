@@ -1,0 +1,307 @@
+#!python
+
+import argparse
+import cgi
+import errno
+import functools
+import json
+import os
+import shutil
+import socket
+import sys
+import urllib
+from functools import reduce
+
+import flickr_api
+import humanfriendly
+
+_forbidden_characters = r'<>:"/\|?*'
+_extensions = [".jpg", ".mov", ".mp4", ".png", ".flv", ".gif"]
+
+# monkey patch to fix bug in Walker
+if not hasattr(flickr_api.Walker, '__next__'):
+    flickr_api.Walker.__next__ = flickr_api.Walker.next
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Download all your photos and videos on Flickr")
+    parser.add_argument('destination_directory', metavar='d', type=str, help='Destination directory')
+    parser.add_argument('--delete', action='store_true', help="Delete files in destination directory that don't have corresponding items in the Flickr account")
+    parser.add_argument('--albums', action='store_true', help='Create album directories and symlink photos there. (Windows not supported because this feature uses symlinks)')
+    parser.add_argument('--skip-errors', '-s', action='store_true', help='If there is an error downloading a file, skip it')
+    args = parser.parse_args()
+    download_dir = args.destination_directory
+
+    if not os.path.exists(download_dir):
+        sys.stderr.write("Destination directory %s does not exist\n" % (download_dir,))
+        sys.exit(1)
+
+    set_up_flickr_keys()
+    set_up_account_permissions()
+
+    user = flickr_api.test.login()
+    total_photos = user.getPhotos().info.total
+    walker = flickr_api.Walker(user.getPhotos)
+    files_in_flickr = set()
+    dirs_in_flickr = set()
+
+    i = 0
+    for photo in walker:
+        i += 1
+        print("Item %04d/%04d entitled %s" % (i, total_photos, photo.title))
+        try:
+            filename = download_item(photo, download_dir)
+        except urllib.error.URLError as ee:
+            if args.skip_errors:
+                print("Could not download file successfully, got error: %s" % (ee,))
+            else:
+                raise
+        if args.albums:
+            files, dirs = add_to_albums(photo, filename, download_dir)
+            files_in_flickr.update(files)
+            dirs_in_flickr.update(dirs)
+        files_in_flickr.add(os.path.abspath(filename))
+
+    if args.delete:
+        clean_stale_files(files_in_flickr, dirs_in_flickr, download_dir)
+
+
+def automatic_retry(function):
+    @functools.wraps(function)
+    def wrapper(*args, **kwargs):
+        retries = 0
+        while retries < 10:
+            try:
+                return function(*args, **kwargs)
+            except (urllib.error.URLError, urllib.error.ContentTooShortError) as ee:
+                retries += 1
+                print("%r, retrying (%d)" % (ee, retries))
+            except socket.error as ee:
+                if ee.errno == errno.ECONNRESET:
+                    retries += 1
+                    print("socket.error Connection reset by peer, retrying (%d)" % retries)
+                else:
+                    print("Unrecognized socket error", file=sys.stderr)
+                    raise
+        print("Reached number of retries: %d" % (retries,))
+        return function(*args, **kwargs)
+
+    return wrapper
+
+
+def set_up_account_permissions():
+    config_directory = get_config_directory()
+    auth_filename = os.path.join(config_directory, "account_auth")
+    if os.path.exists(auth_filename):
+        flickr_api.set_auth_handler(auth_filename)
+    else:
+        auth_handler = flickr_api.auth.AuthHandler()
+        url = auth_handler.get_authorization_url("read")
+        print("Please visit this URL and authorize this app by copy and pasting the text value")
+        print("inside the <oauth_verifier> element:")
+        print(url)
+        print("")
+        oauth_code = None
+        while not oauth_code:
+            oauth_code = input("oauth_verifier value: ")
+        auth_handler.set_verifier(oauth_code)
+        flickr_api.set_auth_handler(auth_handler)
+
+        # Test authorization before saving file
+        flickr_api.test.login()
+
+        auth_handler.save(auth_filename)
+        print("Authorization saved to %s" % (auth_filename,))
+
+
+def get_config_directory():
+    home_directory = os.getenv("HOME", os.path.expanduser("~"))
+    return os.path.join(
+        os.getenv("XDG_CONFIG_HOME", os.path.join(home_directory, ".config")),
+        "backup-all-my-flickr-photos",
+    )
+
+
+def set_up_flickr_keys():
+    config_directory = get_config_directory()
+    keys_filename = os.path.join(config_directory, "keys.json")
+    api_key, api_secret = None, None
+    if os.path.exists(keys_filename):
+        with open(keys_filename, "rb") as f:
+            json_data = json.load(f)
+            flickr_api.set_keys(str(json_data['api_key']), str(json_data['api_secret']))
+            flickr_api.Person.findByUserName("bla")
+    else:
+
+        print("As this is the first time that you are running this script, you")
+        print("will need to input an API key and an API secret. You can get this")
+        print("in less than a minute by going to:")
+        print("https://www.flickr.com/services/apps/create/apply")
+        print("")
+
+        tested_api_successfully = False
+        while not tested_api_successfully:
+            while not api_key:
+                api_key = input("API key: ").strip()
+            while not api_secret:
+                api_secret = input("API secret: ").strip()
+            flickr_api.set_keys(api_key=api_key, api_secret=api_secret)
+            try:
+                flickr_api.Person.findByUserName("test8975234985432")
+            except flickr_api.flickrerrors.FlickrAPIError as ee:
+                if ee.code == 100:
+                    print("This API key and secret combo seem to be invalid")
+                    api_key, api_secret = None, None
+                    continue
+                elif ee.code == 1:
+                    # This is a user not found error
+                    pass
+                else:
+                    raise
+            try:
+                flickr_api.auth.AuthHandler()
+                tested_api_successfully = True
+            except urllib.error.HTTPError as ee:
+                if ee.code == 401:
+                    print("This API key and secret combo seem to be invalid")
+                    api_key, api_secret = None, None
+                    continue
+                else:
+                    raise
+                
+        json_data = {
+            'api_key': api_key,
+            'api_secret': api_secret,
+        }
+        if not os.path.exists(config_directory):
+            os.makedirs(config_directory)
+        with open(keys_filename, "wb") as f:
+            f.write(json.dumps(json_data).encode("UTF-8"))
+        print("API key and secret saved to %s" % (keys_filename,))
+
+
+def destination(obj):
+    if obj.title:
+        title = reduce(lambda s, char: s.replace(char, ''), _forbidden_characters, obj.title)
+        if title.startswith('.'):
+            title = ' %s' % title
+        return "%s %s" % (title, obj.id)
+    return "%s" % (obj.id,)
+
+
+@automatic_retry
+def download_item(photo, download_dir):
+    destname = destination(photo)
+
+    def path(extension):
+        return os.path.join(download_dir, "%s%s" % (destname, extension))
+
+    file_exists = any(os.path.exists(path(extension)) for extension in _extensions)
+    if not file_exists:
+        try:
+            tmp_path = os.path.join(download_dir, "tmp")
+            url, headers = download_file(photo, tmp_path)
+            extension = guess_extension(url, headers)
+            to = path(extension)
+            shutil.move(os.path.join(download_dir, "tmp"), to)
+            print("Done: %s" % (to,))
+        finally:
+            if os.path.exists(tmp_path):
+                os.remove(tmp_path)
+
+    for extension in _extensions:
+        path_guess = path(extension)
+        if os.path.exists(path_guess):
+            return path_guess
+
+    raise(Exception("Expected to find file %s.EXTENSION" % (destname,)))
+
+
+def download_file(photo, filename):
+    url = photo.getPhotoFile(preferred_size(photo))
+
+    def report(count_of_block, block_size, total_size):
+        # print(count_of_block, block_size, total_size)
+        percentage = (count_of_block * block_size * 100 ) / total_size
+        sys.stdout.write("\r%3d%% of %s" % (percentage, humanfriendly.format_size(total_size)))
+        sys.stdout.flush()
+        if percentage >= 100:
+            sys.stdout.write("\n")
+            sys.stdout.flush()
+    _, headers = urllib.request.urlretrieve(url, filename, report)
+    return url, headers
+
+
+def preferred_size(photo):
+    sizes = photo.getSizes()
+    if 'Video Original' in sizes:
+        return 'Video Original'
+    elif 'Original' in sizes:
+        return 'Original'
+    raise(Exception("Could not find size 'Video Original' or 'Original' for photo %s" % (photo,)))
+
+
+def guess_extension(url, headers):
+    extension = os.path.splitext(url)[1].lower()
+    if extension in _extensions:
+        return extension
+    if headers.get('Content-Disposition'):
+        value, params = cgi.parse_header(headers['Content-Disposition'])
+        if value == 'attachment' and 'filename' in params:
+            extension = os.path.splitext(params['filename'])[1].lower()
+            if extension in _extensions:
+                return extension
+    if '/play/' in url.lower():
+        return 'mp4'
+    # It's tempting to look at the Content-Type header here, but in the real
+    # world, Flickr sets the wrong value for .mov files. So give up instead.
+    raise(Exception("Cannot guess extension for URL %s" % (url,)))
+
+
+def add_to_albums(photo, filename, download_dir):
+    albums, _groups = automatic_retry(photo.getAllContexts)()
+    dirs = [os.path.join(download_dir, destination(album)) for album in albums]
+    filenames = []
+    basename = os.path.basename(filename)
+    for dirname in dirs:
+        linkname = os.path.join(dirname, basename)
+        filenames.append(linkname)
+        if os.path.exists(linkname):
+            continue
+        if not os.path.exists(dirname):
+            os.makedirs(dirname)
+        relpath = os.path.relpath(filename, dirname)
+        os.symlink(relpath, linkname)
+    return filenames, dirs
+
+
+def clean_stale_files(files_in_flickr, dirs_in_flickr, download_dir):
+    count_files_deleted = 0
+    count_dirs_deleted = 0
+    for root, dirs, files in os.walk(download_dir):
+        dirs_to_walk_further = []
+        for d in dirs:
+            if d.startswith('.'):
+                continue
+            path = os.path.join(root, d)
+            if path not in dirs_in_flickr:
+                print("Deleting directory %s" % path)
+                shutil.rmtree(path)
+                count_dirs_deleted += 1
+            else:
+                dirs_to_walk_further.append(d)
+        dirs[:] = dirs_to_walk_further
+
+        for f in files:
+            if f.startswith('.'):
+                continue
+            path = os.path.join(root, f)
+            if path not in files_in_flickr:
+                print("Deleting file %s" % path)
+                os.remove(path)
+                count_files_deleted += 1
+    print("Deleted %d files and %d directories" % (count_files_deleted, count_dirs_deleted))
+
+
+if __name__ == "__main__":
+    main()
