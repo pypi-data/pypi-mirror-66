@@ -1,0 +1,10 @@
+django_feather/__init__.py,sha256=QN_dGOxGIPs0U6DCXC182nylZqAkwfY9rXgaoAazDRk,23
+django_feather/icons.py,sha256=Fd4VDqi1CpLcQKfJI9BmePZLtSThgvnheMhfoqsslMY,98125
+django_feather/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_feather/templatetags/icon.py,sha256=Z06i1amzFABT2YxalUy3e8azkGeLBh9fNl10g9tGyxI,2688
+django_feather-0.2.6.dist-info/AUTHORS,sha256=hGJYbjt21qme1-w7LF7nMVTx6g6tCqzm1Wm9VIIUd0I,39
+django_feather-0.2.6.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+django_feather-0.2.6.dist-info/METADATA,sha256=J4aqFN2HT2oWqE51gnz5w5RPBwcJG_TfGklxdj0t-Jw,2761
+django_feather-0.2.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_feather-0.2.6.dist-info/top_level.txt,sha256=MhJ75_XTxhxa4tjE2zAU2xN-ifPG1KIWRfc6B7ep2PI,15
+django_feather-0.2.6.dist-info/RECORD,,
