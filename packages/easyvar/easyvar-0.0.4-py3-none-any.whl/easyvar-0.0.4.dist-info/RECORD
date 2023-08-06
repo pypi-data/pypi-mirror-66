@@ -1,0 +1,16 @@
+easyvar/__init__.py,sha256=0_jjEgjnKQPAFHP3vAv-XcOCOgFwKcI2NOCdnOQykgk,24
+easyvar/abc.py,sha256=SXH4lHqCEauCJ3WK_j2tTbxG7PYazpV4mwEdwllGXM0,1525
+easyvar/data.py,sha256=2xnvxaJ-JeqrOkfi9tEmfPi5ecrCn0hupNKwU3Wf-kw,3027
+easyvar/defaults.py,sha256=oV2atxYXINhZvXFAs85iWMvuFs7UMtBZu_Kr5vzwNVQ,1157
+easyvar/mixins.py,sha256=PRqJnstf9fbTApfZRv4k0RPdJGtsZ5khS1sh18mIv7g,5281
+easyvar/prop.py,sha256=4WqASkIp_jbEFwGKWkiq0mR0NudsXA6fCiCSvUwElfU,20752
+easyvar/test.py,sha256=0nX-51wQxXqu_bz_d0o_3SOR8d6NbqF3U0bMdf-Cmeg,3068
+easyvar/types.py,sha256=ObzZ8YIkm9vOEi0528bAzoN-DE8jZHZKnjzKt_DxAOA,1775
+easyvar/unro.py,sha256=d3zkF-r1mBrYHCwu9ApDzc1qfKlkWeYxUNvBCKQuWaY,10419
+easyvar/utils.py,sha256=68nPWOPXh-H1ZE46206z2wYfqtUBEclqkGQtghGK748,660
+easyvar/version.py,sha256=Wq9OmLXPBBo04mwGTg0u-0H9U8CFLgmCLJPy_3ygiOQ,22
+easyvar-0.0.4.dist-info/LICENSE,sha256=VWsTvZmFtlW7LLhvk9XpQdjLPCaZ4GMvYv26vEg3BwQ,1703
+easyvar-0.0.4.dist-info/METADATA,sha256=ur29jgm6Ae059NZ4uf-DT3m5rUH7J38oUdmDTq-BF2A,715
+easyvar-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+easyvar-0.0.4.dist-info/top_level.txt,sha256=QboNpFtMCBcw9z2v5y_uqpvV0lcYOpAp3jWFldl_S8Q,8
+easyvar-0.0.4.dist-info/RECORD,,
