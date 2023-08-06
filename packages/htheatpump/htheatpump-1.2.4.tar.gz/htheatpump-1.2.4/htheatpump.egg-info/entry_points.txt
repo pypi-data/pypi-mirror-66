@@ -1,0 +1,13 @@
+[console_scripts]
+htbackup = htheatpump.scripts.htbackup:main
+htcomplparams = htheatpump.scripts.htcomplparams:main
+htdatetime = htheatpump.scripts.htdatetime:main
+htfastquery = htheatpump.scripts.htfastquery:main
+htfaultlist = htheatpump.scripts.htfaultlist:main
+htheatpump = htheatpump.__main__:main
+hthttp = htheatpump.scripts.hthttp:main
+htquery = htheatpump.scripts.htquery:main
+htset = htheatpump.scripts.htset:main
+htshell = htheatpump.scripts.htshell:main
+httimeprog = htheatpump.scripts.httimeprog:main
+
