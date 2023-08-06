@@ -1,0 +1,15 @@
+Metadata-Version: 2.0
+Name: fleet-rec
+Version: 0.0.1
+Summary: fleet-rec
+Home-page: https://github.com/seiriosPlus/FleetRec
+Author: seiriosPlus
+Author-email: tangwei12@baidu.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7
+Requires-Dist: paddlepaddle (>=0.0.0)
+
+...
+
+
