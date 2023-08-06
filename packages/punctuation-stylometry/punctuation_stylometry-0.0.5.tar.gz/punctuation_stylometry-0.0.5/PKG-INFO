@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: punctuation_stylometry
+Version: 0.0.5
+Summary: This package represents the code used for the publication of the article  https://arxiv.org/abs/1901.00519
+Home-page: https://github.com/alex-darmon/punctuation-stylometry
+Author: alexdarmon
+Author-email: alexandra.darmon@hotmail.fr
+License: UNKNOWN
+Description: 
+        
+        This package gives the code that has been used to compute the results that are published in the paper:
+        https://arxiv.org/abs/1901.00519
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
