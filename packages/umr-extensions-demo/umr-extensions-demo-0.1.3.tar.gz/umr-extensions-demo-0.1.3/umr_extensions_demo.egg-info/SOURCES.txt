@@ -1,0 +1,17 @@
+README.md
+setup.py
+umr_extensions_demo/QQ-face-test.py
+umr_extensions_demo/QQ_group_invite.py
+umr_extensions_demo/QQ_recall.py
+umr_extensions_demo/Telegram-filter-watermeter.py
+umr_extensions_demo/__init__.py
+umr_extensions_demo/cmd_echo.py
+umr_extensions_demo/cmd_id.py
+umr_extensions_demo/cmd_privilege.py
+umr_extensions_demo/comment_filter.py
+umr_extensions_demo.egg-info/PKG-INFO
+umr_extensions_demo.egg-info/SOURCES.txt
+umr_extensions_demo.egg-info/dependency_links.txt
+umr_extensions_demo.egg-info/not-zip-safe
+umr_extensions_demo.egg-info/requires.txt
+umr_extensions_demo.egg-info/top_level.txt
