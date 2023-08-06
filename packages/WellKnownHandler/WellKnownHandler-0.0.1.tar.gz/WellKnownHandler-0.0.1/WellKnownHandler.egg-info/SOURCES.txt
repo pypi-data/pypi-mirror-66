@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+WellKnownHandler/__init__.py
+WellKnownHandler/handler.py
+WellKnownHandler/main.py
+WellKnownHandler.egg-info/PKG-INFO
+WellKnownHandler.egg-info/SOURCES.txt
+WellKnownHandler.egg-info/dependency_links.txt
+WellKnownHandler.egg-info/top_level.txt
