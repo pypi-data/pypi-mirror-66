@@ -1,0 +1,15 @@
+socialize/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+socialize/core.py,sha256=m6_WAJC9JvfQeBJPC2zIVYd1OoTkgeTpNhyMXg4ts9I,3826
+socialize/forms.py,sha256=4MDmnecm37Z-BeBra5ahuv7j8VlmSi9wi66nebqcXAU,1807
+socialize/models.py,sha256=I1t9pm148FJmpCEP8cI_fYOzvyu3Z6KKzxmQW8UpWzk,3318
+socialize/social.py,sha256=mBEHNioNMn_3b6DDBDcyD-nozhE9y-zg7nbCR8BV-28,15915
+socialize/stream.py,sha256=isvoEia00iFAaKFbQuvq5Pz4XlK27l2IslFkPNT4LWY,4479
+socialize/urls.py,sha256=_b1QTArg4pBK97pSVuqY01KKZtykODRxgASII-FdAn0,1534
+socialize/views.py,sha256=NWlqPfCeq1Ed3SZT5l9h-kHi7ihBkLThW0do5m29MPY,3666
+socialize/migrations/0001_initial.py,sha256=r-kIW0kP7lnxzO4DVR1-Uhcry4vwSq3aP3xs4jms020,1886
+socialize/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_socialize-0.5.3.dist-info/LICENSE,sha256=hWNqLSqDA_BCgoy7mfnRxUxhqziDWtrLvCe7eglUgl4,7797
+django_socialize-0.5.3.dist-info/METADATA,sha256=au-xtc51MX3QUVpiZ3ggUSAlM__tXdTKCTI_-xRDbT4,1323
+django_socialize-0.5.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_socialize-0.5.3.dist-info/top_level.txt,sha256=JvstT_uFlIg9ifgnFiA25P6n4C_h8YJWsncX8Dze-pg,10
+django_socialize-0.5.3.dist-info/RECORD,,
