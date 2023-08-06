@@ -1,0 +1,10 @@
+user_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+user_sdk/domain.py,sha256=qhgLLANu9h8og2Gm7I9-7us4b8xWDF8uEI_EfvU2w3s,6548
+user_sdk/error.py,sha256=ZTjvKp8gGrdwC5gjcdbMjWmvdp5I606WWibVnkjGbMg,911
+user_sdk/log.py,sha256=QA_LFH6G625VHhdSua2ZOHZBNhURNdNIPfd6il9NNJY,422
+user_sdk/test_user.py,sha256=PEYG9RnBO0-2LLQ3brTEq-uDZSHJsDIUpUAYW8Gnn3s,9412
+user_sdk/user_service.py,sha256=zlvCa9XUvuCbZaS7OR8cq0JKazV75bWO4ovlA4PZhYc,15287
+user_sdk-0.0.37.dist-info/METADATA,sha256=ySJUl5pBuPMFmOK8UsVjzltC-NTL65c0wLuz2fJEOp4,688
+user_sdk-0.0.37.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+user_sdk-0.0.37.dist-info/top_level.txt,sha256=EQcvEoOJHPSSg7JRFP2oQxRDQiidMHiaA2F0n6y-aqM,9
+user_sdk-0.0.37.dist-info/RECORD,,
