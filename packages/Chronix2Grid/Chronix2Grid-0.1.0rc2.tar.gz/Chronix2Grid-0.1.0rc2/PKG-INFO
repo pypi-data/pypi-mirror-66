@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: Chronix2Grid
+Version: 0.1.0rc2
+Summary: A python package to generate "en-masse" chronics for loads and productions (thermal, renewable)
+Home-page: https://github.com/mjothy/chronix2grid
+Author: Mario Jothy, Nicolas Megel, Vincent Renault
+Author-email:  mario.jothy@artelys.com
+License: Mozilla Public License 2.0 (MPL 2.0)
+Description: TODO
+Keywords: ML powergrid optmization RL power-systems chronics generation production load network
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
