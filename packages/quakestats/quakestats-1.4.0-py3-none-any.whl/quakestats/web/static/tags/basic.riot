@@ -1,0 +1,21 @@
+<weapon-img>
+    <img height={opts.height || 32} width={opts.width || 32} src={getImgPath(opts.weapon)} title={opts.weapon}/>
+    <script>
+        getImgPath(weaponName) {
+            let path = _.get(app.resources.weapons, `${weaponName}.img`)
+            if (path === undefined) {
+                path = _.get(app.resources.weapons, 'placeholder')
+            }
+            return path
+        }
+    </script>
+</weapon-img>
+
+<player-name2>
+    <span>{getName(opts.player_id)}</span>
+    <script>
+        getName(id) {
+            return quake.thinPlayerName(_.get(app.view, `players.${id}.name`, 'undefined'))
+        }
+    </script>
+</player-name2>
