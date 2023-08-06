@@ -1,0 +1,8 @@
+bmp_sensors/BMP180.py,sha256=zLwtSJpED6ZcmWoqNX_ZI7QmGo9ovp3xnfWh0LhvXMM,7929
+bmp_sensors/BMP280.py,sha256=wt37v-G3UNv_0P7FD3iQJwcFlO_EydAphZommjKaAjI,11586
+bmp_sensors/__init__.py,sha256=hZLbUjk3DG6sav4hpKYDjK_TmdSgIG8l1MbgsZ0pOv4,44
+bmp_sensors-1.0.4.dist-info/LICENSE,sha256=cK3fW2ggukOR3Um7OSMtdCPEVb5KSshfAqsQUVUKmQM,35755
+bmp_sensors-1.0.4.dist-info/METADATA,sha256=kafAigzgfO8RHBMCplND2IwhLq2i4IDmC4vTfwtXook,1557
+bmp_sensors-1.0.4.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+bmp_sensors-1.0.4.dist-info/top_level.txt,sha256=3VzX4PrNOn5QguluVSWTCBcC7ehgIlqB_vPxrVJnKp0,12
+bmp_sensors-1.0.4.dist-info/RECORD,,
