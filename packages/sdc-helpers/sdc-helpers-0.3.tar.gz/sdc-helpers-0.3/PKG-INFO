@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: sdc-helpers
+Version: 0.3
+Summary: A Lambda Package for SDC Helpers
+Home-page: https://github.com/RingierIMU/sdc-global-all-helpers
+Author: Ringier South Africa
+Author-email: tools@ringier.co.za
+License: UNKNOWN
+Download-URL: https://github.com/RingierIMU/sdc-global-all-helpers/archive/v0.3.zip
+Description: UNKNOWN
+Keywords: pip,lambda,helpers
+Platform: UNKNOWN

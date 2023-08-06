@@ -1,0 +1,4 @@
+pymysql
+redis
+boto3
+requests
