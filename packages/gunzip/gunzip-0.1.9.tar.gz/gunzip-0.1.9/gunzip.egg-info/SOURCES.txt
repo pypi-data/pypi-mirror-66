@@ -1,0 +1,9 @@
+README.md
+setup.py
+gunzip/__init__.py
+gunzip.egg-info/PKG-INFO
+gunzip.egg-info/SOURCES.txt
+gunzip.egg-info/dependency_links.txt
+gunzip.egg-info/entry_points.txt
+gunzip.egg-info/requires.txt
+gunzip.egg-info/top_level.txt
