@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: ddt2
+Version: 11.3.0.3
+Summary: Data-Driven/Decorated Tests
+Home-page: https://github.com/juewuer/ddt2
+Author: Carles Barrobés, Juewuer
+Author-email: lihechao@gmail.com
+License: UNKNOWN
+Description: A library to multiply test cases
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Testing
