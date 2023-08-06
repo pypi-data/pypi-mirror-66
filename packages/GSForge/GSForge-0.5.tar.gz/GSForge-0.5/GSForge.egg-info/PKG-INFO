@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: GSForge
+Version: 0.5
+Summary: Feature (gene) selection package for gene expression data.
+Home-page: https://systemsgenetics.github.io/GSForge/
+Author: Tyler Biggs
+Author-email: tyler.biggs@wsu.edu
+License: LICENSE.txt
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Provides-Extra: docs
+Provides-Extra: R_support
