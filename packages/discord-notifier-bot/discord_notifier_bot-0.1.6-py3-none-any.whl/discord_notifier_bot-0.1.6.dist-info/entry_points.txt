@@ -1,0 +1,5 @@
+[console_scripts]
+dbot-file = discord_notifier_bot.cli:main_file
+dbot-message = discord_notifier_bot.cli:main_message
+dbot-run = discord_notifier_bot.cli:main
+
