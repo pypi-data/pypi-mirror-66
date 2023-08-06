@@ -1,0 +1,13 @@
+chess/__init__.py,sha256=LbnPoxDqA3sM7-CWeUzkbhbJlLUsRaZ85pil5WIguoo,134578
+chess/engine.py,sha256=pfaxwZxNrXY_iOC8TfjD5ESKaC6mS8e7tXT6NdYTnPg,101394
+chess/gaviota.py,sha256=BTa5r0NIluCzSjf1bR5qoLlQegG5Wc6v6xebKyHbsv4,63022
+chess/pgn.py,sha256=DLmV-CoIvb_iQQak3TPyn35go6Mwsk-tkb0sx4l81Eg,47579
+chess/polyglot.py,sha256=8AZfHn87FGJKd5uvD9sOHN-tmoi5yc_7PR2hvl7qeYY,27622
+chess/svg.py,sha256=s3mClbLNnf9xmAUs-LZdMZyz6D0l4OxlDeZkquwMlVI,19434
+chess/syzygy.py,sha256=x06P3COrfwMF9VGufua6T6c6jA0LKFXMa2s9EknIVAo,68453
+chess/variant.py,sha256=JD_fZtbUKyQDbb4krO5G4dfRtU5JvlaHp2cq3BeFMlQ,33692
+python_chess-0.31.0.dist-info/LICENSE.txt,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+python_chess-0.31.0.dist-info/METADATA,sha256=_j3Na1DKWPw-EXpaCNXMVeOi-_9U_26XuIGH2ujTs98,12177
+python_chess-0.31.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+python_chess-0.31.0.dist-info/top_level.txt,sha256=KQh_dmhsO-MtGPgCihpBa-q5XF6tGfA9_MKDXETuyss,6
+python_chess-0.31.0.dist-info/RECORD,,
