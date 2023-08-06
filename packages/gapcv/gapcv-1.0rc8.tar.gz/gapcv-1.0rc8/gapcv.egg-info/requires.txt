@@ -1,0 +1,8 @@
+numpy
+h5py
+imutils
+requests
+opencv-python
+pillow
+tqdm
+mypy
