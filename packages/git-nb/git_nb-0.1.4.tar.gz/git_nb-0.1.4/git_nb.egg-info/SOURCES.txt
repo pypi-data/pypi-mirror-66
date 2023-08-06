@@ -1,0 +1,9 @@
+README.rst
+setup.py
+git_nb/__init__.py
+git_nb/config.py
+git_nb.egg-info/PKG-INFO
+git_nb.egg-info/SOURCES.txt
+git_nb.egg-info/dependency_links.txt
+git_nb.egg-info/not-zip-safe
+git_nb.egg-info/top_level.txt
