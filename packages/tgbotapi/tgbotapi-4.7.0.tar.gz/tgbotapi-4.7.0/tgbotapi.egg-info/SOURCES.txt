@@ -1,0 +1,11 @@
+README.rst
+setup.py
+tgbotapi/__init__.py
+tgbotapi/methods.py
+tgbotapi/types.py
+tgbotapi/utilities.py
+tgbotapi.egg-info/PKG-INFO
+tgbotapi.egg-info/SOURCES.txt
+tgbotapi.egg-info/dependency_links.txt
+tgbotapi.egg-info/requires.txt
+tgbotapi.egg-info/top_level.txt
