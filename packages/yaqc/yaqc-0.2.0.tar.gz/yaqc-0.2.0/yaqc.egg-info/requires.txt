@@ -1,0 +1,6 @@
+msgpack
+
+[dev]
+black
+pre-commit
+pydocstyle
