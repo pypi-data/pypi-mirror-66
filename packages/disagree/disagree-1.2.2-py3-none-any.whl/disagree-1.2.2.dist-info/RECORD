@@ -1,0 +1,12 @@
+disagree/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+disagree/agreements.py,sha256=m8IY-JpQm4m5OPTbcq_bc_Ts-ciOA0VjfYRXcrRIAIY,4632
+disagree/metrics.py,sha256=r3WA28CKOv7Rw0HuDwwYF1Jy5oZdaYfHrdJ1tZiPeMg,16365
+disagree/utils.py,sha256=PBBfsQMrkl4sigaKa8oYRqtkJ4UWRTO7U-POzcrFRG0,2419
+disagree/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+disagree/test/test_metrics.py,sha256=qe-k6j7nR5_cyalpprTm3CaNSOacQ3CC2AFOYcJwP_Q,2055
+disagree/test/test_visualisation.py,sha256=7yChXS2hDpbIcskJpDnX00pZzMIjmtBw8Fk36029bnA,1406
+disagree-1.2.2.dist-info/LICENCE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+disagree-1.2.2.dist-info/METADATA,sha256=6mqpsZlpjxMTNt59Uy58iqwBOmiSav2lak77UTFfPGs,388
+disagree-1.2.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+disagree-1.2.2.dist-info/top_level.txt,sha256=CzTGhT1Ci_Y1q_7L-jZVFFVyRzqSzRxGHiZBhlydQHs,9
+disagree-1.2.2.dist-info/RECORD,,
