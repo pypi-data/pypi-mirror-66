@@ -1,0 +1,5 @@
+pyros_setup
+rospkg
+defusedxml
+pycrypto
+gnupg
