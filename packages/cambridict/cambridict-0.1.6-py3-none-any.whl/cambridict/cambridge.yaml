@@ -1,0 +1,44 @@
+cambridge:
+  link: https://dictionary.cambridge.org/us/dictionary/english/{word}
+  structure:
+    css: div.entry-body__el, div.pr.idiom-block @list
+    header:
+      css: div.pos-header, div.pv-block, div.idiom-block
+      title: div.di-title
+      pos: div.posgram > span.pos
+      codes: span.gram span.gc @list @list
+      inflections: b.inf @list
+      ipa_us: span.us span.ipa
+      ipa_uk: span.uk span.ipa
+    senses:
+      css: div.pr.dsense @list
+      guideword: span.guideword > span
+      subsences:
+        css: div.def-block @list
+        levels: span.def-info > span.epp-xref @list
+        codes: span.def-info > span.gram span.gc @list
+        domain: span.def-info > span.domain @list
+        definition: div.def
+        example: div.def-body > div.examp @list
+
+cambridge_ev:
+  link: https://dictionary.cambridge.org/us/dictionary/english-vietnamese/{word}
+  structure:
+    css: div.d.pr.di @list
+    header:
+      css: div.dpos-h.di-head
+      title: h2.di-title
+      pos: div.dpos-g > span.pos
+      ipa: span.ipa
+      inflections: b.inf @list
+    senses:
+      css: div.sense-block.pr @list
+      subsences:
+        css: div.def-block @list
+        definition: div.def
+        translation: div.def-body > span.trans
+        example: div.def-body > div.examp @list
+
+dictionary:
+  EE: cambridge
+  EV: cambridge_ev
