@@ -1,0 +1,18 @@
+language: python
+python:
+- 2.7
+install: pip install -r requirements.txt
+script: make dist
+deploy:
+  skip_cleanup: true
+  skip_existing: true
+  provider: pypi
+  distributions: sdist
+  user: guma44
+  on:
+    tags: true
+    condition: "$TRAVIS_TAG =~ ^v.*$"
+    repo: guma44/ushuffle
+    python: 2.7
+  password:
+    secure: hA20hP3GsLFvxfo/v0yLrRfQjPZrvswkm/WA9kKie9tEsJM9CpQ8Wjw9UBaAYmiLKDtRwPTzBHLPMdWgpOygBh/1dKZkd9QyPimxjXxrzofjYFr46KBjF1LkxqoxtCnfc5atC9ccw6J5KwXiR4vs7Ezu7lZmJ/Itl4hY/96huLs7SGLYg0eIHOkkGA50YzJPZnuMAZtti0Va+2mnb91hkHK6XXPRzN5LjqPX/U1cTMN5PkAP0SoBYI4So6V1Lrs1zZWnYPneGjbT+3RRMrPnsW91JSr1Ym4A77vjNa5/aCC9oppQylqZl7Y9mrR08pvd07LMG+D3YnYno6vmUdGbhdBEqv5/vm1I+YGmEWs9YZToksTh5RqECZzaqMHdBjqgiIqbYWLpwVYwmgIqa1rIpQCUekMsb9SzvLtnE5kIXcWLBYvTKv95FzoF9HPbsan6pKF9fQLZS3yrwtVDx6GZjS3zV5nydBWwBrlp1kefZ69xaczlAe/qC/DKJfRBVBSIHs0knMwPLWSMIjs2Ddw6VyedOgh7qtncNeRqw2zrHm+R7WJ7SUEMd2AKvhpsMW1ipbDjrT166u7jE/T+jyEscVegM4V3Zy8/yd9Rf6Ha0tzdl4oHOhR+vCKC6dC+6Kv2A7hxGA4NtXNNq3hhT9XFe693TCvFte8otGUzW1G7Arc=
