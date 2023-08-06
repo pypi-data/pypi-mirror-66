@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+script_queue_manager/__init__.py
+script_queue_manager/executor.py
+script_queue_manager/prescripts.txt
+script_queue_manager/pusher.py
+script_queue_manager.egg-info/PKG-INFO
+script_queue_manager.egg-info/SOURCES.txt
+script_queue_manager.egg-info/dependency_links.txt
+script_queue_manager.egg-info/entry_points.txt
+script_queue_manager.egg-info/not-zip-safe
+script_queue_manager.egg-info/requires.txt
+script_queue_manager.egg-info/top_level.txt
