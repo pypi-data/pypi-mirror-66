@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: kanowandasync
+Version: 0.1
+Summary: 
+    This package allows users to access the BLE capabilities of their Kano coding wand using an asynchronous python API.  
+    
+    API design taken from - https://github.com/GammaGames/kano_wand and then adapted and updated for asynchronous python.
+    
+    New version is asynchronous and in addition is not cross playform due to its usage of pybluez instead of BLEAK for BLE access. 
+    
+Home-page: https://github.com/lucasoskorep/kano-wand-async-python/
+Author: Lucas Oskorep
+Author-email: lucas.oskorep@gmail.com
+License: MIT
+Download-URL: https://github.com/lucasoskorep/kano-wand-async-python/archive/V0.1.tar.gz
+Description: UNKNOWN
+Keywords: smarthome,smartwand,smart home,smart wand,wand,kano,kit,kano wand kit,async,kano wand async
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
