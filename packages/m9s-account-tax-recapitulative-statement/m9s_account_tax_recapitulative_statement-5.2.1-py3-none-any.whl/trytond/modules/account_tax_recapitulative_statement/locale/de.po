@@ -1,0 +1,45 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:account.tax.line:"
+msgid "Invalid VAT number!"
+msgstr "Ungültige USt-ID-Nummer!"
+
+msgctxt "error:account.tax.line:"
+msgid "Please set a party on move line."
+msgstr "Bitte eine Partei auf der Buchungszeile eintragen."
+
+msgctxt "error:account.tax.line:"
+msgid "This tax requires a vat code set for the party \"%(party)s%\"."
+msgstr ""
+"Diese Steuer erfordert die Konfiguration einer USt-ID für Partei "
+"\"%(party)s%\"."
+
+msgctxt "error:account.tax.line:"
+msgid ""
+"Vat Code missing on tax line %(line)s, that uses to a tax requiring a vat "
+"code."
+msgstr ""
+"Fehlende USt-ID auf Steuerzeile %(line)s, die eine Steuer mit USt-ID "
+"erforderlich verwendet."
+
+msgctxt "error:account.tax.template:"
+msgid ""
+"All child taxes must have the same setting for vat code required.\n"
+"Taxes \"%(first)s\" and \"%(second)s\" have different settings."
+msgstr ""
+"Alle untergeordneten Steuern müssen dieselbe Einstellung für USt-ID erforderlich aufweisen.\n"
+"Die Steuern \"%(first)s\" und \"%(second)s\" weisen unterschiedliche Einstellungen auf."
+
+msgctxt "field:account.tax,vat_code_required:"
+msgid "Vat Code Required"
+msgstr "USt-ID-Nr. Erforderlich"
+
+msgctxt "field:account.tax.line,vat_code:"
+msgid "VAT Code"
+msgstr "USt-ID-Nr."
+
+msgctxt "field:account.tax.template,vat_code_required:"
+msgid "Vat Code Required"
+msgstr "USt-ID-Nr. Erforderlich"
