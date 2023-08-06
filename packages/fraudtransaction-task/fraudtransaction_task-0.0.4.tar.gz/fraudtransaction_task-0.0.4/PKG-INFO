@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: fraudtransaction_task
+Version: 0.0.4
+Summary: Technical task anomaly detection
+Home-page: https://bitbucket.org/srijithm7_bb/fraudtransactiondetection/
+Author: Srijith M
+Author-email: srijithm7@gmail.com
+License: UNKNOWN
+Description: ===========
+        Fraud Transaction Detection
+        ===========
+        
+        Fraud Transaction Detection provides a model developed by python sklearn library clustering and classification algorithm for finding the fraud transactions in a given dataset. You might find
+        it most useful for tasks involving finding which transactions are fraudulent transactions in a given dataset. It supports both CSV and ods file types as of now and a single sample record can be provided as an array. Typical usage
+        often looks like this::
+        
+            #!/usr/bin/env python
+        
+            import frauddetection.use_model as fd
+        
+            fd.FraudDetectionPredict.predictSingleSample([1284b75c-ecae-4015-8e3d-359c0347ede8, 0, 1, 1, 1, 0, 188, 174, 0, 1, 3, 3, 8, 52, 1, 1, 1, 1])
+            fd.FraudDetectionPredict.predictDatasetCsv('data.csv') #path to csv file as argument
+            fd.FraudDetectionPredict.predictDatasetOds('data.ods') #path to ods file as argument
+        
+        Note
+        -------------
+        
+        When providing a single sample, the feature values should be provided as an array excluding the consumer id and gender column value.
+        
+        Output
+        =========
+        
+        Output look like this::
+        
+            [1]
+            [0 0 1 ... 0 0 0]
+            [0 0 0 ... 0 1 0]
+        
+        * 0 denotes normal transaction
+        
+        * 1 denotes anomaly transaction (fraud transaction)
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
