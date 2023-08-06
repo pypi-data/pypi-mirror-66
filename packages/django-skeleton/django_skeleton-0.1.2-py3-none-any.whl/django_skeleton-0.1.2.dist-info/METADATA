@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: django-skeleton
+Version: 0.1.2
+Summary: A template repository of Django admin features and style enhancements.
+Home-page: https://www.github.com/lesliegearhart/django-skeleton
+Author: Leslie Gearhart
+Author-email: leslie@lesliegearhart.com
+License: GNU
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+
+# django-skeleton
+
+
+A template repository of Django admin features and style enhancements. 
+
+Detailed documentation is in the "docs" directory.
+
+Quick start
+-----------
+
+1. Add "skeleton" to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = [
+        ...
+        'skeleton',
+    ]
+
+2. Include the skeleton URLconf in your project urls.py like this::
+
+    path('admin/', include('skeleton.urls')),
+
+3. Run ``python manage.py migrate`` to create the skeleton models.
+
+4. Start the development server and visit `http://127.0.0.1:8000/admin/`.
+
