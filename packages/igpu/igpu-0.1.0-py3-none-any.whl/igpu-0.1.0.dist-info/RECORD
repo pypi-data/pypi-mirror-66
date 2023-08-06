@@ -1,0 +1,9 @@
+igpu/__init__.py,sha256=hSTS5UlxCS_Z0uLWpMGy6tksMGTqzXzZDgkMY7rXDA4,357
+igpu/core.py,sha256=M9W4GzyzEo0FuB5T7x-0K78JD3IENaXexE_6Al8Glsw,3798
+igpu/gpu_info.py,sha256=mRKNon5YJIE9gsGi9qyNAsw2OHOZdYtomUeIVg0aUcg,18315
+igpu/parser.py,sha256=9QLOnhh-a1ApHlIR0laaTVJYK9UzcqhzkH6Igr0v7PI,5363
+igpu-0.1.0.dist-info/LICENSE,sha256=brVHmy0ddUwbNL2yFD9SeB6lvn9GYfAtYts7lnC3WXw,1071
+igpu-0.1.0.dist-info/METADATA,sha256=nerGlRDBOeXRggxjr6_plvlgIwF8JhuoqT4287Qi3ug,21501
+igpu-0.1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+igpu-0.1.0.dist-info/top_level.txt,sha256=IwOUsX0wLIL5jLsuH_CZXXIoD2MeHAG7j1S3EyElunI,5
+igpu-0.1.0.dist-info/RECORD,,
