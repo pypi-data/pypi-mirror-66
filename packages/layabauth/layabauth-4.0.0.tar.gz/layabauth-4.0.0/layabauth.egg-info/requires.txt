@@ -1,0 +1,9 @@
+oauth2helper==3.*
+
+[testing]
+flask_restx==0.2.*
+pytest-flask==1.*
+starlette==0.13.*
+requests==2.*
+pytest-responses==0.4.*
+pytest-cov==2.*
