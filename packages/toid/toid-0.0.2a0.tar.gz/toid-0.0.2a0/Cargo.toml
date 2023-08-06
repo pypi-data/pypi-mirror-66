@@ -1,0 +1,18 @@
+[package]
+name = "pytoid"
+version = "0.1.0"
+authors = [ "masashi yoshikawa <earnest.marshi@gmail.com>",]
+edition = "2018"
+
+[lib]
+name = "toid"
+crate-type = [ "cdylib",]
+
+[dependencies]
+rayon = "1.0.2"
+numpy = "0.7.0"
+toid = "0.0.0-alpha"
+
+[dependencies.pyo3]
+path = "/Users/marshi/Desktop/pytoid/pyo3"
+features = [ "extension-module",]
