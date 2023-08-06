@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+eccsnacks/__init__.py
+eccsnacks/curve25519.py
+eccsnacks/curve448.py
+eccsnacks.egg-info/PKG-INFO
+eccsnacks.egg-info/SOURCES.txt
+eccsnacks.egg-info/dependency_links.txt
+eccsnacks.egg-info/top_level.txt
