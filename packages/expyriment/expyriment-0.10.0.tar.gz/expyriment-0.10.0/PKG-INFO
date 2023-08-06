@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: expyriment
+Version: 0.10.0
+Summary: A Python library for cognitive and neuroscientific experiments
+Home-page: http://www.expyriment.org
+Author: Florian Krause, Oliver Lindemann
+Author-email: florian@expyriment.org, oliver@expyriment.org
+License: GNU GPLv3
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: data_preprocessing
+Provides-Extra: serialport
+Provides-Extra: parallelport_linux
+Provides-Extra: video
+Provides-Extra: all
