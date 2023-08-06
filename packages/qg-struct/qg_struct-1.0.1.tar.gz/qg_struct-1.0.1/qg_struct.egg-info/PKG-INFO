@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: qg-struct
+Version: 1.0.1
+Summary: 全高底层框架封装
+Home-page: http://192.168.117.144/cetc28/spiderStructFrameWork
+Author: zouwendi
+Author-email: tz310200@gamil.com
+Maintainer: zouwendi
+Maintainer-email: tz310200@gamil.com
+License: GPL3 License
+Description: # 底层封装(redis)
+          `pip install pytest`
+          `pip install -r requirements.txt` 安装依赖
+          `pytest` 运行测试用例
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown

@@ -1,0 +1,12 @@
+README.md
+setup.py
+qg_struct/MemoryDB.py
+qg_struct/RelationalDB.py
+qg_struct/__init__.py
+qg_struct/config.py
+qg_struct/log.py
+qg_struct.egg-info/PKG-INFO
+qg_struct.egg-info/SOURCES.txt
+qg_struct.egg-info/dependency_links.txt
+qg_struct.egg-info/requires.txt
+qg_struct.egg-info/top_level.txt
