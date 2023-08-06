@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+subject_classification_spanish/__init__.py
+subject_classification_spanish/subject_classifier.py
+subject_classification_spanish/test_subject_classifier.py
+subject_classification_spanish.egg-info/PKG-INFO
+subject_classification_spanish.egg-info/SOURCES.txt
+subject_classification_spanish.egg-info/dependency_links.txt
+subject_classification_spanish.egg-info/top_level.txt
