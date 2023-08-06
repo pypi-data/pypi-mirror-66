@@ -1,0 +1,11 @@
+ipymagic/__init__.py,sha256=2bR5RQnsiDgNe0OjXfphBwz9vjRV37B5rFoDpi7GLOQ,2317
+ipymagic/ipymagic.py,sha256=2xe3A0GIZmZkbcPIzRDt2PbLq_-Gn6tBeI53Ya3Sr-0,1452
+ipymagic/static/index.js,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ipymagic-0.2.1.data/data/etc/jupyter/jupyter_notebook_config.d/ipymagic.json,sha256=cPT_GecY5ZmUIlTTEjfIuvNL4w7mmsSaFUiATpAY5rs,84
+ipymagic-0.2.1.data/data/etc/jupyter/nbconfig/notebook.d/ipymagic.json,sha256=oST-rYQg63oJwMZpfW5cZ7BfxNpJ3mXDZqjbTATjYqo,57
+ipymagic-0.2.1.data/data/share/jupyter/nbextensions/ipymagic/index.js,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ipymagic-0.2.1.dist-info/LICENSE,sha256=i76m_K0ym2ReNdeATw_sFkwVny3xkxcBMZpsGULwVv0,1074
+ipymagic-0.2.1.dist-info/METADATA,sha256=gilu3QEturAZMYnTRddPRMKZUlKOaJgIV2Mwz-H3RLc,915
+ipymagic-0.2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ipymagic-0.2.1.dist-info/top_level.txt,sha256=f4owy7sZhtOQQmJQ6c0MZsvLmm54SBft8Hlo7DD5B2Y,9
+ipymagic-0.2.1.dist-info/RECORD,,
