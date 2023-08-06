@@ -1,0 +1,127 @@
+/*
+Color Palette:
+         text - #6B7680
+text inactive - #ABB0B6
+   background - #FAFAFA
+ border-color - #ABB0B6
+        hover - #F2F3F4
+*/
+
+QWidget {
+    font-family: Ubuntu Mono;
+    font-size: 14pt;
+    color: #6B7680;
+    background-color: #FAFAFA;
+}
+
+QWidget#Hotline {
+    border: 1 solid #CCD2D9;
+    border-radius: 3;
+}
+
+QTextEdit {
+    font-family: Ubuntu Mono;
+    font-size: 12pt;
+    color: #6B7680;
+    background-color: #FAFAFA;
+}
+
+QPushButton {
+    outline: none;
+    border: 0;
+    color: #6B7680;
+    background-color: #FAFAFA;
+}
+
+QPushButton:hover {
+    color: #6B7680;
+    background-color: #F2F3F4;
+}
+
+
+QPushButton:pressed {
+    background-color: #F2F3F4;
+}
+
+QLineEdit {
+    outline: none;
+    border: 0;
+    margin-left: 0px;
+    padding-left: 20px;
+}
+
+QListView {
+    border-top: 1 solid #CCD2D9;
+    border-left: 1 solid #CCD2D9;
+    border-right: 1 solid #CCD2D9;
+    border-bottom: 1 solid #CCD2D9;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    color: #ABB0B6;
+    background-color: #FAFAFA;
+}
+
+QListView::item {
+    height: ${height};
+    border: 0px;
+    padding-left: 20px;
+}
+
+QListView::item:selected:active {
+    color: #6B7680;
+    background-color: #F2F3F4;
+}
+
+QListView::item:selected:!active {
+    color: #6B7680;
+    background-color: #F2F3F4;
+}
+
+QListView::item:hover {
+    background-color: #F2F3F4;
+}
+
+QListView::item:last {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-color: #F2F3F4;
+}
+
+QScrollBar:vertical {
+    background: #FAFAFA;
+    width: 6px;
+    margin: 40px 0 40px 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #ABB0B6;
+    min-height: 10px;
+}
+
+QScrollBar::add-line:vertical {
+    border: 0;
+    background: #FAFAFA;
+    height: 40px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+    border: 0;
+    background: #FAFAFA;
+    height: 40px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+    border: 0;
+    width: 0;
+    height: 0;
+    background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+    height: 0;
+}
