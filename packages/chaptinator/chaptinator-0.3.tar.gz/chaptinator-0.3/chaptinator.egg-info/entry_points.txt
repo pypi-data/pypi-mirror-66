@@ -1,0 +1,3 @@
+[console_scripts]
+chaptinator = chaptinator.__main__:main
+

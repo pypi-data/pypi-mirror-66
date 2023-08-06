@@ -1,0 +1,10 @@
+README.md
+setup.py
+chaptinator/__init__.py
+chaptinator/__main__.py
+chaptinator/chaptinator.py
+chaptinator.egg-info/PKG-INFO
+chaptinator.egg-info/SOURCES.txt
+chaptinator.egg-info/dependency_links.txt
+chaptinator.egg-info/entry_points.txt
+chaptinator.egg-info/top_level.txt
