@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: twilioSMS
+Version: 0.2
+Summary: a fun texting app
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+What's New in v0.2:
+
+1. Runs 2x as fast!
+
+2. now works with python 3.5!
+
+3. New spam button that sends 5 of the same text!
+
+Instructions:
+
+go to https://www.twilio.com and sign up, follow instructions, then import account sid, auth token, and twilio number
+
+also type in 'pip install twilio' in the terminal
+
+credit goes to CleverProgrammer for creating the base code for this program
+
+code (file MUST be called run.py)
+
+    import sms
+
+
+    # get these credentials by signing up for a twilio account at https://www.twilio.com
+    account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"  # insert your account SID here
+    auth_token = "your_auth_token"  # insert your authenication token here
+    my_cell = "cell number here"  # insert your phone number starting with +1
+    my_twilio = "twilio number here"  # insert your twilio number starting with +1
+
+
+    if __name__ == "__main__":
+        sms
+
