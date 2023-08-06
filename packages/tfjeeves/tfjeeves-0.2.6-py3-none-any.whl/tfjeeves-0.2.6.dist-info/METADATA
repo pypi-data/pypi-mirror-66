@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: tfjeeves
+Version: 0.2.6
+Summary: Utilities to help train models with tensorflow2 and keras
+Home-page: https://github.com/soumendra/tfjeeves
+License: MIT
+Author: Soumendra Dhanee
+Author-email: soumendra@gmail.com
+Maintainer: Soumendra Dhanee
+Maintainer-email: soumendra@gmail.com
+Requires-Python: ==3.7.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: attrdict (>=2.0.1,<3.0.0)
+Requires-Dist: black (>=19.10b0,<20.0)
+Requires-Dist: boto (>=2.49.0,<3.0.0)
+Requires-Dist: boto3 (>=1.12.33,<2.0.0)
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: efficientnet (>=1.1.0,<2.0.0)
+Requires-Dist: h5py (>=2.10.0,<3.0.0)
+Requires-Dist: hyperdash (>=0.15.3,<0.16.0)
+Requires-Dist: joblib (>=0.14.1,<0.15.0)
+Requires-Dist: loguru (>=0.4.0,<0.5.0)
+Requires-Dist: matplotlib (>=3.2.1,<4.0.0)
+Requires-Dist: pandas (>=1.0.0,<2.0.0)
+Requires-Dist: pillow (==7.1.1)
+Requires-Dist: plot_keras_history (>=1.1.23,<2.0.0)
+Requires-Dist: plotnine (>=0.6.0,<0.7.0)
+Requires-Dist: py3nvml (>=0.2.5,<0.3.0)
+Requires-Dist: pyyaml (>=5.3.1,<6.0.0)
+Requires-Dist: scikit-learn (>=0.22.2,<0.23.0)
+Requires-Dist: tensordash (>=0.1.0,<0.2.0)
+Requires-Dist: tensorflow (==2.1.0)
+Requires-Dist: tensorflow-estimator (==2.1.0)
+Requires-Dist: tf-explain (>=0.2.1,<0.3.0)
+Requires-Dist: tqdm (>=4.41.1,<5.0.0)
+Project-URL: Documentation, https://github.com/soumendra/tfjeeves
+Project-URL: Repository, https://github.com/soumendra/tfjeeves
+Description-Content-Type: text/markdown
+
+# tfjeeves
+
+`poetry run python train.py --config=configs/cifar10.py --data=/home/soumendra/data-zoo/classification/cifar10`
+
+https://flynn.gg/blog/software-best-practices-python-2019/
+
+```bash
+poetry run python train.py --config=configs/cifar10.py --data=~/data-zoo/classification/cifar10
+```
+
+Getting triplet list (df)
+
+```
+DATABASE_URL=postgresql://vista_api_live:4jzjS3USGnjLvXZrHrR4cyNh@vista-postgres.coaffiez9jim.ap-southeast-1.rds.amazonaws.com:5432/vista_api_live
+ETL_DATABASE_URL=postgresql://etl_user:eCwTqY6h9DJeFwFyuyX4LcSF@etl-server-postgres.coaffiez9jim.ap-southeast-1.rds.amazonaws.com:5432/etldb
+
+```
+
+```
+psql -h etl-server-postgres.coaffiez9jim.ap-southeast-1.rds.amazonaws.com -p 5432 -U etl_user -d etldb
+
+\copy (SELECT tot.catalog_id, tot.product_id, tot.master_name, tot.subcategory_name, tot.category_name, tot.image_id, sync.s3_path, sync.is_sizechart, sync.is_discarded  FROM (SELECT fc.catalog_id, fc.product_id, fc.master_name, fc.subcategory_name, fc.category_name, fvi.image_id FROM (SELECT catalog_id, UNNEST(product_ids) as product_id, master_name, subcategory_name, category_name FROM fact_catalogs AS fc WHERE catalog_product_count > 3) AS fc JOIN fact_visible_images AS fvi ON fvi.product_id = fc.product_id) AS tot JOIN synced_images AS sync ON sync.image_id = tot.image_id ORDER BY tot.catalog_id) to 'temp.csv' delimiter ',' csv header;
+```
+

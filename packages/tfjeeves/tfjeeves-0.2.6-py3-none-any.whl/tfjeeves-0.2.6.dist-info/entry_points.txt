@@ -1,0 +1,8 @@
+[console_scripts]
+fix=scripts:fix
+generate_triplets=scripts:generate_triplets
+generate_vista_triplets=scripts:generate_vista_triplets
+grad_cam=scripts:grad_cam
+train=train:run
+update_categories=scripts:update_categories
+
