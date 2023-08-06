@@ -1,0 +1,10 @@
+django_rq_wrapper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_rq_wrapper/apps.py,sha256=RF-NWHSWgcUng3oFDpjoQLtf0BKJ2zCrGCtFEoo-htM,107
+django_rq_wrapper/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_rq_wrapper/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_rq_wrapper/management/commands/rqworkers.py,sha256=Gzb3_teEtxUun3QW_nDMzdwEaBfDcqfh4Pv7LGZEY3Y,5911
+django_rq_wrapper-3.1.dist-info/LICENSE,sha256=V-e5YbIOT0Qv2dBnXoY-wDK3XYsHVwuonxtshIZT1cY,1069
+django_rq_wrapper-3.1.dist-info/METADATA,sha256=FouQzJep2l7z375AuZ7AM5kf2ZwsawCO4LIG-KvZ5jA,1722
+django_rq_wrapper-3.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+django_rq_wrapper-3.1.dist-info/top_level.txt,sha256=mobLPjbBd-udtueLv0kkw0KGF0ETIzzaslYDqW34KdM,18
+django_rq_wrapper-3.1.dist-info/RECORD,,
