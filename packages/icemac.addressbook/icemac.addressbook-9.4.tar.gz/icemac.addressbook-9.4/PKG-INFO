@@ -1,0 +1,151 @@
+Metadata-Version: 2.1
+Name: icemac.addressbook
+Version: 9.4
+Summary: Multi user address book application
+Home-page: https://github.com/icemac/icemac.addressbook
+Author: Michael Howitz
+Author-email: icemac@gmx.net
+License: MIT
+Download-URL: https://pypi.org/project/icemac.addressbook
+Project-URL: Documentation, https://icemacaddressbook.readthedocs.io
+Project-URL: Source, https://github.com/icemac/icemac.addressbook
+Project-URL: Tracker, https://github.com/icemac/icemac.addressbook/issues
+Description: ==================
+        icemac.addressbook
+        ==================
+        
+        .. image:: https://travis-ci.com/icemac/icemac.addressbook.svg?branch=master
+           :target: https://travis-ci.com/icemac/icemac.addressbook
+        
+        .. image:: https://coveralls.io/repos/github/icemac/icemac.addressbook/badge.svg?branch=master
+           :target: https://coveralls.io/github/icemac/icemac.addressbook?branch=master
+        
+        .. image:: https://img.shields.io/pypi/v/icemac.addressbook.svg
+           :target: https://pypi.python.org/pypi/icemac.addressbook/
+           :alt: Latest release
+        
+        .. image:: https://img.shields.io/pypi/pyversions/icemac.addressbook.svg
+           :target: https://pypi.org/project/icemac.addressbook/
+           :alt: Supported Python versions
+        
+        .. image:: https://readthedocs.org/projects/zodb/badge/?version=latest
+           :target: https://icemacaddressbook.readthedocs.io/en/latest/
+           :alt: Documentation status
+        
+        Purpose:
+            Store, search and export addresses and phone numbers using a web application.
+        Status:
+            stable version, used in production; some features might be added in future
+        
+        Copyright (c) 2008-2020 Michael Howitz
+        
+        This package is licensed under the MIT License, see LICENSE.TXT inside the
+        package.
+        
+        * Features_
+        * Screenshots_
+        * Download_
+        * Installation_
+        * Update_
+        * `Run the tests`_
+        * `Run the application`_
+        * `User management`_
+        * `Operations`_
+        * `To do`_
+        
+        .. _Features : https://icemacaddressbook.readthedocs.io/en/latest/features.html
+        .. _Screenshots : https://icemacaddressbook.readthedocs.io/en/latest/screenshots.html
+        .. _Download : https://pypi.org/project/icemac.addressbook#files
+        .. _Installation : https://icemacaddressbook.readthedocs.io/en/latest/installation.html
+        .. _`User management` : https://icemacaddressbook.readthedocs.io/en/latest/usermanagement.html
+        .. _`Update` : https://icemacaddressbook.readthedocs.io/en/latest/update.html
+        .. _`Run the tests`: https://icemacaddressbook.readthedocs.io/en/latest/runthetests.html
+        .. _`Run the application` : https://icemacaddressbook.readthedocs.io/en/latest/runtheapplication.html
+        .. _`To do` : https://icemacaddressbook.readthedocs.io/en/latest/todo.html
+        .. _`Operations` : https://icemacaddressbook.readthedocs.io/en/latest/operations.html
+        
+        
+        =======
+        Hacking
+        =======
+        
+        Fork me at: https://github.com/icemac/icemac.addressbook
+        
+        See `Source installation`_, too.
+        
+        .. _`Source installation` : https://icemacaddressbook.readthedocs.io/en/latest/sourceinstallation.html
+        
+        
+        ==========
+        Change log
+        ==========
+        
+        9.4 (2020-04-21)
+        ================
+        
+        - Update most libraries needed for the address book to their newest versions.
+        
+        - Port code to Python 3.8, supporting now additionally to Python 2.7.
+        
+        
+        9.3 (2020-03-23)
+        ================
+        
+        - Update most libraries needed for the address book to their newest versions.
+        
+        - Adapt `print.css` to menu changes in version 9.2.
+        
+        - Prevent entering date values before 1900 as they cannot be rendered, so they
+          even cannot be changed.
+        
+        - Move source code to: https://github.com/icemac/icemac.addressbook.
+        
+        
+        9.2 (2019-12-30)
+        ================
+        
+        - Update most libraries needed for the address book to their newest versions.
+        
+        - Fix padding on log-in form.
+        
+        - On mobile devices replace horizontal menus (tabs) and the add menu with
+          vertical ones hidden behind a burger icon resp. plus sign.
+        
+        - Make header of application in browser less tall and move link to the about
+          view to the main menu.
+        
+        
+        Previous Versions
+        =================
+        
+        See `OLD_CHANGES.rst`_.
+        
+        .. _`OLD_CHANGES.rst` : https://github.com/icemac/icemac.addressbook/blob/master/OLD_CHANGES.rst
+        .. _`documentation` :  https://icemacaddressbook.readthedocs.io/en/latest/runtheapplication.html
+        .. _`Upgrade installation` : https://icemacaddressbook.readthedocs.io/en/latest/upgrade-installation-manual-to-guided.html
+        .. _`archive documentation` :  https://icemacaddressbook.readthedocs.io/en/latest/operations.html
+        
+Keywords: python address book addressbook zope3 zope application web phone number e-mail email home page homepage wsgi
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Paste
+Classifier: Framework :: Zope :: 3
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: German
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Communications :: Email :: Address Book
+Classifier: Topic :: Communications :: Telephony
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Office/Business :: Groupware
+Provides-Extra: test
+Provides-Extra: docs
