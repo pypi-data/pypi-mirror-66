@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+docs/.DS_Store
+docs/README.txt
+docs/example - analysis of London rental market.ipynb
+docs/example - rental data.ipynb
+docs/example - sale data.ipynb
+docs/inner_outer_london.csv
+docs/postcode-district.csv
+rightmove_webscraper/__init__.py
+rightmove_webscraper.egg-info/PKG-INFO
+rightmove_webscraper.egg-info/SOURCES.txt
+rightmove_webscraper.egg-info/dependency_links.txt
+rightmove_webscraper.egg-info/requires.txt
+rightmove_webscraper.egg-info/top_level.txt
