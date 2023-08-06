@@ -1,0 +1,15 @@
+yogaflo/__about__.py,sha256=HfjVOrpTnmZ-xVFCYSVmX50EXaBQeJteUHG-PD6iQs8,22
+yogaflo/__init__.py,sha256=xfBpYq21HIxH-u-PmMJb8lv4638an8sc9Brhp3-n798,67
+yogaflo/__main__.py,sha256=jPkvvKbjY6iSDUE54-mAkxqEDX82L1YJawgfK8ldu0k,2273
+yogaflo/constraints.py,sha256=Nmo3W2xcCdcenZdpbFhKq_mttlYsuruQ12b5N3oNAVE,876
+yogaflo/data.py,sha256=5Mo6PTxReAqoqv9Xdn75Rm8-FqeeKJUT4Kzl9vHJhM0,1710
+yogaflo/yogaflo.py,sha256=ZNaI-sIHqkvUEYbAmzc8RzV7JtLljDQg1d4jk8WrSgk,1895
+yogaflo/data/poses.json,sha256=N67Z83lmd2X9jRYKqflf_a_CHJDtz3juGUXRqikqO6U,2834
+yogaflo/data/flows/flows-gavin.json,sha256=GEA-CxMLROh3a0P7bElXRWL81p3svnHOJTV-PfsTKMU,506
+yogaflo/data/flows/flows-tobin.json,sha256=-Mf0ZCPXyzFaqRUa-9e8rq3UMbkssvKcGImWEHAqTt4,1435
+yogaflo-0.2.1.dist-info/LICENSE,sha256=cECddupugDmvOvw7Aa5veJbaODEGKxKsu9LTXwJYxDU,1067
+yogaflo-0.2.1.dist-info/METADATA,sha256=Bf7QE4M0-pZ3Rn9UzTGldUVi-Ju-1Ax5Ju8mgWRUjVA,1652
+yogaflo-0.2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+yogaflo-0.2.1.dist-info/entry_points.txt,sha256=NJDOMlszs8pqOGxSXVDbIpb9Wy_rs1EVkDAkBacoLjo,60
+yogaflo-0.2.1.dist-info/top_level.txt,sha256=HAq_rUS_xBUEC3SCvEwslocXq2ujjY2KfkOB5mnH2zI,8
+yogaflo-0.2.1.dist-info/RECORD,,
