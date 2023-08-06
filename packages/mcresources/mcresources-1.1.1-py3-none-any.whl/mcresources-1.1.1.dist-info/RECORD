@@ -1,0 +1,13 @@
+mcresources/__init__.py,sha256=wabg0mUBJcZehQDeWp_dhht4GSViPzzRd0_XrCrfGgQ,297
+mcresources/block_context.py,sha256=ysKkTe0zTYsae1BT-csyYiLTAlMhSOpDIT-DYh5Kwas,2430
+mcresources/item_context.py,sha256=qkxQD0QugO3RssuVuXgxxc4HgnKGx4vC4_HE18GYH2w,1295
+mcresources/loot_tables.py,sha256=5UkcYne7gBDfnsJqfQl2Zqbe0ed1KqFk_bmUg7JxkJw,1341
+mcresources/recipe_context.py,sha256=zZgvJgP34YGpdw-BXoNFZSW3AOpd7BEMiIGKI3-1S7I,1537
+mcresources/resource_manager.py,sha256=FfxmSlqhAgeHd3K91AapNW8CRfjLUX-2R7LaVbbaGfA,15515
+mcresources/tag.py,sha256=OP0mnJEaG95SX8LqntUyyCPYthK6pyOwtN0uo4AnHYM,446
+mcresources/utils.py,sha256=bnleiJmxECbcFBQRF3iE6ixwzAq6qjj8EuEvpSYPHXE,11859
+mcresources-1.1.1.dist-info/LICENSE.txt,sha256=ZoGEtRl9nLi4neCu2lNatiMOh9_XaOEA5qEry8TmFEM,1091
+mcresources-1.1.1.dist-info/METADATA,sha256=wFTApCHJ6G3AIgKXuiHvuZXKeYT1wRqxkgNK0b6-GEc,8688
+mcresources-1.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mcresources-1.1.1.dist-info/top_level.txt,sha256=__2NF1ugqcQ1S9ZVl5fwcWolweVu7lBp64ZfxZl6dqM,12
+mcresources-1.1.1.dist-info/RECORD,,
