@@ -1,0 +1,17 @@
+cleaning.py,sha256=siyG-eQiVJS0NDTzlD9xXcM8H_X_6CTg_ppG_giMszo,8770
+merge.py,sha256=kPxnU5GIR8eoR4vTxrjNtuMF2YqHU01-dzg48m4SzAI,4430
+parse.py,sha256=IsxYcgAnOoZ6u1Y1DKKtELbBc5y3XOq_3KPiEtWzluQ,5256
+readweb.py,sha256=9tZtbcdRvRoOQHywv0RYlr4fSU8b80-4eT0mmzGsE3Q,12004
+topics.py,sha256=0Nj78r_YEg2nFpb29qK9DJLjgoDxaXkG_jBCkMsLPX4,17509
+preparation/__init__.py,sha256=_lgYxqvEnIBfgo5f6ml1Q9ca0Hvy_eR05OIQvzgX8tI,78
+preparation/cleaning.py,sha256=siyG-eQiVJS0NDTzlD9xXcM8H_X_6CTg_ppG_giMszo,8770
+preparation/filter.py,sha256=bqyHRHo9kdf27fOnuefD0MedsNjRywkhS1S3QgQ8JtE,6196
+preparation/merge.py,sha256=kPxnU5GIR8eoR4vTxrjNtuMF2YqHU01-dzg48m4SzAI,4430
+preparation/parse.py,sha256=IsxYcgAnOoZ6u1Y1DKKtELbBc5y3XOq_3KPiEtWzluQ,5256
+preparation/readweb.py,sha256=9tZtbcdRvRoOQHywv0RYlr4fSU8b80-4eT0mmzGsE3Q,12004
+preparation/topics.py,sha256=0Nj78r_YEg2nFpb29qK9DJLjgoDxaXkG_jBCkMsLPX4,17509
+collegepreparation-0.1.dist-info/LICENSE.txt,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+collegepreparation-0.1.dist-info/METADATA,sha256=KovEEZUx81Urz_YojwMQpLwPspWLuggz0FuF45kZxWI,505
+collegepreparation-0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+collegepreparation-0.1.dist-info/top_level.txt,sha256=qHKsHY7_HrVoijMmDj8DHNXn-VLLMp9ZsWSEM9DzRYA,48
+collegepreparation-0.1.dist-info/RECORD,,
