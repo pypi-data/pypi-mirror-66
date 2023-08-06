@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: itsim-project-creation-library
+Version: 0.1.0
+Summary: Library for processing GTFS and Shape files for Itsim.
+Home-page: https://gitlab.com/systra/itsim/itsim_project_creation_library
+Author: Julien Bonneville
+Author-email: jbonneville@systra.com
+License: MIT
+Keywords: itsim project library
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: geopandas
+Requires-Dist: gtfstk
+Requires-Dist: pandas
+Requires-Dist: pyproj
+Requires-Dist: pyshp
+Requires-Dist: shapely
+Requires-Dist: simpledbf
+
+Itsim project creation library
+==============================
+
+How to use
+----------
+
+```
+pip install itsim_project_creation_library
+```
+
+Then in python
+```
+from itsim_project_creation_library import (
+    feed_processing,
+    gis_processing,
+)
+```
+
+How to develop on it
+--------------------
+
+```
+pip install -e .
+```
+
+
