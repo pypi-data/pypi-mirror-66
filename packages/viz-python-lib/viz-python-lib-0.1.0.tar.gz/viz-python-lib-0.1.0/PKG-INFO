@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: viz-python-lib
+Version: 0.1.0
+Summary: python library for VIZ blockchain
+License: MIT
+Author: Vladimir Kamarzin
+Author-email: vvk@vvk.pp.ru
+Requires-Python: >=3.6.1,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: funcy (>=1.14,<2.0)
+Requires-Dist: graphenelib (>=1.2.0,<2.0.0)
+Requires-Dist: toolz (>=0.10.0,<0.11.0)
