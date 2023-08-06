@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: coolwait
+Version: 0.1
+Summary: my frist project on pypi
+Home-page: UNKNOWN
+Author: Noobie
+Author-email: adlizhafari122@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: COOLWAIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
