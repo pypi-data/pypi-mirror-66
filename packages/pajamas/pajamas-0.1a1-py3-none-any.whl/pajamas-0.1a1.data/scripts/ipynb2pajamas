@@ -1,0 +1,11 @@
+#!python
+import pajamas
+import sys
+
+if len(sys.argv) != 3:
+    print("Usage: %s inputfile.ipynb outputfile.pajamas" % (sys.argv[0]))
+    exit(1)
+
+pj = pajamas.get_changed()
+pj.read_ipynb(sys.argv[1])
+pj.write_pajamas(sys.argv[2])
