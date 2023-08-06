@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+apicheck_package_manager/__init__.py
+apicheck_package_manager/__main__.py
+apicheck_package_manager.egg-info/PKG-INFO
+apicheck_package_manager.egg-info/SOURCES.txt
+apicheck_package_manager.egg-info/dependency_links.txt
+apicheck_package_manager.egg-info/entry_points.txt
+apicheck_package_manager.egg-info/not-zip-safe
+apicheck_package_manager.egg-info/top_level.txt
