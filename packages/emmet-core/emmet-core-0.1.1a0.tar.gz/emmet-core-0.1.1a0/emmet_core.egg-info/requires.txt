@@ -1,0 +1,6 @@
+pymatgen
+monty
+pydantic
+pybtex
+typing-extensions
+bson
