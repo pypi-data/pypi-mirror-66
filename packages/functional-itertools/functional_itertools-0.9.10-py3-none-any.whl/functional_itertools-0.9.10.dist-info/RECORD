@@ -1,0 +1,17 @@
+functional_itertools/__init__.py,sha256=0eh6NY8I9PYXjJ_-M-qqjF0mTTVr6yemRhgGWNcCXho,690
+functional_itertools/cattrs.py,sha256=kWejb8StZIKmtDQlE4EViSVvG3f52UxY_BZpGWIu90Y,2153
+functional_itertools/classes.py,sha256=VDgC8leUrFe897gYgSB0tuSM-PY8guiS6rmKF_ygZ2Y,45417
+functional_itertools/errors.py,sha256=fJRMwXaliMNR_N84V0EyU--tgomAXYJ1Pva0AX7cnD4,357
+functional_itertools/utilities.py,sha256=IDqC1XXyEumiafpWg_87BWADg0i7H2lJh3GToXe4QbI,1373
+functional_itertools/methods/__init__.py,sha256=U4S_2y3zgLZVfMenHRaJFBW8yqh2mUBuI291LGQVOJ8,35
+functional_itertools/methods/base.py,sha256=HUPrCiwwPQhFhs47uPljRq1gVn3I9_iDRDonNrfVi_Q,847
+functional_itertools/methods/builtins.py,sha256=c-amoy35dDxMMFmHwvKZ9DFWdQ-_EZzoo09SHLn9XcY,5338
+functional_itertools/methods/itertools.py,sha256=E8BXAKbvSTlTeBoFW0YOTgg1fmnqdgkgNzXDgQt6Fgg,2769
+tests/test_methods/__init__.py,sha256=U4S_2y3zgLZVfMenHRaJFBW8yqh2mUBuI291LGQVOJ8,35
+tests/test_methods/test_builtins.py,sha256=aDVrbQUj_-zmLqX9_Gl7JOoq0qKIlA5VChlPEWAA-cU,7078
+tests/test_methods/test_itertools.py,sha256=m0WjWHBfCagyKQJyzV2Mg-kbpTrVhpFXU5iXRtxbTMI,15138
+tests/test_methods/test_multiprocessing.py,sha256=C2UpV4mNHOf6z0clD0NbgmfXtOBBjXmnYZtOGL1esuk,1690
+functional_itertools-0.9.10.dist-info/METADATA,sha256=E077PnMsUlpU-zFvU7wkGb-Tp3e14VnzE1DvR5skLLo,440
+functional_itertools-0.9.10.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+functional_itertools-0.9.10.dist-info/top_level.txt,sha256=UgotIYKCrx6VmZl4Ec5PlU-pcKptrsqwbE4rELx1En0,27
+functional_itertools-0.9.10.dist-info/RECORD,,
