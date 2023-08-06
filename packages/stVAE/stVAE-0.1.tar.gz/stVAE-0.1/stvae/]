@@ -1,0 +1,20 @@
+from config import Config
+
+
+
+class stVAE:
+    def __init__(self, cfg: Config):
+        self.model = model
+        self.cfg = cfg
+
+    def train(self, train_data,
+              validation_data,
+              random_seed=0):
+        pass
+
+    def test(test_data,
+             custom_metrics = []):
+        pass
+
+    def set_config(self, cfg: Config):
+        self.cfg = cfg
