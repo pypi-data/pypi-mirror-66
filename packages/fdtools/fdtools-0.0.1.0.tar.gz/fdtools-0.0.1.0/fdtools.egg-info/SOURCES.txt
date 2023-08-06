@@ -1,0 +1,11 @@
+README.md
+setup.py
+fdtools/__init__.py
+fdtools.egg-info/PKG-INFO
+fdtools.egg-info/SOURCES.txt
+fdtools.egg-info/dependency_links.txt
+fdtools.egg-info/top_level.txt
+fdtools/dirtools/__init__.py
+fdtools/dirtools/core.py
+fdtools/filetools/__init__.py
+fdtools/filetools/core.py
