@@ -1,0 +1,10 @@
+LICENSE.rst
+README.rst
+setup.cfg
+setup.py
+minerva_py/__init__.py
+minerva_py/__main__.py
+minerva_python.egg-info/PKG-INFO
+minerva_python.egg-info/SOURCES.txt
+minerva_python.egg-info/dependency_links.txt
+minerva_python.egg-info/top_level.txt
