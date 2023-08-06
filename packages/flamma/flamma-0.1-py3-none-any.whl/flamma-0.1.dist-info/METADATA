@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: flamma
+Version: 0.1
+Summary: "FLAMMA gcode laser tools" is a comprehensive suite of opensource laser cutting and engraving extensions for Inkscape >= 1.0
+Home-page: https://github.com/PadLex/FLAMMA-gcode-laser-tools
+Author: Alexander Padula
+Author-email: amberscript.contact@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: PyQt5
+Requires-Dist: meshcut
+
+# FLAMMA - gcode laser tools
+Flamma is a comprehensive suite of laser cutting and engraving extensions for Inkscape. 
+
+
