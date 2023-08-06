@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: varmeth
+Version: 0.0.1
+Summary: Method variant decorator
+Home-page: https://github.com/digitronik/varmeth
+Author: Peter Savage, Milan Falesnik
+Author-email: psavage@redhat.com
+Maintainer: Peter Savage
+Maintainer-email: psavage@redhat.com
+License: UNKNOWN
+Description: <h1 align="center"> varmeth </h1>
+        <h2 align="center"> Method Variant Decorator </h2>
+        
+        This is simple library providing decorator to invoke different variant of class methods.
+        
+        ## Installation and usage
+        
+        ### Installation
+        
+        _varmeth_ can be installed by running `pip install varmeth`
+        
+Keywords: varmeth,decorator,method variant
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown

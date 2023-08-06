@@ -1,0 +1,17 @@
+.gitignore
+.pre-commit-config.yaml
+LICENSE
+README.md
+noxfile.py
+setup.cfg
+setup.py
+.github/workflows/release.yml
+.github/workflows/tests.yml
+src/varmeth/__init__.py
+src/varmeth.egg-info/PKG-INFO
+src/varmeth.egg-info/SOURCES.txt
+src/varmeth.egg-info/dependency_links.txt
+src/varmeth.egg-info/not-zip-safe
+src/varmeth.egg-info/top_level.txt
+tests/__init__.py
+tests/test_varmeth.py
