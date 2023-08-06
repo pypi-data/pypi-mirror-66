@@ -1,0 +1,16 @@
+comickaze/Comickaze.py,sha256=aN8hxIf27oc3qIrG39yWWPh0HE8Bic_yqkOXSvbolDc,7741
+comickaze/Converter.py,sha256=qkH-HJ4LghrUcZhXZkdtnwdrbLi6G0sJaoIesdmXF6I,2212
+comickaze/Downloader.py,sha256=ZrQzrCfmfWFOJvUXcJNNob6sB87RkeItB1K2rMJpaNo,6296
+comickaze/__init__.py,sha256=vR29n9qe6PEKlbQJgaMVZGllyOo4i0xQ89b43rnJvhU,164
+comickaze/exceptions.py,sha256=GQxaNtDS9sh45HQRV4LPui5xZlzO7aFaZRdWceMKBpM,44
+comickaze/util.py,sha256=xnr3QyoXP6eWw8XH6Q0CTyId5uJfQ8w3GboOeYvGmJU,1353
+comickaze/objects/Chapter.py,sha256=vdUFEyVlxaeI-V2WJfyNgKov7Xcin58Crr7SHRamzcs,792
+comickaze/objects/Comic.py,sha256=3o06k037MUXGJs20azqxf1o_bLzXBNW-E3dKyU4kHlQ,1794
+comickaze/objects/Suggestion.py,sha256=adpS1YkkP9stE1gBZ44SkntMjWgoTnxEr1A1yFx4wO4,572
+comickaze/objects/__init__.py,sha256=oodRmagQKorshe4zYisB5ur8M6IqbU65nZc1b6_Dd5U,92
+Comickaze-2.0.0.dist-info/LICENSE,sha256=CAvHoZH2ovnZMppXlm5q4mCp2_uuDaEhjiid2xPAa_4,1059
+Comickaze-2.0.0.dist-info/METADATA,sha256=YQB4-DqMi0q8cAL-G-Wx8KZhLPjFKuEDrYk_rVDR-kM,1922
+Comickaze-2.0.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+Comickaze-2.0.0.dist-info/entry_points.txt,sha256=DW4HmGL9M0n8M9kTZKzXshHGI1AbID7zjA6jeLhsrSM,57
+Comickaze-2.0.0.dist-info/top_level.txt,sha256=aOrEGXM_sdfAjy_hqkLZ9iPURUK5aNl54DfiGQ-tbDg,10
+Comickaze-2.0.0.dist-info/RECORD,,
