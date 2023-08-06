@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: city-graph
+Version: 0.1
+Summary: Framework for representing a city and moving in it
+Home-page: https://github.com/MPI-IS/CityGraph.git
+Author: Jean Claude Passy, Ivan Oreshnikov, Vincent Berenz
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: networkx
+
+UNKNOWN
+
+
