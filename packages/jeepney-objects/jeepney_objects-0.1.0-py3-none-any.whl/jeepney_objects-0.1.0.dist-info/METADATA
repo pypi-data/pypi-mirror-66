@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: jeepney-objects
+Version: 0.1.0
+Summary: Publish and manage pure python DBus objects
+Home-page: https://github.com/ocaballeror/jeepney-objects
+Author: Oscar Caballero
+Author-email: ocaballeror@tutanota.com
+License: GNU General Public License, Version 3
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.5
+Requires-Dist: jeepney
+
+Publish and manage pure python DBus objects
+
+
