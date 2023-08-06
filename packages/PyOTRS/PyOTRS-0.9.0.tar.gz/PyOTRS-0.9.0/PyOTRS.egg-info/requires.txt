@@ -1,0 +1,6 @@
+requests
+deprecation
+
+[cli]
+click
+colorama
