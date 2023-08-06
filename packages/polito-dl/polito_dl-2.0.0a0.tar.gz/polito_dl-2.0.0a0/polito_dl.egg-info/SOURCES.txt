@@ -1,0 +1,14 @@
+README.md
+setup.py
+polito_dl/__init__.py
+polito_dl/auth.py
+polito_dl/cli.py
+polito_dl/client.py
+polito_dl/parsing.py
+polito_dl/scraping.py
+polito_dl.egg-info/PKG-INFO
+polito_dl.egg-info/SOURCES.txt
+polito_dl.egg-info/dependency_links.txt
+polito_dl.egg-info/entry_points.txt
+polito_dl.egg-info/requires.txt
+polito_dl.egg-info/top_level.txt
