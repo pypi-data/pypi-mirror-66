@@ -1,0 +1,77 @@
+import warnings
+from typing import TYPE_CHECKING, Awaitable, Dict
+
+import discord
+
+from .commands import admin, admin_or_permissions, bot_has_permissions
+from .commands import check as _check_decorator
+from .commands import (
+    guildowner,
+    guildowner_or_permissions,
+    has_permissions,
+    is_owner,
+    mod,
+    mod_or_permissions,
+)
+from .utils.mod import check_permissions as _check_permissions
+from .utils.mod import is_admin_or_superior as _is_admin_or_superior
+from .utils.mod import is_mod_or_superior as _is_mod_or_superior
+
+if TYPE_CHECKING:
+    from .bot import Kron
+    from .commands import Context
+
+__all__ = [
+    "bot_has_permissions",
+    "has_permissions",
+    "is_owner",
+    "guildowner",
+    "guildowner_or_permissions",
+    "admin",
+    "admin_or_permissions",
+    "mod",
+    "mod_or_permissions",
+    "is_mod_or_superior",
+    "is_admin_or_superior",
+    "bot_in_a_guild",
+    "check_permissions",
+]
+
+
+def bot_in_a_guild():
+    """Deny the command if the bot is not in a guild."""
+
+    async def predicate(ctx):
+        return len(ctx.bot.guilds) > 0
+
+    return _check_decorator(predicate)
+
+
+def is_mod_or_superior(ctx: "Context") -> Awaitable[bool]:
+    warnings.warn(
+        "`kronbot.core.checks.is_mod_or_superior` is deprecated and will be removed in a future "
+        "release, please use `kronbot.core.utils.mod.is_mod_or_superior` instead.",
+        category=DeprecationWarning,
+        stacklevel=2,
+    )
+    return _is_mod_or_superior(ctx.bot, ctx.author)
+
+
+def is_admin_or_superior(ctx: "Context") -> Awaitable[bool]:
+    warnings.warn(
+        "`kronbot.core.checks.is_admin_or_superior` is deprecated and will be removed in a future "
+        "release, please use `kronbot.core.utils.mod.is_admin_or_superior` instead.",
+        category=DeprecationWarning,
+        stacklevel=2,
+    )
+    return _is_admin_or_superior(ctx.bot, ctx.author)
+
+
+def check_permissions(ctx: "Context", perms: Dict[str, bool]) -> Awaitable[bool]:
+    warnings.warn(
+        "`kronbot.core.checks.check_permissions` is deprecated and will be removed in a future "
+        "release, please use `kronbot.core.utils.mod.check_permissions`.",
+        DeprecationWarning,
+        stacklevel=2,
+    )
+    return _check_permissions(ctx, perms)

@@ -1,0 +1,130 @@
+Metadata-Version: 2.1
+Name: Kr0nOs
+Version: 3.4
+Summary: A highly customisable Discord bot
+Home-page: https://github.com/kablekompany/Kr0nOs
+Author: Kable
+Author-email: trent@kablekompany.com
+License: GPL-3.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: AsyncIO
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Documentation :: Sphinx
+Requires-Python: >=3.8.1
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Requires-Dist: discord
+Requires-Dist: schema
+Requires-Dist: pyyaml
+Requires-Dist: pytest
+Requires-Dist: distro
+Requires-Dist: pip
+Requires-Dist: aiohttp
+Requires-Dist: colorama
+Requires-Dist: appdirs
+Requires-Dist: babel
+Requires-Dist: apsw
+Requires-Dist: fuzzywuzzy
+Requires-Dist: click
+Requires-Dist: packaging
+Requires-Dist: uvloop
+Requires-Dist: motor
+Requires-Dist: pymongo
+Requires-Dist: asyncpg
+Requires-Dist: lavalink
+Requires-Dist: tqdm
+Requires-Dist: yarl
+Provides-Extra: docs
+Requires-Dist: alabaster (==0.7.12) ; extra == 'docs'
+Requires-Dist: certifi (==2019.11.28) ; extra == 'docs'
+Requires-Dist: docutils (==0.16) ; extra == 'docs'
+Requires-Dist: imagesize (==1.2.0) ; extra == 'docs'
+Requires-Dist: incremental (==17.5.0) ; extra == 'docs'
+Requires-Dist: Jinja2 (==2.11.1) ; extra == 'docs'
+Requires-Dist: MarkupSafe (==1.1.1) ; extra == 'docs'
+Requires-Dist: packaging (==20.1) ; extra == 'docs'
+Requires-Dist: Pygments (==2.5.2) ; extra == 'docs'
+Requires-Dist: pyparsing (==2.4.6) ; extra == 'docs'
+Requires-Dist: requests (==2.23.0) ; extra == 'docs'
+Requires-Dist: six (==1.14.0) ; extra == 'docs'
+Requires-Dist: snowballstemmer (==2.0.0) ; extra == 'docs'
+Requires-Dist: Sphinx (==2.4.3) ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme (==0.4.3) ; extra == 'docs'
+Requires-Dist: sphinxcontrib-applehelp (==1.0.1) ; extra == 'docs'
+Requires-Dist: sphinxcontrib-devhelp (==1.0.1) ; extra == 'docs'
+Requires-Dist: sphinxcontrib-htmlhelp (==1.0.3) ; extra == 'docs'
+Requires-Dist: sphinxcontrib-jsmath (==1.0.1) ; extra == 'docs'
+Requires-Dist: sphinxcontrib-qthelp (==1.0.2) ; extra == 'docs'
+Requires-Dist: sphinxcontrib-serializinghtml (==1.1.3) ; extra == 'docs'
+Requires-Dist: sphinxcontrib-trio (==1.1.0) ; extra == 'docs'
+Requires-Dist: towncrier (==19.2.0) ; extra == 'docs'
+Requires-Dist: urllib3 (==1.25.8) ; extra == 'docs'
+Provides-Extra: postgres
+Requires-Dist: asyncpg (==0.20.1) ; extra == 'postgres'
+Provides-Extra: style
+Requires-Dist: black (==19.10b0) ; extra == 'style'
+Requires-Dist: pathspec (==0.7.0) ; extra == 'style'
+Requires-Dist: regex (==2020.2.20) ; extra == 'style'
+Requires-Dist: toml (==0.10.0) ; extra == 'style'
+Requires-Dist: typed-ast (==1.4.1) ; extra == 'style'
+Provides-Extra: test
+Requires-Dist: astroid (==2.3.3) ; extra == 'test'
+Requires-Dist: isort (==4.3.21) ; extra == 'test'
+Requires-Dist: lazy-object-proxy (==1.4.3) ; extra == 'test'
+Requires-Dist: mccabe (==0.6.1) ; extra == 'test'
+Requires-Dist: more-itertools (==8.2.0) ; extra == 'test'
+Requires-Dist: packaging (==20.1) ; extra == 'test'
+Requires-Dist: pluggy (==0.13.1) ; extra == 'test'
+Requires-Dist: py (==1.8.1) ; extra == 'test'
+Requires-Dist: pylint (==2.4.4) ; extra == 'test'
+Requires-Dist: pyparsing (==2.4.6) ; extra == 'test'
+Requires-Dist: pytest (==5.3.5) ; extra == 'test'
+Requires-Dist: pytest-asyncio (==0.10.0) ; extra == 'test'
+Requires-Dist: pytest-mock (==2.0.0) ; extra == 'test'
+Requires-Dist: six (==1.14.0) ; extra == 'test'
+Requires-Dist: wcwidth (==0.1.8) ; extra == 'test'
+Requires-Dist: wrapt (==1.11.2) ; extra == 'test'
+
+<h1 align="center">
+  <br>
+  <a href="https://github.com/kablekompany/Kr0nOs/tree/master"><img src="https://kable.tk/50jcb" alt="Kr0nOs"></a>
+  <br>
+  Kr0nOs Discord Bot
+  <br>
+</h1>
+
+<p align="center">
+  <a href="https://kable.lol/discord">
+    <img src="https://discordapp.com/api/guilds/604469555380617256/widget.png?style=shield" alt="Discord Server">
+  </a>
+  <a href="https://www.patreon.com/kablekompany">
+    <img src="https://img.shields.io/badge/Support-Kr0nOs-blue.svg" alt="Support Kr0nOs on Patreon!">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/kablekompany/Kr0nOs/workflows/Lint%20Python">
+    <img src="https://github.com/kablekompany/Kr0nOs/workflows/Lint%20Python/badge.svg" alt="Code Check">
+  </a>
+  <a href="https://github.com/ambv/black">
+    <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code Style: Black">
+  </a>
+  </p>
+
+  <p align="center">
+    <a href="https://github.com/Rapptz/discord.py/">
+      <img src="https://img.shields.io/badge/discord-py-yellow.svg" alt="discord.py">
+  </a>
+    <a href="https://www.python.org/downloads/">
+    <img src="https://img.shields.io/badge/Made%20With-Python%203.8-blue.svg?style=for-the-badge" alt="Made with Python 3.8">
+  </a>
+</p>
+
+
