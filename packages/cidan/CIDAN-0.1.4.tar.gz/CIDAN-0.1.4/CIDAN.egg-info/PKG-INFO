@@ -1,0 +1,25 @@
+Metadata-Version: 1.0
+Name: CIDAN
+Version: 0.1.4
+Summary: CIDAN-Calcium Imaging Data ANalysis
+Home-page: UNKNOWN
+Author: Sam Schickler
+Author-email: sschickl@ucsd.edu
+License: MIT
+Description: # CIDAN
+        
+        # Install Instructions
+        1. Make sure you have anaconda installed.
+        2. Then download the requirements.txt file.
+        3. In the same directory where it is located
+        run these commands:
+        
+        ```
+        conda create -n CIDAN python=3.7
+        conda activate CIDAN
+        pip install -r requirements.txt
+        python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps CIDAN
+        python -m CIDAN
+        ```
+         
+Platform: UNKNOWN
