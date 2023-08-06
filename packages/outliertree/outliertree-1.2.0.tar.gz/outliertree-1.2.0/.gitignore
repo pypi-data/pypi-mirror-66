@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+.directory
+MANIFEST
+
+
+# dist files
+dist/
+*.zip
+*.tar.gz
+
+build/
+	*.*
+
+*.so
+*.o
+*.a
+*.lib
+*.obj
+*.dynlib
+*.dll
+*.pyd
+*.Rproj
+test.py
+
+outliertree/
+	*.so
+	outlier_cpp_interface.cpp
+
+outliertree.egg-info/
+	*
+
+build/
+	*
+.Rproj.user
+.Rhistory
