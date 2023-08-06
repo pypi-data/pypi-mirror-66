@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: nsi_utils
+Version: 0.1
+Summary: Official package of the NSI corporation
+Home-page: https://github.com/user/LutinDesMontagnes
+Author: LutinDesMontagnes
+Author-email: timothe.ioos@deys.me
+License: MIT
+Download-URL: https://github.com/LutinDesMontagnes/nsi_utils/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: NSI,MECHANTE,ST GE
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
