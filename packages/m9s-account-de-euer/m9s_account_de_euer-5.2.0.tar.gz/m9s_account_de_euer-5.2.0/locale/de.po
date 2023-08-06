@@ -1,0 +1,2252 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "model:account.account.template,name:acc_expense"
+msgid "Betriebsausgaben"
+msgstr "Betriebsausgaben"
+
+msgctxt "model:account.account.template,name:acc_expense_255"
+msgid "Umsatzsteuer/Vorsteuer"
+msgstr "Umsatzsteuer/Vorsteuer"
+
+msgctxt "model:account.account.template,name:acc_expense_50"
+msgid "Personalkosten (z.B. Gehälter, Löhne und Versicherungsbeiträge)"
+msgstr "Personalkosten (z.B. Gehälter, Löhne und Versicherungsbeiträge)"
+
+msgctxt ""
+"model:account.account.template,name:acc_expense_deductible_operating_costs"
+msgid "Sonstige Betriebsausgaben"
+msgstr "Sonstige Betriebsausgaben"
+
+msgctxt "model:account.account.template,name:acc_expense_depreciation"
+msgid "Absetzung für Abnutzung (AfA)"
+msgstr "Absetzung für Abnutzung (AfA)"
+
+msgctxt "model:account.account.template,name:acc_expense_depreciation_general"
+msgid "Abschreibungen"
+msgstr "Abschreibungen"
+
+msgctxt ""
+"model:account.account.template,name:acc_expense_limited_deductible_operating_costs"
+msgid "beschränkt abziehbare Betriebsausgaben (§ 4 Abs. 5 EStG) "
+msgstr "beschränkt abziehbare Betriebsausgaben (§ 4 Abs. 5 EStG) "
+
+msgctxt "model:account.account.template,name:acc_expense_not_allowed"
+msgid "nicht abziehbare Betriebsausgaben"
+msgstr "nicht abziehbare Betriebsausgaben"
+
+msgctxt "model:account.account.template,name:acc_expense_occupancy"
+msgid "Raumkosten"
+msgstr "Raumkosten"
+
+msgctxt "model:account.account.template,name:acc_expense_vehicle"
+msgid "Kraftfahrzeugkosten und andere Fahrtkosten"
+msgstr "Kraftfahrzeugkosten und andere Fahrtkosten"
+
+msgctxt "model:account.account.template,name:acc_income"
+msgid "Einnahmen"
+msgstr "Einnahmen"
+
+msgctxt "model:account.account.template,name:acc_income_160"
+msgid "Berichtigungsposten Forderungen (IST-Versteuerung)"
+msgstr "Berichtigungsposten Forderungen (IST-Versteuerung)"
+
+msgctxt "model:account.account.template,name:acc_income_40"
+msgid "Umsatzsteuer"
+msgstr "Umsatzsteuer"
+
+msgctxt "model:account.account.template,name:acc_income_5"
+msgid "Einnahmen aus betrieblicher Tätigkeit"
+msgstr "Einnahmen aus betrieblicher Tätigkeit"
+
+msgctxt "model:account.account.template,name:acc_income_75"
+msgid "sonstige Einnahmen"
+msgstr "sonstige Einnahmen"
+
+msgctxt "model:account.account.template,name:acc_income_expense"
+msgid "Gewinn/Verlust"
+msgstr "Gewinn/Verlust"
+
+msgctxt "model:account.account.template,name:acc_minus"
+msgid "sonstige Aufwendungen"
+msgstr "sonstige Aufwendungen"
+
+msgctxt "model:account.account.template,name:acc_other"
+msgid "sonstige Konten"
+msgstr "sonstige Konten"
+
+msgctxt "model:account.account.template,name:acc_payable_view"
+msgid "Berichtigungsposten Verbindlichkeiten (IST-Versteuerung)"
+msgstr "Berichtigungsposten Verbindlichkeiten (IST-Versteuerung)"
+
+msgctxt "model:account.account.template,name:account_template_0320"
+msgid "PKW"
+msgstr "PKW"
+
+msgctxt "model:account.account.template,name:account_template_0400"
+msgid "Betriebsausstattung"
+msgstr "Betriebsausstattung"
+
+msgctxt "model:account.account.template,name:account_template_0480"
+msgid "Geringwertige WG"
+msgstr "Geringwertige WG"
+
+msgctxt "model:account.account.template,name:account_template_0485"
+msgid "Geringwertige WG Sammelposten"
+msgstr "Geringwertige WG Sammelposten"
+
+msgctxt "model:account.account.template,name:account_template_1000"
+msgid "Kasse"
+msgstr "Kasse"
+
+msgctxt "model:account.account.template,name:account_template_1200"
+msgid "Bank"
+msgstr "Bank"
+
+msgctxt "model:account.account.template,name:account_template_1210"
+msgid "Bank 1"
+msgstr "Bank 1"
+
+msgctxt "model:account.account.template,name:account_template_1220"
+msgid "Bank 2"
+msgstr "Bank 2"
+
+msgctxt "model:account.account.template,name:account_template_1230"
+msgid "Bank 3"
+msgstr "Bank 3"
+
+msgctxt "model:account.account.template,name:account_template_1240"
+msgid "Bank 4"
+msgstr "Bank 4"
+
+msgctxt "model:account.account.template,name:account_template_1250"
+msgid "Bank 5"
+msgstr "Bank 5"
+
+msgctxt "model:account.account.template,name:account_template_1360"
+msgid "Geldtransit"
+msgstr "Geldtransit"
+
+msgctxt "model:account.account.template,name:account_template_1371"
+msgid "Gewinnermittlung §4/3 nicht ergebnisw"
+msgstr "Gewinnermittlung §4/3 nicht ergebnisw"
+
+msgctxt "model:account.account.template,name:account_template_1400"
+msgid "Forderungen"
+msgstr "Forderungen"
+
+msgctxt "model:account.account.template,name:account_template_1518"
+msgid "Geleistete Anzahlungen 19% USt"
+msgstr "Geleistete Anzahlungen 19% USt"
+
+msgctxt "model:account.account.template,name:account_template_1571"
+msgid "Abziehbare Vorsteuer 7%"
+msgstr "Abziehbare Vorsteuer 7%"
+
+msgctxt "model:account.account.template,name:account_template_1572"
+msgid "Abziehbare Vorsteuer aus EU-Erwerb"
+msgstr "Abziehbare Vorsteuer aus EU-Erwerb"
+
+msgctxt "model:account.account.template,name:account_template_1574"
+msgid "Abziehbare Vorsteuer aus EU-Erwerb 19%"
+msgstr "Abziehbare Vorsteuer aus EU-Erwerb 19%"
+
+msgctxt "model:account.account.template,name:account_template_1576"
+msgid "Abziehbare Vorsteuer 19%"
+msgstr "Abziehbare Vorsteuer 19%"
+
+msgctxt "model:account.account.template,name:account_template_1577"
+msgid "Abziehbare Vorsteuer § 13b UStG 19%"
+msgstr "Abziehbare Vorsteuer § 13b UStG 19%"
+
+msgctxt "model:account.account.template,name:account_template_1578"
+msgid "Abziehbare Vorsteuer § 13b UStG"
+msgstr "Abziehbare Vorsteuer § 13b UStG"
+
+msgctxt "model:account.account.template,name:account_template_1588"
+msgid "Einfuhr-Umsatzsteuer"
+msgstr "Einfuhr-Umsatzsteuer"
+
+msgctxt "model:account.account.template,name:account_template_1590"
+msgid "Durchlaufende Posten"
+msgstr "Durchlaufende Posten"
+
+msgctxt "model:account.account.template,name:account_template_1600"
+msgid "Verbindlichkeiten"
+msgstr "Verbindlichkeiten"
+
+msgctxt "model:account.account.template,name:account_template_1700"
+msgid "Sonstige Verbindlichkeiten"
+msgstr "Sonstige Verbindlichkeiten"
+
+msgctxt "model:account.account.template,name:account_template_1718"
+msgid "Erhaltene Anzahlungen 19% USt"
+msgstr "Erhaltene Anzahlungen 19% USt"
+
+msgctxt "model:account.account.template,name:account_template_1761"
+msgid "Umsatzsteuer nicht fällig 7%"
+msgstr "Umsatzsteuer nicht fällig 7%"
+
+msgctxt "model:account.account.template,name:account_template_1762"
+msgid "USt nicht fällig, EU-Lieferungen"
+msgstr "USt nicht fällig, EU-Lieferungen"
+
+msgctxt "model:account.account.template,name:account_template_1764"
+msgid "USt nicht fällig, EU-Lieferungen 19%"
+msgstr "USt nicht fällig, EU-Lieferungen 19%"
+
+msgctxt "model:account.account.template,name:account_template_1766"
+msgid "Umsatzsteuer nicht fällig 19%"
+msgstr "Umsatzsteuer nicht fällig 19%"
+
+msgctxt "model:account.account.template,name:account_template_1770"
+msgid "Umsatzsteuer"
+msgstr "Umsatzsteuer"
+
+msgctxt "model:account.account.template,name:account_template_1771"
+msgid "Umsatzsteuer 7%"
+msgstr "Umsatzsteuer 7%"
+
+msgctxt "model:account.account.template,name:account_template_1772"
+msgid "Umsatzsteuer aus EU-Erwerb"
+msgstr "Umsatzsteuer aus EU-Erwerb"
+
+msgctxt "model:account.account.template,name:account_template_1774"
+msgid "Umsatzsteuer aus EU-Erwerb 19%"
+msgstr "Umsatzsteuer aus EU-Erwerb 19%"
+
+msgctxt "model:account.account.template,name:account_template_1776"
+msgid "Umsatzsteuer 19%"
+msgstr "Umsatzsteuer 19%"
+
+msgctxt "model:account.account.template,name:account_template_1777"
+msgid "Umsatzsteuer EU-Lieferungen"
+msgstr "Umsatzsteuer EU-Lieferungen"
+
+msgctxt "model:account.account.template,name:account_template_1778"
+msgid "Umsatzsteuer EU-Lieferungen 19%"
+msgstr "Umsatzsteuer EU-Lieferungen 19%"
+
+msgctxt "model:account.account.template,name:account_template_1780"
+msgid "Umsatzsteuervorauszahlungen"
+msgstr "Umsatzsteuervorauszahlungen"
+
+msgctxt "model:account.account.template,name:account_template_1781"
+msgid "Umsatzsteuervorauszahlungen 1/11"
+msgstr "Umsatzsteuervorauszahlungen 1/11"
+
+msgctxt "model:account.account.template,name:account_template_1785"
+msgid "Umsatzsteuer nach § 13b UStG"
+msgstr "Umsatzsteuer nach § 13b UStG"
+
+msgctxt "model:account.account.template,name:account_template_1787"
+msgid "Umsatzsteuer nach § 13b UStG 19%"
+msgstr "Umsatzsteuer nach § 13b UStG 19%"
+
+msgctxt "model:account.account.template,name:account_template_1800"
+msgid "Privatentnahmen allgemein"
+msgstr "Privatentnahmen allgemein"
+
+msgctxt "model:account.account.template,name:account_template_1810"
+msgid "Privatsteuern"
+msgstr "Privatsteuern"
+
+msgctxt "model:account.account.template,name:account_template_1820"
+msgid "Sonderausgaben beschränkt abzugsfähig"
+msgstr "Sonderausgaben beschränkt abzugsfähig"
+
+msgctxt "model:account.account.template,name:account_template_1830"
+msgid "Sonderausgaben unbeschränkt abzugsfähig"
+msgstr "Sonderausgaben unbeschränkt abzugsfähig"
+
+msgctxt "model:account.account.template,name:account_template_1840"
+msgid "Zuwendungen, Spenden"
+msgstr "Zuwendungen, Spenden"
+
+msgctxt "model:account.account.template,name:account_template_1850"
+msgid "Außergewöhnliche Belastungen"
+msgstr "Außergewöhnliche Belastungen"
+
+msgctxt "model:account.account.template,name:account_template_1880"
+msgid "Unentgeltliche Wertabgaben"
+msgstr "Unentgeltliche Wertabgaben"
+
+msgctxt "model:account.account.template,name:account_template_1890"
+msgid "Privateinlagen"
+msgstr "Privateinlagen"
+
+msgctxt "model:account.account.template,name:account_template_2150"
+msgid "Aufwendungen aus Währungsumrechnungen"
+msgstr "Aufwendungen aus Währungsumrechnungen"
+
+msgctxt "model:account.account.template,name:account_template_2310"
+msgid "Abgänge Sachanlagen Restbuchwert"
+msgstr "Abgänge Sachanlagen Restbuchwert"
+
+msgctxt "model:account.account.template,name:account_template_2660"
+msgid "Erträge aus Währungsumrechnungen"
+msgstr "Erträge aus Währungsumrechnungen"
+
+msgctxt "model:account.account.template,name:account_template_3200"
+msgid "Waren, Roh-, Hilfs- und Betriebsstoffe"
+msgstr "Waren, Roh-, Hilfs- und Betriebsstoffe"
+
+msgctxt "model:account.account.template,name:account_template_3610"
+msgid "Nicht abziehbare Vorsteuer 7%"
+msgstr "Nicht abziehbare Vorsteuer 7%"
+
+msgctxt "model:account.account.template,name:account_template_3660"
+msgid "Nicht abziehbare Vorsteuer 19%"
+msgstr "Nicht abziehbare Vorsteuer 19%"
+
+msgctxt "model:account.account.template,name:account_template_3850"
+msgid "Zölle und Einfuhrabgaben"
+msgstr "Zölle und Einfuhrabgaben"
+
+msgctxt "model:account.account.template,name:account_template_4100"
+msgid "Löhne und Gehälter"
+msgstr "Löhne und Gehälter"
+
+msgctxt "model:account.account.template,name:account_template_4130"
+msgid "Gesetzliche Sozialaufwendungen"
+msgstr "Gesetzliche Sozialaufwendungen"
+
+msgctxt "model:account.account.template,name:account_template_4138"
+msgid "Beiträge zur Berufsgenossenschaft"
+msgstr "Beiträge zur Berufsgenossenschaft"
+
+msgctxt "model:account.account.template,name:account_template_4140"
+msgid "Freiwillige soziale Aufwendung. LSt-frei"
+msgstr "Freiwillige soziale Aufwendung. LSt-frei"
+
+msgctxt "model:account.account.template,name:account_template_4145"
+msgid "Freiwillige soziale Aufwendung. LSt-pfl."
+msgstr "Freiwillige soziale Aufwendung. LSt-pfl."
+
+msgctxt "model:account.account.template,name:account_template_4190"
+msgid "Aushilfslöhne"
+msgstr "Aushilfslöhne"
+
+msgctxt "model:account.account.template,name:account_template_4199"
+msgid "Pauschale Steuer für Aushilfen"
+msgstr "Pauschale Steuer für Aushilfen"
+
+msgctxt "model:account.account.template,name:account_template_4200"
+msgid "Raumkosten"
+msgstr "Raumkosten"
+
+msgctxt "model:account.account.template,name:account_template_4360"
+msgid "Versicherungen"
+msgstr "Versicherungen"
+
+msgctxt "model:account.account.template,name:account_template_4380"
+msgid "Beiträge"
+msgstr "Beiträge"
+
+msgctxt "model:account.account.template,name:account_template_4510"
+msgid "Kfz-Steuern"
+msgstr "Kfz-Steuern"
+
+msgctxt "model:account.account.template,name:account_template_4520"
+msgid "Kfz-Versicherungen"
+msgstr "Kfz-Versicherungen"
+
+msgctxt "model:account.account.template,name:account_template_4530"
+msgid "Laufende Kfz-Betriebskosten"
+msgstr "Laufende Kfz-Betriebskosten"
+
+msgctxt "model:account.account.template,name:account_template_4540"
+msgid "Kfz-Reparaturen"
+msgstr "Kfz-Reparaturen"
+
+msgctxt "model:account.account.template,name:account_template_4600"
+msgid "Werbekosten"
+msgstr "Werbekosten"
+
+msgctxt "model:account.account.template,name:account_template_4640"
+msgid "Repräsentationskosten"
+msgstr "Repräsentationskosten"
+
+msgctxt "model:account.account.template,name:account_template_4650"
+msgid "Bewirtungskosten"
+msgstr "Bewirtungskosten"
+
+msgctxt "model:account.account.template,name:account_template_4654"
+msgid "Nicht abzugsfähige Bewirtungskosten"
+msgstr "Nicht abzugsfähige Bewirtungskosten"
+
+msgctxt "model:account.account.template,name:account_template_4673"
+msgid "Reisekosten Unternehmer, Fahrtkosten"
+msgstr "Reisekosten Unternehmer, Fahrtkosten"
+
+msgctxt "model:account.account.template,name:account_template_4674"
+msgid "Reisekosten UN Verpfleg.mehraufwand"
+msgstr "Reisekosten UN Verpfleg.mehraufwand"
+
+msgctxt "model:account.account.template,name:account_template_4676"
+msgid "Reisekosten UN Übernachtungsaufwand"
+msgstr "Reisekosten UN Übernachtungsaufwand"
+
+msgctxt "model:account.account.template,name:account_template_4806"
+msgid "Wartungskosten für Hard- und Software"
+msgstr "Wartungskosten für Hard- und Software"
+
+msgctxt "model:account.account.template,name:account_template_4830"
+msgid "Abschreibungen auf Sachanlagen"
+msgstr "Abschreibungen auf Sachanlagen"
+
+msgctxt "model:account.account.template,name:account_template_4862"
+msgid "Abschreibung Sammelposten GWG"
+msgstr "Abschreibung Sammelposten GWG"
+
+msgctxt "model:account.account.template,name:account_template_4900"
+msgid "Sonstige betriebliche Aufwendungen"
+msgstr "Sonstige betriebliche Aufwendungen"
+
+msgctxt "model:account.account.template,name:account_template_4901"
+msgid "direkt zuordenbare Aufwendungen Ausbildung"
+msgstr "direkt zuordenbare Aufwendungen Ausbildung"
+
+msgctxt "model:account.account.template,name:account_template_4909"
+msgid "Fremdleistungen und Fremdarbeiten"
+msgstr "Fremdleistungen und Fremdarbeiten"
+
+msgctxt "model:account.account.template,name:account_template_4910"
+msgid "Porto"
+msgstr "Porto"
+
+msgctxt "model:account.account.template,name:account_template_4920"
+msgid "Telefon"
+msgstr "Telefon"
+
+msgctxt "model:account.account.template,name:account_template_4930"
+msgid "Bürobedarf"
+msgstr "Bürobedarf"
+
+msgctxt "model:account.account.template,name:account_template_4940"
+msgid "Zeitschriften, Bücher"
+msgstr "Zeitschriften, Bücher"
+
+msgctxt "model:account.account.template,name:account_template_4945"
+msgid "Fortbildungskosten"
+msgstr "Fortbildungskosten"
+
+msgctxt "model:account.account.template,name:account_template_4950"
+msgid "Rechts- und Beratungskosten"
+msgstr "Rechts- und Beratungskosten"
+
+msgctxt "model:account.account.template,name:account_template_4955"
+msgid "Buchführungskosten"
+msgstr "Buchführungskosten"
+
+msgctxt "model:account.account.template,name:account_template_4957"
+msgid "Abschluss- und Prüfungskosten"
+msgstr "Abschluss- und Prüfungskosten"
+
+msgctxt "model:account.account.template,name:account_template_4970"
+msgid "Nebenkosten des Geldverkehrs"
+msgstr "Nebenkosten des Geldverkehrs"
+
+msgctxt "model:account.account.template,name:account_template_4980"
+msgid "Unterrichtsmaterial / Arbeitsmittel"
+msgstr "Unterrichtsmaterial / Arbeitsmittel"
+
+msgctxt "model:account.account.template,name:account_template_8200"
+msgid "Erlöse steuerfrei"
+msgstr "Erlöse steuerfrei"
+
+msgctxt "model:account.account.template,name:account_template_8400"
+msgid "Erlöse 19% USt"
+msgstr "Erlöse 19% USt"
+
+msgctxt "model:account.account.template,name:account_template_8924"
+msgid "Verwendung von Gegenst. (Kfz) ohne USt"
+msgstr "Verwendung von Gegenst. (Kfz) ohne USt"
+
+msgctxt "model:account.account.template,name:account_template_9000"
+msgid "Saldenvorträge Sachkonten"
+msgstr "Saldenvorträge Sachkonten"
+
+msgctxt "model:account.account.template,name:account_template_9090"
+msgid "Summenvortrag"
+msgstr "Summenvortrag"
+
+msgctxt "model:account.account.template,name:account_template_root"
+msgid "Kontenplan EÜR"
+msgstr "Kontenplan EÜR"
+
+msgctxt "model:account.account.type.template,name:acc_type_bank"
+msgid "Bank"
+msgstr "Bank"
+
+msgctxt "model:account.account.type.template,name:acc_type_cash_book"
+msgid "Kasse"
+msgstr "Kasse"
+
+msgctxt "model:account.account.type.template,name:acc_type_contra"
+msgid "Allgemeines Gegenkonto"
+msgstr "Allgemeines Gegenkonto"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense"
+msgid "Betriebsausgaben"
+msgstr "Betriebsausgaben"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_110"
+msgid "Aufwendungen für geringwertige Wirtschaftsgüter (132)"
+msgstr "Aufwendungen für geringwertige Wirtschaftsgüter (132)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_130"
+msgid ""
+"Restbuchwert der im Kalenderjahr / Wirtschaftsjahr ausgeschiedenen "
+"Anlagegüter (135)"
+msgstr ""
+"Restbuchwert der im Kalenderjahr / Wirtschaftsjahr ausgeschiedenen "
+"Anlagegüter (135)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_140"
+msgid ""
+"Tatsächliche Kraftfahrzeugkosten und andere Fahrtkosten (laufende und feste "
+"Kosten ohne AfA und Zinsen) (140)"
+msgstr ""
+"Tatsächliche Kraftfahrzeugkosten und andere Fahrtkosten (laufende und feste "
+"Kosten ohne AfA und Zinsen) (140)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_170"
+msgid ""
+"Aufwendungen für ein häusliches Arbeitszimmer (einschl. AfA und "
+"Schuldzinsen) (172)"
+msgstr ""
+"Aufwendungen für ein häusliches Arbeitszimmer (einschl. AfA und "
+"Schuldzinsen) (172)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_171"
+msgid "Verpflegungsmehraufwendungen (171)"
+msgstr "Verpflegungsmehraufwendungen (171)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_177"
+msgid "Sonstige beschränkt abziehbare Betriebsausgaben (177)"
+msgstr "Sonstige beschränkt abziehbare Betriebsausgaben (177)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_180"
+msgid ""
+"Miete / Pacht für Geschäftsräume und betrieblich genutzte Grundstücke (150)"
+msgstr ""
+"Miete / Pacht für Geschäftsräume und betrieblich genutzte Grundstücke (150)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_218"
+msgid "Gewerbesteuer (218)"
+msgstr "Gewerbesteuer (218)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_220"
+msgid "Geschenke (174)"
+msgstr "Geschenke (174)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_230"
+msgid "Bewirtungungsaufwendungen (175)"
+msgstr "Bewirtungungsaufwendungen (175)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_232"
+msgid ""
+"Schuldzinsen zur Finanzierung von Anschaffungs- und Herstellungskosten von "
+"Wirtschaftsgütern des Anlagevermögens (232)"
+msgstr ""
+"Schuldzinsen zur Finanzierung von Anschaffungs- und Herstellungskosten von "
+"Wirtschaftsgütern des Anlagevermögens (232)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_234"
+msgid "Übrige Schuldzinsen (234)"
+msgstr "Übrige Schuldzinsen (234)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_240"
+msgid "Miete/Aufwendungen für doppelte Haushaltsführung (152)"
+msgstr "Miete/Aufwendungen für doppelte Haushaltsführung (152)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_260"
+msgid "Aufwendungen für Telekommunikation (z.B. Telefon) (280)"
+msgstr "Aufwendungen für Telekommunikation (z.B. Telefon) (280)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_270"
+msgid "Fortbildungskosten (281)"
+msgstr "Fortbildungskosten (281)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_280"
+msgid "Rechts- und Steuerberatung, Buchführung (194)"
+msgstr "Rechts- und Steuerberatung, Buchführung (194)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_290"
+msgid "Übrige unbeschränkt abziehbare Betriebsausgaben (183)"
+msgstr "Übrige unbeschränkt abziehbare Betriebsausgaben (183)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_30"
+msgid "Waren, Rohstoffe und Hilfsstoffe einschl. der Nebenkosten (100)"
+msgstr "Waren, Rohstoffe und Hilfsstoffe einschl. der Nebenkosten (100)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_300"
+msgid "Gezahlte Vorsteuerbeträge (185)"
+msgstr "Gezahlte Vorsteuerbeträge (185)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_310"
+msgid "An das Finanzamt gezahlte und ggf. verrechnete Umsatzsteuer (186)"
+msgstr "An das Finanzamt gezahlte und ggf. verrechnete Umsatzsteuer (186)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_40"
+msgid "Bezogene Leistungen (z.B. Fremdleistungen) (110)"
+msgstr "Bezogene Leistungen (z.B. Fremdleistungen) (110)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_50"
+msgid ""
+"Ausgaben für eigenes Personal (z.B. Gehälter, Löhne und "
+"Versicherungsbeiträge) (120)"
+msgstr ""
+"Ausgaben für eigenes Personal (z.B. Gehälter, Löhne und "
+"Versicherungsbeiträge) (120)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_60"
+msgid ""
+"AfA auf unbewegliche Wirtschaftsgüter (ohne AfA für das häusliche "
+"Arbeitszimmer) (136)"
+msgstr ""
+"AfA auf unbewegliche Wirtschaftsgüter (ohne AfA für das häusliche "
+"Arbeitszimmer) (136)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_70"
+msgid ""
+"AfA auf immaterielle Wirtschaftsgüter (z.B. erworbene Firmen-, Geschäfts- "
+"oder Praxiswerte) (131)"
+msgstr ""
+"AfA auf immaterielle Wirtschaftsgüter (z.B. erworbene Firmen-, Geschäfts- "
+"oder Praxiswerte) (131)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_80"
+msgid "AfA auf bewegliche Wirtschaftsgüter (z.B. Maschinen, Kfz) (130)"
+msgstr "AfA auf bewegliche Wirtschaftsgüter (z.B. Maschinen, Kfz) (130)"
+
+msgctxt ""
+"model:account.account.type.template,name:acc_type_expense_deductible_operating_costs"
+msgid "Sonstige unbeschränkt abziehbare Betriebsausgaben"
+msgstr "Sonstige unbeschränkt abziehbare Betriebsausgaben"
+
+msgctxt ""
+"model:account.account.type.template,name:acc_type_expense_depreciation"
+msgid "Absetzung für Abnutzung (AfA)"
+msgstr "Absetzung für Abnutzung (AfA)"
+
+msgctxt ""
+"model:account.account.type.template,name:acc_type_expense_not_allowed"
+msgid "nicht abziehbare Betriebsausgaben"
+msgstr "nicht abziehbare Betriebsausgaben"
+
+msgctxt ""
+"model:account.account.type.template,name:acc_type_expense_not_allowed_10"
+msgid "Geschenke (nicht abziehbar) (164)"
+msgstr "Geschenke (nicht abziehbar) (164)"
+
+msgctxt ""
+"model:account.account.type.template,name:acc_type_expense_not_allowed_170"
+msgid ""
+"Aufwendungen für ein häusliches Arbeitszimmer (einschl. AfA und "
+"Schuldzinsen) (nicht abziehbar) (162)"
+msgstr ""
+"Aufwendungen für ein häusliches Arbeitszimmer (einschl. AfA und "
+"Schuldzinsen) (nicht abziehbar) (162)"
+
+msgctxt ""
+"model:account.account.type.template,name:acc_type_expense_not_allowed_20"
+msgid "Bewirtungsaufwendungen (nicht abziehbar) (165)"
+msgstr "Bewirtungsaufwendungen (nicht abziehbar) (165)"
+
+msgctxt ""
+"model:account.account.type.template,name:acc_type_expense_not_allowed_40"
+msgid ""
+"sonstige beschränkt abziehbare Betriebsausgaben (nicht abziehbar) (168)"
+msgstr ""
+"sonstige beschränkt abziehbare Betriebsausgaben (nicht abziehbar) (168)"
+
+msgctxt ""
+"model:account.account.type.template,name:acc_type_expense_not_allowed_53"
+msgid "Gewerbesteuer (nicht abziehbar) (217)"
+msgstr "Gewerbesteuer (nicht abziehbar) (217)"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_occupancy"
+msgid "Raumkosten und sonstige Grundstücksaufwendungen"
+msgstr "Raumkosten und sonstige Grundstücksaufwendungen"
+
+msgctxt "model:account.account.type.template,name:acc_type_expense_restricted"
+msgid "beschränkt abziehbare Betriebsausgaben und Gewerbesteuer"
+msgstr "beschränkt abziehbare Betriebsausgaben und Gewerbesteuer"
+
+msgctxt ""
+"model:account.account.type.template,name:acc_type_expense_restricted_10"
+msgid "Bewirtungsaufwendungen (175)"
+msgstr "Bewirtungsaufwendungen (175)"
+
+msgctxt "model:account.account.type.template,name:acc_type_income"
+msgid "Betriebseinnahmen"
+msgstr "Betriebseinnahmen"
+
+msgctxt "model:account.account.type.template,name:acc_type_income_100"
+msgid ""
+"Sonstige Sach-, Nutzungs- und Leistungsentnahmen (z.B. private "
+"Telefonnutzung) (108)"
+msgstr ""
+"Sonstige Sach-, Nutzungs- und Leistungsentnahmen (z.B. private "
+"Telefonnutzung) (108)"
+
+msgctxt "model:account.account.type.template,name:acc_type_income_160"
+msgid "Umsatzsteuer (nicht fällig)"
+msgstr "Umsatzsteuer (nicht fällig)"
+
+msgctxt "model:account.account.type.template,name:acc_type_income_40"
+msgid "Umsatzsteuerpflichtige Betriebseinnahmen (112)"
+msgstr "Umsatzsteuerpflichtige Betriebseinnahmen (112)"
+
+msgctxt "model:account.account.type.template,name:acc_type_income_50"
+msgid ""
+"Umsatzsteuerfreie, nicht umsatzsteuerbare Betriebseinnahmen sowie "
+"Betriebseinnahmen, für die der Leistungsempfänger die Umsatzsteuer nach § "
+"13b UStG schuldet (103)"
+msgstr ""
+"Umsatzsteuerfreie, nicht umsatzsteuerbare Betriebseinnahmen sowie "
+"Betriebseinnahmen, für die der Leistungsempfänger die Umsatzsteuer nach § "
+"13b UStG schuldet (103)"
+
+msgctxt "model:account.account.type.template,name:acc_type_income_60"
+msgid ""
+"Vereinnahmte Umsatzsteuer sowie Umsatzsteuer auf unentgeltliche Wertabgaben "
+"(140)"
+msgstr ""
+"Vereinnahmte Umsatzsteuer sowie Umsatzsteuer auf unentgeltliche Wertabgaben "
+"(140)"
+
+msgctxt "model:account.account.type.template,name:acc_type_income_70"
+msgid "Vom Finanzamt erstattete und ggf. verrechnete Umsatzsteuer (141)"
+msgstr "Vom Finanzamt erstattete und ggf. verrechnete Umsatzsteuer (141)"
+
+msgctxt "model:account.account.type.template,name:acc_type_income_80"
+msgid "Veräußerung oder Entnahme von Anlagevermögen (102)"
+msgstr "Veräußerung oder Entnahme von Anlagevermögen (102)"
+
+msgctxt "model:account.account.type.template,name:acc_type_income_90"
+msgid "Private Kfz-Nutzung (106)"
+msgstr "Private Kfz-Nutzung (106)"
+
+msgctxt "model:account.account.type.template,name:acc_type_income_adjustment"
+msgid "Berichtigungsposten Forderungen (IST-Versteuerung)"
+msgstr "Berichtigungsposten Forderungen (IST-Versteuerung)"
+
+msgctxt "model:account.account.type.template,name:acc_type_income_expense"
+msgid "Gewinn/Verlust (steuerlich) (219)"
+msgstr "Gewinn/Verlust (steuerlich) (219)"
+
+msgctxt "model:account.account.type.template,name:acc_type_income_expense_30"
+msgid "erwerbsbedingte Kinderbetreuungskosten (184)"
+msgstr "erwerbsbedingte Kinderbetreuungskosten (184)"
+
+msgctxt "model:account.account.type.template,name:acc_type_minus"
+msgid "sonstige Aufwendungen"
+msgstr "sonstige Aufwendungen"
+
+msgctxt "model:account.account.type.template,name:acc_type_opening_balance"
+msgid "Saldenvorträge"
+msgstr "Saldenvorträge"
+
+msgctxt "model:account.account.type.template,name:acc_type_other"
+msgid "sonstige Konten"
+msgstr "sonstige Konten"
+
+msgctxt "model:account.account.type.template,name:acc_type_payable"
+msgid "Berichtigungsposten Verbindlichkeiten (IST-Versteuerung)"
+msgstr "Berichtigungsposten Verbindlichkeiten (IST-Versteuerung)"
+
+msgctxt "model:account.account.type.template,name:acc_type_personal_draw"
+msgid "Privatentnahmen (122)"
+msgstr "Privatentnahmen (122)"
+
+msgctxt ""
+"model:account.account.type.template,name:acc_type_personal_investment"
+msgid "Privateinlagen (123)"
+msgstr "Privateinlagen (123)"
+
+msgctxt "model:account.account.type.template,name:acc_type_profit_loss"
+msgid "Gewinn/Verlust (kaufmännisch)"
+msgstr "Gewinn/Verlust (kaufmännisch)"
+
+msgctxt "model:account.account.type.template,name:acc_type_receivable"
+msgid "Forderungen"
+msgstr "Forderungen"
+
+msgctxt "model:account.account.type.template,name:acc_type_type_balance"
+msgid "Kontentypenplan EÜR"
+msgstr "Kontentypenplan EÜR"
+
+msgctxt "model:account.tax.code.template,description:21"
+msgid "Nicht steuerbare sonstige Leistungen gem. §18b Satz 1 Nr. 2 UStG"
+msgstr "Nicht steuerbare sonstige Leistungen gem. §18b Satz 1 Nr. 2 UStG"
+
+msgctxt "model:account.tax.code.template,description:35"
+msgid "zu anderen Steuersätzen"
+msgstr "zu anderen Steuersätzen"
+
+msgctxt "model:account.tax.code.template,description:35NF"
+msgid "zu anderen Steuersätzen"
+msgstr "zu anderen Steuersätzen"
+
+msgctxt "model:account.tax.code.template,description:36"
+msgid "zu anderen Steuersätzen"
+msgstr "zu anderen Steuersätzen"
+
+msgctxt "model:account.tax.code.template,description:36NF"
+msgid "zu anderen Steuersätzen"
+msgstr "zu anderen Steuersätzen"
+
+msgctxt "model:account.tax.code.template,description:39"
+msgid ""
+"Anrechnung (Abzug) der festgesetzten Sondervorauszahlung für "
+"Dauerfristverlängerung (nur auszufüllen in der letzten Voranmeldung des "
+"Besteuerungszeitraums, in der Regel Dezember)"
+msgstr ""
+"Anrechnung (Abzug) der festgesetzten Sondervorauszahlung für "
+"Dauerfristverlängerung (nur auszufüllen in der letzten Voranmeldung des "
+"Besteuerungszeitraums, in der Regel Dezember)"
+
+msgctxt "model:account.tax.code.template,description:41"
+msgid ""
+"Innergemeinschaftliche Lieferungen (§ 4 Nr. 1 Buchst. b UStG) an Abnehmer "
+"mit USt-IdNr"
+msgstr ""
+"Innergemeinschaftliche Lieferungen (§ 4 Nr. 1 Buchst. b UStG) an Abnehmer "
+"mit USt-IdNr"
+
+msgctxt "model:account.tax.code.template,description:42"
+msgid ""
+"Lieferungen des ersten Abnehmers bei innergemeinschaftlichen "
+"Dreiecksgeschäften (§ 25b Abs. 2 UStG)"
+msgstr ""
+"Lieferungen des ersten Abnehmers bei innergemeinschaftlichen "
+"Dreiecksgeschäften (§ 25b Abs. 2 UStG)"
+
+msgctxt "model:account.tax.code.template,description:43"
+msgid ""
+"Weitere steuerfreie Umsätze mit Vorsteuerabzug (z.B. Ausfuhrlieferungen, "
+"Umsätze nach § 4 Nr. 2 bis 7 UStG)"
+msgstr ""
+"Weitere steuerfreie Umsätze mit Vorsteuerabzug (z.B. Ausfuhrlieferungen, "
+"Umsätze nach § 4 Nr. 2 bis 7 UStG)"
+
+msgctxt "model:account.tax.code.template,description:44"
+msgid "neuer Fahrzeuge an Abnehmer ohne USt-IdNr"
+msgstr "neuer Fahrzeuge an Abnehmer ohne USt-IdNr"
+
+msgctxt "model:account.tax.code.template,description:45"
+msgid "Übrige nicht steuerbare Umsätze (Leistungsort nicht im Inland)"
+msgstr "Übrige nicht steuerbare Umsätze (Leistungsort nicht im Inland)"
+
+msgctxt "model:account.tax.code.template,description:46"
+msgid ""
+"Im Inland steuerpflichtige sonstige Leistungen von im übrigen "
+"Gemeinschaftsgebiet ansässigen Unternehmern (§13b Abs. 1 UStG)"
+msgstr ""
+"Im Inland steuerpflichtige sonstige Leistungen von im übrigen "
+"Gemeinschaftsgebiet ansässigen Unternehmern (§13b Abs. 1 UStG)"
+
+msgctxt "model:account.tax.code.template,description:47"
+msgid ""
+"Im Inland steuerpflichtige sonstige Leistungen von im übrigen "
+"Gemeinschaftsgebiet ansässigen Unternehmern (§ 13b Abs. 1 UStG)"
+msgstr ""
+"Im Inland steuerpflichtige sonstige Leistungen von im übrigen "
+"Gemeinschaftsgebiet ansässigen Unternehmern (§ 13b Abs. 1 UStG)"
+
+msgctxt "model:account.tax.code.template,description:48"
+msgid "Umsätze nach § 4 Nr. 8 bis 28 UStG"
+msgstr "Umsätze nach § 4 Nr. 8 bis 28 UStG"
+
+msgctxt "model:account.tax.code.template,description:49"
+msgid "neuer Fahrzeuge außerhalb eines Unternehmens (§ 2a UStG)"
+msgstr "neuer Fahrzeuge außerhalb eines Unternehmens (§ 2a UStG)"
+
+msgctxt "model:account.tax.code.template,description:52"
+msgid ""
+"Andere Leistungen eines im Ausland ansässigen Unternehmers (§ 13b Abs. 2 Nr."
+" 1 und 5 UStG)"
+msgstr ""
+"Andere Leistungen eines im Ausland ansässigen Unternehmers (§ 13b Abs. 2 Nr."
+" 1 und 5 UStG)"
+
+msgctxt "model:account.tax.code.template,description:53"
+msgid ""
+"Andere Leistungen eines im Ausland ansässigen Unternehmers (§ 13b Abs. 2 Nr."
+" 1 und 5 UStG)"
+msgstr ""
+"Andere Leistungen eines im Ausland ansässigen Unternehmers (§ 13b Abs. 2 Nr."
+" 1 und 5 UStG)"
+
+msgctxt "model:account.tax.code.template,description:59"
+msgid ""
+"Vorsteuerabzug für innergemeinschaftliche Lieferungen neuer Fahrzeuge "
+"außerhalb eines Unternehmens (§ 2a UStG) sowie von Kleinunternehmern im "
+"Sinne des § 19 Abs. 1 UStG (§ 15 Abs. 4a UStG)"
+msgstr ""
+"Vorsteuerabzug für innergemeinschaftliche Lieferungen neuer Fahrzeuge "
+"außerhalb eines Unternehmens (§ 2a UStG) sowie von Kleinunternehmern im "
+"Sinne des § 19 Abs. 1 UStG (§ 15 Abs. 4a UStG)"
+
+msgctxt "model:account.tax.code.template,description:60"
+msgid ""
+"Übrige steuerpflichtige Umsätze, für die der Leistungsempfänger die Steuer "
+"nach § 13b Abs. 5 UStG schuldet"
+msgstr ""
+"Übrige steuerpflichtige Umsätze, für die der Leistungsempfänger die Steuer "
+"nach § 13b Abs. 5 UStG schuldet"
+
+msgctxt "model:account.tax.code.template,description:61"
+msgid ""
+"Vorsteuerbeträge aus dem innergemeinschaftlichen Erwerb von Gegenständen (§ "
+"15 Abs. 1 Satz 1 Nr. 3 UStG)"
+msgstr ""
+"Vorsteuerbeträge aus dem innergemeinschaftlichen Erwerb von Gegenständen (§ "
+"15 Abs. 1 Satz 1 Nr. 3 UStG)"
+
+msgctxt "model:account.tax.code.template,description:62"
+msgid "Entrichtete Einfuhrumsatzsteuer (§ 15 Abs. 1 Satz 1 Nr. 2 UStG)"
+msgstr "Entrichtete Einfuhrumsatzsteuer (§ 15 Abs. 1 Satz 1 Nr. 2 UStG)"
+
+msgctxt "model:account.tax.code.template,description:63"
+msgid ""
+"Vorsteuerbeträge, die nach allgemeinen Durchschnittssätzen berechnet sind "
+"(§§ 23 und 23a UStG)"
+msgstr ""
+"Vorsteuerbeträge, die nach allgemeinen Durchschnittssätzen berechnet sind "
+"(§§ 23 und 23a UStG)"
+
+msgctxt "model:account.tax.code.template,description:64"
+msgid "Berichtigung des Vorsteuerabzugs (§ 15a UStG)"
+msgstr "Berichtigung des Vorsteuerabzugs (§ 15a UStG)"
+
+msgctxt "model:account.tax.code.template,description:65"
+msgid ""
+"Steuer infolge Wechsels der Besteuerungsform sowie Nachsteuer auf "
+"versteuerte Anzahlungen u. ä. wegen Steuersatzänderung"
+msgstr ""
+"Steuer infolge Wechsels der Besteuerungsform sowie Nachsteuer auf "
+"versteuerte Anzahlungen u. ä. wegen Steuersatzänderung"
+
+msgctxt "model:account.tax.code.template,description:66"
+msgid ""
+"Vorsteuerbeträge aus Rechnungen von anderen Unternehmern (§ 15 Abs. 1 Satz 1"
+" Nr. 1 UStG), aus Leistungen im Sinne des § 13a Abs. 1 Nr. 6 UStG (§ 15 Abs."
+" 1 Satz 1 Nr. 5 UStG) und aus innergemeinschaftlichen Dreiecksgeschäften (§ "
+"25b Abs. 5 UStG)"
+msgstr ""
+"Vorsteuerbeträge aus Rechnungen von anderen Unternehmern (§ 15 Abs. 1 Satz 1"
+" Nr. 1 UStG), aus Leistungen im Sinne des § 13a Abs. 1 Nr. 6 UStG (§ 15 Abs."
+" 1 Satz 1 Nr. 5 UStG) und aus innergemeinschaftlichen Dreiecksgeschäften (§ "
+"25b Abs. 5 UStG)"
+
+msgctxt "model:account.tax.code.template,description:67"
+msgid ""
+"Vorsteuerbeträge aus Leistungen im Sinne des § 13b UStG (§ 15 Abs. 1 Satz 1 "
+"Nr. 4 UStG)"
+msgstr ""
+"Vorsteuerbeträge aus Leistungen im Sinne des § 13b UStG (§ 15 Abs. 1 Satz 1 "
+"Nr. 4 UStG)"
+
+msgctxt "model:account.tax.code.template,description:68"
+msgid ""
+"Steuerpflichtige Umsätze, für die der Leistungsempfänger die Steuer nach § "
+"13b Abs. 5 Satz 1 i.V.m. Abs. 2 Nr. 10 UStG schuldet"
+msgstr ""
+"Steuerpflichtige Umsätze, für die der Leistungsempfänger die Steuer nach § "
+"13b Abs. 5 Satz 1 i.V.m. Abs. 2 Nr. 10 UStG schuldet"
+
+msgctxt "model:account.tax.code.template,description:69"
+msgid ""
+"In Rechnungen unrichtig oder unberechtigt ausgewiesene Steuerbeträge (§ 14c "
+"UStG) sowie Steuerbeträge, die nach § 4 Nr. 4a Satz 1 Buchst. a Satz 2, § 6a"
+" Abs. 4 Satz 2, § 17 Abs. 1 Satz 6 oder § 25b Abs. 2 UStG geschuldet werden"
+msgstr ""
+"In Rechnungen unrichtig oder unberechtigt ausgewiesene Steuerbeträge (§ 14c "
+"UStG) sowie Steuerbeträge, die nach § 4 Nr. 4a Satz 1 Buchst. a Satz 2, § 6a"
+" Abs. 4 Satz 2, § 17 Abs. 1 Satz 6 oder § 25b Abs. 2 UStG geschuldet werden"
+
+msgctxt "model:account.tax.code.template,description:73"
+msgid ""
+"Lieferungen sicherungsübereigneter Gegenstände und Umsätze, die unter das "
+"GrEStG fallen (§ 13b Abs. 2 Nr. 2 und 3 UStG)"
+msgstr ""
+"Lieferungen sicherungsübereigneter Gegenstände und Umsätze, die unter das "
+"GrEStG fallen (§ 13b Abs. 2 Nr. 2 und 3 UStG)"
+
+msgctxt "model:account.tax.code.template,description:74"
+msgid ""
+"Lieferungen sicherungsübereigneter Gegenstände und Umsätze, die unter das "
+"GrEStG fallen (§ 13b Abs. 2 Nr. 2 und 3 UStG)"
+msgstr ""
+"Lieferungen sicherungsübereigneter Gegenstände und Umsätze, die unter das "
+"GrEStG fallen (§ 13b Abs. 2 Nr. 2 und 3 UStG)"
+
+msgctxt "model:account.tax.code.template,description:76"
+msgid ""
+"Umsätze, für die eine Steuer nach § 24 UStG zu entrichten ist "
+"(Sägewerkserzeugnisse, Getränke und alkohol. Flüssigkeiten, z.B. Wein)"
+msgstr ""
+"Umsätze, für die eine Steuer nach § 24 UStG zu entrichten ist "
+"(Sägewerkserzeugnisse, Getränke und alkohol. Flüssigkeiten, z.B. Wein)"
+
+msgctxt "model:account.tax.code.template,description:77"
+msgid ""
+"Lieferungen in das übrige Gemeinschaftsgebiet an Abnehmer mit Ust-IdNr."
+msgstr ""
+"Lieferungen in das übrige Gemeinschaftsgebiet an Abnehmer mit Ust-IdNr."
+
+msgctxt "model:account.tax.code.template,description:78"
+msgid ""
+"Lieferungen von Mobilfunkgeräten und integrierten Schaltkreisen (§ 13b Abs. "
+"2 Nr. 10 UStG)"
+msgstr ""
+"Lieferungen von Mobilfunkgeräten und integrierten Schaltkreisen (§ 13b Abs. "
+"2 Nr. 10 UStG)"
+
+msgctxt "model:account.tax.code.template,description:79"
+msgid ""
+"Lieferungen von Mobilfunkgeräten und integrierten Schaltkreisen (§ 13b Abs. "
+"2 Nr. 10 UStG)"
+msgstr ""
+"Lieferungen von Mobilfunkgeräten und integrierten Schaltkreisen (§ 13b Abs. "
+"2 Nr. 10 UStG)"
+
+msgctxt "model:account.tax.code.template,description:80"
+msgid ""
+"Umsätze, für die eine Steuer nach § 24 UStG zu entrichten ist "
+"(Sägewerkserzeugnisse, Getränke und alkohol. Flüssigkeiten, z.B. Wein)"
+msgstr ""
+"Umsätze, für die eine Steuer nach § 24 UStG zu entrichten ist "
+"(Sägewerkserzeugnisse, Getränke und alkohol. Flüssigkeiten, z.B. Wein)"
+
+msgctxt "model:account.tax.code.template,description:81"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,description:811"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,description:811NF"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,description:81NF"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,description:83"
+msgid ""
+"Verbleibende Umsatzsteuer-Vorauszahlung / Verbleibender Überschuss - bitte "
+"dem Betrag ein Minuszeichen voranstellen"
+msgstr ""
+"Verbleibende Umsatzsteuer-Vorauszahlung / Verbleibender Überschuss - bitte "
+"dem Betrag ein Minuszeichen voranstellen"
+
+msgctxt "model:account.tax.code.template,description:84"
+msgid ""
+"Andere Umsätze eines im Inland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 4, "
+"6 bis 9 UStG)"
+msgstr ""
+"Andere Umsätze eines im Inland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 4, "
+"6 bis 9 UStG)"
+
+msgctxt "model:account.tax.code.template,description:85"
+msgid ""
+"Andere Umsätze eines im Inland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 4, "
+"6 bis 9 UStG)"
+msgstr ""
+"Andere Umsätze eines im Inland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 4, "
+"6 bis 9 UStG)"
+
+msgctxt "model:account.tax.code.template,description:86"
+msgid "zum Steuersatz von 7%"
+msgstr "zum Steuersatz von 7%"
+
+msgctxt "model:account.tax.code.template,description:861"
+msgid "zum Steuersatz von 7%"
+msgstr "zum Steuersatz von 7%"
+
+msgctxt "model:account.tax.code.template,description:861NF"
+msgid "zum Steuersatz von 7%"
+msgstr "zum Steuersatz von 7%"
+
+msgctxt "model:account.tax.code.template,description:86NF"
+msgid "zum Steuersatz von 7%"
+msgstr "zum Steuersatz von 7%"
+
+msgctxt "model:account.tax.code.template,description:89"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,description:891"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,description:91"
+msgid "Erwerbe nach §§ 4b UStG und 25c UStG"
+msgstr "Erwerbe nach §§ 4b UStG und 25c UStG"
+
+msgctxt "model:account.tax.code.template,description:93"
+msgid "zum Steuersatz von 7%"
+msgstr "zum Steuersatz von 7%"
+
+msgctxt "model:account.tax.code.template,description:931"
+msgid "zum Steuersatz von 7%"
+msgstr "zum Steuersatz von 7%"
+
+msgctxt "model:account.tax.code.template,description:94"
+msgid ""
+"neuer Fahrzeuge von Lieferern ohne USt-IdNr. zum allgemeinen Steuersatz"
+msgstr ""
+"neuer Fahrzeuge von Lieferern ohne USt-IdNr. zum allgemeinen Steuersatz"
+
+msgctxt "model:account.tax.code.template,description:95"
+msgid "zu anderen Steuersätzen"
+msgstr "zu anderen Steuersätzen"
+
+msgctxt "model:account.tax.code.template,description:96"
+msgid ""
+"neuer Fahrzeuge von Lieferern ohne USt-IdNr. zum allgemeinen Steuersatz"
+msgstr ""
+"neuer Fahrzeuge von Lieferern ohne USt-IdNr. zum allgemeinen Steuersatz"
+
+msgctxt "model:account.tax.code.template,description:98"
+msgid "zu anderen Steuersätzen"
+msgstr "zu anderen Steuersätzen"
+
+msgctxt "model:account.tax.code.template,description:AST"
+msgid "Andere Steuerbeträge"
+msgstr "Andere Steuerbeträge"
+
+msgctxt "model:account.tax.code.template,description:B"
+msgid "Bemessungsgrundlage"
+msgstr "Bemessungsgrundlage"
+
+msgctxt "model:account.tax.code.template,description:BAUS"
+msgid "Einfuhren"
+msgstr "Einfuhren"
+
+msgctxt "model:account.tax.code.template,description:BAUS19"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,description:BAUS7"
+msgid "zum Steuersatz von 7 %"
+msgstr "zum Steuersatz von 7 %"
+
+msgctxt "model:account.tax.code.template,description:BRV"
+msgid ""
+"Rechnungen von anderen Unternehmern (§ 15 Abs. 1 Satz 1 Nr. 1 UStG), "
+"Leistungen im Sinne des § 13a Abs. 1 Nr. 6 UStG (§ 15 Abs. 1 Satz 1 Nr. 5 "
+"UStG) und innergemeinschaftliche Dreiecksgeschäfte (§ 25b Abs. 5 UStG)"
+msgstr ""
+"Rechnungen von anderen Unternehmern (§ 15 Abs. 1 Satz 1 Nr. 1 UStG), "
+"Leistungen im Sinne des § 13a Abs. 1 Nr. 6 UStG (§ 15 Abs. 1 Satz 1 Nr. 5 "
+"UStG) und innergemeinschaftliche Dreiecksgeschäfte (§ 25b Abs. 5 UStG)"
+
+msgctxt "model:account.tax.code.template,description:BRV19"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,description:BRV7"
+msgid "zum Steuersatz von 7 %"
+msgstr "zum Steuersatz von 7 %"
+
+msgctxt "model:account.tax.code.template,description:BU"
+msgid "Umsatzsteuer"
+msgstr "Umsatzsteuer"
+
+msgctxt "model:account.tax.code.template,description:BUNF"
+msgid "Bemessungsgrundlage"
+msgstr "Bemessungsgrundlage"
+
+msgctxt "model:account.tax.code.template,description:BV"
+msgid "Bemessungsgrundlage Vorsteuer (dient lediglich der Verprobung)"
+msgstr "Bemessungsgrundlage Vorsteuer (dient lediglich der Verprobung)"
+
+msgctxt "model:account.tax.code.template,description:BZ18"
+msgid ""
+"Lieferungen und sonstige Leistungen (einschließlich unentgeltlicher "
+"Wertabgaben)"
+msgstr ""
+"Lieferungen und sonstige Leistungen (einschließlich unentgeltlicher "
+"Wertabgaben)"
+
+msgctxt "model:account.tax.code.template,description:BZ19"
+msgid "Steuerfreie Umsätze mit Vorsteuerabzug"
+msgstr "Steuerfreie Umsätze mit Vorsteuerabzug"
+
+msgctxt "model:account.tax.code.template,description:BZ24"
+msgid "Steuerfreie Umsätze ohne Vorsteuerabzug"
+msgstr "Steuerfreie Umsätze ohne Vorsteuerabzug"
+
+msgctxt "model:account.tax.code.template,description:BZ25"
+msgid ""
+"Steuerpflichtige Umsätze (Lieferungen und sonstige Leistungen einschl. "
+"unentgeltlicher Wertabgaben)"
+msgstr ""
+"Steuerpflichtige Umsätze (Lieferungen und sonstige Leistungen einschl. "
+"unentgeltlicher Wertabgaben)"
+
+msgctxt "model:account.tax.code.template,description:BZ31"
+msgid "Innergemeinschaftliche Erwerbe"
+msgstr "Innergemeinschaftliche Erwerbe"
+
+msgctxt "model:account.tax.code.template,description:BZ32"
+msgid "Steuerfreie innergemeinschaftliche Erwerbe"
+msgstr "Steuerfreie innergemeinschaftliche Erwerbe"
+
+msgctxt "model:account.tax.code.template,description:BZ33"
+msgid "Steuerpflichtige innergemeinschaftliche Erwerbe"
+msgstr "Steuerpflichtige innergemeinschaftliche Erwerbe"
+
+msgctxt "model:account.tax.code.template,description:BZ37"
+msgid "Ergänzende Angaben zu Umsätzen"
+msgstr "Ergänzende Angaben zu Umsätzen"
+
+msgctxt "model:account.tax.code.template,description:BZ47"
+msgid ""
+"Umsätze, für die als Leistungsempfänger die Steuer nach § 13b Abs. 2 UStG "
+"geschuldet wird"
+msgstr ""
+"Umsätze, für die als Leistungsempfänger die Steuer nach § 13b Abs. 2 UStG "
+"geschuldet wird"
+
+msgctxt "model:account.tax.code.template,description:U"
+msgid "Umsatzsteuer"
+msgstr "Umsatzsteuer"
+
+msgctxt "model:account.tax.code.template,description:UNF"
+msgid "Nicht fällige Posten"
+msgstr "Nicht fällige Posten"
+
+msgctxt "model:account.tax.code.template,description:USTVA"
+msgid "Kennzifferntabelle EÜR (Einnahmenüberschussrechnung)"
+msgstr "Kennzifferntabelle EÜR (Einnahmenüberschussrechnung)"
+
+msgctxt "model:account.tax.code.template,description:UZ18"
+msgid ""
+"Lieferungen und sonstige Leistungen (einschließlich unentgeltlicher "
+"Wertabgaben)"
+msgstr ""
+"Lieferungen und sonstige Leistungen (einschließlich unentgeltlicher "
+"Wertabgaben)"
+
+msgctxt "model:account.tax.code.template,description:UZ25"
+msgid ""
+"Steuerpflichtige Umsätze (Lieferungen und sonstige Leistungen einschl. "
+"unentgeltlicher Wertabgaben)"
+msgstr ""
+"Steuerpflichtige Umsätze (Lieferungen und sonstige Leistungen einschl. "
+"unentgeltlicher Wertabgaben)"
+
+msgctxt "model:account.tax.code.template,description:UZ31"
+msgid "Innergemeinschaftliche Erwerbe"
+msgstr "Innergemeinschaftliche Erwerbe"
+
+msgctxt "model:account.tax.code.template,description:UZ33"
+msgid "Steuerpflichtige innergemeinschaftliche Erwerbe"
+msgstr "Steuerpflichtige innergemeinschaftliche Erwerbe"
+
+msgctxt "model:account.tax.code.template,description:UZ37"
+msgid "Ergänzende Angaben zu Umsätzen "
+msgstr "Ergänzende Angaben zu Umsätzen "
+
+msgctxt "model:account.tax.code.template,description:UZ47"
+msgid "Leistungsempfänger als Steuerschuldner (§13b UStG)"
+msgstr "Leistungsempfänger als Steuerschuldner (§13b UStG)"
+
+msgctxt "model:account.tax.code.template,description:UZUNF"
+msgid "Steuer"
+msgstr "Steuer"
+
+msgctxt "model:account.tax.code.template,description:VST"
+msgid "Abziehbare Vorsteuerbeträge"
+msgstr "Abziehbare Vorsteuerbeträge"
+
+msgctxt "model:account.tax.code.template,name:21"
+msgid "Nicht steuerbare sonstige Leistungen gem. §18b Satz 1 Nr. 2 UStG"
+msgstr "Nicht steuerbare sonstige Leistungen gem. §18b Satz 1 Nr. 2 UStG"
+
+msgctxt "model:account.tax.code.template,name:35"
+msgid "zu anderen Steuersätzen"
+msgstr "zu anderen Steuersätzen"
+
+msgctxt "model:account.tax.code.template,name:35NF"
+msgid "zu anderen Steuersätzen"
+msgstr "zu anderen Steuersätzen"
+
+msgctxt "model:account.tax.code.template,name:36"
+msgid "zu anderen Steuersätzen"
+msgstr "zu anderen Steuersätzen"
+
+msgctxt "model:account.tax.code.template,name:36NF"
+msgid "zu anderen Steuersätzen"
+msgstr "zu anderen Steuersätzen"
+
+msgctxt "model:account.tax.code.template,name:39"
+msgid ""
+"Anrechnung (Abzug) der festgesetzten Sondervorauszahlung für "
+"Dauerfristverlängerung"
+msgstr ""
+"Anrechnung (Abzug) der festgesetzten Sondervorauszahlung für "
+"Dauerfristverlängerung"
+
+msgctxt "model:account.tax.code.template,name:41"
+msgid ""
+"Innergemeinschaftliche Lieferungen (§ 4 Nr. 1 Buchst. b UStG) an Abnehmer "
+"mit USt-IdNr"
+msgstr ""
+"Innergemeinschaftliche Lieferungen (§ 4 Nr. 1 Buchst. b UStG) an Abnehmer "
+"mit USt-IdNr"
+
+msgctxt "model:account.tax.code.template,name:42"
+msgid ""
+"Lieferungen des ersten Abnehmers bei innergemeinschaftlichen "
+"Dreiecksgeschäften"
+msgstr ""
+"Lieferungen des ersten Abnehmers bei innergemeinschaftlichen "
+"Dreiecksgeschäften"
+
+msgctxt "model:account.tax.code.template,name:43"
+msgid "weitere steuerfreie Umsätze mit Vorsteuerabzug"
+msgstr "weitere steuerfreie Umsätze mit Vorsteuerabzug"
+
+msgctxt "model:account.tax.code.template,name:44"
+msgid "neuer Fahrzeuge an Abnehmer ohne USt-IdNr"
+msgstr "neuer Fahrzeuge an Abnehmer ohne USt-IdNr"
+
+msgctxt "model:account.tax.code.template,name:45"
+msgid "Übrige nicht steuerbare Umsätze (Leistungsort nicht im Inland)"
+msgstr "Übrige nicht steuerbare Umsätze (Leistungsort nicht im Inland)"
+
+msgctxt "model:account.tax.code.template,name:46"
+msgid ""
+"Im Inland steuerpflichtige sonstige Leistungen von im übrigen "
+"Gemeinschaftsgebiet ansässigen Unternehmern (§13b Abs. 1 UStG)"
+msgstr ""
+"Im Inland steuerpflichtige sonstige Leistungen von im übrigen "
+"Gemeinschaftsgebiet ansässigen Unternehmern (§13b Abs. 1 UStG)"
+
+msgctxt "model:account.tax.code.template,name:47"
+msgid ""
+"Im Inland steuerpflichtige sonstige Leistungen von im übrigen "
+"Gemeinschaftsgebiet ansässigen Unternehmern (§ 13b Abs. 1 UStG)"
+msgstr ""
+"Im Inland steuerpflichtige sonstige Leistungen von im übrigen "
+"Gemeinschaftsgebiet ansässigen Unternehmern (§ 13b Abs. 1 UStG)"
+
+msgctxt "model:account.tax.code.template,name:48"
+msgid "Umsätze nach § 4 Nr. 8 bis 28 UStG"
+msgstr "Umsätze nach § 4 Nr. 8 bis 28 UStG"
+
+msgctxt "model:account.tax.code.template,name:49"
+msgid "neuer Fahrzeuge außerhalb eines Unternehmens (§ 2a UStG)"
+msgstr "neuer Fahrzeuge außerhalb eines Unternehmens (§ 2a UStG)"
+
+msgctxt "model:account.tax.code.template,name:52"
+msgid ""
+"Andere Leistungen eines im Ausland ansässigen Unternehmers (§ 13b Abs. 2 Nr."
+" 1 und 5 UStG)"
+msgstr ""
+"Andere Leistungen eines im Ausland ansässigen Unternehmers (§ 13b Abs. 2 Nr."
+" 1 und 5 UStG)"
+
+msgctxt "model:account.tax.code.template,name:53"
+msgid ""
+"Andere Leistungen eines im Ausland ansässigen Unternehmers (§ 13b Abs. 2 Nr."
+" 1 und 5 UStG)"
+msgstr ""
+"Andere Leistungen eines im Ausland ansässigen Unternehmers (§ 13b Abs. 2 Nr."
+" 1 und 5 UStG)"
+
+msgctxt "model:account.tax.code.template,name:59"
+msgid ""
+"Vorsteuerabzug für igL neuer Fahrzeuge außerh. eines "
+"Untern./Kleinunternehmer n. § 19 Abs. 1 UStG"
+msgstr ""
+"Vorsteuerabzug für igL neuer Fahrzeuge außerh. eines "
+"Untern./Kleinunternehmer n. § 19 Abs. 1 UStG"
+
+msgctxt "model:account.tax.code.template,name:60"
+msgid ""
+"Übrige steuerpflichtige Umsätze, für die der Leistungsempfänger die Steuer "
+"nach § 13b Abs. 5 UStG schuldet"
+msgstr ""
+"Übrige steuerpflichtige Umsätze, für die der Leistungsempfänger die Steuer "
+"nach § 13b Abs. 5 UStG schuldet"
+
+msgctxt "model:account.tax.code.template,name:61"
+msgid ""
+"Vorsteuerbeträge aus dem innergemeinschaftlichen Erwerb von Gegenständen"
+msgstr ""
+"Vorsteuerbeträge aus dem innergemeinschaftlichen Erwerb von Gegenständen"
+
+msgctxt "model:account.tax.code.template,name:62"
+msgid "Entrichtete Einfuhrumsatzsteuer"
+msgstr "Entrichtete Einfuhrumsatzsteuer"
+
+msgctxt "model:account.tax.code.template,name:63"
+msgid "Vorsteuerbeträge nach allg. Durchschnittssätzen berechnet"
+msgstr "Vorsteuerbeträge nach allg. Durchschnittssätzen berechnet"
+
+msgctxt "model:account.tax.code.template,name:64"
+msgid "Berichtigung des Vorsteuerabzugs (§ 15a UStG)"
+msgstr "Berichtigung des Vorsteuerabzugs (§ 15a UStG)"
+
+msgctxt "model:account.tax.code.template,name:65"
+msgid "Steuer infolge Wechsels der Besteuerungsform"
+msgstr "Steuer infolge Wechsels der Besteuerungsform"
+
+msgctxt "model:account.tax.code.template,name:66"
+msgid "Vorsteuerbeträge aus Rechnungen von anderen Unternehmern"
+msgstr "Vorsteuerbeträge aus Rechnungen von anderen Unternehmern"
+
+msgctxt "model:account.tax.code.template,name:67"
+msgid ""
+"Vorsteuerbeträge aus Leistungen im Sinne des § 13b UStG (§ 15 Abs. 1 Satz 1 "
+"Nr. 4 UStG)"
+msgstr ""
+"Vorsteuerbeträge aus Leistungen im Sinne des § 13b UStG (§ 15 Abs. 1 Satz 1 "
+"Nr. 4 UStG)"
+
+msgctxt "model:account.tax.code.template,name:68"
+msgid ""
+"Steuerpflichtige Umsätze, für die der Leistungsempfänger die Steuer nach § "
+"13b Abs. 5 Satz 1 i.V.m. Abs. 2 Nr. 10 UStG schuldet"
+msgstr ""
+"Steuerpflichtige Umsätze, für die der Leistungsempfänger die Steuer nach § "
+"13b Abs. 5 Satz 1 i.V.m. Abs. 2 Nr. 10 UStG schuldet"
+
+msgctxt "model:account.tax.code.template,name:69"
+msgid "In Rechnungen unrichtig oder unberechtigt ausgewiesene Steuerbeträge"
+msgstr "In Rechnungen unrichtig oder unberechtigt ausgewiesene Steuerbeträge"
+
+msgctxt "model:account.tax.code.template,name:73"
+msgid ""
+"Lieferungen sicherungsübereigneter Gegenstände und Umsätze, die unter das "
+"GrEStG fallen"
+msgstr ""
+"Lieferungen sicherungsübereigneter Gegenstände und Umsätze, die unter das "
+"GrEStG fallen"
+
+msgctxt "model:account.tax.code.template,name:74"
+msgid ""
+"Lieferungen sicherungsübereigneter Gegenstände und Umsätze, die unter das "
+"GrEStG fallen (§ 13b Abs. 2 Nr. 2 und 3 UStG)"
+msgstr ""
+"Lieferungen sicherungsübereigneter Gegenstände und Umsätze, die unter das "
+"GrEStG fallen (§ 13b Abs. 2 Nr. 2 und 3 UStG)"
+
+msgctxt "model:account.tax.code.template,name:76"
+msgid "Umsätze, für die eine Steuer nach § 24 UStG zu entrichten ist"
+msgstr "Umsätze, für die eine Steuer nach § 24 UStG zu entrichten ist"
+
+msgctxt "model:account.tax.code.template,name:77"
+msgid ""
+"Lieferungen land- und forstwirtschaftlicher Betriebe nach §24 UStG an "
+"Abnehmer mit Ust-IdNr."
+msgstr ""
+"Lieferungen land- und forstwirtschaftlicher Betriebe nach §24 UStG an "
+"Abnehmer mit Ust-IdNr."
+
+msgctxt "model:account.tax.code.template,name:78"
+msgid ""
+"Lieferungen von Mobilfunkgeräten und integrierten Schaltkreisen (§ 13b Abs. "
+"2 Nr. 10 UStG)"
+msgstr ""
+"Lieferungen von Mobilfunkgeräten und integrierten Schaltkreisen (§ 13b Abs. "
+"2 Nr. 10 UStG)"
+
+msgctxt "model:account.tax.code.template,name:79"
+msgid ""
+"Lieferungen von Mobilfunkgeräten und integrierten Schaltkreisen (§ 13b Abs. "
+"2 Nr. 10 UStG)"
+msgstr ""
+"Lieferungen von Mobilfunkgeräten und integrierten Schaltkreisen (§ 13b Abs. "
+"2 Nr. 10 UStG)"
+
+msgctxt "model:account.tax.code.template,name:80"
+msgid "Umsätze, für die eine Steuer nach § 24 UStG zu entrichten ist"
+msgstr "Umsätze, für die eine Steuer nach § 24 UStG zu entrichten ist"
+
+msgctxt "model:account.tax.code.template,name:81"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,name:811"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,name:811NF"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,name:81NF"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,name:83"
+msgid "Verbleibende(r) Umsatzsteuer-Vorauszahlung/-Überschuß"
+msgstr "Verbleibende(r) Umsatzsteuer-Vorauszahlung/-Überschuß"
+
+msgctxt "model:account.tax.code.template,name:84"
+msgid ""
+"Andere Umsätze eines im Inland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 4, "
+"6 bis 9 UStG)"
+msgstr ""
+"Andere Umsätze eines im Inland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 4, "
+"6 bis 9 UStG)"
+
+msgctxt "model:account.tax.code.template,name:85"
+msgid ""
+"Andere Umsätze eines im Inland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 4, "
+"6 bis 9 UStG)"
+msgstr ""
+"Andere Umsätze eines im Inland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 4, "
+"6 bis 9 UStG)"
+
+msgctxt "model:account.tax.code.template,name:86"
+msgid "zum Steuersatz von 7%"
+msgstr "zum Steuersatz von 7%"
+
+msgctxt "model:account.tax.code.template,name:861"
+msgid "zum Steuersatz von 7%"
+msgstr "zum Steuersatz von 7%"
+
+msgctxt "model:account.tax.code.template,name:861NF"
+msgid "zum Steuersatz von 7%"
+msgstr "zum Steuersatz von 7%"
+
+msgctxt "model:account.tax.code.template,name:86NF"
+msgid "zum Steuersatz von 7%"
+msgstr "zum Steuersatz von 7%"
+
+msgctxt "model:account.tax.code.template,name:89"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,name:891"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,name:91"
+msgid "Erwerbe nach §§ 4b UStG und 25c UStG"
+msgstr "Erwerbe nach §§ 4b UStG und 25c UStG"
+
+msgctxt "model:account.tax.code.template,name:93"
+msgid "zum Steuersatz von 7%"
+msgstr "zum Steuersatz von 7%"
+
+msgctxt "model:account.tax.code.template,name:931"
+msgid "zum Steuersatz von 7%"
+msgstr "zum Steuersatz von 7%"
+
+msgctxt "model:account.tax.code.template,name:94"
+msgid ""
+"neuer Fahrzeuge von Lieferern ohne USt-IdNr. zum allgemeinen Steuersatz"
+msgstr ""
+"neuer Fahrzeuge von Lieferern ohne USt-IdNr. zum allgemeinen Steuersatz"
+
+msgctxt "model:account.tax.code.template,name:95"
+msgid "zu anderen Steuersätzen"
+msgstr "zu anderen Steuersätzen"
+
+msgctxt "model:account.tax.code.template,name:96"
+msgid ""
+"neuer Fahrzeuge von Lieferern ohne USt-IdNr. zum allgemeinen Steuersatz"
+msgstr ""
+"neuer Fahrzeuge von Lieferern ohne USt-IdNr. zum allgemeinen Steuersatz"
+
+msgctxt "model:account.tax.code.template,name:98"
+msgid "zu anderen Steuersätzen"
+msgstr "zu anderen Steuersätzen"
+
+msgctxt "model:account.tax.code.template,name:AST"
+msgid "Andere Steuerbeträge"
+msgstr "Andere Steuerbeträge"
+
+msgctxt "model:account.tax.code.template,name:B"
+msgid "Bemessungsgrundlage"
+msgstr "Bemessungsgrundlage"
+
+msgctxt "model:account.tax.code.template,name:BAUS"
+msgid "Einfuhren"
+msgstr "Einfuhren"
+
+msgctxt "model:account.tax.code.template,name:BAUS19"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,name:BAUS7"
+msgid "zum Steuersatz von 7 %"
+msgstr "zum Steuersatz von 7 %"
+
+msgctxt "model:account.tax.code.template,name:BRV"
+msgid "Rechnungen von anderen Unternehmern"
+msgstr "Rechnungen von anderen Unternehmern"
+
+msgctxt "model:account.tax.code.template,name:BRV19"
+msgid "zum Steuersatz von 19 %"
+msgstr "zum Steuersatz von 19 %"
+
+msgctxt "model:account.tax.code.template,name:BRV7"
+msgid "zum Steuersatz von 7 %"
+msgstr "zum Steuersatz von 7 %"
+
+msgctxt "model:account.tax.code.template,name:BU"
+msgid "Umsatzsteuer"
+msgstr "Umsatzsteuer"
+
+msgctxt "model:account.tax.code.template,name:BUNF"
+msgid "Bemessungsgrundlage"
+msgstr "Bemessungsgrundlage"
+
+msgctxt "model:account.tax.code.template,name:BV"
+msgid "Bemessungsgrundlage Vorsteuer (dient lediglich der Verprobung)"
+msgstr "Bemessungsgrundlage Vorsteuer (dient lediglich der Verprobung)"
+
+msgctxt "model:account.tax.code.template,name:BZ18"
+msgid ""
+"Lieferungen und sonstige Leistungen (einschließlich unentgeltlicher "
+"Wertabgaben)"
+msgstr ""
+"Lieferungen und sonstige Leistungen (einschließlich unentgeltlicher "
+"Wertabgaben)"
+
+msgctxt "model:account.tax.code.template,name:BZ19"
+msgid "Steuerfreie Umsätze mit Vorsteuerabzug"
+msgstr "Steuerfreie Umsätze mit Vorsteuerabzug"
+
+msgctxt "model:account.tax.code.template,name:BZ24"
+msgid "Steuerfreie Umsätze ohne Vorsteuerabzug"
+msgstr "Steuerfreie Umsätze ohne Vorsteuerabzug"
+
+msgctxt "model:account.tax.code.template,name:BZ25"
+msgid "Steuerpflichtige Umsätze"
+msgstr "Steuerpflichtige Umsätze"
+
+msgctxt "model:account.tax.code.template,name:BZ31"
+msgid "Innergemeinschaftliche Erwerbe"
+msgstr "Innergemeinschaftliche Erwerbe"
+
+msgctxt "model:account.tax.code.template,name:BZ32"
+msgid "Steuerfreie innergemeinschaftliche Erwerbe"
+msgstr "Steuerfreie innergemeinschaftliche Erwerbe"
+
+msgctxt "model:account.tax.code.template,name:BZ33"
+msgid "Steuerpflichtige innergemeinschaftliche Erwerbe"
+msgstr "Steuerpflichtige innergemeinschaftliche Erwerbe"
+
+msgctxt "model:account.tax.code.template,name:BZ37"
+msgid "Ergänzende Angaben zu Umsätzen"
+msgstr "Ergänzende Angaben zu Umsätzen"
+
+msgctxt "model:account.tax.code.template,name:BZ47"
+msgid "Leistungsempfänger als Steuerschuldner (§13b UStG)"
+msgstr "Leistungsempfänger als Steuerschuldner (§13b UStG)"
+
+msgctxt "model:account.tax.code.template,name:U"
+msgid "Umsatzsteuer"
+msgstr "Umsatzsteuer"
+
+msgctxt "model:account.tax.code.template,name:UNF"
+msgid "Umsatzsteuer nicht fällig"
+msgstr "Umsatzsteuer nicht fällig"
+
+msgctxt "model:account.tax.code.template,name:USTVA"
+msgid "Kennzifferntabelle EÜR (Einnahmenüberschussrechnung)"
+msgstr "Kennzifferntabelle EÜR (Einnahmenüberschussrechnung)"
+
+msgctxt "model:account.tax.code.template,name:UZ18"
+msgid "Lieferungen und sonstige Leistungen"
+msgstr "Lieferungen und sonstige Leistungen"
+
+msgctxt "model:account.tax.code.template,name:UZ25"
+msgid "Steuerpflichtige Umsätze"
+msgstr "Steuerpflichtige Umsätze"
+
+msgctxt "model:account.tax.code.template,name:UZ31"
+msgid "Innergemeinschaftliche Erwerbe"
+msgstr "Innergemeinschaftliche Erwerbe"
+
+msgctxt "model:account.tax.code.template,name:UZ33"
+msgid "Steuerpflichtige innergemeinschaftliche Erwerbe"
+msgstr "Steuerpflichtige innergemeinschaftliche Erwerbe"
+
+msgctxt "model:account.tax.code.template,name:UZ37"
+msgid "Ergänzende Angaben zu Umsätzen "
+msgstr "Ergänzende Angaben zu Umsätzen "
+
+msgctxt "model:account.tax.code.template,name:UZ47"
+msgid "Leistungsempfänger als Steuerschuldner (§13b UStG)"
+msgstr "Leistungsempfänger als Steuerschuldner (§13b UStG)"
+
+msgctxt "model:account.tax.code.template,name:UZUNF"
+msgid "Umsatzsteuer"
+msgstr "Umsatzsteuer"
+
+msgctxt "model:account.tax.code.template,name:VST"
+msgid "Abziehbare Vorsteuerbeträge"
+msgstr "Abziehbare Vorsteuerbeträge"
+
+msgctxt "model:account.tax.group,name:ust"
+msgid "Umsatzsteuer"
+msgstr "Umsatzsteuer"
+
+msgctxt "model:account.tax.group,name:ust_reduced"
+msgid "Umsatzsteuer ermäßigt"
+msgstr ""
+
+msgctxt "model:account.tax.group,name:vst"
+msgid "Vorsteuer"
+msgstr "Vorsteuer"
+
+msgctxt "model:account.tax.group,name:vst_reduced"
+msgid "Vorsteuer ermäßigt"
+msgstr "Vorsteuer ermäßigt"
+
+msgctxt "model:account.tax.rule.template,name:eu_no_id_purchase"
+msgid "Lieferant EU (ohne Ust-ID)"
+msgstr "Lieferant EU (ohne Ust-ID)"
+
+msgctxt "model:account.tax.rule.template,name:eu_no_id_sale"
+msgid "Kunde EU (ohne USt-ID)"
+msgstr "Kunde EU (ohne USt-ID)"
+
+msgctxt "model:account.tax.rule.template,name:eu_vat_id_purchase"
+msgid "Lieferant EU Unternehmen (mit USt-ID)"
+msgstr "Lieferant EU Unternehmen (mit USt-ID)"
+
+msgctxt "model:account.tax.rule.template,name:eu_vat_id_sale"
+msgid "Kunde EU Unternehmen (mit USt-ID)"
+msgstr "Kunde EU Unternehmen (mit USt-ID)"
+
+msgctxt "model:account.tax.rule.template,name:non_eu_purchase"
+msgid "Lieferant Ausland"
+msgstr "Lieferant Ausland"
+
+msgctxt "model:account.tax.rule.template,name:non_eu_sale"
+msgid "Kunde Ausland Unternehmen"
+msgstr "Kunde Ausland Unternehmen"
+
+msgctxt "model:account.tax.rule.template,name:non_eu_sale_private"
+msgid "Kunde Ausland Privatperson"
+msgstr "Kunde Ausland Privatperson"
+
+msgctxt "model:account.tax.template,description:eu_19_purchase"
+msgid "innergem. Erwerb 19%"
+msgstr "innergem. Erwerb 19%"
+
+msgctxt "model:account.tax.template,description:eu_19_purchase_ust"
+msgid "19% USt"
+msgstr "19% USt"
+
+msgctxt "model:account.tax.template,description:eu_19_purchase_vst"
+msgid "19% VSt"
+msgstr "19% VSt"
+
+msgctxt "model:account.tax.template,description:eu_19_sale_private"
+msgid "Erlöse EG-Lieferungen 19% USt"
+msgstr "Erlöse EG-Lieferungen 19% USt"
+
+msgctxt "model:account.tax.template,description:eu_19_sale_private_undue"
+msgid "Erlöse EG-Lieferungen 19% USt"
+msgstr "Erlöse EG-Lieferungen 19% USt"
+
+msgctxt "model:account.tax.template,description:eu_19_service_received"
+msgid "erh. EG-Leist. §13b 19%"
+msgstr "erh. EG-Leist. §13b 19%"
+
+msgctxt "model:account.tax.template,description:eu_19_service_received_ust"
+msgid "19% USt"
+msgstr "19% USt"
+
+msgctxt "model:account.tax.template,description:eu_19_service_received_vst"
+msgid "19% VSt"
+msgstr "19% VSt"
+
+msgctxt "model:account.tax.template,description:eu_7_purchase"
+msgid "innergem. Erwerb 7%"
+msgstr "innergem. Erwerb 7%"
+
+msgctxt "model:account.tax.template,description:eu_7_purchase_ust"
+msgid "7% USt"
+msgstr "7% USt"
+
+msgctxt "model:account.tax.template,description:eu_7_purchase_vst"
+msgid "7% VSt"
+msgstr "7% VSt"
+
+msgctxt "model:account.tax.template,description:eu_7_sale_private"
+msgid "Erlöse EG-Lieferungen 7% USt"
+msgstr "Erlöse EG-Lieferungen 7% USt"
+
+msgctxt "model:account.tax.template,description:eu_7_sale_private_undue"
+msgid "Erlöse EG-Lieferungen 7% USt"
+msgstr "Erlöse EG-Lieferungen 7% USt"
+
+msgctxt "model:account.tax.template,description:eu_7_service_received"
+msgid "erh. EG-Leist. §13b 7%"
+msgstr "erh. EG-Leist. §13b 7%"
+
+msgctxt "model:account.tax.template,description:eu_7_service_received_ust"
+msgid "7% USt"
+msgstr "7% USt"
+
+msgctxt "model:account.tax.template,description:eu_7_service_received_vst"
+msgid "7% VSt"
+msgstr "7% VSt"
+
+msgctxt "model:account.tax.template,description:eu_car_private"
+msgid "Steuerfr. EG-Lief.v.Neufahrzg.ohne UStID"
+msgstr "Steuerfr. EG-Lief.v.Neufahrzg.ohne UStID"
+
+msgctxt "model:account.tax.template,description:eu_sale"
+msgid "steuerfreie innergem. Lieferung"
+msgstr "steuerfreie innergem. Lieferung"
+
+msgctxt "model:account.tax.template,description:export"
+msgid "steuerfreie Ausfuhr"
+msgstr "steuerfreie Ausfuhr"
+
+msgctxt ""
+"model:account.tax.template,description:free_of_charge_product_donation_19"
+msgid "Unentgeltliche Zuwendung von Gegenständen 19%"
+msgstr "Unentgeltliche Zuwendung von Gegenständen 19%"
+
+msgctxt ""
+"model:account.tax.template,description:free_of_charge_product_donation_7"
+msgid "Unentgeltliche Zuwendung von Gegenständen 7%"
+msgstr "Unentgeltliche Zuwendung von Gegenständen 7%"
+
+msgctxt ""
+"model:account.tax.template,description:free_of_charge_product_removal_19"
+msgid "Unentgeltliche Wertabgaben Entnahme von Gegenständen 19%"
+msgstr "Unentgeltliche Wertabgaben Entnahme von Gegenständen 19%"
+
+msgctxt ""
+"model:account.tax.template,description:free_of_charge_product_removal_7"
+msgid "Unentgeltliche Wertabgaben Entnahme von Gegenständen 7%"
+msgstr "Unentgeltliche Wertabgaben Entnahme von Gegenständen 7%"
+
+msgctxt ""
+"model:account.tax.template,description:free_of_charge_product_usage_19"
+msgid "Unentgeltliche Wertabgaben Verwendung von Gegenständen 19%"
+msgstr "Unentgeltliche Wertabgaben Verwendung von Gegenständen 19%"
+
+msgctxt ""
+"model:account.tax.template,description:free_of_charge_product_usage_7"
+msgid "Unentgeltliche Wertabgaben Verwendung von Gegenständen 7%"
+msgstr "Unentgeltliche Wertabgaben Verwendung von Gegenständen 7%"
+
+msgctxt "model:account.tax.template,description:free_of_charge_service_19"
+msgid "Unentgeltliche Erbringung einer sonstigen Leistung 19%"
+msgstr "Unentgeltliche Erbringung einer sonstigen Leistung 19%"
+
+msgctxt "model:account.tax.template,description:free_of_charge_service_7"
+msgid "Unentgeltliche Erbringung einer sonstigen Leistung 7%"
+msgstr "Unentgeltliche Erbringung einer sonstigen Leistung 7%"
+
+msgctxt "model:account.tax.template,description:import_19"
+msgid "19% EUSt"
+msgstr "19% EUSt"
+
+msgctxt "model:account.tax.template,description:import_7"
+msgid "7% EUSt"
+msgstr "7% EUSt"
+
+msgctxt "model:account.tax.template,description:not_taxable_eu"
+msgid "Nicht steuerbare Umsätze EG-Land"
+msgstr "Nicht steuerbare Umsätze EG-Land"
+
+msgctxt "model:account.tax.template,description:not_taxable_service_eu"
+msgid "nicht steuerbare innergem. sonstige Leistung §18b (Reverse-Charge)"
+msgstr "nicht steuerbare innergem. sonstige Leistung §18b (Reverse-Charge)"
+
+msgctxt ""
+"model:account.tax.template,description:not_taxable_service_third_country"
+msgid "nicht steuerbare sonstige Leistung §13b (Reverse-Charge)"
+msgstr "nicht steuerbare sonstige Leistung §13b (Reverse-Charge)"
+
+msgctxt "model:account.tax.template,description:reverse_charge_service"
+msgid "Erlöse aus Leistungen nach § 13b UStG"
+msgstr "Erlöse aus Leistungen nach § 13b UStG"
+
+msgctxt "model:account.tax.template,description:service_received_13b_19"
+msgid "Erhaltene Bauleistungen § 13b 19%VSt/19%USt"
+msgstr "Erhaltene Bauleistungen § 13b 19%VSt/19%USt"
+
+msgctxt "model:account.tax.template,description:service_received_13b_19_ust"
+msgid "19% USt"
+msgstr "19% USt"
+
+msgctxt "model:account.tax.template,description:service_received_13b_19_vst"
+msgid "19% VSt"
+msgstr "19% VSt"
+
+msgctxt "model:account.tax.template,description:service_received_13b_7"
+msgid "Erhaltene Bauleistungen § 13b 7%VSt/7%USt"
+msgstr "Erhaltene Bauleistungen § 13b 7%VSt/7%USt"
+
+msgctxt "model:account.tax.template,description:service_received_13b_7_ust"
+msgid "7% USt"
+msgstr "7% USt"
+
+msgctxt "model:account.tax.template,description:service_received_13b_7_vst"
+msgid "7% VSt"
+msgstr "7% VSt"
+
+msgctxt "model:account.tax.template,description:tax_free"
+msgid "Steuerfreie Umsätze §4 Nr. 8 ff UStG und sonstige stfr. Umsätze"
+msgstr "Steuerfreie Umsätze §4 Nr. 8 ff UStG und sonstige stfr. Umsätze"
+
+msgctxt "model:account.tax.template,description:tax_free_4_2_7"
+msgid "Steuerfreie Umsätze § 4 Nr. 2-7 UStG"
+msgstr "Steuerfreie Umsätze § 4 Nr. 2-7 UStG"
+
+msgctxt "model:account.tax.template,description:tax_free_no_input_tax"
+msgid "Steuerfreie Umsätze ohne Vorsteuerabzug"
+msgstr "Steuerfreie Umsätze ohne Vorsteuerabzug"
+
+msgctxt "model:account.tax.template,description:tax_free_offshore"
+msgid "Steuerfreie Umsätze Offshore usw."
+msgstr "Steuerfreie Umsätze Offshore usw."
+
+msgctxt "model:account.tax.template,description:tax_free_vv"
+msgid "Stfr. Umsätze aus V&V § 4 Nr. 12 UStG"
+msgstr "Stfr. Umsätze aus V&V § 4 Nr. 12 UStG"
+
+msgctxt "model:account.tax.template,description:trianglular_trade"
+msgid "Innergemeinschaftl. Dreiecksgeschäft"
+msgstr "Innergemeinschaftl. Dreiecksgeschäft"
+
+msgctxt "model:account.tax.template,description:ust_19"
+msgid "19% USt"
+msgstr "19% USt"
+
+msgctxt "model:account.tax.template,description:ust_19_payment"
+msgid "19% Umsatzsteuer bei Zahlung"
+msgstr "19% Umsatzsteuer bei Zahlung"
+
+msgctxt "model:account.tax.template,description:ust_19_payment_due"
+msgid "19% USt Buchung auf fällig"
+msgstr "19% USt Buchung auf fällig"
+
+msgctxt "model:account.tax.template,description:ust_19_payment_undue"
+msgid "-19% USt nicht fällig Ausbuchung"
+msgstr "-19% USt nicht fällig Ausbuchung"
+
+msgctxt "model:account.tax.template,description:ust_19_service_received"
+msgid "erh. Leist. §13b 19% (Drittland)"
+msgstr "erh. Leist. §13b 19% (Drittland)"
+
+msgctxt "model:account.tax.template,description:ust_19_service_received_ust"
+msgid "19% USt"
+msgstr "19% USt"
+
+msgctxt "model:account.tax.template,description:ust_19_service_received_vst"
+msgid "19% VSt"
+msgstr "19% VSt"
+
+msgctxt "model:account.tax.template,description:ust_19_undue"
+msgid "19% USt"
+msgstr "19% USt"
+
+msgctxt "model:account.tax.template,description:ust_7"
+msgid "7% USt"
+msgstr "7% USt"
+
+msgctxt "model:account.tax.template,description:ust_7_payment"
+msgid "7% Umsatzsteuer bei Zahlung"
+msgstr "7% Umsatzsteuer bei Zahlung"
+
+msgctxt "model:account.tax.template,description:ust_7_payment_due"
+msgid "7% USt Buchung auf fällig"
+msgstr "7% USt Buchung auf fällig"
+
+msgctxt "model:account.tax.template,description:ust_7_payment_undue"
+msgid "-7% USt nicht fällig Ausbuchung"
+msgstr "-7% USt nicht fällig Ausbuchung"
+
+msgctxt "model:account.tax.template,description:ust_7_service_received"
+msgid "erh. Leist. §13b 7% (Drittland)"
+msgstr "erh. Leist. §13b 7% (Drittland)"
+
+msgctxt "model:account.tax.template,description:ust_7_service_received_ust"
+msgid "7% USt"
+msgstr "7% USt"
+
+msgctxt "model:account.tax.template,description:ust_7_service_received_vst"
+msgid "7% VSt"
+msgstr "7% VSt"
+
+msgctxt "model:account.tax.template,description:ust_7_undue"
+msgid "7% USt"
+msgstr "7% USt"
+
+msgctxt "model:account.tax.template,description:vst_19"
+msgid "19% VSt"
+msgstr "19% VSt"
+
+msgctxt "model:account.tax.template,description:vst_7"
+msgid "7% VSt"
+msgstr "7% VSt"
+
+msgctxt "model:account.tax.template,name:eu_19_purchase"
+msgid "Steuerpfl. Innergem. Erwerb 19%VSt/19%USt"
+msgstr "Steuerpfl. Innergem. Erwerb 19%VSt/19%USt"
+
+msgctxt "model:account.tax.template,name:eu_19_purchase_ust"
+msgid "19% Umsatzsteuer aus innergem. Erwerb"
+msgstr "19% Umsatzsteuer aus innergem. Erwerb"
+
+msgctxt "model:account.tax.template,name:eu_19_purchase_vst"
+msgid "19% Vorsteuer aus innergem. Erwerb"
+msgstr "19% Vorsteuer aus innergem. Erwerb"
+
+msgctxt "model:account.tax.template,name:eu_19_sale_private"
+msgid "Erlöse EG-Lieferungen 19% USt"
+msgstr "Erlöse EG-Lieferungen 19% USt"
+
+msgctxt "model:account.tax.template,name:eu_19_sale_private_undue"
+msgid "Erlöse EG-Lieferungen 19% USt nicht fällig"
+msgstr "Erlöse EG-Lieferungen 19% USt nicht fällig"
+
+msgctxt "model:account.tax.template,name:eu_19_service_received"
+msgid "Erhaltene EG-Leistungen §13b 19%VSt/19%USt"
+msgstr "Erhaltene EG-Leistungen §13b 19%VSt/19%USt"
+
+msgctxt "model:account.tax.template,name:eu_19_service_received_ust"
+msgid "19% Umsatzsteuer aus erhaltenen EG-Leistungen §13b"
+msgstr "19% Umsatzsteuer aus erhaltenen EG-Leistungen §13b"
+
+msgctxt "model:account.tax.template,name:eu_19_service_received_vst"
+msgid "19% Vorsteuer aus erhaltenen EG-Leistungen §13b"
+msgstr "19% Vorsteuer aus erhaltenen EG-Leistungen §13b"
+
+msgctxt "model:account.tax.template,name:eu_7_purchase"
+msgid "steuerpfl. Innergem. Erwerb 7%VSt/7%USt"
+msgstr "steuerpfl. Innergem. Erwerb 7%VSt/7%USt"
+
+msgctxt "model:account.tax.template,name:eu_7_purchase_ust"
+msgid "7% Umsatzsteuer aus innergem. Erwerb"
+msgstr "7% Umsatzsteuer aus innergem. Erwerb"
+
+msgctxt "model:account.tax.template,name:eu_7_purchase_vst"
+msgid "7% Vorsteuer aus innergem. Erwerb"
+msgstr "7% Vorsteuer aus innergem. Erwerb"
+
+msgctxt "model:account.tax.template,name:eu_7_sale_private"
+msgid "Erlöse EG-Lieferungen 7% USt"
+msgstr "Erlöse EG-Lieferungen 7% USt"
+
+msgctxt "model:account.tax.template,name:eu_7_sale_private_undue"
+msgid "Erlöse EG-Lieferungen 7% USt nicht fällig"
+msgstr "Erlöse EG-Lieferungen 7% USt nicht fällig"
+
+msgctxt "model:account.tax.template,name:eu_7_service_received"
+msgid "Erhaltene EG-Leistungen §13b 7%VSt/7%USt"
+msgstr "Erhaltene EG-Leistungen §13b 7%VSt/7%USt"
+
+msgctxt "model:account.tax.template,name:eu_7_service_received_ust"
+msgid "7% Umsatzsteuer aus erhaltenen EG-Leistungen §13b"
+msgstr "7% Umsatzsteuer aus erhaltenen EG-Leistungen §13b"
+
+msgctxt "model:account.tax.template,name:eu_7_service_received_vst"
+msgid "7% Vorsteuer aus erhaltenen EG-Leistungen §13b"
+msgstr "7% Vorsteuer aus erhaltenen EG-Leistungen §13b"
+
+msgctxt "model:account.tax.template,name:eu_car_private"
+msgid "Steuerfr. EG-Lief.v.Neufahrzg.ohne UStID"
+msgstr "Steuerfr. EG-Lief.v.Neufahrzg.ohne UStID"
+
+msgctxt "model:account.tax.template,name:eu_sale"
+msgid "Steuerfreie EG-Lieferung (§4 Abs. 1b UStG) "
+msgstr "Steuerfreie EG-Lieferung (§4 Abs. 1b UStG) "
+
+msgctxt "model:account.tax.template,name:export"
+msgid "Steuerfreie Ausfuhr (§4 Nr. 1a UStG)"
+msgstr "Steuerfreie Ausfuhr (§4 Nr. 1a UStG)"
+
+msgctxt "model:account.tax.template,name:free_of_charge_product_donation_19"
+msgid "Unentgeltliche Zuwendung von Gegenständen 19%"
+msgstr "Unentgeltliche Zuwendung von Gegenständen 19%"
+
+msgctxt "model:account.tax.template,name:free_of_charge_product_donation_7"
+msgid "Unentgeltliche Zuwendung von Gegenständen 7%"
+msgstr "Unentgeltliche Zuwendung von Gegenständen 7%"
+
+msgctxt "model:account.tax.template,name:free_of_charge_product_removal_19"
+msgid "Unentgeltliche Wertabgaben Entnahme von Gegenständen 19%"
+msgstr "Unentgeltliche Wertabgaben Entnahme von Gegenständen 19%"
+
+msgctxt "model:account.tax.template,name:free_of_charge_product_removal_7"
+msgid "Unentgeltliche Wertabgaben Entnahme von Gegenständen 7%"
+msgstr "Unentgeltliche Wertabgaben Entnahme von Gegenständen 7%"
+
+msgctxt "model:account.tax.template,name:free_of_charge_product_usage_19"
+msgid "Unentgeltliche Wertabgaben Verwendung von Gegenständen 19%"
+msgstr "Unentgeltliche Wertabgaben Verwendung von Gegenständen 19%"
+
+msgctxt "model:account.tax.template,name:free_of_charge_product_usage_7"
+msgid "Unentgeltliche Wertabgaben Verwendung von Gegenständen 7%"
+msgstr "Unentgeltliche Wertabgaben Verwendung von Gegenständen 7%"
+
+msgctxt "model:account.tax.template,name:free_of_charge_service_19"
+msgid "Unentgeltliche Erbringung einer sonstigen Leistung 19%"
+msgstr "Unentgeltliche Erbringung einer sonstigen Leistung 19%"
+
+msgctxt "model:account.tax.template,name:free_of_charge_service_7"
+msgid "Unentgeltliche Erbringung einer sonstigen Leistung 7%"
+msgstr "Unentgeltliche Erbringung einer sonstigen Leistung 7%"
+
+msgctxt "model:account.tax.template,name:import_19"
+msgid "19% Einfuhrumsatzsteuer"
+msgstr "19% Einfuhrumsatzsteuer"
+
+msgctxt "model:account.tax.template,name:import_7"
+msgid "7% Einfuhrumsatzsteuer"
+msgstr "7% Einfuhrumsatzsteuer"
+
+msgctxt "model:account.tax.template,name:not_taxable_eu"
+msgid "Nicht steuerbare Umsätze EG-Land"
+msgstr "Nicht steuerbare Umsätze EG-Land"
+
+msgctxt "model:account.tax.template,name:not_taxable_service_eu"
+msgid "Nicht steuerbare sonstige EG-Leistung §18b"
+msgstr "Nicht steuerbare sonstige EG-Leistung §18b"
+
+msgctxt "model:account.tax.template,name:not_taxable_service_third_country"
+msgid "Nicht steuerbare Leistungen §13b (Drittland)"
+msgstr "Nicht steuerbare Leistungen §13b (Drittland)"
+
+msgctxt "model:account.tax.template,name:reverse_charge_service"
+msgid "Erlöse aus Leistungen nach § 13b UStG"
+msgstr "Erlöse aus Leistungen nach § 13b UStG"
+
+msgctxt "model:account.tax.template,name:service_received_13b_19"
+msgid "Erhaltene Bauleistungen § 13b 19%VSt/19%USt"
+msgstr "Erhaltene Bauleistungen § 13b 19%VSt/19%USt"
+
+msgctxt "model:account.tax.template,name:service_received_13b_19_ust"
+msgid "19% Umsatzsteuer aus erhaltenen Bauleistungen §13b"
+msgstr "19% Umsatzsteuer aus erhaltenen Bauleistungen §13b"
+
+msgctxt "model:account.tax.template,name:service_received_13b_19_vst"
+msgid "19% Vorsteuer aus erhaltenen Bauleistungen §13b"
+msgstr "19% Vorsteuer aus erhaltenen Bauleistungen §13b"
+
+msgctxt "model:account.tax.template,name:service_received_13b_7"
+msgid "Erhaltene Bauleistungen § 13b 7%VSt/7%USt"
+msgstr "Erhaltene Bauleistungen § 13b 7%VSt/7%USt"
+
+msgctxt "model:account.tax.template,name:service_received_13b_7_ust"
+msgid "7% Umsatzsteuer aus erhaltenen Bauleistungen §13b"
+msgstr "7% Umsatzsteuer aus erhaltenen Bauleistungen §13b"
+
+msgctxt "model:account.tax.template,name:service_received_13b_7_vst"
+msgid "7% Vorsteuer aus erhaltenen Bauleistungen §13b"
+msgstr "7% Vorsteuer aus erhaltenen Bauleistungen §13b"
+
+msgctxt "model:account.tax.template,name:tax_free"
+msgid "Steuerfreie Umsätze §4 Nr. 8 ff UStG und sonstige stfr. Umsätze"
+msgstr "Steuerfreie Umsätze §4 Nr. 8 ff UStG und sonstige stfr. Umsätze"
+
+msgctxt "model:account.tax.template,name:tax_free_4_2_7"
+msgid "Steuerfreie Umsätze § 4 Nr. 2-7 UStG"
+msgstr "Steuerfreie Umsätze § 4 Nr. 2-7 UStG"
+
+msgctxt "model:account.tax.template,name:tax_free_no_input_tax"
+msgid "Steuerfreie Umsätze ohne Vorsteuerabzug"
+msgstr "Steuerfreie Umsätze ohne Vorsteuerabzug"
+
+msgctxt "model:account.tax.template,name:tax_free_offshore"
+msgid "Steuerfreie Umsätze Offshore usw."
+msgstr "Steuerfreie Umsätze Offshore usw."
+
+msgctxt "model:account.tax.template,name:tax_free_vv"
+msgid "Stfr. Umsätze aus V&V § 4 Nr. 12 UStG"
+msgstr "Stfr. Umsätze aus V&V § 4 Nr. 12 UStG"
+
+msgctxt "model:account.tax.template,name:trianglular_trade"
+msgid "Innergemeinschaftl. Dreiecksgeschäft"
+msgstr "Innergemeinschaftl. Dreiecksgeschäft"
+
+msgctxt "model:account.tax.template,name:ust_19"
+msgid "19% Umsatzsteuer"
+msgstr "19% Umsatzsteuer"
+
+msgctxt "model:account.tax.template,name:ust_19_payment"
+msgid "19% Umsatzsteuer (Zahlung)"
+msgstr "19% Umsatzsteuer (Zahlung)"
+
+msgctxt "model:account.tax.template,name:ust_19_payment_due"
+msgid "19% Umsatzsteuer fällig"
+msgstr "19% Umsatzsteuer fällig"
+
+msgctxt "model:account.tax.template,name:ust_19_payment_undue"
+msgid "-19% Umsatzsteuer nicht fällig"
+msgstr "-19% Umsatzsteuer nicht fällig"
+
+msgctxt "model:account.tax.template,name:ust_19_service_received"
+msgid "Erhaltene Leistungen §13b 19%VSt/19%USt (Drittland)"
+msgstr "Erhaltene Leistungen §13b 19%VSt/19%USt (Drittland)"
+
+msgctxt "model:account.tax.template,name:ust_19_service_received_ust"
+msgid "19% Umsatzsteuer aus erhaltenen Leistungen §13b (Ausland)"
+msgstr "19% Umsatzsteuer aus erhaltenen Leistungen §13b (Ausland)"
+
+msgctxt "model:account.tax.template,name:ust_19_service_received_vst"
+msgid "19% Vorsteuer aus erhaltenen Leistungen §13b (Ausland)"
+msgstr "19% Vorsteuer aus erhaltenen Leistungen §13b (Ausland)"
+
+msgctxt "model:account.tax.template,name:ust_19_undue"
+msgid "19% Umsatzsteuer nicht fällig"
+msgstr "19% Umsatzsteuer nicht fällig"
+
+msgctxt "model:account.tax.template,name:ust_7"
+msgid "7% Umsatzsteuer"
+msgstr "7% Umsatzsteuer"
+
+msgctxt "model:account.tax.template,name:ust_7_payment"
+msgid "7% Umsatzsteuer (Zahlung)"
+msgstr "7% Umsatzsteuer (Zahlung)"
+
+msgctxt "model:account.tax.template,name:ust_7_payment_due"
+msgid "7% Umsatzsteuer fällig"
+msgstr "7% Umsatzsteuer fällig"
+
+msgctxt "model:account.tax.template,name:ust_7_payment_undue"
+msgid "-7% Umsatzsteuer nicht fällig"
+msgstr "-7% Umsatzsteuer nicht fällig"
+
+msgctxt "model:account.tax.template,name:ust_7_service_received"
+msgid "Erhaltene Leistungen §13b 7%VSt/7%USt (Drittland)"
+msgstr "Erhaltene Leistungen §13b 7%VSt/7%USt (Drittland)"
+
+msgctxt "model:account.tax.template,name:ust_7_service_received_ust"
+msgid "7% Umsatzsteuer aus erhaltenen Leistungen §13b (Ausland)"
+msgstr "7% Umsatzsteuer aus erhaltenen Leistungen §13b (Ausland)"
+
+msgctxt "model:account.tax.template,name:ust_7_service_received_vst"
+msgid "7% Vorsteuer aus erhaltenen Leistungen §13b (Ausland)"
+msgstr "7% Vorsteuer aus erhaltenen Leistungen §13b (Ausland)"
+
+msgctxt "model:account.tax.template,name:ust_7_undue"
+msgid "7% Umsatzsteuer nicht fällig"
+msgstr "7% Umsatzsteuer nicht fällig"
+
+msgctxt "model:account.tax.template,name:vst_19"
+msgid "19% Vorsteuer"
+msgstr "19% Vorsteuer"
+
+msgctxt "model:account.tax.template,name:vst_7"
+msgid "7% Vorsteuer"
+msgstr "7% Vorsteuer"

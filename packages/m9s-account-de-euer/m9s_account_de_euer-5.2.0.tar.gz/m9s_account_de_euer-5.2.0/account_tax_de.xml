@@ -1,0 +1,1582 @@
+<?xml version='1.0'?>
+<!-- The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
+<tryton>
+  <data>
+    <record model="account.tax.group" id="ust">
+      <field name="name">Umsatzsteuer</field>
+      <field name="code">ust</field>
+      <field name="kind">sale</field>
+    </record>
+    <record model="account.tax.group" id="ust_reduced">
+      <field name="name">Umsatzsteuer ermäßigt</field>
+      <field name="code">ust_reduced</field>
+      <field name="kind">sale</field>
+    </record>
+    <record model="account.tax.group" id="vst">
+      <field name="name">Vorsteuer</field>
+      <field name="code">vst</field>
+      <field name="kind">purchase</field>
+    </record>
+    <record model="account.tax.group" id="vst_reduced">
+      <field name="name">Vorsteuer ermäßigt</field>
+      <field name="code">vst_reduced</field>
+      <field name="kind">purchase</field>
+    </record>
+    <record model="account.tax.template" id="ust_19">
+      <field name="name">19% Umsatzsteuer</field>
+      <field name="description">19% USt</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.19')"/>
+      <field name="invoice_account" ref="account_1776"/>
+      <field name="credit_note_account" ref="account_1776"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="ust_7">
+      <field name="name">7% Umsatzsteuer</field>
+      <field name="description">7% USt</field>
+      <field name="group" ref="ust_reduced"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.07')"/>
+      <field name="invoice_account" ref="account_1771"/>
+      <field name="credit_note_account" ref="account_1771"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="vst_19">
+      <field name="name">19% Vorsteuer</field>
+      <field name="description">19% VSt</field>
+      <field name="group" ref="vst"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.19')"/>
+      <field name="invoice_account" ref="account_1576"/>
+      <field name="credit_note_account" ref="account_1576"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="vst_7">
+      <field name="name">7% Vorsteuer</field>
+      <field name="description">7% VSt</field>
+      <field name="group" ref="vst_reduced"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.07')"/>
+      <field name="invoice_account" ref="account_1571"/>
+      <field name="credit_note_account" ref="account_1571"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="eu_19_purchase">
+      <field name="name">Steuerpfl. Innergem. Erwerb 19%VSt/19%USt</field>
+      <field name="description">innergem. Erwerb 19%</field>
+      <field name="group" ref="vst"/>
+      <field name="type">none</field>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="import_19">
+      <field name="name">19% Einfuhrumsatzsteuer</field>
+      <field name="description">19% EUSt</field>
+      <field name="group" ref="vst"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.19')"/>
+      <field name="invoice_account" ref="account_1588"/>
+      <field name="credit_note_account" ref="account_1588"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="import_7">
+      <field name="name">7% Einfuhrumsatzsteuer</field>
+      <field name="description">7% EUSt</field>
+      <field name="group" ref="vst_reduced"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.07')"/>
+      <field name="invoice_account" ref="account_1588"/>
+      <field name="credit_note_account" ref="account_1588"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="eu_sale">
+      <field name="name">Steuerfreie EG-Lieferung (§4 Abs. 1b UStG) </field>
+      <field name="description">steuerfreie innergem. Lieferung</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="export">
+      <field name="name">Steuerfreie Ausfuhr (§4 Nr. 1a UStG)</field>
+      <field name="description">steuerfreie Ausfuhr</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="eu_19_purchase_ust">
+      <field name="name">19% Umsatzsteuer aus innergem. Erwerb</field>
+      <field name="description">19% USt</field>
+      <field name="parent" ref="eu_19_purchase"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('-0.19')"/>
+      <field name="invoice_account" ref="account_1774"/>
+      <field name="credit_note_account" ref="account_1774"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="eu_19_purchase_vst">
+      <field name="name">19% Vorsteuer aus innergem. Erwerb</field>
+      <field name="description">19% VSt</field>
+      <field name="parent" ref="eu_19_purchase"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.19')"/>
+      <field name="invoice_account" ref="account_1574"/>
+      <field name="credit_note_account" ref="account_1574"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="eu_7_purchase">
+      <field name="name">steuerpfl. Innergem. Erwerb 7%VSt/7%USt</field>
+      <field name="description">innergem. Erwerb 7%</field>
+      <field name="group" ref="vst_reduced"/>
+      <field name="type">none</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="eu_7_purchase_ust">
+      <field name="name">7% Umsatzsteuer aus innergem. Erwerb</field>
+      <field name="description">7% USt</field>
+      <field name="parent" ref="eu_7_purchase"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('-0.07')"/>
+      <field name="invoice_account" ref="account_1772"/>
+      <field name="credit_note_account" ref="account_1772"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="eu_7_purchase_vst">
+      <field name="name">7% Vorsteuer aus innergem. Erwerb</field>
+      <field name="description">7% VSt</field>
+      <field name="parent" ref="eu_7_purchase"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.07')"/>
+      <field name="invoice_account" ref="account_1572"/>
+      <field name="credit_note_account" ref="account_1572"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="eu_7_service_received">
+      <field name="name">Erhaltene EG-Leistungen §13b 7%VSt/7%USt</field>
+      <field name="description">erh. EG-Leist. §13b 7%</field>
+      <field name="group" ref="vst_reduced"/>
+      <field name="type">none</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="eu_7_service_received_vst">
+      <field name="name">7% Vorsteuer aus erhaltenen EG-Leistungen §13b</field>
+      <field name="description">7% VSt</field>
+      <field name="parent" ref="eu_7_service_received"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.07')"/>
+      <field name="invoice_account" ref="account_1772"/>
+      <field name="credit_note_account" ref="account_1772"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="eu_7_service_received_ust">
+      <field name="name">7% Umsatzsteuer aus erhaltenen EG-Leistungen §13b</field>
+      <field name="description">7% USt</field>
+      <field name="parent" ref="eu_7_service_received"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('-0.07')"/>
+      <field name="invoice_account" ref="account_1572"/>
+      <field name="credit_note_account" ref="account_1572"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="eu_19_service_received">
+      <field name="name">Erhaltene EG-Leistungen §13b 19%VSt/19%USt</field>
+      <field name="description">erh. EG-Leist. §13b 19%</field>
+      <field name="group" ref="vst"/>
+      <field name="type">none</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="eu_19_service_received_vst">
+      <field name="name">19% Vorsteuer aus erhaltenen EG-Leistungen §13b</field>
+      <field name="description">19% VSt</field>
+      <field name="parent" ref="eu_19_service_received"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.19')"/>
+      <field name="invoice_account" ref="account_1774"/>
+      <field name="credit_note_account" ref="account_1774"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="eu_19_service_received_ust">
+      <field name="name">19% Umsatzsteuer aus erhaltenen EG-Leistungen §13b</field>
+      <field name="description">19% USt</field>
+      <field name="parent" ref="eu_19_service_received"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('-0.19')"/>
+      <field name="invoice_account" ref="account_1574"/>
+      <field name="credit_note_account" ref="account_1574"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="not_taxable_service_eu">
+      <field name="name">Nicht steuerbare sonstige EG-Leistung §18b</field>
+      <field name="description">nicht steuerbare innergem. sonstige Leistung §18b (Reverse-Charge)</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="not_taxable_service_third_country">
+      <field name="name">Nicht steuerbare Leistungen §13b (Drittland)</field>
+      <field name="description">nicht steuerbare sonstige Leistung §13b (Reverse-Charge)</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="ust_19_service_received">
+      <field name="name">Erhaltene Leistungen §13b 19%VSt/19%USt (Drittland)</field>
+      <field name="description">erh. Leist. §13b 19% (Drittland)</field>
+      <field name="group" ref="vst"/>
+      <field name="type">none</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="ust_19_service_received_ust">
+      <field name="name">19% Umsatzsteuer aus erhaltenen Leistungen §13b (Ausland)</field>
+      <field name="description">19% USt</field>
+      <field name="parent" ref="ust_19_service_received"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('-0.19')"/>
+      <field name="invoice_account" ref="account_1774"/>
+      <field name="credit_note_account" ref="account_1774"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="ust_19_service_received_vst">
+      <field name="name">19% Vorsteuer aus erhaltenen Leistungen §13b (Ausland)</field>
+      <field name="description">19% VSt</field>
+      <field name="parent" ref="ust_19_service_received"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.19')"/>
+      <field name="invoice_account" ref="account_1574"/>
+      <field name="credit_note_account" ref="account_1574"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="ust_7_service_received">
+      <field name="name">Erhaltene Leistungen §13b 7%VSt/7%USt (Drittland)</field>
+      <field name="description">erh. Leist. §13b 7% (Drittland)</field>
+      <field name="group" ref="vst_reduced"/>
+      <field name="type">none</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="ust_7_service_received_ust">
+      <field name="name">7% Umsatzsteuer aus erhaltenen Leistungen §13b (Ausland)</field>
+      <field name="description">7% USt</field>
+      <field name="parent" ref="ust_7_service_received"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('-0.07')"/>
+      <field name="invoice_account" ref="account_1772"/>
+      <field name="credit_note_account" ref="account_1772"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="ust_7_service_received_vst">
+      <field name="name">7% Vorsteuer aus erhaltenen Leistungen §13b (Ausland)</field>
+      <field name="description">7% VSt</field>
+      <field name="parent" ref="ust_7_service_received"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.07')"/>
+      <field name="invoice_account" ref="account_1572"/>
+      <field name="credit_note_account" ref="account_1572"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="tax_free">
+      <field name="name">Steuerfreie Umsätze §4 Nr. 8 ff UStG und sonstige stfr. Umsätze</field>
+      <field name="description">Steuerfreie Umsätze §4 Nr. 8 ff UStG und sonstige stfr. Umsätze</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="tax_free_vv">
+      <field name="name">Stfr. Umsätze aus V&amp;V § 4 Nr. 12 UStG</field>
+      <field name="description">Stfr. Umsätze aus V&amp;V § 4 Nr. 12 UStG</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="trianglular_trade">
+      <field name="name">Innergemeinschaftl. Dreiecksgeschäft</field>
+      <field name="description">Innergemeinschaftl. Dreiecksgeschäft</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+      <field name="vat_code_required" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="eu_car_private">
+      <field name="name">Steuerfr. EG-Lief.v.Neufahrzg.ohne UStID</field>
+      <field name="description">Steuerfr. EG-Lief.v.Neufahrzg.ohne UStID</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="tax_free_offshore">
+      <field name="name">Steuerfreie Umsätze Offshore usw.</field>
+      <field name="description">Steuerfreie Umsätze Offshore usw.</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="tax_free_4_2_7">
+      <field name="name">Steuerfreie Umsätze § 4 Nr. 2-7 UStG</field>
+      <field name="description">Steuerfreie Umsätze § 4 Nr. 2-7 UStG</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="tax_free_no_input_tax">
+      <field name="name">Steuerfreie Umsätze ohne Vorsteuerabzug</field>
+      <field name="description">Steuerfreie Umsätze ohne Vorsteuerabzug</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="eu_19_sale_private">
+      <field name="name">Erlöse EG-Lieferungen 19% USt</field>
+      <field name="description">Erlöse EG-Lieferungen 19% USt</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.19')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="eu_7_sale_private">
+      <field name="name">Erlöse EG-Lieferungen 7% USt</field>
+      <field name="description">Erlöse EG-Lieferungen 7% USt</field>
+      <field name="group" ref="ust_reduced"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.07')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="reverse_charge_service">
+      <field name="name">Erlöse aus Leistungen nach § 13b UStG</field>
+      <field name="description">Erlöse aus Leistungen nach § 13b UStG</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="not_taxable_eu">
+      <field name="name">Nicht steuerbare Umsätze EG-Land</field>
+      <field name="description">Nicht steuerbare Umsätze EG-Land</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="invoice_account" ref="account_1770"/>
+      <field name="credit_note_account" ref="account_1770"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="free_of_charge_product_removal_7">
+      <field name="name">Unentgeltliche Wertabgaben Entnahme von Gegenständen 7%</field>
+      <field name="description">Unentgeltliche Wertabgaben Entnahme von Gegenständen 7%</field>
+      <field name="group" ref="ust_reduced"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.07')"/>
+      <field name="invoice_account" ref="account_1771"/>
+      <field name="credit_note_account" ref="account_1771"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="free_of_charge_product_removal_19">
+      <field name="name">Unentgeltliche Wertabgaben Entnahme von Gegenständen 19%</field>
+      <field name="description">Unentgeltliche Wertabgaben Entnahme von Gegenständen 19%</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.19')"/>
+      <field name="invoice_account" ref="account_1776"/>
+      <field name="credit_note_account" ref="account_1776"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="free_of_charge_product_usage_7">
+      <field name="name">Unentgeltliche Wertabgaben Verwendung von Gegenständen 7%</field>
+      <field name="description">Unentgeltliche Wertabgaben Verwendung von Gegenständen 7%</field>
+      <field name="group" ref="ust_reduced"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.07')"/>
+      <field name="invoice_account" ref="account_1771"/>
+      <field name="credit_note_account" ref="account_1771"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="free_of_charge_product_usage_19">
+      <field name="name">Unentgeltliche Wertabgaben Verwendung von Gegenständen 19%</field>
+      <field name="description">Unentgeltliche Wertabgaben Verwendung von Gegenständen 19%</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.19')"/>
+      <field name="invoice_account" ref="account_1776"/>
+      <field name="credit_note_account" ref="account_1776"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="free_of_charge_service_7">
+      <field name="name">Unentgeltliche Erbringung einer sonstigen Leistung 7%</field>
+      <field name="description">Unentgeltliche Erbringung einer sonstigen Leistung 7%</field>
+      <field name="group" ref="ust_reduced"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.07')"/>
+      <field name="invoice_account" ref="account_1771"/>
+      <field name="credit_note_account" ref="account_1771"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="free_of_charge_service_19">
+      <field name="name">Unentgeltliche Erbringung einer sonstigen Leistung 19%</field>
+      <field name="description">Unentgeltliche Erbringung einer sonstigen Leistung 19%</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.19')"/>
+      <field name="invoice_account" ref="account_1776"/>
+      <field name="credit_note_account" ref="account_1776"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="free_of_charge_product_donation_7">
+      <field name="name">Unentgeltliche Zuwendung von Gegenständen 7%</field>
+      <field name="description">Unentgeltliche Zuwendung von Gegenständen 7%</field>
+      <field name="group" ref="ust_reduced"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.07')"/>
+      <field name="invoice_account" ref="account_1771"/>
+      <field name="credit_note_account" ref="account_1771"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="free_of_charge_product_donation_19">
+      <field name="name">Unentgeltliche Zuwendung von Gegenständen 19%</field>
+      <field name="description">Unentgeltliche Zuwendung von Gegenständen 19%</field>
+      <field name="group" ref="ust"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.19')"/>
+      <field name="invoice_account" ref="account_1776"/>
+      <field name="credit_note_account" ref="account_1776"/>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.template" id="service_received_13b_19">
+      <field name="name">Erhaltene Bauleistungen § 13b 19%VSt/19%USt</field>
+      <field name="description">Erhaltene Bauleistungen § 13b 19%VSt/19%USt</field>
+      <field name="group" ref="vst"/>
+      <field name="type">none</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="service_received_13b_19_ust">
+      <field name="name">19% Umsatzsteuer aus erhaltenen Bauleistungen §13b</field>
+      <field name="description">19% USt</field>
+      <field name="parent" ref="service_received_13b_19"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('-0.19')"/>
+      <field name="invoice_account" ref="account_1787"/>
+      <field name="credit_note_account" ref="account_1787"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="service_received_13b_19_vst">
+      <field name="name">19% Vorsteuer aus erhaltenen Bauleistungen §13b</field>
+      <field name="description">19% VSt</field>
+      <field name="parent" ref="service_received_13b_19"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.19')"/>
+      <field name="invoice_account" ref="account_1577"/>
+      <field name="credit_note_account" ref="account_1577"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="service_received_13b_7">
+      <field name="name">Erhaltene Bauleistungen § 13b 7%VSt/7%USt</field>
+      <field name="description">Erhaltene Bauleistungen § 13b 7%VSt/7%USt</field>
+      <field name="group" ref="vst"/>
+      <field name="type">none</field>
+      <field name="rate" eval="Decimal('0.0')"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="service_received_13b_7_ust">
+      <field name="name">7% Umsatzsteuer aus erhaltenen Bauleistungen §13b</field>
+      <field name="description">7% USt</field>
+      <field name="parent" ref="service_received_13b_7"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('-0.07')"/>
+      <field name="invoice_account" ref="account_1785"/>
+      <field name="credit_note_account" ref="account_1785"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+    </record>
+    <record model="account.tax.template" id="service_received_13b_7_vst">
+      <field name="name">7% Vorsteuer aus erhaltenen Bauleistungen §13b</field>
+      <field name="description">7% VSt</field>
+      <field name="parent" ref="service_received_13b_7"/>
+      <field name="type">percentage</field>
+      <field name="rate" eval="Decimal('0.07')"/>
+      <field name="invoice_account" ref="account_1578"/>
+      <field name="credit_note_account" ref="account_1578"/>
+      <field name="account" ref="account_root"/>
+      <field name="reverse_charge" eval="True"/>
+    </record>
+    <record model="account.tax.rule.template" id="non_eu_sale">
+      <field name="name">Kunde Ausland Unternehmen</field>
+      <field name="kind">sale</field>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.rule.template" id="non_eu_sale_private">
+      <field name="name">Kunde Ausland Privatperson</field>
+      <field name="kind">sale</field>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.rule.template" id="eu_vat_id_sale">
+      <field name="name">Kunde EU Unternehmen (mit USt-ID)</field>
+      <field name="kind">sale</field>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.rule.template" id="eu_no_id_sale">
+      <field name="name">Kunde EU (ohne USt-ID)</field>
+      <field name="kind">sale</field>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.rule.template" id="non_eu_purchase">
+      <field name="name">Lieferant Ausland</field>
+      <field name="kind">purchase</field>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.rule.template" id="eu_vat_id_purchase">
+      <field name="name">Lieferant EU Unternehmen (mit USt-ID)</field>
+      <field name="kind">purchase</field>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.rule.template" id="eu_no_id_purchase">
+      <field name="name">Lieferant EU (ohne Ust-ID)</field>
+      <field name="kind">purchase</field>
+      <field name="account" ref="account_root"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_non_eu_sale_ust_product">
+      <field name="rule" ref="non_eu_sale"/>
+      <field name="group" ref="ust"/>
+      <field name="tax" ref="export"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_non_eu_sale_ust_service">
+      <field name="rule" ref="non_eu_sale"/>
+      <field name="group" ref="ust"/>
+      <field name="tax" ref="not_taxable_service_third_country"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_non_eu_sale_private_ust_product">
+      <field name="rule" ref="non_eu_sale_private"/>
+      <field name="group" ref="ust"/>
+      <field name="tax" ref="export"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_non_eu_purchase_vst_product">
+      <field name="rule" ref="non_eu_purchase"/>
+      <field name="group" ref="vst"/>
+      <field name="tax" ref="import_19"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_non_eu_purchase_vst_service">
+      <field name="rule" ref="non_eu_purchase"/>
+      <field name="group" ref="vst"/>
+      <field name="tax" ref="ust_19_service_received"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_non_eu_purchase_vst_reduced_product">
+      <field name="rule" ref="non_eu_purchase"/>
+      <field name="group" ref="vst_reduced"/>
+      <field name="tax" ref="import_7"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_non_eu_purchase_vst_reduced_service">
+      <field name="rule" ref="non_eu_purchase"/>
+      <field name="group" ref="vst_reduced"/>
+      <field name="tax" ref="ust_7_service_received"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_eu_vat_id_sale_ust_product">
+      <field name="rule" ref="eu_vat_id_sale"/>
+      <field name="group" ref="ust"/>
+      <field name="tax" ref="eu_sale"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_eu_vat_id_sale_ust_service">
+      <field name="rule" ref="eu_vat_id_sale"/>
+      <field name="group" ref="ust"/>
+      <field name="tax" ref="not_taxable_service_eu"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_eu_vat_id_purchase_vst_product">
+      <field name="rule" ref="eu_vat_id_purchase"/>
+      <field name="group" ref="vst"/>
+      <field name="tax" ref="eu_19_purchase"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_eu_vat_id_purchase_vst_service">
+      <field name="rule" ref="eu_vat_id_purchase"/>
+      <field name="group" ref="vst"/>
+      <field name="tax" ref="eu_19_service_received"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_eu_vat_id_purchase_vst_reduced_product">
+      <field name="rule" ref="eu_vat_id_purchase"/>
+      <field name="group" ref="vst_reduced"/>
+      <field name="tax" ref="eu_7_purchase"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_eu_vat_id_purchase_vst_reduced_service">
+      <field name="rule" ref="eu_vat_id_purchase"/>
+      <field name="group" ref="vst_reduced"/>
+      <field name="tax" ref="eu_7_service_received"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_eu_no_id_purchase_vst_">
+      <field name="rule" ref="eu_no_id_purchase"/>
+      <field name="group" ref="vst"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="rule_eu_no_id_purchase_vst_reduced_">
+      <field name="rule" ref="eu_no_id_purchase"/>
+      <field name="group" ref="vst_reduced"/>
+    </record>
+    <record model="account.tax.code.template" id="USTVA">
+      <field name="account" ref="account_root"/>
+      <field name="code">USTVA</field>
+      <field name="description">Kennzifferntabelle EÜR (Einnahmenüberschussrechnung)</field>
+      <field name="name">Kennzifferntabelle EÜR (Einnahmenüberschussrechnung)</field>
+    </record>
+    <record model="account.tax.code.template" id="83">
+      <field name="account" ref="account_root"/>
+      <field name="code">83</field>
+      <field name="description">Verbleibende Umsatzsteuer-Vorauszahlung / Verbleibender Überschuss - bitte dem Betrag ein Minuszeichen voranstellen</field>
+      <field name="name">Verbleibende(r) Umsatzsteuer-Vorauszahlung/-Überschuß</field>
+      <field name="parent" ref="USTVA"/>
+    </record>
+    <record model="account.tax.code.template" id="U">
+      <field name="account" ref="account_root"/>
+      <field name="code">U</field>
+      <field name="description">Umsatzsteuer</field>
+      <field name="name">Umsatzsteuer</field>
+      <field name="parent" ref="83"/>
+    </record>
+    <record model="account.tax.code.template" id="UZ18">
+      <field name="account" ref="account_root"/>
+      <field name="code">UZ18</field>
+      <field name="description">Lieferungen und sonstige Leistungen (einschließlich unentgeltlicher Wertabgaben)</field>
+      <field name="name">Lieferungen und sonstige Leistungen</field>
+      <field name="parent" ref="U"/>
+    </record>
+    <record model="account.tax.code.template" id="UZ25">
+      <field name="account" ref="account_root"/>
+      <field name="code">UZ25</field>
+      <field name="description">Steuerpflichtige Umsätze (Lieferungen und sonstige Leistungen einschl. unentgeltlicher Wertabgaben)</field>
+      <field name="name">Steuerpflichtige Umsätze</field>
+      <field name="parent" ref="UZ18"/>
+    </record>
+    <record model="account.tax.code.template" id="811">
+      <field name="account" ref="account_root"/>
+      <field name="code">811</field>
+      <field name="description">zum Steuersatz von 19 %</field>
+      <field name="name">zum Steuersatz von 19 %</field>
+      <field name="parent" ref="UZ25"/>
+    </record>
+    <record model="account.tax.code.template" id="861">
+      <field name="account" ref="account_root"/>
+      <field name="code">861</field>
+      <field name="description">zum Steuersatz von 7%</field>
+      <field name="name">zum Steuersatz von 7%</field>
+      <field name="parent" ref="UZ25"/>
+    </record>
+    <record model="account.tax.code.template" id="36">
+      <field name="account" ref="account_root"/>
+      <field name="code">36</field>
+      <field name="description">zu anderen Steuersätzen</field>
+      <field name="name">zu anderen Steuersätzen</field>
+      <field name="parent" ref="UZ25"/>
+    </record>
+    <record model="account.tax.code.template" id="80">
+      <field name="account" ref="account_root"/>
+      <field name="code">80</field>
+      <field name="description">Umsätze, für die eine Steuer nach § 24 UStG zu entrichten ist (Sägewerkserzeugnisse, Getränke und alkohol. Flüssigkeiten, z.B. Wein)</field>
+      <field name="name">Umsätze, für die eine Steuer nach § 24 UStG zu entrichten ist</field>
+      <field name="parent" ref="UZ25"/>
+    </record>
+    <record model="account.tax.code.template" id="UZ31">
+      <field name="account" ref="account_root"/>
+      <field name="code">UZ31</field>
+      <field name="description">Innergemeinschaftliche Erwerbe</field>
+      <field name="name">Innergemeinschaftliche Erwerbe</field>
+      <field name="parent" ref="U"/>
+    </record>
+    <record model="account.tax.code.template" id="UZ33">
+      <field name="account" ref="account_root"/>
+      <field name="code">UZ33</field>
+      <field name="description">Steuerpflichtige innergemeinschaftliche Erwerbe</field>
+      <field name="name">Steuerpflichtige innergemeinschaftliche Erwerbe</field>
+      <field name="parent" ref="UZ31"/>
+    </record>
+    <record model="account.tax.code.template" id="891">
+      <field name="account" ref="account_root"/>
+      <field name="code">891</field>
+      <field name="description">zum Steuersatz von 19 %</field>
+      <field name="name">zum Steuersatz von 19 %</field>
+      <field name="parent" ref="UZ33"/>
+    </record>
+    <record model="account.tax.code.template" id="931">
+      <field name="account" ref="account_root"/>
+      <field name="code">931</field>
+      <field name="description">zum Steuersatz von 7%</field>
+      <field name="name">zum Steuersatz von 7%</field>
+      <field name="parent" ref="UZ33"/>
+    </record>
+    <record model="account.tax.code.template" id="98">
+      <field name="account" ref="account_root"/>
+      <field name="code">98</field>
+      <field name="description">zu anderen Steuersätzen</field>
+      <field name="name">zu anderen Steuersätzen</field>
+      <field name="parent" ref="UZ33"/>
+    </record>
+    <record model="account.tax.code.template" id="96">
+      <field name="account" ref="account_root"/>
+      <field name="code">96</field>
+      <field name="description">neuer Fahrzeuge von Lieferern ohne USt-IdNr. zum allgemeinen Steuersatz</field>
+      <field name="name">neuer Fahrzeuge von Lieferern ohne USt-IdNr. zum allgemeinen Steuersatz</field>
+      <field name="parent" ref="UZ33"/>
+    </record>
+    <record model="account.tax.code.template" id="UZ37">
+      <field name="account" ref="account_root"/>
+      <field name="code">UZ37</field>
+      <field name="description">Ergänzende Angaben zu Umsätzen </field>
+      <field name="name">Ergänzende Angaben zu Umsätzen </field>
+      <field name="parent" ref="U"/>
+    </record>
+    <record model="account.tax.code.template" id="UZ47">
+      <field name="account" ref="account_root"/>
+      <field name="code">UZ47</field>
+      <field name="description">Leistungsempfänger als Steuerschuldner (§13b UStG)</field>
+      <field name="name">Leistungsempfänger als Steuerschuldner (§13b UStG)</field>
+      <field name="parent" ref="UZ37"/>
+    </record>
+    <record model="account.tax.code.template" id="47">
+      <field name="account" ref="account_root"/>
+      <field name="code">47</field>
+      <field name="description">Im Inland steuerpflichtige sonstige Leistungen von im übrigen Gemeinschaftsgebiet ansässigen Unternehmern (§ 13b Abs. 1 UStG)</field>
+      <field name="name">Im Inland steuerpflichtige sonstige Leistungen von im übrigen Gemeinschaftsgebiet ansässigen Unternehmern (§ 13b Abs. 1 UStG)</field>
+      <field name="parent" ref="UZ47"/>
+    </record>
+    <record model="account.tax.code.template" id="53">
+      <field name="account" ref="account_root"/>
+      <field name="code">53</field>
+      <field name="description">Andere Leistungen eines im Ausland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 1 und 5 UStG)</field>
+      <field name="name">Andere Leistungen eines im Ausland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 1 und 5 UStG)</field>
+      <field name="parent" ref="UZ47"/>
+    </record>
+    <record model="account.tax.code.template" id="74">
+      <field name="account" ref="account_root"/>
+      <field name="code">74</field>
+      <field name="description">Lieferungen sicherungsübereigneter Gegenstände und Umsätze, die unter das GrEStG fallen (§ 13b Abs. 2 Nr. 2 und 3 UStG)</field>
+      <field name="name">Lieferungen sicherungsübereigneter Gegenstände und Umsätze, die unter das GrEStG fallen (§ 13b Abs. 2 Nr. 2 und 3 UStG)</field>
+      <field name="parent" ref="UZ47"/>
+    </record>
+    <record model="account.tax.code.template" id="79">
+      <field name="account" ref="account_root"/>
+      <field name="code">79</field>
+      <field name="description">Lieferungen von Mobilfunkgeräten und integrierten Schaltkreisen (§ 13b Abs. 2 Nr. 10 UStG)</field>
+      <field name="name">Lieferungen von Mobilfunkgeräten und integrierten Schaltkreisen (§ 13b Abs. 2 Nr. 10 UStG)</field>
+      <field name="parent" ref="UZ47"/>
+    </record>
+    <record model="account.tax.code.template" id="85">
+      <field name="account" ref="account_root"/>
+      <field name="code">85</field>
+      <field name="description">Andere Umsätze eines im Inland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 4, 6 bis 9 UStG)</field>
+      <field name="name">Andere Umsätze eines im Inland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 4, 6 bis 9 UStG)</field>
+      <field name="parent" ref="UZ47"/>
+    </record>
+    <record model="account.tax.code.template" id="65">
+      <field name="account" ref="account_root"/>
+      <field name="code">65</field>
+      <field name="description">Steuer infolge Wechsels der Besteuerungsform sowie Nachsteuer auf versteuerte Anzahlungen u. ä. wegen Steuersatzänderung</field>
+      <field name="name">Steuer infolge Wechsels der Besteuerungsform</field>
+      <field name="parent" ref="UZ47"/>
+    </record>
+    <record model="account.tax.code.template" id="VST">
+      <field name="account" ref="account_root"/>
+      <field name="code">VST</field>
+      <field name="description">Abziehbare Vorsteuerbeträge</field>
+      <field name="name">Abziehbare Vorsteuerbeträge</field>
+      <field name="parent" ref="83"/>
+    </record>
+    <record model="account.tax.code.template" id="66">
+      <field name="account" ref="account_root"/>
+      <field name="code">66</field>
+      <field name="description">Vorsteuerbeträge aus Rechnungen von anderen Unternehmern (§ 15 Abs. 1 Satz 1 Nr. 1 UStG), aus Leistungen im Sinne des § 13a Abs. 1 Nr. 6 UStG (§ 15 Abs. 1 Satz 1 Nr. 5 UStG) und aus innergemeinschaftlichen Dreiecksgeschäften (§ 25b Abs. 5 UStG)</field>
+      <field name="name">Vorsteuerbeträge aus Rechnungen von anderen Unternehmern</field>
+      <field name="parent" ref="VST"/>
+    </record>
+    <record model="account.tax.code.template" id="61">
+      <field name="account" ref="account_root"/>
+      <field name="code">61</field>
+      <field name="description">Vorsteuerbeträge aus dem innergemeinschaftlichen Erwerb von Gegenständen (§ 15 Abs. 1 Satz 1 Nr. 3 UStG)</field>
+      <field name="name">Vorsteuerbeträge aus dem innergemeinschaftlichen Erwerb von Gegenständen</field>
+      <field name="parent" ref="VST"/>
+    </record>
+    <record model="account.tax.code.template" id="62">
+      <field name="account" ref="account_root"/>
+      <field name="code">62</field>
+      <field name="description">Entrichtete Einfuhrumsatzsteuer (§ 15 Abs. 1 Satz 1 Nr. 2 UStG)</field>
+      <field name="name">Entrichtete Einfuhrumsatzsteuer</field>
+      <field name="parent" ref="VST"/>
+    </record>
+    <record model="account.tax.code.template" id="67">
+      <field name="account" ref="account_root"/>
+      <field name="code">67</field>
+      <field name="description">Vorsteuerbeträge aus Leistungen im Sinne des § 13b UStG (§ 15 Abs. 1 Satz 1 Nr. 4 UStG)</field>
+      <field name="name">Vorsteuerbeträge aus Leistungen im Sinne des § 13b UStG (§ 15 Abs. 1 Satz 1 Nr. 4 UStG)</field>
+      <field name="parent" ref="VST"/>
+    </record>
+    <record model="account.tax.code.template" id="63">
+      <field name="account" ref="account_root"/>
+      <field name="code">63</field>
+      <field name="description">Vorsteuerbeträge, die nach allgemeinen Durchschnittssätzen berechnet sind (§§ 23 und 23a UStG)</field>
+      <field name="name">Vorsteuerbeträge nach allg. Durchschnittssätzen berechnet</field>
+      <field name="parent" ref="VST"/>
+    </record>
+    <record model="account.tax.code.template" id="64">
+      <field name="account" ref="account_root"/>
+      <field name="code">64</field>
+      <field name="description">Berichtigung des Vorsteuerabzugs (§ 15a UStG)</field>
+      <field name="name">Berichtigung des Vorsteuerabzugs (§ 15a UStG)</field>
+      <field name="parent" ref="VST"/>
+    </record>
+    <record model="account.tax.code.template" id="59">
+      <field name="account" ref="account_root"/>
+      <field name="code">59</field>
+      <field name="description">Vorsteuerabzug für innergemeinschaftliche Lieferungen neuer Fahrzeuge außerhalb eines Unternehmens (§ 2a UStG) sowie von Kleinunternehmern im Sinne des § 19 Abs. 1 UStG (§ 15 Abs. 4a UStG)</field>
+      <field name="name">Vorsteuerabzug für igL neuer Fahrzeuge außerh. eines Untern./Kleinunternehmer n. § 19 Abs. 1 UStG</field>
+      <field name="parent" ref="VST"/>
+    </record>
+    <record model="account.tax.code.template" id="AST">
+      <field name="account" ref="account_root"/>
+      <field name="code">AST</field>
+      <field name="description">Andere Steuerbeträge</field>
+      <field name="name">Andere Steuerbeträge</field>
+      <field name="parent" ref="83"/>
+    </record>
+    <record model="account.tax.code.template" id="69">
+      <field name="account" ref="account_root"/>
+      <field name="code">69</field>
+      <field name="description">In Rechnungen unrichtig oder unberechtigt ausgewiesene Steuerbeträge (§ 14c UStG) sowie Steuerbeträge, die nach § 4 Nr. 4a Satz 1 Buchst. a Satz 2, § 6a Abs. 4 Satz 2, § 17 Abs. 1 Satz 6 oder § 25b Abs. 2 UStG geschuldet werden</field>
+      <field name="name">In Rechnungen unrichtig oder unberechtigt ausgewiesene Steuerbeträge</field>
+      <field name="parent" ref="AST"/>
+    </record>
+    <record model="account.tax.code.template" id="39">
+      <field name="account" ref="account_root"/>
+      <field name="code">39</field>
+      <field name="description">Anrechnung (Abzug) der festgesetzten Sondervorauszahlung für Dauerfristverlängerung (nur auszufüllen in der letzten Voranmeldung des Besteuerungszeitraums, in der Regel Dezember)</field>
+      <field name="name">Anrechnung (Abzug) der festgesetzten Sondervorauszahlung für Dauerfristverlängerung</field>
+      <field name="parent" ref="83"/>
+    </record>
+    <record model="account.tax.code.template" id="B">
+      <field name="account" ref="account_root"/>
+      <field name="code">B</field>
+      <field name="description">Bemessungsgrundlage</field>
+      <field name="name">Bemessungsgrundlage</field>
+      <field name="parent" ref="USTVA"/>
+    </record>
+    <record model="account.tax.code.template" id="BU">
+      <field name="account" ref="account_root"/>
+      <field name="code">BU</field>
+      <field name="description">Umsatzsteuer</field>
+      <field name="name">Umsatzsteuer</field>
+      <field name="parent" ref="B"/>
+    </record>
+    <record model="account.tax.code.template" id="BZ18">
+      <field name="account" ref="account_root"/>
+      <field name="code">BZ18</field>
+      <field name="description">Lieferungen und sonstige Leistungen (einschließlich unentgeltlicher Wertabgaben)</field>
+      <field name="name">Lieferungen und sonstige Leistungen (einschließlich unentgeltlicher Wertabgaben)</field>
+      <field name="parent" ref="BU"/>
+    </record>
+    <record model="account.tax.code.template" id="BZ19">
+      <field name="account" ref="account_root"/>
+      <field name="code">BZ19</field>
+      <field name="description">Steuerfreie Umsätze mit Vorsteuerabzug</field>
+      <field name="name">Steuerfreie Umsätze mit Vorsteuerabzug</field>
+      <field name="parent" ref="BZ18"/>
+    </record>
+    <record model="account.tax.code.template" id="41">
+      <field name="account" ref="account_root"/>
+      <field name="code">41</field>
+      <field name="description">Innergemeinschaftliche Lieferungen (§ 4 Nr. 1 Buchst. b UStG) an Abnehmer mit USt-IdNr</field>
+      <field name="name">Innergemeinschaftliche Lieferungen (§ 4 Nr. 1 Buchst. b UStG) an Abnehmer mit USt-IdNr</field>
+      <field name="parent" ref="BZ19"/>
+    </record>
+    <record model="account.tax.code.template" id="44">
+      <field name="account" ref="account_root"/>
+      <field name="code">44</field>
+      <field name="description">neuer Fahrzeuge an Abnehmer ohne USt-IdNr</field>
+      <field name="name">neuer Fahrzeuge an Abnehmer ohne USt-IdNr</field>
+      <field name="parent" ref="BZ19"/>
+    </record>
+    <record model="account.tax.code.template" id="49">
+      <field name="account" ref="account_root"/>
+      <field name="code">49</field>
+      <field name="description">neuer Fahrzeuge außerhalb eines Unternehmens (§ 2a UStG)</field>
+      <field name="name">neuer Fahrzeuge außerhalb eines Unternehmens (§ 2a UStG)</field>
+      <field name="parent" ref="BZ19"/>
+    </record>
+    <record model="account.tax.code.template" id="43">
+      <field name="account" ref="account_root"/>
+      <field name="code">43</field>
+      <field name="description">Weitere steuerfreie Umsätze mit Vorsteuerabzug (z.B. Ausfuhrlieferungen, Umsätze nach § 4 Nr. 2 bis 7 UStG)</field>
+      <field name="name">weitere steuerfreie Umsätze mit Vorsteuerabzug</field>
+      <field name="parent" ref="BZ19"/>
+    </record>
+    <record model="account.tax.code.template" id="BZ24">
+      <field name="account" ref="account_root"/>
+      <field name="code">BZ24</field>
+      <field name="description">Steuerfreie Umsätze ohne Vorsteuerabzug</field>
+      <field name="name">Steuerfreie Umsätze ohne Vorsteuerabzug</field>
+      <field name="parent" ref="BZ18"/>
+    </record>
+    <record model="account.tax.code.template" id="48">
+      <field name="account" ref="account_root"/>
+      <field name="code">48</field>
+      <field name="description">Umsätze nach § 4 Nr. 8 bis 28 UStG</field>
+      <field name="name">Umsätze nach § 4 Nr. 8 bis 28 UStG</field>
+      <field name="parent" ref="BZ24"/>
+    </record>
+    <record model="account.tax.code.template" id="BZ25">
+      <field name="account" ref="account_root"/>
+      <field name="code">BZ25</field>
+      <field name="description">Steuerpflichtige Umsätze (Lieferungen und sonstige Leistungen einschl. unentgeltlicher Wertabgaben)</field>
+      <field name="name">Steuerpflichtige Umsätze</field>
+      <field name="parent" ref="BZ18"/>
+    </record>
+    <record model="account.tax.code.template" id="81">
+      <field name="account" ref="account_root"/>
+      <field name="code">81</field>
+      <field name="description">zum Steuersatz von 19 %</field>
+      <field name="name">zum Steuersatz von 19 %</field>
+      <field name="parent" ref="BZ25"/>
+    </record>
+    <record model="account.tax.code.template" id="86">
+      <field name="account" ref="account_root"/>
+      <field name="code">86</field>
+      <field name="description">zum Steuersatz von 7%</field>
+      <field name="name">zum Steuersatz von 7%</field>
+      <field name="parent" ref="BZ25"/>
+    </record>
+    <record model="account.tax.code.template" id="35">
+      <field name="account" ref="account_root"/>
+      <field name="code">35</field>
+      <field name="description">zu anderen Steuersätzen</field>
+      <field name="name">zu anderen Steuersätzen</field>
+      <field name="parent" ref="BZ25"/>
+    </record>
+    <record model="account.tax.code.template" id="77">
+      <field name="account" ref="account_root"/>
+      <field name="code">77</field>
+      <field name="description">Lieferungen in das übrige Gemeinschaftsgebiet an Abnehmer mit Ust-IdNr.</field>
+      <field name="name">Lieferungen land- und forstwirtschaftlicher Betriebe nach §24 UStG an Abnehmer mit Ust-IdNr.</field>
+      <field name="parent" ref="BZ25"/>
+    </record>
+    <record model="account.tax.code.template" id="76">
+      <field name="account" ref="account_root"/>
+      <field name="code">76</field>
+      <field name="description">Umsätze, für die eine Steuer nach § 24 UStG zu entrichten ist (Sägewerkserzeugnisse, Getränke und alkohol. Flüssigkeiten, z.B. Wein)</field>
+      <field name="name">Umsätze, für die eine Steuer nach § 24 UStG zu entrichten ist</field>
+      <field name="parent" ref="BZ25"/>
+    </record>
+    <record model="account.tax.code.template" id="BZ31">
+      <field name="account" ref="account_root"/>
+      <field name="code">BZ31</field>
+      <field name="description">Innergemeinschaftliche Erwerbe</field>
+      <field name="name">Innergemeinschaftliche Erwerbe</field>
+      <field name="parent" ref="BU"/>
+    </record>
+    <record model="account.tax.code.template" id="BZ32">
+      <field name="account" ref="account_root"/>
+      <field name="code">BZ32</field>
+      <field name="description">Steuerfreie innergemeinschaftliche Erwerbe</field>
+      <field name="name">Steuerfreie innergemeinschaftliche Erwerbe</field>
+      <field name="parent" ref="BZ31"/>
+    </record>
+    <record model="account.tax.code.template" id="91">
+      <field name="account" ref="account_root"/>
+      <field name="code">91</field>
+      <field name="description">Erwerbe nach §§ 4b UStG und 25c UStG</field>
+      <field name="name">Erwerbe nach §§ 4b UStG und 25c UStG</field>
+      <field name="parent" ref="BZ32"/>
+    </record>
+    <record model="account.tax.code.template" id="BZ33">
+      <field name="account" ref="account_root"/>
+      <field name="code">BZ33</field>
+      <field name="description">Steuerpflichtige innergemeinschaftliche Erwerbe</field>
+      <field name="name">Steuerpflichtige innergemeinschaftliche Erwerbe</field>
+      <field name="parent" ref="BZ31"/>
+    </record>
+    <record model="account.tax.code.template" id="89">
+      <field name="account" ref="account_root"/>
+      <field name="code">89</field>
+      <field name="description">zum Steuersatz von 19 %</field>
+      <field name="name">zum Steuersatz von 19 %</field>
+      <field name="parent" ref="BZ33"/>
+    </record>
+    <record model="account.tax.code.template" id="93">
+      <field name="account" ref="account_root"/>
+      <field name="code">93</field>
+      <field name="description">zum Steuersatz von 7%</field>
+      <field name="name">zum Steuersatz von 7%</field>
+      <field name="parent" ref="BZ33"/>
+    </record>
+    <record model="account.tax.code.template" id="95">
+      <field name="account" ref="account_root"/>
+      <field name="code">95</field>
+      <field name="description">zu anderen Steuersätzen</field>
+      <field name="name">zu anderen Steuersätzen</field>
+      <field name="parent" ref="BZ33"/>
+    </record>
+    <record model="account.tax.code.template" id="94">
+      <field name="account" ref="account_root"/>
+      <field name="code">94</field>
+      <field name="description">neuer Fahrzeuge von Lieferern ohne USt-IdNr. zum allgemeinen Steuersatz</field>
+      <field name="name">neuer Fahrzeuge von Lieferern ohne USt-IdNr. zum allgemeinen Steuersatz</field>
+      <field name="parent" ref="BZ33"/>
+    </record>
+    <record model="account.tax.code.template" id="BZ37">
+      <field name="account" ref="account_root"/>
+      <field name="code">BZ37</field>
+      <field name="description">Ergänzende Angaben zu Umsätzen</field>
+      <field name="name">Ergänzende Angaben zu Umsätzen</field>
+      <field name="parent" ref="BU"/>
+    </record>
+    <record model="account.tax.code.template" id="21">
+      <field name="account" ref="account_root"/>
+      <field name="code">21</field>
+      <field name="description">Nicht steuerbare sonstige Leistungen gem. §18b Satz 1 Nr. 2 UStG</field>
+      <field name="name">Nicht steuerbare sonstige Leistungen gem. §18b Satz 1 Nr. 2 UStG</field>
+      <field name="parent" ref="BZ37"/>
+    </record>
+    <record model="account.tax.code.template" id="42">
+      <field name="account" ref="account_root"/>
+      <field name="code">42</field>
+      <field name="description">Lieferungen des ersten Abnehmers bei innergemeinschaftlichen Dreiecksgeschäften (§ 25b Abs. 2 UStG)</field>
+      <field name="name">Lieferungen des ersten Abnehmers bei innergemeinschaftlichen Dreiecksgeschäften</field>
+      <field name="parent" ref="BZ37"/>
+    </record>
+    <record model="account.tax.code.template" id="68">
+      <field name="account" ref="account_root"/>
+      <field name="code">68</field>
+      <field name="description">Steuerpflichtige Umsätze, für die der Leistungsempfänger die Steuer nach § 13b Abs. 5 Satz 1 i.V.m. Abs. 2 Nr. 10 UStG schuldet</field>
+      <field name="name">Steuerpflichtige Umsätze, für die der Leistungsempfänger die Steuer nach § 13b Abs. 5 Satz 1 i.V.m. Abs. 2 Nr. 10 UStG schuldet</field>
+      <field name="parent" ref="BZ37"/>
+    </record>
+    <record model="account.tax.code.template" id="60">
+      <field name="account" ref="account_root"/>
+      <field name="code">60</field>
+      <field name="description">Übrige steuerpflichtige Umsätze, für die der Leistungsempfänger die Steuer nach § 13b Abs. 5 UStG schuldet</field>
+      <field name="name">Übrige steuerpflichtige Umsätze, für die der Leistungsempfänger die Steuer nach § 13b Abs. 5 UStG schuldet</field>
+      <field name="parent" ref="BZ37"/>
+    </record>
+    <record model="account.tax.code.template" id="45">
+      <field name="account" ref="account_root"/>
+      <field name="code">45</field>
+      <field name="description">Übrige nicht steuerbare Umsätze (Leistungsort nicht im Inland)</field>
+      <field name="name">Übrige nicht steuerbare Umsätze (Leistungsort nicht im Inland)</field>
+      <field name="parent" ref="BZ37"/>
+    </record>
+    <record model="account.tax.code.template" id="BZ47">
+      <field name="account" ref="account_root"/>
+      <field name="code">BZ47</field>
+      <field name="description">Umsätze, für die als Leistungsempfänger die Steuer nach § 13b Abs. 2 UStG geschuldet wird</field>
+      <field name="name">Leistungsempfänger als Steuerschuldner (§13b UStG)</field>
+      <field name="parent" ref="BU"/>
+    </record>
+    <record model="account.tax.code.template" id="46">
+      <field name="account" ref="account_root"/>
+      <field name="code">46</field>
+      <field name="description">Im Inland steuerpflichtige sonstige Leistungen von im übrigen Gemeinschaftsgebiet ansässigen Unternehmern (§13b Abs. 1 UStG)</field>
+      <field name="name">Im Inland steuerpflichtige sonstige Leistungen von im übrigen Gemeinschaftsgebiet ansässigen Unternehmern (§13b Abs. 1 UStG)</field>
+      <field name="parent" ref="BZ47"/>
+    </record>
+    <record model="account.tax.code.template" id="52">
+      <field name="account" ref="account_root"/>
+      <field name="code">52</field>
+      <field name="description">Andere Leistungen eines im Ausland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 1 und 5 UStG)</field>
+      <field name="name">Andere Leistungen eines im Ausland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 1 und 5 UStG)</field>
+      <field name="parent" ref="BZ47"/>
+    </record>
+    <record model="account.tax.code.template" id="73">
+      <field name="account" ref="account_root"/>
+      <field name="code">73</field>
+      <field name="description">Lieferungen sicherungsübereigneter Gegenstände und Umsätze, die unter das GrEStG fallen (§ 13b Abs. 2 Nr. 2 und 3 UStG)</field>
+      <field name="name">Lieferungen sicherungsübereigneter Gegenstände und Umsätze, die unter das GrEStG fallen</field>
+      <field name="parent" ref="BZ47"/>
+    </record>
+    <record model="account.tax.code.template" id="78">
+      <field name="account" ref="account_root"/>
+      <field name="code">78</field>
+      <field name="description">Lieferungen von Mobilfunkgeräten und integrierten Schaltkreisen (§ 13b Abs. 2 Nr. 10 UStG)</field>
+      <field name="name">Lieferungen von Mobilfunkgeräten und integrierten Schaltkreisen (§ 13b Abs. 2 Nr. 10 UStG)</field>
+      <field name="parent" ref="BZ47"/>
+    </record>
+    <record model="account.tax.code.template" id="84">
+      <field name="account" ref="account_root"/>
+      <field name="code">84</field>
+      <field name="description">Andere Umsätze eines im Inland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 4, 6 bis 9 UStG)</field>
+      <field name="name">Andere Umsätze eines im Inland ansässigen Unternehmers (§ 13b Abs. 2 Nr. 4, 6 bis 9 UStG)</field>
+      <field name="parent" ref="BZ47"/>
+    </record>
+    <record model="account.tax.code.template" id="BV">
+      <field name="account" ref="account_root"/>
+      <field name="code">BV</field>
+      <field name="description">Bemessungsgrundlage Vorsteuer (dient lediglich der Verprobung)</field>
+      <field name="name">Bemessungsgrundlage Vorsteuer (dient lediglich der Verprobung)</field>
+      <field name="parent" ref="B"/>
+    </record>
+    <record model="account.tax.code.template" id="BAUS">
+      <field name="account" ref="account_root"/>
+      <field name="code">BAUS</field>
+      <field name="description">Einfuhren</field>
+      <field name="name">Einfuhren</field>
+      <field name="parent" ref="BV"/>
+    </record>
+    <record model="account.tax.code.template" id="BAUS19">
+      <field name="account" ref="account_root"/>
+      <field name="code">BAUS19</field>
+      <field name="description">zum Steuersatz von 19 %</field>
+      <field name="name">zum Steuersatz von 19 %</field>
+      <field name="parent" ref="BAUS"/>
+    </record>
+    <record model="account.tax.code.template" id="BAUS7">
+      <field name="account" ref="account_root"/>
+      <field name="code">BAUS7</field>
+      <field name="description">zum Steuersatz von 7 %</field>
+      <field name="name">zum Steuersatz von 7 %</field>
+      <field name="parent" ref="BAUS"/>
+    </record>
+    <record model="account.tax.code.template" id="BRV">
+      <field name="account" ref="account_root"/>
+      <field name="code">BRV</field>
+      <field name="description">Rechnungen von anderen Unternehmern (§ 15 Abs. 1 Satz 1 Nr. 1 UStG), Leistungen im Sinne des § 13a Abs. 1 Nr. 6 UStG (§ 15 Abs. 1 Satz 1 Nr. 5 UStG) und innergemeinschaftliche Dreiecksgeschäfte (§ 25b Abs. 5 UStG)</field>
+      <field name="name">Rechnungen von anderen Unternehmern</field>
+      <field name="parent" ref="BV"/>
+    </record>
+    <record model="account.tax.code.template" id="BRV19">
+      <field name="account" ref="account_root"/>
+      <field name="code">BRV19</field>
+      <field name="description">zum Steuersatz von 19 %</field>
+      <field name="name">zum Steuersatz von 19 %</field>
+      <field name="parent" ref="BRV"/>
+    </record>
+    <record model="account.tax.code.template" id="BRV7">
+      <field name="account" ref="account_root"/>
+      <field name="code">BRV7</field>
+      <field name="description">zum Steuersatz von 7 %</field>
+      <field name="name">zum Steuersatz von 7 %</field>
+      <field name="parent" ref="BRV"/>
+    </record>
+    <record model="account.tax.code.template" id="UNF">
+      <field name="account" ref="account_root"/>
+      <field name="code">UNF</field>
+      <field name="description">Nicht fällige Posten</field>
+      <field name="name">Umsatzsteuer nicht fällig</field>
+      <field name="parent" ref="USTVA"/>
+    </record>
+    <record model="account.tax.code.template" id="BUNF">
+      <field name="account" ref="account_root"/>
+      <field name="code">BUNF</field>
+      <field name="description">Bemessungsgrundlage</field>
+      <field name="name">Bemessungsgrundlage</field>
+      <field name="parent" ref="UNF"/>
+    </record>
+    <record model="account.tax.code.template" id="UZUNF">
+      <field name="account" ref="account_root"/>
+      <field name="code">UZUNF</field>
+      <field name="description">Steuer</field>
+      <field name="name">Umsatzsteuer</field>
+      <field name="parent" ref="UNF"/>
+    </record>
+    <record model="account.tax.code.template" id="811NF">
+      <field name="account" ref="account_root"/>
+      <field name="code">811NF</field>
+      <field name="description">zum Steuersatz von 19 %</field>
+      <field name="name">zum Steuersatz von 19 %</field>
+      <field name="parent" ref="UZUNF"/>
+    </record>
+    <record model="account.tax.code.template" id="861NF">
+      <field name="account" ref="account_root"/>
+      <field name="code">861NF</field>
+      <field name="description">zum Steuersatz von 7%</field>
+      <field name="name">zum Steuersatz von 7%</field>
+      <field name="parent" ref="UZUNF"/>
+    </record>
+    <record model="account.tax.code.template" id="36NF">
+      <field name="account" ref="account_root"/>
+      <field name="code">36NF</field>
+      <field name="description">zu anderen Steuersätzen</field>
+      <field name="name">zu anderen Steuersätzen</field>
+      <field name="parent" ref="UZUNF"/>
+    </record>
+    <record model="account.tax.code.template" id="81NF">
+      <field name="account" ref="account_root"/>
+      <field name="code">81NF</field>
+      <field name="description">zum Steuersatz von 19 %</field>
+      <field name="name">zum Steuersatz von 19 %</field>
+      <field name="parent" ref="BUNF"/>
+    </record>
+    <record model="account.tax.code.template" id="86NF">
+      <field name="account" ref="account_root"/>
+      <field name="code">86NF</field>
+      <field name="description">zum Steuersatz von 7%</field>
+      <field name="name">zum Steuersatz von 7%</field>
+      <field name="parent" ref="BUNF"/>
+    </record>
+    <record model="account.tax.code.template" id="35NF">
+      <field name="account" ref="account_root"/>
+      <field name="code">35NF</field>
+      <field name="description">zu anderen Steuersätzen</field>
+      <field name="name">zu anderen Steuersätzen</field>
+      <field name="parent" ref="BUNF"/>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_66-tax_vst_19_1">
+      <field name="code" ref="66"/>
+      <field name="tax" ref="vst_19"/>
+      <field name="operator">+</field>
+      <field name="amount">tax</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_66-tax_vst_19_2">
+      <field name="code" ref="66"/>
+      <field name="tax" ref="vst_19"/>
+      <field name="operator">-</field>
+      <field name="amount">tax</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_66-tax_vst_7_1">
+      <field name="code" ref="66"/>
+      <field name="tax" ref="vst_7"/>
+      <field name="operator">+</field>
+      <field name="amount">tax</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_66-tax_vst_7_2">
+      <field name="code" ref="66"/>
+      <field name="tax" ref="vst_7"/>
+      <field name="operator">-</field>
+      <field name="amount">tax</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_62-tax_import_19_1">
+      <field name="code" ref="62"/>
+      <field name="tax" ref="import_19"/>
+      <field name="operator">+</field>
+      <field name="amount">tax</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_62-tax_import_19_2">
+      <field name="code" ref="62"/>
+      <field name="tax" ref="import_19"/>
+      <field name="operator">-</field>
+      <field name="amount">tax</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_62-tax_import_7_1">
+      <field name="code" ref="62"/>
+      <field name="tax" ref="import_7"/>
+      <field name="operator">+</field>
+      <field name="amount">tax</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_62-tax_import_7_2">
+      <field name="code" ref="62"/>
+      <field name="tax" ref="import_7"/>
+      <field name="operator">-</field>
+      <field name="amount">tax</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_61-tax_eu_19_purchase_vst_1">
+      <field name="code" ref="61"/>
+      <field name="tax" ref="eu_19_purchase_vst"/>
+      <field name="operator">+</field>
+      <field name="amount">tax</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_61-tax_eu_19_purchase_vst_2">
+      <field name="code" ref="61"/>
+      <field name="tax" ref="eu_19_purchase_vst"/>
+      <field name="operator">-</field>
+      <field name="amount">tax</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_61-tax_eu_7_purchase_vst_1">
+      <field name="code" ref="61"/>
+      <field name="tax" ref="eu_7_purchase_vst"/>
+      <field name="operator">+</field>
+      <field name="amount">tax</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_61-tax_eu_7_purchase_vst_2">
+      <field name="code" ref="61"/>
+      <field name="tax" ref="eu_7_purchase_vst"/>
+      <field name="operator">-</field>
+      <field name="amount">tax</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_BRV7-tax_vst_7_1">
+      <field name="code" ref="BRV7"/>
+      <field name="tax" ref="vst_7"/>
+      <field name="operator">+</field>
+      <field name="amount">base</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_BRV7-tax_vst_7_2">
+      <field name="code" ref="BRV7"/>
+      <field name="tax" ref="vst_7"/>
+      <field name="operator">-</field>
+      <field name="amount">base</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_BRV19-tax_vst_19_1">
+      <field name="code" ref="BRV19"/>
+      <field name="tax" ref="vst_19"/>
+      <field name="operator">+</field>
+      <field name="amount">base</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_BRV19-tax_vst_19_2">
+      <field name="code" ref="BRV19"/>
+      <field name="tax" ref="vst_19"/>
+      <field name="operator">-</field>
+      <field name="amount">base</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_BAUS7-tax_import_7_1">
+      <field name="code" ref="BAUS7"/>
+      <field name="tax" ref="import_7"/>
+      <field name="operator">+</field>
+      <field name="amount">base</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_BAUS7-tax_import_7_2">
+      <field name="code" ref="BAUS7"/>
+      <field name="tax" ref="import_7"/>
+      <field name="operator">-</field>
+      <field name="amount">base</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_BAUS19-tax_import_19_1">
+      <field name="code" ref="BAUS19"/>
+      <field name="tax" ref="import_19"/>
+      <field name="operator">+</field>
+      <field name="amount">base</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_BAUS19-tax_import_19_2">
+      <field name="code" ref="BAUS19"/>
+      <field name="tax" ref="import_19"/>
+      <field name="operator">-</field>
+      <field name="amount">base</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_45-tax_not_taxable_1">
+      <field name="code" ref="45"/>
+      <field name="tax" ref="export"/>
+      <field name="operator">+</field>
+      <field name="amount">base</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_45-tax_not_taxable_2">
+      <field name="code" ref="45"/>
+      <field name="tax" ref="export"/>
+      <field name="operator">-</field>
+      <field name="amount">base</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_931-tax_eu_7_purchase_vst_1">
+      <field name="code" ref="931"/>
+      <field name="tax" ref="eu_7_purchase_vst"/>
+      <field name="operator">+</field>
+      <field name="amount">tax</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_931-tax_eu_7_purchase_vst_2">
+      <field name="code" ref="931"/>
+      <field name="tax" ref="eu_7_purchase_vst"/>
+      <field name="operator">-</field>
+      <field name="amount">tax</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_93-tax_eu_7_purchase_vst_1">
+      <field name="code" ref="93"/>
+      <field name="tax" ref="eu_7_purchase_vst"/>
+      <field name="operator">+</field>
+      <field name="amount">tax</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_93-tax_eu_7_purchase_vst_2">
+      <field name="code" ref="93"/>
+      <field name="tax" ref="eu_7_purchase_vst"/>
+      <field name="operator">-</field>
+      <field name="amount">tax</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_891-tax_eu_19_purchase_vst_1">
+      <field name="code" ref="891"/>
+      <field name="tax" ref="eu_19_purchase_vst"/>
+      <field name="operator">+</field>
+      <field name="amount">tax</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_891-tax_eu_19_purchase_vst_2">
+      <field name="code" ref="891"/>
+      <field name="tax" ref="eu_19_purchase_vst"/>
+      <field name="operator">-</field>
+      <field name="amount">tax</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_89-tax_eu_19_purchase_vst_1">
+      <field name="code" ref="89"/>
+      <field name="tax" ref="eu_19_purchase_vst"/>
+      <field name="operator">+</field>
+      <field name="amount">base</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_89-tax_eu_19_purchase_vst_2">
+      <field name="code" ref="89"/>
+      <field name="tax" ref="eu_19_purchase_vst"/>
+      <field name="operator">-</field>
+      <field name="amount">base</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_861-tax_ust_7_1">
+      <field name="code" ref="861"/>
+      <field name="tax" ref="ust_7"/>
+      <field name="operator">+</field>
+      <field name="amount">tax</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_861-tax_ust_7_2">
+      <field name="code" ref="861"/>
+      <field name="tax" ref="ust_7"/>
+      <field name="operator">-</field>
+      <field name="amount">tax</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_86-tax_ust_7_1">
+      <field name="code" ref="86"/>
+      <field name="tax" ref="ust_7"/>
+      <field name="operator">+</field>
+      <field name="amount">base</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_86-tax_ust_7_2">
+      <field name="code" ref="86"/>
+      <field name="tax" ref="ust_7"/>
+      <field name="operator">-</field>
+      <field name="amount">base</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_811-tax_ust_19_1">
+      <field name="code" ref="811"/>
+      <field name="tax" ref="ust_19"/>
+      <field name="operator">+</field>
+      <field name="amount">tax</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_811-tax_ust_19_2">
+      <field name="code" ref="811"/>
+      <field name="tax" ref="ust_19"/>
+      <field name="operator">-</field>
+      <field name="amount">tax</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_81-tax_ust_19_1">
+      <field name="code" ref="81"/>
+      <field name="tax" ref="ust_19"/>
+      <field name="operator">+</field>
+      <field name="amount">base</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_81-tax_ust_19_2">
+      <field name="code" ref="81"/>
+      <field name="tax" ref="ust_19"/>
+      <field name="operator">-</field>
+      <field name="amount">base</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_43-tax_export_1">
+      <field name="code" ref="43"/>
+      <field name="tax" ref="export"/>
+      <field name="operator">+</field>
+      <field name="amount">base</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_43-tax_export_2">
+      <field name="code" ref="43"/>
+      <field name="tax" ref="export"/>
+      <field name="operator">-</field>
+      <field name="amount">base</field>
+      <field name="type">credit</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_41-tax_eu_sale_1">
+      <field name="code" ref="41"/>
+      <field name="tax" ref="eu_sale"/>
+      <field name="operator">+</field>
+      <field name="amount">base</field>
+      <field name="type">invoice</field>
+    </record>
+    <record model="account.tax.code.line.template" id="tax_code_41-tax_eu_sale_2">
+      <field name="code" ref="41"/>
+      <field name="tax" ref="eu_sale"/>
+      <field name="operator">-</field>
+      <field name="amount">base</field>
+      <field name="type">credit</field>
+    </record>
+  </data>
+</tryton>

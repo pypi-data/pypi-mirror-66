@@ -1,0 +1,4 @@
+m9s_account_tax_recapitulative_statement<5.3,>=5.2
+m9s_account_tax_reverse_charge<5.3,>=5.2
+trytond<5.3,>=5.2
+trytond_account<5.3,>=5.2
