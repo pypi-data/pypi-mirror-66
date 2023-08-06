@@ -1,0 +1,6 @@
+README.md
+setup.py
+daltons.egg-info/PKG-INFO
+daltons.egg-info/SOURCES.txt
+daltons.egg-info/dependency_links.txt
+daltons.egg-info/top_level.txt
