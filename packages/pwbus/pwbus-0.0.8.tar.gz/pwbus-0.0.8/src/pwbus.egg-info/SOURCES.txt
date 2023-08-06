@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+src/pwbus/__init__.py
+src/pwbus/command_line.py
+src/pwbus.egg-info/PKG-INFO
+src/pwbus.egg-info/SOURCES.txt
+src/pwbus.egg-info/dependency_links.txt
+src/pwbus.egg-info/entry_points.txt
+src/pwbus.egg-info/requires.txt
+src/pwbus.egg-info/top_level.txt
