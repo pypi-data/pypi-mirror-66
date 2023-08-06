@@ -1,0 +1,3 @@
+[console_scripts]
+forward = forward.__main__:cli
+
