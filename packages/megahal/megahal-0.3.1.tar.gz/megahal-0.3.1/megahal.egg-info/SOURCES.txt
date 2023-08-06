@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+megahal/__init__.py
+megahal/megahal.py
+megahal/util.py
+megahal.egg-info/PKG-INFO
+megahal.egg-info/SOURCES.txt
+megahal.egg-info/dependency_links.txt
+megahal.egg-info/requires.txt
+megahal.egg-info/top_level.txt
+scripts/megahal
