@@ -1,0 +1,6 @@
+image: paternal/pythons:bullseye
+
+tox:
+  script:
+    - tox
+  coverage: '/^argdispatch.*\s(\d+)\%$/'
