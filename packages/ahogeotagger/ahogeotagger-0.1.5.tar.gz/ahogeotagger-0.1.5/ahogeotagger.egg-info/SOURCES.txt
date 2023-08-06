@@ -1,0 +1,10 @@
+README.md
+setup.py
+ahogeotagger/__init__.py
+ahogeotagger/data.py
+ahogeotagger/tagger.py
+ahogeotagger.egg-info/PKG-INFO
+ahogeotagger.egg-info/SOURCES.txt
+ahogeotagger.egg-info/dependency_links.txt
+ahogeotagger.egg-info/requires.txt
+ahogeotagger.egg-info/top_level.txt
