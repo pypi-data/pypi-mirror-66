@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: pandas_polygon_api
+Version: 0.1
+Summary: Polygon end point accessed through pandas
+Home-page: http://github.com/jamesyrose/pandas_polygon_api
+Author: jamesyrose
+Author-email: jyrose@vertet.io
+License: MIT
+Description: UNKNOWN
+Keywords: pandas,finance,numpy,analysis,algo trading,polygon
+Platform: UNKNOWN
