@@ -1,0 +1,14 @@
+aedificator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aedificator/main.py,sha256=afzU-HqO4V_mcJ6Q1PXMpllKwfsgUoh_8YUqjJ3zsWg,1550
+aedificator/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aedificator/templates/dev-requirements_tmpl.txt,sha256=hnDNS8gXJP02d7pjHNgVOXoB2-QzOm50L7wUkg0mjd0,3
+aedificator/templates/dockerignore_tmpl.txt,sha256=0HL_a61wZGyRyR8n88LmKY5mRuzjKwzok0pIiaRAje4,116
+aedificator/templates/gitignore_tmpl.txt,sha256=px7UAkBZXRY5muCSbC9AgF3Jwr91lNwsGryUMIGmwQE,1863
+aedificator/templates/setup_cfg_tmpl.txt,sha256=Vt7rR06u33tkRnTc47kAFuiVctPSGk-HdO6ZdM8QB6A,334
+aedificator/templates/setup_py_tmpl.txt,sha256=Woc-NVNAO7vjFBM5-azqUDsy8fbG49Da5wBN3dfWTpM,429
+aedificator/templates/tox_tmpl.txt,sha256=EyVzIDt62xlSaq1ORGY9eskap8R5TzdFIs1KT1FS9wU,882
+aedificator-1.1.3.dist-info/METADATA,sha256=kylxhzAUe-x_RBrHEV6UOdaMRQs-5c-EpvHFs3StHeo,2570
+aedificator-1.1.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aedificator-1.1.3.dist-info/entry_points.txt,sha256=2PNcqXd-nD3ncy0bfWArH2lDalSYBbRPyKkNiK5W-4k,54
+aedificator-1.1.3.dist-info/top_level.txt,sha256=kk-Hv6owl_zrgwtvxg1g0Wfnlyf2vZ7rn0h1XM0fZm8,12
+aedificator-1.1.3.dist-info/RECORD,,
