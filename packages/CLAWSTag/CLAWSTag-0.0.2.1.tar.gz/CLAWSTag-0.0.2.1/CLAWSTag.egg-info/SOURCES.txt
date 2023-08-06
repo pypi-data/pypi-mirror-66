@@ -1,0 +1,9 @@
+README.md
+setup.py
+CLAWSTag/Tagger.py
+CLAWSTag/__init__.py
+CLAWSTag.egg-info/PKG-INFO
+CLAWSTag.egg-info/SOURCES.txt
+CLAWSTag.egg-info/dependency_links.txt
+CLAWSTag.egg-info/requires.txt
+CLAWSTag.egg-info/top_level.txt
