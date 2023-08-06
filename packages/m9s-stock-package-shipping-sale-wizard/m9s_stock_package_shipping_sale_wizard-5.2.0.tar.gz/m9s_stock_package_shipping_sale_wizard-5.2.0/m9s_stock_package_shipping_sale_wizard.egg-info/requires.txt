@@ -1,0 +1,7 @@
+trytond<5.3,>=5.2
+trytond_account_invoice<5.3,>=5.2
+trytond_carrier<5.3,>=5.2
+trytond_sale<5.3,>=5.2
+trytond_stock<5.3,>=5.2
+trytond_stock_package<5.3,>=5.2
+trytond_stock_package_shipping<5.3,>=5.2
