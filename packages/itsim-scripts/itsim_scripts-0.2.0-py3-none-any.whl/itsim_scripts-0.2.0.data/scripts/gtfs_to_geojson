@@ -1,0 +1,24 @@
+#!python
+from argparse import ArgumentParser, RawTextHelpFormatter as ArgFormatter
+from os import chdir
+from pathlib import Path
+from itsim_scripts.utils import export_gtfs_to_geojson
+
+
+def main(sys_args):
+    chdir(str(Path(__file__).resolve().parents[1]))
+    parser = ArgumentParser(
+        description="Export a GTFS routes and points to geojson",
+        formatter_class=ArgFormatter
+    )
+    parser.add_argument('-g', '--gtfs', metavar='gtfs_file', dest='gtfs_file', type=str, required=True,
+                        help="Input GTFS file path")
+    parser.add_argument('-j', '--json', metavar='geojson_file', dest='json_file', type=str, required=True,
+                        help="Output geojson file path")
+    args = parser.parse_args(args=sys_args)
+    export_gtfs_to_geojson(**vars(args))
+
+
+if __name__ == '__main__':
+    from sys import argv
+    main(argv[1:])

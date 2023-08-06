@@ -1,0 +1,97 @@
+#!/bin/bash
+cd "$(dirname "$0")/.."
+export PATH="./node_modules/.bin:$PATH"
+
+test_binaries() {
+    if ! which mapshaper >/dev/null; then
+        echo "Please install node dependencies: yarn install" >&2
+        return 1
+    fi
+    if ! which jq >/dev/null; then
+        echo "Please install 'jq'" >&2
+        return 1
+    fi
+    return 0
+}
+
+usage() {
+    cat <<'EOF'
+usage: simplify_shapefile [-h|--help] input_shape_file.shp field intervals removable_points_pct output_shape_file.shp
+
+Arguments:
+-h, --help
+        This usage message
+input_shape_file.shp
+        Input shape file path.
+field
+        Numeric field attribute in the shape file.
+intervals
+        Intervals/parts size used to dissolve polygons.
+        Use way more intervals than you want to use for your legend.
+removable_points_pct
+        Percentage (0%-100% or 0-1) of removable points to keep.
+        10% to 30% are good values.
+output_shape_file.shp
+        Output shape file path.
+EOF
+    ret=$(test_binaries)
+    exit ${1:-$ret}
+}
+
+filter_shape() {
+    shape="$1" # input shape file
+    field="$2" # field to test in shape file
+    fields="$3" # comma separated field list (without test field)
+    min="$4" # exclusive
+    max="$5" # inclusive
+    fshape="$6" # filtered output shape file
+    mapshaper \
+        -i "$shape" \
+        -filter "$field > $min && $field <= $max" \
+        -dissolve2 "$field" calc="$field = average($field)" copy-fields=$fields \
+        -o "$fshape" format=shapefile
+}
+
+main() {
+    input_shape_file="$1"
+    field="$2"
+    intervals="$3"
+    pct="$4"
+    output_shape_file="$5"
+    echo "$*" | grep -q -- '--help\|-h' && usage
+    [ -n "$output_shape_file" ] || usage 1
+    [ -e "$input_shape_file" ] && [ -f "$input_shape_file" ] || usage 1
+    test_binaries || exit 1
+    json_info=$(./scripts/shp2geojson -i "$input_shape_file" -f "$field" -l $intervals)
+    all_fields=$(echo "$json_info" | jq -r '.fields[].name')
+    fields_to_copy=$(echo "$all_fields" | grep -v "^$field$" | paste -sd ',' -)
+    max_values=$(echo "$json_info" | jq -r '.legend[].max_value')
+    min_value=0
+    i=1
+    for max_value in $max_values; do
+        echo "*** interval $i/$intervals ***"
+        if [ $min_value -gt 0 ]; then
+            part_shape_file="$(dirname "$output_shape_file")/$(basename "$output_shape_file" .shp)-part.shp"
+        else
+            part_shape_file="$output_shape_file"
+        fi
+        filter_shape "$input_shape_file" "$field" "$fields_to_copy" $min_value $max_value "$part_shape_file"
+        if [ $min_value -gt 0 ] && [ -e "$part_shape_file" ]; then
+            mapshaper \
+                -i "$output_shape_file" "$part_shape_file" combine-files \
+                -merge-layers \
+                -o "$output_shape_file" format=shapefile force
+            rm "$(dirname "$part_shape_file")/$(basename "$part_shape_file" .shp)".*
+        fi
+        min_value=$max_value
+        i=$(($i + 1))
+    done
+    echo "*** simplifying… ***"
+    mapshaper \
+        -i "$output_shape_file" \
+        -simplify "$pct" keep-shapes no-repair stats \
+        -o "$output_shape_file" format=shapefile force
+    echo "$output_shape_file ready"
+}
+
+main "$@"
