@@ -1,0 +1,13 @@
+README.md
+setup.py
+gerrit_sync/__init__.py
+gerrit_sync/__main__.py
+gerrit_sync/cli.py
+gerrit_sync/util_gerrit.py
+gerrit_sync/util_logging.py
+gerrit_sync.egg-info/PKG-INFO
+gerrit_sync.egg-info/SOURCES.txt
+gerrit_sync.egg-info/dependency_links.txt
+gerrit_sync.egg-info/entry_points.txt
+gerrit_sync.egg-info/requires.txt
+gerrit_sync.egg-info/top_level.txt
