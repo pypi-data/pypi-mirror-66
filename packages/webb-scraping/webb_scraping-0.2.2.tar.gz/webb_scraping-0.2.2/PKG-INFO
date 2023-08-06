@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: webb_scraping
+Version: 0.2.2
+Summary: Web scraping for JWST
+Home-page: https://webb-scraping.readthedocs.io
+Author: Arjun Baliga Savel
+Author-email: asavel@gmail.com
+Maintainer: Arjun Baliga Savel
+Maintainer-email: asavel@gmail.com
+License: MIT
+Description: # webb_scraping
+        [![Documentation Status](https://readthedocs.org/projects/webb-scraping/badge/?version=latest)](https://webb-scraping.readthedocs.io/en/latest/?badge=latest)
+        
+        
+        Interested in an exoplanet? Wondering if you should submit a JWST proposal for it? Use ```webb_scraping``` to check online.
+        
+        Our documentation is located on our [readthedocs site](https://webb-scraping.readthedocs.io/en/latest/pages/about.html).
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Description-Content-Type: text/markdown
