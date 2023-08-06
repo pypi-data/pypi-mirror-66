@@ -1,0 +1,9 @@
+qg_struct/MemoryDB.py,sha256=OL1X3jh1HI1Y9O6udVu_cRv90i9C3gJSNYif3WScak8,9067
+qg_struct/RelationalDB.py,sha256=ZJ8Bao5NlwpbYZXIh9fhNOagUew5FMezqCtu3wcWKGo,3076
+qg_struct/__init__.py,sha256=xu9m2XEWn2YlMOC3hY6bU5Y0kZqAwCkmjUdxDgE1Ayo,341
+qg_struct/config.py,sha256=_XYYjuOzVHLCyRVejsdNRr238LgVyfq2McCBZ9hGzmQ,3388
+qg_struct/log.py,sha256=NC6Q5MEO1mEhVKn5I-er6Aqb4RuBSD38yDaaOrbr8Fo,1757
+qg_struct-1.0.1.dist-info/METADATA,sha256=wnrB9nTuAqU_Sdd0BYCWrV6u5iD89BBuD26arQjnecg,1363
+qg_struct-1.0.1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+qg_struct-1.0.1.dist-info/top_level.txt,sha256=eSgSEovjk62XQPspmY48Q51TQgIMtDPiUQsICzj0PW8,10
+qg_struct-1.0.1.dist-info/RECORD,,
