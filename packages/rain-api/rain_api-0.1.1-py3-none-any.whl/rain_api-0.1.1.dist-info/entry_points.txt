@@ -1,0 +1,3 @@
+[console_scripts]
+rain = rain_api:main
+
