@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: certbot-dns-vultr
+Version: 0.0.2
+Summary: Vultr DNS Authenticator plugin for Certbot
+Home-page: https://github.com/undecidabot/certbot-dns-vultr
+Author: Matt
+Author-email: undecidabot@gmail.com
+License: Zlib
+Description: # certbot-dns-vultr
+        
+        This package provides a Certbot authenticator plugin
+        that can complete the DNS-01 challenge using the Vultr API.
+        
+        **NOTE: This is \*not\* an official certbot DNS plugin.**
+        
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: zlib/libpng License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Security
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
