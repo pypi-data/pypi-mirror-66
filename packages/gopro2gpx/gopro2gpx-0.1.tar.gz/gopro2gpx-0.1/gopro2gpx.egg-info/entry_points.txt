@@ -1,0 +1,3 @@
+[console_scripts]
+extract_gps = gopro2gpx.main:main
+

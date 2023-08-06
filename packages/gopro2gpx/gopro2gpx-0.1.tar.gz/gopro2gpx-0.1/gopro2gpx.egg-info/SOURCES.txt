@@ -1,0 +1,16 @@
+README.md
+setup.py
+gopro2gpx/__init__.py
+gopro2gpx/config.py
+gopro2gpx/ffmpegtools.py
+gopro2gpx/fourCC.py
+gopro2gpx/gopro2gpx.py
+gopro2gpx/gpmf.py
+gopro2gpx/gpshelper.py
+gopro2gpx/klvdata.py
+gopro2gpx/main.py
+gopro2gpx.egg-info/PKG-INFO
+gopro2gpx.egg-info/SOURCES.txt
+gopro2gpx.egg-info/dependency_links.txt
+gopro2gpx.egg-info/entry_points.txt
+gopro2gpx.egg-info/top_level.txt
