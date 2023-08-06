@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: bot-da-os
+Version: 0.0.1
+Summary: An AI library to handle CASD's service order requests
+Home-page: https://gitlab.com/2020-mtp-03-grupo-09/bot-da-os
+Author: Caio Costa
+Author-email: caugcosta@gmail.com
+License: UNKNOWN
+Description: # Bot da OS
+        
+        Por favor, editr esse arquivo. O link abaixo pode ajudar nisso.
+        
+        You can use [Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+        to write your content.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
