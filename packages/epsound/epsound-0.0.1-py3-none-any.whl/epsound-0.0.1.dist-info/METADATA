@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: epsound
+Version: 0.0.1
+Summary: Sound player library
+Home-page: https://github.com/EPC-MSU/epsound
+Author: EPC MSU
+Author-email: goncharovush@physlab.ru
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: simpleaudio (==1.0.4)
+
+epsound is a little library for play sound from file
+
+Repository: https://github.com/EPC-MSU/epsound
+
+Installation:
+Installation is very simple:
+pip install epsound
+
+Working example:
+# This example play sound from wav-file
+import epsound
+import time
+
+if __name__ == "__main__":
+    # Let's create object of class WavPlayer and add sound from file with name "one" to him
+    p = epsound.WavPlayer()
+    p.add_sound(file="sound.wav", name="one")
+    # Then play our sound 1 sec
+    p.play("one")
+    time.sleep(1)
+
+
+
+How to run example?
+cd examples
+python example.py
+
+
