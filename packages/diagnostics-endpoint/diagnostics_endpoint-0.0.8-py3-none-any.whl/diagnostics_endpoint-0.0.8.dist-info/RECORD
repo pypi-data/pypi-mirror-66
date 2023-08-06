@@ -1,0 +1,8 @@
+diagnostics_endpoint/__init__.py,sha256=xzG7xnA-P64d8jiney2kqFN51ZCQS_8GKo_rTCu5L-Y,93
+diagnostics_endpoint/diagnostics.py,sha256=Mtyb2ZOJpxr0f0T4nkaV9ImRziS6z73RpOpcNcONKyQ,5092
+diagnostics_endpoint/test.py,sha256=O-dMIon2_QH60sjy30DEj_FpAJA33Eh82OzXc3zj3Dc,1455
+diagnostics_endpoint/templates/diagnostics.html,sha256=iSLTl1dxc8zm5OPsmN7DMD8K918hzcSSBF9yAsFQ4Yg,3256
+diagnostics_endpoint-0.0.8.dist-info/METADATA,sha256=DIyQaGdIH-fx5g5YbTVktr8pdjsrlfczyTEcPI6xzts,2984
+diagnostics_endpoint-0.0.8.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+diagnostics_endpoint-0.0.8.dist-info/top_level.txt,sha256=f9SajI6Uq_Xwp0R6ViP7KO_Yx1NgKvjE0e415VY3tYw,21
+diagnostics_endpoint-0.0.8.dist-info/RECORD,,
