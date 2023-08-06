@@ -1,0 +1,9 @@
+README.md
+setup.py
+pastee/__init__.py
+pastee/paste.py
+pastee.egg-info/PKG-INFO
+pastee.egg-info/SOURCES.txt
+pastee.egg-info/dependency_links.txt
+pastee.egg-info/requires.txt
+pastee.egg-info/top_level.txt

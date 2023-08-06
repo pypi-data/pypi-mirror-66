@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pastee
+Version: 0.3.0
+Summary: Library for using Paste.ee's api
+Home-page: https://github.com/creator1372/pastee
+Author: creator1372
+License: MIT
+Description: Paste.ee api wrapper for python.
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5.3
+Description-Content-Type: text/markdown
+Provides-Extra: docs
