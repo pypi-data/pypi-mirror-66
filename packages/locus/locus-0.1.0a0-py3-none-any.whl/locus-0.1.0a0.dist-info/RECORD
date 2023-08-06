@@ -1,0 +1,10 @@
+locus/__init__.py,sha256=67AVS7rLhfSiY1mvaLf5L4wn8W-92UO4FhjTUW3WrrM,72
+locus/hints.py,sha256=epOhowc8uNAGnqCjkKumGzWJy8-UolJ84R5C3bpAqpo,153
+locus/kd.py,sha256=FU3XStrtpyDr1UiOlDmEUksCsgpV55WzpVXo-LNUVB0,13216
+locus/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+locus/core/utils.py,sha256=x5_DuzNxwXpKKSc6FNGsQDrV_B_7ZomMKKb-ok7UNRY,568
+locus-0.1.0a0.dist-info/LICENSE,sha256=-W_qNLRoZO2-AnwtGfKupruYTfLtIk39IeMqidpeVOU,1069
+locus-0.1.0a0.dist-info/METADATA,sha256=_ust4WcK5wKwU8RVAlYpsk1ljavJ68oQvS_ksiLvA84,4882
+locus-0.1.0a0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+locus-0.1.0a0.dist-info/top_level.txt,sha256=1uE5xclOArkUl3Gl8TybS85W-WDYhaHCHi2h1dStCJk,6
+locus-0.1.0a0.dist-info/RECORD,,
