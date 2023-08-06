@@ -1,0 +1,3 @@
+fastjsonschema
+click>=7.0
+lark-parser
