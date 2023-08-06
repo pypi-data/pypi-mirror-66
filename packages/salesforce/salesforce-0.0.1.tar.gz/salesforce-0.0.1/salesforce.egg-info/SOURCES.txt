@@ -1,0 +1,10 @@
+README.md
+setup.py
+salesforce/__init__.py
+salesforce/connector.py
+salesforce/query_methods.py
+salesforce.egg-info/PKG-INFO
+salesforce.egg-info/SOURCES.txt
+salesforce.egg-info/dependency_links.txt
+salesforce.egg-info/requires.txt
+salesforce.egg-info/top_level.txt
