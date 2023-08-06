@@ -1,0 +1,11 @@
+didacto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+didacto/__main__.py,sha256=o8EQe0oipGUKWTShNm67vtG1Vs_EHe0aB-6B6B8aP5s,928
+didacto/controller.py,sha256=d-BBLafTwUXV-1pGO5Hq85nMOaCU-iSg0HWRW6DFdVE,5937
+didacto/main.py,sha256=o8EQe0oipGUKWTShNm67vtG1Vs_EHe0aB-6B6B8aP5s,928
+didacto/model.py,sha256=lgaQFbeFcF3GZesULffdhPwGkrKNil9ftutHiH4es0A,5327
+didacto/view.py,sha256=1q36Ti_yIX085dAfaKQE2pviOs8bp4a5MX3yp9FokjI,20895
+Didacto-0.1.5.dist-info/LICENSE,sha256=SmQOgT7HYdOfuwnst5jSTv9pa7d99bSGuhWhgT2mHvA,35077
+Didacto-0.1.5.dist-info/METADATA,sha256=YgbeOcYOSCKLmO42tFnIyw5vXOeM434uo4k4zayAUMk,1207
+Didacto-0.1.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+Didacto-0.1.5.dist-info/top_level.txt,sha256=gNCcWNA685oqcnYhQHjWm0blD0CXuoDDzg5jT5uq9xA,8
+Didacto-0.1.5.dist-info/RECORD,,
