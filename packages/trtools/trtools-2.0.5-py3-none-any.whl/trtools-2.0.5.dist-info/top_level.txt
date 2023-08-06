@@ -1,0 +1,6 @@
+compareSTR
+dumpSTR
+mergeSTR
+qcSTR
+statSTR
+trtools
