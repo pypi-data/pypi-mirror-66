@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: rf-case-generator
+Version: 1.0.2
+Summary: auto generate test case of RF with excel
+Home-page: https://github.com/pengjiahao97/robotframework-testcase-generator
+Author: Patrick Peng
+Author-email: pengjiahao97@gmail.com
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
