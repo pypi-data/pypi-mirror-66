@@ -1,0 +1,10 @@
+schnell/__init__.py,sha256=_ffB9nRf9gDnFglYEXJgh3QdDioUrk634ipweasEXLc,169
+schnell/detector.py,sha256=ueEbF4ZTGt5M-ZgFVeg3WO64gzuWxrC9JA_R76CDQNo,16869
+schnell/detectorb.py,sha256=TX7u5xKQ5Zruq3YJUOh3zvNANC1QiZgWvbneJrhS9Ys,17694
+schnell/mapping.py,sha256=548IC_CmwZNwdt81Tgsg3LslT3V3yxX9v6k93u7l-Ns,23938
+schnell/mappingb.py,sha256=vKcBDCz0jW1Hups-SImXOq_leJFC6OaDecXvfh9OBV8,24754
+schnell-0.1.0.dist-info/LICENSE,sha256=VdtKEODpyNjg3Nc6JXeeSl1tP7CAva9RcUgsGVq7v8U,1457
+schnell-0.1.0.dist-info/METADATA,sha256=EAtI4SDEZeW9_GXPod8B7rf3Z6-VdRWKmClLKEspRjw,1619
+schnell-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+schnell-0.1.0.dist-info/top_level.txt,sha256=kD-tc7QyLNKjm5idiZYb8IC5SAAZ0Tb4u0svu_7BjiM,8
+schnell-0.1.0.dist-info/RECORD,,
