@@ -1,0 +1,12 @@
+job_offer_classifier/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+job_offer_classifier/_nbdev.py,sha256=QgZhtL_ZO_an8OCLLfjPvIsiLXNpVbbP0X_-9Ic2KZw,1518
+job_offer_classifier/k_fold_validation.py,sha256=R9cPcpXxCBjign3wtVp521UvjAx0-4UF4eCj9dmv9u4,3210
+job_offer_classifier/merge_datasets.py,sha256=TFXNYdDK2sW_-UrcBB3TLHBO6RtraXpJuBKtzzdToVo,775
+job_offer_classifier/pipeline_classifier.py,sha256=V3Lus04i-uj0VQLpRk3C8pgyjkzS30nHYzB93uJhe5c,7866
+job_offer_classifier/validations.py,sha256=3jWIDjLmMPOftlAb5eVbcfrTkEGuZB5YHPDPJuxXBM4,3016
+job_offer_classifier-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+job_offer_classifier-0.0.1.dist-info/METADATA,sha256=K2sbaBe9hf8AoMxJLPe67KFJUPQxO30BxfMu49Ryej4,6175
+job_offer_classifier-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+job_offer_classifier-0.0.1.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+job_offer_classifier-0.0.1.dist-info/top_level.txt,sha256=hgGUhmEuTpmhykaw8exYc_-z68sf8ntPP2XOZx1mcsw,21
+job_offer_classifier-0.0.1.dist-info/RECORD,,
