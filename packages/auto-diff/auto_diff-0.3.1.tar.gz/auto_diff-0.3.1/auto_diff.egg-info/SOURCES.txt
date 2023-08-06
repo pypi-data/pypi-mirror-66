@@ -1,0 +1,13 @@
+README.md
+setup.py
+auto_diff/__init__.py
+auto_diff/numpy_masking.py
+auto_diff/test_auto_diff_on_dae.py
+auto_diff/true_np.py
+auto_diff/vecvalder.py
+auto_diff/vecvalder_funcs_and_ufuncs.py
+auto_diff.egg-info/PKG-INFO
+auto_diff.egg-info/SOURCES.txt
+auto_diff.egg-info/dependency_links.txt
+auto_diff.egg-info/requires.txt
+auto_diff.egg-info/top_level.txt
