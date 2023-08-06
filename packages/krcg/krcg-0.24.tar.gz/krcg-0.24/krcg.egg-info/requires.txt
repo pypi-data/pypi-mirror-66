@@ -1,0 +1,17 @@
+arrow
+pyyaml
+requests
+unidecode
+
+[dev]
+black
+doc8
+flake8
+ipython
+pytest
+jsonschema
+zest.releaser[recommended]
+
+[web]
+flask
+gunicorn
