@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: uo_vra_netdot_client
+Version: 0.4
+Summary: Package for connecting VRealize Automation to Netdot for IPAM
+Home-page: https://git.uoregon.edu/projects/ISV/repos/uo_vra_netdot_client/browse
+Author: University of Oregon
+Author-email: systems@uoregon.edu
+License: MIT
+Description: UNKNOWN
+Keywords: IPAM,VRA,NETDOT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
