@@ -1,0 +1,13 @@
+README.md
+cli.py
+setup.py
+app/__init__.py
+app/clipboard.py
+app/config.py
+app/version.py
+klippy.egg-info/PKG-INFO
+klippy.egg-info/SOURCES.txt
+klippy.egg-info/dependency_links.txt
+klippy.egg-info/entry_points.txt
+klippy.egg-info/requires.txt
+klippy.egg-info/top_level.txt
