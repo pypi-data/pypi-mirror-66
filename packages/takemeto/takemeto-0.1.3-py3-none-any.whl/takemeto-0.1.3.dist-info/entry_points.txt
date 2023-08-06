@@ -1,0 +1,3 @@
+[console_scripts]
+takemeto=takemeto.main:app
+
