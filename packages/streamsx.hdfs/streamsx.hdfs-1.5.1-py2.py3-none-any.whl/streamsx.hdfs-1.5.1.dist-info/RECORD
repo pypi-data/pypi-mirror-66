@@ -1,0 +1,7 @@
+streamsx/hdfs/__init__.py,sha256=H_qhFKn9dmXLiPyMpipmvRzhKB8KGifQH-rOoBu_XH8,2202
+streamsx/hdfs/_hdfs.py,sha256=lH0y96jSzT5er30Mf_KVZMW11FAXUkIL7Na6fdLM6I8,101924
+streamsx.hdfs-1.5.1.dist-info/LICENSE.txt,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+streamsx.hdfs-1.5.1.dist-info/METADATA,sha256=WhZw5_m9MyCqnhG9hRaaVoOYXr9SvSg7GI1JQ4_ySSk,1400
+streamsx.hdfs-1.5.1.dist-info/RECORD,,
+streamsx.hdfs-1.5.1.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+streamsx.hdfs-1.5.1.dist-info/top_level.txt,sha256=-HIIPsBc56LEpwY9WQHNMVJy2nOLXnKZ6slLXwmeZoY,9
