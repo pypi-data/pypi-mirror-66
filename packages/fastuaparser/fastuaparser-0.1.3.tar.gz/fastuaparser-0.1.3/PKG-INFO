@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: fastuaparser
+Version: 0.1.3
+Summary: A super-fast user agent string parser
+Home-page: https://github.com/almarklein/fastuaparser
+Author: Almar Klein
+Author-email: almar.klein@gmail.com
