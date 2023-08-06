@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: django-rest-access
+Version: 0.0.3
+Summary: Django-REST-Access - the application introducing permission module for the Django REST Framework using Django-Access package
+Home-page: https://github.com/nnseva/django-rest-access
+Author: Vsevolod Novikov
+Author-email: nnseva@gmail.com
+License: LGPL
+Description: Django-REST-Access
+        ==================
+        
+        The application providing a permissions backend for the Django REST Framework
+        package using Django-Access package.
+        
+        See details at the home page: https://github.com/nnseva/django-rest-access
+        
+Keywords: django-rest access django permissions instance-level row-level django-access authority guard dynamic evaluation evaluation-based runtime rights rights-management
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: test

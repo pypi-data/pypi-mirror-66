@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+django_rest_access.egg-info/PKG-INFO
+django_rest_access.egg-info/SOURCES.txt
+django_rest_access.egg-info/dependency_links.txt
+django_rest_access.egg-info/not-zip-safe
+django_rest_access.egg-info/requires.txt
+django_rest_access.egg-info/top_level.txt
+rest_access/__init__.py
+rest_access/access.py
