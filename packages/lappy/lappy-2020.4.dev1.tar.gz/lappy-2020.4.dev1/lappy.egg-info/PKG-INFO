@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: lappy
+Version: 2020.4.dev1
+Summary: Lazy array programming in Python
+Home-page: http://pypi.python.org/pypi/lappy
+Author: Sophia Lin, Andreas Kloeckner, Xiaoyu Wei
+Author-email: xywei@pm.me
+License: MIT
+Description: Lappy
+        =====
+        
+        ``Lappy`` is a fork of Sophia Lin's ``lazyray`` that supports more operations beyond arithmetics.
+        
+        In ``Lappy``, everything computable is considered an array object (unlike ``numpy``, it does not offer separate scalar types).
+        An array object has six basic components: the shape, the dtype, the expression, the value, the formal argument list, and the environment (capture list).
+        Scalars are special arrays with shape being an empty tuple.
+        If the dtype is an integer type, there can be assumptions associated with the array elements represented by an integer set (for scalars) or map (for non-scalars).
+        
+        Documentation
+        -------------
+        
+        Please visit `<https://xiaoyu-wei.com/docs/lappy/>`_ for the latest documentation.
+        
+        Status
+        ------
+        
+        This is a list of things that can be achieved with ``lappy`` today:
+        
+        - ✅ Arithmetic and scalar mathematics (lifted scalar functions / universal functions)
+        - ✅ Axis reordering / transpose
+        - ✅ Reshaping
+        - ✅ Broadcasting (semi-dynamic)
+        
+        Scope
+        -----
+        
+        Roadmap
+        *******
+        
+        - ✅ Scan and fold
+        - ✅ Tensor contractions, like ``np.einsum`` (including dot products and matrix multiply)
+        - ✅ Slicing (static and dynamic)
+        - ✅ Fancy indexing (static and dynamic)
+        - ✅ Integration with Numpy's dispatch mechanism like ``__array__`` and ``__array_ufunc__``
+        - ✅ Some linear algebra like ``svd``, ``qr``, ``lstsq``
+        
+        Anti-features
+        *************
+        
+        - ❌ Another array IR like APL. ``lappy`` is not an IR and does not intend to be.
+             It serves as a tool to build parametrized array expressions for lazy evaluation,
+             and strives to provide ``numpy`` compatible APIs.
+        
+        ----
+        
+        ``Lappy`` is licensed under the `MIT license <http://en.wikipedia.org/wiki/MIT_License>`_ and free for commercial, academic,
+        and private use.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Other Audience
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Provides-Extra: doc
+Provides-Extra: test
