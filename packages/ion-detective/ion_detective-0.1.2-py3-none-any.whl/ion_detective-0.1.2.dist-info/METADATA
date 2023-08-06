@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ion-detective
+Version: 0.1.2
+Summary: Virtual laboratory for chemistry students to simulate qualitative ion analysis.
+Home-page: https://github.com/Dom1L/ion_detective
+Author: Dominik Lemm
+Author-email: lemm92.d@gmail.com
+License: gpl-3.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# ion_detective
+Virtual laboratory for chemistry students to simulate qualitative ion analysis.
+
+
