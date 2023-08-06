@@ -1,0 +1,4 @@
+meteolab>=0.1.3
+gunzip
+nmlread
+dict2json
