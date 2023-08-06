@@ -1,0 +1,9 @@
+include *.md *.txt LICENSE requirements.txt
+graft astrodom/icons
+graft astrodom/config
+recursive-exclude * __pycache__
+recursive-exclude * *.pyc
+recursive-exclude * *.pyo
+recursive-exclude astrodom.egg-info *
+recursive-exclude dist *
+
