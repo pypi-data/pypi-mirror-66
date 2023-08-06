@@ -1,0 +1,100 @@
+Metadata-Version: 2.1
+Name: sdflex-ironic-driver
+Version: 1.0.0
+Summary: sdflex-ironic-driver provides additional ironic features to manage the Superdome Flex Servers
+Home-page: https://github.com/HewlettPackard/sdflex-ironic-driver/wiki
+Author: Hewlett Packard Enterprise
+Author-email: sdflex.openstack@hpe.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: pbr (!=2.1.0,>=2.0.0)
+Requires-Dist: SQLAlchemy (!=1.1.5,!=1.1.6,!=1.1.7,!=1.1.8,>=1.0.10)
+Requires-Dist: alembic (>=0.8.10)
+Requires-Dist: automaton (>=1.9.0)
+Requires-Dist: eventlet (!=0.18.3,!=0.20.1,>=0.18.2)
+Requires-Dist: WebOb (>=1.7.1)
+Requires-Dist: python-cinderclient (>=3.3.0)
+Requires-Dist: python-neutronclient (>=6.7.0)
+Requires-Dist: python-glanceclient (>=2.8.0)
+Requires-Dist: keystoneauth1 (>=3.4.0)
+Requires-Dist: ironic-lib (>=2.14.0)
+Requires-Dist: python-swiftclient (>=3.2.0)
+Requires-Dist: pytz (>=2013.6)
+Requires-Dist: stevedore (>=1.20.0)
+Requires-Dist: pysendfile (>=2.0.0)
+Requires-Dist: oslo.concurrency (>=3.26.0)
+Requires-Dist: oslo.config (>=5.2.0)
+Requires-Dist: oslo.context (>=2.19.2)
+Requires-Dist: oslo.db (>=4.27.0)
+Requires-Dist: oslo.rootwrap (>=5.8.0)
+Requires-Dist: oslo.i18n (>=3.15.3)
+Requires-Dist: oslo.log (>=3.36.0)
+Requires-Dist: oslo.middleware (>=3.31.0)
+Requires-Dist: oslo.policy (>=1.30.0)
+Requires-Dist: oslo.reports (>=1.18.0)
+Requires-Dist: oslo.serialization (!=2.19.1,>=2.18.0)
+Requires-Dist: oslo.service (!=1.28.1,>=1.24.0)
+Requires-Dist: oslo.utils (>=3.33.0)
+Requires-Dist: osprofiler (>=1.5.0)
+Requires-Dist: os-traits (>=0.4.0)
+Requires-Dist: pecan (!=1.0.2,!=1.0.3,!=1.0.4,!=1.2,>=1.0.0)
+Requires-Dist: requests (>=2.14.2)
+Requires-Dist: rfc3986 (>=0.3.1)
+Requires-Dist: six (>=1.10.0)
+Requires-Dist: jsonpatch (!=1.20,>=1.16)
+Requires-Dist: WSME (>=0.8.0)
+Requires-Dist: Jinja2 (>=2.10)
+Requires-Dist: keystonemiddleware (>=4.17.0)
+Requires-Dist: oslo.messaging (>=5.29.0)
+Requires-Dist: retrying (!=1.3.0,>=1.2.3)
+Requires-Dist: oslo.versionedobjects (>=1.31.2)
+Requires-Dist: jsonschema (<3.0.0,>=2.6.0)
+Requires-Dist: psutil (>=3.2.2)
+Requires-Dist: futurist (>=1.2.0)
+Requires-Dist: tooz (>=1.58.0)
+
+sdflex-ironic-driver
+====================
+
+**sdflex-ironic-driver** is a package to provide a hardware type
+**sdflex-redfish** for OpenStack Ironic that manages HPE Superdome Flex
+Servers in cloud environment. This package enables the additional features
+for Superdome Flex Servers over the features of Ironic **redfish**
+hardware type.
+
+Installation
+------------
+
+Install the module on Ironic conductor node from `PyPI
+<https://pypi.org/project/sdflex-ironic-driver>`_::
+
+    pip install sdflex-ironic-driver
+
+or::
+
+    #. git clone https://github.com/HewlettPackard/sdflex-ironic-driver
+    #. cd sdflex-ironic-driver
+    #. pip install .
+
+Configuration
+-------------
+
+For configuration instructions and usage details, see `sdflex-ironic-driver
+wiki page <https://github.com/HewlettPackard/sdflex-ironic-driver/wiki>`_.
+
+Reporting Bugs
+--------------
+
+To report bugs, use `github issues
+<https://github.com/HewlettPackard/sdflex-ironic-driver/issues>`_.
+
+
+
