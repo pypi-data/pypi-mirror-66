@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+pngcoder.egg-info/PKG-INFO
+pngcoder.egg-info/SOURCES.txt
+pngcoder.egg-info/dependency_links.txt
+pngcoder.egg-info/entry_points.txt
+pngcoder.egg-info/requires.txt
+pngcoder.egg-info/top_level.txt
+src/pngcoder.py
