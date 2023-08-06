@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: SeaSor
+Version: 0.1.1
+Summary: Search & Sorting algorithms
+Home-page: https://github.com/m1ghtfr3e/SearchSort
+Author: m1ghtfr3e
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+
+### Search and Sort classes
+
+Different Search and Sort algorithms
+are implemented.
+For more informations visit:
+https://github.com/m1ghtfr3e/SearchSort
+
+
