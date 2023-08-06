@@ -1,0 +1,4068 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-21 19:00-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_tools.py:12
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:57
+#: irekua-database/irekua_database/models/annotations/annotation_tools.py:12
+#: irekua-database/irekua_database/models/annotations/annotations.py:57
+#: irekua-filters/build/lib/irekua_filters/annotations/annotations.py:51
+#: irekua-filters/irekua_filters/annotations/annotations.py:51
+msgid "annotation type"
+msgstr "tipo de anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_tools.py:13
+#: irekua-database/irekua_database/models/annotations/annotation_tools.py:13
+msgid "Type of annotation this tool produces"
+msgstr "El tipo de anotación que produce esta herramienta"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_tools.py:17
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:28
+#: irekua-database/build/lib/irekua_database/models/data_collections/metacollections.py:12
+#: irekua-database/build/lib/irekua_database/models/devices/device_brands.py:11
+#: irekua-database/build/lib/irekua_database/models/devices/physical_devices.py:17
+#: irekua-database/build/lib/irekua_database/models/items/tags.py:12
+#: irekua-database/build/lib/irekua_database/models/object_types/annotation_types.py:17
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:43
+#: irekua-database/build/lib/irekua_database/models/object_types/device_types.py:13
+#: irekua-database/build/lib/irekua_database/models/object_types/event_types.py:13
+#: irekua-database/build/lib/irekua_database/models/object_types/item_types.py:16
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:18
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:19
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:18
+#: irekua-database/build/lib/irekua_database/models/object_types/site_types.py:18
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:18
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:35
+#: irekua-database/build/lib/irekua_database/models/users/roles.py:13
+#: irekua-database/build/lib/irekua_database/models/visualizers.py:17
+#: irekua-database/irekua_database/models/annotations/annotation_tools.py:17
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:28
+#: irekua-database/irekua_database/models/data_collections/metacollections.py:12
+#: irekua-database/irekua_database/models/devices/device_brands.py:11
+#: irekua-database/irekua_database/models/devices/physical_devices.py:17
+#: irekua-database/irekua_database/models/items/tags.py:12
+#: irekua-database/irekua_database/models/object_types/annotation_types.py:17
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:43
+#: irekua-database/irekua_database/models/object_types/device_types.py:13
+#: irekua-database/irekua_database/models/object_types/event_types.py:13
+#: irekua-database/irekua_database/models/object_types/item_types.py:16
+#: irekua-database/irekua_database/models/object_types/licence_types.py:18
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:19
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:18
+#: irekua-database/irekua_database/models/object_types/site_types.py:18
+#: irekua-database/irekua_database/models/object_types/term_types.py:18
+#: irekua-database/irekua_database/models/sites/sites.py:35
+#: irekua-database/irekua_database/models/users/roles.py:13
+#: irekua-database/irekua_database/models/visualizers.py:17
+#: irekua-filters/build/lib/irekua_filters/data_collections/data_collections.py:35
+#: irekua-filters/build/lib/irekua_filters/sites.py:40
+#: irekua-filters/irekua_filters/data_collections/data_collections.py:35
+#: irekua-filters/irekua_filters/sites.py:40
+msgid "name"
+msgstr "nombre"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_tools.py:18
+#: irekua-database/irekua_database/models/annotations/annotation_tools.py:18
+msgid "Name of annotation tool"
+msgstr "Nombre del tipo de anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_tools.py:23
+#: irekua-database/build/lib/irekua_database/models/visualizers.py:24
+#: irekua-database/irekua_database/models/annotations/annotation_tools.py:23
+#: irekua-database/irekua_database/models/visualizers.py:24
+msgid "version"
+msgstr "versión"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_tools.py:24
+#: irekua-database/irekua_database/models/annotations/annotation_tools.py:24
+msgid "Version of annotation tool"
+msgstr "Versión de la herramienta de anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_tools.py:28
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:53
+#: irekua-database/build/lib/irekua_database/models/devices/device_brands.py:23
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:54
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:57
+#: irekua-database/irekua_database/models/annotations/annotation_tools.py:28
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:53
+#: irekua-database/irekua_database/models/devices/device_brands.py:23
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:54
+#: irekua-database/irekua_database/models/users/institutions.py:57
+msgid "logo"
+msgstr "logo"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_tools.py:29
+#: irekua-database/irekua_database/models/annotations/annotation_tools.py:29
+msgid "Annotation tool logo"
+msgstr "Logo de la herramienta de anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_tools.py:35
+#: irekua-database/build/lib/irekua_database/models/devices/device_brands.py:17
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:53
+#: irekua-database/build/lib/irekua_database/models/visualizers.py:30
+#: irekua-database/irekua_database/models/annotations/annotation_tools.py:35
+#: irekua-database/irekua_database/models/devices/device_brands.py:17
+#: irekua-database/irekua_database/models/users/institutions.py:53
+#: irekua-database/irekua_database/models/visualizers.py:30
+msgid "website"
+msgstr "sitio web"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_tools.py:36
+#: irekua-database/irekua_database/models/annotations/annotation_tools.py:36
+msgid "Annotation tool website"
+msgstr "Sitio web de la herramienta de anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_tools.py:41
+#: irekua-database/irekua_database/models/annotations/annotation_tools.py:41
+msgid "Annotation Tool"
+msgstr "Herramienta de Anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_tools.py:42
+#: irekua-database/irekua_database/models/annotations/annotation_tools.py:42
+msgid "Annotation Tools"
+msgstr "Herramientas de Anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_votes.py:14
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:62
+#: irekua-database/irekua_database/models/annotations/annotation_votes.py:14
+#: irekua-database/irekua_database/models/annotations/annotations.py:62
+msgid "annotation"
+msgstr "anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_votes.py:15
+#: irekua-database/irekua_database/models/annotations/annotation_votes.py:15
+msgid "Reference to annotation being voted"
+msgstr "Referencia a la anotación que está siendo votada"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_votes.py:21
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:100
+#: irekua-database/irekua_database/models/annotations/annotation_votes.py:21
+#: irekua-database/irekua_database/models/annotations/annotations.py:100
+msgid "labels"
+msgstr "etiquetas"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_votes.py:22
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:101
+#: irekua-database/irekua_database/models/annotations/annotation_votes.py:22
+#: irekua-database/irekua_database/models/annotations/annotations.py:101
+msgid "Labels associated with annotation"
+msgstr "Etiquetas asociadas con la anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_votes.py:27
+#: irekua-database/irekua_database/models/annotations/annotation_votes.py:27
+msgid "Annotation Vote"
+msgstr "Voto de Anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_votes.py:28
+#: irekua-database/irekua_database/models/annotations/annotation_votes.py:28
+msgid "Annotation Votes"
+msgstr "Votos de Anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_votes.py:31
+#: irekua-database/irekua_database/models/annotations/annotation_votes.py:31
+#, python-format
+msgid "Vote %(id)s on annotation %(annotation)s"
+msgstr "Voto %(id)s de la anotación %(annotation)s"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotation_votes.py:51
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:166
+#: irekua-database/irekua_database/models/annotations/annotation_votes.py:51
+#: irekua-database/irekua_database/models/annotations/annotations.py:166
+#, python-format
+msgid ""
+"Labels contain a term (of type %(type)s) that is not valid for the event type"
+msgstr ""
+"Las etiquetas contienen un término (de tipo %(type)s) que no es valid para este tipo de evento"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:15
+#: irekua-database/irekua_database/models/annotations/annotations.py:15
+msgid "uncertain"
+msgstr "inseguro"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:16
+#: irekua-database/irekua_database/models/annotations/annotations.py:16
+msgid "somewhat certain"
+msgstr "medianamente seguro"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:17
+#: irekua-database/irekua_database/models/annotations/annotations.py:17
+msgid "certain"
+msgstr "seguro"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:20
+#: irekua-database/irekua_database/models/annotations/annotations.py:20
+msgid "low"
+msgstr "baja"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:21
+#: irekua-database/irekua_database/models/annotations/annotations.py:21
+msgid "medium"
+msgstr "media"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:22
+#: irekua-database/irekua_database/models/annotations/annotations.py:22
+msgid "high"
+msgstr "alta"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:29
+#: irekua-database/irekua_database/models/annotations/annotations.py:29
+#: selia-annotator/build/lib/selia_annotator/models.py:22
+#: selia-annotator/selia_annotator/models.py:22
+msgid "annotation tool"
+msgstr "herramienta de anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:30
+#: irekua-database/irekua_database/models/annotations/annotations.py:30
+msgid "Annotation tool used when annotating"
+msgstr "Herramienta de anotación utilizada"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:36
+#: irekua-database/irekua_database/models/annotations/annotations.py:36
+#: selia-visualizers/build/lib/selia_visualizers/models.py:23
+#: selia-visualizers/selia_visualizers/models.py:23
+msgid "visualizer"
+msgstr "visualizador"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:37
+#: irekua-database/irekua_database/models/annotations/annotations.py:37
+msgid "Visualizer used when annotating"
+msgstr "Visualizador utilizado durante la anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:42
+#: irekua-database/irekua_database/models/annotations/annotations.py:42
+msgid "item"
+msgstr "artículo"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:43
+#: irekua-database/irekua_database/models/annotations/annotations.py:43
+msgid "Annotated item"
+msgstr "Artículo anotado"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:50
+#: irekua-database/irekua_database/models/annotations/annotations.py:50
+#: irekua-filters/build/lib/irekua_filters/annotations/annotations.py:52
+#: irekua-filters/irekua_filters/annotations/annotations.py:52
+msgid "event type"
+msgstr "tipo de evento"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:51
+#: irekua-database/irekua_database/models/annotations/annotations.py:51
+msgid "Type of event being annotated"
+msgstr "Tipo de evento siendo anotado"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:58
+#: irekua-database/irekua_database/models/annotations/annotations.py:58
+msgid "Type of annotation"
+msgstr "Tipo de anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:64
+#: irekua-database/irekua_database/models/annotations/annotations.py:64
+msgid "Information of annotation location within item"
+msgstr "Información que describe la ubicación del evento siendo anotado"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:69
+#: irekua-database/irekua_database/models/annotations/annotations.py:69
+msgid "visualizer configuration"
+msgstr "configuración de visualizador"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:71
+#: irekua-database/irekua_database/models/annotations/annotations.py:71
+msgid "Configuration of visualizer at annotation creation"
+msgstr "La configuración del visualizador al momento de la creación de la anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:77
+#: irekua-database/irekua_database/models/annotations/annotations.py:77
+msgid "certainty"
+msgstr "certeza"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:79
+#: irekua-database/irekua_database/models/annotations/annotations.py:79
+msgid "Level of certainty of location or labelling of annotation"
+msgstr "Nivel de certidumbre de la ubicación o etiquetado de la anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:86
+#: irekua-database/irekua_database/models/annotations/annotations.py:86
+msgid "quality"
+msgstr "calidad"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:87
+#: irekua-database/irekua_database/models/annotations/annotations.py:87
+msgid "Quality of item content inside annotation"
+msgstr "Calidad del contenido del artículo que está descrita por la anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:93
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:77
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:31
+#: irekua-database/irekua_database/models/annotations/annotations.py:93
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:77
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:31
+msgid "commentaries"
+msgstr "comentarios"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:94
+#: irekua-database/irekua_database/models/annotations/annotations.py:94
+msgid "Commentaries of annotator"
+msgstr "Comentarios del anotador"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:105
+#: irekua-database/irekua_database/models/annotations/annotations.py:105
+msgid "Annotation"
+msgstr "Anotación"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:106
+#: irekua-database/irekua_database/models/annotations/annotations.py:106
+msgid "Annotations"
+msgstr "Anotaciones"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:111
+#: irekua-database/irekua_database/models/annotations/annotations.py:111
+msgid "Can vote annotation"
+msgstr "Puede emitir un voto en las anotaciones"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:115
+#: irekua-database/irekua_database/models/annotations/annotations.py:115
+#, python-format
+msgid "Annotation of item %(item_id)s"
+msgstr "Anotación del artículo %(item_id)s"
+
+#: irekua-database/build/lib/irekua_database/models/annotations/annotations.py:142
+#: irekua-database/irekua_database/models/annotations/annotations.py:142
+msgid "Invalid annotation tool for this annotation type"
+msgstr "Herramienta de anotación inválida para este tipo de anotación"
+
+#: irekua-database/build/lib/irekua_database/models/base.py:8
+#: irekua-database/irekua_database/models/base.py:8
+#: irekua-filters/build/lib/irekua_filters/data_collections/data_collections.py:34
+#: irekua-filters/irekua_filters/data_collections/data_collections.py:34
+msgid "created on"
+msgstr "creado el"
+
+#: irekua-database/build/lib/irekua_database/models/base.py:9
+#: irekua-database/irekua_database/models/base.py:9
+msgid "Date of creation"
+msgstr "Fecha de creación"
+
+#: irekua-database/build/lib/irekua_database/models/base.py:14
+#: irekua-database/irekua_database/models/base.py:14
+msgid "modified on"
+msgstr "modificado el"
+
+#: irekua-database/build/lib/irekua_database/models/base.py:15
+#: irekua-database/irekua_database/models/base.py:15
+msgid "Date of last modification"
+msgstr "Fecha de última modificación"
+
+#: irekua-database/build/lib/irekua_database/models/base.py:29
+#: irekua-database/irekua_database/models/base.py:29
+msgid "creator"
+msgstr "creador"
+
+#: irekua-database/build/lib/irekua_database/models/base.py:32
+#: irekua-database/irekua_database/models/base.py:32
+msgid "Creator of object"
+msgstr "Creador del objecto"
+
+#: irekua-database/build/lib/irekua_database/models/base.py:39
+#: irekua-database/irekua_database/models/base.py:39
+msgid "modified by"
+msgstr "modificado por"
+
+#: irekua-database/build/lib/irekua_database/models/base.py:40
+#: irekua-database/irekua_database/models/base.py:40
+msgid "User who made modifications last"
+msgstr "Usuario que realizó la última modificación"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_devices.py:16
+#: irekua-database/irekua_database/models/data_collections/collection_devices.py:16
+msgid "physical device"
+msgstr "dispositivo físico"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_devices.py:17
+#: irekua-database/irekua_database/models/data_collections/collection_devices.py:17
+msgid "Reference to physical device"
+msgstr "Referencia al dispositivo físico"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_devices.py:24
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_sites.py:35
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_users.py:14
+#: irekua-database/build/lib/irekua_database/models/licences.py:61
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:57
+#: irekua-database/irekua_database/models/data_collections/collection_devices.py:24
+#: irekua-database/irekua_database/models/data_collections/collection_sites.py:35
+#: irekua-database/irekua_database/models/data_collections/collection_users.py:14
+#: irekua-database/irekua_database/models/licences.py:61
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:57
+msgid "collection"
+msgstr "colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_devices.py:25
+#: irekua-database/irekua_database/models/data_collections/collection_devices.py:25
+msgid "Collection to which the device belongs"
+msgstr "Colección a la cual pertenece el dispositivo"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_devices.py:31
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_sites.py:49
+#: irekua-database/irekua_database/models/data_collections/collection_devices.py:31
+#: irekua-database/irekua_database/models/data_collections/collection_sites.py:49
+msgid "ID within collection"
+msgstr "Nombre dentro de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_devices.py:32
+#: irekua-database/irekua_database/models/data_collections/collection_devices.py:32
+msgid "ID of device within the collection (visible to all collection users)"
+msgstr "Nombre del dispositivo dentro de la colección (visible únicamente a los usuarios de la colección)"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_devices.py:38
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_sites.py:41
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_users.py:35
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:38
+#: irekua-database/build/lib/irekua_database/models/devices/physical_devices.py:38
+#: irekua-database/build/lib/irekua_database/models/items/items.py:144
+#: irekua-database/build/lib/irekua_database/models/licences.py:52
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:35
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:82
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:36
+#: irekua-database/build/lib/irekua_database/models/sites/localities.py:37
+#: irekua-database/build/lib/irekua_database/models/sites/site_descriptors.py:33
+#: irekua-database/build/lib/irekua_database/models/terms/entailments.py:29
+#: irekua-database/build/lib/irekua_database/models/terms/synonym_suggestions.py:31
+#: irekua-database/build/lib/irekua_database/models/terms/synonyms.py:31
+#: irekua-database/build/lib/irekua_database/models/terms/term_suggestions.py:35
+#: irekua-database/build/lib/irekua_database/models/terms/terms.py:44
+#: irekua-database/irekua_database/models/data_collections/collection_devices.py:38
+#: irekua-database/irekua_database/models/data_collections/collection_sites.py:41
+#: irekua-database/irekua_database/models/data_collections/collection_users.py:35
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:38
+#: irekua-database/irekua_database/models/devices/physical_devices.py:38
+#: irekua-database/irekua_database/models/items/items.py:144
+#: irekua-database/irekua_database/models/licences.py:52
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:35
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:82
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:36
+#: irekua-database/irekua_database/models/sites/localities.py:37
+#: irekua-database/irekua_database/models/sites/site_descriptors.py:33
+#: irekua-database/irekua_database/models/terms/entailments.py:29
+#: irekua-database/irekua_database/models/terms/synonym_suggestions.py:31
+#: irekua-database/irekua_database/models/terms/synonyms.py:31
+#: irekua-database/irekua_database/models/terms/term_suggestions.py:35
+#: irekua-database/irekua_database/models/terms/terms.py:44
+msgid "metadata"
+msgstr "metadatos adicionales"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_devices.py:39
+#: irekua-database/irekua_database/models/data_collections/collection_devices.py:39
+msgid "Metadata associated with device within collection"
+msgstr "Metadatos adicionales asociados con el dispositivo en la colección."
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_devices.py:43
+#: irekua-database/irekua_database/models/data_collections/collection_devices.py:43
+msgid "Collection Device"
+msgstr "Dispositivo de Colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_devices.py:44
+#: irekua-database/irekua_database/models/data_collections/collection_devices.py:44
+msgid "Collection Devices"
+msgstr "Dispositivos de Colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_devices.py:55
+#: irekua-database/irekua_database/models/data_collections/collection_devices.py:55
+msgid "Collection device {}"
+msgstr "Dispositivo de Colección {}"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_sites.py:19
+#: irekua-database/irekua_database/models/data_collections/collection_sites.py:19
+msgid "site type"
+msgstr "tipo de sitio"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_sites.py:20
+#: irekua-database/irekua_database/models/data_collections/collection_sites.py:20
+msgid "Type of site"
+msgstr "Tipo de sitio"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_sites.py:27
+#: irekua-database/irekua_database/models/data_collections/collection_sites.py:27
+msgid "site"
+msgstr "sitio"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_sites.py:28
+#: irekua-database/irekua_database/models/data_collections/collection_sites.py:28
+msgid "Reference to Site"
+msgstr "Referencia al sitio"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_sites.py:36
+#: irekua-database/irekua_database/models/data_collections/collection_sites.py:36
+msgid "Collection to which the site belongs"
+msgstr "Colección a la cual pertenece el sitio"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_sites.py:42
+#: irekua-database/irekua_database/models/data_collections/collection_sites.py:42
+msgid "Metadata associated to site in collection"
+msgstr "Metadatos adicionales asociados al sitio en la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_sites.py:50
+#: irekua-database/irekua_database/models/data_collections/collection_sites.py:50
+msgid "ID of site within the collection (visible to all collection users)"
+msgstr "Nombre del sitio dentro de la colección (visible a todos los usuarios de la colección)"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_sites.py:58
+#: irekua-database/irekua_database/models/data_collections/collection_sites.py:58
+msgid "Collection Site"
+msgstr "Sitio de Colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_sites.py:59
+#: irekua-database/irekua_database/models/data_collections/collection_sites.py:59
+msgid "Collection Sites"
+msgstr "Sitios de Colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_sites.py:73
+#: irekua-database/irekua_database/models/data_collections/collection_sites.py:73
+#, python-format
+msgid "Site %(id)s"
+msgstr "Sitio %(id)s"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_users.py:15
+#: irekua-database/irekua_database/models/data_collections/collection_users.py:15
+msgid "Collection to which user belongs"
+msgstr "Colección a la cual pertenece el usuario"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_users.py:21
+#: irekua-database/irekua_database/models/data_collections/collection_users.py:21
+msgid "user"
+msgstr "usuario"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_users.py:22
+#: irekua-database/irekua_database/models/data_collections/collection_users.py:22
+msgid "User of collection"
+msgstr "Usuario de Colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_users.py:29
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_roles.py:25
+#: irekua-database/irekua_database/models/data_collections/collection_users.py:29
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_roles.py:25
+msgid "role"
+msgstr "rol"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_users.py:30
+#: irekua-database/irekua_database/models/data_collections/collection_users.py:30
+msgid "Role of user in collection"
+msgstr "Rol del usuario dentro de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_users.py:37
+#: irekua-database/irekua_database/models/data_collections/collection_users.py:37
+msgid "Metadata associated to user in collection"
+msgstr "Metadatos adicionales asociados al usuario en la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_users.py:41
+#: irekua-database/irekua_database/models/data_collections/collection_users.py:41
+msgid "Collection User"
+msgstr "Usuario de Colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_users.py:42
+#: irekua-database/irekua_database/models/data_collections/collection_users.py:42
+msgid "Collection Users"
+msgstr "Usuarios de Colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_users.py:49
+#: irekua-database/irekua_database/models/data_collections/collection_users.py:49
+#, python-format
+msgid "%(user)s (%(role)s)"
+msgstr "%(user)s (%(role)s)"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_users.py:59
+#: irekua-database/irekua_database/models/data_collections/collection_users.py:59
+msgid "Role is not valid for this collection's type"
+msgstr "El rol no es válido en este tipo de colecciones"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/collection_users.py:66
+#: irekua-database/irekua_database/models/data_collections/collection_users.py:66
+#, python-format
+msgid ""
+"Invalid metadata for user of role type %(role)s in collection "
+"%(collection)s. Error: %(error)s"
+msgstr ""
+"Metadatos adicionales inválidos para el usuario con rol %(role)s en la colección"
+"%(collection)s. Error: %(error)s"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:20
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_device_types.py:17
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_item_types.py:17
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_roles.py:17
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:20
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_device_types.py:17
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_item_types.py:17
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_roles.py:17
+msgid "collection type"
+msgstr "tipo de colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:21
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:21
+msgid "Type of collection"
+msgstr "Tipo de colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:29
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:29
+msgid "Name of collection"
+msgstr "Nombre de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:33
+#: irekua-database/build/lib/irekua_database/models/data_collections/metacollections.py:18
+#: irekua-database/build/lib/irekua_database/models/items/tags.py:17
+#: irekua-database/build/lib/irekua_database/models/object_types/annotation_types.py:22
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:48
+#: irekua-database/build/lib/irekua_database/models/object_types/device_types.py:18
+#: irekua-database/build/lib/irekua_database/models/object_types/event_types.py:18
+#: irekua-database/build/lib/irekua_database/models/object_types/item_types.py:22
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:23
+#: irekua-database/build/lib/irekua_database/models/object_types/locality_types.py:20
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:24
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:23
+#: irekua-database/build/lib/irekua_database/models/object_types/site_types.py:23
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:23
+#: irekua-database/build/lib/irekua_database/models/sites/localities.py:19
+#: irekua-database/build/lib/irekua_database/models/sites/site_descriptors.py:27
+#: irekua-database/build/lib/irekua_database/models/terms/synonym_suggestions.py:25
+#: irekua-database/build/lib/irekua_database/models/terms/term_suggestions.py:28
+#: irekua-database/build/lib/irekua_database/models/terms/terms.py:34
+#: irekua-database/build/lib/irekua_database/models/users/roles.py:19
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:33
+#: irekua-database/irekua_database/models/data_collections/metacollections.py:18
+#: irekua-database/irekua_database/models/items/tags.py:17
+#: irekua-database/irekua_database/models/object_types/annotation_types.py:22
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:48
+#: irekua-database/irekua_database/models/object_types/device_types.py:18
+#: irekua-database/irekua_database/models/object_types/event_types.py:18
+#: irekua-database/irekua_database/models/object_types/item_types.py:22
+#: irekua-database/irekua_database/models/object_types/licence_types.py:23
+#: irekua-database/irekua_database/models/object_types/locality_types.py:20
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:24
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:23
+#: irekua-database/irekua_database/models/object_types/site_types.py:23
+#: irekua-database/irekua_database/models/object_types/term_types.py:23
+#: irekua-database/irekua_database/models/sites/localities.py:19
+#: irekua-database/irekua_database/models/sites/site_descriptors.py:27
+#: irekua-database/irekua_database/models/terms/synonym_suggestions.py:25
+#: irekua-database/irekua_database/models/terms/term_suggestions.py:28
+#: irekua-database/irekua_database/models/terms/terms.py:34
+#: irekua-database/irekua_database/models/users/roles.py:19
+msgid "description"
+msgstr "descripción"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:34
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:34
+msgid "Description of collection"
+msgstr "Descripción de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:39
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:39
+msgid "Metadata associated to collection"
+msgstr "Metadatos adicionales asociados con la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:47
+#: irekua-database/build/lib/irekua_database/models/users/users.py:29
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:47
+#: irekua-database/irekua_database/models/users/users.py:29
+msgid "institution"
+msgstr "institución"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:48
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:48
+msgid "Institution to which the collection belogs"
+msgstr "Institución a que le pertenece la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:54
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:54
+msgid "Logo of data collection"
+msgstr "Logo de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:78
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:79
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:78
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:79
+msgid "administrators"
+msgstr "administradores"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:79
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:79
+msgid "Administrators of collection"
+msgstr "Administradores de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:84
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:84
+msgid "is open"
+msgstr "es abierta"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:86
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:86
+msgid "Boolean flag indicating whether contents of the collection are public."
+msgstr "Bandera booleana indicadora de si lo contenidos de la colección son públicos"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:92
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:92
+msgid "Collection"
+msgstr "Colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:93
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:93
+#: selia-about/build/lib/selia_about/templates/selia_about/navbar.html:51
+#: selia-about/selia_about/templates/selia_about/navbar.html:51
+msgid "Collections"
+msgstr "Colecciónes"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:98
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:98
+msgid "Can add site to collection"
+msgstr "Puede añadir un sitio a la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:101
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:101
+msgid "Can add item to collection"
+msgstr "Puede añadir artículos a la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:104
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:104
+msgid "Can add device to collection"
+msgstr "Puede añadir dispositivos a la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:107
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:107
+msgid "Can add a sampling event to collection"
+msgstr "Puede añadir eventos de muestreo a la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:110
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:110
+msgid "Can add user to collection"
+msgstr "Puede añadir usuarios a la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:113
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:113
+msgid "Can add licence to collection"
+msgstr "Puede añadir licencias a la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:116
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:116
+msgid "Can annotate items in collection"
+msgstr "Puede anotar artículos de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:119
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:119
+msgid "Can vote on annotations of items in collection"
+msgstr "Puede votar las anotaciones de artículos en la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:122
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:122
+msgid "Can view sites in collection"
+msgstr "Puede ver el detalle de los sitios de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:125
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:125
+msgid "Can view items in collection"
+msgstr "Puede ver el detalle de los artículos de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:128
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:128
+msgid "Can view devices in collection"
+msgstr "Puede ver el detalle de los dispositivos de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:131
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:131
+msgid "Can view sampling event in collection"
+msgstr "Puede ver el detalle de los eventos de muestreo de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:134
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:134
+msgid "Can view annotations of items in collection"
+msgstr "Puede ver las anotaciones de los artículos de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:137
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:137
+msgid "Can change sites in collection"
+msgstr "Puede realizar cambios a los sitios de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:140
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:140
+msgid "Can change user info in collection"
+msgstr "Puede realizar cambios a los usuarios de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:143
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:143
+msgid "Can change items in collection"
+msgstr "Puede realizar cambios a los artículos de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:146
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:146
+msgid "Can change devices in collection"
+msgstr "Puede realizar cambios a los dispositivos de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:149
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:149
+msgid "Can change annotations of items in collection"
+msgstr "Puede realizar cambios a las anotaciones de los artículos de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:152
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:152
+msgid "Can change sampling events in collection"
+msgstr "Puede realizar cambios a los eventos de muestreo de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:155
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:155
+msgid "Can download annotation items"
+msgstr "Puede descargar las anotaciones de los artículos de la colección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:168
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:168
+#, python-brace-format
+msgid "Invalid metadata for collection of type {type}. Error: {error}"
+msgstr "Los metadatos adicionales proporcionados son inválidos para el tipo de colección {type}. Error: {error}"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/data_collections.py:237
+#: irekua-database/irekua_database/models/data_collections/data_collections.py:237
+#, python-format
+msgid "Licence %(licence)s is not part of collection %(collection)s."
+msgstr "La licencia %{licence}s no es parte de la colección %(collection)s"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/metacollections.py:13
+#: irekua-database/irekua_database/models/data_collections/metacollections.py:13
+msgid "Name of meta collection"
+msgstr "Nombre de la metacolección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/metacollections.py:19
+#: irekua-database/irekua_database/models/data_collections/metacollections.py:19
+msgid "Description of Meta Collection"
+msgstr "Descripción de la metacolección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/metacollections.py:24
+#: irekua-database/irekua_database/models/data_collections/metacollections.py:24
+msgid "items"
+msgstr "artículos"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/metacollections.py:25
+#: irekua-database/irekua_database/models/data_collections/metacollections.py:25
+msgid "Items belonging to MetaCollection"
+msgstr "Artículos que pertenecen a la metacolección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/metacollections.py:31
+#: irekua-database/irekua_database/models/data_collections/metacollections.py:31
+msgid "Curators of metacollection"
+msgstr "Curadores de la metacolección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/metacollections.py:35
+#: irekua-database/irekua_database/models/data_collections/metacollections.py:35
+msgid "Meta Collection"
+msgstr "Metacolección"
+
+#: irekua-database/build/lib/irekua_database/models/data_collections/metacollections.py:36
+#: irekua-database/irekua_database/models/data_collections/metacollections.py:36
+msgid "Meta Collections"
+msgstr "Metacolecciones"
+
+#: irekua-database/build/lib/irekua_database/models/devices/device_brands.py:12
+#: irekua-database/irekua_database/models/devices/device_brands.py:12
+msgid "Name of device brand"
+msgstr "Nombre de la marca"
+
+#: irekua-database/build/lib/irekua_database/models/devices/device_brands.py:18
+#: irekua-database/irekua_database/models/devices/device_brands.py:18
+msgid "Brand's website"
+msgstr "Sitio web de la marca"
+
+#: irekua-database/build/lib/irekua_database/models/devices/device_brands.py:24
+#: irekua-database/irekua_database/models/devices/device_brands.py:24
+msgid "Logo of device brand"
+msgstr "Logo de la marca"
+
+#: irekua-database/build/lib/irekua_database/models/devices/device_brands.py:30
+#: irekua-database/irekua_database/models/devices/device_brands.py:30
+msgid "Device Brand"
+msgstr "Marca de Dispositivo"
+
+#: irekua-database/build/lib/irekua_database/models/devices/device_brands.py:31
+#: irekua-database/irekua_database/models/devices/device_brands.py:31
+msgid "Device Brands"
+msgstr "Marcas de Dispositivo"
+
+#: irekua-database/build/lib/irekua_database/models/devices/devices.py:18
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_device_types.py:25
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:27
+#: irekua-database/irekua_database/models/devices/devices.py:18
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_device_types.py:25
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:27
+msgid "device type"
+msgstr "tipo de dispositivo"
+
+#: irekua-database/build/lib/irekua_database/models/devices/devices.py:19
+#: irekua-database/irekua_database/models/devices/devices.py:19
+msgid "Type of device"
+msgstr "Tipo de Dispositivo"
+
+#: irekua-database/build/lib/irekua_database/models/devices/devices.py:26
+#: irekua-database/irekua_database/models/devices/devices.py:26
+#: irekua-filters/build/lib/irekua_filters/devices/physical_devices.py:45
+#: irekua-filters/irekua_filters/devices/physical_devices.py:45
+msgid "brand"
+msgstr "marca"
+
+#: irekua-database/build/lib/irekua_database/models/devices/devices.py:27
+#: irekua-database/irekua_database/models/devices/devices.py:27
+msgid "Brand of device"
+msgstr "Marca de dispositivo"
+
+#: irekua-database/build/lib/irekua_database/models/devices/devices.py:32
+#: irekua-database/irekua_database/models/devices/devices.py:32
+#: irekua-filters/build/lib/irekua_filters/devices/physical_devices.py:46
+#: irekua-filters/irekua_filters/devices/physical_devices.py:46
+msgid "model"
+msgstr "modelo"
+
+#: irekua-database/build/lib/irekua_database/models/devices/devices.py:33
+#: irekua-database/irekua_database/models/devices/devices.py:33
+msgid "Model of device"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/devices.py:37
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_device_types.py:31
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_item_types.py:31
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_roles.py:31
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:60
+#: irekua-database/build/lib/irekua_database/models/object_types/entailment_types.py:34
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:28
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:35
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:36
+#: irekua-database/build/lib/irekua_database/models/object_types/site_types.py:28
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:43
+#: irekua-database/irekua_database/models/devices/devices.py:37
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_device_types.py:31
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_item_types.py:31
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_roles.py:31
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:60
+#: irekua-database/irekua_database/models/object_types/entailment_types.py:34
+#: irekua-database/irekua_database/models/object_types/licence_types.py:28
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:35
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:36
+#: irekua-database/irekua_database/models/object_types/site_types.py:28
+#: irekua-database/irekua_database/models/object_types/term_types.py:43
+msgid "metadata schema"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/devices.py:38
+#: irekua-database/irekua_database/models/devices/devices.py:38
+msgid "JSON Schema for metadata of device info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/devices.py:45
+#: irekua-database/build/lib/irekua_database/models/visualizers.py:35
+#: irekua-database/irekua_database/models/devices/devices.py:45
+#: irekua-database/irekua_database/models/visualizers.py:35
+msgid "configuration schema"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/devices.py:46
+#: irekua-database/irekua_database/models/devices/devices.py:46
+msgid "JSON Schema for configuration info of device"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/devices.py:53
+#: irekua-database/irekua_database/models/devices/devices.py:53
+msgid "Device"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/devices.py:54
+#: irekua-database/irekua_database/models/devices/devices.py:54
+msgid "Devices"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/devices.py:73
+#: irekua-database/irekua_database/models/devices/devices.py:73
+#, python-format
+msgid "Invalid device configuration. Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/devices.py:83
+#: irekua-database/irekua_database/models/devices/devices.py:83
+#, python-format
+msgid "Invalid device metadata. Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/physical_devices.py:18
+#: irekua-database/irekua_database/models/devices/physical_devices.py:18
+msgid "Simple device identifier (visible only to owner)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/physical_devices.py:24
+#: irekua-database/irekua_database/models/devices/physical_devices.py:24
+#: irekua-filters/build/lib/irekua_filters/devices/physical_devices.py:43
+#: irekua-filters/irekua_filters/devices/physical_devices.py:43
+msgid "serial number"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/physical_devices.py:25
+#: irekua-database/irekua_database/models/devices/physical_devices.py:25
+msgid "Serial number of device"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/physical_devices.py:32
+#: irekua-database/irekua_database/models/devices/physical_devices.py:32
+msgid "device"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/physical_devices.py:33
+#: irekua-database/irekua_database/models/devices/physical_devices.py:33
+msgid "Brand and model of device"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/physical_devices.py:39
+#: irekua-database/irekua_database/models/devices/physical_devices.py:39
+msgid "Metadata associated to device"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/physical_devices.py:45
+#: irekua-database/irekua_database/models/devices/physical_devices.py:45
+msgid "bundle"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/physical_devices.py:47
+#: irekua-database/irekua_database/models/devices/physical_devices.py:47
+msgid "Does this device possibly represents many physical devices?"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/physical_devices.py:52
+#: irekua-database/irekua_database/models/devices/physical_devices.py:52
+msgid "Physical Device"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/physical_devices.py:53
+#: irekua-database/irekua_database/models/devices/physical_devices.py:53
+msgid "Physical Devices"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/devices/physical_devices.py:64
+#: irekua-database/irekua_database/models/devices/physical_devices.py:64
+#, python-format
+msgid "Device %(id)s of type %(device)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:79
+#: irekua-database/irekua_database/models/items/items.py:79
+msgid "file size"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:80
+#: irekua-database/irekua_database/models/items/items.py:80
+msgid "Size of resource in Bytes"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:85
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:51
+#: irekua-database/irekua_database/models/items/items.py:85
+#: irekua-database/irekua_database/models/items/secondary_items.py:51
+msgid "hash"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:86
+#: irekua-database/irekua_database/models/items/items.py:86
+msgid "Hash of resource file"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:95
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:65
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_item_types.py:25
+#: irekua-database/irekua_database/models/items/items.py:95
+#: irekua-database/irekua_database/models/items/secondary_items.py:65
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_item_types.py:25
+#: selia-visualizers/build/lib/selia_visualizers/models.py:53
+#: selia-visualizers/selia_visualizers/models.py:53
+msgid "item type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:96
+#: irekua-database/irekua_database/models/items/items.py:96
+msgid "Type of resource"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:101
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:57
+#: irekua-database/irekua_database/models/items/items.py:101
+#: irekua-database/irekua_database/models/items/secondary_items.py:57
+msgid "item file"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:102
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:58
+#: irekua-database/irekua_database/models/items/items.py:102
+#: irekua-database/irekua_database/models/items/secondary_items.py:58
+msgid "Upload file associated to file"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:108
+#: irekua-database/irekua_database/models/items/items.py:108
+msgid "item thumbnail"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:109
+#: irekua-database/irekua_database/models/items/items.py:109
+msgid "Thumbnail associated to file"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:115
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:79
+#: irekua-database/irekua_database/models/items/items.py:115
+#: irekua-database/irekua_database/models/items/secondary_items.py:79
+msgid "media info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:116
+#: irekua-database/irekua_database/models/items/items.py:116
+msgid "Information of resource file"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:122
+#: irekua-database/irekua_database/models/items/items.py:122
+msgid "sampling event device"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:123
+#: irekua-database/irekua_database/models/items/items.py:123
+msgid "Sampling event device used to create item"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:130
+#: irekua-database/build/lib/irekua_database/models/object_types/locality_types.py:26
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:40
+#: irekua-database/build/lib/irekua_database/models/terms/entailments.py:15
+#: irekua-database/build/lib/irekua_database/models/terms/synonyms.py:16
+#: irekua-database/irekua_database/models/items/items.py:130
+#: irekua-database/irekua_database/models/object_types/locality_types.py:26
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:40
+#: irekua-database/irekua_database/models/terms/entailments.py:15
+#: irekua-database/irekua_database/models/terms/synonyms.py:16
+msgid "source"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:131
+#: irekua-database/irekua_database/models/items/items.py:131
+msgid "Source of item (parsing function and parent directory)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:137
+#: irekua-database/irekua_database/models/items/items.py:137
+msgid "source foreign key"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:138
+#: irekua-database/irekua_database/models/items/items.py:138
+msgid "Foreign key of file in source database"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:145
+#: irekua-database/irekua_database/models/items/items.py:145
+msgid "Metadata associated to item"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:151
+#: irekua-database/irekua_database/models/items/items.py:151
+#: irekua-filters/build/lib/irekua_filters/items/items.py:63
+#: irekua-filters/irekua_filters/items/items.py:63
+msgid "captured on"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:152
+#: irekua-database/irekua_database/models/items/items.py:152
+msgid "Date on which item was produced"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:157
+#: irekua-database/irekua_database/models/items/items.py:157
+msgid "year"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:158
+#: irekua-database/irekua_database/models/items/items.py:158
+msgid "Year in which the item was captured (YYYY)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:166
+#: irekua-database/irekua_database/models/items/items.py:166
+msgid "month"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:167
+#: irekua-database/irekua_database/models/items/items.py:167
+msgid "Month in which the item was captured (1-12)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:175
+#: irekua-database/irekua_database/models/items/items.py:175
+msgid "day"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:176
+#: irekua-database/irekua_database/models/items/items.py:176
+msgid "Day in which the item was captured"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:184
+#: irekua-database/irekua_database/models/items/items.py:184
+msgid "hour"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:185
+#: irekua-database/irekua_database/models/items/items.py:185
+msgid "Hour of the day in which the item was captured (0 - 23)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:193
+#: irekua-database/irekua_database/models/items/items.py:193
+msgid "minute"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:194
+#: irekua-database/irekua_database/models/items/items.py:194
+msgid "Minute in which the item was captured (0-59)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:202
+#: irekua-database/irekua_database/models/items/items.py:202
+msgid "second"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:203
+#: irekua-database/irekua_database/models/items/items.py:203
+msgid "Second in which the item was captured (0-59)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:212
+#: irekua-database/irekua_database/models/items/items.py:212
+msgid "timezone"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:213
+#: irekua-database/irekua_database/models/items/items.py:213
+msgid "Timezone corresponding to date fields"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:219
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:98
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:65
+#: irekua-database/irekua_database/models/items/items.py:219
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:98
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:65
+msgid "licence"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:220
+#: irekua-database/irekua_database/models/items/items.py:220
+msgid "Licence of item"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:227
+#: irekua-database/irekua_database/models/items/items.py:227
+msgid "tags"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:228
+#: irekua-database/irekua_database/models/items/items.py:228
+msgid "Tags for item"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:232
+#: irekua-database/irekua_database/models/items/items.py:232
+msgid "ready event types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:233
+#: irekua-database/irekua_database/models/items/items.py:233
+msgid "Types of event for which item has been fully annotated"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:237
+#: irekua-database/irekua_database/models/items/items.py:237
+#: selia-annotator/build/lib/selia_annotator/templates/selia_annotator/annotator.html:14
+#: selia-annotator/selia_annotator/templates/selia_annotator/annotator.html:14
+msgid "Item"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:238
+#: irekua-database/irekua_database/models/items/items.py:238
+msgid "Items"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:243
+#: irekua-database/irekua_database/models/items/items.py:243
+msgid "Can download item"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:244
+#: irekua-database/irekua_database/models/items/items.py:244
+msgid "Can annotate item"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:256
+#: irekua-database/irekua_database/models/items/items.py:256
+msgid ""
+"Item creator was not specified and is not determined by sampling event "
+"device."
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:369
+#: irekua-database/irekua_database/models/items/items.py:369
+msgid "Licence was not provided to item nor to sampling event"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:380
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:101
+#: irekua-database/irekua_database/models/items/items.py:380
+#: irekua-database/irekua_database/models/items/secondary_items.py:101
+msgid "If no file is provided, a hash must be given"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/items.py:395
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:114
+#: irekua-database/irekua_database/models/items/items.py:395
+#: irekua-database/irekua_database/models/items/secondary_items.py:114
+msgid "Hash of file and recorded hash do not coincide"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:52
+#: irekua-database/irekua_database/models/items/secondary_items.py:52
+msgid "Hash of secondary resource file"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:66
+#: irekua-database/irekua_database/models/items/secondary_items.py:66
+msgid "Type of file of secondary item"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:72
+#: irekua-database/irekua_database/models/items/secondary_items.py:72
+msgid "item id"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:73
+#: irekua-database/irekua_database/models/items/secondary_items.py:73
+msgid "Reference to primary item associated to secondary item"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:80
+#: irekua-database/irekua_database/models/items/secondary_items.py:80
+msgid "Media information of secondary item file"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:86
+#: irekua-database/irekua_database/models/items/secondary_items.py:86
+msgid "Secondary Item"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:87
+#: irekua-database/irekua_database/models/items/secondary_items.py:87
+msgid "Secondary Items"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/secondary_items.py:92
+#: irekua-database/irekua_database/models/items/secondary_items.py:92
+#, python-format
+msgid "Secondary Item %(id)s derived from %(itemid)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/sources.py:12
+#: irekua-database/irekua_database/models/items/sources.py:12
+msgid "directory"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/sources.py:13
+#: irekua-database/irekua_database/models/items/sources.py:13
+msgid "Directory containing all files in source"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/sources.py:18
+#: irekua-database/irekua_database/models/items/sources.py:18
+msgid "source file"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/sources.py:19
+#: irekua-database/irekua_database/models/items/sources.py:19
+msgid "File containing metadata for files in source directory"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/sources.py:24
+#: irekua-database/irekua_database/models/items/sources.py:24
+msgid "parse function"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/sources.py:25
+#: irekua-database/irekua_database/models/items/sources.py:25
+msgid "Parse function used to insert files and metadata to database"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/sources.py:31
+#: irekua-database/irekua_database/models/items/sources.py:31
+msgid "uploader id"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/sources.py:32
+#: irekua-database/irekua_database/models/items/sources.py:32
+msgid "Reference to user who uploaded files in source"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/sources.py:37
+#: irekua-database/irekua_database/models/items/sources.py:37
+msgid "Source"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/sources.py:38
+#: irekua-database/irekua_database/models/items/sources.py:38
+msgid "Sources"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/sources.py:41
+#: irekua-database/irekua_database/models/items/sources.py:41
+#, python-format
+msgid "Directory %(dir)s uploaded with %(func)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/tags.py:13
+#: irekua-database/irekua_database/models/items/tags.py:13
+msgid "Name of tag"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/tags.py:18
+#: irekua-database/irekua_database/models/items/tags.py:18
+msgid "Tag description"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/tags.py:22
+#: irekua-database/build/lib/irekua_database/models/object_types/annotation_types.py:35
+#: irekua-database/build/lib/irekua_database/models/object_types/device_types.py:23
+#: irekua-database/build/lib/irekua_database/models/object_types/event_types.py:23
+#: irekua-database/build/lib/irekua_database/models/object_types/item_types.py:27
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:51
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:29
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:28
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:28
+#: irekua-database/build/lib/irekua_database/models/users/roles.py:24
+#: irekua-database/irekua_database/models/items/tags.py:22
+#: irekua-database/irekua_database/models/object_types/annotation_types.py:35
+#: irekua-database/irekua_database/models/object_types/device_types.py:23
+#: irekua-database/irekua_database/models/object_types/event_types.py:23
+#: irekua-database/irekua_database/models/object_types/item_types.py:27
+#: irekua-database/irekua_database/models/object_types/licence_types.py:51
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:29
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:28
+#: irekua-database/irekua_database/models/object_types/term_types.py:28
+#: irekua-database/irekua_database/models/users/roles.py:24
+msgid "icon"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/tags.py:23
+#: irekua-database/irekua_database/models/items/tags.py:23
+msgid "Icon for tag"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/tags.py:29
+#: irekua-database/irekua_database/models/items/tags.py:29
+msgid "Tag"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/items/tags.py:30
+#: irekua-database/irekua_database/models/items/tags.py:30
+msgid "Tags"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/licences.py:14
+#: irekua-database/irekua_database/models/licences.py:14
+msgid ""
+"\n"
+"    Licence Model\n"
+"\n"
+"    A licence is a legal document expressing detail about ownership and\n"
+"    permissions of any items to which the licence is attached. The licences\n"
+"    are valid until specified, and any item licenced by and outdated "
+"licence\n"
+"    will be of open access.\n"
+"\n"
+"    The licence type (:model:`irekua_database.LicenceType`) contains all "
+"details about permissions and also holds a\n"
+"    template document to be filled whenever creating a new licence of such\n"
+"    type.\n"
+"\n"
+"    A single licence can only apply to items (:model:`irekua_database.Item`) "
+"within the same collection\n"
+"    (:model:`irekua_database.Collection`), therefore a reference to the "
+"collection to\n"
+"    which the licence belongs is stored. This facilitates the process of\n"
+"    attaching a licence to uploaded items, since the number of\n"
+"    licences belonging to a single collection is recommended to be small.\n"
+"\n"
+"    Additional metadata, as specified by the licence type, is also stored.\n"
+"    "
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/licences.py:39
+#: irekua-database/irekua_database/models/licences.py:39
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_licences.py:50
+#: irekua-filters/irekua_filters/data_collections/collection_licences.py:50
+msgid "licence type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/licences.py:40
+#: irekua-database/irekua_database/models/licences.py:40
+msgid "Type of licence used"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/licences.py:46
+#: irekua-database/irekua_database/models/licences.py:46
+msgid "document"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/licences.py:47
+#: irekua-database/irekua_database/models/licences.py:47
+msgid "Legal document of licence agreement"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/licences.py:54
+#: irekua-database/irekua_database/models/licences.py:54
+msgid "Metadata associated with licence"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/licences.py:62
+#: irekua-database/irekua_database/models/licences.py:62
+msgid "Collection to which this licence belongs"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/licences.py:69
+#: irekua-database/irekua_database/models/licences.py:69
+#: selia-annotator/build/lib/selia_annotator/models.py:36
+#: selia-annotator/selia_annotator/models.py:36
+#: selia-visualizers/build/lib/selia_visualizers/models.py:64
+#: selia-visualizers/selia_visualizers/models.py:64
+msgid "is active"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/licences.py:70
+#: irekua-database/irekua_database/models/licences.py:70
+msgid "Licence is still active"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/licences.py:76
+#: irekua-database/irekua_database/models/licences.py:76
+msgid "Licence"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/licences.py:77
+#: irekua-database/irekua_database/models/licences.py:77
+msgid "Licences"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/licences.py:82
+#: irekua-database/irekua_database/models/licences.py:82
+#, python-brace-format
+msgid "{type} - {date}"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/annotation_types.py:18
+#: irekua-database/irekua_database/models/object_types/annotation_types.py:18
+msgid "Name for type of annotation"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/annotation_types.py:23
+#: irekua-database/irekua_database/models/object_types/annotation_types.py:23
+msgid "Description of annotation type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/annotation_types.py:26
+#: irekua-database/irekua_database/models/object_types/annotation_types.py:26
+msgid "annotation schema"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/annotation_types.py:27
+#: irekua-database/irekua_database/models/object_types/annotation_types.py:27
+msgid "JSON Schema for annotation info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/annotation_types.py:36
+#: irekua-database/irekua_database/models/object_types/annotation_types.py:36
+msgid "Annotation type icon"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/annotation_types.py:41
+#: irekua-database/irekua_database/models/object_types/annotation_types.py:41
+msgid "Annotation Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/annotation_types.py:42
+#: irekua-database/irekua_database/models/object_types/annotation_types.py:42
+msgid "Annotation Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/annotation_types.py:55
+#: irekua-database/irekua_database/models/object_types/annotation_types.py:55
+#, python-format
+msgid "Invalid annotation for annotation type %(type)s. Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_device_types.py:18
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_item_types.py:18
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_roles.py:18
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_device_types.py:18
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_item_types.py:18
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_roles.py:18
+msgid "Collection type in which role applies"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_device_types.py:26
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_device_types.py:26
+msgid "Device to be part of collection"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_device_types.py:32
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_device_types.py:32
+msgid "JSON Schema for metadata of collection device info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_device_types.py:39
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_device_types.py:39
+msgid "Collection Device Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_device_types.py:40
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_device_types.py:40
+msgid "Collection Device Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_device_types.py:48
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_device_types.py:48
+#, python-format
+msgid "Device type %(device_type)s for collection type %(collection_type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_device_types.py:61
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_device_types.py:61
+#, python-format
+msgid "Invalid metadata for collection device. Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_item_types.py:26
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_item_types.py:26
+msgid "Item to be part of collection"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_item_types.py:32
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_item_types.py:32
+msgid "JSON Schema for metadata of collection item info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_item_types.py:39
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_item_types.py:39
+msgid "Collection Item Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_item_types.py:40
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_item_types.py:40
+msgid "Collection Item Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_item_types.py:47
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_item_types.py:47
+#, python-format
+msgid "Item type %(item)s for collection %(collection)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_item_types.py:60
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_item_types.py:60
+msgid ""
+"Invalid metadata for item type %(type)s in collection %(collection). Error: "
+"%(error)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_roles.py:26
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_roles.py:26
+msgid "Role to be part of collection"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_roles.py:32
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_roles.py:32
+msgid "JSON Schema for metadata of collection role info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_roles.py:39
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_roles.py:39
+msgid "Collection Role"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_roles.py:40
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_roles.py:40
+msgid "Collection Roles"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_roles.py:47
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_roles.py:47
+#, python-format
+msgid "Role %(role)s for collections of type %(collection)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_roles.py:60
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_roles.py:60
+#, python-format
+msgid ""
+"Invalid metadata for user of role type %(type)s in collection "
+"%(collection)s. Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:44
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:44
+msgid "Name of collection type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:49
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:49
+msgid "Description of collection type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:55
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:55
+msgid "Logo of collection type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:61
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:61
+msgid "JSON Schema for metadata of collection info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:69
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:69
+msgid "anyone can create"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:71
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:71
+msgid ""
+"Boolean flag indicating wheter any user can create collections of this type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:81
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:81
+msgid ""
+"Administrators of this collection type. Administrators can create "
+"collections of this type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:87
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:54
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:87
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:54
+msgid "restrict site types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:89
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:89
+msgid ""
+"Flag indicating whether types of sites are restricted to registered ones"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:96
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:96
+msgid "restrict annotation types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:98
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:98
+msgid ""
+"Flag indicating whether types of annotations are restricted to registered "
+"ones"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:105
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:105
+msgid "restrict item types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:107
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:107
+msgid ""
+"Flag indicating whether types of items are restricted to registered ones"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:114
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:114
+msgid "restrict licence types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:116
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:116
+msgid ""
+"Flag indicating whether types of licences are restricted to registered ones"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:123
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:45
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:123
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:45
+msgid "restrict device types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:125
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:125
+msgid ""
+"Flag indicating whether types of devices are restricted to registered ones"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:132
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:132
+msgid "restrict event types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:134
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:134
+msgid ""
+"Flag indicating whether types of events are restricted to registered ones"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:141
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:141
+msgid "restrict sampling event types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:143
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:143
+msgid ""
+"Flag indicating whether types of sampling events are restricted to "
+"registered ones"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:151
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:71
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:151
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:71
+msgid "site types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:152
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:152
+msgid "Types of sites valid for collections of type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:156
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:156
+msgid "annotation types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:157
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:157
+msgid "Types of annotations valid for collections of type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:161
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:161
+msgid "licence types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:162
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:162
+msgid "Types of licences valid for collections of type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:166
+#: irekua-database/build/lib/irekua_database/models/object_types/item_types.py:42
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:166
+#: irekua-database/irekua_database/models/object_types/item_types.py:42
+msgid "event types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:167
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:167
+msgid "Types of events valid for collections of type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:171
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:171
+msgid "sampling event types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:172
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:172
+msgid "Types of sampling events valid for collections of type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:178
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:178
+msgid "item types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:179
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:179
+msgid "Types of items valid for collections of type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:185
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:66
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:185
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:66
+msgid "device types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:186
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:186
+msgid "Types of devices valid for collections of type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:193
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:193
+msgid "roles"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:194
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:194
+msgid "Roles valid for collections of type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:198
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:198
+msgid "Collection Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:199
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:199
+msgid "Collection Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:213
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:213
+#, python-format
+msgid ""
+"Invalid collection metadata for collection of type %(type)s. Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:226
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:226
+#, python-format
+msgid ""
+"Site type %(site_type)s is not accepted in collection of type %(col_type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:241
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:241
+#, python-format
+msgid ""
+"Annotation type %(annotation_type)s is not accepted in collection of type "
+"%(col_type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:256
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:256
+#, python-format
+msgid ""
+"Licence type %(licence_type)s is not accepted in collection of type "
+"%(col_type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:271
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:271
+#, python-format
+msgid ""
+"Event type %(event_type)s is not accepted in collection of type %(col_type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:288
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:288
+#, python-format
+msgid ""
+"Item type %(item_type)s is not accepted in collection of type %(col_type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:305
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:305
+#, python-format
+msgid ""
+"Device type %(device_type)s is not accepted in collection of type "
+"%(col_type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:320
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:320
+#, python-format
+msgid ""
+"Sampling Event type %(sampling_event_type)s is not accepted in collection of "
+"type %(col_type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/data_collections/collection_types.py:334
+#: irekua-database/irekua_database/models/object_types/data_collections/collection_types.py:334
+#, python-format
+msgid "Role type %(role)s is not accepted in collection of type %(col_type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/device_types.py:14
+#: irekua-database/irekua_database/models/object_types/device_types.py:14
+msgid "Name for device type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/device_types.py:19
+#: irekua-database/irekua_database/models/object_types/device_types.py:19
+msgid "Description of device type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/device_types.py:24
+#: irekua-database/irekua_database/models/object_types/device_types.py:24
+msgid "Icon for device type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/device_types.py:32
+#: irekua-database/build/lib/irekua_database/models/object_types/item_types.py:36
+#: irekua-database/irekua_database/models/object_types/device_types.py:32
+#: irekua-database/irekua_database/models/object_types/item_types.py:36
+msgid "mime types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/device_types.py:34
+#: irekua-database/irekua_database/models/object_types/device_types.py:34
+msgid "Possible mime types for files generated by devicesof this type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/device_types.py:39
+#: irekua-database/irekua_database/models/object_types/device_types.py:39
+msgid "Device Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/device_types.py:40
+#: irekua-database/irekua_database/models/object_types/device_types.py:40
+msgid "Device Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/device_types.py:49
+#: irekua-database/irekua_database/models/object_types/device_types.py:49
+#, python-format
+msgid ""
+"Device type %(device_type)s does not support files of mime type %(mime_type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/entailment_types.py:18
+#: irekua-database/irekua_database/models/object_types/entailment_types.py:18
+msgid "source type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/entailment_types.py:19
+#: irekua-database/irekua_database/models/object_types/entailment_types.py:19
+msgid "Term type of source of entailment"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/entailment_types.py:27
+#: irekua-database/irekua_database/models/object_types/entailment_types.py:27
+msgid "target type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/entailment_types.py:28
+#: irekua-database/irekua_database/models/object_types/entailment_types.py:28
+msgid "Term type of target of entailment"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/entailment_types.py:35
+#: irekua-database/irekua_database/models/object_types/entailment_types.py:35
+msgid "JSON Schema for metadata of entailment info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/entailment_types.py:42
+#: irekua-database/irekua_database/models/object_types/entailment_types.py:42
+msgid "Entailment Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/entailment_types.py:43
+#: irekua-database/irekua_database/models/object_types/entailment_types.py:43
+msgid "Entailment Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/entailment_types.py:57
+#: irekua-database/irekua_database/models/object_types/entailment_types.py:57
+msgid "Entailments are not possible between terms of the same type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/entailment_types.py:66
+#: irekua-database/irekua_database/models/object_types/entailment_types.py:66
+#, python-format
+msgid ""
+"Invalid metadata for entailment between terms of types %(entailment)s. "
+"Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/event_types.py:14
+#: irekua-database/irekua_database/models/object_types/event_types.py:14
+msgid "Name of event type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/event_types.py:19
+#: irekua-database/irekua_database/models/object_types/event_types.py:19
+msgid "Description of event type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/event_types.py:24
+#: irekua-database/irekua_database/models/object_types/event_types.py:24
+msgid "Event type icon"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/event_types.py:32
+#: irekua-database/irekua_database/models/object_types/event_types.py:32
+msgid "term types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/event_types.py:34
+#: irekua-database/irekua_database/models/object_types/event_types.py:34
+msgid "Valid term types with which to label this type of events"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/event_types.py:42
+#: irekua-database/irekua_database/models/object_types/event_types.py:42
+msgid ""
+"Terms that should be implied (if meaningful) by any terms used to describe "
+"this event type."
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/event_types.py:47
+#: irekua-database/irekua_database/models/object_types/event_types.py:47
+msgid "Event Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/event_types.py:48
+#: irekua-database/irekua_database/models/object_types/event_types.py:48
+msgid "Event Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/event_types.py:60
+#: irekua-database/irekua_database/models/object_types/event_types.py:60
+#, python-format
+msgid "Term type %(term_type)s is invalid for event type %(event_type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/item_types.py:18
+#: irekua-database/irekua_database/models/object_types/item_types.py:18
+msgid "Name of item type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/item_types.py:23
+#: irekua-database/irekua_database/models/object_types/item_types.py:23
+msgid "Description of item type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/item_types.py:28
+#: irekua-database/irekua_database/models/object_types/item_types.py:28
+msgid "Item type icon"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/item_types.py:37
+#: irekua-database/irekua_database/models/object_types/item_types.py:37
+msgid "Mime types of files for this item type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/item_types.py:43
+#: irekua-database/irekua_database/models/object_types/item_types.py:43
+msgid "Types of event for this item type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/item_types.py:47
+#: irekua-database/irekua_database/models/object_types/item_types.py:47
+msgid "Item Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/item_types.py:48
+#: irekua-database/irekua_database/models/object_types/item_types.py:48
+msgid "Item Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/item_types.py:62
+#: irekua-database/irekua_database/models/object_types/item_types.py:62
+#, python-format
+msgid "This item type does not accept files of type %(mime_type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/item_types.py:73
+#: irekua-database/irekua_database/models/object_types/item_types.py:73
+#, python-format
+msgid "Event type %(event_type)s is invalid for item type %(item_type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:19
+#: irekua-database/irekua_database/models/object_types/licence_types.py:19
+msgid "Licence type name"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:24
+#: irekua-database/irekua_database/models/object_types/licence_types.py:24
+msgid "Description of licence"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:29
+#: irekua-database/irekua_database/models/object_types/licence_types.py:29
+msgid "JSON Schema for metadata of licence info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:37
+#: irekua-database/irekua_database/models/object_types/licence_types.py:37
+msgid "document template"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:38
+#: irekua-database/irekua_database/models/object_types/licence_types.py:38
+msgid "Template for licence document"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:43
+#: irekua-database/irekua_database/models/object_types/licence_types.py:43
+msgid "years valid for"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:45
+#: irekua-database/irekua_database/models/object_types/licence_types.py:45
+msgid "Number of years for which licences of this type are valid"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:52
+#: irekua-database/irekua_database/models/object_types/licence_types.py:52
+msgid "Licence type icon"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:59
+#: irekua-database/irekua_database/models/object_types/licence_types.py:59
+msgid "can view"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:60
+#: irekua-database/irekua_database/models/object_types/licence_types.py:60
+msgid "Any user can view item info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:65
+#: irekua-database/irekua_database/models/object_types/licence_types.py:65
+msgid "can download"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:66
+#: irekua-database/irekua_database/models/object_types/licence_types.py:66
+msgid "Any user can download item"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:71
+#: irekua-database/irekua_database/models/object_types/licence_types.py:71
+msgid "can view annotations"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:72
+#: irekua-database/irekua_database/models/object_types/licence_types.py:72
+msgid "Any user can view item annotations"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:77
+#: irekua-database/irekua_database/models/object_types/licence_types.py:77
+msgid "can annotate"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:78
+#: irekua-database/irekua_database/models/object_types/licence_types.py:78
+msgid "Any user can annotate item"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:83
+#: irekua-database/irekua_database/models/object_types/licence_types.py:83
+msgid "can vote annotations"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:84
+#: irekua-database/irekua_database/models/object_types/licence_types.py:84
+msgid "Any user can vote on item annotations"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:89
+#: irekua-database/irekua_database/models/object_types/licence_types.py:89
+msgid "Licence Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:90
+#: irekua-database/irekua_database/models/object_types/licence_types.py:90
+msgid "Licence Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/licence_types.py:103
+#: irekua-database/irekua_database/models/object_types/licence_types.py:103
+#, python-format
+msgid "Invalid licence metadata. Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/locality_types.py:16
+#: irekua-database/build/lib/irekua_database/models/sites/localities.py:14
+#: irekua-database/irekua_database/models/object_types/locality_types.py:16
+#: irekua-database/irekua_database/models/sites/localities.py:14
+msgid "Name of locality"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/locality_types.py:21
+#: irekua-database/irekua_database/models/object_types/locality_types.py:21
+msgid "Description of type of locality"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/locality_types.py:27
+#: irekua-database/irekua_database/models/object_types/locality_types.py:27
+msgid "Source of information for localities of this type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/locality_types.py:31
+#: irekua-database/irekua_database/models/object_types/locality_types.py:31
+msgid "original datum"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/locality_types.py:33
+#: irekua-database/irekua_database/models/object_types/locality_types.py:33
+msgid ""
+"Datum used for the original coordinates for localities of this type in WTK "
+"format"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/locality_types.py:38
+#: irekua-database/irekua_database/models/object_types/locality_types.py:38
+msgid "publication date"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/locality_types.py:39
+#: irekua-database/irekua_database/models/object_types/locality_types.py:39
+msgid "Date of publication of localities defined in this type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/locality_types.py:43
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:46
+#: irekua-database/irekua_database/models/object_types/locality_types.py:43
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:46
+msgid "metadata_schema"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/locality_types.py:44
+#: irekua-database/irekua_database/models/object_types/locality_types.py:44
+msgid "JSON Schema for metadata of localities of this type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/locality_types.py:51
+#: irekua-database/irekua_database/models/object_types/locality_types.py:51
+msgid "Locality Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/locality_types.py:52
+#: irekua-database/irekua_database/models/object_types/locality_types.py:52
+msgid "Locality Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/locality_types.py:62
+#: irekua-database/irekua_database/models/object_types/locality_types.py:62
+#, python-format
+msgid "Invalid locality metadata. Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/mime_types.py:28
+#: irekua-database/irekua_database/models/object_types/mime_types.py:28
+msgid "media type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/mime_types.py:29
+#: irekua-database/irekua_database/models/object_types/mime_types.py:29
+msgid "MIME types associated with item type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/mime_types.py:33
+#: irekua-database/irekua_database/models/object_types/mime_types.py:33
+msgid "media info schema"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/mime_types.py:34
+#: irekua-database/irekua_database/models/object_types/mime_types.py:34
+msgid "JSON Schema for item type media info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/mime_types.py:41
+#: irekua-database/irekua_database/models/object_types/mime_types.py:41
+msgid "Mime Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/mime_types.py:42
+#: irekua-database/irekua_database/models/object_types/mime_types.py:42
+msgid "Mime Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/mime_types.py:56
+#: irekua-database/irekua_database/models/object_types/mime_types.py:56
+#, python-format
+msgid "Invalid media info for item of type %(type)s. Error %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:17
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:16
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:17
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:16
+msgid "sampling event type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:19
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:19
+msgid "Sampling event type in which this device types can be placed"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:29
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:29
+msgid "Type of device that can be used in sampling event of the given type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:37
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:37
+msgid "JSON schema for metadata associated to device in sampling event"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:45
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:45
+msgid "Sampling Event Type Device Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:46
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:46
+msgid "Sampling Event Type Device Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:60
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_type_devices.py:60
+msgid ""
+"Invalid metadata for device of type %(device)s in samplingevent of type "
+"%(sampling_event)s. Error: %(error)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:20
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:20
+msgid "Name fo sampling event type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:25
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:25
+msgid "Description of sampling event type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:30
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:30
+msgid "Icon for sampling event type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:37
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:37
+msgid "JSON Schema for metadata of sampling event info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:47
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:47
+msgid ""
+"Flag indicating whether to restrict device types associated with this "
+"sampling event type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:56
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:56
+msgid ""
+"Flag indicating whether to restrict site types associated with this sampling "
+"event type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:67
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:67
+msgid "Valid device types for this sampling event type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:72
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:72
+msgid "Valid site types for this sampling event type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:76
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:76
+msgid "Sampling Event Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:77
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:77
+msgid "Sampling Event Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:91
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:91
+#, python-format
+msgid "Invalid metadata for sampling event of type %(type)s. Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:105
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:105
+#, python-format
+msgid ""
+"Device type %(device_type)s is not valid for sampling event of type %(type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/sampling_events/sampling_event_types.py:120
+#: irekua-database/irekua_database/models/object_types/sampling_events/sampling_event_types.py:120
+#, python-format
+msgid ""
+"Site type %(site_type)s is not valid for sampling event of type %(type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:19
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:19
+msgid "Name for site descriptor type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:24
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:24
+msgid "Description of site descriptor type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:29
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:29
+msgid "Site descriptor type icon"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:36
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:36
+msgid "Metadata of site descriptor type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:41
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:41
+msgid "Source of information for site descriptor type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:47
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:47
+msgid "JSON Schema for metadata of descriptors of this type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:54
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:54
+msgid "Site Descriptor Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:55
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:55
+msgid "Site Descriptor Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_descriptor_types.py:68
+#: irekua-database/irekua_database/models/object_types/site_descriptor_types.py:68
+#, python-format
+msgid "Invalid site descriptor metadata. Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_types.py:19
+#: irekua-database/irekua_database/models/object_types/site_types.py:19
+msgid "Name of site type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_types.py:24
+#: irekua-database/irekua_database/models/object_types/site_types.py:24
+msgid "Description of site type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_types.py:29
+#: irekua-database/irekua_database/models/object_types/site_types.py:29
+msgid "JSON Schema for metadata of site info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_types.py:40
+#: irekua-database/irekua_database/models/object_types/site_types.py:40
+msgid "Site Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_types.py:41
+#: irekua-database/irekua_database/models/object_types/site_types.py:41
+msgid "Site Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_types.py:53
+#: irekua-database/irekua_database/models/object_types/site_types.py:53
+#, python-format
+msgid "This site type does not accept descriptors of type %(descriptor_type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/site_types.py:63
+#: irekua-database/irekua_database/models/object_types/site_types.py:63
+msgid "Invalid site metadata for site of type %(type)s. Error: %(error)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:19
+#: irekua-database/irekua_database/models/object_types/term_types.py:19
+msgid "Name for term type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:24
+#: irekua-database/irekua_database/models/object_types/term_types.py:24
+msgid "Description of term type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:29
+#: irekua-database/irekua_database/models/object_types/term_types.py:29
+msgid "Term type icon"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:35
+#: irekua-database/irekua_database/models/object_types/term_types.py:35
+msgid "is categorical"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:37
+#: irekua-database/irekua_database/models/object_types/term_types.py:37
+msgid "Flag indicating whether the term type represents a categorical variable"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:44
+#: irekua-database/irekua_database/models/object_types/term_types.py:44
+msgid "JSON Schema for metadata of term info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:51
+#: irekua-database/irekua_database/models/object_types/term_types.py:51
+msgid "synonym metadata schema"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:52
+#: irekua-database/irekua_database/models/object_types/term_types.py:52
+msgid "JSON Schema for metadata of synonym info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:59
+#: irekua-database/irekua_database/models/object_types/term_types.py:59
+msgid "Term Type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:60
+#: irekua-database/irekua_database/models/object_types/term_types.py:60
+msgid "Term Types"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:70
+#: irekua-database/irekua_database/models/object_types/term_types.py:70
+#, python-format
+msgid "Value %(value)s is invalid for non-categorical term of type %(type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:78
+#: irekua-database/irekua_database/models/object_types/term_types.py:78
+#, python-format
+msgid "Value %(value)s is invalid for categorical term of type %(type)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:96
+#: irekua-database/irekua_database/models/object_types/term_types.py:96
+#, python-format
+msgid "Invalid metadata for term of type %(type)s. Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/object_types/term_types.py:108
+#: irekua-database/irekua_database/models/object_types/term_types.py:108
+#, python-format
+msgid ""
+"Invalid metadata for synonym of terms of type %(type)s. Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:21
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:21
+msgid "sampling event"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:22
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:22
+msgid "Sampling event in which this device was deployed"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:28
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:28
+msgid "deployed on"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:29
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:29
+msgid "Date at which the device started capturing information."
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:34
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:34
+msgid "recovered on"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:35
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:35
+msgid "Date at which the device stoped capturing information."
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:43
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:50
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:43
+#: irekua-database/irekua_database/models/sites/sites.py:50
+msgid "geo ref"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:44
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:44
+msgid "Georeference of deployed device as Geometry"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:48
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:55
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:48
+#: irekua-database/irekua_database/models/sites/sites.py:55
+msgid "latitude"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:49
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:49
+msgid "Latitude of deployed device (in decimal degrees)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:55
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:61
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:55
+#: irekua-database/irekua_database/models/sites/sites.py:61
+msgid "longitude"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:56
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:56
+msgid "Longitude of deployed device (in decimal degrees)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:63
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:68
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:63
+#: irekua-database/irekua_database/models/sites/sites.py:68
+msgid "altitude"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:64
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:64
+msgid "Altitude of deployed device (in meters)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:70
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:70
+msgid "collection device"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:71
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:71
+msgid "Reference to collection device used on sampling event"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:78
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:32
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:78
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:32
+msgid "Sampling event commentaries"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:83
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:83
+msgid "Metadata associated to sampling event device"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:89
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:89
+msgid "configuration"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:91
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:91
+msgid "Configuration on device through the sampling event"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:99
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:66
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:99
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:66
+msgid "Licence for all items in sampling event"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:104
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:104
+msgid "Sampling Event Device"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:105
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:105
+msgid "Sampling Event Devices"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:114
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:114
+msgid "{} (deployed)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:145
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:145
+msgid "Deployment date cannot be earlier that sampling event starting date"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:160
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:160
+msgid "Recovery date cannot be latter that sampling event ending date"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:181
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:181
+msgid ""
+"No year was provided for date estimation and couldn't be inferred from "
+"deployment."
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:215
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:215
+msgid ""
+"Date is not within the ranges in which the device was deployed: \n"
+"Deployment: {} \t Recovery: {} \t Date: {}"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_event_devices.py:232
+#: irekua-database/irekua_database/models/sampling_events/sampling_event_devices.py:232
+msgid "Geo reference or longitude-latitude must be provided"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:17
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:17
+msgid "Type of sampling event"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:23
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:23
+msgid "collection site"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:24
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:24
+msgid "Reference to site at which sampling took place"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:37
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:37
+msgid "Metadata associated to sampling event"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:43
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:43
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_sampling_events.py:56
+#: irekua-filters/build/lib/irekua_filters/sampling_events/sampling_events.py:67
+#: irekua-filters/irekua_filters/data_collections/collection_sampling_events.py:56
+#: irekua-filters/irekua_filters/sampling_events/sampling_events.py:67
+msgid "started on"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:44
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:44
+msgid "Date at which sampling begun"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:49
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:49
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_sampling_events.py:57
+#: irekua-filters/build/lib/irekua_filters/sampling_events/sampling_events.py:68
+#: irekua-filters/irekua_filters/data_collections/collection_sampling_events.py:57
+#: irekua-filters/irekua_filters/sampling_events/sampling_events.py:68
+msgid "ended on"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:50
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:50
+msgid "Date at which sampling stoped"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:58
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:58
+msgid "Collection to which sampling event belongs"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:71
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:71
+msgid "Sampling Event"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:72
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:72
+msgid "Sampling Events"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:77
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:77
+#, python-format
+msgid "%(site)s - %(date)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:95
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:95
+msgid "Site does not belong to the declared collection"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sampling_events/sampling_events.py:101
+#: irekua-database/irekua_database/models/sampling_events/sampling_events.py:101
+msgid "Starting date cannot be greater than ending date"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/localities.py:20
+#: irekua-database/irekua_database/models/sites/localities.py:20
+msgid "Description of the locality"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/localities.py:25
+#: irekua-database/irekua_database/models/sites/localities.py:25
+msgid "locality type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/localities.py:26
+#: irekua-database/irekua_database/models/sites/localities.py:26
+msgid "Type of locality"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/localities.py:32
+#: irekua-database/irekua_database/models/sites/localities.py:32
+msgid "geometry"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/localities.py:33
+#: irekua-database/irekua_database/models/sites/localities.py:33
+msgid "Geometry of locality"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/localities.py:38
+#: irekua-database/irekua_database/models/sites/localities.py:38
+msgid "Metadata associated to locality"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/localities.py:49
+#: irekua-database/irekua_database/models/sites/localities.py:49
+msgid "Locality"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/localities.py:50
+#: irekua-database/irekua_database/models/sites/localities.py:50
+msgid "Localities"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/localities.py:65
+#: irekua-database/irekua_database/models/sites/localities.py:65
+msgid "Point is not contained within the locality's geometry"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/site_descriptors.py:15
+#: irekua-database/irekua_database/models/sites/site_descriptors.py:15
+msgid "descriptor type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/site_descriptors.py:16
+#: irekua-database/irekua_database/models/sites/site_descriptors.py:16
+msgid "Type of site descriptor"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/site_descriptors.py:22
+#: irekua-database/build/lib/irekua_database/models/terms/term_suggestions.py:23
+#: irekua-database/build/lib/irekua_database/models/terms/terms.py:23
+#: irekua-database/irekua_database/models/sites/site_descriptors.py:22
+#: irekua-database/irekua_database/models/terms/term_suggestions.py:23
+#: irekua-database/irekua_database/models/terms/terms.py:23
+msgid "value"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/site_descriptors.py:23
+#: irekua-database/irekua_database/models/sites/site_descriptors.py:23
+msgid "Value of descriptor"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/site_descriptors.py:28
+#: irekua-database/build/lib/irekua_database/models/terms/term_suggestions.py:29
+#: irekua-database/build/lib/irekua_database/models/terms/terms.py:35
+#: irekua-database/irekua_database/models/sites/site_descriptors.py:28
+#: irekua-database/irekua_database/models/terms/term_suggestions.py:29
+#: irekua-database/irekua_database/models/terms/terms.py:35
+msgid "Description of term"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/site_descriptors.py:34
+#: irekua-database/build/lib/irekua_database/models/terms/term_suggestions.py:36
+#: irekua-database/build/lib/irekua_database/models/terms/terms.py:45
+#: irekua-database/irekua_database/models/sites/site_descriptors.py:34
+#: irekua-database/irekua_database/models/terms/term_suggestions.py:36
+#: irekua-database/irekua_database/models/terms/terms.py:45
+msgid "Metadata associated to term"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/site_descriptors.py:41
+#: irekua-database/irekua_database/models/sites/site_descriptors.py:41
+msgid "Site Descriptor"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/site_descriptors.py:42
+#: irekua-database/irekua_database/models/sites/site_descriptors.py:42
+msgid "Site Descriptors"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:20
+#: irekua-database/irekua_database/models/sites/sites.py:20
+msgid ""
+"\n"
+"        Site Model\n"
+"\n"
+"        A site consists of the specification of coordinates. The datum "
+"assumed\n"
+"        is WGS-84. A name for the site can be specified for easier future\n"
+"        retrieval. Also an optional locality field is added to locate the "
+"site within a\n"
+"        larger area and provide hierarchical organization of sites.\n"
+"\n"
+"        The creator of the site is registered so that users can search "
+"within\n"
+"        their previously created sites when setting up a new monitoring "
+"event.\n"
+"    "
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:36
+#: irekua-database/irekua_database/models/sites/sites.py:36
+msgid "Name of site (visible only to owner)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:43
+#: irekua-database/irekua_database/models/sites/sites.py:43
+#: irekua-filters/build/lib/irekua_filters/sites.py:41
+#: irekua-filters/irekua_filters/sites.py:41
+msgid "locality"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:44
+#: irekua-database/irekua_database/models/sites/sites.py:44
+msgid "Name of locality in which the site is located"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:51
+#: irekua-database/irekua_database/models/sites/sites.py:51
+msgid "Georeference of site as Geometry"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:56
+#: irekua-database/irekua_database/models/sites/sites.py:56
+msgid "Latitude of site (in decimal degrees)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:62
+#: irekua-database/irekua_database/models/sites/sites.py:62
+msgid "Longitude of site (in decimal degrees)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:69
+#: irekua-database/irekua_database/models/sites/sites.py:69
+msgid "Altitude of site (in meters)"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:73
+#: irekua-database/irekua_database/models/sites/sites.py:73
+msgid "Site"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:74
+#: irekua-database/irekua_database/models/sites/sites.py:74
+msgid "Sites"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:88
+#: irekua-database/irekua_database/models/sites/sites.py:88
+msgid "No latitude or longitude was provided"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/sites/sites.py:95
+#: irekua-database/irekua_database/models/sites/sites.py:95
+#, python-format
+msgid "Site %(id)s%(name)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/entailments.py:16
+#: irekua-database/irekua_database/models/terms/entailments.py:16
+msgid "Source of entailment"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/entailments.py:23
+#: irekua-database/build/lib/irekua_database/models/terms/synonyms.py:24
+#: irekua-database/irekua_database/models/terms/entailments.py:23
+#: irekua-database/irekua_database/models/terms/synonyms.py:24
+msgid "target"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/entailments.py:24
+#: irekua-database/irekua_database/models/terms/entailments.py:24
+msgid "Target of entailment"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/entailments.py:30
+#: irekua-database/irekua_database/models/terms/entailments.py:30
+msgid "Metadata associated to entailment"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/entailments.py:35
+#: irekua-database/irekua_database/models/terms/entailments.py:35
+msgid "Entailment"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/entailments.py:36
+#: irekua-database/irekua_database/models/terms/entailments.py:36
+msgid "Entailments"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/entailments.py:53
+#: irekua-database/irekua_database/models/terms/entailments.py:53
+#, python-format
+msgid ""
+"Entailment between types %(source_type)s and %(target_type)s is not possible"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/entailments.py:62
+#: irekua-database/irekua_database/models/terms/entailments.py:62
+#, python-format
+msgid "Invalid entailment metadata. Error %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/synonym_suggestions.py:20
+#: irekua-database/irekua_database/models/terms/synonym_suggestions.py:20
+msgid "synonym"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/synonym_suggestions.py:21
+#: irekua-database/irekua_database/models/terms/synonym_suggestions.py:21
+msgid "Suggestion of synonym"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/synonym_suggestions.py:26
+#: irekua-database/irekua_database/models/terms/synonym_suggestions.py:26
+msgid "Description of synonym"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/synonym_suggestions.py:32
+#: irekua-database/irekua_database/models/terms/synonym_suggestions.py:32
+msgid "Metadata associated to synonym"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/synonym_suggestions.py:38
+#: irekua-database/irekua_database/models/terms/synonym_suggestions.py:38
+msgid "Synonym Suggestion"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/synonym_suggestions.py:39
+#: irekua-database/irekua_database/models/terms/synonym_suggestions.py:39
+msgid "Synonym Suggestions"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/synonym_suggestions.py:42
+#: irekua-database/irekua_database/models/terms/synonym_suggestions.py:42
+#, python-brace-format
+msgid "Suggestion: {term} = {suggestion}"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/synonyms.py:17
+#: irekua-database/irekua_database/models/terms/synonyms.py:17
+msgid "Reference to the source of synonym"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/synonyms.py:25
+#: irekua-database/irekua_database/models/terms/synonyms.py:25
+msgid "Reference to the target of the synonym"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/synonyms.py:32
+#: irekua-database/irekua_database/models/terms/synonyms.py:32
+msgid "Metadata associated to the synonym"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/synonyms.py:36
+#: irekua-database/irekua_database/models/terms/synonyms.py:36
+msgid "Synonym"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/synonyms.py:37
+#: irekua-database/irekua_database/models/terms/synonyms.py:37
+msgid "Synonyms"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/synonyms.py:50
+#: irekua-database/irekua_database/models/terms/synonyms.py:50
+msgid "Source and target terms are not of the same type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/term_suggestions.py:16
+#: irekua-database/build/lib/irekua_database/models/terms/terms.py:15
+#: irekua-database/irekua_database/models/terms/term_suggestions.py:16
+#: irekua-database/irekua_database/models/terms/terms.py:15
+msgid "term type"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/term_suggestions.py:17
+#: irekua-database/build/lib/irekua_database/models/terms/terms.py:16
+#: irekua-database/irekua_database/models/terms/term_suggestions.py:17
+#: irekua-database/irekua_database/models/terms/terms.py:16
+msgid "Type of term"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/term_suggestions.py:24
+#: irekua-database/build/lib/irekua_database/models/terms/terms.py:24
+#: irekua-database/irekua_database/models/terms/term_suggestions.py:24
+#: irekua-database/irekua_database/models/terms/terms.py:24
+msgid "Value of term"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/term_suggestions.py:41
+#: irekua-database/irekua_database/models/terms/term_suggestions.py:41
+msgid "Term Suggestion"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/term_suggestions.py:42
+#: irekua-database/irekua_database/models/terms/term_suggestions.py:42
+msgid "Term Suggestions"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/term_suggestions.py:45
+#: irekua-database/irekua_database/models/terms/term_suggestions.py:45
+#, python-format
+msgid "Suggestion: %(term_type)s: %(value)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/terms.py:29
+#: irekua-database/irekua_database/models/terms/terms.py:29
+msgid "scope"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/terms.py:30
+#: irekua-database/irekua_database/models/terms/terms.py:30
+msgid "Scope of term. Use for disambiguation."
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/terms.py:39
+#: irekua-database/irekua_database/models/terms/terms.py:39
+msgid "term url"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/terms.py:40
+#: irekua-database/irekua_database/models/terms/terms.py:40
+msgid "URL for term description"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/terms.py:52
+#: irekua-database/irekua_database/models/terms/terms.py:52
+msgid "Term"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/terms/terms.py:53
+#: irekua-database/irekua_database/models/terms/terms.py:53
+msgid "Terms"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:16
+#: irekua-database/irekua_database/models/users/institutions.py:16
+msgid "institution name"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:17
+#: irekua-database/irekua_database/models/users/institutions.py:17
+msgid "Name of institution"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:22
+#: irekua-database/irekua_database/models/users/institutions.py:22
+msgid "institution code"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:23
+#: irekua-database/irekua_database/models/users/institutions.py:23
+msgid "Code of institution"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:28
+#: irekua-database/irekua_database/models/users/institutions.py:28
+msgid "subdependency"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:29
+#: irekua-database/irekua_database/models/users/institutions.py:29
+msgid "Subdependency at institution"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:36
+#: irekua-database/irekua_database/models/users/institutions.py:36
+msgid "country"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:37
+#: irekua-database/irekua_database/models/users/institutions.py:37
+msgid "Country home of institution"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:42
+#: irekua-database/irekua_database/models/users/institutions.py:42
+msgid "postal code"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:43
+#: irekua-database/irekua_database/models/users/institutions.py:43
+msgid "Postal code"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:48
+#: irekua-database/irekua_database/models/users/institutions.py:48
+msgid "address"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:49
+#: irekua-database/irekua_database/models/users/institutions.py:49
+msgid "Address of institution"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:54
+#: irekua-database/irekua_database/models/users/institutions.py:54
+msgid "Website of institution"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:58
+#: irekua-database/irekua_database/models/users/institutions.py:58
+msgid "Institution logo"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:65
+#: irekua-database/irekua_database/models/users/institutions.py:65
+msgid "Institution"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/institutions.py:66
+#: irekua-database/irekua_database/models/users/institutions.py:66
+msgid "Institutions"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/roles.py:14
+#: irekua-database/irekua_database/models/users/roles.py:14
+msgid "Name of role"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/roles.py:20
+#: irekua-database/irekua_database/models/users/roles.py:20
+msgid "Description of role"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/roles.py:25
+#: irekua-database/irekua_database/models/users/roles.py:25
+msgid "Role type icon"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/roles.py:31
+#: irekua-database/irekua_database/models/users/roles.py:31
+msgid "permissions"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/roles.py:32
+#: irekua-database/irekua_database/models/users/roles.py:32
+msgid "Permissions associated to role"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/roles.py:37
+#: irekua-database/irekua_database/models/users/roles.py:37
+msgid "Role"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/roles.py:38
+#: irekua-database/irekua_database/models/users/roles.py:38
+msgid "Roles"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/users.py:12
+#: irekua-database/irekua_database/models/users/users.py:12
+msgid ""
+"\n"
+"    User Model\n"
+"\n"
+"    People using irekua must be previously registered and should provide\n"
+"    minimal personal information. This is to track contributions and to "
+"control\n"
+"    access to data.\n"
+"\n"
+"    Users can belong to collections (:model:`irekua_database.Collection`), "
+"possess\n"
+"    devices (:model:`irekua_database.PhysicalDevice`), sign licences\n"
+"    (:model:`irekua_database.Licence`), upload items (:model:"
+"`irekua_database.Item`),\n"
+"    annotate data (:model:`irekua_database.Annotation`), and more.\n"
+"    "
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/users.py:30
+#: irekua-database/irekua_database/models/users/users.py:30
+msgid "Institution to which user belongs"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/users.py:35
+#: irekua-database/irekua_database/models/users/users.py:35
+msgid "is developer"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/users.py:36
+#: irekua-database/irekua_database/models/users/users.py:36
+msgid "Flag to indicate if user is a model developer"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/users.py:42
+#: irekua-database/irekua_database/models/users/users.py:42
+msgid "is curator"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/users.py:43
+#: irekua-database/irekua_database/models/users/users.py:43
+msgid "Flag to indicate if user is a curator"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/users.py:49
+#: irekua-database/irekua_database/models/users/users.py:49
+msgid "is model"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/users.py:50
+#: irekua-database/irekua_database/models/users/users.py:50
+msgid "Flag to indicate if user is an AI model"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/users.py:56
+#: irekua-database/irekua_database/models/users/users.py:56
+msgid "User"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/users/users.py:57
+#: irekua-database/irekua_database/models/users/users.py:57
+msgid "Users"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/visualizers.py:18
+#: irekua-database/irekua_database/models/visualizers.py:18
+msgid "Name of visualizer app"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/visualizers.py:25
+#: irekua-database/irekua_database/models/visualizers.py:25
+msgid "Version of visualizer app"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/visualizers.py:31
+#: irekua-database/irekua_database/models/visualizers.py:31
+msgid "Link to visualizer website"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/visualizers.py:36
+#: irekua-database/irekua_database/models/visualizers.py:36
+msgid "JSON schema for annotation tool configuration info"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/visualizers.py:43
+#: irekua-database/irekua_database/models/visualizers.py:43
+#: selia-visualizers/build/lib/selia_visualizers/models.py:24
+#: selia-visualizers/selia_visualizers/models.py:24
+msgid "Visualizer"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/visualizers.py:44
+#: irekua-database/irekua_database/models/visualizers.py:44
+msgid "Visualizers"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/models/visualizers.py:57
+#: irekua-database/irekua_database/models/visualizers.py:57
+#, python-format
+msgid "Invalid visualizer configuration. Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/utils.py:8
+#: irekua-database/irekua_database/utils.py:8
+msgid "generic sampling event"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/utils.py:9
+#: irekua-database/irekua_database/utils.py:9
+msgid "generic site"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/utils.py:10
+#: irekua-database/irekua_database/utils.py:10
+msgid "generic collection"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/utils.py:19
+#: irekua-database/irekua_database/utils.py:19
+#, python-format
+msgid "JSON Schema is not valid. Error: %(error)s"
+msgstr ""
+
+#: irekua-database/build/lib/irekua_database/utils.py:30
+#: irekua-database/irekua_database/utils.py:30
+#, python-format
+msgid "Instance does not comply with JSON schema. Error: %(error)s"
+msgstr ""
+
+#: irekua-filters/build/lib/irekua_filters/annotations/annotations.py:13
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_devices.py:14
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_licences.py:13
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_sampling_events.py:14
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_sites.py:12
+#: irekua-filters/build/lib/irekua_filters/items/items.py:14
+#: irekua-filters/build/lib/irekua_filters/sampling_events/sampling_event_devices.py:13
+#: irekua-filters/build/lib/irekua_filters/sampling_events/sampling_events.py:19
+#: irekua-filters/irekua_filters/annotations/annotations.py:13
+#: irekua-filters/irekua_filters/data_collections/collection_devices.py:14
+#: irekua-filters/irekua_filters/data_collections/collection_licences.py:13
+#: irekua-filters/irekua_filters/data_collections/collection_sampling_events.py:14
+#: irekua-filters/irekua_filters/data_collections/collection_sites.py:12
+#: irekua-filters/irekua_filters/items/items.py:14
+#: irekua-filters/irekua_filters/sampling_events/sampling_event_devices.py:13
+#: irekua-filters/irekua_filters/sampling_events/sampling_events.py:19
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/filters/is_own_checkbox.html:4
+#: selia-templates/selia_templates/templates/selia_templates/filters/is_own_checkbox.html:4
+msgid "Mine"
+msgstr ""
+
+#: irekua-filters/build/lib/irekua_filters/annotations/annotations.py:50
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_devices.py:56
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_licences.py:49
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_sampling_events.py:55
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_sites.py:47
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_users.py:35
+#: irekua-filters/build/lib/irekua_filters/devices/physical_devices.py:42
+#: irekua-filters/build/lib/irekua_filters/items/items.py:64
+#: irekua-filters/build/lib/irekua_filters/sampling_events/sampling_event_devices.py:46
+#: irekua-filters/build/lib/irekua_filters/sampling_events/sampling_events.py:66
+#: irekua-filters/build/lib/irekua_filters/sites.py:39
+#: irekua-filters/irekua_filters/annotations/annotations.py:50
+#: irekua-filters/irekua_filters/data_collections/collection_devices.py:56
+#: irekua-filters/irekua_filters/data_collections/collection_licences.py:49
+#: irekua-filters/irekua_filters/data_collections/collection_sampling_events.py:55
+#: irekua-filters/irekua_filters/data_collections/collection_sites.py:47
+#: irekua-filters/irekua_filters/data_collections/collection_users.py:35
+#: irekua-filters/irekua_filters/devices/physical_devices.py:42
+#: irekua-filters/irekua_filters/items/items.py:64
+#: irekua-filters/irekua_filters/sampling_events/sampling_event_devices.py:46
+#: irekua-filters/irekua_filters/sampling_events/sampling_events.py:66
+#: irekua-filters/irekua_filters/sites.py:39
+msgid "added on"
+msgstr ""
+
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_devices.py:57
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_sites.py:48
+#: irekua-filters/irekua_filters/data_collections/collection_devices.py:57
+#: irekua-filters/irekua_filters/data_collections/collection_sites.py:48
+msgid "internal id"
+msgstr ""
+
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_users.py:36
+#: irekua-filters/irekua_filters/data_collections/collection_users.py:36
+msgid "first name"
+msgstr ""
+
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_users.py:37
+#: irekua-filters/irekua_filters/data_collections/collection_users.py:37
+msgid "last name"
+msgstr ""
+
+#: irekua-filters/build/lib/irekua_filters/data_collections/collection_users.py:38
+#: irekua-filters/irekua_filters/data_collections/collection_users.py:38
+msgid "username"
+msgstr ""
+
+#: irekua-filters/build/lib/irekua_filters/devices/physical_devices.py:44
+#: irekua-filters/irekua_filters/devices/physical_devices.py:44
+msgid "custom id"
+msgstr ""
+
+#: irekua-filters/build/lib/irekua_filters/items/items.py:65
+#: irekua-filters/irekua_filters/items/items.py:65
+msgid "filesize"
+msgstr ""
+
+#: irekua-rest-api/build/lib/irekua_rest_api/filters/sites.py:18
+#: irekua-rest-api/irekua_rest_api/filters/sites.py:18
+msgid "Latitude greater than"
+msgstr ""
+
+#: irekua-rest-api/build/lib/irekua_rest_api/filters/sites.py:22
+#: irekua-rest-api/irekua_rest_api/filters/sites.py:22
+msgid "Latitude less than"
+msgstr ""
+
+#: irekua-rest-api/build/lib/irekua_rest_api/filters/sites.py:27
+#: irekua-rest-api/irekua_rest_api/filters/sites.py:27
+msgid "Longitude greater than"
+msgstr ""
+
+#: irekua-rest-api/build/lib/irekua_rest_api/filters/sites.py:31
+#: irekua-rest-api/irekua_rest_api/filters/sites.py:31
+msgid "Longitude less than"
+msgstr ""
+
+#: irekua-rest-api/build/lib/irekua_rest_api/filters/sites.py:36
+#: irekua-rest-api/build/lib/irekua_rest_api/filters/sites.py:40
+#: irekua-rest-api/irekua_rest_api/filters/sites.py:36
+#: irekua-rest-api/irekua_rest_api/filters/sites.py:40
+msgid "Altitude less than"
+msgstr ""
+
+#: irekua-rest-api/build/lib/irekua_rest_api/filters/utils.py:10
+#: irekua-rest-api/irekua_rest_api/filters/utils.py:10
+msgid "Created before than"
+msgstr ""
+
+#: irekua-rest-api/build/lib/irekua_rest_api/filters/utils.py:15
+#: irekua-rest-api/irekua_rest_api/filters/utils.py:15
+msgid "Created after than"
+msgstr ""
+
+#: irekua-rest-api/build/lib/irekua_rest_api/filters/utils.py:20
+#: irekua-rest-api/irekua_rest_api/filters/utils.py:20
+msgid "Modified before than"
+msgstr ""
+
+#: irekua-rest-api/build/lib/irekua_rest_api/filters/utils.py:25
+#: irekua-rest-api/irekua_rest_api/filters/utils.py:25
+msgid "Modified after than"
+msgstr ""
+
+#: selia-about/build/lib/selia_about/templates/selia_about/navbar.html:5
+#: selia-about/selia_about/templates/selia_about/navbar.html:5
+msgid "About"
+msgstr ""
+
+#: selia-about/build/lib/selia_about/templates/selia_about/navbar.html:39
+#: selia-about/selia_about/templates/selia_about/navbar.html:39
+msgid "Contact"
+msgstr ""
+
+#: selia-annotator/build/lib/selia_annotator/models.py:23
+#: selia-annotator/selia_annotator/models.py:23
+msgid "Annotation tool"
+msgstr ""
+
+#: selia-annotator/build/lib/selia_annotator/models.py:29
+#: selia-annotator/selia_annotator/models.py:29
+#: selia-visualizers/build/lib/selia_visualizers/models.py:30
+#: selia-visualizers/selia_visualizers/models.py:30
+msgid "javascript file"
+msgstr ""
+
+#: selia-annotator/build/lib/selia_annotator/models.py:30
+#: selia-annotator/selia_annotator/models.py:30
+msgid "Javascript file containing annotator component"
+msgstr ""
+
+#: selia-annotator/build/lib/selia_annotator/models.py:37
+#: selia-annotator/selia_annotator/models.py:37
+msgid "Is annotator tool active?"
+msgstr ""
+
+#: selia-annotator/build/lib/selia_annotator/models.py:43
+#: selia-annotator/selia_annotator/models.py:43
+msgid "Annotation Tool Component"
+msgstr ""
+
+#: selia-annotator/build/lib/selia_annotator/models.py:44
+#: selia-annotator/selia_annotator/models.py:44
+msgid "Annotation Tool Components"
+msgstr ""
+
+#: selia-annotator/build/lib/selia_annotator/templates/selia_annotator/annotator.html:14
+#: selia-annotator/selia_annotator/templates/selia_annotator/annotator.html:14
+msgid "Annotations: Add"
+msgstr ""
+
+#: selia-maps/build/lib/selia_maps/utils.py:16
+#: selia-maps/selia_maps/utils.py:16
+msgid "Sampling event {}"
+msgstr ""
+
+#: selia-maps/build/lib/selia_maps/utils.py:35
+#: selia-maps/selia_maps/utils.py:35
+msgid "Deployed device {}"
+msgstr ""
+
+#: selia-maps/build/lib/selia_maps/utils.py:49
+#: selia-maps/selia_maps/utils.py:49
+msgid "Site {}"
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/registration/login.html:28
+#: selia-registration/selia_registration/templates/registration/login.html:28
+msgid "Enter"
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/registration/login.html:34
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_form.html:28
+#: selia-registration/selia_registration/templates/registration/login.html:34
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_form.html:28
+msgid "Forgot your password?"
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_complete.html:20
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_complete.html:20
+msgid "Your password has been changed"
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_complete.html:20
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_complete.html:20
+msgid "You can now enter"
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_complete.html:26
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_complete.html:26
+msgid "back"
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_confirm.html:21
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_confirm.html:21
+msgid "Change your password"
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_confirm.html:26
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_confirm.html:26
+msgid "Change password"
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_confirm.html:31
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_confirm.html:31
+msgid ""
+"\n"
+"                This link is invalid. Please restart the password recovery "
+"process.\n"
+"                "
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_confirm.html:40
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_done.html:33
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_form.html:41
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_confirm.html:40
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_done.html:33
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_form.html:41
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/buttons/back.html:2
+#: selia-templates/selia_templates/templates/selia_templates/buttons/back.html:2
+msgid "Back"
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_done.html:20
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_done.html:20
+msgid ""
+"\n"
+"            We have sent the instructions to reset your password by email.\n"
+"            "
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_done.html:25
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_done.html:25
+msgid ""
+"\n"
+"            It should arrive shortly. If not, please make sure that you have "
+"input the correct address or check your spam directory.\n"
+"            "
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_email.html:2
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_email.html:2
+msgid "Dear"
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_email.html:4
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_email.html:4
+msgid "To reset your password please enter the following link"
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_email.html:7
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_email.html:7
+msgid "Recover your password"
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_email.html:10
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_email.html:10
+msgid "Kindly"
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_form.html:30
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_form.html:30
+msgid "You can recover it here"
+msgstr ""
+
+#: selia-registration/build/lib/selia_registration/templates/selia_registration/password_reset_form.html:35
+#: selia-registration/selia_registration/templates/selia_registration/password_reset_form.html:35
+msgid "Recover you password"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/custom_tags/json_data.py:81
+#: selia-templates/selia_templates/custom_tags/json_data.py:81
+msgid "yes"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/custom_tags/json_data.py:83
+#: selia-templates/selia_templates/custom_tags/json_data.py:83
+msgid "no"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/buttons/add.html:2
+#: selia-templates/selia_templates/templates/selia_templates/buttons/add.html:2
+msgid "Add"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/buttons/edit.html:2
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/buttons/update.html:3
+#: selia-templates/selia_templates/templates/selia_templates/buttons/edit.html:2
+#: selia-templates/selia_templates/templates/selia_templates/buttons/update.html:3
+msgid "Edit"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/buttons/enter.html:2
+#: selia-templates/selia_templates/templates/selia_templates/buttons/enter.html:2
+msgid "View"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/buttons/help.html:4
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/modals/help.html:7
+#: selia-templates/selia_templates/templates/selia_templates/buttons/help.html:4
+#: selia-templates/selia_templates/templates/selia_templates/modals/help.html:7
+msgid "Help"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/buttons/see.html:2
+#: selia-templates/selia_templates/templates/selia_templates/buttons/see.html:2
+msgid "See"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/create/error_list.html:4
+#: selia-templates/selia_templates/templates/selia_templates/create/error_list.html:4
+msgid "Errors"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/detail/detail.html:20
+#: selia-templates/selia_templates/templates/selia_templates/detail/detail.html:20
+msgid "Delete "
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/detail/detail.html:28
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/list/list_item.html:10
+#: selia-templates/selia_templates/templates/selia_templates/detail/detail.html:28
+#: selia-templates/selia_templates/templates/selia_templates/list/list_item.html:10
+msgid "Added on"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/detail/detail.html:30
+#: selia-templates/selia_templates/templates/selia_templates/detail/detail.html:30
+msgid "by"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/detail/detail.html:36
+#: selia-templates/selia_templates/templates/selia_templates/detail/detail.html:36
+msgid "Last modified on"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/detail/summary.html:6
+#: selia-templates/selia_templates/templates/selia_templates/detail/summary.html:6
+msgid "Summary"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/detail/summary.html:17
+#: selia-templates/selia_templates/templates/selia_templates/detail/summary.html:17
+msgid "Updated on"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/detail/summary.html:23
+#: selia-templates/selia_templates/templates/selia_templates/detail/summary.html:23
+msgid "Download summary"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/filters/filter.html:25
+#: selia-templates/selia_templates/templates/selia_templates/filters/filter.html:25
+msgid "Filters"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/filters/filter.html:36
+#: selia-templates/selia_templates/templates/selia_templates/filters/filter.html:36
+msgid "Search"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/filters/filter_bar.html:22
+#: selia-templates/selia_templates/templates/selia_templates/filters/filter_bar.html:22
+msgid "Clean"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/generic/no_permission.html:8
+#: selia-templates/selia_templates/templates/selia_templates/generic/no_permission.html:8
+msgid "Permission Denied"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/generic/no_permission.html:14
+#: selia-templates/selia_templates/templates/selia_templates/generic/no_permission.html:14
+msgid ""
+"\n"
+"        You do not have permission to view this content or perform this "
+"action.\n"
+"      "
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/generic/protected.html:8
+#: selia-templates/selia_templates/templates/selia_templates/generic/protected.html:8
+msgid "Object protected"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/generic/protected.html:14
+#: selia-templates/selia_templates/templates/selia_templates/generic/protected.html:14
+msgid ""
+"\n"
+"        This object has been used elsewhere, deleting it would leave hanging "
+"references.\n"
+"      "
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/list/empty_list_message.html:7
+#: selia-templates/selia_templates/templates/selia_templates/list/empty_list_message.html:7
+msgid "This list might be empty due to"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/list/empty_list_message.html:10
+#: selia-templates/selia_templates/templates/selia_templates/list/empty_list_message.html:10
+msgid "Only objects for which you have viewing permissions are displayed"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/list/empty_list_message.html:13
+#: selia-templates/selia_templates/templates/selia_templates/list/empty_list_message.html:13
+msgid "No object satisfies the applied filters"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/list/empty_list_message.html:14
+#: selia-templates/selia_templates/templates/selia_templates/list/empty_list_message.html:14
+msgid "Clear the filters"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/list/pagination.html:8
+#: selia-templates/selia_templates/templates/selia_templates/list/pagination.html:8
+msgid "First"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/list/pagination.html:16
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/list/pagination.html:20
+#: selia-templates/selia_templates/templates/selia_templates/list/pagination.html:16
+#: selia-templates/selia_templates/templates/selia_templates/list/pagination.html:20
+msgid "Previous"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/list/pagination.html:42
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/list/pagination.html:44
+#: selia-templates/selia_templates/templates/selia_templates/list/pagination.html:42
+#: selia-templates/selia_templates/templates/selia_templates/list/pagination.html:44
+msgid "Next"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/list/pagination.html:50
+#: selia-templates/selia_templates/templates/selia_templates/list/pagination.html:50
+msgid "Last"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/modals/delete.html:7
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/modals/delete.html:21
+#: selia-templates/selia_templates/templates/selia_templates/modals/delete.html:7
+#: selia-templates/selia_templates/templates/selia_templates/modals/delete.html:21
+msgid "Delete"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/modals/delete.html:13
+#: selia-templates/selia_templates/templates/selia_templates/modals/delete.html:13
+msgid "Are you sure you want to delete this object"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/modals/delete.html:19
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/modals/update.html:18
+#: selia-templates/selia_templates/templates/selia_templates/modals/delete.html:19
+#: selia-templates/selia_templates/templates/selia_templates/modals/update.html:18
+msgid "Cancel"
+msgstr ""
+
+#: selia-templates/build/lib/selia_templates/templates/selia_templates/modals/update.html:9
+#: selia-templates/selia_templates/templates/selia_templates/modals/update.html:9
+msgid "Update"
+msgstr ""
+
+#: selia-uploader/build/lib/selia_uploader/templates/selia_uploader/toolbar.html:3
+#: selia-uploader/selia_uploader/templates/selia_uploader/toolbar.html:3
+msgid "Select collection"
+msgstr ""
+
+#: selia-uploader/build/lib/selia_uploader/templates/selia_uploader/toolbar.html:8
+#: selia-uploader/selia_uploader/templates/selia_uploader/toolbar.html:8
+msgid "Select sampling event"
+msgstr ""
+
+#: selia-uploader/build/lib/selia_uploader/templates/selia_uploader/toolbar.html:13
+#: selia-uploader/selia_uploader/templates/selia_uploader/toolbar.html:13
+msgid "Select deployed device"
+msgstr ""
+
+#: selia-uploader/build/lib/selia_uploader/templates/selia_uploader/toolbar.html:18
+#: selia-uploader/selia_uploader/templates/selia_uploader/toolbar.html:18
+msgid "Select licence"
+msgstr ""
+
+#: selia-uploader/build/lib/selia_uploader/templates/selia_uploader/toolbar.html:21
+#: selia-uploader/selia_uploader/templates/selia_uploader/toolbar.html:21
+msgid "Upload files"
+msgstr ""
+
+#: selia-uploader/build/lib/selia_uploader/templates/selia_uploader/upload.html:11
+#: selia-uploader/selia_uploader/templates/selia_uploader/upload.html:11
+msgid "Add items"
+msgstr ""
+
+#: selia-visualizers/build/lib/selia_visualizers/models.py:31
+#: selia-visualizers/selia_visualizers/models.py:31
+msgid "Javascript file containing visualizer component"
+msgstr ""
+
+#: selia-visualizers/build/lib/selia_visualizers/models.py:41
+#: selia-visualizers/selia_visualizers/models.py:41
+msgid "Visualizer Component"
+msgstr ""
+
+#: selia-visualizers/build/lib/selia_visualizers/models.py:42
+#: selia-visualizers/selia_visualizers/models.py:42
+msgid "Visualizers Components"
+msgstr ""
+
+#: selia-visualizers/build/lib/selia_visualizers/models.py:54
+#: selia-visualizers/selia_visualizers/models.py:54
+msgid "Item type"
+msgstr ""
+
+#: selia-visualizers/build/lib/selia_visualizers/models.py:59
+#: selia-visualizers/selia_visualizers/models.py:59
+msgid "visualizer component"
+msgstr ""
+
+#: selia-visualizers/build/lib/selia_visualizers/models.py:60
+#: selia-visualizers/selia_visualizers/models.py:60
+msgid "Visualizer component"
+msgstr ""
+
+#: selia-visualizers/build/lib/selia_visualizers/models.py:65
+#: selia-visualizers/selia_visualizers/models.py:65
+msgid "Is visualizer app active?"
+msgstr ""
+
+#: selia-visualizers/build/lib/selia_visualizers/models.py:71
+#: selia-visualizers/selia_visualizers/models.py:71
+msgid "Visualizer Component Item Type"
+msgstr ""
+
+#: selia-visualizers/build/lib/selia_visualizers/models.py:72
+#: selia-visualizers/selia_visualizers/models.py:72
+msgid "Visualizer Component Item Types"
+msgstr ""

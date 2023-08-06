@@ -1,0 +1,7 @@
+django
+psycopg2_binary
+jsonschema
+sorl-thumbnail
+pycountry
+Pillow
+timezonefinder
