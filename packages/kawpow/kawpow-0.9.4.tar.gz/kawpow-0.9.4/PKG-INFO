@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: kawpow
+Version: 0.9.4
+Summary: C/C++ implementation of Kawpow – the Ravencoin Proof of Work algorithm
+Home-page: https://github.com/RavenCommunity/cpp-kawpow
+Maintainer: Ravencoin Community
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: C
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
