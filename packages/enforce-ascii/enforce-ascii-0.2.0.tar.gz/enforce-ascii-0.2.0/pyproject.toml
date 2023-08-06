@@ -1,0 +1,93 @@
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "enforce-ascii"
+version = "0.2.0"
+description = "A pre-commit hook, that enforces ASCII content."
+authors = ["Brutus <brutus.dmc@googlemail.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+homepage = "https://github.com/brutus/enforce-ascii/"
+repository = "https://github.com/brutus/enforce-ascii/"
+
+# https://pypi.org/pypi?%3Aaction=list_classifiers
+classifiers = [
+	"Programming Language :: Python",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+	"Development Status :: 4 - Beta",
+	"License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+]
+
+[tool.poetry.scripts]
+enforce-ascii = 'enforce_ascii.__main__:main'
+
+[tool.poetry.dependencies]
+python = ">=3.6.1"
+chardet = "^3.0.4"
+
+[tool.poetry.dev-dependencies]
+nox = "^2019.11.9"
+bump2version = "^1.0.0"
+pre-commit = "^2.3.0"
+towncrier = "^19.2.0"
+
+[tool.poetry.extras]
+test = [
+	"nox",
+]
+doc = [
+	"sphinx",
+]
+dev = [
+	"bump2version",
+	"pre-commit",
+	"towncrier",
+]
+
+[tool.black]
+target-version = ["py27"]
+
+[tool.flakehell]
+max_line_length = 88
+exclude = [".nox/*"]
+
+[tool.flakehell.plugins]
+pyflakes = ["+*"]
+
+[tool.towncrier]
+directory = "changes"
+filename = "CHANGELOG.md"
+template = "changes/template.j2"
+start_string = "<!-- TOWNCRIER -->\n"
+underlines = ["", ""]
+title_format = "## {version} ({project_date})"
+issue_format = "[#{issue}](https://github.com/brutus/require-ascii/issues/{issue})"
+wrap = true
+
+# TOWNCRIER TYPES: feature, change, removal, fix, misc
+[[tool.towncrier.type]]
+directory = "feature"
+name = "Features"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "change"
+name = "Changes"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "removal"
+name = "Deprecations and Removals"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "fix"
+name = "Bugfixes"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "misc"
+name = "Misc"
+showcontent = false
