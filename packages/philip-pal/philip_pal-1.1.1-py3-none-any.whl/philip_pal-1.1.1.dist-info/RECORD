@@ -1,0 +1,16 @@
+philip_pal/__init__.py,sha256=I377owClpdfW9BFXfvOK9U3vpv52R9l1sQ6XQYievR4,405
+philip_pal/__main__.py,sha256=QKzhTNghjSeQxmroxk6S40Rt1xRDeFTrJb2fh-W4t5w,2051
+philip_pal/base_device.py,sha256=VL0aKqGywBQizooNFhVjqmuFTxn37Bs3AUU6a1ZJ_04,2464
+philip_pal/philip_if.py,sha256=9MSAuvugItgzClooi-Y7iy9Ia0uZzAiZkxDn1Pd0ICs,24464
+philip_pal/philip_shell.py,sha256=Q_eZ1Pi_96cRNb62wBOZkNA_slNj1Q50_gFMUegeMik,19812
+philip_pal/serial_driver.py,sha256=G4F_7hcBZSMXJ7z4ODIwpkQlxvK4efxFbU72MlhSnv4,3939
+philip_pal/mem_map/PHiLIP_map_t_1_0_0.csv,sha256=VO4C44495M8HfONejYG2IEmptiXd5YVVAS9AVNE1MZg,13575
+philip_pal/mem_map/PHiLIP_map_t_1_0_1.csv,sha256=VO4C44495M8HfONejYG2IEmptiXd5YVVAS9AVNE1MZg,13575
+philip_pal/mem_map/PHiLIP_map_t_1_0_2.csv,sha256=ghXjNnJhmYsstjyY5P2IKt7rCU3g4vGEmjeUIhhYw3Q,19352
+philip_pal/mem_map/PHiLIP_map_t_1_2_0.csv,sha256=ji-qHy8sMUgdYgrtNdosPIlF7cQ4IyybKlQeOIoTxXc,19392
+philip_pal-1.1.1.dist-info/LICENSE,sha256=IXyJ0UFoSrOWAKcjIYbFFA0AbE3PbL7ABAUggwOz7x8,1068
+philip_pal-1.1.1.dist-info/METADATA,sha256=hXhnKmc4qIbDYUmrnBBmD7NOthYHVtvl_IpKm-1dNAc,3552
+philip_pal-1.1.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+philip_pal-1.1.1.dist-info/entry_points.txt,sha256=YgX7g_R_q_6UmuTus9Xh5tbFCkptZAgnoIaf8JIipH4,63
+philip_pal-1.1.1.dist-info/top_level.txt,sha256=NGoWLTCAT5L7Fi0e3dbuwziLTsb8d75cwW6sonDmE44,11
+philip_pal-1.1.1.dist-info/RECORD,,
