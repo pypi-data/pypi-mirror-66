@@ -1,0 +1,15 @@
+geoedfframework/GeoEDFExecutor.py,sha256=rDRm0CX3HWx-8EzkTHch4VNsheDI4yOiLbmpsdrtVaM,7217
+geoedfframework/GeoEDFPlugin.py,sha256=8-jCu7aVclypEBvfNO79JXu9Er-N_9Npd9byWRGJWX8,6518
+geoedfframework/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geoedfframework/utils/GeoEDFError.py,sha256=kDaGS8_j5DxRBPuW99x3tQ9spwGJUMj6ARboRQNLdk8,255
+geoedfframework/utils/GeoEDFHTMLParser.py,sha256=gaeSMDgZ_CxFvuq_4wP-T_AdBu26k2TSuxJijv-K2uE,1465
+geoedfframework/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geoedfframework-0.1.0.data/scripts/collect.py,sha256=QdVUCGT_l8IVSQSZoH9_JXcOL7LvhWsqo5u76nIvgto,386
+geoedfframework-0.1.0.data/scripts/merge.py,sha256=exGAeJ3f-XSoQVxwh8tLJ7T_fIwvoDw15sPW66JWslY,405
+geoedfframework-0.1.0.data/scripts/run-connector-plugin.py,sha256=mQxvdY6geKLM_obK9urTBtEqBKs01D929JAfuXXOJ88,2161
+geoedfframework-0.1.0.data/scripts/run-processor-plugin.py,sha256=5ssZV73z8kA-HLNBCnzzduyksjd22vCOn9kczRjzdmM,2179
+geoedfframework-0.1.0.dist-info/LICENSE,sha256=WeCDPSOwf-B94zxHrqZKiIe1Y6EUUJWw1DUgbC_R3nU,1063
+geoedfframework-0.1.0.dist-info/METADATA,sha256=JP4Big7oDrX3DRX99voGQ0dreF6KM61jIs_tfz-NnVc,320
+geoedfframework-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+geoedfframework-0.1.0.dist-info/top_level.txt,sha256=jADSCj-CuXUNr-8jy9Bm3f3nm2dh1NKGFtnH52E-Ki8,16
+geoedfframework-0.1.0.dist-info/RECORD,,
