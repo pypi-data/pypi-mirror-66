@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: interrogate
+Version: 1.0.0
+Summary: Interrogate a codebase for docstring coverage.
+Home-page: https://github.com/econchick/interrogate
+Author: Lynn Root
+Author-email: lynn@lynnroot.com
+Maintainer: Lynn Root
+Maintainer-email: lynn@lynnroot.com
+License: UNKNOWN
+Keywords: documentation,coverage,quality
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: attrs
+Requires-Dist: click
+Requires-Dist: networkx
+Requires-Dist: py
+Requires-Dist: tabulate
+Requires-Dist: toml
+Provides-Extra: dev
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-autobuild ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-autobuild ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+
+UNKNOWN
+
+
