@@ -1,0 +1,1 @@
+sanic_jwt_payload_encrypt
