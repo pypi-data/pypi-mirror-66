@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: swagger-codegen
+Version: 0.1.0
+Summary: Generate API clients by parsing Swagger definitions
+License: MIT
+Author: asyncee
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: all
+Provides-Extra: async
+Provides-Extra: black
+Provides-Extra: sync
+Requires-Dist: aiohttp; extra == "async" or extra == "all"
+Requires-Dist: black (>=19.10b0,<20.0); extra == "black" or extra == "all"
+Requires-Dist: click (>=7.1.1,<8.0.0)
+Requires-Dist: inflection (>=0.4.0,<0.5.0)
+Requires-Dist: jinja2 (>=2.11.1,<3.0.0)
+Requires-Dist: multidict (>=4.7.5,<5.0.0)
+Requires-Dist: pydantic (>=1.4,<2.0)
+Requires-Dist: requests; extra == "sync" or extra == "all"
+Requires-Dist: rich (>=0.8.11,<0.9.0)
+Requires-Dist: toml (>=0.10.0,<0.11.0)
+Requires-Dist: typer (>=0.1.1,<0.2.0)
