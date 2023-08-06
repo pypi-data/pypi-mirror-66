@@ -1,0 +1,162 @@
+Metadata-Version: 1.1
+Name: nbpipeline
+Version: 0.2.5
+Summary: Snakemake-like pipeline manager for reproducible Jupyter Notebooks
+Home-page: https://github.com/krassowski/nbpipeline
+Author: Michal Krassowski
+Author-email: krassowski.michal+pypi@gmail.com
+License: MIT
+Description: nbpipeline
+        ==========
+        
+        |Build Status| |DOI|
+        
+        Snakemake-like pipelines for Jupyter Notebooks, producing interactive
+        pipeline reports like this:
+        
+        Install & general remarks
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+        
+        These are still early days of this software so please bear in mind that
+        it is not ready for production yet. Note: for simplicity I assume that
+        you are using a recent Ubuntu with git installed.
+        
+        .. code:: bash
+        
+           pip install nbpipeline
+        
+        Graphiz is required for static SVG plots:
+        
+        .. code:: bash
+        
+           sudo apt-get install graphviz libgraphviz-dev graphviz-dev
+        
+        Development install
+        ^^^^^^^^^^^^^^^^^^^
+        
+        To install the latest development version you may use:
+        
+        .. code:: bash
+        
+           git clone https://github.com/krassowski/nbpipeline
+           cd nbpipeline
+           pip install -r requirements.txt
+           ln -s $(pwd)/nbpipeline/nbpipeline.py ~/bin/nbpipeline
+        
+        Quickstart
+        ~~~~~~~~~~
+        
+        Create ``pipeline.py`` file with list of rules for your pipeline. For
+        example:
+        
+        .. code:: python
+        
+           from nbpipeline.rules import NotebookRule
+        
+        
+           NotebookRule(
+               'Extract protein data',  # a nice name for the step
+               input={'protein_data_path': 'data/raw/data_from_wetlab.xlsx'},
+               output={'output_path': 'data/clean/protein_levels.csv'},
+               notebook='analyses/Data_extraction.ipynb',
+               group='Proteomics'  # this is optional
+           )
+        
+           NotebookRule(
+               'Quality control and PCA on proteins',
+               input={'protein_levels_path': 'data/clean/protein_levels.csv'},
+               output={'qc_report_path': 'reports/proteins_failing_qc.csv'},
+               notebook='analyses/Exploration_and_quality_control.ipynb',
+               group='Proteomics'
+           )
+        
+        the keys of the input and output variables should correspond to
+        variables in one of the first cells in the corresponding notebook, which
+        should be tagged as “parameters”. It can be done easily in JupyterLab:
+        
+        If you forget to add them, a warning will be displayed.
+        
+        Alternativaly, you can create a dedicated cell for input paths
+        definitions and tag it “inputs” and a separate one for output paths
+        definitions, tagging it “outputs”, which allows to omit input and output
+        keywords when creating a ``NotebookRule``. However, only simple variable
+        definitions will be deduced (parsing uses regular expressions to avoid
+        potential dangers of ``eval``).
+        
+        For more details, please see the example
+        `pipeline <https://github.com/krassowski/nbpipeline/blob/master/examples/pipeline.py>`__
+        and
+        `notebooks <https://github.com/krassowski/nbpipeline/tree/master/examples/analyses>`__
+        in the
+        `examples <https://github.com/krassowski/nbpipeline/tree/master/examples>`__
+        directory.
+        
+        Run the pipeline:
+        ^^^^^^^^^^^^^^^^^
+        
+        .. code:: bash
+        
+           nbpipeline
+        
+        On any consecutive run the notebooks which did not change will not be
+        run again. To disable this cache, use ``--disable_cache`` switch.
+        
+        To generate an interactive diagram of the rules graph, together with
+        reproducibility report add ``-i`` switch:
+        
+        .. code:: bash
+        
+           nbpipeline -i
+        
+        The software defaults to ``google-chrome`` for graph visualization
+        display, which can be changed with a CLI option.
+        
+        If you named your definition files differently (e.g. ``my_rules.py``
+        instead of ``pipeline.py``), use:
+        
+        .. code:: bash
+        
+           nbpipeline --definitions_file my_rules.py
+        
+        To display all command line options use:
+        
+        .. code:: bash
+        
+           nbpipeline -h
+        
+        Troubleshooting
+        ^^^^^^^^^^^^^^^
+        
+        If you see
+        ``ModuleNotFoundError: No module named 'name_of_your_local_module'``,
+        you may need to enforce the path, running nbpipeline with:
+        
+        .. code:: bash
+        
+           PYTHONPATH=/path/to/the/parent/of/local/module:$PYTHONPATH nbpipeline
+        
+        Oftentimes the path is the same as the current directory, so the
+        following command may work:
+        
+        .. code:: bash
+        
+           PYTHONPATH=$(pwd):$PYTHONPATH nbpipeline
+        
+        .. |Build Status| image:: https://travis-ci.org/krassowski/nbpipeline.svg?branch=master
+           :target: https://travis-ci.org/krassowski/nbpipeline
+        .. |DOI| image:: https://zenodo.org/badge/188075188.svg
+           :target: https://zenodo.org/badge/latestdoi/188075188
+        
+Keywords: snakemake,pipeline,reproducible,jupyter,notebooks
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
