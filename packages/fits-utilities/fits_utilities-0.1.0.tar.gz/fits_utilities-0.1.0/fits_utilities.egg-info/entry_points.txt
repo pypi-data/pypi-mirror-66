@@ -1,0 +1,5 @@
+[console_scripts]
+hselect = fits_utilities.hselect:header_select
+imhead = fits_utilities.imhead:image_header
+showfits = fits_utilities.showfits:show_fits
+
