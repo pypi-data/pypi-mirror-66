@@ -1,0 +1,17 @@
+README.md
+setup.py
+offstack/__init__.py
+offstack/__main__.py
+offstack/constants.py
+offstack/dashboard_window.py
+offstack/dialog_window.py
+offstack/logger.py
+offstack/login_window.py
+offstack/managers.py
+offstack/utils.py
+offstack_app.egg-info/PKG-INFO
+offstack_app.egg-info/SOURCES.txt
+offstack_app.egg-info/dependency_links.txt
+offstack_app.egg-info/entry_points.txt
+offstack_app.egg-info/requires.txt
+offstack_app.egg-info/top_level.txt
