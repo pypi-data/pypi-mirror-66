@@ -1,0 +1,4 @@
+[console_scripts]
+test=pytest
+test-watch=ptw
+
