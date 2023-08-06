@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: flogger
+Version: 0.0.1
+Summary: Flogger is a module for logging with fixed-width data.
+Home-page: https://github.com/gwgundersen/flogger
+Author: Gregory Gundersen
+Author-email: greg@gregorygundersen.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6

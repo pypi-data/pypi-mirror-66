@@ -1,0 +1,7 @@
+README.md
+setup.py
+flogger.egg-info/PKG-INFO
+flogger.egg-info/SOURCES.txt
+flogger.egg-info/dependency_links.txt
+flogger.egg-info/requires.txt
+flogger.egg-info/top_level.txt
