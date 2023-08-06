@@ -1,0 +1,10 @@
+setuptools
+pyyaml
+
+[doc]
+sphinx
+pkginfo
+
+[test]
+pytest
+pytest-cov
