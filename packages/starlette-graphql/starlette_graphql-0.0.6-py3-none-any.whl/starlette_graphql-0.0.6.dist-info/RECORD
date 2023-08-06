@@ -1,0 +1,7 @@
+stargql/__init__.py,sha256=tK--24Ix0y2ITz3ivmG2oXP14y5qFtgnKr9lZLPlN-4,42
+stargql/__version__.py,sha256=jkqNKvxMiVGnY59R2BQfl_-4ZtHCxZr_mmX_nHQShMs,352
+stargql/applications.py,sha256=b1giRoywdq1yilXaKmwY4EE4BhGCBnaqIPaN967G15g,4872
+stargql/subscription.py,sha256=9RTNPvYn5S2AFZcDxGeCTdllSvW9jgOakOtweWccRew,7135
+starlette_graphql-0.0.6.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+starlette_graphql-0.0.6.dist-info/METADATA,sha256=3qhTXzRBzZjchukgOeGGrt1fk_KYyFykQk6-tJPIxag,463
+starlette_graphql-0.0.6.dist-info/RECORD,,
