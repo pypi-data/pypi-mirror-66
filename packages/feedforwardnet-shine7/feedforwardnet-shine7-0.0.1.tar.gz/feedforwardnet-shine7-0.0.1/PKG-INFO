@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: feedforwardnet-shine7
+Version: 0.0.1
+Summary: Feed Forward Neural Networks
+Home-page: https://github.com/Subhash3/Neural-Networks/tree/master/Feed_Forward_Networks
+Author: Subhash Sarangi
+Author-email: subhashsarangi123@gmail.com
+License: UNKNOWN
+Description: ## Usage
+        
+        ```python3
+        from Neural_Network import NeuralNetwork
+        
+        # Create a Neural Network
+        inputs = 2
+        output_neurons = 1
+        hidden_layers = 2
+        each_hidden_nodes = [2, 3]
+        network = NeuralNetwork(inputs, hidden_layers, output_neurons, each_hidden_nodes)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

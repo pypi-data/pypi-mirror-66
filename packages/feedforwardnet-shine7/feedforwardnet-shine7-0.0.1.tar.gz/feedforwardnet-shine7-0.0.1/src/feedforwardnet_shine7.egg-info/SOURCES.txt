@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/Neural_Network.py
+src/Neuron.py
+src/Sigmoid_Neuron.py
+src/feedforwardnet_shine7.egg-info/PKG-INFO
+src/feedforwardnet_shine7.egg-info/SOURCES.txt
+src/feedforwardnet_shine7.egg-info/dependency_links.txt
+src/feedforwardnet_shine7.egg-info/top_level.txt
