@@ -1,0 +1,4 @@
+jupyter-server-proxy
+bokeh<2
+pynvml
+psutil
