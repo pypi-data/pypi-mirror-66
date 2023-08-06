@@ -1,0 +1,5 @@
+resources/resources
+zensols/cli
+zensols/config
+zensols/persist
+zensols/util
