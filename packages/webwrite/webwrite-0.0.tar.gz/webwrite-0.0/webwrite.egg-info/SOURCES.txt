@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+webwrite/__init__.py
+webwrite/webwrite.py
+webwrite.egg-info/PKG-INFO
+webwrite.egg-info/SOURCES.txt
+webwrite.egg-info/dependency_links.txt
+webwrite.egg-info/not-zip-safe
+webwrite.egg-info/top_level.txt
