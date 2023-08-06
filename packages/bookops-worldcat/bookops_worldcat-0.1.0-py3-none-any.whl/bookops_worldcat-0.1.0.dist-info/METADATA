@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: bookops-worldcat
+Version: 0.1.0
+Summary: BookOps CAT OCLC APIs wrappers, in particular Search and Metadata APIs.
+Home-page: https://github.com/BookOps-CAT/bookops-worldcat
+License: MIT
+Keywords: api,worldcat,cataloging,records
+Author: Tomasz Kalata
+Author-email: klingaroo@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: requests (>=2.23,<3.0)
+Project-URL: Bug Tracker, https://github.com/BookOps-CAT/bookops-worldcat/issues
+Project-URL: Repository, https://github.com/BookOps-CAT/bookops-worldcat
+Description-Content-Type: text/markdown
+
+[![Build Status](https://travis-ci.com/BookOps-CAT/bookops-worldcat.svg?branch=master)](https://travis-ci.com/BookOps-CAT/bookops-worldcat) [![Coverage Status](https://coveralls.io/repos/github/BookOps-CAT/bookops-worldcat/badge.svg?branch=master&service=github)](https://coveralls.io/github/BookOps-CAT/bookops-worldcat?branch=master) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)    
+
+# bookops-worldcat  
+**WORK-IN-PROGRESS**
+
+BookOps Worldcat Search and Metadata APIs wrappers abstracting OCLC's boilerplate.  
+Focus is on selected, relevant to our cataloging department functionality of these APIs.  
+  
+### Instalation
+
+It's simple:
+```python
+>>> pip install bookops-worldcat
+```
+
+### Features
+
+
+### Documentation
+
+For full documenation please see https://bookops-cat.github.io/bookops-worldcat/
+
+### Changelog
+
+Consult the [Changelog page](https://bookops-cat.github.io/bookops-worldcat/changelog/) for fixes and enhancements of each version. 
+
+### Bugs/Requests  
+
+Please use [Github issue tracker](https://github.com/BookOps-CAT/bookops-worldcat/issues) to submit bugs or request features.

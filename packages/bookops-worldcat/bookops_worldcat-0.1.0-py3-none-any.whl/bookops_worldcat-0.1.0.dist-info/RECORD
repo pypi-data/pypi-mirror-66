@@ -1,0 +1,12 @@
+bookops_worldcat/__init__.py,sha256=FNmv9_6uJmWvTFnIzWXLPZyFaiyReUlywNIpcCKc9Dk,175
+bookops_worldcat/__version__.py,sha256=RyjZWv0I4h_wHgfdkjUg0feuvP6a2OBK_kxkRmAsaYM,127
+bookops_worldcat/_session.py,sha256=wMniVPwflUfHWg1PxsGqI2r0VuK_Va5moKyiREECmak,580
+bookops_worldcat/authorize.py,sha256=RIx8FZt2eq8Wi7uopKZAo014P5JbMxP6nVzB5ws4Glo,6187
+bookops_worldcat/constant.py,sha256=1QpVjM6TBg9GNwKVqolg7zjjBPuTX342XEjSrDDu9NM,2325
+bookops_worldcat/metadata_api.py,sha256=AAD-ZASaxdjUUUXPMS64BncnZB-83vi_y1cioyFDL0g,14300
+bookops_worldcat/search_api.py,sha256=-z5pib6-JBhJHBtOhITwjETd092XYyvYonhE3L9_NlU,17837
+bookops_worldcat/utils.py,sha256=Q-SE9KOZjiROyXaUMPKlbkrWXHeGWZIsx4TxGcSkvxM,754
+bookops_worldcat-0.1.0.dist-info/LICENSE,sha256=rMKeE0OFuk9AKy3CyJIpltC3ZsyyHSJjkZ6jgR0NL24,1063
+bookops_worldcat-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+bookops_worldcat-0.1.0.dist-info/METADATA,sha256=i72rwj4PJSRjA23h0HI4AY3TopmP7M-lokoAKlXTMW4,2449
+bookops_worldcat-0.1.0.dist-info/RECORD,,
