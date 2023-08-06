@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: agile-item-master
+Version: 2.post6
+Summary: agile item master
+Home-page: https://git.infinidat.com/support/agile-item-master
+Author: Lilach
+Author-email: lelvi@infinidat.com
+License: BSD
+Description: agile item master
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

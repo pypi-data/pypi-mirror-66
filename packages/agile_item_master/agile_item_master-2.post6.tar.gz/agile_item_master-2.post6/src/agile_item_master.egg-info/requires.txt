@@ -1,0 +1,7 @@
+docopt
+infi.credentials_store
+infi.pyutils
+python-dateutil
+requests
+setuptools
+unicodecsv

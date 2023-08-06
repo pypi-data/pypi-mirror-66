@@ -1,0 +1,8 @@
+[console_scripts]
+agile = agile_item_master.agile:main
+sku-generator = agile_item_master.sku_generator:main
+workato = agile_item_master.workato:main
+
+[gui_scripts]
+
+

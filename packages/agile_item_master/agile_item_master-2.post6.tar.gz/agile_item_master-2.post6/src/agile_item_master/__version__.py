@@ -1,0 +1,11 @@
+__version__ = "2.post6"
+__git_commiter_name__ = "Lilach"
+__git_commiter_email__ = "lelvi@infinidat.com"
+__git_branch__ = 'develop'
+__git_remote_tracking_branch__ = 'origin/develop'
+__git_remote_url__ = 'git@git.infinidat.com:support/agile-item-master.git'
+__git_head_hash__ = 'd90ccd748fa10d496044a67a6979695eea5d05e5'
+__git_head_subject__ = 'INS-481 change the attribute name to DDE Type'
+__git_head_message__ = ''
+__git_dirty_diff__ = ''
+__git_commit_date__ = '2020-03-23 11:18:33'
