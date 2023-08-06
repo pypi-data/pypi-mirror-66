@@ -1,0 +1,9 @@
+lazo_index_service/__init__.py,sha256=0RpCrvKHZPtfhBXItb71BoA8PBLObZPGN0kt7JLs3iA,90
+lazo_index_service/client.py,sha256=f5Yf1L_mhAUDcI5XzIKTY780VFgiqMBeLIkd6q2nkFM,11427
+lazo_index_service/lazo_index_pb2.py,sha256=A4EdOAEwVI5eBDM1LtGZJO0koRyHIpnON3qakoMptns,20975
+lazo_index_service/lazo_index_pb2_grpc.py,sha256=_AopBW2WtDnvYbvaxWSo2S8CyiTTZW_lmFihZXSFAuI,13831
+lazo_index_service-0.5.dist-info/LICENSE,sha256=ly1Yed49hy6z4sFEx1WaXSxWHySVV5qfVgrCapMzAn0,1519
+lazo_index_service-0.5.dist-info/METADATA,sha256=fGAZ2AeuIBfmuzndHnPcTGA_bCIr4x4iCFi1GMfDnI4,1007
+lazo_index_service-0.5.dist-info/WHEEL,sha256=ZvfnntGaZglpRLAKVkx18HrxfMwCXrA0b-ARJVnnMrw,92
+lazo_index_service-0.5.dist-info/top_level.txt,sha256=00hkM3P2rRG35LNPuKM60LeAoaNVzPgLa4sr6IZrETM,19
+lazo_index_service-0.5.dist-info/RECORD,,
