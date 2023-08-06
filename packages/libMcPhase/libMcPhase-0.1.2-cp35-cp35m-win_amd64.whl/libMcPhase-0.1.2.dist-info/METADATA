@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: libMcPhase
+Version: 0.1.2
+Summary: A mean-field Monte Carlo simulation program for magnetic phase diagrams and excitations.
+Home-page: https://github.com/mducle/libmcphase
+Author: Duc Le, Martin Rotter
+Author-email: duc.le@stfc.ac.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Physics
+Provides-Extra: interactive
+Requires-Dist: matplotlib (>=2.2.0) ; extra == 'interactive'
+
+# libMcPhase
+
+libMcPhase is a fork of the [McPhase](http://mcphase.de) 
+[project](https://github.com/mducle/mcphase) intended to be a partial rewrite of 
+the code as a Python library.
+
+McPhase was originally developed as a series of C, C++, Perl and Basic programs.
+The C/C++04 codes used the [MATPACK](http://www.matpack.de/) and 
+[LAPACK](http://www.netlib.org/lapack/) linear algebra libraries.
+
+libMcPhase will update the code to C++11 and use the 
+[Eigen](http://eigen.tuxfamily.org) header library instead of MATPACK/LAPACK.
+[PyBind11](https://github.com/pybind/pybind11) is used as the python binding.
+
+Initially only the single-ion calculation modules `so1ion`, `ic1ion` and `cluster`
+will be ported to C+11.
+
+
+
