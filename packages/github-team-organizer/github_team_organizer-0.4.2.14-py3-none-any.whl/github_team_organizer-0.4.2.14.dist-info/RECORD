@@ -1,0 +1,16 @@
+github_team_organizer/classes/base.py,sha256=s1lyrprCP9YNBTANrERjm-oN-3DnCUyPu_eXDGKj15A,802
+github_team_organizer/classes/ghgql.py,sha256=4O1x9wWo8nrac9ib4aPG5MZTr5_cM4zl4B9IZ4us-qI,928
+github_team_organizer/classes/github.py,sha256=rW9PIW-lAd0XSBwZU5oJr_z5bNisQIergZLPOs3UgtY,784
+github_team_organizer/classes/organization.py,sha256=XnY-v1WOjQ0EHCzAULUp5w9jgeRhtArv-lKRhpRlRBY,624
+github_team_organizer/classes/project.py,sha256=HfPw7K15Goolk2qWMKRxzD2kco51ipKDNj7bm_Ffj2Y,3473
+github_team_organizer/classes/repository.py,sha256=2w5ZO7E-4f_MbFa3Lz5qFUbdbkat0vUW-7JQqLm-Lqo,10335
+github_team_organizer/classes/settings.py,sha256=WEuWmVKR6PC2wha6ZVvsjbMzP6OBmLKSsDPfONrJ6Fo,109
+github_team_organizer/classes/team.py,sha256=If9WiL6nJsMhl-Yz-qZYoiHPfZTgZ7458r6UtfBsxm4,5650
+github_team_organizer/graphql/github_schema.py,sha256=cfSZX6GP7pHhy8xSi9cYaJ4bhgnIRJdLtWiejHrRdjg,535820
+github_team_organizer/scripts/organizer.py,sha256=3EzrqCXCDUVMINjIiBrrOmWCAU7RjiLbhO91PFvWCrY,1960
+github_team_organizer-0.4.2.14.dist-info/LICENSE,sha256=NrepmPvyZTDiP6oNrgpjgdy7Qt7b2qVKuYoHTDwlpTU,1078
+github_team_organizer-0.4.2.14.dist-info/METADATA,sha256=JhzGh96f194JM3fqb7SpvfjX1mdz3VJ_yIYakF6-mTg,1455
+github_team_organizer-0.4.2.14.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+github_team_organizer-0.4.2.14.dist-info/entry_points.txt,sha256=Mz9hwU1fAGBgNzDkG-vXO0Mc5LxKV56TijDQ7BPZh_U,80
+github_team_organizer-0.4.2.14.dist-info/top_level.txt,sha256=WAZ-gzXPgaWd9F1JmqTAVuBveCVIAlTknGSWSdys00U,22
+github_team_organizer-0.4.2.14.dist-info/RECORD,,
