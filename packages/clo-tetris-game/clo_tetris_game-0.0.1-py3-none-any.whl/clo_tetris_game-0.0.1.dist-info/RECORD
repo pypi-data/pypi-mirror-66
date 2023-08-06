@@ -1,0 +1,15 @@
+tetris_game/__init__.py,sha256=-wrllbiQ85cTW5DbPHh9Y4Dzc7wbO8Dd8jNAwqTJVEI,266
+tetris_game/constantes.py,sha256=eZ20eXmcCACTpqpXetiJ65KaLdD9gEGH07mk1TmiDV8,3444
+tetris_game/core.py,sha256=_xiWo2QXjoSzbLBI2Kce8EREQG6SySjAd0NgLorI5t4,18551
+tetris_game/assets/brique.png,sha256=D-Hapf3GWB3TelvwUlw7abexTPXi1Sk8B5S5rpZ5X2I,2515
+tetris_game/assets/levelup.wav,sha256=yfXXUB40ZDumuEMkYrdDfowsu2eId9Ni_gm9Pz7zwVc,113162
+tetris_game/assets/line.wav,sha256=gyiZK-rEsljeQ2Jnpvj2RXjtS81uphcW7BsP_TxL7eM,175542
+tetris_game/assets/loose.wav,sha256=mTXlE7LpZej6lt4hsKQrsf4Ccperm5SR9u_tE89AL0Y,765020
+tetris_game/assets/mainSong.wav,sha256=PL1qoIeHG0RDxsTe8sLns6vY7Raen5fG4TCeOnk6_P0,44695630
+tetris_game/assets/wall.wav,sha256=do_-L94Wq0v1Cu473EHl5staVzNXh8M0lFUAtXih8m0,80166
+clo_tetris_game-0.0.1.dist-info/LICENCE,sha256=mqWPGUaCSHq_AQXS_JUFKpRzWHVX4EL6DP-O45GJmuI,1092
+clo_tetris_game-0.0.1.dist-info/METADATA,sha256=QM3hm7Lhsadxt2HkDwkqV7F8WW3mq0sOOEK0rZPrUrM,907
+clo_tetris_game-0.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+clo_tetris_game-0.0.1.dist-info/entry_points.txt,sha256=gpPB7VJkn82xbTHsVCWas57vts5fHPHThyd6uvO1OIo,60
+clo_tetris_game-0.0.1.dist-info/top_level.txt,sha256=vvB5dnUMOe5g8hfudL1mlpvHjl_yLPfuhkouKpavCkM,12
+clo_tetris_game-0.0.1.dist-info/RECORD,,
