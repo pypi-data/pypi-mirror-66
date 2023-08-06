@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: contracts-lib-py
+Version: 0.1.0
+Summary: 🐳 Library including all the common functionalities used in Python projects
+Home-page: https://github.com/keyko-io/contracts-lib-py
+Author: keyko-io
+Author-email: root@keyko.io
+License: Apache Software License 2.0
+Description: # contracts-lib-py
+        Wraps keeper contracts and web3 functions.
+        
+Keywords: contracts-lib-py
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
+Provides-Extra: docs
