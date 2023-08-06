@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+kedro_static_viz/__init__.py
+kedro_static_viz/cli.py
+kedro_static_viz/public.tar.gz
+kedro_static_viz.egg-info/PKG-INFO
+kedro_static_viz.egg-info/SOURCES.txt
+kedro_static_viz.egg-info/dependency_links.txt
+kedro_static_viz.egg-info/entry_points.txt
+kedro_static_viz.egg-info/not-zip-safe
+kedro_static_viz.egg-info/requires.txt
+kedro_static_viz.egg-info/top_level.txt
