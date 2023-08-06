@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: pygaggle
+Version: 0.0.1
+Summary: A gaggle of rerankers for CovidQA and CORD-19
+Home-page: https://github.com/castorini/pygaggle
+Author: PyGaggle Gaggle
+Author-email: r33tang@uwaterloo.ca
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: coloredlogs (==14.0)
+Requires-Dist: numpy (==1.18.2)
+Requires-Dist: pydantic (==1.5)
+Requires-Dist: pyserini (==0.9.0.0)
+Requires-Dist: scikit-learn (>=0.22)
+Requires-Dist: scipy (>=1.4)
+Requires-Dist: spacy (==2.2.4)
+Requires-Dist: tensorboard (>=2.1.0)
+Requires-Dist: tensorflow (>=2.2.0rc1)
+Requires-Dist: tokenizers (==0.5.2)
+Requires-Dist: tqdm (==4.45.0)
+Requires-Dist: transformers (==2.7.0)
+
+# PyGaggle
+
+A gaggle of rerankers for [CovidQA](https://github.com/castorini/pygaggle/blob/master/data/) and CORD-19. 
+
+## Installation
+
+1. For pip, do `pip install pygaggle`. If you prefer Anaconda, use `conda env create -f environment.yml && conda activate pygaggle`.
+
+2. Install [PyTorch 1.4+](http://pytorch.org/).
+
+3. Download the index: `sh scripts/update-index.sh`.
+
+4. Make sure you have an installation of Java 11+: `javac --version`.
+
+5. Install [Anserini](https://github.com/castorini/anserini).
+
+
+## Running rerankers on CovidQA
+
+By default, the script uses `data/lucene-index-covid-paragraph` for the index path.
+If this is undesirable, set the environment variable `CORD19_INDEX_PATH` to the path of the index.
+
+
+### Unsupervised Methods
+
+**BM25**: `python -um pygaggle.run.evaluate_kaggle_highlighter --method bm25`
+
+**BERT**: `python -um pygaggle.run.evaluate_kaggle_highlighter --method transformer --model-name bert-base-cased`
+
+**SciBERT**: `python -um pygaggle.run.evaluate_kaggle_highlighter --method transformer --model-name allenai/scibert_scivocab_cased`
+
+**BioBERT**: `python -um pygaggle.run.evaluate_kaggle_highlighter --method transformer --model-name biobert`
+
+
+### Supervised Methods
+
+**T5 (MARCO)**: `python -um pygaggle.run.evaluate_kaggle_highlighter --method t5`
+
+
