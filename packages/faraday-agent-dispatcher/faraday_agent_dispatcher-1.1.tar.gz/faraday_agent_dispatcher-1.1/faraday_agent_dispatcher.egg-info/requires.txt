@@ -1,0 +1,11 @@
+Click>=6.0
+websockets
+aiohttp<4.0.0
+syslog_rfc5424_formatter
+pytest
+pytest-aiohttp
+requests
+itsdangerous
+
+[dev]
+giteasychangelog
