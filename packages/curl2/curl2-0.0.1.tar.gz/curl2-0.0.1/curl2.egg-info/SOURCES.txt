@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+curl2/__init__.py
+curl2/__version__.py
+curl2/run.py
+curl2.egg-info/PKG-INFO
+curl2.egg-info/SOURCES.txt
+curl2.egg-info/dependency_links.txt
+curl2.egg-info/entry_points.txt
+curl2.egg-info/requires.txt
+curl2.egg-info/top_level.txt
