@@ -1,0 +1,12 @@
+README.md
+setup.py
+SiPANN/__init__.py
+SiPANN/comp.py
+SiPANN/import_nn.py
+SiPANN/nn.py
+SiPANN/scee.py
+SiPANN.egg-info/PKG-INFO
+SiPANN.egg-info/SOURCES.txt
+SiPANN.egg-info/dependency_links.txt
+SiPANN.egg-info/requires.txt
+SiPANN.egg-info/top_level.txt
