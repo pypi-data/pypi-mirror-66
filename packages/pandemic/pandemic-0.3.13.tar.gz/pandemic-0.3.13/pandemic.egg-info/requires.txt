@@ -1,0 +1,11 @@
+numpy
+pathlib
+matplotlib
+contexttimer
+requests
+python-geohash
+deepdiff
+pymorton
+pytest
+redis
+scipy
