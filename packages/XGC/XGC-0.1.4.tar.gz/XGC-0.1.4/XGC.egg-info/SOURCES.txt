@@ -1,0 +1,8 @@
+README.md
+setup.py
+XGC.egg-info/PKG-INFO
+XGC.egg-info/SOURCES.txt
+XGC.egg-info/dependency_links.txt
+XGC.egg-info/top_level.txt
+xodus/__init__.py
+xodus/xgc.py
