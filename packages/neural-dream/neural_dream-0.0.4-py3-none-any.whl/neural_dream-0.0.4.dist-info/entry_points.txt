@@ -1,0 +1,3 @@
+[console_scripts]
+neural-dream = neural_dream.neural_dream:main
+
