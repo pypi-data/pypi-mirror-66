@@ -1,0 +1,3 @@
+[console_scripts]
+sonybraviatv_remotecontrol = sonybraviatv_remotecontrol.gateway:start_remotecontrol
+
