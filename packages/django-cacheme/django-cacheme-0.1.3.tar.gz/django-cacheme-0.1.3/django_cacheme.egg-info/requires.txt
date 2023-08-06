@@ -1,0 +1,1 @@
+cacheme>=0.1.1django_redis>=4.10.0
