@@ -1,0 +1,3 @@
+[console_scripts]
+elec = util2.util2:main
+

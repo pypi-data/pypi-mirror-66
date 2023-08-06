@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: util2
+Version: 0.0.0.4
+Summary: This is utils library for Python.
+Home-page: https://github.com/tanaka0079/libs/python/util2/
+Author: Nishizumi
+Author-email: daiman003@yahoo.co.jp
+License: UNKNOWN
+Description: # DatetimeExtender
+        his Python library can perform various calculations for datetime.  
+        このPythonライブラリは時刻の各種計算を行うことができます。
+        
+        [Github](https://github.com/tanaka0079/libs/tree/master/python/datetime_extender-python)   
+        [Document](https://tanaka0079.github.io/libs/python/datetime_extender-python/docs/html/index.html)   
+        
+        ## Getting started（導入）
+        Install with `pip`.  
+        pipで簡単にインストールできます。
+        
+        ```
+        pip install util2 
+        ```
+        
+        ## License（ライセンス）
+        This sample code is licensed under the MIT License.
+        サンプルコードはMITライセンスで公開しています。
+Keywords: util
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
