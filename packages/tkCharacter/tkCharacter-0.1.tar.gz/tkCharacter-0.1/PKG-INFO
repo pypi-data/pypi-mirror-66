@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: tkCharacter
+Version: 0.1
+Summary: Allows for effortless creation of playable and AI 2d characters in python games
+Home-page: https://github.com/DonCharlesLambert/tkCharacter
+Author: Don Charles - Lambert
+Author-email: your.email@domain.com
+License: MIT
+Download-URL: https://github.com/DonCharlesLambert/tkCharacter/archive/0.1.tar.gz
+Description: UNKNOWN
+Keywords: tkinter,games,characters
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
