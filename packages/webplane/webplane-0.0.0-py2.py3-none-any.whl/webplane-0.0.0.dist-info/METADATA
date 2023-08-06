@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: webplane
+Version: 0.0.0
+Summary: WebEngine
+Home-page: https://github.com/webplane/webplane
+Author: João Pinto
+Author-email: lamego.pinto@gmail.com
+License: BSD-3
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: cherrypy
+Requires-Dist: enclosed
+
+# webplane
+
+
+## About
+
+
+
+## Install
+
+```bash
+pip3 install --user webplane
+```
+
+## How to use
+```python
+from webplane import WebApp
+
+class MyWebApp(WebApp):
+
+    def index(self):
+        return f'Hello from {self.path}'
+
+MyWebApp().run()
+```
+
+
