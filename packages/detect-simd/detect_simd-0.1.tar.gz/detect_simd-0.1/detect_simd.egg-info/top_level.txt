@@ -1,0 +1,2 @@
+detect_simd
+detect_simd/core
