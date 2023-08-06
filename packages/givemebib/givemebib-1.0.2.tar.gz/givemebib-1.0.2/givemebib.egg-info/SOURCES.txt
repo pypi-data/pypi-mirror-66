@@ -1,0 +1,11 @@
+README.md
+setup.py
+givemebib/__init__.py
+givemebib/__main__.py
+givemebib/functions.py
+givemebib.egg-info/PKG-INFO
+givemebib.egg-info/SOURCES.txt
+givemebib.egg-info/dependency_links.txt
+givemebib.egg-info/entry_points.txt
+givemebib.egg-info/requires.txt
+givemebib.egg-info/top_level.txt
