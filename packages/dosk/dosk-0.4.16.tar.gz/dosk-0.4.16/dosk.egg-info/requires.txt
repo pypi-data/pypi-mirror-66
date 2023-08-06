@@ -1,0 +1,7 @@
+ruamel.yaml
+argparse
+asyncio
+coloredlogs
+
+[dev]
+pytest
