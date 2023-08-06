@@ -1,0 +1,56 @@
+{
+  "name": "root",
+  "curs": 0,
+  "children": [
+    {
+      "name": "Keyboard Commands",
+      "curs": 17,
+      "children": [
+        {
+          "name": "Normal Mode",
+          "curs": 11,
+          "children": [
+            {
+              "name": "c: Create a child node under currently selected node. Automatically enters edit mode.",
+              "curs": 85
+            },
+            {
+              "name": "d: Delete currently selected node. Does not work on root.",
+              "curs": 57
+            },
+            {
+              "name": "e: Enter 'Edit' mode.",
+              "curs": 21
+            },
+            {
+              "name": "j: Move down",
+              "curs": 12
+            },
+            {
+              "name": "k: Move up",
+              "curs": 10
+            },
+            {
+              "name": "s: save file",
+              "curs": 12
+            }
+          ]
+        },
+        {
+          "name": "Edit Mode",
+          "curs": 9,
+          "children": [
+            {
+              "name": "'Esc': Go back to normal mode",
+              "curs": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Topic 02",
+      "curs": 0
+    }
+  ]
+}
