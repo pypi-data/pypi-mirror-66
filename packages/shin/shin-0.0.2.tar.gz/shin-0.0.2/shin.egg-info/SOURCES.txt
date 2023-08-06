@@ -1,0 +1,7 @@
+README.md
+setup.py
+shin/__init__.py
+shin.egg-info/PKG-INFO
+shin.egg-info/SOURCES.txt
+shin.egg-info/dependency_links.txt
+shin.egg-info/top_level.txt
