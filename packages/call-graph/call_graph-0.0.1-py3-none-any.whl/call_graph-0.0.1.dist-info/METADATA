@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: call-graph
+Version: 0.0.1
+Summary: `call-graph` is a package for viewing call graph.
+Home-page: https://github.com/SaitoTsutomu/call-graph
+Author: SaitoTsutomu
+Author-email: tsutomu7@hotmail.co.jp
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Description-Content-Type: text/x-rst
+
+`call-graph` is a package for viewing call graph.
+::
+
+   $ call-graph
+   usage: call-graph module func
+   
+   $ call-graph call_graph main
+   main
+   ├ get_call_graph
+   │└ getclosurevars
+   │　├ ismethod
+   │　├ isfunction
+   │　└ ismodule
+   └ call_graph_view
+   　└ pairwise
+
+* "no_target" is used for ignoring names.
+* Methods are ignored.
+
+Requirements
+------------
+* Python 3.7 later
+
+Features
+--------
+* nothing
+
+Setup
+-----
+::
+
+   $ pip install call-grph
+
+History
+-------
+0.0.1 (2020-4-21)
+~~~~~~~~~~~~~~~~~~
+* first release
+
+
