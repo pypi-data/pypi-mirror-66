@@ -1,0 +1,13 @@
+obonet
+click
+tqdm
+pyyaml
+pandas
+requests
+protmapper
+
+[docs]
+sphinx
+sphinx-rtd-theme
+sphinx-click
+sphinx-autodoc-typehints
