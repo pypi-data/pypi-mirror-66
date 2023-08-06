@@ -1,0 +1,1 @@
+python3 -m esdap.processing.compute_features_EEG_CHBMIT --data_path=data/chb-mit/raw_data/chb13/ --output_dir=data/chb-mit/raw_data/chb13/ --segment_length=30 --stride=15 --preictal_duration=60 --postictal_duration=60 --features_name {moments,peak_to_peak,absolute_area,psd_ratio,decorrelation_time,dwt_coeffs,max_correlation,SPLV}
