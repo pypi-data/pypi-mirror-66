@@ -1,0 +1,215 @@
+#!/usr/bin/env python
+import json
+import argparse
+import sys
+import re
+
+# import surk
+# cmd shift p
+
+
+surk_banner_text = """
+\033[92m
+ _______           _______  _         
+(  ____ \|\     /|(  ____ )| \    /\  
+| (    \/| )   ( || (    )||  \  / /  
+| (_____ | |   | || (____)||  (_/ /   
+(_____  )| |   | ||     __)|   _ (    
+      ) || |   | || (\ (   |  ( \ \   
+/\____) || (___) || ) \ \__|  /  \ \  
+\_______)(_______)|/   \__/|_/    \/  
+\033[0m
+"""
+
+yardım_metni = surk_banner_text + """
+Surk derleyicisi. Türkçe kodlama dilini derleyip çalıştırmak için bu yazılımı kullanabilirsiniz. Tamamiyle ücretsizdir.
+
+Temel kullanım;
+Yazdığınız kod dosyasını 'yazılım.surk' ismiyle kayıt edin.
+Yazdığınız kod dosyasını çalıştırmak için şu satırı terminale yazıp enter'a basın;
+surk
+
+Dilerseniz farklı dosya isimleri kullanabilirsiniz.
+Gelişmiş kullanım için aşağıdaki 'Opsiyonel Girdiler' kısmına göz atınız.
+
+Opsiyonel Girdiler:
+  -k            , --kontrol Doğru şekilde kurulu olduğundan emin olmanızı sağlar.
+  -d dosyaİsmi, --dosya dosyaİsmi	Derlenecek kod dosyasının yolu. Varsayılan değeri : './program.surk'.
+  -y, --yardım				Bu metni yazdırır.
+  -p, --python				Kodun Python çıktısının verir. Bu çıktı %100 Python kodudur, doğruca kullanabilirsiniz.
+
+
+Örnek komutlar. Her satır kendi başına çalışan bir örnektir. Dosya isimlerini kendinize göre değiştiriniz.
+surk
+surk dosyaismi.surk
+surk -p
+surk -python
+surk dosyaismi.surk -p
+surk dosyaismi.surk -python
+surk benim_kodlarım.surk
+surk benim_kodlarım.txt
+
+"""
+
+anahtarKelimelerEşleri = """
+[
+	[
+		"oku",
+		"input"
+	],
+	[
+		"fonk",
+		"def"
+	],
+	[
+		"ve",
+		"and"
+	],
+	[
+		"veya",
+		"or"
+	],
+	[
+		"değilse",
+		"else"
+	],
+	[
+		"herbir",
+		"for"
+	],
+	[
+		"içinde",
+		"in"
+	],
+	[
+		"ekadar",
+		"range"
+	],
+	[
+		"döndür",
+		"return"
+	],
+	[
+		"yanlış",
+		"False"
+	],
+	[
+		"doğru",
+		"True"
+	],
+	[
+		"iken",
+		"while"
+	],
+	[
+		"tamSayı(",
+		"int("
+	],
+	[
+		"metin(",
+		"str("
+	]
+]
+"""
+
+def interpile_satır(satır: str):
+	startTabCount = len(satır) - len(satır.lstrip())
+	satır = satır.strip()
+
+	if satır.startswith("eğer"):
+		parçalar = satır.split(' ')
+		# print("p : " , parçalar)
+		parçalar = parçalar[1:] # 'eğer' kelimesini kaldır.
+		parçalar = parçalar[:-1]  # 'ise:' ifadesini kaldır.
+		# return "if " + parçalar.join(' ') + ":"
+		# return (startTabCount * '\t') + "if " + ' '.join([str(elem) for elem in parçalar]) + ":"
+		satır = "if " + ' '.join([str(elem) for elem in parçalar]) + ":"
+
+	if satır.endswith('olduğu sürece:'):
+		satır = satır.replace('olduğu sürece', "")
+		satır = "while " + satır
+		#return (startTabCount * '\t') + "while " + satır
+
+	if satır.startswith('yaz('):
+		satır = "print(" + satır[4:]
+	
+
+	return (startTabCount * '\t') + satır
+
+def kodlariDegistir(hamKodlar):
+	# anahtarKelimelerDosyasi = open("anahtarKelimeler.json", "r")
+	# anahtarKelimeler = json.load(anahtarKelimelerDosyasi)
+	anahtarKelimeler = json.loads(anahtarKelimelerEşleri)
+	#print(anahtarKelimeler)
+	hamKodlar = hamKodlar.strip()
+	derlenmisPyKodları = ""
+	#print(hamKodlar, hamKodlar.split('\n'))
+	for satır in hamKodlar.split('\n'):
+		satır = interpile_satır(satır)
+		for ikili in anahtarKelimeler:
+			#print(ikili)
+			turkceKelime = ikili[0]
+			pyKelime = ikili[1]
+			#satır = satır.replace(turkceKelime, pyKelime)
+			re.sub(r'(?![^\"]{turkceKelime}\")', pyKelime, satır)
+			
+		derlenmisPyKodları = derlenmisPyKodları + "\n" + satır
+	#print('\n\n' + derlenmisPyKodları)
+	return derlenmisPyKodları
+
+
+def main():
+	ap = argparse.ArgumentParser(
+		prog="Surk. Türkçe kodlama dili.", add_help=False)
+
+	ap.add_argument("-k", "--kontrol", default=False, required=False, action='store_true',
+					help="Doğru şekilde kurulu olduğundan emin olmanızı sağlar.")
+	ap.add_argument("-d", "--dosya", required=False,
+					help="Derlenecek kod dosyasının yolu. Varsayılan değeri : './program.surk'")
+	ap.add_argument("-y", "--yardım", default=False, required=False,
+					help="Yardım dosyası.'", action='store_true')
+	ap.add_argument("-v", "--version", default=False, required=False,
+                 help="Sürüm özetini göster ve çık.'", action='store_true')
+	ap.add_argument("--versiyon", default=False, required=False,
+                 help="Sürüm özetini göster ve çık.'", action='store_true')
+	ap.add_argument("-s", "--sürüm", default=False, required=False,
+                 help="Sürüm özetini göster ve çık.'", action='store_true')
+	ap.add_argument("-p", "--python", default=False, required=False,
+                 help="Python koduna derle, kodu yaz ve çık.'", action='store_true')
+
+
+	args = vars(ap.parse_args())
+	# print(" args : ", args)
+
+	if args['yardım']:
+		print(yardım_metni)
+		sys.exit()
+
+	if args['kontrol']:
+		print(
+			surk_banner_text,
+			"\nSurk dili başarıyla kuruldu. Kullanmaya hazırsınız.")
+		sys.exit()
+
+	if args['version'] or args['versiyon'] or args['sürüm']:
+		print(
+			surk_banner_text
+		)
+		exec("pip3 show surk")
+		sys.exit()
+
+	dosyaYolu = "yazılım.surk"
+	if args['dosya']:
+		dosyaYolu = args['dosya']
+	programDosyasi = open(dosyaYolu, "r")
+	yazilimKodlari = programDosyasi.read()
+	yazilimKodlari = kodlariDegistir(yazilimKodlari)
+	
+	if args['python']:
+		print(yazilimKodlari)
+		sys.exit()
+
+	exec(yazilimKodlari)
+
+
+main()
