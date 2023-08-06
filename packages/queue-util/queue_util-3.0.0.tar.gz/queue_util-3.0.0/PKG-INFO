@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: queue_util
+Version: 3.0.0
+Summary: A set of utilities for consuming (and producing) from a rabbitmq queue
+Home-page: https://github.com/EDITD/queue_util
+Author: EDITED devs
+Author-email: dev@edited.com
+License: LICENSE.txt
+Description: View the github page (https://github.com/EDITD/queue_util) for more details.
+Platform: UNKNOWN
+Provides-Extra: dev
