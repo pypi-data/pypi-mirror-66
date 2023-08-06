@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+dinbrief.py
+letter.md
+pyproject.toml
+setup.py
+template.tex
+dinbrief.py.egg-info/PKG-INFO
+dinbrief.py.egg-info/SOURCES.txt
+dinbrief.py.egg-info/dependency_links.txt
+dinbrief.py.egg-info/entry_points.txt
+dinbrief.py.egg-info/requires.txt
+dinbrief.py.egg-info/top_level.txt

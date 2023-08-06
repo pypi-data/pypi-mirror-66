@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dinbrief.py
+Version: 0.1.0
+Summary: Dinbrief made easy
+Home-page: https://github.com/ohjeah/dinbrief-boilerplate
+Author: Markus Quade
+Author-email: info@markusqua.de
+License: MIT
+Description: # dinbrief-boilerplate
+        
+        based on [letter-boilerplate](https://github.com/mrzool/letter-boilerplate)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
