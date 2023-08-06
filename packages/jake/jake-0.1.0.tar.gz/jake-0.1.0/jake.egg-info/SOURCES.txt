@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+jake.egg-info/PKG-INFO
+jake.egg-info/SOURCES.txt
+jake.egg-info/dependency_links.txt
+jake.egg-info/entry_points.txt
+jake.egg-info/requires.txt
+jake.egg-info/top_level.txt
