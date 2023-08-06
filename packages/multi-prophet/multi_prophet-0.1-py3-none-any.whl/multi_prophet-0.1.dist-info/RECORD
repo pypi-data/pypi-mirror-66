@@ -1,0 +1,10 @@
+multi_prophet/__init__.py,sha256=K274YTNdQVyzVQzZUjoK3EvGDeKxrfC4ZF9VWYYFkh4,2476
+multi_prophet/data_builder.py,sha256=X2c9BLg4W1Uwk8MsLR5xhGGX3CcK5W2T9g1RQc5Pl2Y,767
+multi_prophet/factories.py,sha256=Ilkuweua0ohjthqF6JGhx6i1urUJZLBvA5P91q7oylQ,1028
+multi_prophet/plots.py,sha256=Co2f6x1ACvfe2pKUQ-BCcCQSCqP-X1I1PElw-4hJFDQ,275
+multi_prophet/prophet.py,sha256=-rfKSgebxy4E4U20siwUw6H4RY-nhXSfABHxryIcY4U,1180
+multi_prophet-0.1.dist-info/LICENSE,sha256=FssWVgkEudvdkruvp1BTs1ErFAqF5yAJIfholVoeOy4,1068
+multi_prophet-0.1.dist-info/METADATA,sha256=O9lavbT85PxzAgU1rlABjHj7gtFyAjbQM6zYGzxfH08,722
+multi_prophet-0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+multi_prophet-0.1.dist-info/top_level.txt,sha256=waL9nwJOw3-VK98iCwjd7zN8Z5nrFRLt-W8lT7FakEQ,14
+multi_prophet-0.1.dist-info/RECORD,,
