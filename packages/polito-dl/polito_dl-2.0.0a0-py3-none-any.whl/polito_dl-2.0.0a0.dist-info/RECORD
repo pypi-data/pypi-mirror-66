@@ -1,0 +1,12 @@
+polito_dl/__init__.py,sha256=f1chGUKxnZ0XkNnJs5pqYU3PO0Jo0m8WoNMHAeWtlg0,45
+polito_dl/auth.py,sha256=GyOeyVWIQYxWItZSOD-pJFvDyxOygLT3tOo9rQIJnxA,2260
+polito_dl/cli.py,sha256=kwiEfQKltrTBdtlhv7Y8j-SKE8zugs5sycNOwecn9YU,2805
+polito_dl/client.py,sha256=O655coKxXrmmE5pNV_PxcmoPcmxfUmFx8_nQD-afJLY,1078
+polito_dl/parsing.py,sha256=qvJJoKh0SBM467kyFpdjH1Z40FCoxHwXCuAm2NfjwnE,1943
+polito_dl/scraping.py,sha256=k7Jzw6_BdlqZ9LtIDv4KjxvYpub_tIre6mtNhZ8N2lA,1037
+polito_dl-2.0.0a0.dist-info/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+polito_dl-2.0.0a0.dist-info/METADATA,sha256=sT5ejarMSH6hqOZLa3cRVfGinyBPOhhTuOwoqblBd2w,3671
+polito_dl-2.0.0a0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+polito_dl-2.0.0a0.dist-info/entry_points.txt,sha256=AV2azDcv9HReN-jwBbSxHRelsuytMY_wzkynYLSOQYo,68
+polito_dl-2.0.0a0.dist-info/top_level.txt,sha256=8puRJqPRivW4nyhxvH-IFDP31tPUws1TIHIXJAuoQUM,10
+polito_dl-2.0.0a0.dist-info/RECORD,,

@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        polito_dl=polito_dl.cli:main
+    
