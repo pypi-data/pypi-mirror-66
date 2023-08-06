@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+color_extraction/__init__.py
+color_extraction/color_definitions.json
+color_extraction/fct_palette_man_RGB.py
+color_extraction.egg-info/PKG-INFO
+color_extraction.egg-info/SOURCES.txt
+color_extraction.egg-info/dependency_links.txt
+color_extraction.egg-info/not-zip-safe
+color_extraction.egg-info/requires.txt
+color_extraction.egg-info/top_level.txt
