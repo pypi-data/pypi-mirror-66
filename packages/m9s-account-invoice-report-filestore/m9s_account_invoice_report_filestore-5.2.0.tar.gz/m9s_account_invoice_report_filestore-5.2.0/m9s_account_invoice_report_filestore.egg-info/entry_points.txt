@@ -1,0 +1,4 @@
+
+    [trytond.modules]
+    account_invoice_report_filestore = trytond.modules.account_invoice_report_filestore
+    
