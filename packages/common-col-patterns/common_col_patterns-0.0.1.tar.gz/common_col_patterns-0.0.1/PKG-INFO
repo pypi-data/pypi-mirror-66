@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: common_col_patterns
+Version: 0.0.1
+Summary: Some functional and collection patterns
+Home-page: https://github.com/levgou/common_col_patters
+Author: Lev Gourevitch
+Author-email: lev.gourevitch@gmail.com
+License: MIT
+Download-URL: https://github.com/levgou/common_col_patters/archive/head.tar.gz
+Description: UNKNOWN
+Keywords: functional,collection,common
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
