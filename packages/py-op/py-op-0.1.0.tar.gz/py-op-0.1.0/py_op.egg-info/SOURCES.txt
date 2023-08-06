@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+py_op.egg-info/PKG-INFO
+py_op.egg-info/SOURCES.txt
+py_op.egg-info/dependency_links.txt
+py_op.egg-info/requires.txt
+py_op.egg-info/top_level.txt
+pyop/__init__.py
+pyop/base.py
+pyop/itertools.py
+pyop/misc.py

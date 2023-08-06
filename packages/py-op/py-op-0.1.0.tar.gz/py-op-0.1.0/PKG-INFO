@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: py-op
+Version: 0.1.0
+Summary: Python operators for easier chaining
+Home-page: https://github.com/guanyilun/pyop
+Author: Yilun Guan
+Author-email: zoom.aaron@gmail.com
+License: MIT
+Download-URL: https://github.com/guanyilun/pyop/archive/v0.1.0.tar.gz
+Description: UNKNOWN
+Keywords: functional programming,operator,utility
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
