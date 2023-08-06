@@ -1,0 +1,47 @@
+Metadata-Version: 1.1
+Name: flaskmogrify
+Version: 0.0.16
+Summary: Flaskmogrify, a simple Flask single pageapplication to convert (w/ Ajax) user-pasted text using an arbitrary text conversion function.
+Home-page: https://github.com/danyul/flaskmogrify
+Author: Daniel Langsam
+Author-email: daniel@langsam.org
+License: MIT
+Description: # flaskmogrify
+        Flask single page application to display converted text using an arbitrary 
+        user-supplied function of form  f(input:str)->str.  
+        AJAX with non-javascript fallback.
+        
+        - Free software: MIT
+        - Python3
+        
+        ## Development Setup
+        
+        1. `git clone https://github.com/danyul/flaskmogrify.git && cd flaskmogrify`
+        1. `python3 -m venv venv`
+        1. `venv/bin/pip install -e .[dev]`
+        
+        ## Usage
+        
+        ```python
+        from flaskmogrify import app
+        ```
+        
+        
+        # [Changelog]
+        
+        ## v0.0.3  _20170608_
+        Initial Github publish. 
+        
+        ## v0.0.12  _20200412_
+        bumped some requirement versions. 
+        other tweaks to try to get it working
+        
+        ## v0.0.13  _20200412_
+        manifest includes
+        
+        ## v0.0.14  _20200417_
+        bumped requirements versions
+Keywords: flask convert text transform ajax single page application
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
