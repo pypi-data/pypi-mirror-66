@@ -1,0 +1,72 @@
+# 📺 Control Chromecasts with MPRIS
+Control your Chromecast via [MPRIS media player controls](https://specifications.freedesktop.org/mpris-spec/2.2/). MPRIS is the standard media player interface on Linux desktops.
+`chromecast_mpris` allows you to control media playback on Chromecasts, and provides an interface for playback information.
+
+MPRIS integration is [enabled by default](https://github.com/KDE/plasma-workspace/tree/master/applets/mediacontroller) in Plasma Desktop, and [there are options for GNOME](https://extensions.gnome.org/extension/1379/mpris-indicator-button/), too. [`playerctl` provides a CLI](https://github.com/altdesktop/playerctl) for controlling media players through MPRIS.
+
+<img src="/assets/mpris_widget.png" width="350" />
+
+Checkout [mpris_server](https://github.com/alexdelorenzo/mpris_server) if you want to integrate MPRIS support into your media player.
+
+## Features
+  * [x] Control generic music and video playback
+  * [x] Control app playback
+  * [x]  View Chromecast information in real-time
+  * [x] Display Thumbnail and title
+  * [x] Display playback position and media end
+  * [x] Seek forward and backward
+  * [x] Play / Pause / Stop
+  * [x] Volume up and down
+  * [x] Play next and previous
+  * [ ] Open media from MPRIS
+  * [ ] Playlist integration
+  * [ ] Quit Chromecast app / Shutdown
+
+## Installation
+### Requirements
+ - Linux
+ - DBUS
+ - Python >= 3.6
+ - python3-gi (Python GObject introspection)
+ - `requirements.txt`
+ 
+### PyPI
+`pip3 install chromecast_mpris`
+
+You'll get a `chromecast_mpris` executable added to your `$PATH`.
+
+
+### Github
+Clone the repo, run `pip3 install -r requirements.txt`, followed by `python3 setup.py install`. 
+
+You'll get a `chromecast_mpris` executable added to your `$PATH`.
+
+## Usage
+You'll need to make sure that your computer is on the same network as your Chromecasts, and that you're able to make connections to them. 
+
+It also helps to know the names of the devices in advance.
+
+### Example
+#### Help
+```bash
+$ chromecast_mpris --help
+Usage: command.py [OPTIONS]
+
+  Control Chromecasts through MPRIS media controls.
+
+Options:
+  -n, --name TEXT          Specify Chromecast, otherwise control first
+                           Chromecast found.
+  -l, --log-level INTEGER  Debugging log level.  [default: 20]
+  --help                   Show this message and exit.
+```
+
+#### Connecting to a Device
+Connect to Chromecast named "MyChromecast" and run the adapter in the background.
+```bash
+$ chromecast_mpris -n MyChromecast &
+[1] 1234
+```
+
+## License
+See `LICENSE`. Message me if you'd like to use this project with a different license.
