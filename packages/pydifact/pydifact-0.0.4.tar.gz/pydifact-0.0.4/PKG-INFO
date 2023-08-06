@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: pydifact
+Version: 0.0.4
+Summary: A Python EDI file parser.
+Home-page: https://github.com/nerdocs/pydifact
+Author: Christian González
+Author-email: christian.gonzalez@nerdocs.at
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries

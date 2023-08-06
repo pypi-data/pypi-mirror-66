@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+pydifact/__init__.py
+pydifact/message.py
+pydifact/parser.py
+pydifact/segments.py
+pydifact/serializer.py
+pydifact/token.py
+pydifact/tokenizer.py
+pydifact.egg-info/PKG-INFO
+pydifact.egg-info/SOURCES.txt
+pydifact.egg-info/dependency_links.txt
+pydifact.egg-info/top_level.txt
+pydifact/control/__init__.py
+pydifact/control/characters.py
