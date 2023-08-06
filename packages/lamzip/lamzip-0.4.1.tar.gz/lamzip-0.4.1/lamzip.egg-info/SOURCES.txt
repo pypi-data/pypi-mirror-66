@@ -1,0 +1,8 @@
+README.md
+setup.py
+lamzip/lamzip.py
+lamzip.egg-info/PKG-INFO
+lamzip.egg-info/SOURCES.txt
+lamzip.egg-info/dependency_links.txt
+lamzip.egg-info/entry_points.txt
+lamzip.egg-info/top_level.txt
