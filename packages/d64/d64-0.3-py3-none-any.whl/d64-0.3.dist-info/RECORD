@@ -1,0 +1,15 @@
+d64/__init__.py,sha256=ns3r-UsYLOIuMqHGSbJQNzTXEFTzQilZXgDwGeuIi4o,390
+d64/bam.py,sha256=lTIVlJtRbbYWx0iseeTwgmypbwqj4D8MuL44PDlhLnY,4039
+d64/basic_file.py,sha256=XTK9mcSYegtpX-jSmfw3ibj6AqCJrTz1kjM_DdAsNw8,4622
+d64/binary_file.py,sha256=Wu22cckwTlYNYzCXQ_PgvyLcYfpsS7FGjyOItk77rhA,681
+d64/block.py,sha256=6lxF4nsyJBdGrSWe_Jyx4s7aAgWXT20gC-O7TxK7Y6A,1374
+d64/dir_entry.py,sha256=UeExF25NqV-SXXNRvQOdYDZpcnogRZMSL8c8u_atHVU,2110
+d64/disk_image.py,sha256=0w8-LO1U872JKPjOFgNO1QLh-QxXtCbu_UwM9Wi_AVU,4788
+d64/dos_path.py,sha256=W1RgpPWBnqunecC-KvNHYyrUemYuWmM5aYBlCZJ1dI8,2336
+d64/file.py,sha256=-lF5QSHttEkIl2bNi4jgyf5bB55jzPn1XfwlNqKmwEo,1154
+d64/vic20.py,sha256=PxgXxGigMZDDfb27E6XaOmjHgRPCTU-i4nFC6tF83a8,562
+d64-0.3.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+d64-0.3.dist-info/METADATA,sha256=jGb_Y2yh2AZ1CloMonS7TcSWpXbN_6RVLP_Sft82F-k,1825
+d64-0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+d64-0.3.dist-info/top_level.txt,sha256=JidEAlaEyEdUvGJw7yYq3uqOgZmBPqaRSGCq34HeP2s,4
+d64-0.3.dist-info/RECORD,,
