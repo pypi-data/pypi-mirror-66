@@ -1,0 +1,12 @@
+cade/__init__.py,sha256=1ADT6rRRlnpgWtScs78sitdoIdWBepjG-fGBdsZ3vmM,191
+cade/cade.py,sha256=wGgkg1W8rvFm4Bh5_OG4rz5suENzlthiVfiBe1zPFm8,8381
+cade/cli.py,sha256=t_4LDCcugZ5Vs0GZjoI4MZvU4CxqSHj83rY841fUHOA,415
+cade/metrics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cade/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cade-1.1.2.dist-info/AUTHORS.rst,sha256=7ZKQAQYtAGx5zRwwMVO8TBUH0k4NG5olGmOAqKtVniM,168
+cade-1.1.2.dist-info/LICENSE,sha256=4ef9NyNyaXf6G_04L2v8wNIm6qCFFCWoqMg2r9z8yUA,1075
+cade-1.1.2.dist-info/METADATA,sha256=L-Ykrla8bEyckMRNO82zH47YUiAVeQy6o1gCPpJYcoI,8176
+cade-1.1.2.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+cade-1.1.2.dist-info/dependency_links.txt,sha256=vosmcHl_g5ZHqce6YWamSq8kLcxWGBfKq-kYcO1P_1A,47
+cade-1.1.2.dist-info/top_level.txt,sha256=n1SXax8NK751AXE7c4cHS2CDZhu-be3-JjwZGk07R1c,5
+cade-1.1.2.dist-info/RECORD,,
