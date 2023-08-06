@@ -1,0 +1,45 @@
+# A list of basic OB parameters to generate a finding chart from scratch, locally
+obname:   WFM_starstuff
+pi:       jdoe
+progId:   0100.Z-9999
+
+# Target
+equinox:  J2000
+epoch:    2000.0
+ra:       21h49m07.290s
+dec:      +00d26m55.000s
+inst:     MUSE
+ins_mode: WFM-AO-N
+
+
+# Acquisition
+is_tts:   True
+bos_ra:   34.6108
+bos_dec:  42.562
+is_gs:    True
+gs_ra:    21h49m22.147s
+gs_dec:   +00d27m53.336s
+tts1_ra:  21h49m04.085s
+tts1_dec: +00d27m44.457s
+tts2_ra:  21h49m13.054s
+tts2_dec: +00d26m48.509s
+acq_pa:   0
+
+# Observation
+noff:     5
+obstype:  [O S O S O]
+#SEQ.OFFSET.COORDS                 "SKY"
+posang:   [0 0 90 0 90]
+off1:     [0 227.243 -226.493 227.243 -228.743]
+off2:     [0 -198.1 198.85 -198.1 196.6]
+#SEQ.RETURN "T"
+
+# Finding chart parameters
+bk_images: DSS2 Red     # Bk images to download from SkyView, or local fits files
+bk_lams:   550-750\AA   # The wavelength of the background images (SkyView will override)
+data_loc: fcm_data      # Relative path to the bk images 
+plot_loc: fcm_plots     # Relative path to store the finding charts 
+                    
+
+
+

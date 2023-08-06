@@ -1,0 +1,10 @@
+
+userId:                                 # p2 username (will ask at prompt if left blank)
+pswd:                                   # p2 password (will ask at prompt if left blank)
+obIds: [1848649,1848655,1848658,1848661]        # List of Ob IDs to chart
+bk_images: [DSS2 Red, SDSSr, DSS2 Blue, None]   # Background images (SkyView), or local fits
+bk_lams: [None,None,None,None]          # Lambda of the chart (SkyView will override)
+data_loc: fcm_data                      # Relative path to the bk images 
+plot_loc: fcm_plots                     # Relative path to store the finding charts 
+
+

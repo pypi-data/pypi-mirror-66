@@ -1,0 +1,110 @@
+.. _examples:
+
+Running fcmaker
+===============
+
+Example 1: manual creation of a finding chart via p2
+-----------------------------------------------------
+
+In its most basic mode, fcmaker connects to `p2 <http://www.eso.org/p2>`_ and creates the finding chart for a given 
+OB Id. To do so, simply type in a  terminal::
+
+   python -m fcmaker
+
+or from within a Python shell::
+   
+   run -m fcmaker
+   
+You will be prompted for your `p2 <http://www.eso.org/p2>`_ username, password, and the 
+Id of the observing block to process. fcmaker will create two folders ``fcm_data`` and 
+``fcm_plots`` at your current location, where it will store the background image and the 
+finding charts. Once the finding charts have been generated, you can choose to attach the 
+newly created finding chart to the OB on `p2 <http://www.eso.org/p2>`_, or not.
+
+Example 2: semi-automatic creation of finding charts via p2
+------------------------------------------------------------
+
+If you have a lot of finding charts to create, fcmaker allows for a semi-batch processing.
+First, create a text file ``randomfilename`` with the following structure:
+
+.. literalinclude:: examples/muse.p2_2_fcm.params
+
+
+Then, feed it to fcmaker with the ``-f`` flag::
+
+   python -m fcmaker -f randomfilename
+
+or from within a Python shell::
+   
+   run -m fcmaker -- -f randomfilename
+   
+
+**Note the extra** ``--`` **before listing any of the** `flags`_ **with the** ``run`` **command!**
+
+In doing so, fcmaker will connect to `p2 <http://www.eso.org/p2>`_ and process all the 
+OBs listed. Note that for each finding chart, you will still need to manually specify 
+whether you want to upload it to `p2 <http://www.eso.org/p2>`_ (or not). You can fully 
+automate the creation of many finding charts if you include the ``--no-upload`` flag::
+
+      python -m fcmaker --no-upload -f randomfilename
+   
+Example 3: creation of finding charts locally
+---------------------------------------------
+
+fcmaker can also create finding charts *locally*, without the need to have an OB present 
+on `p2 <http://www.eso.org/p2>`_ first. To do so, one first needs to specify the basic OB 
+parameters in a text file ``whichevername`` (in essence, a stripped-down version of a 
+full OBX file):
+
+.. literalinclude:: examples/muse.local_2_fcm.params
+
+
+The file is then fed to fcmaker with the ``-f`` flag, together with the ``-local`` flag to 
+indicate that it is a *local run*::
+
+   python -m fcmaker -local -f whichevername
+   
+fcmaker will create the associated finding chart, store it where specified, and exit.
+
+
+.. _flags:
+
+The other fcmaker flags
+------------------------
+
+A series of flag allow to fine-tune the way fcmaker works. They are:
+ 
+  ``--help,-h`` : prints the basic help
+ 
+  ``--version`` : prints the fcmaker version
+  
+  ``--no-montage`` : will by-pass the use of Montage. Finding charts will rotated according to the input FITS file. [not encouraged]
+
+  ``--no-systemtex`` : will use the matplotib LaTeX, rather than the system-wide LaTeX installation. Finding charts will be less pretty.
+
+  ``--no-upload`` : tell fcmaker never to try to upload the finding chart(s) to p2.
+  
+  ``--no-pdf`` : tell fcmaker not to save a .pdf version of the finding chart (only a jpg one)
+  
+  ``--clear-SkyView-cache``: does as it says. 
+
+
+The background images
+----------------------
+
+fcmaker relies on ``astroquery.skyview`` to download background images for the finding 
+charts (if no local FITS file is provided by the user). To display the full list of 
+surveys available, type in a Python shell::
+ 
+   from astroquery.skyview import SkyView
+   SkyView.survey_dict['overlay_blue']
+
+The default background survey images for the instruments supported by fcmaker are as follows:
+   
+   - MUSE: ``DSS2 Red``
+
+.. warning::
+   
+   From an operational perspective, we strongly recommend to only use ``DSS2 Red`` or 
+   ``SDSSr``.
+

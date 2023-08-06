@@ -1,0 +1,389 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Running fcmaker &mdash; fcmaker 0.1.42 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="fcmaker 0.1.42 documentation" href="index.html"/>
+        <link rel="next" title="The functions of fcmaker" href="modules/modules.html"/>
+        <link rel="prev" title="Installing fcmaker" href="installation.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> fcmaker
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.42
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installing fcmaker</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Running fcmaker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example-1-manual-creation-of-a-finding-chart-via-p2">Example 1: manual creation of a finding chart via p2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-2-semi-automatic-creation-of-finding-charts-via-p2">Example 2: semi-automatic creation of finding charts via p2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-3-creation-of-finding-charts-locally">Example 3: creation of finding charts locally</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-other-fcmaker-flags">The other fcmaker flags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-background-images">The background images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules/modules.html">The functions of fcmaker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledge.html">Acknowledging fcmaker</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">fcmaker</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Running fcmaker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/running.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="running-fcmaker">
+<span id="examples"></span><h1>Running fcmaker<a class="headerlink" href="#running-fcmaker" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="example-1-manual-creation-of-a-finding-chart-via-p2">
+<h2>Example 1: manual creation of a finding chart via p2<a class="headerlink" href="#example-1-manual-creation-of-a-finding-chart-via-p2" title="Permalink to this headline">¶</a></h2>
+<p>In its most basic mode, fcmaker connects to <a class="reference external" href="http://www.eso.org/p2">p2</a> and creates the finding chart for a given
+OB Id. To do so, simply type in a  terminal:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">fcmaker</span>
+</pre></div>
+</div>
+<p>or from within a Python shell:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">run</span> <span class="o">-</span><span class="n">m</span> <span class="n">fcmaker</span>
+</pre></div>
+</div>
+<p>You will be prompted for your <a class="reference external" href="http://www.eso.org/p2">p2</a> username, password, and the
+Id of the observing block to process. fcmaker will create two folders <code class="docutils literal"><span class="pre">fcm_data</span></code> and
+<code class="docutils literal"><span class="pre">fcm_plots</span></code> at your current location, where it will store the background image and the
+finding charts. Once the finding charts have been generated, you can choose to attach the
+newly created finding chart to the OB on <a class="reference external" href="http://www.eso.org/p2">p2</a>, or not.</p>
+</div>
+<div class="section" id="example-2-semi-automatic-creation-of-finding-charts-via-p2">
+<h2>Example 2: semi-automatic creation of finding charts via p2<a class="headerlink" href="#example-2-semi-automatic-creation-of-finding-charts-via-p2" title="Permalink to this headline">¶</a></h2>
+<p>If you have a lot of finding charts to create, fcmaker allows for a semi-batch processing.
+First, create a text file <code class="docutils literal"><span class="pre">randomfilename</span></code> with the following structure:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>
+<span class="n">userId</span><span class="p">:</span>                                 <span class="c1"># p2 username (will ask at prompt if left blank)</span>
+<span class="n">pswd</span><span class="p">:</span>                                   <span class="c1"># p2 password (will ask at prompt if left blank)</span>
+<span class="n">obIds</span><span class="p">:</span> <span class="p">[</span><span class="mi">1848649</span><span class="p">,</span><span class="mi">1848655</span><span class="p">,</span><span class="mi">1848658</span><span class="p">,</span><span class="mi">1848661</span><span class="p">]</span>        <span class="c1"># List of Ob IDs to chart</span>
+<span class="n">bk_images</span><span class="p">:</span> <span class="p">[</span><span class="n">DSS2</span> <span class="n">Red</span><span class="p">,</span> <span class="n">SDSSr</span><span class="p">,</span> <span class="n">DSS2</span> <span class="n">Blue</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>   <span class="c1"># Background images (SkyView), None for default, or local fits</span>
+<span class="n">bk_lams</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">]</span>          <span class="c1"># Lambda of the chart (SkyView will override), None for default</span>
+<span class="n">data_loc</span><span class="p">:</span> <span class="n">fcm_data</span>                      <span class="c1"># Relative path to the bk images </span>
+<span class="n">plot_loc</span><span class="p">:</span> <span class="n">fcm_plots</span>                     <span class="c1"># Relative path to store the finding charts </span>
+
+
+</pre></div>
+</div>
+<p>Then, feed it to fcmaker with the <code class="docutils literal"><span class="pre">-f</span></code> flag:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">fcmaker</span> <span class="o">-</span><span class="n">f</span> <span class="n">randomfilename</span>
+</pre></div>
+</div>
+<p>or from within a Python shell:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">run</span> <span class="o">-</span><span class="n">m</span> <span class="n">fcmaker</span> <span class="o">--</span> <span class="o">-</span><span class="n">f</span> <span class="n">randomfilename</span>
+</pre></div>
+</div>
+<p><strong>Note the extra</strong> <code class="docutils literal"><span class="pre">--</span></code> <strong>before listing any of the</strong> <a class="reference internal" href="#flags">flags</a> <strong>with the</strong> <code class="docutils literal"><span class="pre">run</span></code> <strong>command!</strong></p>
+<p>In doing so, fcmaker will connect to <a class="reference external" href="http://www.eso.org/p2">p2</a> and process all the
+OBs listed. Note that for each finding chart, you will still need to manually specify
+whether you want to upload it to <a class="reference external" href="http://www.eso.org/p2">p2</a> (or not). You can fully
+automate the creation of many finding charts if you include the <code class="docutils literal"><span class="pre">--no-upload</span></code> flag:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">fcmaker</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">upload</span> <span class="o">-</span><span class="n">f</span> <span class="n">randomfilename</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-3-creation-of-finding-charts-locally">
+<h2>Example 3: creation of finding charts locally<a class="headerlink" href="#example-3-creation-of-finding-charts-locally" title="Permalink to this headline">¶</a></h2>
+<p>fcmaker can also create finding charts <em>locally</em>, without the need to have an OB present
+on <a class="reference external" href="http://www.eso.org/p2">p2</a> first. To do so, one first needs to specify the basic OB
+parameters in a text file <code class="docutils literal"><span class="pre">whichevername</span></code> (in essence, a stripped-down version of a
+full OBX file):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># A list of basic OB parameters to generate a MUSE finding chart from scratch, locally</span>
+<span class="n">obname</span><span class="p">:</span>   <span class="n">WFM_starstuff</span>
+<span class="n">obId</span><span class="p">:</span>     <span class="mi">43</span>
+<span class="n">pi</span><span class="p">:</span>       <span class="n">jdoe</span>
+<span class="n">progId</span><span class="p">:</span>   <span class="mf">0100.</span><span class="n">Z</span><span class="o">-</span><span class="mi">9999</span>
+<span class="n">inst</span><span class="p">:</span>     <span class="n">MUSE</span>
+<span class="n">ins_mode</span><span class="p">:</span> <span class="n">WFM</span><span class="o">-</span><span class="n">AO</span><span class="o">-</span><span class="n">N</span>
+
+<span class="c1"># Target</span>
+<span class="n">equinox</span><span class="p">:</span>  <span class="n">J2000</span>
+<span class="n">epoch</span><span class="p">:</span>    <span class="mf">2000.0</span>
+<span class="n">ra</span><span class="p">:</span>       <span class="mi">21</span><span class="n">h49m07</span><span class="o">.</span><span class="mi">290</span><span class="n">s</span>
+<span class="n">dec</span><span class="p">:</span>      <span class="o">+</span><span class="mi">00</span><span class="n">d26m55</span><span class="o">.</span><span class="mi">000</span><span class="n">s</span>
+
+<span class="c1"># Acquisition</span>
+<span class="n">is_tts</span><span class="p">:</span>   <span class="kc">True</span>
+<span class="n">bos_ra</span><span class="p">:</span>   <span class="mf">34.6108</span>
+<span class="n">bos_dec</span><span class="p">:</span>  <span class="mf">42.562</span>
+<span class="n">is_gs</span><span class="p">:</span>    <span class="kc">True</span>
+<span class="n">gs_ra</span><span class="p">:</span>    <span class="mi">21</span><span class="n">h49m22</span><span class="o">.</span><span class="mi">147</span><span class="n">s</span>
+<span class="n">gs_dec</span><span class="p">:</span>   <span class="o">+</span><span class="mi">00</span><span class="n">d27m53</span><span class="o">.</span><span class="mi">336</span><span class="n">s</span>
+<span class="n">tts1_ra</span><span class="p">:</span>  <span class="mi">21</span><span class="n">h49m04</span><span class="o">.</span><span class="mi">085</span><span class="n">s</span>
+<span class="n">tts1_dec</span><span class="p">:</span> <span class="o">+</span><span class="mi">00</span><span class="n">d27m44</span><span class="o">.</span><span class="mi">457</span><span class="n">s</span>
+<span class="n">tts2_ra</span><span class="p">:</span>  <span class="mi">21</span><span class="n">h49m13</span><span class="o">.</span><span class="mi">054</span><span class="n">s</span>
+<span class="n">tts2_dec</span><span class="p">:</span> <span class="o">+</span><span class="mi">00</span><span class="n">d26m48</span><span class="o">.</span><span class="mi">509</span><span class="n">s</span>
+<span class="n">acq_pa</span><span class="p">:</span>   <span class="mi">0</span>
+
+<span class="c1"># Observation</span>
+<span class="n">noff</span><span class="p">:</span>     <span class="mi">5</span>
+<span class="n">obstype</span><span class="p">:</span>  <span class="p">[</span><span class="n">O</span> <span class="n">S</span> <span class="n">O</span> <span class="n">S</span> <span class="n">O</span><span class="p">]</span>
+<span class="c1">#SEQ.OFFSET.COORDS                 &quot;SKY&quot;</span>
+<span class="n">posang</span><span class="p">:</span>   <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">90</span> <span class="mi">0</span> <span class="mi">90</span><span class="p">]</span>
+<span class="n">off1</span><span class="p">:</span>     <span class="p">[</span><span class="mi">0</span> <span class="mf">227.243</span> <span class="o">-</span><span class="mf">226.493</span> <span class="mf">227.243</span> <span class="o">-</span><span class="mf">228.743</span><span class="p">]</span>
+<span class="n">off2</span><span class="p">:</span>     <span class="p">[</span><span class="mi">0</span> <span class="o">-</span><span class="mf">198.1</span> <span class="mf">198.85</span> <span class="o">-</span><span class="mf">198.1</span> <span class="mf">196.6</span><span class="p">]</span>
+<span class="c1">#SEQ.RETURN &quot;T&quot;</span>
+
+<span class="c1"># Finding chart parameters</span>
+<span class="n">bk_images</span><span class="p">:</span> <span class="n">DSS2</span> <span class="n">Red</span>     <span class="c1"># Bk images to download from SkyView, or local fits files</span>
+<span class="n">bk_lams</span><span class="p">:</span>   <span class="mi">550</span><span class="o">-</span><span class="mi">750</span>\<span class="n">AA</span>   <span class="c1"># The wavelength of the background images (SkyView will override)</span>
+<span class="n">data_loc</span><span class="p">:</span> <span class="n">fcm_data</span>      <span class="c1"># Relative path to the bk images </span>
+<span class="n">plot_loc</span><span class="p">:</span> <span class="n">fcm_plots</span>     <span class="c1"># Relative path to store the finding charts </span>
+                    
+</pre></div>
+</div>
+<p>The file is then fed to fcmaker with the <code class="docutils literal"><span class="pre">-f</span></code> flag, together with the <code class="docutils literal"><span class="pre">-local</span></code> flag to
+indicate that it is a <em>local run</em>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">fcmaker</span> <span class="o">-</span><span class="n">local</span> <span class="o">-</span><span class="n">f</span> <span class="n">whichevername</span>
+</pre></div>
+</div>
+<p>fcmaker will create the associated finding chart, store it where specified, and exit.</p>
+</div>
+<div class="section" id="the-other-fcmaker-flags">
+<span id="flags"></span><h2>The other fcmaker flags<a class="headerlink" href="#the-other-fcmaker-flags" title="Permalink to this headline">¶</a></h2>
+<p>A series of flag allow to fine-tune the way fcmaker works. They are:</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">--help,-h</span></code> : prints the basic help</p>
+<p><code class="docutils literal"><span class="pre">--version</span></code> : prints the fcmaker version</p>
+<p><code class="docutils literal"><span class="pre">--no-montage</span></code> : will by-pass the use of Montage. Finding charts will rotated according to the input FITS file. [not encouraged]</p>
+<p><code class="docutils literal"><span class="pre">--no-systemtex</span></code> : will use the matplotib LaTeX, rather than the system-wide LaTeX installation. Finding charts will be less pretty.</p>
+<p><code class="docutils literal"><span class="pre">--no-upload</span></code> : tell fcmaker never to try to upload the finding chart(s) to p2.</p>
+<p><code class="docutils literal"><span class="pre">--no-pdf</span></code> : tell fcmaker not to save a .pdf version of the finding chart (only a jpg one)</p>
+<p><code class="docutils literal"><span class="pre">--clear-SkyView-cache</span></code>: does as it says.</p>
+</div></blockquote>
+</div>
+<div class="section" id="the-background-images">
+<h2>The background images<a class="headerlink" href="#the-background-images" title="Permalink to this headline">¶</a></h2>
+<p>fcmaker relies on <code class="docutils literal"><span class="pre">astroquery.skyview</span></code> to download background images for the finding
+charts (if no local FITS file is provided by the user). To display the full list of
+surveys available, type in a Python shell:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astroquery.skyview</span> <span class="k">import</span> <span class="n">SkyView</span>
+<span class="n">SkyView</span><span class="o">.</span><span class="n">survey_dict</span><span class="p">[</span><span class="s1">&#39;overlay_blue&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The default background survey images for the instruments supported by fcmaker are as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li>MUSE: <code class="docutils literal"><span class="pre">DSS2</span> <span class="pre">Red</span></code></li>
+</ul>
+</div></blockquote>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">From an operational perspective, we strongly recommend to only use <code class="docutils literal"><span class="pre">DSS2</span> <span class="pre">Red</span></code> or
+<code class="docutils literal"><span class="pre">SDSSr</span></code>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modules/modules.html" class="btn btn-neutral float-right" title="The functions of fcmaker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral" title="Installing fcmaker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Frédéric P.A. Vogt.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.42',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
