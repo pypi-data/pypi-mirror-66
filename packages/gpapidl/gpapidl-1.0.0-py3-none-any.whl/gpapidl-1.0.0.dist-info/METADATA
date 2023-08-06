@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: gpapidl
+Version: 1.0.0
+Summary: Unofficial python api for google play
+Home-page: https://github.com/rehmatworks/googleplay-api
+Author: NoMore201
+Author-email: contact@rehmat.works
+License: GPL3
+Platform: UNKNOWN
+Requires-Dist: cryptography (>=2.2)
+Requires-Dist: protobuf (>=3.5.2)
+Requires-Dist: requests
+
+UNKNOWN
+
+
