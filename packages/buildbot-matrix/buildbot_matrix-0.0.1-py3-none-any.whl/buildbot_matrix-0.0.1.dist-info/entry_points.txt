@@ -1,0 +1,3 @@
+[buildbot.reporters]
+MatrixStatusPush = buildbot_matrix.reporter:MatrixStatusPush
+

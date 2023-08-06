@@ -1,0 +1,8 @@
+buildbot_matrix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+buildbot_matrix/reporter.py,sha256=6ErzJ_n2Jl4sJwf-z8u49ajJg-JynRrZjmX70xYSOdE,6862
+buildbot_matrix-0.0.1.dist-info/LICENSE,sha256=v1IA41OoAYsxIKb14wG85g4fZCRtebD5bdehukyVHSQ,1062
+buildbot_matrix-0.0.1.dist-info/METADATA,sha256=1HNicIVxsvzkVvdehpC7_l6haIcHJEmbdf4jwbM8f48,2522
+buildbot_matrix-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+buildbot_matrix-0.0.1.dist-info/entry_points.txt,sha256=FoRsQDaTYUyQXtaqMNjAQicW2PPmHHnLoFsnCtT5ZIY,83
+buildbot_matrix-0.0.1.dist-info/top_level.txt,sha256=ZJV0rAs2cdEGgRsUde7rSChQA0Z96SHuKemK6mfsOqA,16
+buildbot_matrix-0.0.1.dist-info/RECORD,,
