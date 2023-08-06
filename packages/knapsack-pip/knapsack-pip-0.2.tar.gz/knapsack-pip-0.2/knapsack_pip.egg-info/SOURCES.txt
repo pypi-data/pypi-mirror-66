@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+knapsack01/BBKnapsack.py
+knapsack01/HSKnapsack.py
+knapsack01/Knapsack.py
+knapsack01/__init__.py
+knapsack01/unittest_knapsack.py
+knapsack_pip.egg-info/PKG-INFO
+knapsack_pip.egg-info/SOURCES.txt
+knapsack_pip.egg-info/dependency_links.txt
+knapsack_pip.egg-info/not-zip-safe
+knapsack_pip.egg-info/top_level.txt
