@@ -1,0 +1,12 @@
+aftool/__init__.py,sha256=sjs7TJzNa2l035V6p-h7mTzfJGehiF9MmIvc3I6CC7k,356
+aftool/deep_learning.py,sha256=y7QKIqYsK32EH57R3fAdg5OROl9PXTdRwpWcvPv7xjQ,3003
+aftool/dynamic_graph.py,sha256=O71jTgbKl8ge0IGqCn7MW_LKzskBHLORi-Kyiq-589s,5754
+aftool/fo.py,sha256=kIUpwp4di5HsWE60OvVnroNQNXZ_qBQteJ0Twz4sH_8,5040
+aftool/geno.py,sha256=ZJHYXI5emHmr4JrTiXsb0kSfpr40x8Mr8ImVhLVyPcs,3248
+aftool/jobs.py,sha256=nSr8gKLHd5R2e7ffJDfBx4QLnvplTkGhOJexUMHgKTQ,3350
+aftool/static_graph.py,sha256=CZ1sflezKjEOwlDgUb-rmPxwBq13Ml2j_pbd7Zo71WI,2315
+aftool/tool.py,sha256=uyd4SkCBfGEaqkvtnOakveRXKXexDbAGiqSfqpxEJZw,18480
+aftool-0.1.4.dist-info/LICENSE,sha256=XR4eMdueHg4g_pDWPT5m9cGUe-QwUVLr9xGuwIJDXbc,1062
+aftool-0.1.4.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+aftool-0.1.4.dist-info/METADATA,sha256=mOH9IuCFDvstVYHUpsfrP9eGIm5oNRVXAj2pqrShxW8,1128
+aftool-0.1.4.dist-info/RECORD,,
