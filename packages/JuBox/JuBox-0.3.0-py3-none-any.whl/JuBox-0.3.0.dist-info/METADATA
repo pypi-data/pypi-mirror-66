@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: JuBox
+Version: 0.3.0
+Summary: Object oriented interface to Jupyter Notebook
+Home-page: UNKNOWN
+Author: Mikael Koli
+Author-email: koli.mikael@op.fi
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+
+# JuBox
+[![Build Status](https://travis-ci.com/Miksus/jubox.svg?branch=master)](https://travis-ci.com/Miksus/jubox)
+
+> Programmatical Jupyter Notebook API for humans
+
+> Jupyter Notebook extension, Python 3, Easy to use
+
+
+---
+
+![Example](docs/img/example.png "Jubox image")
+
+## What?
+- Pythonic approach to load, modify, run and save Jupyter Notebooks in Python code
+- This enables to quickly and easily create:
+    - Parametrized notebooks
+    - Version controlable notebooks directly from inserted code snippets, Python files or even straight from Python functions and classes.
+    - Notebooks with code generated markdown
+
+## Installation
+
+- Pip install from pip
+```shell
+pip install jubox
+```
+
+- Clone the source code and pip install:
+```shell
+git clone https://github.com/Miksus/jubox.git
+cd jubox
+pip install -e .
+```
+
+## Example
+
+See [demo](docs/Demo.ipynb) or [cook book](docs/cookbook/README.md) for detailed examples. 
+
+```python
+from jubox import JupyterNotebook, CodeCell
+
+# Load jupyter Notebook
+nb = JupyterNotebook("my_file.ipynb")
+nb.load()
+
+# Run the notebook
+# by making a copy (output is lost if raised exception)
+nb_runned = nb()
+
+# or in place (maintains exceptions in the file)
+nb(inplace=True)
+
+
+# save the file to the original file
+nb.save()
+# or to new file
+nb.to_ipynb("run_notebook.ipynb")
+
+
+# Get cells with specific tags
+param_cells = nb.get_cells(tags=["parametrized"])
+
+# Rewrite the first tagged cell with dict of parameters
+new_cell = CodeCell.from_variable_dict(run_date="2020-01-01", category="blue")
+param_cells[0].overwrite(new_cell)
+
+```
+
+
+---
+
+## Features
+- Convenient object oriented API for Jupyter Notebooks. 
+- Load, save and run notebooks and get cells containing 
+- Render Jupyter Notebooks in a Jupyter Notebook!
+
+## Test
+Pytest was chosen as testing suites. Tests are found in test directory inside the source. 
+
+## Test
+Pytest was chosen as testing suites. Tests are found in test directory inside the source. 
+
+
+---
+
+## Author
+
+* **Mikael Koli** - [Miksus](https://github.com/Miksus) - koli.mikael@gmail.com
+
+---
+## License
+
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+
