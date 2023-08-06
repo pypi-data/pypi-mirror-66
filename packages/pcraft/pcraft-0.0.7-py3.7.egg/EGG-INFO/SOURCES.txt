@@ -1,0 +1,14 @@
+README.md
+pcrafter
+setup.py
+pcraft/Functions.py
+pcraft/Plugins.py
+pcraft/PluginsData.py
+pcraft/Sessionizer.py
+pcraft/__init__.py
+pcraft/__version__.py
+pcraft.egg-info/PKG-INFO
+pcraft.egg-info/SOURCES.txt
+pcraft.egg-info/dependency_links.txt
+pcraft.egg-info/requires.txt
+pcraft.egg-info/top_level.txt

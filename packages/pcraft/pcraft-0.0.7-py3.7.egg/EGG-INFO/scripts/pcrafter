@@ -1,0 +1,230 @@
+#!/usr/local/opt/python/bin/python3.7
+import sys
+import os
+import re
+import yaml
+import pprint
+import time
+import datetime
+from scapy.all import wrpcap
+from scapy.utils import PcapWriter
+
+from pcraft.Plugins import *
+from pcraft.Functions import *
+
+
+def print_loading_plugins(plugin):
+    print("Loading Plugin: %s" % plugin)
+
+variable_rex = re.compile(r"\$([a-zA-Z0-9-_]+)") # Find variables from scripts for replacement
+def substitute_one_variable(plugins_loader, value):
+    if not isinstance(value, str):
+        return value # We only replace strings!
+    matches = variable_rex.findall(value)
+    if matches: 
+        for m in matches:
+            try:
+                sub = plugins_loader.get_plugins_data()._get(m)
+            except KeyError:
+                print("ERROR: Variable '%s' cannot be substituted since it has not been created before. Please fix your scenario." % m)
+                sys.exit(1)
+            value = value.replace("$"+m, sub, 1)
+            return value
+    else:
+        return value
+
+def substitute_variables_from_dict(plugins_loader, mydict, newdict, upk):
+    for k, v in mydict.items():
+        if isinstance(v, dict):
+            substitute_variables_from_dict(plugins_loader, v, newdict, k)
+        else:
+            try:
+                newdict[upk][k] = substitute_one_variable(plugins_loader, v)
+            except KeyError:
+                newdict[upk] = {}
+                newdict[upk][k] = substitute_one_variable(plugins_loader, v)
+                
+    return newdict
+
+def substitute_variables(plugins_loader, script):
+    newscript = {}
+
+    for key, value in script.items():
+        if isinstance(value, dict):
+            # We have a dict from YAML, we recusively search for variables
+            newdict = {}
+            newdict = substitute_variables_from_dict(plugins_loader, value, newdict, None)
+            print("Adding the new dict to key:%s" % key)
+            newscript[key] = newdict
+        else:
+            if not key.startswith("_"): # We add the variables in that script to be used right after
+                plugins_loader.get_plugins_data()._set(key, value)
+            newscript[key] = substitute_one_variable(plugins_loader, value)
+
+#    print("NS::" + str(newscript))
+    return newscript
+
+functions_rex = re.compile(r"=@=(.*?)=@=")
+def substitute_function(loaded_functions, scenariofile, script):
+    newscript = {}
+
+    one_function_rex = re.compile(r"(\S+)\((.*)\)")
+    
+    for key, value in script.items():
+        if isinstance(value, dict):
+            print("dict not supported for function calls")
+            return script
+        else:
+            matches = functions_rex.findall(value)
+            if matches:
+                for m in matches:
+#                print("Function: %s" % m)
+                    single = one_function_rex.match(m)
+                    if single:
+                        function_name = single.group(1)
+                        function_args = single.group(2)
+
+                        funcout = loaded_functions[function_name].run(scenariofile, function_args)
+                        value = value.replace("=@=" + m + "=@=", funcout, 1)
+                    else:
+                        raise ValueError("No matching function, replacement impossible. Please fix: %s" % m)
+        newscript[key] = value
+
+    return newscript
+
+def exec_plugin(scenariofile, plugins_loader, loaded_functions, plugin, script):
+#    print("========\n%s\n========" % script)
+    ans = None
+    try:
+        script = substitute_variables(plugins_loader, script)
+        script = substitute_function(loaded_functions, scenariofile, script)
+        ans = plugin.run(script)
+    except(KeyError):
+        # There is no input? Then there is no argument!
+        ans = plugin.run()
+
+    if not ans:
+        print("Error, answer never gotten from plugin, which means there is an issue executing the script:")
+        pprint.pprint(script)
+        
+    return ans
+
+
+
+loop_tracker = {} # We track our loops by name
+is_in_loop = None
+
+if __name__ == "__main__":
+    if len(sys.argv) < 3:
+        print("Syntax: %s script.yaml output.pcap" % sys.argv[0])
+        sys.exit(1)
+
+        
+    plugins_loader = Plugins(loadfunc=print_loading_plugins)
+    loaded_plugins = plugins_loader.get_loaded_plugins()
+    print("All plugins loaded!")
+    functions_loader = Functions(plugins_loader.get_plugins_data())
+    loaded_functions = functions_loader.get_loaded_functions()
+    print("All functions loaded!")
+    
+    print("Opening Script File %s" % sys.argv[1])
+    scenario_file = sys.argv[1]
+    script_fp = open(scenario_file)
+    script = yaml.load(script_fp.read(), Loader=yaml.SafeLoader)
+    script_fp.close()
+
+    next_func = script[script["start"]]["_plugin"]
+    script[script["start"]]["__dir"] = os.path.dirname(sys.argv[1])
+    print("[%s] Executing(1): %s" % (datetime.datetime.now(), script["start"]))
+#    pprint.pprint(script[script["start"]])
+    next_func, ans = exec_plugin(scenario_file, plugins_loader, loaded_functions, loaded_plugins[next_func], script[script["start"]])
+#    print("next func:%s" % next_func)
+    while next_func:
+        print("[%s] Executing: %s" % (datetime.datetime.now(), next_func))
+        #        if is_in_loop:
+        if next_func == "done":
+            break # We stop
+
+        #
+        # Time Handler: Before Start
+        #
+        try:
+            sleep_before_start = script[next_func]["_sleep"]["before-start"]
+            time.sleep(sleep_before_start)
+        except:
+            pass        
+        
+        #
+        # Loop Handler
+        #
+        if next_func.startswith("loop-"):
+            counter = 0
+            
+            try:
+                counter = loop_tracker[next_func]
+                plugins_loader.plugins_data._set("_count", counter)
+                
+                loop_tracker[next_func] -= 1
+                try:
+                    sleep_interval = script[next_func]["_sleep"]["interval"]
+                    time.sleep(sleep_interval)
+                except:
+                    pass                
+            except KeyError:
+                loop_tracker[next_func] = script[next_func]["count"] - 1
+                counter = loop_tracker[next_func]
+                plugins_loader.plugins_data._set("_count", counter + 1)
+                
+                try:
+                    plugins_loader.get_plugins_data()._set("newip", script[next_func]["newip"])
+                except:
+                    pass # Nothing to do, as we do not get the key "newip"
+
+            if counter <= 0:
+                # We are finished, we clear out newip field
+                plugins_loader.plugins_data._set("newip", 0)
+                
+                try: # We also keep the time feature within our loop
+                    sleep_once_finished = script[next_func]["_sleep"]["once-finished"]
+                    print("We are finished, we a required to sleep %s seconds" % sleep_once_finished)
+                    time.sleep(sleep_once_finished)
+                except:
+                    pass
+        
+                next_func = script[next_func]["_next"]
+            else:
+                next_func = script[next_func]["_start"] 
+                
+        if next_func == "done":
+            break # We stop
+
+#        print(script[next_func]["_plugin"])
+        script[next_func]["__dir"] = os.path.dirname(sys.argv[1])
+
+        #
+        # Time Handler: Once Finished
+        #
+        try:
+            sleep_once_finished = script[next_func]["_sleep"]["once-finished"]
+            print("We are finished, we a required to sleep %s seconds" % sleep_once_finished)
+            time.sleep(sleep_once_finished)
+        except:
+            pass
+        
+        
+        next_func, ans = exec_plugin(scenario_file, plugins_loader, loaded_functions, loaded_plugins[script[next_func]["_plugin"]], script[next_func])
+            # print("next func:%s" % next_func)
+        # print(ans)
+
+
+    # pktdump = PcapWriter(sys.argv[2], append=True, sync=True)
+    
+    # for pkt in plugins_loader.get_plugins_data().pcap:
+    #     pktdump.write(pkt)
+        
+    #     if pkt.haslayer(IP):
+    #         ips = pkt.getlayer(IP)
+    #         print(ips.src)
+
+    wrpcap(sys.argv[2], plugins_loader.get_plugins_data().pcap)
+    
