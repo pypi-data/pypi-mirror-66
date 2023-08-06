@@ -1,0 +1,5 @@
+__title__ = 'django_gitlab'
+__version__ = '0.1.2'
+__author__ = 'Tim Poffenbarger'
+__license__ = 'MIT'
+__copyright__ = 'Copyright 2020 Tim Poffenbarger'

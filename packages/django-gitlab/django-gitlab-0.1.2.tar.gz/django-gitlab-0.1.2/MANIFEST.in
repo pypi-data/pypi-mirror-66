@@ -1,0 +1,6 @@
+recursive-include django_gitlab/templates *.html
+recursive-include docs *
+include LICENSE README.md CHANGELOG.md
+recursive-include tests *.py
+
+exclude manage.py

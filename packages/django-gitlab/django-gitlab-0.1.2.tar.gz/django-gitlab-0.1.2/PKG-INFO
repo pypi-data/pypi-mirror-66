@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: django-gitlab
+Version: 0.1.2
+Summary: Simple integration for GitLab and Django
+Home-page: https://gitlab.com/poffey21/django-gitlab/
+Author: Tim Poffenbarger <poffey21@gmail.com>
+Author-email: poffey21@gmail.com
+License: BSD
+Description: Provides users an easy way to get started with GitLab and Django
+Keywords: django,gitlab,unleash,feature flags,sentry,error tracking
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Environment :: Web Environment
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 1.11
+Classifier: Framework :: Django :: 2.0
