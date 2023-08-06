@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "tfjeeves"
+version = "0.2.6"
+description = "Utilities to help train models with tensorflow2 and keras"
+authors = ["Soumendra Dhanee <soumendra@gmail.com>"]
+maintainers = ["Soumendra Dhanee <soumendra@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/soumendra/tfjeeves"
+repository = "https://github.com/soumendra/tfjeeves"
+documentation = "https://github.com/soumendra/tfjeeves"
+license = "MIT"
+exclude = ["*config*", "*json*", "*yaml*"]
+packages = [{include = "tfjeeves"}]
+
+[tool.poetry.dependencies]
+python = "3.7.6"
+boto = "^2.49.0"
+py3nvml = "^0.2.5"
+attrdict = "^2.0.1"
+loguru = "^0.4.0"
+hyperdash = "^0.15.3"
+tensorflow = "2.1.0"
+tensorflow-estimator = "2.1.0"
+tqdm = "^4.41.1"
+click = "^7.0"
+pillow = "7.1.1"
+pandas = "^1.0.0"
+matplotlib = "^3.2.1"
+plot_keras_history = "^1.1.23"
+boto3 = "^1.12.33"
+scikit-learn = "^0.22.2"
+joblib = "^0.14.1"
+plotnine = "^0.6.0"
+tf-explain = "^0.2.1"
+black = "^19.10b0"
+tensordash = "^0.1.0"
+efficientnet = "^1.1.0"
+pyyaml = "^5.3.1"
+h5py = "^2.10.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+ipython = "^7.10.2"
+pylint = "^2.4.4"
+black = {version = "^19.10b0", allow-prereleases = true}
+mypy = "^0.761"
+flake8 = "^3.7.9"
+streamlit = "^0.53.0"
+cifar2png = "^0.0.4"
+split_folders = "^0.3.1"
+isort = "^4.3.21"
+
+[tool.poetry.scripts]
+train = "train:run"
+fix = "scripts:fix"
+update_categories = "scripts:update_categories"
+grad_cam = "scripts:grad_cam"
+generate_triplets = "scripts:generate_triplets"
+generate_vista_triplets = "scripts:generate_vista_triplets"
+
+[build-system]
+requires = ["poetry>=1.0.0"]
+build-backend = "poetry.masonry.api"
