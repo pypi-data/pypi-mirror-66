@@ -1,0 +1,10 @@
+django-ibmcloud-object-storage/IBMCloud.py,sha256=4nRHb6xbhaKHyCN86BhUdmmgIBSHflZvZaqdov0fVXQ,7534
+django-ibmcloud-object-storage/__init__.py,sha256=ua_TF_9O034E2-AgnLLYuq9nenb98Trm1BNAbgSy1Yo,54
+django-ibmcloud-object-storage/storage.py,sha256=0BM7TGeN9eiVPaxUVCoR6qwf_AUIfdobUDNK4zICgDQ,18217
+django-ibmcloud-object-storage/test.py,sha256=O3_uIFK5hbhCt87gyfSO-wUtlcrVtKUfklUGD6GBKas,7672
+django_ibm_cloud_storage-0.0.1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+django_ibm_cloud_storage-0.0.1.dist-info/METADATA,sha256=zWNbnqiBiiXsPEgwYI2gP9AFsyIrmgH6GTEgsuRr4PA,320
+django_ibm_cloud_storage-0.0.1.dist-info/RECORD,,
+django_ibm_cloud_storage-0.0.1.dist-info/WHEEL,sha256=BTHHj6QhsHpWhRUrxioIvCAgjx81u-a8gkPTO6bi_A0,116
+django_ibm_cloud_storage-0.0.1.dist-info/metadata.json,sha256=DlOlgAVuzIDyc9sJm_O2qYZs2-wyekKW_4awIexYkaY,509
+django_ibm_cloud_storage-0.0.1.dist-info/top_level.txt,sha256=mw8tnAYGAyGsK3kDzAj76Zn9_w5UTopws_V3uxVMNgw,31
