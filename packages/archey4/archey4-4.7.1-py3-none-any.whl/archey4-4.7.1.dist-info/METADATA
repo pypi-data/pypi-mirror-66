@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: archey4
+Version: 4.7.1
+Summary: Archey is a simple system information tool written in Python
+Home-page: https://github.com/HorlogeSkynet/archey4
+Author: Samuel FORESTIER
+Author-email: dev+archey@samuel.domains
+License: GPLv3
+Keywords: archey python3 linux system-information monitoring
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: System
+Description-Content-Type: text/plain
+Requires-Dist: distro
+Requires-Dist: netifaces
+
+Maintained fork of the original Archey Linux system tool originally written by Melik Manukyan.
+
+
