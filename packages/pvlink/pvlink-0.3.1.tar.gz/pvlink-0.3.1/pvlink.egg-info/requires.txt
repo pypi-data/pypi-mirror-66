@@ -1,0 +1,4 @@
+ipywidgets>=7.0.0
+psutil>=4.0.0
+twisted>=19.2.1
+wslink>=0.1.13

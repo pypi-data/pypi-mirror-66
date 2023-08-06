@@ -1,0 +1,2 @@
+recursive-include pvlink/static *.*
+include pvlink.json
