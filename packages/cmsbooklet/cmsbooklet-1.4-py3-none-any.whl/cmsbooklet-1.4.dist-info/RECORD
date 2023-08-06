@@ -1,0 +1,16 @@
+cmsbooklet/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cmsbooklet/cmsbooklet.py,sha256=XDacwGELi7hAwXO9h-yoaFxGXDd76lXN7lXmpU2rLgo,24737
+cmsbooklet/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cmsbooklet/templates/cms-contest/contest.tpl,sha256=EBrr9lm2sy8rGBCLnaeIqRDuisIBlwkkmRwM4Ma8jLk,598
+cmsbooklet/templates/cms-contest/defaults.yaml,sha256=umtBieMb_0P1FA0WDU38nefc8Z2p88sA6EbOcGTvyKM,166
+cmsbooklet/templates/cms-contest/problem.tpl,sha256=gVBhw_vZIGNyVznumGKtMPBKkqYF7BQjnmB6fWtjHeI,177
+cmsbooklet/templates/cms-contest/data/cms-contest.cls,sha256=_i-ANa1OSRnNTDRsLh2vsrWgcogH168NXVTb71w9pfQ,19042
+cmsbooklet/templates/cms-contest/data/locale/english.tex,sha256=EcwTu1bt3atUaj7dAvtBy7HP5_ghtEQhhcB9KY_eMpw,1481
+cmsbooklet/templates/cms-contest/data/locale/italian.tex,sha256=3TJOcM_pEkHFEig3ucfSO5hZ8oSoAEf6JAUYyO7jP1w,1597
+cmsbooklet-1.4.data/scripts/mktesto,sha256=rSKMXgau1RfnVbUA9mLg9Y5x6Ta9nbTaRw84c7nRSAA,358
+cmsbooklet-1.4.dist-info/LICENSE,sha256=566LXaF3CUdLolMWRBvAZBSIQc8QHn7vMYw8PuWggns,34499
+cmsbooklet-1.4.dist-info/METADATA,sha256=aAQ-igyxexovoomd2feIcRNRpFUSHvNH2734mtDko_4,306
+cmsbooklet-1.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+cmsbooklet-1.4.dist-info/entry_points.txt,sha256=iS554fTr8_xQScMRUtf1mMGCxMAr6F-oRGapYTkZBmg,59
+cmsbooklet-1.4.dist-info/top_level.txt,sha256=-6EOGcaQCuGKsooxR0ERPAmqhXEY8VCB6n0qoPAierc,11
+cmsbooklet-1.4.dist-info/RECORD,,
