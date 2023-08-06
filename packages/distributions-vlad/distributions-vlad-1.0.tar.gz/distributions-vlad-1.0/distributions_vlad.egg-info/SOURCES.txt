@@ -1,0 +1,10 @@
+setup.py
+distributions-vlad/Binomialdistribution.py
+distributions-vlad/Gaussiandistribution.py
+distributions-vlad/Generaldistribution.py
+distributions-vlad/__init__.py
+distributions_vlad.egg-info/PKG-INFO
+distributions_vlad.egg-info/SOURCES.txt
+distributions_vlad.egg-info/dependency_links.txt
+distributions_vlad.egg-info/not-zip-safe
+distributions_vlad.egg-info/top_level.txt
