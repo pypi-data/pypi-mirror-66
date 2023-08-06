@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html><head>
+	<meta name="viewport" content="width=device-width,initial-width=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="assets/style.css">
+	<!-- Removed custom title -->
+    <!-- Meta injected by Custom Start Page for SEO purposes -->
+    <title>{{ title }}</title>
+    <meta name="description" content="Jazz is a free, open source and customisable start page for your browser, hosted by Custom Start Page.">
+  </head>
+  <span id="warning-container">
+    <i data-reactroot=""></i>
+  </span>
+  <link type="text/css" id="dark-mode" rel="stylesheet" href="">
+  <style type="text/css" id="dark-mode-custom-style"></style>
+
+  <body>
+
+	<main>
+      {% for key,value in bookmarks.items() %}
+      <section>
+        <div class="box"><span class="title">{{ key }}</span>
+          <div class="content">
+            {% for link_name,link in value.items() %}
+            <a href="{{link}}"><span class="links">{{link_name}}</span></a>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+      {% endfor %}
+	  
+
+    </main>
+	<script src="assets/script.js"></script>
+
+  </body>
+</html>
