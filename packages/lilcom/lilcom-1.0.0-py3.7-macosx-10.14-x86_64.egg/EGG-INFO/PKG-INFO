@@ -1,0 +1,110 @@
+Metadata-Version: 2.1
+Name: lilcom
+Version: 1.0.0
+Summary: Lossy-compression utility for sequence data in NumPy
+Home-page: https://github.com/danpovey/lilcom
+Author: Daniel Povey, Soroush Zargar, Mahsa Yarmohammadi, Jian Wu
+Author-email: dpovey@gmail.com
+License: MIT
+Description: # lilcom
+        
+        
+        This package lossily compresses floating-point NumPy arrays
+        into byte strings, with an accuracy specified by the user.
+        The main anticipated use is in machine learning applications, for
+        storing things like training data and models.
+        
+        This package requires Python 3 and is not compatible with Python 2.
+        
+        ## Installation
+        
+        ### Using PyPi
+        
+        From PyPi you can install this with just
+        ```
+        pip3 install lilcom
+        ```
+        
+        
+        ### Using Github Repository
+        To install lilcom first clone the repository;
+        ```
+        
+        git clone git@github.com:danpovey/lilcom.git
+        ```
+        
+        then run setup with `install` argument.
+        ```
+        python3 setup.py install
+        ```
+        (you may need to add the `--user` flag if you don't have system privileges).
+        To test it, you can then cd to `test` and run:
+        
+        ```
+        python3 test_interface.py
+        ```
+        
+        ### How to use this compression method
+        
+        The most common usage pattern will be as follows (showing Python code):
+        ```
+        # Let a be a NumPy ndarray with type np.float32 or np.float64
+        
+        # compress a.
+        
+        import lilcom
+        a_compressed = lilcom.compress(a)
+        
+        # decompress a
+        a_decompressed = lilcom.decompress(a_compressed)
+        ```
+        Note: the compression is lossy so `a_decompressed` will not be
+        exactly the same as `a`.  The amount of error is determined
+        by the optional `tick_power` argument to lilcom.compress();
+        the maximum error per element is 2**(tick_power-1), e.g.
+        for tick_power=8, the maximum error per element is 1/512.
+        
+        The algorithm regresses each element on the previous
+        element (for a 1-d array) or, for general n-d arrays,
+        all the previous elements along all the axes, i.e.
+        we regress element a[i,j] on a[i-1,j] and a[i,j-1].
+        The regression coefficients are global
+        
+        
+        ## Technical details
+        
+        The algorithm is based on LPC prediction: LPC coefficients are estimated and it
+        is the residual from the LPC prediction that is coded.  The LPC coefficients are
+        not transmitted; they are worked out from the past samples.  The LPC order may
+        be chosen by the user in the range 0 to 14; the default is 4.  The residual is
+        coded with an an exponent and a mantissa, like floating point numbers.  Only 1
+        bit per sample is used to encode the exponent; the reason this is feasible is
+        that it is the *difference* in the exponent from sample to sample that is
+        actually encoded.  The algorithm works out the lowest codable sequence of
+        exponents such that the mantissas are in the codable range.
+        
+        Because the LPC coefficients are estimated from past samples, this algorithm
+        is very vulnerable to transmission errors: even a single bit error can
+        make the entire file unreadable.  This is acceptable in the kinds of
+        applications we have in mind (mainly machine learning).
+        
+        The algorithm requires an exact bitwise correspondence between the LPC
+        computations when compressing and decompressing, so all computations are done in
+        integer arithmetic and great care is taken to ensure that all arithmetic
+        operations produce results that are fully defined by the C standard (this means
+        that we need to avoid signed integer overflow and signed right-shift).
+        
+        The compression quality is very respectable; at the same bit-rate as MP3 we get
+        better PSNR, i.e. less compression noise.  (However, bear in mind that MP3 is
+        optimized for perceptual quality and not PSNR).  See
+        `test/results/reconstruction-test.py` which does these comparisons.
+        
+        
+Keywords: compression numpy
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Archiving :: Compression
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
