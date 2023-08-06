@@ -1,0 +1,6 @@
+[console_scripts]
+pandoc-annotate-codeblocks = entangled.annotate:main
+pandoc-bootstrap = entangled.bootstrap:main
+pandoc-doctest = entangled.doctest_main:main
+pandoc-tangle = entangled.tangle:main
+
