@@ -1,0 +1,10 @@
+cockroach_poker-0.1.0.data/scripts/cockroach-host,sha256=wosASQAbEv4tf9EQfhwZnR98OGAePpsxwqYo-_NtTII,4153
+cockroach_poker-0.1.0.data/scripts/cockroach-player,sha256=BXPRSEeHMxNMF49eNjoS_Mg8-oyLZiEUCllB6yC6YUI,5473
+cockroachpoker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cockroachpoker/game.py,sha256=YY-onpNVwJ9TRAyjYrRgG4KKita9jZojjCn_FZsU6us,4413
+cockroachpoker/signed_message.py,sha256=gCgIS27ZZbuf6PuodDs7TqmUuJLzu8l3Q6Pjwktp3ug,506
+cockroach_poker-0.1.0.dist-info/LICENSE,sha256=sCQ_Q6fvj5VgP6rVGzv5yXpEsLJP57LpogXJBejuZak,1083
+cockroach_poker-0.1.0.dist-info/METADATA,sha256=i8UeVAFB3TqG5PSClw0Nek6CWnBqJooJDbWt7z8U1jo,367
+cockroach_poker-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+cockroach_poker-0.1.0.dist-info/top_level.txt,sha256=gfu9P5BYNCunJRSBB-LrrtWR-GzW6lrMRz4xfjve48A,15
+cockroach_poker-0.1.0.dist-info/RECORD,,
