@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyship
+Version: 0.0.2
+Summary: pyship - ship python apps 
+Home-page: https://github.com/jamesabel/pyship
+License: UNKNOWN
+Author: James Abel
+Author-email: j@abel.co
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: attrs
+Requires-Dist: balsa
+Requires-Dist: pyinstaller
+Requires-Dist: sundry
+Requires-Dist: typeguard
+Requires-Dist: requests
+Requires-Dist: semver
+Requires-Dist: toml
+Requires-Dist: ismain
