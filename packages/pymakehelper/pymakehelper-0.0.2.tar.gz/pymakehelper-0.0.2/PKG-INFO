@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: pymakehelper
+Version: 0.0.2
+Summary: pymakehelper helps doing things with the make system
+Home-page: https://veltzer.github.io/pymakehelper
+Author: Mark Veltzer
+Author-email: mark.veltzer@gmail.com
+Maintainer: Mark Veltzer
+Maintainer-email: mark.veltzer@gmail.com
+License: MIT
+Download-URL: https://github.com/veltzer/pymakehelper
+Description: pymakehelper helps doing things with the make system
+Keywords: make,scons
+Platform: python3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Utilities
+Requires-Python: >=3.4
