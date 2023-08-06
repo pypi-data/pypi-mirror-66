@@ -1,0 +1,6 @@
+proto_square_api/__init__.py,sha256=lMMAhMACkY-UBPQqncrKqnDPG7VG5CXrozf1Z4Na-2Q,465
+proto_square_api/squareup_pb2.py,sha256=RvYbzdiNiPs4wFTVnddpqhqGTHGKQzQpz7lwmKb9sww,974100
+proto_square_api/squareup_pb2_twirp.py,sha256=F3xk5pF95AIUA3J3pBaSto4r2RS5tQAGp6Wr4vN-7S0,6093
+proto_square_api-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+proto_square_api-0.1.0.dist-info/METADATA,sha256=DNH2w9BWwxFIXFyKfcWRql5lChOxNyH8UU6X6Zrbr3A,294
+proto_square_api-0.1.0.dist-info/RECORD,,
