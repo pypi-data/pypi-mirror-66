@@ -1,0 +1,12 @@
+photomatrix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+photomatrix/__main__.py,sha256=avb0YUYmsZlI5FIabgss9s8Gy0y2iRvt-Nwh_kshozQ,385
+photomatrix/arguments.py,sha256=6hE-GNhwFsVdmxdP1g_m8cn8Q0VYuSbv8lHwerFeYR4,10008
+photomatrix/exif.py,sha256=mzOSiX3BI-P_cKPkIxNaAak7WpBsk1iVjW8Z6uLwZDc,475
+photomatrix/matrix.py,sha256=qawdBT-rYN7twE8wWeoZIan8RH6GmWNdaevDI7Fbr3k,1838
+photomatrix/preprocess.py,sha256=4XaSvy77RZ22xn9es5mIToW4frpA09VhB1xMRgnSLSk,1497
+photomatrix/text.py,sha256=Ze6BbHj_X9OSSs3WkPWEiJlpfedMMvoV7E5Q3rNTlNE,2287
+photomatrix-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+photomatrix-0.0.1.dist-info/METADATA,sha256=CPaPPIixQJcqMOF3Xk2IpNjBaoZ_S_GZh2VREALbQf8,1052
+photomatrix-0.0.1.dist-info/WHEEL,sha256=pqI-DBMA-Z6OTNov1nVxs7mwm6Yj2kHZGNp_6krVn1E,92
+photomatrix-0.0.1.dist-info/top_level.txt,sha256=8WCNpksgwGey_HdgLR_isf9h-IKmt8j0m8YWC5xzVpk,12
+photomatrix-0.0.1.dist-info/RECORD,,
