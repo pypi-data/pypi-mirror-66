@@ -1,0 +1,9 @@
+jarvis_dicom/__init__.py,sha256=OJ3J8zqpcJ4YIx5OaJoCBXX7mEA8g3ENJ5XQJSXVAcI,118
+jarvis_dicom/main.py,sha256=tojYkUywk-xPPn2aaGyKsexyjoDYI4B0yX-jAomDAlY,13169
+jarvis_dicom/parser.py,sha256=OsLDJovS4enblmUUlFTRwIvk8-l1DqtYB67HYj4QDfc,6512
+jarvis_dicom/reader.py,sha256=vLc6XrQy88Ei-flzFkMIwySXNBpusErmrFOeWgdeh3o,1692
+jarvis_md_dicom-0.0.1a1.dist-info/METADATA,sha256=eKk8JI6RCFtK0QfvXrJISXozWOJwKa2AfdP-I_pXuv8,309
+jarvis_md_dicom-0.0.1a1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+jarvis_md_dicom-0.0.1a1.dist-info/entry_points.txt,sha256=tdPmCumHEBtgM7R5YKmSJRPd5j0Xbc2apYUsKDB-VmQ,38
+jarvis_md_dicom-0.0.1a1.dist-info/top_level.txt,sha256=NOYXLNgTMYozJKqQnPst5nYtRck5p6N9DYHdBNi1THA,13
+jarvis_md_dicom-0.0.1a1.dist-info/RECORD,,

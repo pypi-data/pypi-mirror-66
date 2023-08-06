@@ -1,0 +1,3 @@
+[load_funcs]
+dcm = jarvis_dicom:load
+
