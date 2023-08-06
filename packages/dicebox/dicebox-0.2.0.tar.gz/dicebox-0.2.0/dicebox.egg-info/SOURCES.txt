@@ -1,0 +1,10 @@
+README.md
+setup.py
+dicebox/__init__.py
+dicebox/core.py
+dicebox/dnd.py
+dicebox.egg-info/PKG-INFO
+dicebox.egg-info/SOURCES.txt
+dicebox.egg-info/dependency_links.txt
+dicebox.egg-info/requires.txt
+dicebox.egg-info/top_level.txt
