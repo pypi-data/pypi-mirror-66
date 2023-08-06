@@ -1,0 +1,8 @@
+pytest_automock/__init__.py,sha256=1lLWe5e78oKLxfNflb_u2lLhhXzKEFt7F_6OslMIipo,109
+pytest_automock/mock.py,sha256=CxBKkisluvFFoRvRz36LpeevZ3MsBXvCcSrnaJ8ELwE,7568
+pytest_automock/plugin.py,sha256=Mz0TxVQDBPvZwAd5watgAru-fd49ljRfbdALSBsJqf8,3105
+pytest_automock-0.7.0.dist-info/METADATA,sha256=YEig_sLOigMfHrHZJhojwyaMerb_10fi_QSBqIByVAk,7555
+pytest_automock-0.7.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pytest_automock-0.7.0.dist-info/entry_points.txt,sha256=LyOtL_bb_ERswxXdIilva8jcf9rKGGZKk0nnXFgu044,46
+pytest_automock-0.7.0.dist-info/top_level.txt,sha256=1yJzut71yStBG4AWc-5sRDs0j6r3imMSMEw08eqYMlU,16
+pytest_automock-0.7.0.dist-info/RECORD,,
