@@ -1,0 +1,3 @@
+[mkdocs.plugins]
+ko-fi-button = mkdocs_ko_fi_button_plugin.mkdocs_ko_fi_button_plugin:KofiButtonPlugin
+
