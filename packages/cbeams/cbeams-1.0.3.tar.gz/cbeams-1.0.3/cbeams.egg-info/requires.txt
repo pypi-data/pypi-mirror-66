@@ -1,0 +1,2 @@
+blessings>=1.6
+docopt>=0.6.1
