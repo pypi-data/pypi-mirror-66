@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: dingtalk-lite
+Version: 1.0.2
+Summary: Lite SDK for Dingtalk
+Home-page: http://example.com
+Author: Seamus
+Author-email: seamusmore@163.com
+License: MIT
+Keywords: dingtalk,dingding
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+#Dingtalk lite SDK
+##A lite Dingtalk SDK to simplify sending message
+#Example
+###To send a message with markdown format:
+```
+text = "### I am the header\n" + \
+       "#### This is a test message, do not worry.\n" + \
+       "![girl](https://c-ssl.duitang.com/uploads/item/201605/08/20160508134621_KjzNa.thumb.700_0.gif)\n" + \
+       "1. This is the first line\n" + \
+       "2. This is the second line\n"
+token = 'your-dingtalk-robot-token'
+client = Client("https://oapi.dingtalk.com/robot/send")
+response = client.send_markdown(token, '[Ambari Alert]', text)
+```
+###If you want to @ somebody:
+```
+token = 'your-dingtalk-robot-token'
+client = Client("https://oapi.dingtalk.com/robot/send")
+at_mobiles = ['185xxxxxxxx', '137xxxxxxxx']
+response = client.send_text(token, "[Ambari Alert] This is a test message, do not worry.", at_mobiles)
+```
+###See client_test.py to get more usages
+
