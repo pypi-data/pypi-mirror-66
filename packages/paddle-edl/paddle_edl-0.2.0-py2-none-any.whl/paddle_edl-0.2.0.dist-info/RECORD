@@ -1,0 +1,17 @@
+paddle_edl/__init__.py,sha256=0VZX0LjwnMDtsjtwAbY-srruUpfTl4DxsGgAZfhi2zE,610
+paddle_edl/collective/__init__.py,sha256=Wg35JINTwCCrXtg-jyvUmem1FTYSYK5aXrhWRu-nATY,610
+paddle_edl/collective/cloud_utils.py,sha256=sWHolQkwWb6-dYEnpHkjJFjVmxAc2dLmYKCotvSOPcY,2825
+paddle_edl/collective/distribute_program.py,sha256=1xJHnrEEY_fzNK3nh3aTohcxLMn9aBpjQ4GKWAGtqPY,766
+paddle_edl/collective/edl_runner.py,sha256=X4HVsU_V9m8khRdOwt0GJ1_SYCWPiiZA38zULQFfyjo,1498
+paddle_edl/collective/edl_utils.py,sha256=vFn71yYIOr2CAX49R4ti9Qo20Eq043kJT5-6KkjSs_8,6322
+paddle_edl/collective/http_store.py,sha256=FqbSrmrC5bfSPb90cEoyXrmdxQMNuzDyv6ll3AZg45Q,4264
+paddle_edl/collective/launch.py,sha256=EjO0-Z5sWXVP21RZdqzNE5kaarbqv3_SfqI-j_I29eM,6942
+paddle_edl/collective/utils.py,sha256=TJL3ZUGuVPqFnhs-t5nA-GpNN9iaEzAsMWnShBLBiF8,11720
+paddle_edl/demo/__init__.py,sha256=0VZX0LjwnMDtsjtwAbY-srruUpfTl4DxsGgAZfhi2zE,610
+paddle_edl/demo/collective/__init__.py,sha256=0VZX0LjwnMDtsjtwAbY-srruUpfTl4DxsGgAZfhi2zE,610
+paddle_edl/demo/collective/job_client_demo.py,sha256=wV8qMWWn1_XnnnVT4gQLKzZTE-BlMiPyR-2ixaIp22k,6595
+paddle_edl/demo/collective/job_server_demo.py,sha256=fNskqtaq7Bju9UHP3P7BwaaCBb-vd-kAxviu_cdjPZc,6667
+paddle_edl-0.2.0.dist-info/METADATA,sha256=20KIftrlFv2TpSVjHoB9JA7r0J7MX_X8NNRstkqSoBg,1297
+paddle_edl-0.2.0.dist-info/WHEEL,sha256=Ph_z28wTcU7HnQwSQ6yCQ-zkcGK4h4ehDfP8b6UoHVE,92
+paddle_edl-0.2.0.dist-info/top_level.txt,sha256=JRL1kY9JSz3rhM49MuPDyY5Q9EQdhHYiQQqWjBQ4ZP0,11
+paddle_edl-0.2.0.dist-info/RECORD,,
