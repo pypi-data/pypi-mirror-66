@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: recipebook
+Version: 0.1.1
+Summary: I'm writing a cookbook to learn Python, Postgresql, and other potential tools.
+Home-page: https://github.com/mikemartino/recipebook
+License: Apache-2.0
+Author: Mike Martino
+Author-email: mikemartino86@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Project-URL: PyPI, https://pypi.org/project/recipebook/
+Project-URL: Repository, https://github.com/mikemartino/recipebook
+Description-Content-Type: text/markdown
+
+recipebook
+==========
+
+I'm writing a cookbook to learn Python, Postgresql, and other potential tools.
+
+# Prerequisites
+
+Install `poetry` for managing virtual environment (similar to `venv` or `pipenv`):
+
+    ```
+    curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python3
+    ```
+
+Read more about `poetry`: https://python-poetry.org/
+
+_Optional_: I've installed `pyenv` to manage versions of Python on my system. Read more about `pyenv`: https://github.com/pyenv/pyenv
+
+# Build
+
+```
+poetry install
+poetry run example
+```
+
+# Package
+
+```
+poetry build
+```
+
+# Deploy
+
+```
+poetry publish
+```

@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "recipebook"
+version = "0.1.1"
+description = "I'm writing a cookbook to learn Python, Postgresql, and other potential tools."
+authors = ["Mike Martino <mikemartino86@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/mikemartino/recipebook"
+
+[tool.poetry.urls]
+"PyPI" = "https://pypi.org/project/recipebook/"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+example = "recipebook.example:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
