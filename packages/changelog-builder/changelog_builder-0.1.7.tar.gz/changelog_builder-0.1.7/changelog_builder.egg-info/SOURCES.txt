@@ -1,0 +1,8 @@
+README.md
+changelog_builder.py
+setup.py
+changelog_builder.egg-info/PKG-INFO
+changelog_builder.egg-info/SOURCES.txt
+changelog_builder.egg-info/dependency_links.txt
+changelog_builder.egg-info/entry_points.txt
+changelog_builder.egg-info/top_level.txt
