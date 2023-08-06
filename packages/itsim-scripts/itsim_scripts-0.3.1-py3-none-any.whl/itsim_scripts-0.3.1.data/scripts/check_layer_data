@@ -1,0 +1,91 @@
+#!python
+from argparse import ArgumentParser, RawTextHelpFormatter as ArgFormatter
+from locale import setlocale, LC_ALL
+from urllib.parse import unquote
+import requests
+
+
+def point_str_to_reverse_point_float(lat_str, lon_str):
+    return float(lon_str), float(lat_str)
+
+
+def main(sys_args):
+    setlocale(LC_ALL, '')
+    parser = ArgumentParser(description="""\
+Check the defined shape quantity elements for the specified layer.
+Use either center and radius, or points.""", formatter_class=ArgFormatter)
+    parser.add_argument('-u', '--url', metavar='back_url', dest='backend_url', type=str, required=True,
+                        help="server backend api URL (with port if necessary)")
+    parser.add_argument('-t', '--itsim-token', metavar='user_token', dest='user_token', type=str,
+                        help="itsim user token to authenticate to the backend")
+    parser.add_argument('-f', '--feed', metavar='feed_id', dest='feed_id', type=str, required=True,
+                        help="feed id")
+    parser.add_argument('-l', '--layer', metavar='layer', dest='layers', type=str, nargs='+', required=True,
+                        help="layer_name:property_name format. Can be specified multiple times separated by space")
+    parser.add_argument('-c', '--center', metavar='center', dest='center', type=str, required=False, default=None,
+                        help="center point (latitude,longitude format) for the circle shape")
+    parser.add_argument('-r', '--radius', metavar='radius', dest='radius', type=int, required=False, default=None,
+                        help="radius (in meters) of the circle shape")
+    parser.add_argument('-p', '--points', metavar='points', dest='points', type=str, required=False, default=None,
+                        help="unique polygon points (latitude,longitude/latitude,longitude/… format)")
+    args = parser.parse_args(args=sys_args)
+    # Parameters validation
+    for layer in args.layers:
+        if ':' not in layer:
+            parser.error("Layer {} format is incorrect".format(layer))
+    center = radius = points = None
+    if not (args.center and args.radius) and not args.points:
+        parser.error("One of center + radius or points is required")
+    elif args.center and args.points:
+        parser.error("Choose between center + radius or points but not both")
+    elif args.center:
+        center = args.center.split(",")
+        if len(center) != 2:
+            parser.error("Center should be in the latitude,longitude format")
+        radius = args.radius
+    elif args.points:
+        points = args.points.split("/")
+        if len(points) < 3:
+            parser.error("Points should have at least 3 points and be in the latitude,longitude/latitude,longitude/… format")
+        points = list(map(lambda p: p.split(","), points))
+        for point in points:
+            if len(point) != 2:
+                parser.error("A point should be in the latitude,longitude format")
+    url = args.backend_url + '/api/feeds/{}/layer/actions/shape_intersection/invoke'.format(args.feed_id)
+    headers = {
+        'user-token': unquote(args.user_token),
+    }
+    body_dict = {
+        'data': {
+            'type': 'shape_layers',
+            'attributes': {
+                'layers': {},
+            },
+        },
+    }
+    layers = {name: prop for (name, prop) in [name_prop.split(':') for name_prop in args.layers]}
+    for layer_name, layer_prop in layers.items():
+        body_dict['data']['attributes']['layers'][layer_name] = [layer_prop]
+    if center and radius:
+        body_dict['data']['attributes'].update({
+            'center': point_str_to_reverse_point_float(*center),
+            'radius': int(radius),
+        })
+    else:
+        body_dict['data']['attributes']['points'] = list(map(lambda point: point_str_to_reverse_point_float(*point), points))
+    resp = requests.put(url, headers=headers, json=body_dict)
+    resp.raise_for_status()
+    values = resp.json()['data']['attributes']['values']
+    for layer_name, layer_prop in layers.items():
+        print("Quantity for {color_layer}{layer}{color_clear} is {color_value}{value:n}{color_clear}".format(
+            layer=layer_name,
+            value=int(values[layer_name][layer_prop]),
+            color_clear='\x1B[0m',
+            color_layer='\x1B[1;34m',
+            color_value='\x1B[1;32m',
+        ))
+
+
+if __name__ == '__main__':
+    from sys import argv
+    main(argv[1:])

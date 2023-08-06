@@ -1,0 +1,83 @@
+{
+    "pop": {
+        "layer_name": {
+            "fr": "Densité de population",
+            "en": "Population density",
+            "es": "Densidad de población"
+        },
+        "layer_unit": {
+            "fr": "hab/{1}²",
+            "en": "people/{1}²",
+            "es": "hab/{1}²"
+        },
+        "layer_value_name": {
+            "fr": "Population desservie",
+            "en": "Catchment population",
+            "es": "Población servida"
+        },
+        "layer_value_description": {
+            "fr": "Nombre d’habitants inclus dans les aires d’influence des arrêts.",
+            "en": "Number of inhabitants covered by stop catchment areas.",
+            "es": "Número de habitantes incluidos en las zonas de influencia de las paradas."
+        },
+        "layer_value_unit": {
+            "fr": "hab.",
+            "en": "inhab.",
+            "es": "hab."
+        }
+    },
+    "emp": {
+        "layer_name": {
+            "fr": "Densité d'emplois",
+            "en": "Job density",
+            "es": "Densidad de empleos"
+        },
+        "layer_unit": {
+            "fr": "emplois/{1}²",
+            "en": "job/{1}²",
+            "es": "empleos/{1}²"
+        },
+        "layer_value_name": {
+            "fr": "Emplois desservis",
+            "en": "Catchment jobs",
+            "es": "Empleos servidos"
+        },
+        "layer_value_description": {
+            "fr": "Nombre d’emplois inclus dans les aires d’influence des arrêts.",
+            "en": "Number of workers covered by stop catchment areas.",
+            "es": "Número de puestos de trabajo incluidos en las áreas de influencia de los juicios."
+        },
+        "layer_value_unit": {
+            "fr": "emp.",
+            "en": "jobs",
+            "es": "emp."
+        }
+    },
+    "pot": {
+        "layer_name": {
+            "fr": "Potentiel",
+            "en": "Potential",
+            "es": "Potencial"
+        },
+        "layer_unit": {
+            "fr": "voyageurs/{1}²",
+            "en": "passengers/{1}²",
+            "es": "viajeros/{1}²"
+        },
+        "layer_value_name": {
+            "fr": "Voyageurs potentiels",
+            "en": "Potential passengers",
+            "es": "Viajeros potenciales"
+        },
+        "layer_value_description": {
+            "fr": "Nombre de voyageurs potentiels, inclus dans les aires d’influence des arrêts.",
+            "en": "Number of potential passengers covered by stop catchment areas.",
+            "es": "Número de viajeros potenciales, incluidos en las áreas de influencia de las paradas."
+        },
+        "layer_value_unit": {
+            "fr": "voy.",
+            "en": "pax.",
+            "es": "viaj."
+        }
+    }
+}

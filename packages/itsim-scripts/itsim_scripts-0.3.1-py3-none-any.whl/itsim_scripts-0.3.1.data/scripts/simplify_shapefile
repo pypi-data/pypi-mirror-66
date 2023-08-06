@@ -1,0 +1,9 @@
+#!python
+from itsim_scripts import __path__ as module_pathes
+from pathlib import Path
+from os import execv
+from sys import argv
+
+bin_file = str(Path(module_pathes[0]) / 'bash' / 'simplify_shapefile')
+args = [bin_file, *argv[1:]]
+execv(bin_file, args)
