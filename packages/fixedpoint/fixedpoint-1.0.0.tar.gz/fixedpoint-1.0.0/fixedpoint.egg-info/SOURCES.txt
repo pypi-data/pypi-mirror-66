@@ -1,0 +1,15 @@
+LICENSE
+setup.cfg
+setup.py
+fixedpoint/__init__.py
+fixedpoint/fixedpoint.py
+fixedpoint/functions.py
+fixedpoint/json.py
+fixedpoint/logging.py
+fixedpoint/properties.py
+fixedpoint.egg-info/PKG-INFO
+fixedpoint.egg-info/SOURCES.txt
+fixedpoint.egg-info/dependency_links.txt
+fixedpoint.egg-info/not-zip-safe
+fixedpoint.egg-info/requires.txt
+fixedpoint.egg-info/top_level.txt
