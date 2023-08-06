@@ -1,0 +1,1 @@
+Creating students table - print table with random students

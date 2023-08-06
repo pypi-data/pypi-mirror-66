@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+randomtable1/__init__.py
+randomtable1/class_register.py
+randomtable1/student.py
+randomtable1/utils.py
+randomtable1.egg-info/PKG-INFO
+randomtable1.egg-info/SOURCES.txt
+randomtable1.egg-info/dependency_links.txt
+randomtable1.egg-info/top_level.txt
