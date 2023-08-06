@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: gridpp
+Version: 0.4.0a1
+Summary: Post-processing software for gridded weather forecasts
+Home-page: https://github.com/metno/gridpp
+Author: Thomas Nipen
+Author-email: thomasn@met.no
+License: LGPL-3
+Description: Gridded post-processor
+        ======================
+        Gridpp is a command-line tool that post-processes weather forecasts in NetCDF format.  The program performs two types of post-processing: Downscaling and calibration. Gridpp downscales forecast from a coars grid to a finer grid using a variety of interpolation methods. Gridpp then calibrates the forecasts by applying corrections to each gridpoint. Gridpp is modular, so any combination of downscaling and calibration can be selected.
+        
+        For information on how to use the software, check out the wiki page: https://github.com/metno/gridpp/wiki
+Keywords: meteorology quality control observation weather
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: test
