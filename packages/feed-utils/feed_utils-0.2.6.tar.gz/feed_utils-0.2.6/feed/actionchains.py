@@ -1,0 +1,280 @@
+import logging
+
+from selenium.webdriver.remote.webdriver import WebDriver
+
+from feed.actiontypes import ReturnTypes
+
+from kafka import KafkaConsumer, KafkaProducer
+
+
+
+class ObjectSearchParams:
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.isSingle = kwargs.get('isSingle', False)
+        self.returnType = kwargs.get('returnType', 'src')
+        self.attribute = kwargs.get('attribute', None)
+
+    def __dict__(self):
+        return self.kwargs
+
+    def _verifyResultLength(self, items):
+        if len(items) == 0:
+            return False
+        if isSingle and len(items) > 1:
+            self.backup = items
+            return False
+        else:
+            return True
+
+    def _returnItem(item, driver):
+        raise NotImplementedError
+    def search(item, driver):
+        raise NotImplementedError
+
+
+class BrowserSearchParams(ObjectSearchParams):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.kwargs = kwargs
+        self.css = kwargs.get('css')
+        self.xpath = kwargs.get('xpath')
+        self.text = kwargs.get('text')
+        self.text = kwargs.get('class')
+        self.backup = None
+
+    def _returnItem(self, item, driver: WebDriver):
+        if self.returnType == 'text':
+            formatted = lambda item: item.text
+        elif self.returnType == 'src':
+            classes = set([element.get_attribute('class') for element in item])
+            soup = BeautifulSoup(driver.page_source)
+            out = []
+            for cls in classes:
+                out.extend(soup.findAll(attrs={'class': cls}))
+            formatted = lambda item: str(item)
+        elif self.returnType == 'attr':
+            formatted = lambda element: element.get_attribute(self.attribute)
+        elif self.returnTyp == 'element':
+            formatted = lambda item: item
+        return list(map(formatted, item)) if len (item) > 1 else formatted(item[0])
+
+    def search(self, driver: WebDriver):
+        ret = driver.find_elements_by_css_selector(self.css)
+        # first try css selector
+        if self.verifyResultLength(ret):
+            return self.returnItem(item)
+        ret = driver.find_elements_by_xpath(self.xpath)
+        # then try xpath
+        if self.verifyResultLength(item):
+            return self.returnItem(ret)
+        # if one item was meant to be retured, just take first item in list.
+        # TODO: should search backup list with text at this point
+        if self.backup:
+            return self.returnItem([self.backup[0]])
+        else:
+            # TODO brute search with text at this point
+            return None
+
+
+class Action(ObjectSearchParams):
+
+    def __init__(self, position, **kwargs):
+        super().__init__(**kwargs)
+        self.kwargs = kwargs
+        self.position
+
+    @staticmethod
+    def execute(chain, action):
+        actionType = type(action).__name__
+        getattr(chain, f'on{actionType}')()
+
+    @staticmethod
+    def getActionableItem(action, driver):
+        return self.search(driver)
+
+
+class CaptureAction(Action):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.objectSearchParms.returnType = 'src'
+
+    def __dict__(self):
+        return dict(actionType='CaptureAction', url=self.url, **self.kwargs)
+
+class InputAction(Action):
+
+    def __init__(self, inputString, **kwargs):
+        super().__init__(**kwargs)
+        self.insputString = inputString
+        self.objectSearchParms.returnType = 'element'
+
+    def __dict__(self):
+        return dict(actionType='InputAction', inputString=self.insputString, **self.kwargs)
+
+class PublishAction(Action):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.url = kwargs.get('url')
+        self.urlStub = kwargs.get('urlStub')
+
+    def __dict__(self):
+        return dict(actionType='PublishAction', url=self.url, urlStub=self.urlStub, **self.kwargs)
+
+class ClickAction(Action):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.objectSearchParms.returnType = 'element'
+
+    def __dict__(self):
+        return dict(actionType='CaptureAction', **self.kwargs)
+
+ActionTypes = {
+    "ClickAction": ClickAction,
+    "InputAction": InputAction,
+    "CaptureAction": CaptureAction,
+    "PublishAction": PublishAction
+}
+
+class ActionChain:
+    actions= {}
+
+    def __init__(self, **kwargs):
+        self.kwargs = kwargs
+        self.name = kwargs.get('name')
+        self.startUrl = kwargs.get('startUrl')
+        self.repeating = kwargs.get('isRepeating', True)
+        actionParams = kwargs.get('actions')
+        for order, params in enumerate(actionParams):
+            action = ActionChain.actionFactory(position=order, **params)
+            self.actions.update({order: action})
+
+    def recoverHistory(self):
+        req = requests.get('http://{host}:{port}/routincontroller/getLastPage/{name}'.format(name=self.name, **routing_params))
+        data = req.json()
+        return data.get('url')
+
+    def saveHistory(self, url):
+        pass
+
+    @staticmethod
+    def actionFactory(actionParams):
+        actionConstructor = ActionTypes.get(actionParams.get('actionType'))
+        return actionConstructor(**actionParams)
+
+    def initialise(self):
+        pass
+
+    """
+    following methods correspond to module://feed.actiontypes.ActionTypes
+    """
+    def onClickAction(self, action):
+        logging.warning(f'{type(self).__name__}::on{type(action).__name__} not implemented')
+        raise NotImplementedError
+    def onInputAction(self, action):
+        logging.warning(f'{type(self).__name__}::on{type(action).__name__} not implemented')
+        raise NotImplementedError
+    def onPublishAction(self, action):
+        logging.warning(f'{type(self).__name__}::on{type(action).__name__} not implemented')
+        raise NotImplementedError
+    def onCaptureAction(self, action):
+        logging.warning(f'{type(self).__name__}::on{type(action).__name__} not implemented')
+        raise NotImplementedError
+
+    def execute(self, caller, initialise=True):
+        if initialise:
+            self.initialise()
+        for i in range(len(self.actions)):
+            self.current_pos = i
+            action = self.actions.get(i)
+            logging.info(f'executing action {type(action).__name__}')
+            ret = Action.execute(self, action)
+            callBackMethod = getattr(caller, f'on{type(action).__name__}Callback')
+            callBackMethod(caller, ret)
+            self.saveHistory()
+        if self.repeating:
+            self.execute(initialise=False)
+
+    def getRepublishRoute(self, action):
+        if action.objectSearchParms.returnType == 'src' and isinstance(action, CaptureAction):
+            return 'summarizer-route'
+        if action.get('trial'):
+            #TODO sample aid for src in ui
+            return f'trialActions/{self.name}/{self.current_pos}'
+        if action.objectSearchParms.returnType == 'attr' and isinstance(action, PublishAction):
+            return 'worker-route'
+        if isinstance(action, ActionChain):
+            return 'leader-route'
+
+    def rePublish(action, data):
+        pass
+
+
+class KafkaActionPublisher(ActionChain):
+
+    def __init__(self):
+        self.producer = KafkaProducer(**kafka_params)
+
+    def rePublish(self, key, action, data):
+        topic = self.getRepublishRoute(action)
+        if isinstance(data, list):
+            i = 0
+            for item in data:
+                i += 1
+                self.producer.send(topic=topic, key=bytes(f'{key}_{i}', 'utf-8'), value=json.dumps(dict(action=action.__dict__(), data=item)).encode('utf-8'))
+            logging.info(f'republished {len(data)} items for {key} for {type(action).__name__} to {topic}')
+        else:
+            self.producer.send(topic=topic, key=bytes(key, 'utf-8'), value=json.dumps(dict(action=action.__dict__(), item=item)).encode('utf-8'))
+            logging.info(f'republished {key} for {type(action).__name__} to {topic}')
+
+
+class ActionChainRunner:
+
+    def __init__(self, implementation, **kwargs):
+        self.implementation = implementation
+
+    def subscription(self):
+        pass
+
+    def onClickActionCalllBack(self, *args, **kwargs):
+        logging.info(f'onClickActionCallback')
+
+    def onInputActionCallback(self, *args, **kwargs):
+        logging.info(f'onInputActionCallback')
+
+    def onPublishActionCallback(self, *args, **kwargs):
+        logging.info(f'onPublishActionCallback')
+
+    def onCaptureActionCallback(self, *args, **kwargs):
+        logging.info(f'onCaptureActionCallback')
+
+    def main(self):
+        for actionChainParams in self.subscription():
+            actionChain = self.implementation(actionChainParams)
+            ret = actionChain.execute(self)
+
+
+class KafkaActionSubscription(ActionChainRunner):
+
+    def __init__(self, topic,  **kwargs):
+        super().__init__(**kwargs)
+        self._consumer = KafkaConsumer(**kafka_params, value_deserializer=lambda m: json.loads(m.decode('utf-8')))
+        self._consumer.subscribe([topic])
+
+    def subscription(self):
+        for mes in self._consumer:
+            yield mes.value
+
+
+class CommandsActionSubscription(ActionChainRunner):
+
+    def __init__(self, endpoint, actionsImpl):
+        super().__init__(actionsImpl)
+        self.endpoint = endpoint
+
+    def subscription(self):
+        while True:
+            actionReq = requests.get(endpoint)
+            action = actionReq.json()
+            yield action
+
