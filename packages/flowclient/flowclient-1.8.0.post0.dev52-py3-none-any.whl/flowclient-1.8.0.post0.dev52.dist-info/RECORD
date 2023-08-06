@@ -1,0 +1,10 @@
+flowclient/__init__.py,sha256=W7f0_TCiP_IKP09yaOxzG-HYceB9hRsAW3ckIoz-o0I,2810
+flowclient/_version.py,sha256=VCxMUHtzIBICk4vonb4aFtX3hgnxo-nFxVr2IfC503Y,508
+flowclient/aggregates.py,sha256=5TeArS5xWE9fDqYDvKPGcQP3cG5IYnogr-iOfUB8uMM,56177
+flowclient/api_query.py,sha256=Je4HTrhZHDjBkPXil5RyUclqoIxPTyY13XUVupSBXX0,4856
+flowclient/client.py,sha256=sHWYDlrdh7JhVCSIJOdAddPqyK0H9JKHhBULkQKoVVc,39759
+flowclient-1.8.0.post0.dev52.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+flowclient-1.8.0.post0.dev52.dist-info/METADATA,sha256=Xb2j04oT-9MW0yiiN9NWjhzCQ8jeVAXcRsz92zWF6kc,1100
+flowclient-1.8.0.post0.dev52.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+flowclient-1.8.0.post0.dev52.dist-info/top_level.txt,sha256=yWRgxFPfkIJJOjBERd3KodmlSGfbFlopakjJs4unmlA,11
+flowclient-1.8.0.post0.dev52.dist-info/RECORD,,
