@@ -1,0 +1,11 @@
+
+[dev]
+ipython
+pip
+pytest>4
+pytest-cov
+pre-commit
+prospector
+pylint
+twine
+yapf

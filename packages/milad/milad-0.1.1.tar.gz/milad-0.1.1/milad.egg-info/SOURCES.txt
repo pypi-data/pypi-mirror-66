@@ -1,0 +1,13 @@
+GPL
+MANIFEST.in
+README.rst
+setup.py
+milad/__init__.py
+milad/provides.py
+milad/version.py
+milad.egg-info/PKG-INFO
+milad.egg-info/SOURCES.txt
+milad.egg-info/dependency_links.txt
+milad.egg-info/entry_points.txt
+milad.egg-info/requires.txt
+milad.egg-info/top_level.txt
