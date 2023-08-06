@@ -1,0 +1,9 @@
+mne
+networkx
+networkx
+numba
+pywavelets
+tensorflow
+joblib
+scikit-learn
+xgboost
