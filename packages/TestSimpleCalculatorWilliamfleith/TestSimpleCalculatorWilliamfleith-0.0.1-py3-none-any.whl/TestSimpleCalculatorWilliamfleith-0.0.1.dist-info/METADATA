@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: TestSimpleCalculatorWilliamfleith
+Version: 0.0.1
+Summary: TestSimpleCalculator is a simple package     in order to make some test on packaging principles in Python
+Home-page: UNKNOWN
+Author: Williamfleith
+Author-email: william.fleith@cpe.fr
+License: GNU GPLv3
+Platform: UNKNOWN
+Requires-Python: >=3.4
+
+UNKNOWN
+
+
