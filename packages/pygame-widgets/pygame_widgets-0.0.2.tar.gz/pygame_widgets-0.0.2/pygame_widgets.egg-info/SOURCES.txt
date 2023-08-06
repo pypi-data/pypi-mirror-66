@@ -1,0 +1,8 @@
+README.md
+setup.py
+pygame_widgets.egg-info/PKG-INFO
+pygame_widgets.egg-info/SOURCES.txt
+pygame_widgets.egg-info/dependency_links.txt
+pygame_widgets.egg-info/top_level.txt
+widgets/__init__.py
+widgets/button.py
