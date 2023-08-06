@@ -1,0 +1,42 @@
+language: python
+
+addons:
+  chrome: stable
+
+matrix:
+  include:
+    - python: 3.6
+      env: TOXENV=py36
+    - python: 3.7
+      env: TOXENV=py37
+    - python: 3.8
+      env: TOXENV=py38
+    - python: 3.7
+      env: TOXENV=linting
+    - python: 3.7
+      env: TOXENV=formatting
+    - python: 3.7
+      env: TOXENV=docs
+
+
+before_install:
+    - wget https://chromedriver.storage.googleapis.com/$(wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE -q -O -)/chromedriver_linux64.zip
+    - unzip chromedriver_linux64.zip
+    - export PATH=$PATH:$PWD
+
+install:
+    - pip install tox
+
+script:
+    - tox
+
+deploy:
+  - provider: pypi
+    distributions: bdist_wheel sdist
+    skip_existing: true
+    user: statoil-travis
+    password:
+      secure: ROs6+psjNCHDSvKH8zHWg/IqmcwX+JLWx99nX0p1YRfmlz6KIic20VJm7wt9qqtzAOLgj4tbmDUWtWUeELEHM8eUcwq1nmNRXTI6DzZgsF1PcuyS3IWDDF/ht/qOnldnz6Uyz3xO+CGyH1rrWlQA2LF9Po7lqNMaY5iE4qD8AGmV1E9L5tvGPFMMJVrNUCFh8yNyvx/qWOocT0G3L73sVgTwnFemS7hOaPCePT5LvLIv8RGQvpt1kvFC6XahNZLA1rDPzDv+cVCghMjNUz+v7rqtq7Xt6h9dMRQYjqy3jPn5dKyuDh3i3q0tIZ4Fq7ZN65mavLZyOWMd1y/pavipBDe4LAmfX0yUi4tbENnKQtuXO7qgQaADABNEaPE3+jtmB8+KCvrbGQT2SNlYeVnYQCjcwngjgPTBZZl1aEJLz6ufywZFbGKcxXArn3d2FS1bz+69O/FRKWFZJdZz6Q9g9GLBSYYbqXJF6KPQVIJSGQcwdTzlXcJKnuXX0Nh3XGJYJmEILGel7+gTivWPnfFPcVgHaD+j48OACw3or+yN+xw81ayYDWufNGZtzYpw1aNxRFWTtUydh8Y6ood7V5Vab82NUumJ66E9FaNbXycaaUI0eZOpFI+g3vZwjzHIim3ZlAz+cKd0xSug5NQjTr1rN9pk3FUep7J9cNTZ+yIaU7w=
+    on:
+      tags: true
+      branch: master
