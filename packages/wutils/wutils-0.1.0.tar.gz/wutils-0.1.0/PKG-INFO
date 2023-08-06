@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: wutils
+Version: 0.1.0
+Summary: A collection of useful functions/classes for data analysis and ML.
+Home-page: http://pypi.python.org/pypi/wutils/
+Author: William Shioa
+Author-email: willshiao@gmail.com
+License: LICENSE
+Description: # wutils
+        A collection of Python utility functions/classes
+        
+        Currently only provides one class: `wutils.mat.MarkedMatrix`, which is a wrapper around a `numpy.array` with additional row labels and helper functions.
+        
+Platform: UNKNOWN
