@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: repamatrix
+Version: 0.0.1
+Summary: cmatrix like terminal 'screen saver'
+Home-page: https://github.com/dyuri/repamatrix
+License: MIT
+Author: Gyuri Horak
+Author-email: dyuri@horak.hu
+Requires-Python: >=3.6,<4.0
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: blessed (>=1.17.4,<2.0.0)
+Project-URL: Repository, https://github.com/dyuri/repamatrix
+Description-Content-Type: text/markdown
+
+# `repamatrix`
+
+`cmatrix` like terminal *screen saver*
+
+## Install
+
+```
+$ pip install repamatrix
+```
+
+## Running
+
+```
+$ repamatrix
+```
+
+
