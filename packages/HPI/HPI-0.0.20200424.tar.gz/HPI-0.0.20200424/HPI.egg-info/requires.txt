@@ -1,0 +1,7 @@
+appdirs
+pytz
+
+[testing]
+pytest
+pytz
+pylint
