@@ -1,0 +1,13 @@
+serobj/__init__.py,sha256=MuhzcUHE9__YY47jSyZ2sMsYcHMSdeZkfXKACYuiXY4,869
+serobj/attrs.py,sha256=FkKcXcQv7TLwEEsV1q9UmS1De2yvmCQhGeZVvzoXwBo,1612
+serobj/protocol/__init__.py,sha256=7V1pW8eEP7toUr-rNNSlkgWv0Lmlr8kA4E7zG5L3ztE,809
+serobj/protocol/base.py,sha256=KYyR8PgvRuQPEAWoEjIhQWFTI9RAWf799yB3-ypu7L4,5380
+serobj/protocol/zero.py,sha256=lCdjgQiimV-Yhh0fVO6zJJ3I__drdTOtghwWRLiUrRE,18430
+serobj/utils/__init__.py,sha256=FWf2QrmiF0vSOIzqQi_eeRot5Z11FlxbB1hBV5R5ZSM,600
+serobj/utils/path_to_object.py,sha256=pZ1p5Jo07u-yxTQPSTuC7cx9MxEa45RfDlka0kyImrY,2024
+serobj/utils/serobj_calls.py,sha256=hBYDbOKXuZXM6vHw-TsziAO96VHrKOahMyyIeQBd2qY,2820
+serobj-0.0.1.dist-info/LICENSE,sha256=Ak3CI0KhUuUsK-1ag-5CZmIpdQiy53R3P4KpRt45aiM,11432
+serobj-0.0.1.dist-info/METADATA,sha256=GXFjxCU0YbrqDAz6akOgbS8CenF8TDhDdB6AZaSpA5k,2504
+serobj-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+serobj-0.0.1.dist-info/top_level.txt,sha256=3_Bs7WWE_MnjfZvuoqKILPHM02yK6KZq7e0lsRFtq8Q,7
+serobj-0.0.1.dist-info/RECORD,,
