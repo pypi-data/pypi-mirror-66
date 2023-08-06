@@ -1,0 +1,10 @@
+quartermaster_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quartermaster_client/__main__.py,sha256=dPtvbMGDsdOjsbHQ1vBPJGtk5xDwX30nX8ajXleanjg,236
+quartermaster_client/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quartermaster_client/client/app.py,sha256=gF1gV0AvSbHUxTa_qqRNkHjjMkfKGse7w3OrxvhUAsw,16027
+quartermaster_client/client/integration/TeamCity.py,sha256=DehVHrARjgTANV-5GTkWB_2aLrTfJ3jmm8t-95P3Tgw,985
+quartermaster_client/client/integration/__init__.py,sha256=FAj7WwsewzLdAPSRUFhoHHPc8PR7qR2h_LUPZ5AWt2U,627
+usb_quartermaster_client-0.1.0.dist-info/entry_points.txt,sha256=t0F97SHqTRERZu0L7gp-YcyNAlg0aYyHFmRAVWiBz_M,78
+usb_quartermaster_client-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+usb_quartermaster_client-0.1.0.dist-info/METADATA,sha256=No3isWydviLtOeC0Wtdlrt4UYXPe9lxV1ATuNZ1rKao,426
+usb_quartermaster_client-0.1.0.dist-info/RECORD,,
