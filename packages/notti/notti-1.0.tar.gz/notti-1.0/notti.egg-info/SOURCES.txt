@@ -1,0 +1,8 @@
+README.md
+setup.py
+notti/__init__.py
+notti.egg-info/PKG-INFO
+notti.egg-info/SOURCES.txt
+notti.egg-info/dependency_links.txt
+notti.egg-info/not-zip-safe
+notti.egg-info/top_level.txt

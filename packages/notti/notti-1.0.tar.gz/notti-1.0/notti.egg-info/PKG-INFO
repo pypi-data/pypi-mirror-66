@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: notti
+Version: 1.0
+Summary: Python API for controlling Notti lights
+Home-page: http://github.com/RobinCutshaw/python-notti
+Author: Robin Cutshaw
+Author-email: robin@internetlabs.com
+License: UNKNOWN
+Description: A Python API for controlling Notti lights manufactured by Witti
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
