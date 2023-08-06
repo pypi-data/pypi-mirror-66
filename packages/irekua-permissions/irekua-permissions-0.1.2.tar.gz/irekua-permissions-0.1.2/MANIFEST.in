@@ -1,0 +1,6 @@
+include LICENSE
+include README.md
+requirements.txt
+recursive-include irekua_permissions/static *
+recursive-include irekua_permissions/templates *
+recursive-include docs *
