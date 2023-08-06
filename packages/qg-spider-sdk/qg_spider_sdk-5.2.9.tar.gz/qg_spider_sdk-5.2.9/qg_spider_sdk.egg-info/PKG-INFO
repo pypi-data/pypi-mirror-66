@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: qg-spider-sdk
+Version: 5.2.9
+Summary: 爬虫系统业务层封装
+Home-page: http://192.168.117.144/cetc28/qg_spider_sdk
+Author: zouwendi
+Author-email: tz310200@gamil.com
+Maintainer: zouwendi
+Maintainer-email: tz310200@gamil.com
+License: GPL3 License
+Description: # 爬虫系统公共类封装
+        
+        ## 目标
+        
+        - [x] redis db 划分
+        - [x] url 记录池封装
+        - [x] 下载页面池封装
+        - [x] 解析结果池封装
+        - [x] 网站信息类封装
+        
+        ## redis db 划分(0-15)
+        
+        ```
+        - 0 -> 常用的队列与有序集或集合
+        其中的hash表定义
+            - website -> 网站信息
+            - url_record -> url 记录池
+            - url_page -> 下载页面池封装
+            - parse_result -> 解析结果池封装
+        - 10-15 -> 监控自行处理
+        ```
+        
+        
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown

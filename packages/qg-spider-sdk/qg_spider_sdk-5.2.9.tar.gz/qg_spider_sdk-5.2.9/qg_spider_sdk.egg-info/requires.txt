@@ -1,0 +1,9 @@
+qg_tool>=0.0.2
+psutil>=5.6.1
+aiohttp>=3.5.4
+pika>=0.13.0
+qg_struct>=1.0.1
+typing>=3.7.4.1
+setuptools>=41.0.1
+pipreqs>=0.4.9
+aio_pika>=5.5.1
