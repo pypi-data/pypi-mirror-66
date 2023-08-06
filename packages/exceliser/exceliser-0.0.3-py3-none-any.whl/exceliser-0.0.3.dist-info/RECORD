@@ -1,0 +1,10 @@
+exceliser/__init__.py,sha256=YfQrKx-DdFxxPR_bUw8ucG__8RadNZcwCAXESNi1X4E,134
+exceliser/__main__.py,sha256=_Xr5qzrq3A-1aD3bf8njNj4lrrR336p-odiOsvPTcX0,773
+exceliser/deserializer.py,sha256=DXY-nD5KyX1F7uA-cwPDXeGpsSczaFXmWgY4_9IrXwc,4423
+exceliser/serializer.py,sha256=KNfEypFdDsKncDyXyDX9yM2zR4Syrw_gIx28OSWzTWs,2259
+exceliser/workbook.py,sha256=_2xjWl5QQu0_TvtxGi75ktCy0LjmJzdR5QSZoHdxTjg,334
+exceliser-0.0.3.dist-info/LICENSE,sha256=3WiVjsXM1Zd91_slhgjRk6MH_kpIEtYFLqgwiN67cTU,1056
+exceliser-0.0.3.dist-info/METADATA,sha256=IbXhUyEodPAiGFBaRfPkicMY83wPBQ0o5OYtEVfYVRM,940
+exceliser-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+exceliser-0.0.3.dist-info/top_level.txt,sha256=U7OjzYPMdVawePz4Ewtvh6FjwdrHfJnX2R_21lGEGco,10
+exceliser-0.0.3.dist-info/RECORD,,
