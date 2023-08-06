@@ -1,0 +1,16 @@
+Metadata-Version: 1.0
+Name: pyblocksim
+Version: 0.3.1
+Summary: Python library for block-oriented modeling and simulation in control theory
+Home-page: https://github.com/TUD-RST/pycartan
+Author: Carsten Knoll
+Author-email: Carsten.Knoll@tu-dresden.de
+License: GPL3
+Description: Pyblocksim aims to mitigate the lack of a tool like Simulink (or scicos)
+        in the world of python based scientific computing. It aims to enable an low-effort implementation
+        of a model of a dynamical system which is composed of interconnected blocks such as rational
+        transfer functions and static nonlinearities. Delay blocks are supported via ring-buffers
+        and discrete states can also be emulated (e.g. for hysteresis).
+            
+Keywords: control theory,simulation,modelling,feedback
+Platform: UNKNOWN
