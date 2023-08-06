@@ -1,0 +1,6 @@
+include readme.rst
+include LICENSE
+include pylintrc
+
+graft docs
+prune docs/build
