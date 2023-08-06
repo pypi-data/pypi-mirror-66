@@ -1,0 +1,3 @@
+[console_scripts]
+async-update-slack=async_slack.update_database:main
+
