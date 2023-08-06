@@ -1,0 +1,13 @@
+anubi/mdns/__init__.py,sha256=XMP8aXjdzaNAmyumqbMuGVDrkjGP8LWKlI0GdyVg3HM,672
+anubi/mdns/_dnsrecord.py,sha256=04Gv3jKNdKRNIA37EUPKN-QwhxLFlDHAOh3tkm9sG5I,2193
+anubi/mdns/_utility.py,sha256=va7zeIJnryikw7X_jgFmOguGYCCZuuXiNTlY_K3Vn5c,2671
+anubi/mdns/dnsenums.py,sha256=yMHbnayK9NXP9ylJeUFktM_pZsZRuJNZjsHOeo7OQdQ,5761
+anubi/mdns/dnspacket.py,sha256=eK05j_H4vDcNhgeswSRXhHJDM_iXIpFVYEjSX8YZ5oE,8825
+anubi/mdns/dnsqrecord.py,sha256=Gnmor8OOYsf8Zh6-MmJdodHn6d3jCQQKYXpF0p5IW6E,1680
+anubi/mdns/dnsrrecords.py,sha256=_TB5gL95LVdGbQmvxpmw0oiQLF4dvM2PCqO-aSPVVEM,9943
+anubi/mdns/mdns.py,sha256=HpcRM_xEearLuVu_KWF_V75yXkHaGJyHh2NVtD91XtU,7910
+anubi.mdns-0.0.1a0.dist-info/LICENSE.md,sha256=LjB1OtUgxGsRGRov2rSHI7vwy_Wz15VEPGa9W-6v_LA,1074
+anubi.mdns-0.0.1a0.dist-info/METADATA,sha256=Iep6t2WaIBkcPiXASAX-PY55Vz6ub12_gBjKHARcpHQ,2509
+anubi.mdns-0.0.1a0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+anubi.mdns-0.0.1a0.dist-info/top_level.txt,sha256=64u_Vpgr1pA44l3O6ZAcUQdu4fv-cO1f88qaBkUHZCE,6
+anubi.mdns-0.0.1a0.dist-info/RECORD,,
