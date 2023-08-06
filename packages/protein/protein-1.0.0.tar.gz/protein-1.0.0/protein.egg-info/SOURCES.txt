@@ -1,0 +1,8 @@
+README.md
+protein
+setup.py
+protein.egg-info/PKG-INFO
+protein.egg-info/SOURCES.txt
+protein.egg-info/dependency_links.txt
+protein.egg-info/requires.txt
+protein.egg-info/top_level.txt
