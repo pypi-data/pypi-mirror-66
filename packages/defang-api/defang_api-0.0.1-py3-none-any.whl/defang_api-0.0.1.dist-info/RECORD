@@ -1,0 +1,10 @@
+defang_api/__init__.py,sha256=mpn6I-uaY3qCoC0utctlINEIukgvRKVVfbfYBIJAtKI,47
+defang_api/servelocal.py,sha256=3w0W0mxHp668H1Nnu90_yaiH2bZhAJx89xTz9iPGhuY,5373
+defang_api/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+defang_api/helpers/helpers.py,sha256=YOP2eE6UczmjfXcYE6OuxbW_ay4dilbCC_FJHB6n2Ys,2592
+defang_api/helpers/parsers.py,sha256=4vZNLME0xNwh4emBE8eEeFGx90EleCLgG5t1bUzy9Ds,1642
+defang_api-0.0.1.dist-info/METADATA,sha256=ivZHHYrRzcW4jvUb7z18eQ5ZvwRwfq_2CYMBunnD02o,4017
+defang_api-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+defang_api-0.0.1.dist-info/entry_points.txt,sha256=llBafk9IIcid2sB2150SEaUbdHKKJ8V4cavBYj1-iJ0,61
+defang_api-0.0.1.dist-info/top_level.txt,sha256=cwWUTZJXPpH-zbsh_4TZbqcGRlttmhawISxRgX9SJIM,11
+defang_api-0.0.1.dist-info/RECORD,,
