@@ -1,0 +1,15 @@
+offstack/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+offstack/__main__.py,sha256=XBpAczCJO4Fe2GKhyeIJA-XYiCuQVytcAGIKNwVkqVg,1410
+offstack/constants.py,sha256=1uxe8IbdVCbczklH4RD8OMPordP61uIYT2iRWcd1PBA,572
+offstack/dashboard_window.py,sha256=0aiYHDXgNPh1_z-AR0z9s1xGGLJVK9Z327Jk7rM-I6o,5170
+offstack/dialog_window.py,sha256=CXdcPrYyU2COAVZw15iF7w5du-btpNlG3Bva-VRi8FM,1568
+offstack/logger.py,sha256=_doKY_y1BEyD5M_cVtxmqtZfgfne2qOW7FlhFtT26eg,687
+offstack/login_window.py,sha256=3x7wYKDCK1gLizum0wSs8SYZrdQ1MOnbuJNfu2P1Pzo,3955
+offstack/managers.py,sha256=DysRcvbl_c2AwJN6ibhmaIqHLTD5DZAgq0hPWyINhT4,3391
+offstack/utils.py,sha256=jTcc0M3inNfnvFZTY6gDPktYOOts6jimBzlRUJdALUc,8521
+offstack_app-0.0.1a0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+offstack_app-0.0.1a0.dist-info/METADATA,sha256=Y7nrWxNSd9IaZLtRDasRZwD2Mxj2DgWzTeC9H5bMfY0,1158
+offstack_app-0.0.1a0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+offstack_app-0.0.1a0.dist-info/entry_points.txt,sha256=SpCGJ-pGVPT5YxzbGErkyunn_CEj1lIUxe2d0qSstw8,53
+offstack_app-0.0.1a0.dist-info/top_level.txt,sha256=ur1iGlhIU9L63coC-idxp8mKop0c5kbrZlTVKp8m7Yk,9
+offstack_app-0.0.1a0.dist-info/RECORD,,

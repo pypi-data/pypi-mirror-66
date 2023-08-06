@@ -1,0 +1,3 @@
+[console_scripts]
+offstack = offstack.__main__:init
+

@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: offstack-app
+Version: 0.0.1a0
+Summary: Offline store favorite marked questions and answers from Stackoverflow.
+Home-page: https://github.com/calexandru2018/offstack-app
+Author: calexandru2018
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Environment :: X11 Applications
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Requires-Dist: requests
+Requires-Dist: requests-oauthlib
+Requires-Dist: oauthlib
+Requires-Dist: setuptools
+Requires-Dist: selenium
+
+
+Locally store your Stackoverflow favorites, without the need to constantly look them up. Works only on Linux machines.
+
+For further information and a usage guide, please view the project page:
+
+https://github.com/calexandru2018/offstack-app
+
+
