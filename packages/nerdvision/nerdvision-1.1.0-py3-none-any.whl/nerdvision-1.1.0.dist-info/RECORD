@@ -1,0 +1,17 @@
+nerdvision/BreakpointService.py,sha256=KlmZQ9ZJUTCBV2JNW7-QkGOoYIZn1T_7FCkZt_h9BAA,12019
+nerdvision/ClientRegistration.py,sha256=5DAvtfv3bT5COhaPChrYEwq5yJ_KhR5oPfN0mBNdrkA,4513
+nerdvision/ContextUploadService.py,sha256=av3ZPxUtRaZsHUgFfU-LYjKlv5Xj4ljt5zq1p1zsc2o,2137
+nerdvision/FrameProcessor.py,sha256=d96ncv-0pvsCOnMEEMOuc5pMt8LbtXWJnylz9Je-jss,6879
+nerdvision/GRPCService.py,sha256=Lp79nDyHvMe18veOdYLKktJ1WEmSLsQUW-lmTIVp-1E,2187
+nerdvision/NerdVision.py,sha256=OnNKXUlOWGO1UqSy-JWKLQBh-qDA9SPJvB_ktD9T6M4,4843
+nerdvision/Utils.py,sha256=BpISYTpdU0wSKdzSoafk8iq3E5rKmOg3JqnAuIxhy6k,204
+nerdvision/__init__.py,sha256=qzUI47SL7cqfb0BcFrEZZrLZ8kWVKDr9VyIXwNOt_sY,2630
+nerdvision/models/EventSnapshot.py,sha256=YxaZf7Uw12-wrAmRA9sexCzLvTOIUatGjoXazOqpSdM,2635
+nerdvision/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nerdvision/settings/__init__.py,sha256=GT_z4XBg-nP8IH-JvrhYTM-YFbgncyF3BKs6iqL0xic,4383
+nerdvision-1.1.0.dist-info/METADATA,sha256=RmjZPgcvWWhr0LHHEtQvetQEL1Pn0RUiiVuwZPFSb_U,838
+nerdvision-1.1.0.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+nerdvision-1.1.0.dist-info/namespace_packages.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+nerdvision-1.1.0.dist-info/top_level.txt,sha256=Z5iNKgWWu98Kf63n5Kd569jgAeEnVmWumSfcRVGackc,11
+nerdvision-1.1.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+nerdvision-1.1.0.dist-info/RECORD,,

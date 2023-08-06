@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: nerdvision
+Version: 1.1.0
+Summary: The python nerd.vision agent, allowing real time debugging, any environment, any cloud.
+Home-page: https://nerd.vision
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: https://www.nerd.vision/legal/agent-license
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Requires-Dist: certifi (==2019.9.11)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: grpcio (~=1.23)
+Requires-Dist: grpcio-tools (~=1.23)
+Requires-Dist: idna (==2.8)
+Requires-Dist: nerdvision-grpc-api (==1.0.0)
+Requires-Dist: protobuf (~=3.9)
+Requires-Dist: psutil (==5.6.3)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: six (==1.12.0)
+Requires-Dist: urllib3 (==1.25.6)
+
+To use this please view the docs at https://docs.nerd.vision/python/configuration/
+
+
