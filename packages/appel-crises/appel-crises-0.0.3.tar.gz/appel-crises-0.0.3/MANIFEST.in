@@ -1,0 +1,17 @@
+# Mandatory files
+include README.md LICENSE CHANGELOG
+
+# Source code, including tests
+graft appel_crises
+graft scripts
+
+# Prune built files
+prune appel_crises/assets
+
+# Development tools
+include Makefile manage.py local_settings.ini.template
+include .pre-commit-config.yaml
+
+# Temporary files
+global-exclude *.py[cod] __pycache__
+global-exclude .*.swp *.*~
