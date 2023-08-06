@@ -1,0 +1,7 @@
+README.rst
+setup.py
+izitest.egg-info/PKG-INFO
+izitest.egg-info/SOURCES.txt
+izitest.egg-info/dependency_links.txt
+izitest.egg-info/requires.txt
+izitest.egg-info/top_level.txt
