@@ -1,0 +1,10 @@
+README.md
+setup.py
+mcthings_drawing/__init__.py
+mcthings_drawing/circle.py
+mcthings_drawing/sphere.py
+mcthings_drawing.egg-info/PKG-INFO
+mcthings_drawing.egg-info/SOURCES.txt
+mcthings_drawing.egg-info/dependency_links.txt
+mcthings_drawing.egg-info/requires.txt
+mcthings_drawing.egg-info/top_level.txt

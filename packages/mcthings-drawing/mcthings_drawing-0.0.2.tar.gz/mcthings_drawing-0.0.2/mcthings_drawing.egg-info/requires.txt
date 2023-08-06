@@ -1,0 +1,3 @@
+mcpi
+mcthings>=0.5.3
+minecraftstuff
