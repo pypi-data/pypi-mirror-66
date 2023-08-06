@@ -1,0 +1,9 @@
+README.md
+setup.py
+classes/__init__.py
+classes/jzip.py
+jzip.egg-info/PKG-INFO
+jzip.egg-info/SOURCES.txt
+jzip.egg-info/dependency_links.txt
+jzip.egg-info/top_level.txt
+tests/__init__.py
