@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: mkdocs-ko-fi-button-plugin
+Version: 0.0.1
+Summary: Ko-fi button is a simple plugin that let's you add a Ko-fi button with markdown.
+Home-page: https://gitlab.com/berghton/mkdocs-ko-fi-button-plugin
+Author: Tony Bergh
+Author-email: tony.bergh@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: mkdocs (>=1.0.4)
+
+# MkDocs Ko-fi Button Plugin
+
+*An mkdocs plugin that let's you easily add a Ko-fi buttons with markdown*  
+The plugin looks for jinja style tags like `{{ko-fi}}` and replaces it with the Ko-fi button. In addition to the already existing Ko-fi markdown support it's possible to configure the text and color.
+
+## Setup
+
+Install the plugin using pip:
+
+``` bash
+pip install mkdocs-ko-fi-button-plugin
+```
+
+Activate the plugin in `mkdocs.yml`:
+
+``` bash
+plugins:
+    - search
+    - ko-fi-button
+```
+
+## Config
+
+* `text` - The text on the Ko-fi button. Default: "Support Me on Ko-fi".
+* `color` - The color of the button in hex format. Default: #29abe0
+* `id` - Your Ko-fi ID. Can be found on your Ko-fi profile. Mandatory configuration.
+
+For example:
+
+``` bash
+plugins:
+    - search
+    - ko-fi-button:
+        text: 'My cool text'
+        color: '#547884'
+        id: 'my_id'
+```
+
+
+
