@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: dlflow
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: https://github.com/didi/dlflow_github_private
+Author: Profile
+Author-email: profile@didiglobal.com
+Maintainer: Qiwei Dou
+Maintainer-email: douqiwei@didiglobal.com
+License: Apache Software License
+Description: UNKNOWN
+Platform: MacOS
+Platform: Unix
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
