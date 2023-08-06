@@ -1,0 +1,13 @@
+edutils/__init__.py,sha256=lF1birWY7hRzsV8lJM3WVIIzA42aqPLNWSP9OfjUAtM,123
+edutils/log.py,sha256=rdRGSQw0LeCqlifroI-voKJkDL94R3pR5bCy8RAUMz8,2642
+edutils/object_pool.py,sha256=vbclu2kWlOi__935J3jH_oN2GW1UhRf7mtZ3bZZx9k4,2114
+edutils/tm.py,sha256=321cOSWZhhRua48kCDyPYOD5z6Fx9ZWjZ0CmHPKRiuE,1226
+edutils/ut.py,sha256=4sEzdRR0f4fxa15xLfgR4-G6zJ3zFP8sWgx81eBpfK4,1124
+edutils/dbs/__init__.py,sha256=GEFVFwmEnTxessvlNvymXulfHXxM466yWx0x7Ler5kY,95
+edutils/dbs/mysql.py,sha256=fqlgtmOEUSla05Lual_kF8DnR_6t4bklm06Hnx-Ra0Y,3832
+edutils/dbs/sqlite.py,sha256=vl5inC7Wui8JQKeE3MJOY7988sDVin3taAuNBvF1d-w,3911
+edutils-0.0.1.4.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+edutils-0.0.1.4.dist-info/METADATA,sha256=xxwcVFOIGNV0-WG2KM5pF1NyU5Ik0I6m3CAn0tNJwRQ,719
+edutils-0.0.1.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+edutils-0.0.1.4.dist-info/top_level.txt,sha256=GeuuYJ2KhY9euomCjce2ytF258FVNSKR2dq_f3uiBoc,8
+edutils-0.0.1.4.dist-info/RECORD,,
