@@ -1,0 +1,12 @@
+README.md
+setup.py
+pick_kernel/__init__.py
+pick_kernel/__main__.py
+pick_kernel/kernel.py
+pick_kernel/kernelspec.py
+pick_kernel.egg-info/PKG-INFO
+pick_kernel.egg-info/SOURCES.txt
+pick_kernel.egg-info/dependency_links.txt
+pick_kernel.egg-info/entry_points.txt
+pick_kernel.egg-info/requires.txt
+pick_kernel.egg-info/top_level.txt
