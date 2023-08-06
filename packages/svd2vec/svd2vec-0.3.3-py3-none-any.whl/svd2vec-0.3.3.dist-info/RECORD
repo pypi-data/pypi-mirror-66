@@ -1,0 +1,17 @@
+svd2vec/__init__.py,sha256=GwYPvrL-bEc-2mo5pPcRZQ4OyRDuvX1vSXGFG1j11Ko,275
+svd2vec/core.py,sha256=nV8yzIJcqcd6ftewhbOaNY83H9T8alOaMs3z1p5g7Y8,23068
+svd2vec/files_io.py,sha256=w7zwdz5P5k1dEwItf6vdPUH-YCP0fdFnZpwXwTH1qQg,470
+svd2vec/temporary_array.py,sha256=IVDJWO-ZLfYAFV9nQ2RM3WMR-4SYoYI5rIiFn2N38g4,2053
+svd2vec/utils.py,sha256=7S45EtxNMKYET6VrlVR_Q9jaZSi9ltM4ubwcn4dSjyE,3835
+svd2vec/window.py,sha256=EIqDhWcImKdc8Dr6t9uo6Cs-rNJChK4QC_fzwWGGEy4,1346
+svd2vec/datasets/analogies/msr.txt,sha256=rJCo9JLRn9iSzA4nxfY9zZpSCwBEuRrNmeUhZozB68U,231634
+svd2vec/datasets/analogies/questions-words.txt,sha256=jCmzMyr8RvP7i-BMtSl7-W85qnExJy3_V4abRIWyKjY,603955
+svd2vec/datasets/similarities/men_dataset.txt,sha256=6mH3p8u93MTFSKTVWG5owqsLUb0Mt1BaAfFPMPTqBlY,69924
+svd2vec/datasets/similarities/mturk.txt,sha256=E83G9R1COCwJdJRIkfGBG7RXBTRQPmH4ekL1bCwxZns,7603
+svd2vec/datasets/similarities/rarewords.txt,sha256=OsbyZ7PM62e-97ysVlFEHyypANiQxpCiv0sAAculfeE,49974
+svd2vec/datasets/similarities/simlex999.txt,sha256=RAquuxFd_5Gkd5ET5WsMm_6i0I5TUKL5l9yrO98gALY,18076
+svd2vec/datasets/similarities/wordsim353.txt,sha256=vd-VDFqCkdPgQ4bCt_t6jI6J_UVDKnaW6WjfbuTm_tY,7172
+svd2vec-0.3.3.dist-info/METADATA,sha256=jUIpsQz363MBELzGRh7CkHhR2zbMLdf8nLugcv0ttJU,3266
+svd2vec-0.3.3.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+svd2vec-0.3.3.dist-info/top_level.txt,sha256=9BjiF5bYu-gapF9fZhNzWziTlhUCPXiQBMsLYucW5z8,8
+svd2vec-0.3.3.dist-info/RECORD,,
