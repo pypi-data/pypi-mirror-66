@@ -1,0 +1,10 @@
+flask_apidoc_extend/__init__.py,sha256=LDfbwUsMby36PhavNXvdBtiyx3i0EetqPByogvZ18fI,47
+flask_apidoc_extend/apidoc.py,sha256=v3qXRmnK88J5qbvdoMV65ZiWKMeEUOil23pL9eKfQhI,5271
+flask_apidoc_extend/utils.py,sha256=vlEHhx_6CNri0kCbUM0PXxRYABloN4yNjoBJsKPHXZE,1582
+flask_apidoc_extend/templates/parse.md,sha256=rndhR7-yaQPBYqQx661NgJsKjdY9iBytgQMvf40PWzI,1180
+flask_apidoc_extend/templates/template.md,sha256=IHMEgGZQV4acKoEefF6mnEAw0FFdLZq9MjQBBd6j13U,261
+Flask_Apidoc_Extend-0.1.8.dist-info/LICENSE,sha256=USqbqcMbk6Em47ACjDNdebnlH1cRIHm1284xPhlAKD4,1099
+Flask_Apidoc_Extend-0.1.8.dist-info/METADATA,sha256=B_j4Fq2roVxpFNs7FhGlB3_qmxoFICVCpnsv6O2AZWA,3005
+Flask_Apidoc_Extend-0.1.8.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+Flask_Apidoc_Extend-0.1.8.dist-info/top_level.txt,sha256=kVJHAaJ1fGeDv2eDiGe_dvWoCuV_TbZgVeNnYN7dHvs,50
+Flask_Apidoc_Extend-0.1.8.dist-info/RECORD,,
