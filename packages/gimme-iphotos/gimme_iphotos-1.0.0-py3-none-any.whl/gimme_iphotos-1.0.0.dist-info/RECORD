@@ -1,0 +1,9 @@
+gimme_iphotos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gimme_iphotos/cli.py,sha256=apKtRyNMNfHeQ6ABmfFR3ykK59jVY9qLMNDS63LO5HQ,2274
+gimme_iphotos/downloader.py,sha256=G3YiHDKARxpo_sVMUJls-ODF0jF45cLFwdW7A7fEFtM,10205
+gimme_iphotos/utils.py,sha256=m-LqZpJBEbiiYivYqMdw05MypbzEbW_DmnHdnaNRGRA,1835
+gimme_iphotos-1.0.0.dist-info/entry_points.txt,sha256=CEa_8Gw_kv9Lx2FkzF75gNuiqpH1uVrSeblGMRJc1FY,56
+gimme_iphotos-1.0.0.dist-info/LICENSE,sha256=oXY7-9r_9Dpzty8mhqluGw4zYG11BJ53Ry8V5kdd-b4,1073
+gimme_iphotos-1.0.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+gimme_iphotos-1.0.0.dist-info/METADATA,sha256=Qov8Bkan4D2rkufe03ACZ6oMUA6tfyOXe0BVZU70J5U,1978
+gimme_iphotos-1.0.0.dist-info/RECORD,,

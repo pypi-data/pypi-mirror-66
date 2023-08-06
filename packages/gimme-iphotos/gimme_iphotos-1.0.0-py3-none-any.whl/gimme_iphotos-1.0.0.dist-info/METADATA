@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: gimme-iphotos
+Version: 1.0.0
+Summary: Download photos and videos from iCloud
+Home-page: https://github.com/Zebradil/Gimme-iPhotos
+License: MIT
+Author: German Lashevich
+Author-email: german.lashevich@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: colorama (>=0.4.3,<0.5.0)
+Requires-Dist: pyicloud (>=0.9.6,<0.10.0)
+Requires-Dist: tqdm (>=4.45.0,<5.0.0)
+Project-URL: Repository, https://github.com/Zebradil/Gimme-iPhotos
+Description-Content-Type: text/markdown
+
+# Gimme-iPhotos
+
+Download media files from iCloud.
+
+This tool uses [pyicloud] to synchronize photos and videos from iCloud to your
+local machine.
+
+## Features
+
+- Downloads media files from iCloud in parallel (might be beneficial on small files and wide bandwidth)
+- Keeps local collection in sync with iCloud by:
+  - skipping files which exist locally
+  - removing local files which were removed from the cloud
+- Reads configuration from ini-file
+- Stores password in keychain (provided by [pyicloud])
+- Supports two-factor authentication
+- Shows nice progress bars (thanks to [tqdm])
+
+## Usage
+
+```
+$ gimme-iphotos --help
+usage: gimme-iphotos [-h] [-c CONFIG] [-v] [-u USERNAME] [-p PASSWORD] [-d DESTINATION] [-o] [-r] [-n PARALLEL]
+
+Download media files from iCloud
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c CONFIG, --config CONFIG
+                        Configuration file
+  -v, --verbose
+  -u USERNAME, --username USERNAME
+  -p PASSWORD, --password PASSWORD
+  -d DESTINATION, --destination DESTINATION
+                        Destination directory
+  -o, --overwrite       Overwrite existing files
+  -r, --remove          Remove missing files
+  -n PARALLEL, --num-parallel-downloads PARALLEL
+```
+
+[pyicloud]: (https://github.com/picklepete/pyicloud)
+[tqdm]: (https://github.com/tqdm/tqdm)
+

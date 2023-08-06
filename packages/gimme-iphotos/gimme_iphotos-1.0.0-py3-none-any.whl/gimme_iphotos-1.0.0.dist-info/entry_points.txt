@@ -1,0 +1,3 @@
+[console_scripts]
+gimme-iphotos=gimme-iphotos.cli:main
+
