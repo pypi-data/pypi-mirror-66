@@ -1,0 +1,3 @@
+[console_scripts]
+download-google-images=download_google_images.main:app
+
