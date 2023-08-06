@@ -1,0 +1,7 @@
+setup.py
+lidazhisheng/__init__.py
+lidazhisheng/setup.py
+lidazhisheng.egg-info/PKG-INFO
+lidazhisheng.egg-info/SOURCES.txt
+lidazhisheng.egg-info/dependency_links.txt
+lidazhisheng.egg-info/top_level.txt
