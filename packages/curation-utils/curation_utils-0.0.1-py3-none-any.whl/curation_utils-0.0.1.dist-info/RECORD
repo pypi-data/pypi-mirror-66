@@ -1,0 +1,9 @@
+curation_utils/__init__.py,sha256=TMPQunVT8ZBTLmqt3kIqlS0yAlKiinfcqN0mCO9OcCk,202
+curation_utils/google/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+curation_utils/google/google_api_helper.py,sha256=maC2h3SHjEg-QjzH74TkO4FrKPh3iNbSQGF9yZB_cxA,5453
+curation_utils/google/google_sheets_index.py,sha256=KHvLIfY6-WHVcIWllk75-HzRoCA0GS2IK0vN-VBncgM,3222
+curation_utils-0.0.1.dist-info/LICENSE.txt,sha256=ceC9ZJOV9H6CtQDcYmHOS46NA3dHJ_WD4J9blH513pc,1081
+curation_utils-0.0.1.dist-info/METADATA,sha256=qB78tuxwoofYNlP3H-PhW-cIFVAqC_x2yHzbzX68o68,2375
+curation_utils-0.0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+curation_utils-0.0.1.dist-info/top_level.txt,sha256=Zwec4MTvbF45FihaiVS_wd1o2YO0JUAd2-NJsMV_Q20,15
+curation_utils-0.0.1.dist-info/RECORD,,
