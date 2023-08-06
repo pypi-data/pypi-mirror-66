@@ -1,0 +1,11 @@
+teamscale_precommit_client/__init__.py,sha256=4bzI44HpaakS-k3GJRRTChWa3IItRdskdnoAYBc85bA,153
+teamscale_precommit_client/client_configuration_utils.py,sha256=KYJabL7c8KcliLGKAJePrm49XN7M_b22-juiiX8e8Qg,2141
+teamscale_precommit_client/data.py,sha256=IqmRM1qT2azP1YR9Q569Q7Rt7sLoMC1C9kpOvF9s9kA,672
+teamscale_precommit_client/git_utils.py,sha256=vbxTFgZzvuq02GKXo2LhI9Cu9MyezzpTCdB_CzHYwSQ,3882
+teamscale_precommit_client/precommit_client.py,sha256=XvCG1NFZfWKFdN0TOKGch-jPVT3mllUHqYd7HLEUuI0,15356
+teamscale_cli-5.8.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+teamscale_cli-5.8.4.dist-info/METADATA,sha256=q3hu09LBE8_zB4Q9nfdD8QmBee6TMzfu4FGroqZj5Io,464
+teamscale_cli-5.8.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+teamscale_cli-5.8.4.dist-info/entry_points.txt,sha256=LeKDvyRQRQW4krv8vsGXm4YsLC3Qd8pHyhXqdplDKU0,83
+teamscale_cli-5.8.4.dist-info/top_level.txt,sha256=jDevF26mFjqBdOngIZOvUVnngjCXXlzbLvoZvHc7O0A,27
+teamscale_cli-5.8.4.dist-info/RECORD,,
