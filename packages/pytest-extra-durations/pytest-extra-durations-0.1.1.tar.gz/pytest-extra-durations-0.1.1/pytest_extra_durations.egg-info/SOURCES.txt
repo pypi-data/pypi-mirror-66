@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pytest_extra_durations.py
+setup.py
+pytest_extra_durations.egg-info/PKG-INFO
+pytest_extra_durations.egg-info/SOURCES.txt
+pytest_extra_durations.egg-info/dependency_links.txt
+pytest_extra_durations.egg-info/entry_points.txt
+pytest_extra_durations.egg-info/requires.txt
+pytest_extra_durations.egg-info/top_level.txt
