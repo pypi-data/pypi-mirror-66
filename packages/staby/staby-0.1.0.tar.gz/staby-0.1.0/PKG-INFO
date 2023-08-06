@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: staby
+Version: 0.1.0
+Summary: Django based CMS
+Home-page: https://github.com/netgarden/staby
+Author: Qilx
+Author-email: qilx@netgarden.org
+License: UNKNOWN
+Description: # staby
+        Django based CMS
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
