@@ -1,0 +1,10 @@
+AuthLib==0.14.1
+requests==2.23.0
+uplink==0.9.1
+
+[tests]
+pytest==5.4.1
+pytest_mock==3.0.0
+pytest-cov==2.8.1
+syrupy==0.4.1
+flake8==3.7.9

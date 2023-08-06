@@ -1,0 +1,16 @@
+README.rst
+setup.py
+battlemuffin/__about__.py
+battlemuffin/__init__.py
+battlemuffin.egg-info/PKG-INFO
+battlemuffin.egg-info/SOURCES.txt
+battlemuffin.egg-info/dependency_links.txt
+battlemuffin.egg-info/requires.txt
+battlemuffin.egg-info/top_level.txt
+battlemuffin/clients/__init__.py
+battlemuffin/clients/warcraft_client.py
+battlemuffin/config/__init__.py
+battlemuffin/config/client_config.py
+battlemuffin/config/region_config.py
+battlemuffin/hooks/__init__.py
+battlemuffin/hooks/handlers.py
