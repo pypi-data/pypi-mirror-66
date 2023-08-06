@@ -1,0 +1,8 @@
+README.md
+setup.py
+dingding_webhook/__init__.py
+dingding_webhook/webhook.py
+dingding_webhook.egg-info/PKG-INFO
+dingding_webhook.egg-info/SOURCES.txt
+dingding_webhook.egg-info/dependency_links.txt
+dingding_webhook.egg-info/top_level.txt
