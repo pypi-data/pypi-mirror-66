@@ -1,0 +1,17 @@
+battlehack20/__init__.py,sha256=7lyG6MRNo_lJgexNQ2hVrrdNdte4xZWzsayZfiKgWtI,115
+battlehack20/basicviewer/__init__.py,sha256=QinDmU-2LbqtuEE1pfO076_xIsOSWIjsCDqoMEFtDBA,33
+battlehack20/basicviewer/viewer.py,sha256=BbDZbzIof2w_BiaO6f608gnc8Mm96RZPsDRuKyTuSHo,2288
+battlehack20/container/__init__.py,sha256=3k0IbSmNRH6L9QoukLLN9EsByX3XZsK9mJsjXg42qBU,43
+battlehack20/container/code_container.py,sha256=cvpPCwHCei1c7QUNtR7_NLgJwqrHL3u9_sVr47D-_-U,356
+battlehack20/container/runner.py,sha256=OPds0PtePucS-4bbfj7or4k_49VVeglZzlu_UzPpznY,620
+battlehack20/game/__init__.py,sha256=r2yR0NjmLVaOfJwA6uJpN2Z7z9hAWTTOYEae50s15mM,62
+battlehack20/game/constants.py,sha256=ofRUpFBBGXqkGlNqtsQ-It159MK3GfIx9EXeqn04M5M,219
+battlehack20/game/game.py,sha256=z7Xj5ZqxiqecCzuzeWcDk6roGaz2AF1m6fVoVQY296I,7518
+battlehack20/game/robot.py,sha256=JgGSEtCXqrbiL-U-_7XYUg4Ywv7qmDyaY3-TsqZysGo,261
+battlehack20/game/robottype.py,sha256=eMUfEjEF8OhJmHiMMxr1ys4vavaJi_L7QysmEMTkol8,83
+battlehack20/game/team.py,sha256=2ruDDcLRHgqdQQXTeGJxzHHQ0sqv6a6BEpoDkwMJrA0,74
+battlehack20_minimal-1.0.1.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+battlehack20_minimal-1.0.1.dist-info/METADATA,sha256=KaCnr4iII_3mvUw-Q4kc3HUN-G5toopZMa48dsk7wEE,605
+battlehack20_minimal-1.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+battlehack20_minimal-1.0.1.dist-info/top_level.txt,sha256=i3QFzaEcAXQiX8lMJ2cjya4PWbUizV0C-C57-pxPXVQ,13
+battlehack20_minimal-1.0.1.dist-info/RECORD,,
