@@ -1,0 +1,3 @@
+[console_scripts]
+attgen = attgen.__main__:run
+

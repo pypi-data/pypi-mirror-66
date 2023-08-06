@@ -1,0 +1,12 @@
+attgen/__init__.py,sha256=RsZjRjMprNcDm97wqRRSk6rTLgTX8N0GyicZyZ8OsBQ,22
+attgen/__main__.py,sha256=nNjJZKnd2S0jSMsLPKR-D9XvZZmg4LXmKX7qq83nP-U,956
+attgen/generate.py,sha256=H67ZYZjtuCoXUczIvW7-_BFDfF3rPcrVCmiKq68_-fc,3984
+attgen/pdf_reference.py,sha256=ps_3qW3Hk0POTcGyoCAZ5PwBCjGNgqPOumrNGgkwmZQ,170559
+attgen/read_yaml.py,sha256=tLT2vfTWLlOnrVxkR3ivSwJjeimJF4kfKP2u8VajZoA,280
+attgen/settings.py,sha256=df8tRYr0agkopYnCZ4xlU1g4awL1Y96EfjwpT8dL6u8,789
+attgen-1.0.0.dist-info/LICENSE-APACHE,sha256=pIqM1JK_UzImwGBZia6Mc5-Y8qYp9n4wmammBA1Tv9I,9749
+attgen-1.0.0.dist-info/METADATA,sha256=q4kObAjD3vBEMZoctvFRo9Kfc1c4PlIJCb0i7eZsdbI,1373
+attgen-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+attgen-1.0.0.dist-info/entry_points.txt,sha256=-OUcu1SdWGzazSuEaVb4hawERNCsRGZqXOxo2qPI1ds,48
+attgen-1.0.0.dist-info/top_level.txt,sha256=Xu6OHgp7BXbzJCeiYKM_PSUFSsBM2iUhNojAp0We4rA,7
+attgen-1.0.0.dist-info/RECORD,,
