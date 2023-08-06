@@ -1,0 +1,7 @@
+include *.txt 
+include *.rst 
+include *.md
+recursive-include src *.h *.cpp *.hpp *.pyx *.pxd
+recursive-include tests *.py
+prune src/py_chenhancc.pyx 
+prune src/py_chenhancc.cpp 
