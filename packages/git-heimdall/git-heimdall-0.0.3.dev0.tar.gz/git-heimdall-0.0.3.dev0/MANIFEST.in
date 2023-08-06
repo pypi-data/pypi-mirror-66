@@ -1,0 +1,6 @@
+recursive-include heimdall/res secrets.*
+recursive-include heimdall/res *.mustache
+recursive-include heimdall/res/heimdall *
+include heimdall/baseconfig1.yaml
+include heimdall/baseconfig.yaml
+include requirements-dev.txt
