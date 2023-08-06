@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: rhasspy-silence
+Version: 0.1.2
+Summary: UNKNOWN
+Home-page: https://github.com/rhasspy/rhasspy-silence
+Author: Michael Hansen
+Author-email: hansen.mike@gmail.com
+License: UNKNOWN
+Description: # Rhasspy Silence
+        
+        [![Continous Integration](https://github.com/rhasspy/rhasspy-silence/workflows/Tests/badge.svg)](https://github.com/rhasspy/rhasspy-silence/actions)
+        [![GitHub license](https://img.shields.io/github/license/rhasspy/rhasspy-silence.svg)](https://github.com/rhasspy/rhasspy-silence/blob/master/LICENSE)
+        
+        Detect speech/silence in voice commands with [webrtcvad](https://github.com/wiseman/py-webrtcvad).
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
