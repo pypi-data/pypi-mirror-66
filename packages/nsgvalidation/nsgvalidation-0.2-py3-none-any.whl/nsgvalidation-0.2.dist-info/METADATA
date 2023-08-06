@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: nsgvalidation
+Version: 0.2
+Summary: A Utility package for Azure NSG validation
+Home-page: UNKNOWN
+Author: Sahil Arora
+Author-email: saharora@ciena.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Requires-Dist: pyhcl (>=0.4.2)
+Requires-Dist: glob3
+
+UNKNOWN
+
+
