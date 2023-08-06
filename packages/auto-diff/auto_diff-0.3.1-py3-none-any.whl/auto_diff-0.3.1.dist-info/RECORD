@@ -1,0 +1,11 @@
+auto_diff/__init__.py,sha256=d6L51aegL0TV_Pl_te8VRdPXIl2RqTz0-ATSXP_2Y5k,4492
+auto_diff/numpy_masking.py,sha256=oj4DbxeCNmwtFVqDVWL2ynAutkvuXggJTgvCP298ny8,6013
+auto_diff/test_auto_diff_on_dae.py,sha256=zk5BcM3hAGB7vSXWUdc_WoMgfTD-flgo53cwPzpUULw,1320
+auto_diff/true_np.py,sha256=eFlY3dWF3XafSuiq62P1OAe2Nw6mDm33GhiZWtwM29g,20
+auto_diff/vecvalder.py,sha256=d6WqpzKLi1sJGUf6EI6UY6ZXsn0W9xVhB1JmU9mARt4,3287
+auto_diff/vecvalder_funcs_and_ufuncs.py,sha256=9P_KNVG3Izc-hN20LdpwLvHKuFdVxQ0srWUw-9_imUs,12044
+auto_diff-0.3.1.dist-info/LICENSE,sha256=cY0q_py1wXTTixS6aLZRwOmO0o7LNS2aEBguF4_opkA,1461
+auto_diff-0.3.1.dist-info/METADATA,sha256=4kRVqpt3DkEAJ_zmIcW7-9u3LaUEdfRU4IoLJEb1yME,2907
+auto_diff-0.3.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+auto_diff-0.3.1.dist-info/top_level.txt,sha256=CK3s4_IdS60GNkH70Ehg_r2-RcpQwSW5GYsA1ivx5RA,10
+auto_diff-0.3.1.dist-info/RECORD,,
