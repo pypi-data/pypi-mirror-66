@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+"""
+This file is used for specifying pathes for 'my' package and potentially private configuration.
+E.g. so you can run something like:
+
+  with_my python3 -c 'import my.books.kobo as kobo; print(kobo.get_todos())'
+
+Feel free to use your preferred way of managing these packages otherwise.
+"""
+
+
+###### set this v
+
+# can be empty if you're not planning to use modules that use private configuration
+# otherwise see readme to learn how to set it
+from pathlib import Path
+MY_CONFIG = str(Path('~/.config/my').expanduser())
+
+######
+
+# you shouldn't have the need to modify rest; but let me know if you miss anything!
+
+
+from pathlib import Path
+# directory where 'my' package is present
+MY_DIR = str(Path(__file__).resolve().absolute().parent)
+
+if __name__ == '__main__':
+    import os
+    import sys
+
+    def upd(envvar, path):
+        if len(path) == 0:
+            return
+        val = os.environ.get(envvar, '')
+        if val == '':
+            val = path
+        else:
+            val = val + ':' + path
+        os.environ[envvar] = val
+
+    # TODO wonder why py.typed file in mycfg didn't help?
+    for v in ['MYPYPATH', 'PYTHONPATH']:
+        upd(v, MY_DIR) # TODO not sure if it should do it if you use install -e?
+
+        # TODO not sure if it should update PYTHONPATH for my_config here??
+        upd(v, MY_CONFIG)
+
+    rest = sys.argv[1:]
+    os.execvp(rest[0], rest)
