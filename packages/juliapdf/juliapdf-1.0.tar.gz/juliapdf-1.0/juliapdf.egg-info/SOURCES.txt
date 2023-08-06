@@ -1,0 +1,9 @@
+README.md
+setup.py
+juliapdf/__init__.py
+juliapdf/pdf2image.py
+juliapdf/pdf2text.py
+juliapdf.egg-info/PKG-INFO
+juliapdf.egg-info/SOURCES.txt
+juliapdf.egg-info/dependency_links.txt
+juliapdf.egg-info/top_level.txt
