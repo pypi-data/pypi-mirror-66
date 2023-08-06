@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: file-api-bundle
+Version: 1.0
+Summary: Applauncher integration with the client of the Bmat TV/AV file api
+Home-page: https://github.com/bmat/file_api_bundle
+Author: BMAT developers
+Author-email: tv-av@bmat.com
+License: UNKNOWN
+Download-URL: https://github.com/bmat/file_api_bundle/archive/master.zip
+Keywords: bmat,file,api,applauncher
+Platform: UNKNOWN
+Classifier: Topic :: Adaptive Technologies
+Classifier: Topic :: Software Development
+Classifier: Topic :: System
+Classifier: Topic :: Utilities
+Requires-Dist: applauncher
+Requires-Dist: file-api (>=1.0)
+
+UNKNOWN
+
+
