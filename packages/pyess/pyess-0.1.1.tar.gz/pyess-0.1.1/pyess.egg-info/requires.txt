@@ -1,0 +1,5 @@
+zeroconf
+requests
+graphyte
+aiohttp
+asyncio-mqtt>=0.3.0
