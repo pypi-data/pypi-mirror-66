@@ -1,0 +1,8 @@
+ujson
+cmd2
+pynndb
+termcolor
+ascii-graph
+pygments
+pipenv
+Pipfile

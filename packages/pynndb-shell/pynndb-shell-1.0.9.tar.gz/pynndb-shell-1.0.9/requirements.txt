@@ -1,0 +1,21 @@
+-i https://pypi.org/simple
+ascii-graph==1.5.1
+attrs==19.3.0
+bson==0.5.8
+certifi==2019.11.28
+cmd2==0.9.21
+colorama==0.4.3
+lmdb==0.98
+pipenv==2018.11.26
+pipfile==0.0.2
+pygments==2.5.2
+pynndb==1.1.5
+pyperclip==1.7.0
+python-dateutil==2.8.1
+six==1.13.0
+termcolor==1.1.0
+toml==0.10.0
+ujson==1.35
+virtualenv-clone==0.5.3
+virtualenv==16.7.8
+wcwidth==0.1.7
