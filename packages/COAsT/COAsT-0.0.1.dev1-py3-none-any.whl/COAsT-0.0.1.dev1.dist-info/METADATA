@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: COAsT
+Version: 0.0.1.dev1
+Summary: Coastal Ocean Assessment Tool
+Home-page: https://www.bodc.ac.uk
+Author: British Oceanographic Data Centre (BODC)
+License: Put something here
+Project-URL: home, https://www.bodc.ac.uk
+Keywords: Put something here
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Hydrology
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+
+UNKNOWN
+
+
