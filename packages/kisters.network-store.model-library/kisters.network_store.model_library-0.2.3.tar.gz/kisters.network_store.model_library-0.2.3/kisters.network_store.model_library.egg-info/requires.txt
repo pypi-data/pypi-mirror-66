@@ -1,0 +1,9 @@
+fastapi>=0.54.1
+pydantic
+
+[test]
+kisters.network_store.model_library.water
+pytest
+
+[water]
+kisters.network_store.model_library.water
