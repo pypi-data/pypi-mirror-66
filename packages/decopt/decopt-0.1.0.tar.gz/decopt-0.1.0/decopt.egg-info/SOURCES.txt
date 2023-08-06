@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+dec_opt/__init__.py
+dec_opt/compression.py
+dec_opt/data_reader.py
+dec_opt/dec_gd.py
+dec_opt/gossip_matrix.py
+dec_opt/logistic_regression.py
+dec_opt/pickle_data.py
+decopt.egg-info/PKG-INFO
+decopt.egg-info/SOURCES.txt
+decopt.egg-info/dependency_links.txt
+decopt.egg-info/top_level.txt
