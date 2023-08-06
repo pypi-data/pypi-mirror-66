@@ -1,0 +1,1 @@
+This document has been replaced, see https://numpy_demodoc.readthedocs.io/en/latest/format.html#docstring-standard

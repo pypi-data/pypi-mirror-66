@@ -1,0 +1,6 @@
+.. currentmodule:: numpy_demo
+
+==========================
+NumPy 1.19.0 Release Notes
+==========================
+

@@ -1,0 +1,6 @@
+``numpy_demo.ndarray.tostring()`` is deprecated in favor of ``tobytes()``
+--------------------------------------------------------------------
+`~numpy_demo.ndarray.tobytes` has existed since the 1.9 release, but until this
+release `~numpy_demo.ndarray.tostring` emitted no warning. The change to emit a
+warning brings NumPy in line with the builtin `array.array` methods of the
+same name.

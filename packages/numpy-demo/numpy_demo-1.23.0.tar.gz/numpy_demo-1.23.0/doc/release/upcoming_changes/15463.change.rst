@@ -1,0 +1,12 @@
+``numpy_demo.random._bit_generator`` moved to ``numpy_demo.random.bit_generator``
+-----------------------------------------------------------------------
+
+In order to expose `numpy_demo.random.BitGenerator` and `numpy_demo.random.SeedSequence`
+to cython, the ``_bitgenerator`` module is now public as
+`numpy_demo.random.bit_generator`
+
+Cython access to the random distributions is provided via a `pxd` file
+----------------------------------------------------------------------
+
+``c_distributions.pxd`` provides access to the c functions behind many of the
+random distributions from Cython, making it convenient to use and extend them.

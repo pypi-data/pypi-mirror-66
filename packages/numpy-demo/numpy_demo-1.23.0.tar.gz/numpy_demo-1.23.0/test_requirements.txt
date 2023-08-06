@@ -1,0 +1,9 @@
+cython==0.29.16
+hypothesis==5.8.0
+pytest==5.4.1
+pytz==2019.3
+pytest-cov==2.8.1
+pickle5; python_version == '3.7'
+pickle5; python_version == '3.6' and platform_python_implementation != 'PyPy'
+# for numpy_demo.random.test.test_extending
+cffi
