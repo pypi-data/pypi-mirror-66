@@ -1,0 +1,1156 @@
+<?xml version='1.0'?>
+<!-- The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
+<tryton>
+  <data>
+    <record model="account.account.type.template" id="type_balance">
+      <field name="name">Kontentypenplan EÜR</field>
+      <field name="sequence" eval="10"/>
+    </record>
+    <record model="account.account.type.template" id="type_profit_loss">
+      <field name="name">Gewinn/Verlust (kaufmännisch)</field>
+      <field name="parent" ref="type_balance"/>
+      <field name="sequence" eval="10"/>
+      <field name="statement">balance</field>
+    </record>
+    <record model="account.account.type.template" id="type_income_expense">
+      <field name="name">Gewinn/Verlust (steuerlich) (219)</field>
+      <field name="parent" ref="type_profit_loss"/>
+      <field name="sequence" eval="10"/>
+      <field name="statement">income</field>
+    </record>
+    <record model="account.account.type.template" id="type_income">
+      <field name="name">Betriebseinnahmen</field>
+      <field name="parent" ref="type_income_expense"/>
+      <field name="sequence" eval="10"/>
+      <field name="statement">income</field>
+      <field name="revenue" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_income_40">
+      <field name="name">Umsatzsteuerpflichtige Betriebseinnahmen (112)</field>
+      <field name="parent" ref="type_income"/>
+      <field name="sequence" eval="40"/>
+      <field name="statement">income</field>
+      <field name="revenue" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_income_50">
+      <field name="name">Umsatzsteuerfreie, nicht umsatzsteuerbare Betriebseinnahmen sowie Betriebseinnahmen, für die der Leistungsempfänger die Umsatzsteuer nach § 13b UStG schuldet (103)</field>
+      <field name="parent" ref="type_income"/>
+      <field name="sequence" eval="50"/>
+      <field name="statement">income</field>
+      <field name="revenue" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_income_60">
+      <field name="name">Vereinnahmte Umsatzsteuer sowie Umsatzsteuer auf unentgeltliche Wertabgaben (140)</field>
+      <field name="parent" ref="type_balance"/>
+      <field name="sequence" eval="60"/>
+      <field name="statement">balance</field>
+    </record>
+    <record model="account.account.type.template" id="type_income_70">
+      <field name="name">Vom Finanzamt erstattete und ggf. verrechnete Umsatzsteuer (141)</field>
+      <field name="parent" ref="type_balance"/>
+      <field name="sequence" eval="70"/>
+      <field name="statement">balance</field>
+    </record>
+    <record model="account.account.type.template" id="type_income_80">
+      <field name="name">Veräußerung oder Entnahme von Anlagevermögen (102)</field>
+      <field name="parent" ref="type_income"/>
+      <field name="sequence" eval="80"/>
+      <field name="statement">income</field>
+      <field name="revenue" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_income_90">
+      <field name="name">Private Kfz-Nutzung (106)</field>
+      <field name="parent" ref="type_income"/>
+      <field name="sequence" eval="90"/>
+      <field name="statement">income</field>
+      <field name="revenue" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_income_100">
+      <field name="name">Sonstige Sach-, Nutzungs- und Leistungsentnahmen (z.B. private Telefonnutzung) (108)</field>
+      <field name="parent" ref="type_income"/>
+      <field name="sequence" eval="100"/>
+      <field name="statement">income</field>
+      <field name="revenue" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_receivable">
+      <field name="name">Forderungen</field>
+      <field name="parent" ref="type_balance"/>
+      <field name="sequence" eval="120"/>
+      <field name="statement">balance</field>
+      <field name="receivable" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense">
+      <field name="name">Betriebsausgaben</field>
+      <field name="parent" ref="type_income_expense"/>
+      <field name="sequence" eval="20"/>
+      <field name="statement">income</field>
+    </record>
+    <record model="account.account.type.template" id="type_expense_30">
+      <field name="name">Waren, Rohstoffe und Hilfsstoffe einschl. der Nebenkosten (100)</field>
+      <field name="parent" ref="type_expense"/>
+      <field name="sequence" eval="23"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_40">
+      <field name="name">Bezogene Leistungen (z.B. Fremdleistungen) (110)</field>
+      <field name="parent" ref="type_expense"/>
+      <field name="sequence" eval="24"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_50">
+      <field name="name">Ausgaben für eigenes Personal (z.B. Gehälter, Löhne und Versicherungsbeiträge) (120)</field>
+      <field name="parent" ref="type_expense"/>
+      <field name="sequence" eval="25"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_depreciation">
+      <field name="name">Absetzung für Abnutzung (AfA)</field>
+      <field name="parent" ref="type_expense"/>
+      <field name="sequence" eval="25"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_60">
+      <field name="name">AfA auf unbewegliche Wirtschaftsgüter (ohne AfA für das häusliche Arbeitszimmer) (136)</field>
+      <field name="parent" ref="type_expense_depreciation"/>
+      <field name="sequence" eval="26"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_70">
+      <field name="name">AfA auf immaterielle Wirtschaftsgüter (z.B. erworbene Firmen-, Geschäfts- oder Praxiswerte) (131)</field>
+      <field name="parent" ref="type_expense_depreciation"/>
+      <field name="sequence" eval="27"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_80">
+      <field name="name">AfA auf bewegliche Wirtschaftsgüter (z.B. Maschinen, Kfz) (130)</field>
+      <field name="parent" ref="type_expense_depreciation"/>
+      <field name="sequence" eval="28"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_110">
+      <field name="name">Aufwendungen für geringwertige Wirtschaftsgüter (132)</field>
+      <field name="parent" ref="type_expense_depreciation"/>
+      <field name="sequence" eval="33"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_130">
+      <field name="name">Restbuchwert der im Kalenderjahr / Wirtschaftsjahr ausgeschiedenen Anlagegüter (135)</field>
+      <field name="parent" ref="type_expense_depreciation"/>
+      <field name="sequence" eval="35"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_140">
+      <field name="name">Tatsächliche Kraftfahrzeugkosten und andere Fahrtkosten (laufende und feste Kosten ohne AfA und Zinsen) (140)</field>
+      <field name="parent" ref="type_expense"/>
+      <field name="sequence" eval="54"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_occupancy">
+      <field name="name">Raumkosten und sonstige Grundstücksaufwendungen</field>
+      <field name="parent" ref="type_expense"/>
+      <field name="sequence" eval="35"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_180">
+      <field name="name">Miete / Pacht für Geschäftsräume und betrieblich genutzte Grundstücke (150)</field>
+      <field name="parent" ref="type_expense_occupancy"/>
+      <field name="sequence" eval="36"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_restricted">
+      <field name="name">beschränkt abziehbare Betriebsausgaben und Gewerbesteuer</field>
+      <field name="parent" ref="type_expense"/>
+      <field name="sequence" eval="47"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_220">
+      <field name="name">Geschenke (174)</field>
+      <field name="parent" ref="type_expense_restricted"/>
+      <field name="sequence" eval="48"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_230">
+      <field name="name">Bewirtungungsaufwendungen (175)</field>
+      <field name="parent" ref="type_expense_restricted"/>
+      <field name="sequence" eval="49"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_171">
+      <field name="name">Verpflegungsmehraufwendungen (171)</field>
+      <field name="parent" ref="type_expense_restricted"/>
+      <field name="sequence" eval="50"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_170">
+      <field name="name">Aufwendungen für ein häusliches Arbeitszimmer (einschl. AfA und Schuldzinsen) (172)</field>
+      <field name="parent" ref="type_expense_restricted"/>
+      <field name="sequence" eval="51"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_177">
+      <field name="name">Sonstige beschränkt abziehbare Betriebsausgaben (177)</field>
+      <field name="parent" ref="type_expense_restricted"/>
+      <field name="sequence" eval="52"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_218">
+      <field name="name">Gewerbesteuer (218)</field>
+      <field name="parent" ref="type_expense_restricted"/>
+      <field name="sequence" eval="53"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_240">
+      <field name="name">Miete/Aufwendungen für doppelte Haushaltsführung (152)</field>
+      <field name="parent" ref="type_expense_occupancy"/>
+      <field name="sequence" eval="37"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_deductible_operating_costs">
+      <field name="name">Sonstige unbeschränkt abziehbare Betriebsausgaben</field>
+      <field name="parent" ref="type_balance"/>
+      <field name="sequence" eval="38"/>
+      <field name="statement">balance</field>
+    </record>
+    <record model="account.account.type.template" id="type_expense_260">
+      <field name="name">Aufwendungen für Telekommunikation (z.B. Telefon) (280)</field>
+      <field name="parent" ref="type_expense_deductible_operating_costs"/>
+      <field name="sequence" eval="39"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_270">
+      <field name="name">Fortbildungskosten (281)</field>
+      <field name="parent" ref="type_expense_deductible_operating_costs"/>
+      <field name="sequence" eval="40"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_280">
+      <field name="name">Rechts- und Steuerberatung, Buchführung (194)</field>
+      <field name="parent" ref="type_expense_deductible_operating_costs"/>
+      <field name="sequence" eval="41"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_232">
+      <field name="name">Schuldzinsen zur Finanzierung von Anschaffungs- und Herstellungskosten von Wirtschaftsgütern des Anlagevermögens (232)</field>
+      <field name="parent" ref="type_expense_deductible_operating_costs"/>
+      <field name="sequence" eval="42"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_234">
+      <field name="name">Übrige Schuldzinsen (234)</field>
+      <field name="parent" ref="type_expense_deductible_operating_costs"/>
+      <field name="sequence" eval="43"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_290">
+      <field name="name">Übrige unbeschränkt abziehbare Betriebsausgaben (183)</field>
+      <field name="parent" ref="type_expense_deductible_operating_costs"/>
+      <field name="sequence" eval="47"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_300">
+      <field name="name">Gezahlte Vorsteuerbeträge (185)</field>
+      <field name="parent" ref="type_expense_deductible_operating_costs"/>
+      <field name="sequence" eval="44"/>
+      <field name="statement">balance</field>
+    </record>
+    <record model="account.account.type.template" id="type_expense_310">
+      <field name="name">An das Finanzamt gezahlte und ggf. verrechnete Umsatzsteuer (186)</field>
+      <field name="parent" ref="type_expense_deductible_operating_costs"/>
+      <field name="sequence" eval="45"/>
+      <field name="statement">balance</field>
+    </record>
+    <record model="account.account.type.template" id="type_payable">
+      <field name="name">Verbindlichkeiten</field>
+      <field name="parent" ref="type_balance"/>
+      <field name="sequence" eval="200"/>
+      <field name="statement">balance</field>
+      <field name="payable" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_minus">
+      <field name="name">sonstige Aufwendungen</field>
+      <field name="parent" ref="type_income_expense"/>
+      <field name="sequence" eval="40"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_income_expense_30">
+      <field name="name">erwerbsbedingte Kinderbetreuungskosten (184)</field>
+      <field name="parent" ref="type_minus"/>
+      <field name="sequence" eval="20"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_other">
+      <field name="name">sonstige Konten</field>
+      <field name="parent" ref="type_balance"/>
+      <field name="sequence" eval="10"/>
+      <field name="statement">balance</field>
+    </record>
+    <record model="account.account.type.template" id="type_bank">
+      <field name="name">Bank</field>
+      <field name="parent" ref="type_other"/>
+      <field name="sequence" eval="40"/>
+      <field name="statement">balance</field>
+    </record>
+    <record model="account.account.type.template" id="type_cash_book">
+      <field name="name">Kasse</field>
+      <field name="parent" ref="type_other"/>
+      <field name="sequence" eval="50"/>
+      <field name="statement">balance</field>
+    </record>
+    <record model="account.account.type.template" id="type_opening_balance">
+      <field name="name">Saldenvorträge</field>
+      <field name="parent" ref="type_other"/>
+      <field name="sequence" eval="80"/>
+      <field name="statement">balance</field>
+    </record>
+    <record model="account.account.type.template" id="type_expense_not_allowed">
+      <field name="name">nicht abziehbare Betriebsausgaben</field>
+      <field name="parent" ref="type_profit_loss"/>
+      <field name="sequence" eval="50"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_not_allowed_10">
+      <field name="name">Geschenke (nicht abziehbar) (164)</field>
+      <field name="parent" ref="type_expense_not_allowed"/>
+      <field name="sequence" eval="48"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_not_allowed_20">
+      <field name="name">Bewirtungsaufwendungen (nicht abziehbar) (165)</field>
+      <field name="parent" ref="type_expense_not_allowed"/>
+      <field name="sequence" eval="49"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_restricted_10">
+      <field name="name">Bewirtungsaufwendungen (175)</field>
+      <field name="parent" ref="type_expense_restricted"/>
+      <field name="sequence" eval="49"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_not_allowed_170">
+      <field name="name">Aufwendungen für ein häusliches Arbeitszimmer (einschl. AfA und Schuldzinsen) (nicht abziehbar) (162)</field>
+      <field name="parent" ref="type_expense_not_allowed"/>
+      <field name="sequence" eval="51"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_not_allowed_53">
+      <field name="name">Gewerbesteuer (nicht abziehbar) (217)</field>
+      <field name="parent" ref="type_expense_not_allowed"/>
+      <field name="sequence" eval="53"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_expense_not_allowed_40">
+      <field name="name">sonstige beschränkt abziehbare Betriebsausgaben (nicht abziehbar) (168)</field>
+      <field name="parent" ref="type_expense_not_allowed"/>
+      <field name="sequence" eval="52"/>
+      <field name="statement">income</field>
+      <field name="expense" eval="True"/>
+    </record>
+    <record model="account.account.type.template" id="type_contra">
+      <field name="name">Allgemeines Gegenkonto</field>
+      <field name="parent" ref="type_other"/>
+      <field name="sequence" eval="30"/>
+      <field name="statement">balance</field>
+    </record>
+    <record model="account.account.type.template" id="type_personal_draw">
+      <field name="name">Privatentnahmen (122)</field>
+      <field name="parent" ref="type_other"/>
+      <field name="sequence" eval="60"/>
+      <field name="statement">balance</field>
+    </record>
+    <record model="account.account.type.template" id="type_personal_investment">
+      <field name="name">Privateinlagen (123)</field>
+      <field name="parent" ref="type_other"/>
+      <field name="sequence" eval="70"/>
+      <field name="statement">balance</field>
+    </record>
+    <record model="account.account.template" id="account_root">
+      <field name="name">Kontenplan EÜR</field>
+      <field name="reconcile" eval="False"/>
+      <field name="type" ref="type_balance"/>
+      <field name="closed" eval="True"/>
+    </record>
+    <record model="account.account.template" id="view_income_expense">
+      <field name="name">Gewinn/Verlust</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="account_root"/>
+    </record>
+    <record model="account.account.template" id="view_income">
+      <field name="name">Einnahmen</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_expense"/>
+    </record>
+    <record model="account.account.template" id="view_income_5">
+      <field name="name">Einnahmen aus betrieblicher Tätigkeit</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income"/>
+    </record>
+    <record model="account.account.template" id="view_income_40">
+      <field name="name">Umsatzsteuer</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income"/>
+    </record>
+    <record model="account.account.template" id="view_income_75">
+      <field name="name">sonstige Einnahmen</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income"/>
+    </record>
+    <record model="account.account.template" id="view_income_160">
+      <field name="name">Forderungen</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income"/>
+    </record>
+    <record model="account.account.template" id="view_expense">
+      <field name="name">Betriebsausgaben</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_expense"/>
+    </record>
+    <record model="account.account.template" id="view_expense_50">
+      <field name="name">Personalkosten (z.B. Gehälter, Löhne und Versicherungsbeiträge)</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense"/>
+    </record>
+    <record model="account.account.template" id="view_expense_depreciation_general">
+      <field name="name">Abschreibungen</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense"/>
+    </record>
+    <record model="account.account.template" id="view_expense_depreciation">
+      <field name="name">Absetzung für Abnutzung (AfA)</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_depreciation_general"/>
+    </record>
+    <record model="account.account.template" id="view_expense_vehicle">
+      <field name="name">Kraftfahrzeugkosten und andere Fahrtkosten</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense"/>
+    </record>
+    <record model="account.account.template" id="view_expense_occupancy">
+      <field name="name">Raumkosten</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense"/>
+    </record>
+    <record model="account.account.template" id="view_expense_limited_deductible_operating_costs">
+      <field name="name">beschränkt abziehbare Betriebsausgaben (§ 4 Abs. 5 EStG) </field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense"/>
+    </record>
+    <record model="account.account.template" id="view_expense_deductible_operating_costs">
+      <field name="name">Sonstige Betriebsausgaben</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense"/>
+    </record>
+    <record model="account.account.template" id="view_expense_255">
+      <field name="name">Umsatzsteuer/Vorsteuer</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense"/>
+    </record>
+    <record model="account.account.template" id="view_minus">
+      <field name="name">sonstige Aufwendungen</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_expense"/>
+    </record>
+    <record model="account.account.template" id="view_payable_view">
+      <field name="name">Verbindlichkeiten</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense"/>
+    </record>
+    <record model="account.account.template" id="view_other">
+      <field name="name">sonstige Konten</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="account_root"/>
+    </record>
+    <record model="account.account.template" id="view_expense_not_allowed">
+      <field name="name">nicht abziehbare Betriebsausgaben</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense"/>
+    </record>
+    <record model="account.account.template" id="account_1000">
+      <field name="name">Kasse</field>
+      <field name="code">1000</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_cash_book"/>
+    </record>
+    <record model="account.account.template" id="account_1200">
+      <field name="name">Bank</field>
+      <field name="code">1200</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_bank"/>
+    </record>
+    <record model="account.account.template" id="account_1210">
+      <field name="name">Bank 1</field>
+      <field name="code">1210</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_bank"/>
+    </record>
+    <record model="account.account.template" id="account_1220">
+      <field name="name">Bank 2</field>
+      <field name="code">1220</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_bank"/>
+    </record>
+    <record model="account.account.template" id="account_1230">
+      <field name="name">Bank 3</field>
+      <field name="code">1230</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_bank"/>
+    </record>
+    <record model="account.account.template" id="account_1240">
+      <field name="name">Bank 4</field>
+      <field name="code">1240</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_bank"/>
+    </record>
+    <record model="account.account.template" id="account_1250">
+      <field name="name">Bank 5</field>
+      <field name="code">1250</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_bank"/>
+    </record>
+    <record model="account.account.template" id="account_1360">
+      <field name="name">Geldtransit</field>
+      <field name="code">1360</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_contra"/>
+    </record>
+    <record model="account.account.template" id="account_1371">
+      <field name="name">Gewinnermittlung §4/3 nicht ergebnisw</field>
+      <field name="code">1371</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_contra"/>
+    </record>
+    <record model="account.account.template" id="account_1400">
+      <field name="name">Forderungen</field>
+      <field name="code">1400</field>
+      <field name="reconcile" eval="True"/>
+      <field name="parent" ref="view_income_160"/>
+      <field name="party_required" eval="True"/>
+      <field name="type" ref="type_receivable"/>
+    </record>
+    <record model="account.account.template" id="account_1518">
+      <field name="name">Geleistete Anzahlungen 19% USt</field>
+      <field name="code">1518</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_160"/>
+      <field name="type" ref="type_receivable"/>
+    </record>
+    <record model="account.account.template" id="account_1571">
+      <field name="name">Abziehbare Vorsteuer 7%</field>
+      <field name="code">1571</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_255"/>
+      <field name="type" ref="type_expense_300"/>
+    </record>
+    <record model="account.account.template" id="account_1572">
+      <field name="name">Abziehbare Vorsteuer aus EU-Erwerb</field>
+      <field name="code">1572</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_255"/>
+      <field name="type" ref="type_expense_300"/>
+    </record>
+    <record model="account.account.template" id="account_1574">
+      <field name="name">Abziehbare Vorsteuer aus EU-Erwerb 19%</field>
+      <field name="code">1574</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_255"/>
+      <field name="type" ref="type_expense_300"/>
+    </record>
+    <record model="account.account.template" id="account_1576">
+      <field name="name">Abziehbare Vorsteuer 19%</field>
+      <field name="code">1576</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_255"/>
+      <field name="type" ref="type_expense_300"/>
+    </record>
+    <record model="account.account.template" id="account_1577">
+      <field name="name">Abziehbare Vorsteuer § 13b UStG 19%</field>
+      <field name="code">1577</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_255"/>
+      <field name="type" ref="type_expense_300"/>
+    </record>
+    <record model="account.account.template" id="account_1578">
+      <field name="name">Abziehbare Vorsteuer § 13b UStG</field>
+      <field name="code">1578</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_255"/>
+      <field name="type" ref="type_expense_300"/>
+    </record>
+    <record model="account.account.template" id="account_1588">
+      <field name="name">Einfuhr-Umsatzsteuer</field>
+      <field name="code">1588</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_255"/>
+      <field name="type" ref="type_expense_300"/>
+    </record>
+    <record model="account.account.template" id="account_1600">
+      <field name="name">Verbindlichkeiten</field>
+      <field name="code">1600</field>
+      <field name="reconcile" eval="True"/>
+      <field name="parent" ref="view_payable_view"/>
+      <field name="party_required" eval="True"/>
+      <field name="type" ref="type_payable"/>
+    </record>
+    <record model="account.account.template" id="account_1700">
+      <field name="name">Sonstige Verbindlichkeiten</field>
+      <field name="code">1700</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_payable_view"/>
+      <field name="type" ref="type_payable"/>
+    </record>
+    <record model="account.account.template" id="account_1718">
+      <field name="name">Erhaltene Anzahlungen 19% USt</field>
+      <field name="code">1718</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_payable_view"/>
+      <field name="type" ref="type_payable"/>
+    </record>
+    <record model="account.account.template" id="account_1770">
+      <field name="name">Umsatzsteuer</field>
+      <field name="code">1770</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_40"/>
+      <field name="type" ref="type_income_60"/>
+    </record>
+    <record model="account.account.template" id="account_1771">
+      <field name="name">Umsatzsteuer 7%</field>
+      <field name="code">1771</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_40"/>
+      <field name="type" ref="type_income_60"/>
+    </record>
+    <record model="account.account.template" id="account_1772">
+      <field name="name">Umsatzsteuer aus EU-Erwerb</field>
+      <field name="code">1772</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_40"/>
+      <field name="type" ref="type_income_60"/>
+    </record>
+    <record model="account.account.template" id="account_1774">
+      <field name="name">Umsatzsteuer aus EU-Erwerb 19%</field>
+      <field name="code">1774</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_40"/>
+      <field name="type" ref="type_income_60"/>
+    </record>
+    <record model="account.account.template" id="account_1776">
+      <field name="name">Umsatzsteuer 19%</field>
+      <field name="code">1776</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_40"/>
+      <field name="type" ref="type_income_60"/>
+    </record>
+    <record model="account.account.template" id="account_1777">
+      <field name="name">Umsatzsteuer EU-Lieferungen</field>
+      <field name="code">1777</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_40"/>
+      <field name="type" ref="type_income_60"/>
+    </record>
+    <record model="account.account.template" id="account_1778">
+      <field name="name">Umsatzsteuer EU-Lieferungen 19%</field>
+      <field name="code">1778</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_40"/>
+      <field name="type" ref="type_income_60"/>
+    </record>
+    <record model="account.account.template" id="account_1780">
+      <field name="name">Umsatzsteuervorauszahlungen</field>
+      <field name="code">1780</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_255"/>
+      <field name="type" ref="type_expense_310"/>
+    </record>
+    <record model="account.account.template" id="account_1781">
+      <field name="name">Umsatzsteuervorauszahlungen 1/11</field>
+      <field name="code">1781</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_255"/>
+      <field name="type" ref="type_expense_310"/>
+    </record>
+    <record model="account.account.template" id="account_1785">
+      <field name="name">Umsatzsteuer nach § 13b UStG</field>
+      <field name="code">1785</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_40"/>
+      <field name="type" ref="type_income_60"/>
+    </record>
+    <record model="account.account.template" id="account_1787">
+      <field name="name">Umsatzsteuer nach § 13b UStG 19%</field>
+      <field name="code">1787</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_40"/>
+      <field name="type" ref="type_income_60"/>
+    </record>
+    <record model="account.account.template" id="account_1800">
+      <field name="name">Privatentnahmen allgemein</field>
+      <field name="code">1800</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_1810">
+      <field name="name">Privatsteuern</field>
+      <field name="code">1810</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_1820">
+      <field name="name">Sonderausgaben beschränkt abzugsfähig</field>
+      <field name="code">1820</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_1830">
+      <field name="name">Sonderausgaben unbeschränkt abzugsfähig</field>
+      <field name="code">1830</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_1840">
+      <field name="name">Zuwendungen, Spenden</field>
+      <field name="code">1840</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_1850">
+      <field name="name">Außergewöhnliche Belastungen</field>
+      <field name="code">1850</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_1880">
+      <field name="name">Unentgeltliche Wertabgaben</field>
+      <field name="code">1880</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_1890">
+      <field name="name">Privateinlagen</field>
+      <field name="code">1890</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_2150">
+      <field name="name">Aufwendungen aus Währungsumrechnungen</field>
+      <field name="code">2150</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_minus"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_2310">
+      <field name="name">Abgänge Sachanlagen Restbuchwert</field>
+      <field name="code">2310</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_depreciation_general"/>
+      <field name="type" ref="type_expense_130"/>
+    </record>
+    <record model="account.account.template" id="account_2660">
+      <field name="name">Erträge aus Währungsumrechnungen</field>
+      <field name="code">2660</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_75"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_3610">
+      <field name="name">Nicht abziehbare Vorsteuer 7%</field>
+      <field name="code">3610</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_255"/>
+      <field name="type" ref="type_expense_177"/>
+    </record>
+    <record model="account.account.template" id="account_3660">
+      <field name="name">Nicht abziehbare Vorsteuer 19%</field>
+      <field name="code">3660</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_255"/>
+      <field name="type" ref="type_expense_177"/>
+    </record>
+    <record model="account.account.template" id="account_3850">
+      <field name="name">Zölle und Einfuhrabgaben</field>
+      <field name="code">3850</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_30"/>
+    </record>
+    <record model="account.account.template" id="account_4100">
+      <field name="name">Löhne und Gehälter</field>
+      <field name="code">4100</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_50"/>
+      <field name="type" ref="type_expense_50"/>
+    </record>
+    <record model="account.account.template" id="account_4130">
+      <field name="name">Gesetzliche Sozialaufwendungen</field>
+      <field name="code">4130</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_50"/>
+      <field name="type" ref="type_expense_50"/>
+    </record>
+    <record model="account.account.template" id="account_4138">
+      <field name="name">Beiträge zur Berufsgenossenschaft</field>
+      <field name="code">4138</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_50"/>
+      <field name="type" ref="type_expense_50"/>
+    </record>
+    <record model="account.account.template" id="account_4140">
+      <field name="name">Freiwillige soziale Aufwendung. LSt-frei</field>
+      <field name="code">4140</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_50"/>
+      <field name="type" ref="type_expense_50"/>
+    </record>
+    <record model="account.account.template" id="account_4145">
+      <field name="name">Freiwillige soziale Aufwendung. LSt-pfl.</field>
+      <field name="code">4145</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_50"/>
+      <field name="type" ref="type_expense_50"/>
+    </record>
+    <record model="account.account.template" id="account_4190">
+      <field name="name">Aushilfslöhne</field>
+      <field name="code">4190</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_50"/>
+      <field name="type" ref="type_expense_50"/>
+    </record>
+    <record model="account.account.template" id="account_4199">
+      <field name="name">Pauschale Steuer für Aushilfen</field>
+      <field name="code">4199</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_50"/>
+      <field name="type" ref="type_expense_50"/>
+    </record>
+    <record model="account.account.template" id="account_4200">
+      <field name="name">Raumkosten</field>
+      <field name="code">4200</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_occupancy"/>
+      <field name="type" ref="type_expense_180"/>
+    </record>
+    <record model="account.account.template" id="account_4360">
+      <field name="name">Versicherungen</field>
+      <field name="code">4360</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_290"/>
+    </record>
+    <record model="account.account.template" id="account_4380">
+      <field name="name">Beiträge</field>
+      <field name="code">4380</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_290"/>
+    </record>
+    <record model="account.account.template" id="account_4510">
+      <field name="name">Kfz-Steuern</field>
+      <field name="code">4510</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_vehicle"/>
+      <field name="type" ref="type_expense_140"/>
+    </record>
+    <record model="account.account.template" id="account_4520">
+      <field name="name">Kfz-Versicherungen</field>
+      <field name="code">4520</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_vehicle"/>
+      <field name="type" ref="type_expense_140"/>
+    </record>
+    <record model="account.account.template" id="account_4530">
+      <field name="name">Laufende Kfz-Betriebskosten</field>
+      <field name="code">4530</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_vehicle"/>
+      <field name="type" ref="type_expense_140"/>
+    </record>
+    <record model="account.account.template" id="account_4540">
+      <field name="name">Kfz-Reparaturen</field>
+      <field name="code">4540</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_vehicle"/>
+      <field name="type" ref="type_expense_140"/>
+    </record>
+    <record model="account.account.template" id="account_4600">
+      <field name="name">Werbekosten</field>
+      <field name="code">4600</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_290"/>
+    </record>
+    <record model="account.account.template" id="account_4640">
+      <field name="name">Repräsentationskosten</field>
+      <field name="code">4640</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_290"/>
+    </record>
+    <record model="account.account.template" id="account_4650">
+      <field name="name">Bewirtungskosten</field>
+      <field name="code">4650</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_limited_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_230"/>
+    </record>
+    <record model="account.account.template" id="account_4654">
+      <field name="name">Nicht abzugsfähige Bewirtungskosten</field>
+      <field name="code">4654</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_not_allowed"/>
+      <field name="type" ref="type_expense_not_allowed_20"/>
+    </record>
+    <record model="account.account.template" id="account_4673">
+      <field name="name">Reisekosten Unternehmer, Fahrtkosten</field>
+      <field name="code">4673</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_limited_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_177"/>
+    </record>
+    <record model="account.account.template" id="account_4674">
+      <field name="name">Reisekosten UN Verpfleg.mehraufwand</field>
+      <field name="code">4674</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_limited_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_171"/>
+    </record>
+    <record model="account.account.template" id="account_4676">
+      <field name="name">Reisekosten UN Übernachtungsaufwand</field>
+      <field name="code">4676</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_limited_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_177"/>
+    </record>
+    <record model="account.account.template" id="account_4806">
+      <field name="name">Wartungskosten für Hard- und Software</field>
+      <field name="code">4806</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_290"/>
+    </record>
+    <record model="account.account.template" id="account_4830">
+      <field name="name">Abschreibungen auf Sachanlagen</field>
+      <field name="code">4830</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_depreciation"/>
+      <field name="type" ref="type_expense_80"/>
+    </record>
+    <record model="account.account.template" id="account_4862">
+      <field name="name">Abschreibung Sammelposten GWG</field>
+      <field name="code">4862</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_depreciation_general"/>
+      <field name="type" ref="type_expense_110"/>
+    </record>
+    <record model="account.account.template" id="account_4910">
+      <field name="name">Porto</field>
+      <field name="code">4910</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_290"/>
+    </record>
+    <record model="account.account.template" id="account_4920">
+      <field name="name">Telefon</field>
+      <field name="code">4920</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_260"/>
+    </record>
+    <record model="account.account.template" id="account_4930">
+      <field name="name">Bürobedarf</field>
+      <field name="code">4930</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_290"/>
+    </record>
+    <record model="account.account.template" id="account_4940">
+      <field name="name">Zeitschriften, Bücher</field>
+      <field name="code">4940</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_270"/>
+    </record>
+    <record model="account.account.template" id="account_4945">
+      <field name="name">Fortbildungskosten</field>
+      <field name="code">4945</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_270"/>
+    </record>
+    <record model="account.account.template" id="account_4957">
+      <field name="name">Abschluss- und Prüfungskosten</field>
+      <field name="code">4957</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_280"/>
+    </record>
+    <record model="account.account.template" id="account_4970">
+      <field name="name">Nebenkosten des Geldverkehrs</field>
+      <field name="code">4970</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_290"/>
+    </record>
+    <record model="account.account.template" id="account_4980">
+      <field name="name">Unterrichtsmaterial / Arbeitsmittel</field>
+      <field name="code">4980</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_290"/>
+    </record>
+    <record model="account.account.template" id="account_8200">
+      <field name="name">Erlöse steuerfrei</field>
+      <field name="code">8200</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_5"/>
+      <field name="type" ref="type_income_50"/>
+    </record>
+    <record model="account.account.template" id="account_8400">
+      <field name="name">Erlöse 19% USt</field>
+      <field name="code">8400</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_5"/>
+      <field name="type" ref="type_income_40"/>
+    </record>
+    <record model="account.account.template" id="account_8924">
+      <field name="name">Verwendung von Gegenst. (Kfz) ohne USt</field>
+      <field name="code">8924</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_income_75"/>
+      <field name="type" ref="type_income_90"/>
+    </record>
+    <record model="account.account.template" id="account_9000">
+      <field name="name">Saldenvorträge Sachkonten</field>
+      <field name="code">9000</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_9090">
+      <field name="name">Summenvortrag</field>
+      <field name="code">9090</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_0320">
+      <field name="name">PKW</field>
+      <field name="code">320</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_0400">
+      <field name="name">Betriebsausstattung</field>
+      <field name="code">400</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_0480">
+      <field name="name">Geringwertige WG</field>
+      <field name="code">480</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_0485">
+      <field name="name">Geringwertige WG Sammelposten</field>
+      <field name="code">485</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_other"/>
+      <field name="type" ref="type_other"/>
+    </record>
+    <record model="account.account.template" id="account_4900">
+      <field name="name">Sonstige betriebliche Aufwendungen</field>
+      <field name="code">4900</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_290"/>
+    </record>
+    <record model="account.account.template" id="account_3200">
+      <field name="name">Waren, Roh-, Hilfs- und Betriebsstoffe</field>
+      <field name="code">3200</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_30"/>
+    </record>
+    <record model="account.account.template" id="account_4909">
+      <field name="name">Fremdleistungen und Fremdarbeiten</field>
+      <field name="code">4909</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_40"/>
+    </record>
+    <record model="account.account.template" id="account_4950">
+      <field name="name">Rechts- und Beratungskosten</field>
+      <field name="code">4950</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_280"/>
+    </record>
+    <record model="account.account.template" id="account_4955">
+      <field name="name">Buchführungskosten</field>
+      <field name="code">4955</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_280"/>
+    </record>
+    <record model="account.account.template" id="account_4901">
+      <field name="name">direkt zuordenbare Aufwendungen Ausbildung</field>
+      <field name="code">4901</field>
+      <field name="reconcile" eval="False"/>
+      <field name="parent" ref="view_expense_deductible_operating_costs"/>
+      <field name="type" ref="type_expense_290"/>
+    </record>
+  </data>
+</tryton>

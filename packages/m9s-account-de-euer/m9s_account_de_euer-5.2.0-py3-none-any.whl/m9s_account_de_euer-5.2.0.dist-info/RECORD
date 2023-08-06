@@ -1,0 +1,13 @@
+trytond/modules/account_de_euer/__init__.py,sha256=Cc61p4PcpVENQtxHNY3pvIT0yHYvP0pUKVhukcgZFlI,254
+trytond/modules/account_de_euer/account_de_euer.xml,sha256=1Kd8gwr24NXl4F1rDcbKknaYDsugRmnLlBIDi4AjeIU,55377
+trytond/modules/account_de_euer/account_tax_de.xml,sha256=1wgH9Lpq8uuzo6dXLfcbrLs1nUCsoHWpCWD0_053XlE,81008
+trytond/modules/account_de_euer/tryton.cfg,sha256=wmJG4OVPXSX62ZX4ecOGGJTHEmi8bKLvJZYYZIBTw88,168
+trytond/modules/account_de_euer/locale/de.po,sha256=li_BUXCqCJA3gK7VvbI46gE5TStm9-A9MKghd0bsRGY,82117
+trytond/modules/account_de_euer/tests/__init__.py,sha256=d2UnxSTi0G2UOklpgo2BkMzMCpZmTZcKmbsvwv3h2Lg,286
+trytond/modules/account_de_euer/tests/test_account_de_euer.py,sha256=K2bIdyI9Hdn_7RKg21cv-Y_PyEoskeP28SoA1ivra6M,512
+m9s_account_de_euer-5.2.0.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+m9s_account_de_euer-5.2.0.dist-info/METADATA,sha256=RqvjrTxQ3V4nQ_aDRTLU6aGlo94s10EgR0WhZ6fbs5Q,3334
+m9s_account_de_euer-5.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+m9s_account_de_euer-5.2.0.dist-info/entry_points.txt,sha256=KuHxWfYleeaJlepe0IvpMV0bs4fwb7KZ3hPwUxLzksM,81
+m9s_account_de_euer-5.2.0.dist-info/top_level.txt,sha256=1UNriCfRfjRjutJbJ_B8i13huVUoV_Otp9RlW3mCfw4,8
+m9s_account_de_euer-5.2.0.dist-info/RECORD,,
