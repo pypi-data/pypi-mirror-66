@@ -1,0 +1,10 @@
+ffcount-0.1.6.dist-info/top_level.txt,sha256=MuXaiMWmhQn1JRmmIj2FaXUROEAnXYfRYgWvDDecEak,8
+ffcount-0.1.6.dist-info/RECORD,,
+ffcount-0.1.6.dist-info/METADATA,sha256=BAU7djXhtw43QAK9_D2OBgrhefazTDmSegHGrtF6RWA,3216
+ffcount-0.1.6.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+ffcount-0.1.6.dist-info/entry_points.txt,sha256=u4XaPNskLjbxLI7GRlMWa17w-T-nNDWlV-y1kkxoaio,51
+ffcount-0.1.6.dist-info/WHEEL,sha256=ou0-hBHfmU_kpHcfKM0I4VAb3l_IyfLzdQNy2VUzD9g,112
+ffcount/__version__.py,sha256=sncE0ikILF9NrwzKY2VraCbiAxIVD1uOjl90FQZHTw4,89
+ffcount/__main__.py,sha256=KDtToKpvX7qazztaKLD6NHON-haAeQ4zY0heXmBC_os,1354
+ffcount/__init__.py,sha256=RJ3-jXOcvtt_r_EK9rTsD5DRNWmtpT88bbXmh4Blols,1312
+ffcount/count.cpython-35m-x86_64-linux-gnu.so,sha256=653WOEuP2AiKsgdYrneFHCS9zOVOxWXbO-FhIO5OTIU,133096
