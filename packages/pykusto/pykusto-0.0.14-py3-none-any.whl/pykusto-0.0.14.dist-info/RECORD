@@ -1,0 +1,15 @@
+pykusto/__init__.py,sha256=kCBJ3DAKd9uz_skGlHxueC748jc7yZwUXMgARvl6YPQ,17
+pykusto/client.py,sha256=E222uPNljAkoANVI7P1rVI2cQHRUJ60AWvOHJlEmhbw,14595
+pykusto/expressions.py,sha256=8zT_9-qPa-3q9duor-IXUzDIy474zrCnxBAxCJzl-HE,28448
+pykusto/functions.py,sha256=uNo9-H4pC5onYx9Zdt7E1rhusL1JRaYRvElBgmFfXjE,22537
+pykusto/item_fetcher.py,sha256=-VnFXEA3ZB2QB-lHW81wugvyvYWsA0LUk_tgCYymoV8,5368
+pykusto/kql_converters.py,sha256=xcBl6mO8gwEzHN2V_2tKk8c9hZmNeOYkH-UcjQF2PYw,2903
+pykusto/logger.py,sha256=TuJx-w8DwfXHh7y3ORSpPBAyJWvHZB9YlNlpwGlTtFc,54
+pykusto/query.py,sha256=Q-9evBjfLkTFZSEDB5zsefjHqaSnkziKDrwDH1-xirQ,19768
+pykusto/type_utils.py,sha256=GiwG_KPf9f4tFAMVRXyiUpQVndkWwGaOfFKxV9k3iLg,5293
+pykusto/udf.py,sha256=6aa2hdyxJZRbezj-NT5enMSsai1V_Z2qrOC5FO2kE-o,785
+pykusto-0.0.14.dist-info/LICENSE,sha256=J-vanVHwpWt-KBzNgjCicjbctRwF9ksHhp7PbpZdaLA,1162
+pykusto-0.0.14.dist-info/METADATA,sha256=72D7cWr_H0of9xSMGYlsU72_Oe_0cvz-BaxRmmkpUaw,3090
+pykusto-0.0.14.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pykusto-0.0.14.dist-info/top_level.txt,sha256=WDjIsIyIGjzRpICPG3wuuIB44f7BlIb7BazIeCKQJeQ,8
+pykusto-0.0.14.dist-info/RECORD,,
