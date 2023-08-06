@@ -1,0 +1,7 @@
+README.md
+setup.py
+findjobana/__init__.py
+pyjobana.egg-info/PKG-INFO
+pyjobana.egg-info/SOURCES.txt
+pyjobana.egg-info/dependency_links.txt
+pyjobana.egg-info/top_level.txt
