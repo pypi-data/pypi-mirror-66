@@ -1,0 +1,16 @@
+README.md
+setup.py
+bin/manifest_guid_data.py
+bin/manifest_to_synapse.py
+bin/nda_to_synapse_manifest.py
+bin/query-nda
+ndasynapse/__init__.py
+ndasynapse/__version__.py
+ndasynapse/nda.py
+ndasynapse/synapse.py
+ndasynapse.egg-info/PKG-INFO
+ndasynapse.egg-info/SOURCES.txt
+ndasynapse.egg-info/dependency_links.txt
+ndasynapse.egg-info/not-zip-safe
+ndasynapse.egg-info/requires.txt
+ndasynapse.egg-info/top_level.txt
