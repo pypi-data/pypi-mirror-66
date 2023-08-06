@@ -1,0 +1,15 @@
+django_credentials/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_credentials/apps.py,sha256=KGmRWk0CfYbXldoQE-QSI7OThqaz3YORRWmwuCcU-gs,110
+django_credentials/lib.py,sha256=CF16u-7Qu4exK8gqgNTLqYFlz1yG0AM8NmGxOjmQVH4,456
+django_credentials/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_credentials/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_credentials/management/commands/edit_credentials.py,sha256=ultRPPj1tqTwuBwXwYdIIUb7NSMyKW5qiOZrs9P0JKY,821
+django_credentials/management/commands/init_credentials.py,sha256=VVUrtpu8hdJhQMl9vtO1hc5LlgoVWzo2X1pxrzh-z4o,902
+django_credentials/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+env_credentials/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+env_credentials/credentials.py,sha256=BJljIoib1SjxQxkTCljpNUp9QpB2d9tzIzNXQ5-PqQc,3430
+env_credentials/example.env,sha256=GwbhvSgOWp4yY_HsPaw8WoK1WCQGZGGJRxjiXMrvvJI,246
+env_credentials-0.1.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+env_credentials-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+env_credentials-0.1.0.dist-info/METADATA,sha256=nnXNsDH5k6Q01VlOBuJYV6Uq6dyORsabH9RLl6rkcf8,2527
+env_credentials-0.1.0.dist-info/RECORD,,
