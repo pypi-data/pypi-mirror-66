@@ -1,0 +1,29 @@
+Metadata-Version: 1.2
+Name: git-clog
+Version: 0.2.4
+Summary: git-clog outputs the commit graph of the current Git repository and colorizes commit symbols by interpreting the first six commit hash digits as an RGB color value.
+Home-page: https://github.com/IngoHeimbach/git-clog
+Author: Ingo Heimbach
+Author-email: IJ_H@gmx.de
+License: MIT
+Description: UNKNOWN
+Keywords: git
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Version Control
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Topic :: Terminals
+Classifier: Topic :: Utilities
+Requires-Python: ~=3.3
