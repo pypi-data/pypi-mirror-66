@@ -1,0 +1,39 @@
+{
+    "title": "Hungry-Hobo",
+    "msg": "Hello",
+    "bookmarks": {
+        "google": {
+            "google": "http://www.google.fr",
+            "youtube": "https://www.youtube.com/feed/subscriptions",
+            "drive":"https://drive.google.com/drive/my-drive",
+            "gmail":"https://mail.google.com/mail/u/0/#inbox",
+            "books":"https://play.google.com/books"
+        },
+        "reddit": {
+            "front":"https://www.reddit.com/",
+            "/r/linux":"https://www.reddit.com/r/linux/",
+            "/r/unixporn":"https://www.reddit.com/r/unixporn/",
+            "/r/FULLCOMMUNISM":"https://www.reddit.com/r/FULLCOMMUNISM/"
+        },
+        "programming": {
+            "github":"https://github.com/",
+            "codecademy":"https://www.codecademy.com/learn",
+            "stack overflow":"http://stackoverflow.com/"
+        },
+        "gaming": {
+            "steam":"http://store.steampowered.com/",
+            "gog":"https://www.gog.com/"
+        },
+        "linux": {
+            "archwiki":"https://wiki.archlinux.org/",
+            "aur":"https://aur.archlinux.org/"
+        }
+    },
+    "colors":{
+        "google": "#cc241d",
+        "reddit":"#458588",
+        "programming":"#689d6a",
+        "gaming": "#d65d0e",
+        "linux": "#98971a"
+    }
+}
