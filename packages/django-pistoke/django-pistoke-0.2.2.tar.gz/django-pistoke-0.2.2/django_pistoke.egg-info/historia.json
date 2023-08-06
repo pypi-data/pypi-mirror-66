@@ -1,0 +1,74 @@
+[
+  {
+    "tyyppi": "muutos",
+    "tunnus": "1e9449701cd42cfc4a405ad3c090c5452c17393f",
+    "versio": "0.2.2",
+    "kuvaus": "Lis\u00e4tty alustavat k\u00e4ytt\u00f6ohjeet"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "42187b483b12c0437c9ca6543d88980a60a59d17",
+    "versio": "0.2.1",
+    "kuvaus": "Lis\u00e4tty Websocket-protokollan saatavuuden tarkistus Xterm-n\u00e4kym\u00e4n GET-k\u00e4sittelij\u00e4\u00e4n"
+  },
+  {
+    "tyyppi": "julkaisu",
+    "tunnus": "0f821183091ccbab8035d5bdbb306f09fdd41270",
+    "versio": "0.2",
+    "kuvaus": "Versio 0.2\n* CSRF-ohjainluokka"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "2cd9dde11bed1130c19c15b6b95fac6dea97a41b",
+    "versio": "0.2",
+    "kuvaus": "Lis\u00e4tty `CsrfOhjain`-ohjainluokka, joka lis\u00e4\u00e4 `_tarkista_csrf`-metodin pyynn\u00f6lle"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "ebf5db41c610640ec19279b5421b347353289b38",
+    "versio": "0.1.3",
+    "kuvaus": "Korjattu v\u00e4litt\u00f6m\u00e4n Websocket-paluusanoman muodostus"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "d6efbc7afe133d202c0174359b7aa4685fede4fd",
+    "versio": "0.1.2",
+    "kuvaus": "Selkiytetty ASGI-k\u00e4sittelij\u00e4n teht\u00e4vien k\u00e4sittely"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "221c8a3c426cea4f41963532b22da3088a4f3f10",
+    "versio": "0.1.1",
+    "kuvaus": "Pilkottu p\u00e4\u00e4teprosessin k\u00e4sittely omaan moduuliinsa"
+  },
+  {
+    "tyyppi": "julkaisu",
+    "tunnus": "a6f85479e6ba2dbd99502188f6e142170353ed24",
+    "versio": "0.1",
+    "kuvaus": "Versio 0.1"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "e0c6a273e458ae2c5d7c70853eef7c2485d17438",
+    "versio": "0.1",
+    "kuvaus": "Lis\u00e4tty `XtermNakyma`-luokka"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "7ca3c585269a6d5fe1a47c302023c7ad90fc2719",
+    "versio": "0.0.3",
+    "kuvaus": "Lis\u00e4tty ylikuormitettu `runserver`-komento"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "8d8f8fa0d1509cdd7ab5a39fe3b7f1012a9fc0ce",
+    "versio": "0.0.2",
+    "kuvaus": "Lis\u00e4tty esimerkinomainen `WebsocketNakyma`-kantaluokka"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "d740b77e3ce875620f3362cda26060dab375100a",
+    "versio": "0.0.1",
+    "kuvaus": "Alustava toteutus"
+  }
+]
