@@ -1,0 +1,37 @@
+
+--------------------
+URGENCY: to do soon
+--------------------
+
+- use standard $XDG_DATA_HOME ($HOME/.local/share) for log directory
+
+- use standard $XDG_CACHE_HOME ($HOME/.cache/videomass) for youtube-dl binary
+
+- add 'Pictures' on the Media list to export image sequences in jpg, png, bmp
+  formats.
+
+--------------
+URGENCY: high
+--------------
+
+- improve automations in the Audio Streams Index box (Presets Manager)
+
+- check to update all default presets or add new ones
+
+-------------
+URGENCY: low
+-------------
+- YoutubeDL add one specific `format code` to any url indexing with the urls
+  list, e.g. using a check box into list ctrl or button to append a selected
+  format code to list.
+
+---------------
+URGENCY: medium
+----------------
+
+
+
+
+
+
+
