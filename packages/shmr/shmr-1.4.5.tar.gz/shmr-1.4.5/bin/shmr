@@ -1,0 +1,8 @@
+#!/usr/bin/python
+
+import sys
+from shmr.main import main
+
+main(sys.argv[1:])
+
+
