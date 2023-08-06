@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: backend.ai-krunner-centos
+Version: 3.1.0
+Summary: Backend.AI Kernel Runner for CentOS
+Home-page: https://backend.ai
+Author: Lablup Inc.
+Author-email: devops@lablup.com
+License: MIT
+Description: # backend.ai-krunner-centos
+        Backend.AI Kernel Runner Package for CentOS-based Kernels
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: build
+Provides-Extra: test
+Provides-Extra: dev
+Provides-Extra: ci
