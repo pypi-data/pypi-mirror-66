@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Setup workspace</name>
+    <id>padlex.flamma.setup</id>
+
+    <implements-custom-gui></implements-custom-gui>
+
+    <effect>
+        <effects-menu>
+            <submenu _name="Flamma - gcode laser tools"/>
+        </effects-menu>
+        <object-type>path</object-type>
+    </effect>
+
+    <script>
+        <command location="inx" interpreter="shell">python setup.py</command>
+    </script>
+
+</inkscape-extension>

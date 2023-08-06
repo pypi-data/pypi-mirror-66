@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.inx
+setup.py
+flamma/__init__.py
+flamma/menu.py
+flamma.egg-info/PKG-INFO
+flamma.egg-info/SOURCES.txt
+flamma.egg-info/dependency_links.txt
+flamma.egg-info/entry_points.txt
+flamma.egg-info/not-zip-safe
+flamma.egg-info/requires.txt
+flamma.egg-info/top_level.txt
