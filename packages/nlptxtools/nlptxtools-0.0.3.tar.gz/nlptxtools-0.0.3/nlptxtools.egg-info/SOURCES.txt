@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+nlptxtools/__init__.py
+nlptxtools.egg-info/PKG-INFO
+nlptxtools.egg-info/SOURCES.txt
+nlptxtools.egg-info/dependency_links.txt
+nlptxtools.egg-info/top_level.txt
