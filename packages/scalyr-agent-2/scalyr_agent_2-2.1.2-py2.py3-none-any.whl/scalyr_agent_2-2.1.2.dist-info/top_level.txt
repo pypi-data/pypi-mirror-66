@@ -1,0 +1,2 @@
+pylint_plugins
+scalyr_agent
