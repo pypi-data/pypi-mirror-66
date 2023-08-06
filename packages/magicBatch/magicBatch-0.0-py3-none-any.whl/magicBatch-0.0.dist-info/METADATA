@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: magicBatch
+Version: 0.0
+Summary: MAGICbatch
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.10.0)
+Requires-Dist: scipy (>=0.14.0)
+Requires-Dist: seaborn
+Requires-Dist: scikit-learn
+Requires-Dist: networkx
+Requires-Dist: statsmodels
+Requires-Dist: tables
+Requires-Dist: datatable
+
+UNKNOWN
+
+
