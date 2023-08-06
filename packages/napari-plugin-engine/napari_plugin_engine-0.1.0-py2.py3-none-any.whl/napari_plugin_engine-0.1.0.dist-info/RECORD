@@ -1,0 +1,17 @@
+napari_plugin_engine/__init__.py,sha256=SD6uerILKsmnn4ZvvZGhZlaqQHxTlyM67T9jmMH3-54,1108
+napari_plugin_engine/_testsupport.py,sha256=uCH0t29bHhJIbBc8uZeWxuFM46wzqaHlmlLzONDr0XI,4504
+napari_plugin_engine/_tracing.py,sha256=q86IQ_RbTzCJ5xMzSN2HTRR79uVb6VRDk8bwhsU5Wn4,1545
+napari_plugin_engine/_version.py,sha256=r_SIMIHc9z6UHqWx7MGMnu3yUCK1modp6qPB256ioD4,116
+napari_plugin_engine/callers.py,sha256=sxfacb4tSyH7qCyRCq9TzDW3uEEnm-JKyyliqjJ-FFE,7913
+napari_plugin_engine/dist.py,sha256=KyCOQQkXlbT7q0puIaCtWhIuUpgVv6YhTiAj8DJ-iaA,3231
+napari_plugin_engine/exceptions.py,sha256=aZEZ77ji0fn2ioilvQOBv1MBOaaR7cC6omtxX6_GYHo,6043
+napari_plugin_engine/hooks.py,sha256=RppE6i0VAbxrdCKD9AcSdT-YTEDjTNbNnbDIrayFHzQ,20332
+napari_plugin_engine/implementation.py,sha256=-vZR-t0FJCyv1kT8CVI4F00SQ1fHL6zZsY61gKp1Hy4,4740
+napari_plugin_engine/manager.py,sha256=nyAk13zVpzEueg_foKFHgNd1KpdCzZy0PrW0YPvOZqw,31435
+napari_plugin_engine/markers.py,sha256=gX5uI8DzpAcO5ZWCcY1T_y-ME7Mz_Cz1je7Bv9yLcMQ,5451
+napari_plugin_engine-0.1.0.dist-info/LICENSE,sha256=1rZebCE6XQtXeRHTTW5ZSbn1nXbCOMUHGi8_wWz7JgY,1110
+napari_plugin_engine-0.1.0.dist-info/METADATA,sha256=HKibv74M1GCWHs-wsAYGXLDdo3CPEDYJvAVI5lWN-co,13275
+napari_plugin_engine-0.1.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+napari_plugin_engine-0.1.0.dist-info/entry_points.txt,sha256=-hIO3ezO7H1xAZv1zjObtHPh8RnOOGqrzQ-0R2v2pwU,69
+napari_plugin_engine-0.1.0.dist-info/top_level.txt,sha256=kYlpvvDnFKeyHMz7LnR_M5K2hsMm1SsfsOjEGXWPQQ8,21
+napari_plugin_engine-0.1.0.dist-info/RECORD,,
