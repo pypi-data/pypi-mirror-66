@@ -1,0 +1,14 @@
+ydpic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ydpic/config.ini.tpl,sha256=yhLDEflvpYbTai_UhIRFm_EplkiDyEbP6vrMgbYvZUQ,133
+ydpic/config.py,sha256=RdOPcuOm8XkN6-doiVX0bHC51lhTCNqJnXPw9NWYyxA,1146
+ydpic/note_tpl.xml,sha256=mCUklx5AeRgw3qMR7IribNkZ2VQheQRSO-WRQz8olNk,417
+ydpic/test.py,sha256=ek2e7FAuO9wqHXXSE2mlGJNkRQT-OLVsKvSecJ2XJ38,4413
+ydpic/test_install.py,sha256=9WFIJk2ApfIJRS5-hfemNRD8bhsf6Hj46ZXTCbY4D48,516
+ydpic/yd_loginer.py,sha256=IWdkL68dZdUEMckI7WpOUMNmfQK5OFSG_qMnBF1FmR4,1262
+ydpic/yd_note.py,sha256=HYqmsMTwmQ9FYNVNJvR0ii7VqAWBhopKnnTw0ATDWaI,6842
+ydpic/ydpic.py,sha256=7AQ1bWnX4v5quX_jevmdaDfNdAzDnptqaZm67Oq488g,4007
+ydpic-0.1.2.dist-info/METADATA,sha256=gL9j_W6zLlpo3pORK60mNy2oFG5uCG1_gOH172TSCQE,317
+ydpic-0.1.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+ydpic-0.1.2.dist-info/entry_points.txt,sha256=6X4K2H6E7JLBKAN_2mga4hiNm4ypCc-mWschq-Oo8gg,44
+ydpic-0.1.2.dist-info/top_level.txt,sha256=zb6AYVP7_4CzUkk6nerhvVE7C5CzWGqty4Qcuaff8gg,6
+ydpic-0.1.2.dist-info/RECORD,,

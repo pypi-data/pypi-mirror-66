@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ydpic
+Version: 0.1.2
+Summary: 将`有道云笔记`免费版作为图库使用的小工具，可与`Typora`完美结合
+Home-page: https://gitee.com/prehisle/ydpic
+Author: sToa
+Author-email: prehisle@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: prutils (==0.0.21)
+
+UNKNOWN
+
+
