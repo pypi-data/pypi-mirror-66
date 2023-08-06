@@ -1,0 +1,8 @@
+setup.py
+austy_project/__init__.py
+austy_project/modcode1.py
+austysproject.egg-info/PKG-INFO
+austysproject.egg-info/SOURCES.txt
+austysproject.egg-info/dependency_links.txt
+austysproject.egg-info/requires.txt
+austysproject.egg-info/top_level.txt
