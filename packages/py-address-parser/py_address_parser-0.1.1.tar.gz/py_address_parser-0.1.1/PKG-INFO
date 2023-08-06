@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: py_address_parser
+Version: 0.1.1
+Summary: An address parsing library for Python based on usaddress.
+Home-page: https://github.com/R-Andrei/py_address_parser
+Author: Rares Andrei Faragau
+Author-email: faragau.rares@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
