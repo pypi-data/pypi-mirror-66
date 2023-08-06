@@ -1,0 +1,15 @@
+setup.py
+d2doc/__init__.py
+d2doc/__main__.py
+d2doc/__version__.py
+d2doc/app.py
+d2doc/d2doc.py
+d2doc/translit.py
+d2doc.egg-info/PKG-INFO
+d2doc.egg-info/SOURCES.txt
+d2doc.egg-info/dependency_links.txt
+d2doc.egg-info/entry_points.txt
+d2doc.egg-info/requires.txt
+d2doc.egg-info/top_level.txt
+d2doc/parsers/__init__.py
+d2doc/parsers/bsl.py
