@@ -1,0 +1,3 @@
+[console_scripts]
+export_all=teamtrain_sdk.teamtrain:main
+
