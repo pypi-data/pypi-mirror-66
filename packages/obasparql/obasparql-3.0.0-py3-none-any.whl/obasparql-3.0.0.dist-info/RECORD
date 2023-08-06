@@ -1,0 +1,10 @@
+obasparql/__init__.py,sha256=O7KOtAUY4zEY-EcYoNefoxxECedFwbOcnE1JmWO9s64,315
+obasparql/gquery.py,sha256=ZQ4ZNgWUlbNmZon0_66FDBmKdGvPnTWKtrJzTgvSohY,16966
+obasparql/query_manager.py,sha256=QDwNLTmk6HEkpUQSNt7QdMF8vkOrBNu_gLcr_hiZtak,20700
+obasparql/static.py,sha256=rfnv0ehX-PLNe9J2fTeSA37MBxtFnci0zBm9T0rdal0,961
+obasparql/utils.py,sha256=_1hDK-hYlyJqznJjbNeyiyAAt9i-Aa6Mii59MHZfv3Q,220
+obasparql-3.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+obasparql-3.0.0.dist-info/METADATA,sha256=nrJ-ePD_mcQZacIRrNMktRtJ8ffvrm58c3CQjgx9WBY,1456
+obasparql-3.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+obasparql-3.0.0.dist-info/top_level.txt,sha256=XaSacemYqTGVnxy301vAELnwwSOWa_DirE8yVjqKNe8,10
+obasparql-3.0.0.dist-info/RECORD,,
