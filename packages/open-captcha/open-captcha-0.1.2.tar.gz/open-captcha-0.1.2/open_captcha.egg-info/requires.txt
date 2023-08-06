@@ -1,0 +1,8 @@
+numpy
+matplotlib
+pandas
+python-Levenshtein
+
+[develop]
+tox
+pylama
