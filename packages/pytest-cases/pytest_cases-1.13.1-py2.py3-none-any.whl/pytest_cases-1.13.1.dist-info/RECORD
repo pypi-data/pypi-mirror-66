@@ -1,0 +1,14 @@
+pytest_cases/__init__.py,sha256=w0EViOh5QhH0BbCAOj9Sf94j2uqzRlt7g8lMKyOuask,1765
+pytest_cases/_version.py,sha256=wZKEedxuaAEF9CGGXducQtw9AMUxLiR8aea3k-cUPhg,117
+pytest_cases/case_funcs.py,sha256=bNSuO-E0XTolTLHBbv2hyFk0_VVGpyo97_2KgveBNMY,6102
+pytest_cases/common.py,sha256=PjNXEIfDHYhEYnsjtCXz7EJEpPn3r1dxZII1Lq8zzFs,13713
+pytest_cases/main_fixtures.py,sha256=4vcQzsjqaAxoGLp4PmiV3gB_mu1v_s03PoqXupp_3oI,54903
+pytest_cases/main_params.py,sha256=mcTxkg8BxMaS-clFcWXW6Cy1YzK0z1sGo_6pMBJM_sc,20219
+pytest_cases/plugin.py,sha256=zofD6ijvcE67N6-WN8aIfX07S6YhjDJPur3Wps_h7Fw,46218
+pytest_cases/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_cases-1.13.1.dist-info/LICENSE,sha256=rXqzzQAuggTz7cbY29FNOwfbg3ypKFvnWK5gV0jvYC4,1506
+pytest_cases-1.13.1.dist-info/METADATA,sha256=e8JpP4TOqe17uXp7cMxVwwr_lxGCscQtOCUmukeDdJ0,2677
+pytest_cases-1.13.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+pytest_cases-1.13.1.dist-info/entry_points.txt,sha256=pKvbqL-Zru260Ekps_3xMmURZArqT0Th2fN7Lk71LU8,40
+pytest_cases-1.13.1.dist-info/top_level.txt,sha256=pb1-o-wAVZvUzNbXGCjYUK-WBvs8qFQpo1jQJJwbaFY,13
+pytest_cases-1.13.1.dist-info/RECORD,,
