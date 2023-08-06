@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: chromie
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/Sandersland/chromie
+Author: Steffen Andersland
+Author-email: stefandersland@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: twine ; extra == 'dev'
+
+# Chromie
+
+
