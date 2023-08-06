@@ -1,0 +1,8 @@
+anurbs
+colorama
+click
+eqlib
+hyperjet
+meshio
+numpy
+pydantic
