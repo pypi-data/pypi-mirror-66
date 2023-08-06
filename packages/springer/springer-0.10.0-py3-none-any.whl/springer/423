@@ -1,0 +1,3 @@
+error: cannot format -: Cannot parse: 425:45:             typer.secho(str(error), fg='red'))
+Oh no! 💥 💔 💥
+1 file failed to reformat.
