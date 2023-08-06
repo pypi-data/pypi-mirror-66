@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: eccsnacks
+Version: 1.0.1
+Summary: Reference implementation of Curve25519 and Curve448 (goldilocks) as specified in RFC7748
+Home-page: http://github.com/nnathan/eccsnacks
+Author: Naveen Nathan
+Author-email: eccsnacks@t.lastninja.net
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: curve25519,curve448,goldilocks,rfc7748
+Platform: UNKNOWN
+Classifier: License :: Public Domain
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
