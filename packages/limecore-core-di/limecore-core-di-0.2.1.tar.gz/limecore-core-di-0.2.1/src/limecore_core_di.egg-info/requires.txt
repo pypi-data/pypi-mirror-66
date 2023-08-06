@@ -1,0 +1,3 @@
+injector
+limecore-core
+limecore-util
