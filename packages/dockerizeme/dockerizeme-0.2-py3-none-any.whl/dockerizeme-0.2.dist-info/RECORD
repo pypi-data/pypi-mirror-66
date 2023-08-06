@@ -1,0 +1,12 @@
+package/Dockerfile,sha256=la_-FOygPHFPmyvk_cHj63DJX6AwlEg2C3nFNymVs5k,114
+package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+package/dockerize.py,sha256=P8RcF9rxcG-mfk4JV1f8ru8efgWZqdpPWFBRAWnO54A,3514
+package/__pycache__/__init__.cpython-37.pyc,sha256=hA8eeX5xXMmw5CO8IVx9OAqVU4pYAj14Z93nrofMBI4,141
+package/templates/Java.Dockerfile,sha256=la_-FOygPHFPmyvk_cHj63DJX6AwlEg2C3nFNymVs5k,114
+package/templates/NodeJS.Dockerfile,sha256=DPG--4Qmniah8JAB0wk-X1mbrQE3n68X8FlTfCxgHD0,109
+package/templates/Python-Flask.Dockerfile,sha256=J_e7zMSo6kvti9xK4gSmv4uKBO2XUgMreRiiEaZ-I4g,198
+dockerizeme-0.2.dist-info/METADATA,sha256=7SEBavlMk23SEDDv5WdWTO2QdsdZpzimr-DlqFqZh0c,237
+dockerizeme-0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+dockerizeme-0.2.dist-info/entry_points.txt,sha256=Bbvh86u06aCM1ntebTMg8L1_m3TQt_2h5DPyvpIDF5A,55
+dockerizeme-0.2.dist-info/top_level.txt,sha256=0S--ajCpBwVljInl17ng3fDdednO9Lw5zjlHP1VyJRI,20
+dockerizeme-0.2.dist-info/RECORD,,

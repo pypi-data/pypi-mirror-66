@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: dockerizeme
+Version: 0.2
+Summary: Generate Dockerfile for your project automatically
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Click
+
+UNKNOWN
+
+
