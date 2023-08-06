@@ -1,0 +1,7 @@
+[console_scripts]
+ovshell = ovshell.main:main
+
+[ovshell.extensions]
+core = ovshell_core:extension
+xcsoar = ovshell_xcsoar:extension
+
