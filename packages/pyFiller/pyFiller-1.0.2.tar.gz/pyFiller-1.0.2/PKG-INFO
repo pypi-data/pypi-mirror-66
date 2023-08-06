@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: pyFiller
+Version: 1.0.2
+Summary: A tool that literally takes up space
+Home-page: https://github.com/MartinFalatic/pyfiller
+Author: Martin F. Falatic
+Author-email: martin@falatic.com
+License: MIT License
+Description: # pyFiller
+        
+        ## A tool that literally takes up space!
+        
+        When you need to fill some filesystem space with patterned or random data, pyFiller fulfills your space-filling needs
+        
+        Run `pyfiller --help` for usage details
+        
+        ## Common examples
+        
+        - Fill the specified (existing) folder with random data, up to the limit of the filesystem:
+        
+                pyfiller --totalsize fill Y:\
+        
+        - Create 200MiB files with random data, to a maximum of 750.5MiB, with colorful output:
+        
+                pyfiller --filesize 200MiB --totalsize 750.5MiB --colorful Y:\
+        
+        - Create one 42MiB file with patterned data with colorful output:
+        
+                pyfiller --filesize 42MiB --totalsize 42MiB --pattern 0xA5FF00 --colorful Y:\
+                pyfiller --filesize 42MiB --totalsize 42MiB --pattern "J=8675309 " --colorful Y:\
+        
+        ## Updating this package
+        
+        Clone this repo
+        
+        On a branch, make the required edits
+        
+        Ensure you update the version number in `pyfiller/__config__.py`
+        (pre-release? use `rc` notation, e.g., `1.0.42rc99`)
+        
+        ### Build and install the distributable wheel
+        
+        ```bash
+        rm -rf pyfiller-* dist build *.egg-info
+        python setup.py bdist_wheel sdist
+        ls -al dist
+        pip uninstall -y pyfiller
+        pip install dist/*.whl
+        ```
+        
+        ### Test the tools
+        
+        The main tool is `pyfiller`
+        
+        Run:
+        
+        ```bash
+        pyfiller --help
+        ```
+        
+        ### Test the uploaded artifacts
+        
+        ```bash
+        pip uninstall -y pyfiller
+        pip install pyfiller
+        ```
+        
+Keywords: filesystem wipe filler generator
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 5 - Production/Stable
+Description-Content-Type: text/markdown

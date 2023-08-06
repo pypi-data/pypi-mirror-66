@@ -1,0 +1,3 @@
+[console_scripts]
+pyfiller = pyfiller.pyfiller:main
+
