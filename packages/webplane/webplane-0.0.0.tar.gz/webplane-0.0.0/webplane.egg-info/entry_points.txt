@@ -1,0 +1,3 @@
+[console_scripts]
+webplane = webplane.__main__:main
+
