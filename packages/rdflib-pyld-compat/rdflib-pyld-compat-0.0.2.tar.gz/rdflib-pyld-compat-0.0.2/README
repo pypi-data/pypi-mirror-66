@@ -1,0 +1,36 @@
+rdflib-pyld-compat
+==================
+.. image:: https://travis-ci.org/zimeon/rdflib-pyld-compat.svg?branch=master
+   :target: https://travis-ci.org/zimeon/rdflib-pyld-compat
+.. image:: https://coveralls.io/repos/github/zimeon/rdflib-pyld-compat/badge.svg?branch=master
+   :target: https://coveralls.io/github/zimeon/rdflib-pyld-compat?branch=master
+
+Support (some) data conversion between `rdflib` and `pyld` Python libraries.
+
+The `rdflib
+<http://rdflib.readthedocs.io/en/stable/apidocs/>`_
+and `PyLD
+<https://github.com/digitalbazaar/pyld>`_ libraries use different in-memory data structures so it
+is not trivial to use the powerful RDF support of rdflib in conjuction with the JSON-LD processor
+implementation of PyLD. This code is designed to provide a bridge between rdflib and PyLD in-memory
+formats, avoiding the need to serialize and then re-parse the data.
+
+*N.B.* - This code is currently pinned to `pyparsing < 3.0.0
+<https://pypi.org/project/pyparsing/2.4.7/>`_ and `PyLD 1.0.5
+<https://pypi.org/project/PyLD/1.0.5/>`_ so that it works with Python 2.7. 
+If there is any further development this pin should be removed and then
+it will work only with Python 3.6 and up.
+
+Limitations
+-----------
+
+This code was developed to support a particular application and then pulled out as I needed it a
+second time. I haven't thought hard about the general case and am sure that are additional
+limitations beyond those I know about. Known limitations:
+
+* assumes the URIRefs in an rdflib graph do not need expansion with a NamespaceManager
+
+Contributing
+------------
+
+I'd be happy to hear of other problems/limitations and/or suggestions for improvement.
