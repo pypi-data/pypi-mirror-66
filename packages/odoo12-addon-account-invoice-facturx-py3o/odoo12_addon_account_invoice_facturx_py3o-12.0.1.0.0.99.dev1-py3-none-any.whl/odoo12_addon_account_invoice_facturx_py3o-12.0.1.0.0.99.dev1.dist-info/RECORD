@@ -1,0 +1,16 @@
+odoo/addons/account_invoice_facturx_py3o/README.rst,sha256=TGQ7JTsMWJhVKh0bLpdK7vI0CURTl4RBCHrus8deNLc,2983
+odoo/addons/account_invoice_facturx_py3o/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+odoo/addons/account_invoice_facturx_py3o/__manifest__.py,sha256=b1xgVTskf6sv1ubFhljesEgCLSH2WDrygkEhQzMW2EQ,638
+odoo/addons/account_invoice_facturx_py3o/i18n/account_invoice_factur-x_py3o.pot,sha256=V_aobeFakQ7Fsf4f4BKJFv_IiUtrYfCHf2K2Qowqvds,521
+odoo/addons/account_invoice_facturx_py3o/i18n/de.po,sha256=4M9Hmy47JexjpzbAZGJf3duOZJy4kInCd4_akvXAgt0,696
+odoo/addons/account_invoice_facturx_py3o/i18n/es.po,sha256=sj7EqCvCWrcs1wTXq0u3eQ7MvfFvZLlVL3zqX5NZP50,811
+odoo/addons/account_invoice_facturx_py3o/models/__init__.py,sha256=l7CNjEXxJWDj9EOyycTzg0nkKWIGdFIf_EeyrLhx044,26
+odoo/addons/account_invoice_facturx_py3o/models/py3o_report.py,sha256=1mTqjHRf_l6jFrC33dhgEr5b_WHdMHyKfO3SZi79QPY,1647
+odoo/addons/account_invoice_facturx_py3o/readme/CONTRIBUTORS.rst,sha256=e8dOgio6UxRss1tsAaHVr97hi-hjTfI5ouj7XQ1JHGE,50
+odoo/addons/account_invoice_facturx_py3o/readme/DESCRIPTION.rst,sha256=ZfkRltli856bXVUEN1-wwevZeTc5ZkHI1ROcxMp4W_M,421
+odoo/addons/account_invoice_facturx_py3o/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/account_invoice_facturx_py3o/static/description/index.html,sha256=AZ4AQRy7ZDk0mIeO1fdZzmbwRnO3iI4LX6UaQFvRn6U,12144
+odoo12_addon_account_invoice_facturx_py3o-12.0.1.0.0.99.dev1.dist-info/METADATA,sha256=Jkpf3xmAz29BHHPjev3cYUVfYA71z6JcoPPxF_TE1dg,3636
+odoo12_addon_account_invoice_facturx_py3o-12.0.1.0.0.99.dev1.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+odoo12_addon_account_invoice_facturx_py3o-12.0.1.0.0.99.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_account_invoice_facturx_py3o-12.0.1.0.0.99.dev1.dist-info/RECORD,,
