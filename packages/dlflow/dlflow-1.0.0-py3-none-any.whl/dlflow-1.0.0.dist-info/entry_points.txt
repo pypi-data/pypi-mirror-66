@@ -1,0 +1,3 @@
+[console_scripts]
+dlflow = dlflow.main:run_app
+
