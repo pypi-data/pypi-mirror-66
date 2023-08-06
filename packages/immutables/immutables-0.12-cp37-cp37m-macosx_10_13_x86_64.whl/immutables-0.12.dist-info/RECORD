@@ -1,0 +1,13 @@
+immutables/__init__.py,sha256=BpRciMN1l6Hhl0xVCvGWgImlTDjaLWJTOn9saUgr7Sw,217
+immutables/_map.c,sha256=8kaVEhGwoH-n9WWTFgsGjqDgzJJJ4LfbpHwrakLaZmU,107979
+immutables/_map.cpython-37m-darwin.so,sha256=BeI1OM8d2LJMufBPeYRPbiOLzzGhWh32jWQzsgY0cbo,50844
+immutables/_map.h,sha256=ImGQF-nLnOxjbNEVu7c6yU3K2uY0uRp7jjijn5IExEg,2519
+immutables/_map.pyi,sha256=feGMSte2_Nin2Nqp8A7FyutUE8vxH0Ki8KnA1K5OiMY,2837
+immutables/_version.py,sha256=Wo_D8b70XTUe0G0TGU7foK8-JkuTjySM8Ch1Okg4pPg,574
+immutables/map.py,sha256=TPvuqqA5e8RfUUkAc0AMS5K21SaEgCTe5mRVfgVKJUo,22661
+immutables/py.typed,sha256=la67KBlbjXN-_-DfGNcdOcjYumVpKG_Tkw-8n5dnGB4,8
+immutables-0.12.dist-info/LICENSE,sha256=sh5IyTNvcT9B8EpZBBYULy6MKGiJaYCx5Kp0JcwmC3U,11401
+immutables-0.12.dist-info/METADATA,sha256=I9xSzLUe-Ia_Xbw9YEi7W6tUCb2f49EsjS2njwXqAPY,3963
+immutables-0.12.dist-info/WHEEL,sha256=rmlMk8wCTC2tU76-T5zuJ94CZXlxNi2cojMvVRV0ySE,111
+immutables-0.12.dist-info/top_level.txt,sha256=0k-CFLiMEiRCfK3Ay3nyfS12m_56e82y15MuVxt364c,11
+immutables-0.12.dist-info/RECORD,,
