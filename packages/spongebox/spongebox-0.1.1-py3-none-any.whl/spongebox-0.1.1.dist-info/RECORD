@@ -1,0 +1,11 @@
+spongebox/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spongebox/encoding.py,sha256=W-PyKrC_jGXOZKvNNY4hrYTXCvVTGOn1jOL8pM1IxEQ,1328
+spongebox/file.py,sha256=vQYaxO5sw8pluEFBNsWVCPqgI3MJg8esK68zItJ9Z6M,292
+spongebox/io.py,sha256=MnO3y7kurCD3y8BqJrVw26jP_ExxaT6TRThKE5R-dyk,640
+spongebox/reg.py,sha256=8zyfmyta1d5RucMuXyQtObwi8cqKLDLUMXC_KJxfWXM,364
+spongebox/time.py,sha256=mjp2nuHKjfaCUlGDw3pLTijlOwGhxVkQazmulWZh-Co,2214
+spongebox-0.1.1.dist-info/LICENSE,sha256=A52y7Mx1Cz9NfW3qtE3mjRGFbbxiKKtIms8v-ecE6xE,1091
+spongebox-0.1.1.dist-info/METADATA,sha256=j7ijvbw0viD9fQnLAmO6uNf6r_3Wz3Uv_JpXX2Ku7x4,566
+spongebox-0.1.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+spongebox-0.1.1.dist-info/top_level.txt,sha256=haN98-BhxN03qlfB7HvjKSRx8v-QlIldymMM0k_WfsM,10
+spongebox-0.1.1.dist-info/RECORD,,
