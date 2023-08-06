@@ -1,0 +1,11 @@
+fancyviewer/__init__.py,sha256=VxJbhIcWkZ5U_ay10uC8G1bxSA2EoOEIhCjCh0oJAwo,33
+fancyviewer/__main__.py,sha256=KZC2NfXZuHY4OG_6sV-oUmqfIG_J8nXP_mU6UizeXOY,1513
+fancyviewer/main.py,sha256=pTn9hP7RYDL72h0aPkY0JHdCxwDoUIS_RIX3TUTMxXo,4389
+fancyviewer/viewer.py,sha256=pTn9hP7RYDL72h0aPkY0JHdCxwDoUIS_RIX3TUTMxXo,4389
+fancyviewer/images/black_pawn.png,sha256=NvYvn6LDz82utIaKKVvxSo9E021ImG1ERKbhYT3iBbw,14806
+fancyviewer/images/white_pawn.png,sha256=ZiopII3mEysU6VT1MeFyhZA-ImTSbpabaiKHdA_zESA,16093
+battlehack20_fancyviewer-1.0.5.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+battlehack20_fancyviewer-1.0.5.dist-info/METADATA,sha256=6Rf-cJsFIEpygw6656kDpHG7KgorQvg5EQZahm4h6QA,633
+battlehack20_fancyviewer-1.0.5.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+battlehack20_fancyviewer-1.0.5.dist-info/top_level.txt,sha256=UfTScnT2bbjLUkJf4QJs9WebP8XGk34PoThAAYcXVzE,12
+battlehack20_fancyviewer-1.0.5.dist-info/RECORD,,
