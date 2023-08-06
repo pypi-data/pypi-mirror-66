@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: FaBo9Axis-MPU9250-Python3
+Version: 1.0.3
+Summary: Fork of `FaBo9Axis_MPU9250`. This is a library for the FaBo 9AXIS I2C Brick.
+Home-page: https://github.com/piotrek-k/FaBo9AXIS-MPU9250-Python3
+Author: RandomUser1
+Author-email: UNKNOWN
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: System :: Hardware
+Requires-Dist: smbus
+
+
+Forked from https://github.com/FaBoPlatform/FaBo9AXIS-MPU9250-Python .
+Changes are meant to enable Python 3 support. 
+Original package is called `FaBo9Axis_MPU9250`.
+Author of original package: FaBo
+
