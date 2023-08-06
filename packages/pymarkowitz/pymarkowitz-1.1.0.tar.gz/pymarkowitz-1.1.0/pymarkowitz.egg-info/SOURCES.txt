@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+pymarkowitz.egg-info/PKG-INFO
+pymarkowitz.egg-info/SOURCES.txt
+pymarkowitz.egg-info/dependency_links.txt
+pymarkowitz.egg-info/not-zip-safe
+pymarkowitz.egg-info/requires.txt
+pymarkowitz.egg-info/top_level.txt
