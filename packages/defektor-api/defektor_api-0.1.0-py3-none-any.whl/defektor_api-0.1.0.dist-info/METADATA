@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: defektor-api
+Version: 0.1.0
+Summary: defektor Controll API
+Home-page: UNKNOWN
+Author: OpenAPI Generator community
+Author-email: sob@dei.uc.pt
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,defektor Controll API
+Platform: UNKNOWN
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+
+defektor controll aplication interface  # noqa: E501
+
+
