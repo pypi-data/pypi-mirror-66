@@ -1,0 +1,10 @@
+README.md
+setup.py
+codeprofile/__init__.py
+codeprofile/__main__.py
+codeprofile/profiler.py
+codeprofile.egg-info/PKG-INFO
+codeprofile.egg-info/SOURCES.txt
+codeprofile.egg-info/dependency_links.txt
+codeprofile.egg-info/top_level.txt
+codeprofile.egg-info/zip-safe
