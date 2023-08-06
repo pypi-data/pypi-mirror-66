@@ -1,0 +1,127 @@
+import codecs
+import os
+import re
+
+import setuptools
+from setuptools_scm import get_version
+
+# from distutils.core import setup
+from distutils.extension import Extension
+
+import numpy as np
+from Cython.Build import cythonize
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+package_dir = os.path.join(current_dir, "package")
+
+
+extensions = [
+    Extension(
+        "PartSegCore.sprawl_utils.euclidean_cython",
+        sources=["package/PartSegCore/sprawl_utils/euclidean_cython.pyx"],
+        include_dirs=[np.get_include()] + [os.path.join(package_dir, "PartSegCore", "sprawl_utils")],
+        language="c++",
+        extra_compile_args=["-std=c++11"],
+        extra_link_args=["-std=c++11"],
+    ),
+    Extension(
+        "PartSegCore.sprawl_utils.path_sprawl_cython",
+        sources=["package/PartSegCore/sprawl_utils/path_sprawl_cython.pyx"],
+        include_dirs=[np.get_include()] + [os.path.join(package_dir, "PartSegCore", "sprawl_utils")],
+        language="c++",
+        extra_compile_args=["-std=c++11"],
+        extra_link_args=["-std=c++11"],
+    ),
+    Extension(
+        "PartSegCore.sprawl_utils.sprawl_utils",
+        sources=["package/PartSegCore/sprawl_utils/sprawl_utils.pyx"],
+        include_dirs=[np.get_include()] + [os.path.join(package_dir, "PartSegCore", "sprawl_utils")],
+        language="c++",
+        extra_compile_args=["-std=c++11"],
+        extra_link_args=["-std=c++11"],
+    ),
+    Extension(
+        "PartSegCore.sprawl_utils.fuzzy_distance",
+        sources=["package/PartSegCore/sprawl_utils/fuzzy_distance.pyx"],
+        include_dirs=[np.get_include()] + [os.path.join(package_dir, "PartSegCore", "sprawl_utils")],
+        language="c++",
+        extra_compile_args=["-std=c++11"],
+        extra_link_args=["-std=c++11"],
+    ),
+    Extension(
+        "PartSegCore.color_image.color_image_cython",
+        ["package/PartSegCore/color_image/color_image_cython.pyx"],
+        include_dirs=[np.get_include()],
+        extra_compile_args=["-std=c++11"],
+        language="c++",
+    ),
+    Extension(
+        "PartSegCore.multiscale_opening.mso_bind",
+        ["package/PartSegCore/multiscale_opening/mso_bind.pyx"],
+        include_dirs=[np.get_include()],
+        extra_compile_args=["-std=c++11", "-Wall"],
+        language="c++",
+        # undef_macros=["NDEBUG"],
+        # define_macros=[("DEBUG", None)]
+    ),
+]
+
+
+def read(*parts):
+    with codecs.open(os.path.join(current_dir, *parts), "r") as fp:
+        return fp.read()
+
+
+def readme():
+    this_directory = os.path.abspath(os.path.dirname(__file__))
+    reg = re.compile(r"(!\[[^]]*\])\((images/[^)]*)\)")
+    reg2 = re.compile(r"PartSeg-lastest")
+    with open(os.path.join(this_directory, "Readme.md")) as f:
+        text = f.read()
+        text = reg.sub(r"\1(https://raw.githubusercontent.com/4DNucleome/PartSeg/master/\2)", text)
+        text = reg2.sub(f"PartSeg-{get_version()}", text)
+    with open(os.path.join(this_directory, "changelog.md")) as f:
+        chg = f.read()
+        text += "\n\n" + chg.replace("# ", "## ")
+    return text
+
+
+changelog_path = os.path.join(os.path.dirname(__file__), "changelog.md")
+changelog_result_path = os.path.join(os.path.dirname(__file__), "package", "PartSeg", "changelog.py")
+if os.path.exists(changelog_path):
+    with open(changelog_path) as ff:
+        changelog_str = ff.read()
+    with open(changelog_result_path, 'w') as ff:
+        ff.write(f"changelog = \"\"\"\n{changelog_str}\"\"\"\n")
+
+
+setuptools.setup(
+    ext_modules=cythonize(extensions),
+    packages=setuptools.find_packages("./package"),
+    package_dir={"": "package"},
+    include_package_data=True,
+    long_description=readme(),
+    long_description_content_type="text/markdown",
+    install_requires=[
+        "numpy>=1.16.0",
+        "tifffile>=2019.7.26",
+        "czifile>=2019.4.20",
+        "oiffile>=2019.1.1",
+        "appdirs>=1.4.3",
+        "SimpleITK>=1.1.0",
+        "scipy>=0.19.1",
+        "QtPy>=1.3.1",
+        "sentry_sdk>=0.14.3",
+        "six>=1.11.0",
+        "h5py>=2.7.1",
+        "packaging>=17.1",
+        "pandas>=0.22.0",
+        "sympy>=1.1.1",
+        "Cython>=0.29.13",
+        "openpyxl>=2.4.9",
+        "xlrd>=1.1.0",
+        "PartSegData==0.9.4",
+        "defusedxml>=0.6.0",
+        "requests>=2.18.0"
+    ],
+)
