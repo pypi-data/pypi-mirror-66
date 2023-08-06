@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+pycurlb.py
+setup.cfg
+setup.py
+pycurlb.egg-info/PKG-INFO
+pycurlb.egg-info/SOURCES.txt
+pycurlb.egg-info/dependency_links.txt
+pycurlb.egg-info/not-zip-safe
+pycurlb.egg-info/requires.txt
+pycurlb.egg-info/top_level.txt

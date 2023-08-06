@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: pycurlb
+Version: 0.2.2
+Summary: attr: pycurlb.__doc__
+Home-page: https://github.com/cloudmercato/pycurlb
+Author: Anthony Monthe (ZuluPro)
+Author-email: contact@cloud-mercato.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: curl,http,benchmark
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: System :: Archiving :: Packaging
