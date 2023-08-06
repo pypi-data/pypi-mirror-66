@@ -1,0 +1,37 @@
+image: 'python:3.6'
+
+before_script:
+  - python --version
+  - pip install .
+
+stages:
+  - lint
+  - pytest
+  - build
+  - pr
+
+pylint:
+  stage: lint
+  allow_failure: true
+  script:
+    - pip install pylint
+    - pylint --rcfile setup.cfg tcx2gpx/
+    - pylint --rcfile setup.cfg tests/tcx2gpx/
+
+flake8:
+  stage: lint
+  script:
+    - pip install flake8
+    - flake8 --max-line-length=120 tcx2gpx/*.py tests/tcx2gpx/*.py
+
+pytest:
+  stage: pytest
+  script:
+    - pip install pytest pytest-cov
+    - python -m "pytest"
+  coverage: '/\d+% /'
+
+build:
+  stage: build
+  script:
+    - python setup.py sdist bdist_wheel

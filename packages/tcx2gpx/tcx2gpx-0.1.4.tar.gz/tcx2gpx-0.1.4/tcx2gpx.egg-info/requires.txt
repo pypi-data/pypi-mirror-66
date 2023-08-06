@@ -1,0 +1,7 @@
+gpxpy
+python_dateutil
+python_tcxparser
+
+[test]
+pytest
+pytest-cov
