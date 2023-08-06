@@ -1,0 +1,15 @@
+metage2metabo/__init__.py,sha256=x5rN632yaBC-qYp55LQxS3wuj7xAcSidPupYJmmiDNU,107
+metage2metabo/__main__.py,sha256=j6cLetm6qzKG9DFg2Z1lAqUHV1PwIMjtrXyaweTgsXc,18575
+metage2metabo/__main_analysis__.py,sha256=x4ywJC8bVW65MCa63fNY0A69ln_i41Iw9zQALLi-70o,9605
+metage2metabo/m2m_analysis.py,sha256=uOkdupLhJHqO-yCo7HCmUfg4ii2m8MJrlBM9izXd3aE,26044
+metage2metabo/m2m_workflow.py,sha256=uPMeO04dvJY0Fnhg1Pr5ejBYNOnZMC2m1a3CVdl_qWI,32013
+metage2metabo/sbml_management.py,sha256=9PcNTMuCP-78GS-FDu2i1XhxpHeZEmTFoCXqjoAIUIA,5135
+metage2metabo/utils.py,sha256=7Rn7apHxxleE9m9ueWnCHGPatv99nnHGg3eokCAmFss,2386
+metage2metabo/workflow_data/seeds_workflow.sbml,sha256=LwqjzowtTp_VBl_H3NXGnBB1A4qaFrj1xwpYpp0fcIg,3206
+metage2metabo/workflow_data/workflow_genomes.tar.gz,sha256=zFcO3IKTaQJ7288A2M4WvXGJyUvuOmdrgT3x2RBdHs8,4782536
+Metage2Metabo-1.2.0.dist-info/LICENSE,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+Metage2Metabo-1.2.0.dist-info/METADATA,sha256=f4-XuVq1F9C2SL0Lom7T_U4S-NayjFiYkpRR0QNo15I,956
+Metage2Metabo-1.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+Metage2Metabo-1.2.0.dist-info/entry_points.txt,sha256=W-hT48XYts87exyNeEAWg3wYlFox4ezX80rSs2MEw78,105
+Metage2Metabo-1.2.0.dist-info/top_level.txt,sha256=HZ7A6GNoS5tpvYLaEKnmT2JJbp1ImpTzKrczJTBY09I,14
+Metage2Metabo-1.2.0.dist-info/RECORD,,
