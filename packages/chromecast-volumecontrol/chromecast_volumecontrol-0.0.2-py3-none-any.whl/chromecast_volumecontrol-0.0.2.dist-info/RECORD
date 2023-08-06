@@ -1,0 +1,10 @@
+chromecast_volumecontrol/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chromecast_volumecontrol/control_chromecasts.py,sha256=HandwjqjCtdQ_IIXg72LtkkWlgvNGZmvRhyxMuxF2co,397
+chromecast_volumecontrol/flask_endpoint.py,sha256=SDYas6A-4zy3v4GjdxabOQu66cuTkaJD-AWae0GOMk8,696
+chromecast_volumecontrol/gui.py,sha256=Ye-ZVnwMzViBByMu7emKivxp2LqRRqzgsv5b4zkGLg4,5166
+chromecast_volumecontrol/ico/cc.ico,sha256=YHuftd4Tapg13CmyNDv6QIkXluPb5y2Y1wJYUgkqRk4,6910
+chromecast_volumecontrol-0.0.2.dist-info/LICENSE,sha256=nsmh5d_wzgG56_p6ye_6T4dEkhQ4724SqJ_5s5SMM74,1069
+chromecast_volumecontrol-0.0.2.dist-info/METADATA,sha256=F2Z5fQr9fVU4RWJb1PGW7xOIqhMhv-uVShCPvq_rdvg,1312
+chromecast_volumecontrol-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+chromecast_volumecontrol-0.0.2.dist-info/top_level.txt,sha256=DagKpiD4PSN6JqrE4Bg68FN1bYWiBGOIV0Va7TfNsyo,25
+chromecast_volumecontrol-0.0.2.dist-info/RECORD,,
