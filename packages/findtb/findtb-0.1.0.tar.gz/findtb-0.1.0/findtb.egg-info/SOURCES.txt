@@ -1,0 +1,8 @@
+setup.py
+findtb/__init__.py
+findtb/find.py
+findtb.egg-info/PKG-INFO
+findtb.egg-info/SOURCES.txt
+findtb.egg-info/dependency_links.txt
+findtb.egg-info/requires.txt
+findtb.egg-info/top_level.txt

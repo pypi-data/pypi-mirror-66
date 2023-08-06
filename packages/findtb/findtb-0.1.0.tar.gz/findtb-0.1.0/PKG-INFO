@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: findtb
+Version: 0.1.0
+Summary: Tarball finder
+Home-page: https://github.com/eepp/findtb
+Author: Philippe Proulx
+Author-email: eeppeliteloop@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: tarball release
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.4
