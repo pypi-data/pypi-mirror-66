@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: gino-quart
+Version: 0.1.0
+Summary: An extension for GINO to integrate with Quart
+Home-page: https://github.com/python-gino/gino-quart
+License: BSD-3-Clause
+Keywords: sqlalchemy,python3,quart,gino
+Author: Tony Wang
+Author-email: wwwjfy@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: gino (>=1.0.0rc2,<2.0.0)
+Requires-Dist: quart (>=0.11.5,<0.12.0)
+Project-URL: Documentation, https://python-gino.org/docs/
+Project-URL: Repository, https://github.com/python-gino/gino-quart
+Description-Content-Type: text/markdown
+
+# gino-quart
+
+An extension for GINO to support Quart server.
+
+**This project "gino-quart" is currently not maintained and needs adoption.** 
+
+Since GINO 1.0, the built-in extensions are now separate projects supported by
+the community. This project is copied here directly from GINO 0.8.x for
+compatibility. Help is needed to:
+
+* Keep this project maintained - follow Quart releases, fix issues, etc.
+* Add more examples and documentation.
+* Answer questions in the community.
+
