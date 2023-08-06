@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+beets_yearfixer.egg-info/PKG-INFO
+beets_yearfixer.egg-info/SOURCES.txt
+beets_yearfixer.egg-info/dependency_links.txt
+beets_yearfixer.egg-info/requires.txt
+beets_yearfixer.egg-info/top_level.txt
+beetsplug/yearfixer/__init__.py
+beetsplug/yearfixer/about.py
+beetsplug/yearfixer/command.py
+beetsplug/yearfixer/common.py
+beetsplug/yearfixer/config_default.yml
