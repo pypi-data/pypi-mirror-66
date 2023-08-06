@@ -1,0 +1,65 @@
+stages:
+  - test
+  - deploy
+
+centos7:
+  image: gitlab-registry.cern.ch/lhcb-docker/python-deployment:centos7
+  tags:
+    - cvmfs
+  script:
+    - python --version
+    - pip install --upgrade setuptools
+    - python -m pip install -e '.[testing]'
+    - pytest
+
+slc6:
+  image: gitlab-registry.cern.ch/lhcb-docker/python-deployment:slc6
+  tags:
+    - cvmfs
+  script:
+    - python --version
+    - pip install --upgrade setuptools
+    - python -m pip install -e '.[testing]'
+    - pytest
+
+python2.7:
+  image: gitlab-registry.cern.ch/lhcb-docker/python-deployment:python-2.7
+  tags:
+    - cvmfs
+  script:
+    - python --version
+    - python -m pip install -e '.[testing]'
+    - pytest
+
+python3.5:
+  image: gitlab-registry.cern.ch/lhcb-docker/python-deployment:python-3.5
+  tags:
+    - cvmfs
+  script:
+    - python --version
+    - python -m pip install -e '.[testing]'
+    - pytest
+
+python3.6:
+  image: gitlab-registry.cern.ch/lhcb-docker/python-deployment:python-3.6
+  tags:
+    - cvmfs
+  script:
+    - python --version
+    - python -m pip install -e '.[testing]'
+    - pytest
+
+# Packaging step
+deploy-packages:
+  stage: deploy
+  only:
+    - tags
+  dependencies: []
+  image: gitlab-registry.cern.ch/lhcb-docker/python-deployment:python-3.7
+  script:
+    - python setup.py sdist --dist-dir public/
+    - python setup.py bdist_wheel --dist-dir public/
+    - if [ -z "$TWINE_PASSWORD" ] ; then echo "Set TWINE_PASSWORD in CI variables" ; exit 1 ; fi
+    - twine upload -u __token__ public/*
+  before_script: []
+  after_script: []
