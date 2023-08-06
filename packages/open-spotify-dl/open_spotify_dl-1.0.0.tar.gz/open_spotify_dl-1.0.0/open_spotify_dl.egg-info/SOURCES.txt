@@ -1,0 +1,15 @@
+.gitignore
+LICENSE.txt
+Readme.md
+requirements.txt
+setup.cfg
+setup.py
+open_spotify_dl/__init__.py
+open_spotify_dl/constants.py
+open_spotify_dl/open_spotify_dl.py
+open_spotify_dl.egg-info/PKG-INFO
+open_spotify_dl.egg-info/SOURCES.txt
+open_spotify_dl.egg-info/dependency_links.txt
+open_spotify_dl.egg-info/entry_points.txt
+open_spotify_dl.egg-info/requires.txt
+open_spotify_dl.egg-info/top_level.txt
