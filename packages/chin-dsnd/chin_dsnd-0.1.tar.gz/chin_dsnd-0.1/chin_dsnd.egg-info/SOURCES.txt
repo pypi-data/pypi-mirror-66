@@ -1,0 +1,10 @@
+setup.py
+chin_dsnd/Binomialdistribution.py
+chin_dsnd/Gaussiandistribution.py
+chin_dsnd/Generaldistribution.py
+chin_dsnd/__init__.py
+chin_dsnd.egg-info/PKG-INFO
+chin_dsnd.egg-info/SOURCES.txt
+chin_dsnd.egg-info/dependency_links.txt
+chin_dsnd.egg-info/not-zip-safe
+chin_dsnd.egg-info/top_level.txt
