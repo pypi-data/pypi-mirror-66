@@ -1,0 +1,11 @@
+smalluuid/__init__.py,sha256=l7rNamyL5ko8DoXyb0deVvLYnK_l0tFAAt4Q5EqNirg,219
+smalluuid/smalluuid.py,sha256=jgwRzy9sS1RXMqKSR_oUVnvkmv0VXXdiIOkpCVjLISA,2810
+smalluuid/utils.py,sha256=DlU8wYR8GwlkjZU5mDa_sEbXl3keB2MRt0bVHei30RY,462
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_smalluuid.py,sha256=JVZCwDffljPxkQ2mBFnmCaSm0toxrdfwODoBOqgJ4gk,2901
+tests/test_utils.py,sha256=Q9YW4PZozFBa1xDqrxTHOqBlKwMpfFaBWtoqRXMKMKE,1216
+smalluuid-1.1.0.dist-info/LICENSE.txt,sha256=EGgUBL6_p0jiZl7gFWxxOyktWAI76dHQBftqKkY9yMY,1296
+smalluuid-1.1.0.dist-info/METADATA,sha256=_dhOGYt09zf5C9ZsfevExfK3ThII8-U5WK9pq21ZyGQ,276
+smalluuid-1.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+smalluuid-1.1.0.dist-info/top_level.txt,sha256=j41ywkc6_gg3mr7OivoOPNPRH_e0Z6ZEJAG1Imwqw3s,16
+smalluuid-1.1.0.dist-info/RECORD,,
