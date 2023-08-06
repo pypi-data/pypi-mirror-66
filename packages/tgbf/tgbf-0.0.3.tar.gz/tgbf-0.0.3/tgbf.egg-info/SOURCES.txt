@@ -1,0 +1,10 @@
+README.md
+setup.py
+tg/Bot.py
+tg/Content.py
+tg/Response.py
+tg/__init__.py
+tgbf.egg-info/PKG-INFO
+tgbf.egg-info/SOURCES.txt
+tgbf.egg-info/dependency_links.txt
+tgbf.egg-info/top_level.txt
