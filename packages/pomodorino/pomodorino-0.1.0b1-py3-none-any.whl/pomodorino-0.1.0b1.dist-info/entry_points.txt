@@ -1,0 +1,3 @@
+[console_scripts]
+pomodorino=pomodorino:app.main
+

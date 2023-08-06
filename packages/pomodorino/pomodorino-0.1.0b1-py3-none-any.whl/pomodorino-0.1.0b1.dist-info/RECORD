@@ -1,0 +1,15 @@
+COPYING,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+assets/logo.png,sha256=KuJI7c1ZvD422ZDpqHLsldBRConMLPq4EL5hCVZfapk,46836
+assets/mo/it/LC_MESSAGES/com.gkayaalp.pomodorino.mo,sha256=hoYdZj1fQKr_i0bOuRv5k5gsSwIp5g8iyg-CnsE3Pcs,2016
+assets/mo/tr/LC_MESSAGES/com.gkayaalp.pomodorino.mo,sha256=UlcxRZB9Ch03Qgv6vzl9fkEGmLZRdR_Xbs4pSv3QXv8,1995
+assets/pomodorino.desktop,sha256=kmTbACTMe6dZQl51A1ZoKpP_Pjy0du9QcyPlhgwdVhg,433
+pomodorino/__init__.py,sha256=Qyj7VvgjbYLSO6i4aiHKLxtA61qZcfdaGh4yeebwKzw,835
+pomodorino/app.py,sha256=5a5sVBzmvJ7xsFXv-bihnkEOxmA_Vl8pGWnwwM_3oPo,11339
+pomodorino/common.py,sha256=O-dcYb5Am76bXwQG1msLa6ZqXvVU4nlXLPVAG9gUW4M,1327
+pomodorino/indicator.py,sha256=tEsQtez23YzFfa8dnEdAZ0YjKphDH55FiAQyrWgrZvg,3705
+pomodorino/settingsmodal.py,sha256=sL-HcbrlLf81AQfK3fY3OUH7DeZhwliPu7BNtrhED5M,4289
+pomodorino-0.1.0b1.dist-info/entry_points.txt,sha256=cUNTl7CBKupHoT2bxST_G67uhaZ_XCoCCxDSx0uTqlk,50
+pomodorino-0.1.0b1.dist-info/COPYING,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+pomodorino-0.1.0b1.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+pomodorino-0.1.0b1.dist-info/METADATA,sha256=c8bXrBwGqkLJHisJE4429sK1w8kL8XqXT3qgJzs5Qck,2836
+pomodorino-0.1.0b1.dist-info/RECORD,,
