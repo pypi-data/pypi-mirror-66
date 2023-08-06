@@ -1,0 +1,307 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans&family=Passion+One&display=swap);
+
+:root {
+    --primary-color: #c9a51a;
+}
+
+body{
+    font-family: Open_sans, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1{
+    margin: 0;
+}
+
+h2{
+    font-family: 'Passion One', cursive;
+    font-size: 50px;
+    margin: 0;
+}
+
+h2.text-center{
+    color: var(--primary-color);
+    margin-bottom: 70px;
+}
+
+h3{
+    font-size: 20px;
+    color: var(--primary-color);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+p{
+    margin: 0;
+}
+
+p.title{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+hr{
+    display: inline-block;
+    width: 30%;
+    border: 3px solid var(--primary-color);
+    border-radius: 5px;
+}
+section{
+    margin-bottom: 20px;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-sb{
+    justify-content: space-between;
+}
+
+.ac-center{
+    align-content: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.bg-colored{
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.bg-colored hr{
+    border-color: white;
+}
+
+.container{
+    width: 1200px;
+    margin: auto;
+    padding: 60px 0 20px 0;
+}
+
+/* MAIN */
+
+.main{
+    min-height: 700px;
+    height: calc(100vh - 150px);
+}
+
+.main h1{
+    font-size: 100px;
+}
+
+.main h1 span{
+    color: var(--primary-color);
+}
+
+.main hr{
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    margin-top: 200px;
+    border-radius: 0;
+    z-index: -1;
+}
+
+.main .stats{
+    position: absolute;
+    top: 520px;
+    right: 200px;
+    min-width: 350px;
+    height: 120px;
+    padding: 30px;
+    color: black;
+    background-color: white;
+}
+
+.main #stats{
+    font-family: 'Passion One', cursive;;
+    font-size: 80px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.main .text-center{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.main .stats img{
+    width: 70px;
+    height: 70px;
+    margin-left: 15px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: var(--primary-color);
+}
+
+/* ##### */
+
+.f-section a{
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 250px;
+    margin: 70px auto;
+    border: none;
+    border-radius: 15px;
+    padding: 20px 70px;
+    color: white;
+    background-color: black;
+
+}
+
+.paragraph{
+    font-size: 25px;
+}
+
+.column{
+    min-width: 20%;
+}
+
+.appel ul{
+    list-style: none;
+    padding-left: 10px;
+}
+
+.appel  li{
+    position: relative;
+}
+
+.appel  li::marker {
+    content: "•";
+    font-size: 30px;
+    color: var(--primary-color)
+}
+
+.appel  li a {
+    position: absolute;
+    display: block;
+    top: 5px;
+    left: 2px;
+    color: black;
+    height: 20px;
+    font-size: 20px;
+}
+
+/* sign-up form*/
+
+.form {
+    margin-bottom: 0;
+    padding-bottom: 40px;
+}
+
+.form.bg-colored{
+    color: black;
+}
+
+.form form{
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+.form input[type=text], .form input[type=email]{
+    display: block;
+    font-size: 25px;
+    width: 400px;
+    background-color: white;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 10px;
+}
+
+.form .social{
+    align-self: center;
+    color: white;
+    background-color: black;
+    margin-right: 100px;
+    padding: 30px 50px;
+}
+
+.form .social .social-icons{
+    margin-top: 20px;
+}
+
+.form .social a:first-child img{
+    margin-left: 0;
+}
+
+.form .social img{
+    width: 30px;
+    margin: 5px;
+}
+
+.form label{
+    font-weight: bold;
+}
+
+.form input[type=submit]{
+    display: block;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 20px auto;
+    border: none;
+    border-radius: 15px;
+    padding: 20px 70px;
+    color: white;
+    background-color: black;
+}
+
+.form small{
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+/* end of signup form */
+
+
+/* Footer */
+
+footer{
+    width: 800px;
+    height: 80px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+footer p{
+    font-weight: bold;
+}
+
+footer #email{
+    color: var(--primary-color);
+}
+
+footer .social a{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    padding: 3px;
+}
+
+footer .social img{
+    width: 20px;
+}
+
+/* End of footer*/
