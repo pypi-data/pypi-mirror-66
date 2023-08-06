@@ -1,0 +1,10 @@
+springer/__init__.py,sha256=tgYO57NC6bkNczKbnzfj3coZIITQrcFjNoVf_wJamZg,140
+springer/__main__.py,sha256=8D1JDusMX3cuq4JW_Fhgx2IJZuA9HVB5vCERnkbKmnA,14255
+springer/__version__.py,sha256=DgpLNbv0e1LIEOOe54Db8_390i9pelMEFEnsBsNmyhA,23
+springer/catalog.py,sha256=qowg2SbAHTYl4iiM2MRufkWkfyDmBPsLLw9kf3sFtNM,19832
+springer/constants.py,sha256=FHnTrpKV2puZLxkLSdoI8yqd1MYH2Lv76htt7_KF8ts,856
+springer/urls.py,sha256=_6xiubu_58v8gUFO_xNtppph_8QOgpedBS6_LyYPnTc,1126
+springer-0.13.0.dist-info/entry_points.txt,sha256=IMCgSAUL6O33_vk78TnId7AK1Lf1nb6EuYjGN7uJ5W4,50
+springer-0.13.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+springer-0.13.0.dist-info/METADATA,sha256=hIzaPMZWc_7uBHUbT4tbl9BAHDX6yjpwWBxmglk-sWs,9561
+springer-0.13.0.dist-info/RECORD,,
