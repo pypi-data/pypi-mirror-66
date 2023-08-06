@@ -1,0 +1,9 @@
+covdata/__init__.py,sha256=Ac8pSTOc_HF2qITThJw8HjL8VCXLkpqcc5FZRFrnNlU,23
+covdata/cli.py,sha256=oY20qV_tFXfE9JwgGWj244TQq_qxA7qFd9ddqbzlFZA,17179
+covdata/covidindia.py,sha256=oOqqfQt-sktx2gdnM5dqX89ZGOvKqoVqqbC9VbgLLZ8,48585
+covdata-1.1.0.dist-info/LICENSE,sha256=-o1RnSCR5yHze1KOBij8gnKvae1mX6Mph8NKZK3e6HE,1092
+covdata-1.1.0.dist-info/METADATA,sha256=I0KjZet18fjQQzZJCWYCZvLyCXIbm4JGLlsh4gKcMIc,22732
+covdata-1.1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+covdata-1.1.0.dist-info/entry_points.txt,sha256=79UNCkiiDuawTUpu9qJ57aVzns_PxSl84GaTHKjCC-4,46
+covdata-1.1.0.dist-info/top_level.txt,sha256=USynQydkfeCsDKbYjEuTlwwqKScJnPsDhT7JVm028Lo,8
+covdata-1.1.0.dist-info/RECORD,,
