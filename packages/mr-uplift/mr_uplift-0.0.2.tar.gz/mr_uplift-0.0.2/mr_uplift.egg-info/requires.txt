@@ -1,0 +1,6 @@
+numpy>1.17.2
+pandas>=0.20.0
+tensorflow
+keras
+dill
+sklearn
