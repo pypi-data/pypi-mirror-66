@@ -1,0 +1,15 @@
+gitcher/__init__.py,sha256=JZjKJ_03tcmO-_M4ynLvnJ9NfGu6r0E6WalR_aB4OTA,551
+gitcher/__main__.py,sha256=riTKJLfOKsXeAuTGk3cZoPWktCNrNycyNXyJICHQsSw,24520
+gitcher/completer.py,sha256=KSaPwhFTpyb-xm_mMbRhAe4wWpgf5JVtRhXI1haBZRM,1292
+gitcher/dictionary.py,sha256=5n70zF46bdWVE6nybPaTLwWZYFvizztHc9nwXDs5i5g,2387
+gitcher/model_layer.py,sha256=LT0Wm147lgJpZu6Bfd65o92ibhHYIKcRZ-dUZHThGw0,8109
+gitcher/not_found_prof_error.py,sha256=D609AWAIsQvnwz_d0d6Zotkq5AIVcr4mDgmOg47342A,529
+gitcher/prof.py,sha256=u0M-p5gg81Vs6f4Nbgibs_CSPyT7w4tJEyjcoY1guuY,2471
+gitcher-3.2.data/data/LICENSE,sha256=8v0FIQ4jUkT2v1_V-SDT8TxohEfvFQUAGhebAH0Sjps,35099
+gitcher-3.2.data/data/share/man/man1/gitcher.1,sha256=15TdymSaxItHQsfRcVA0pI7-HwJKvGjnqVsfOz2kZVA,2046
+gitcher-3.2.dist-info/LICENSE,sha256=8v0FIQ4jUkT2v1_V-SDT8TxohEfvFQUAGhebAH0Sjps,35099
+gitcher-3.2.dist-info/METADATA,sha256=iwiQ53Bv3xwX9LkdhhGyaUDUTo9IKYOY_v8nqGHYd30,1190
+gitcher-3.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gitcher-3.2.dist-info/entry_points.txt,sha256=Vb3tNojANJSeTyNf63X0BcVP4mjsJA3wMm97D8JeVb0,51
+gitcher-3.2.dist-info/top_level.txt,sha256=61MchqXdQMX8DxLDPo7dO4EGM9rIGitVTlZ3wXSx54w,8
+gitcher-3.2.dist-info/RECORD,,

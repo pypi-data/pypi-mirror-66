@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: gitcher
+Version: 3.2
+Summary: The git profile switcher.
+Home-page: https://github.com/bglezseoane/gitcher
+Author: Borja González Seoane
+Author-email: garaje@glezseoane.es
+License: LICENSE
+Download-URL: https://github.com/bglezseoane/gitcher/archive/v3.2.tar.gz
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Version Control
+Classifier: Topic :: Software Development :: Version Control :: Git
+Requires-Python: >=3.6
+Requires-Dist: validate-email (==1.3)
+Requires-Dist: prettytable (==0.7.2)
+
+The git profile switcher. It facilitates the switching between git profiles, importing configuration settings such as name, email and user signatures.
+
+
