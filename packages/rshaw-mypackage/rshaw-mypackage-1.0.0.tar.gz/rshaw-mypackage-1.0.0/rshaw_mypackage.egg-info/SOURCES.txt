@@ -1,0 +1,7 @@
+setup.py
+rshaw-mypackage/__init__.py
+rshaw_mypackage.egg-info/PKG-INFO
+rshaw_mypackage.egg-info/SOURCES.txt
+rshaw_mypackage.egg-info/dependency_links.txt
+rshaw_mypackage.egg-info/not-zip-safe
+rshaw_mypackage.egg-info/top_level.txt
