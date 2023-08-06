@@ -1,0 +1,62 @@
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "failprint"
+version = "0.1.0"
+description = "Print only on failure."
+authors = ["Timothée Mazzucotelli <pawamoy@pm.me>"]
+license = "ISC License"
+readme = "README.md"
+repository = "https://github.com/pawamoy/failprint"
+homepage = "https://github.com/pawamoy/failprint"
+keywords = []
+packages = [ { include = "failprint", from = "src" } ]
+include = [
+    "README.md",
+    "pyproject.toml"
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+ansimarkup = "^1.4.0"
+jinja2 = "^2.11.2"
+ptyprocess = "^0.6.0"
+
+[tool.poetry.dev-dependencies]
+bandit = "*"
+flake8 = "*"
+isort = { version = "*", extras = ["pyproject"] }
+black = "^19.10b0"
+
+[tool.poetry.scripts]
+failprint = "failprint.cli:main"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+line_length = 120
+not_skip = "__init__.py"
+multi_line_output = 3
+force_single_line = false
+balanced_wrapping = true
+default_section = "THIRDPARTY"
+known_first_party = "failprint"
+include_trailing_comma = true
+
+[tool.pylint.options]
+disable = """
+  bad-continuation,
+  too-many-lines,
+  too-many-public-methods,
+  too-many-locals,
+  too-many-statements,
+  too-many-arguments,
+  too-many-instance-attributes,
+  too-many-branches,
+  too-few-public-methods,
+  duplicate-code
+"""
+max-line-length = "120"
