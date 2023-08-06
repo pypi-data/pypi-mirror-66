@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: open-captcha
+Version: 0.1.0
+Summary: CAPTCHA challenges generated from your service's data
+Home-page: https://www.hasadna.org.il
+Author: Hasadna
+Author-email: info@hasadna.org.il
+License: MIT
+Description: # open-captcha
+        
+        [![Build Status](https://img.shields.io/travis/hasadna/OpenCaptcha/master.svg)](https://travis-ci.org/hasadna/OpenCaptcha)
+        [![Coveralls](http://img.shields.io/coveralls/hasadna/OpenCaptcha.svg?branch=master)](https://coveralls.io/r/hasadna/OpenCaptcha?branch=master)
+        
+        
+        PLACEHOLDER
+        
+        ## Documentation
+        
+        PLACEHOLDER
+Keywords: CAPTCHA
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: develop
