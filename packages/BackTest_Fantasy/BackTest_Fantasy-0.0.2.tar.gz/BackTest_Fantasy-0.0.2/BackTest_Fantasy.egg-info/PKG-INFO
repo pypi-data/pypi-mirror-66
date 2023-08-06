@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: BackTest-Fantasy
+Version: 0.0.2
+Summary: BackTest
+Home-page: UNKNOWN
+Author: Fantasy
+Author-email: toubiana.nathan@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: machine-learning,scikit-learn,training-time
+Platform: UNKNOWN
+Requires-Python: >=3
