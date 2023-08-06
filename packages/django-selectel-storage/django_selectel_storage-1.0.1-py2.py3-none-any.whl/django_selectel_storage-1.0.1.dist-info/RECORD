@@ -1,0 +1,11 @@
+django_selectel_storage/__init__.py,sha256=vmc7w-8D59nfXNnQ6q21XZo-vBkYM4EE52fLjUXyxJg,121
+django_selectel_storage/apps.py,sha256=ex3M7sniUuI_5nM01MG1xc6611ZFiPUXETkf1_00zrQ,1022
+django_selectel_storage/compat.py,sha256=QtxccX5b7w_6XMju0O0xF-5k_8HX6wypq53pWsB_1QA,205
+django_selectel_storage/exceptions.py,sha256=WaTo-FS7YrSekB3ptSKLpTE_iF7amNoaR20_KHzN0Jg,255
+django_selectel_storage/selectel.py,sha256=O4gOjJLTyLJxM0W1GA9cZj-d1wpCsLZGGW2uqEpsbJ4,4316
+django_selectel_storage/storage.py,sha256=8IuQaZHVK-XrY3hqMsNy0C5s7CcfmycidY6zfR2SMeo,1731
+django_selectel_storage/utils.py,sha256=0bxkMyxNYlrKAUK76iyuvbbu8J9yLyIDgKhoMZHVq6o,5420
+django_selectel_storage-1.0.1.dist-info/LICENSE,sha256=6V_fhvLqoek0fofmXkKRx5MYEOF0-R-lS_ZitMDE1XA,1068
+django_selectel_storage-1.0.1.dist-info/WHEEL,sha256=kvwuEKnRH6O8i0OndiTtSFFMuXs9x3oJYWvW5x4ISEE,87
+django_selectel_storage-1.0.1.dist-info/METADATA,sha256=1gVtqFeq-DfA__MTqAukkkcwuxUsAxpUVhQ1dfujKwA,4163
+django_selectel_storage-1.0.1.dist-info/RECORD,,
