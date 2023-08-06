@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: mailslurp-client
+Version: 7.0.9
+Summary: MailSlurp API
+Home-page: https://www.mailslurp.com
+Author: MailSlurp
+Author-email: contact@mailslurp.dev
+License: UNKNOWN
+Keywords: MailSlurp,Email,SMTP,Mailer,MailSlurp API
+Platform: UNKNOWN
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+
+Create email addresses in Python then send and receive emails and attachments. See https://www.mailslurp.com/docs/python/ for full documentation.
+
+
