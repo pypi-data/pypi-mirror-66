@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: osrmcpy
+Version: 0.4
+Summary: OSRM Python binding
+Home-page: https://github.com/Paraboly/libosrmc
+Author: Geographica
+Author-email: dev@paraboly.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
