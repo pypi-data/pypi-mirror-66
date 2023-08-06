@@ -1,0 +1,15 @@
+
+version: 0
+
+pattern:
+  python: |
+    glob:*.py
+    glob:*.pyi
+
+tool:
+  black:
+    config:
+      line-length: 80
+    pattern: "python"
+
+

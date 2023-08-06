@@ -1,0 +1,4 @@
+include .flake8
+include .misaki.*.yaml
+recursive-include misaki_tests/git1/ *
+recursive-include misaki_tests/ *.yaml
