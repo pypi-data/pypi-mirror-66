@@ -1,0 +1,9 @@
+numpy
+scipy
+matplotlib
+pyqt5
+appdirs
+diffractio
+hickle
+pandas
+pillow
