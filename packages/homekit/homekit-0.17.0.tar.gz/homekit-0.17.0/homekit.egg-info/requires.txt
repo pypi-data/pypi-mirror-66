@@ -1,0 +1,12 @@
+cryptography>=2.5
+ed25519
+hkdf
+tlv8
+
+[BLE]
+dbus-python
+gatt
+pygobject
+
+[IP]
+zeroconf
