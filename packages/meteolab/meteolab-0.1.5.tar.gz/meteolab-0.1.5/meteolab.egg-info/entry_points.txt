@@ -1,0 +1,6 @@
+[console_scripts]
+meteolab = meteolab.__main__:main
+
+[microapp.projects]
+meteolab = meteolab
+
