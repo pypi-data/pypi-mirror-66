@@ -1,0 +1,14 @@
+stoltzmaniac/__init__.py,sha256=XEqb2aiIn8fzGE68Mph4ck1FtQqsR_am0wRWvrYPffQ,22
+stoltzmaniac/data_handler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stoltzmaniac/data_handler/base.py,sha256=tCEl25mDSmhM-1GMkxa9QkPtEfHEA0tLj2mFSOSbqco,1122
+stoltzmaniac/data_handler/clean_data.py,sha256=Z05KlpriuYnKfBNxUpERoGrX-FbUFlSq7xL5AN26t_g,687
+stoltzmaniac/data_handler/scale_data.py,sha256=wK8zKNgtm3fZ0Q1eGcp-cjidjk4mJEOgirAlNsipUmo,3154
+stoltzmaniac/data_handler/test_train_split_data.py,sha256=VNVP2lgLtcDqdHZJrq8Q09Ac_q7H_tCEK_l-7tq1uIw,2576
+stoltzmaniac/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stoltzmaniac/models/supervised/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stoltzmaniac/models/supervised/linear_regression.py,sha256=dExKZ4vZEgiET5rAC6W8zBSKVoJ-hNwJblY5XlZPV1Y,2804
+stoltzmaniac/models/unsupervised/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stoltzmaniac/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stoltzmaniac-0.1.3.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+stoltzmaniac-0.1.3.dist-info/METADATA,sha256=xewnggvoOJyZw1A1Wiql3Lsqq9QHeDd2YYatLMBCG3k,348
+stoltzmaniac-0.1.3.dist-info/RECORD,,
