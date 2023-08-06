@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: gitme
+Version: 0.1
+Summary: create merge requests on gitlab, based on changes already done
+Home-page: http://github.com/aufbaubank/smerger
+Author: Daniel Henneberg
+Author-email: daniel.henneberg@aufbaubank.de
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
