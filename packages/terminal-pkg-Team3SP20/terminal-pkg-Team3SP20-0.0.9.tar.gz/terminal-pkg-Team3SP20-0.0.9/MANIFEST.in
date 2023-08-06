@@ -1,0 +1,2 @@
+include *.mp3 *.wav
+recurse-include *.mp3 *.wav
