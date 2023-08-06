@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: jupyterlab-sparkmonitor
+Version: 1.0.3
+Summary: Spark Monitor Extension for Jupyter Lab
+Home-page: https://github.com/itsjafer/jupyterlab-sparkmonitor
+Author: Krishnan R
+Author-email: krishnanr1997@gmail.com
+Maintainer: itsjafer
+Maintainer-email: itsjafer@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
