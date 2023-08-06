@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: hazus
+Version: 0.0.10
+Summary: FEMA - Hazus Open-Source Library
+Home-page: https://github.com/nhrap-hazus/hazus.git
+Author: James Raines
+Author-email: james.rainesii@fema.dhs.gov,usharma@niyamit.com
+License: UNKNOWN
+Description: # hazus
+        
+        This is the source for the Hazus Python Package. The intention is to create a free and open-source distribution of the logic and methods used in FEMA's Natural Disaster Loss Estimation Software, Hazus (https://www.fema.gov/hazus). The methods used are independent of any UI so that they can be incorporated across software, systems, and models. The open-source platform allows transparency in how Hazus conducts loss estimation modeling and invites researchers, scientists, and analysts to contribute and build better models for the nation and the world. 
+        
+        This Python Package is in its infancy and currently exists as a framework for development. Partial builds of the flood and hurricane modules are anticipated for 2020. If you would like to contribute, please contact FEMA-NHRAP@dhs.fema.gov.
+        
+        ## Official Documentation
+        
+        * [Hazus Python Package Documentation](https://fema-ftp-snapshot.s3.amazonaws.com/Hazus/hazpy/build/html/index.html)
+        
+        ## Licensing
+        
+        This code is distributed under the GPL v3 license and is ilegal to be used in commercial applications, but is otherwise free to use and modify in applications disitrubted not for profit. See LICENSE for more detailed information.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
