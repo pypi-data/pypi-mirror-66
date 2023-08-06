@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: shallow-appify
+Version: 0.4.3
+Summary: Converts any executable to a non-self-contained mac app bundle which depends on system libraries.
+Home-page: https://github.com/IngoHeimbach/shallow-appify
+Author: Ingo Heimbach
+Author-email: i.heimbach@fz-juelich.de
+License: MIT
+Description: UNKNOWN
+Keywords: macOS,app,py2app
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
