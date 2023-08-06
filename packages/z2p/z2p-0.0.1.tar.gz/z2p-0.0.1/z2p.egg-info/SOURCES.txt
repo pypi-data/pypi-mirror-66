@@ -1,0 +1,5 @@
+setup.py
+z2p.egg-info/PKG-INFO
+z2p.egg-info/SOURCES.txt
+z2p.egg-info/dependency_links.txt
+z2p.egg-info/top_level.txt
