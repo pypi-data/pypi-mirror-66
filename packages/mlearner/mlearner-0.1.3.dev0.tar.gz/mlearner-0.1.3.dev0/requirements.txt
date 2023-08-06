@@ -1,0 +1,32 @@
+# General
+dlib
+Flask
+copy
+json
+
+# Frameworks
+scikit-learn
+scikit-image
+matplotlib
+pandas
+numpy
+seaborn
+shap
+hyperopt
+scipy
+pickle
+
+# Models
+xgboost
+lightgbm
+catboost
+
+# testing
+pytest>=4.6.6,<5.0.0
+pytest-cov
+codacy-coverage
+
+# doc
+mkdocs
+
+
