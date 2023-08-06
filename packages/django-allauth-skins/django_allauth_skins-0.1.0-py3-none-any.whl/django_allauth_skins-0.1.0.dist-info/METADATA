@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: django-allauth-skins
+Version: 0.1.0
+Summary: Styled templates for django-allauth
+License: MIT
+Author: Adin Hodovic
+Author-email: hodovicadin@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+# AllAuth Skins
+
+Styled templates for django-allauth
+

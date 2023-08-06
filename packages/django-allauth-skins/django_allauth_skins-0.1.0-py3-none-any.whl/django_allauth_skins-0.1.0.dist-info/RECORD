@@ -1,0 +1,12 @@
+django_allauth_skins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_allauth_skins/apps.py,sha256=4ALPHw2JYtBJYX3tLFRFKVEOi-DTsJ-SrgEUAzB7Mj4,141
+django_allauth_skins/models.py,sha256=DuQzAHQX3730qYZ2un7zNgnw0UfBsdw0jpGXBROlRJk,31
+django_allauth_skins/static/allauth_skins/css/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_allauth_skins/static/allauth_skins/images/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_allauth_skins/static/allauth_skins/js/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_allauth_skins/templates/allauth_skins/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_allauth_skins/urls.py,sha256=B9s6E_4jGw8IwxasHJ_JiGxRfhXBdOqJdzA_SR3fvE4,75
+django_allauth_skins-0.1.0.dist-info/LICENSE,sha256=ABeExkFegk9H-2tZMFT7why8qnQD3UaGJEi079PWwLI,1069
+django_allauth_skins-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+django_allauth_skins-0.1.0.dist-info/METADATA,sha256=nJUCgrpuP6QQQVj9PRf9JPtLE9CXJMckgHODVhSB56o,451
+django_allauth_skins-0.1.0.dist-info/RECORD,,
