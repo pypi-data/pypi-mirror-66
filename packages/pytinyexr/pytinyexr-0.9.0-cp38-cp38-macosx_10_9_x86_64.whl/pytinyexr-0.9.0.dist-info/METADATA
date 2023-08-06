@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: pytinyexr
+Version: 0.9.0
+Summary: Python bindings for TinyEXR(OpenEXR loader/saver)
+Home-page: https://github.com/syoyo/PyEXR
+Author: Syoyo Fujita
+Author-email: 
+License: UNKNOWN
+Project-URL: Issue Tracker, https://github.com/ialhashim/PyEXR/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Manufacturing
+Classifier: Topic :: Artistic Software
+Classifier: Topic :: Multimedia :: Graphics :: 3D Modeling
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# PyEXR
+
+[![Build Status](https://travis-ci.org/syoyo/PyEXR.svg?branch=master)](https://travis-ci.org/syoyo/PyEXR)
+
+Loading OpenEXR (.exr) images using Python.
+
+It is basically a Python binding for tinyexr. Use CMake to build the module (uses pybind11). Installation script is not there, you can simply copy the resulting python module files. Supports loading functionality, saving can be easily added (pull requests welcome!).
+
+# Usage
+```python
+from pytinyexr import PyEXRImage
+
+# Load an EXR image (tinyexr backend)
+img = PyEXRImage('2by2.exr')
+
+# Print basic details
+print(img)
+
+# Pixel values access
+r = img.getPixel(x,y,0)
+g = img.getPixel(x,y,1)
+b = img.getPixel(x,y,2)
+a = img.getPixel(x,y,3)
+
+# Numpy:
+m = np.array(img, copy = False)
+# or
+rgb = np.reshape(np.array(rgb_img, copy = False), (rgb_img.height, rgb_img.width, 4))
+# a matrix of (height x width x channels)
+
+# Display
+from PIL import Image
+Image.fromarray(np.clip(np.uint8(rgb*255.0), 0, 255)).show()
+```
+
+# PyPI package
+
+PyPI package is registered as pytinyexr: https://pypi.org/project/pytinyexr/
+
+```
+$ pip install pytinyexr
+```
+
+### For developer
+
+For each release, upload source distribution from local.
+
+```
+$ rm -rf dist && python setup.py sdist
+$ twine upload dist/*.tar.gz
+```
+
+
+
+## Notice.
+
+Python2.7 wheel is not provided.
+
+
