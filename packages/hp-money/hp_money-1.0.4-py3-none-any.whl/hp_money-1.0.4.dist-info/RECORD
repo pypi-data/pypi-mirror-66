@@ -1,0 +1,9 @@
+hp_money/__init__.py,sha256=ucwDlCduFtmX02Favw8R8OsziGm9eWxQb1EDOp5xQAw,2860
+hp_money/amount/__init__.py,sha256=HAps-lnS7GK0zbcFUAlkYoMgjDHEqs8PVoSeHHjeQso,2134
+hp_money/currency/__init__.py,sha256=LHAy6HWmLxeSmngdkzL00xBsX8XDJGeaQybEPfiLRTU,1051
+tests/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+tests/test_money.py,sha256=4RfkiGsYG5qQ4rvcjLZZFnNxso2ffeqYLSTtFQq0Gm8,2138
+hp_money-1.0.4.dist-info/METADATA,sha256=YW8dTgWMDAaVJTEEpeFLEKQbTXIPEeKPrMYXLqgX718,484
+hp_money-1.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+hp_money-1.0.4.dist-info/top_level.txt,sha256=nfRjJ4hX8RusjWvBVK-Ml62rEhWzDzrA5UdrAH4yIVg,15
+hp_money-1.0.4.dist-info/RECORD,,
