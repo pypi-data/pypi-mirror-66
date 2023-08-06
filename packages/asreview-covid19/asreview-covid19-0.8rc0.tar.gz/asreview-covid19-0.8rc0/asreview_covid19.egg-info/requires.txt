@@ -1,0 +1,7 @@
+asreview>0.8.9
+
+[all]
+asreview-statistics
+
+[config-create]
+asreview-statistics
