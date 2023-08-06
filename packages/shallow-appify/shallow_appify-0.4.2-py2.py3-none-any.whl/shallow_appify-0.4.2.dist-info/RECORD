@@ -1,0 +1,17 @@
+shallow_appify/__init__.py,sha256=IaBvsQ9upZ6_4RQYT3ZR53RUAC7FtmKiDBWIKJa3YL8,405
+shallow_appify/__main__.py,sha256=xpquzYjipBPFdvun1vrtB9BqFLWVOHcrG0do2J3aLA0,269
+shallow_appify/_version.py,sha256=iDxuu7mo6WjQDiOFomlEGBuEyt__QA5FEbo1RjrtqT8,255
+shallow_appify/dmg_background.png,sha256=GxeOw26TZ41AnvvdS_BUPtFrHHUi9iM8W614xJueP3U,3783
+shallow_appify/shallow_appify.py,sha256=8DGu6E48jCQ7X_STuStorsrqD8GohAD3LAN1hjedWhI,13508
+shallow_appify/plugins/__init__.py,sha256=wCuSyT5Lo7ZTYH1wFDZ7vo28Qun7ScBB12azsM7_P2s,2790
+shallow_appify/plugins/python.py,sha256=3FdtApXHll8ZypvsInU2mu8iT4RWqzN5TgvCaTW6KZ8,18680
+shallow_appify/plugins/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shallow_appify/plugins/util/binary_replace.py,sha256=ZzChMTYt8ZLNueLnNqqiF5SdE9Z3hqCUHteQ_Tgb9eM,1621
+shallow_appify/plugins/util/command.py,sha256=RofP3VdyOX1DJP_xR0elCaFFoMpwQdy7OtFyKKNTUBM,496
+shallow_appify/plugins/util/libpatch.py,sha256=A6waGN6q_biCMOmKNyt78Xnvb08g6JOcmF_G0D7HC1o,2668
+shallow_appify-0.4.2.dist-info/LICENSE,sha256=R6nGjXptd_m4QA9xV1UhLGw7wPb35QWWCveO_l4859A,1081
+shallow_appify-0.4.2.dist-info/METADATA,sha256=mrx7D2WjKf4QVWgUL9OZZCcIBYA1MEoOx86WpunLWcU,735
+shallow_appify-0.4.2.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+shallow_appify-0.4.2.dist-info/entry_points.txt,sha256=mATXRvYgsEzBphl8w8TCYTra1CB5uGWVvZovVL4VB9E,71
+shallow_appify-0.4.2.dist-info/top_level.txt,sha256=8NZeJpAHIs7JVc-57ThwSla3s3xCGiDxd2HBacSIn5E,15
+shallow_appify-0.4.2.dist-info/RECORD,,
