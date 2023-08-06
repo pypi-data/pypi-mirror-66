@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: abdesign
+Version: 0.0.1
+Summary: Summary of antibody humanization tools
+Home-page: https://github.com/SchubertLab/ABDesign
+Author: Jannis Köckritz
+Author-email: jannis.koeckritz@helmholtz-muenchen.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Unix
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (>=1.0.3)
+
+# ABDesign
+
+## API
+
+The ABDesign API includes IgObject which provides different methods to annotate and analyze an Immunoglobulin sequence.
+
+> **Note:** A local installation of ANARCI is needed for this tool. You can downlod ANARCI [here.](http://opig.stats.ox.ac.uk/webapps/newsabdab/sabpred/anarci/#download "ANARCI Download")
+
+**Initialize IgObject( *params* )**
+
+* seq *required*
+* chain_type [ =None ]
+* species [ =None ]
+* humaness_score [ =None ]
+* annotation [ =None ]
+* regions [ =None ]
+
+
+**current methods:**
+* create_annotation()
+* export_to_json()
+* replace_cdr()
+
