@@ -1,0 +1,6 @@
+[testfunc]
+tagada = testmodule.tagada:tagada
+
+[testmod]
+plop = testmodule.plop
+
