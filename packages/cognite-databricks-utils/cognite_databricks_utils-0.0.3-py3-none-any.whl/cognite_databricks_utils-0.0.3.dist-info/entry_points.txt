@@ -1,0 +1,3 @@
+[console_scripts]
+db-util=cognite.databricks_utils.cli:run
+
