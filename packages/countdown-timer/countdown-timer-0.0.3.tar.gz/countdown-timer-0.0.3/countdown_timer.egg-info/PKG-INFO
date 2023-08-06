@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: countdown-timer
+Version: 0.0.3
+Summary: A simple countdown
+Home-page: https://gitea.com/chopin42/countdown
+Author: Snowcode
+License: UNKNOWN
+Description: # A simple countdown
+        
+        This is a very simple project for those who need a countdown for things like pomodoro in Python for example.
+        
+        ## Installation
+        
+        You can install this app using the following command:
+        
+        ```
+        pip install countdown-timer
+        ```
+        
+        ## Usage
+        
+        You can use this app like this:
+        
+        ```python
+        from countdown import countdown
+        
+        # Create a countdown of 1 minute and 10 seconds
+        countdown(mins=1, secs=10)
+        
+        # Create a countdown of 1 minute
+        countdown(1)
+        
+        #Create a countdown of 10 seconds
+        countdown(mins=0, secs=10)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
