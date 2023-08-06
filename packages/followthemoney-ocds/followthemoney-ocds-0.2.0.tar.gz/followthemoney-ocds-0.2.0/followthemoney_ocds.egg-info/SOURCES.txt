@@ -1,0 +1,13 @@
+README.md
+setup.py
+followthemoney_ocds.egg-info/PKG-INFO
+followthemoney_ocds.egg-info/SOURCES.txt
+followthemoney_ocds.egg-info/dependency_links.txt
+followthemoney_ocds.egg-info/entry_points.txt
+followthemoney_ocds.egg-info/namespace_packages.txt
+followthemoney_ocds.egg-info/not-zip-safe
+followthemoney_ocds.egg-info/requires.txt
+followthemoney_ocds.egg-info/top_level.txt
+ftmocds/__init__.py
+ftmocds/cli.py
+ftmocds/convert.py
