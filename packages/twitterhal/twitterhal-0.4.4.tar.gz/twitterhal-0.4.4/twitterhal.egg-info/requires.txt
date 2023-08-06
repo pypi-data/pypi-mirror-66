@@ -1,0 +1,10 @@
+megahal>=0.3
+python-Levenshtein
+python-twitter
+emoji
+
+[detectlanguage]
+detectlanguage
+
+[redis]
+redis>=3
