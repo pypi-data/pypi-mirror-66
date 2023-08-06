@@ -1,0 +1,12 @@
+scraparser/__init__.py,sha256=bcm64x9QS2iQuuh44qiIVnyEK_zaVTItBxblt2C6jMs,12650
+scraparser/__main__.py,sha256=bXqobqUnTwE7pjaSGnQtOPlkBEU5q5tHb6lE-xg-t4c,138
+scraparser/scraparser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scraparser/scraparser/csvtable.py,sha256=Mp4kGPEz8SV403642Nl8bH60p53GmF-z9Vi9la-1shk,77
+scraparser/scraparser/googlesheet.py,sha256=M7dpvwhIfUslr672SnKhbK1QYQm4FQe-LcwxwApe0Nc,2532
+scraparser/scraparser/pdftable.py,sha256=RWtJh2lFuhcKRirBF5i-cG_WKy1hWsBxlvDq0G_NSj4,2006
+scraparser/scraparser/utils.py,sha256=nTODsjVSCsRPqtP2PP4z313mKWlu49COXydASKiU8hU,1458
+scraparser-0.0.2.dist-info/LICENSE,sha256=HgHBwsTB7mJIDhwL5yko2ZlUBFgB2SzfMEhQGvBJKrA,1059
+scraparser-0.0.2.dist-info/METADATA,sha256=hrXpPZcV-Pdn62LtkEERqyZreaJSeS8gH6aBGjvPnK8,7709
+scraparser-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+scraparser-0.0.2.dist-info/top_level.txt,sha256=lG_KMqI0NHZuvNDTDpaf5IW9BHdNJ49g36XPPsGGYlA,11
+scraparser-0.0.2.dist-info/RECORD,,
