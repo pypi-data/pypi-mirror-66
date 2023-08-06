@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: forward-password
+Version: 0.1
+Summary: Manage passwords on the command line
+Home-page: https://github.com/dicedtomatoreal/forward
+Author: dicedtomato
+Author-email: pranaco2@gmail.com
+License: MIT
+Description: # Forward
+        Manage your passwords from the Command Line
+Platform: UNKNOWN
