@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: runkeeper
+Version: 0.1.1
+Summary: Unofficial Python API Client for Runkeeper
+Home-page: https://github.com/kajchang/runkeeper
+Author: Kai Chang
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.21.0)
+
+## runkeeper
+
+
