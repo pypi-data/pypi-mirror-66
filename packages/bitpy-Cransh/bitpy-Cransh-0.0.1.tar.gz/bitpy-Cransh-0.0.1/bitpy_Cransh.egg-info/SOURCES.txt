@@ -1,0 +1,6 @@
+README.md
+setup.py
+bitpy_Cransh.egg-info/PKG-INFO
+bitpy_Cransh.egg-info/SOURCES.txt
+bitpy_Cransh.egg-info/dependency_links.txt
+bitpy_Cransh.egg-info/top_level.txt
