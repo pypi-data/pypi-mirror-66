@@ -1,0 +1,14 @@
+README.md
+setup.py
+imdb_series_scraper/__init__.py
+imdb_series_scraper/main.py
+imdb_series_scraper.egg-info/PKG-INFO
+imdb_series_scraper.egg-info/SOURCES.txt
+imdb_series_scraper.egg-info/dependency_links.txt
+imdb_series_scraper.egg-info/requires.txt
+imdb_series_scraper.egg-info/top_level.txt
+imdb_series_scraper/metrics/__init__.py
+imdb_series_scraper/metrics/metrics.py
+imdb_series_scraper/scraper/__init__.py
+imdb_series_scraper/scraper/scraper_loop.py
+imdb_series_scraper/scraper/scraper_serie.py
