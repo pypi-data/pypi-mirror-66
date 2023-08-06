@@ -1,0 +1,5 @@
+{
+  "load_extensions": {
+    "ipyaliplayer/extension": true
+  }
+}
