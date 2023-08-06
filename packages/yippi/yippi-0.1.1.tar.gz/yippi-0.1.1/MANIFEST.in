@@ -1,0 +1,15 @@
+include *.in
+include *.rst
+include *.txt
+include tox.ini
+include pyproject.toml
+recursive-include tests *.py
+recursive-include tests *.yaml
+
+exclude *.yml
+exclude .bumpversion.cfg
+exclude .coveragerc
+exclude .editorconfig
+prune .vscode
+prune ci
+prune docs
