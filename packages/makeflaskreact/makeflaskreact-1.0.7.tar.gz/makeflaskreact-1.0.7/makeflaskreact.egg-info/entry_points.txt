@@ -1,0 +1,3 @@
+[console_scripts]
+reactflask = makeflaskreact.__init__:main
+
