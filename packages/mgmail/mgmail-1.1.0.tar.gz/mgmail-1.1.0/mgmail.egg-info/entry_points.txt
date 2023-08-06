@@ -1,0 +1,3 @@
+[console_scripts]
+mgmail_imp = mgmail.app.import_attachment:run
+

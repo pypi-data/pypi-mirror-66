@@ -1,0 +1,12 @@
+README.md
+setup.py
+mgmail/__init__.py
+mgmail/attachment.py
+mgmail.egg-info/PKG-INFO
+mgmail.egg-info/SOURCES.txt
+mgmail.egg-info/dependency_links.txt
+mgmail.egg-info/entry_points.txt
+mgmail.egg-info/top_level.txt
+mgmail/app/__init__.py
+mgmail/app/checker.py
+mgmail/app/import_attachment.py
