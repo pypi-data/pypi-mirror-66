@@ -1,0 +1,16 @@
+ksoftapi/__init__.py,sha256=JrAlsSxxGa7jlz58eGh0krDjAtOxH55b2NdH-HbwUgo,837
+ksoftapi/client.py,sha256=BVovZfIChnMXruhFnN-AwioNRViDM4ap5TcPh-PpQS4,1712
+ksoftapi/errors.py,sha256=-CJ9C9KljNdxfeU6cv2fZTs-SwNoaTl53YGSuaJvffU,292
+ksoftapi/events.py,sha256=JPlMmtqu0EFRgWgS_Vx7WMc-5EdCpRW2TPATjOt_63U,278
+ksoftapi/http.py,sha256=LcmD9QzGPugFeZtyo1CRLz2VDUGIozFZsjm6hRzRFM0,2972
+ksoftapi/models.py,sha256=jAspZ4yiukN-82jKX2JseRIRkx4fj4ne4rvT0j_a5WE,5504
+ksoftapi/apis/__init__.py,sha256=p1BEchNlAT1qmgp9pHg4yfKasAEEYuTcwDbP0paZQHQ,55
+ksoftapi/apis/bans.py,sha256=tBPwV-zIlXHGPF6CCtBsHkpwO_rFhgcF6-fHPOQ3yDI,4472
+ksoftapi/apis/images.py,sha256=aLMCp4pHbAe5pswE6JF-tqiCBpTe3wxHYtsR_PnTMHo,3237
+ksoftapi/apis/kumo.py,sha256=B8lpe8ASb-tbWJzKhdAHhrI9Dxp3klqy8UjYOXyZ9t8,1651
+ksoftapi/apis/music.py,sha256=REIkQWZ6bbPnnNI8l6NqKhJAOJn1aqpaJGtW9Z8Gf3A,3039
+ksoftapi-0.2.1a0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+ksoftapi-0.2.1a0.dist-info/METADATA,sha256=5X6_vrekb79k300Bp_KWsNzhKXSkdyd649E5Gb86y_U,1502
+ksoftapi-0.2.1a0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+ksoftapi-0.2.1a0.dist-info/top_level.txt,sha256=4qk4oVJxZ0s08KrSJCVV-nhrOaNsO8YsDXLDKQVXtTM,9
+ksoftapi-0.2.1a0.dist-info/RECORD,,
