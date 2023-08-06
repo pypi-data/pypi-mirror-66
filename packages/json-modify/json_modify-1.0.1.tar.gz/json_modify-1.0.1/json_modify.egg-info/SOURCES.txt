@@ -1,0 +1,9 @@
+README.rst
+json_modify.py
+setup.cfg
+setup.py
+json_modify.egg-info/PKG-INFO
+json_modify.egg-info/SOURCES.txt
+json_modify.egg-info/dependency_links.txt
+json_modify.egg-info/requires.txt
+json_modify.egg-info/top_level.txt
