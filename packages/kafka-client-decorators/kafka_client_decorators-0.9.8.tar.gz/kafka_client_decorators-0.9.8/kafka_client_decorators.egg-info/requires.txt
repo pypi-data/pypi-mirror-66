@@ -1,0 +1,6 @@
+pykafka>=2.7.0
+
+[test]
+mock
+nose
+coverage
