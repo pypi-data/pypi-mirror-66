@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+fer/__init__.py
+fer/main.py
+id_fer.egg-info/PKG-INFO
+id_fer.egg-info/SOURCES.txt
+id_fer.egg-info/dependency_links.txt
+id_fer.egg-info/requires.txt
+id_fer.egg-info/top_level.txt
