@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+pysimporter/__init__.py
+pysimporter.egg-info/PKG-INFO
+pysimporter.egg-info/SOURCES.txt
+pysimporter.egg-info/dependency_links.txt
+pysimporter.egg-info/top_level.txt
+pysimporter/first_package/__init__.py
+pysimporter/first_package/first.py
