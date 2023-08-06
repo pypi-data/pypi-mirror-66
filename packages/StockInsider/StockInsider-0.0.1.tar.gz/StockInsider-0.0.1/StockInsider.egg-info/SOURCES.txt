@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+StockInsider.egg-info/PKG-INFO
+StockInsider.egg-info/SOURCES.txt
+StockInsider.egg-info/dependency_links.txt
+StockInsider.egg-info/requires.txt
+StockInsider.egg-info/top_level.txt
+insider/__init__.py
+insider/constants.py
+insider/mixins.py
+insider/stock.py
+insider/stock_insider.py
