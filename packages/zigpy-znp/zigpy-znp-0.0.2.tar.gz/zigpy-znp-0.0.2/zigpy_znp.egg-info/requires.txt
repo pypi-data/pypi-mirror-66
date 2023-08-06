@@ -1,0 +1,5 @@
+attrs
+pyserial-asyncio
+zigpy>=0.20.1a1
+async_timeout
+voluptuous
