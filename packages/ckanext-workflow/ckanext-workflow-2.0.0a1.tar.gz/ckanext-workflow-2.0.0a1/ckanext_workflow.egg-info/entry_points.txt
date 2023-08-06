@@ -1,0 +1,13 @@
+
+        [ckan.plugins]
+        workflow=ckanext.workflow.plugin:WorkflowPlugin
+        test_workflow=ckanext.workflow.tests.plugin:TestWorkflowPlugin
+        test_workflow_override=ckanext.workflow.tests.plugin:TestWorkflowOverridePlugin
+
+	[babel.extractors]
+	ckan = ckan.lib.extract:extract_ckan
+
+        [paste.paster_command]
+        workflow=ckanext.workflow.command:WorkflowCommand
+
+    
