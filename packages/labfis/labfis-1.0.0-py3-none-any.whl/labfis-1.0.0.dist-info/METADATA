@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: labfis
+Version: 1.0.0
+Summary: Adds a new float type with uncertainty
+Home-page: https://github.com/phisgroup/labfis.py
+Author: Hendrik Dumith Louzada, João Carlos Rodrigues Júnior
+Author-email: hendriklouzada@gmail.com, jc.rodrigues1997@usp.br
+License: MIT
+Download-URL: https://pypi.org/project/labfis/
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+
+# labfis.py
+Small library (currently only one class) for uncertainty calculations. Made by and for Physics Laboratory students in IFSC, who can't use uncertainties.py because mean absolute deviation.
+
+To get this library on google colaboratory:
+
+```
+!curl --remote-name \
+     -H 'Accept: application/vnd.github.v3.raw' \
+     --location https://raw.githubusercontent.com/Ovenbird-j/labfis.py/master/labfis/main.py
+```
+
+
