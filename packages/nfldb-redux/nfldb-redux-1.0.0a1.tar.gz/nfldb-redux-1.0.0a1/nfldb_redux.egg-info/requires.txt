@@ -1,0 +1,4 @@
+nflgame-redux>=2.0.2
+psycopg2
+enum34
+pytz
