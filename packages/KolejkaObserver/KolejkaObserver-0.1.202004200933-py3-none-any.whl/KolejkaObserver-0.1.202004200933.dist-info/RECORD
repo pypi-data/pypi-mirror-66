@@ -1,0 +1,13 @@
+KolejkaObserver-0.1.202004200933-nspkg.pth,sha256=ymghxcR0SaoJPJNC5JQSPrO2foeCxLaTaJ0CvL2Q_H4,544
+KolejkaObserver-0.1.202004200933.dist-info/DESCRIPTION.rst,sha256=sfi5juLuDbz8kK7MAlY-J5YAOId91eQ25liLJQDQjQ8,183
+KolejkaObserver-0.1.202004200933.dist-info/METADATA,sha256=aVMGG1Z2PgG6TRy4Y9QWslatBEjid2kqHcbqoeZ36U8,528
+KolejkaObserver-0.1.202004200933.dist-info/RECORD,,
+KolejkaObserver-0.1.202004200933.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+KolejkaObserver-0.1.202004200933.dist-info/entry_points.txt,sha256=IEATxhpU8JgapKHKzuJ2JbjshrKU7WY6vb3qqG1pDHI,113
+KolejkaObserver-0.1.202004200933.dist-info/metadata.json,sha256=WrWEJNbURHYkakGim_02zgrfi2mKpuZG2uCALNbgyzM,832
+KolejkaObserver-0.1.202004200933.dist-info/namespace_packages.txt,sha256=JRltIMS23djVkt75McrNZpEyfqHwicCBrIZYwdn_g98,8
+KolejkaObserver-0.1.202004200933.dist-info/top_level.txt,sha256=JRltIMS23djVkt75McrNZpEyfqHwicCBrIZYwdn_g98,8
+kolejka/observer/__init__.py,sha256=jFmSosivwHHovOKQhjviyzgXVmMn_vS_wDChitPMkSc,141
+kolejka/observer/client.py,sha256=B2d5uVvBvAvjgsYDky94k0mE8yqBU1H6Jl9m5WiqMTE,2540
+kolejka/observer/runner.py,sha256=KQm9CNRXOx79BXzK9wI8Ax_jvNb0CBMB0lrKaO_XMao,6129
+kolejka/observer/server.py,sha256=WPXhmY93O-z_iulmziUXR5LA2OcZCOnfIWWAZjcCqkc,22821
