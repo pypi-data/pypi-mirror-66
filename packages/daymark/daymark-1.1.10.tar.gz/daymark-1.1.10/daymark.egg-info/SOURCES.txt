@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+daymark/__init__.py
+daymark/daymark.py
+daymark.egg-info/PKG-INFO
+daymark.egg-info/SOURCES.txt
+daymark.egg-info/dependency_links.txt
+daymark.egg-info/requires.txt
+daymark.egg-info/top_level.txt
