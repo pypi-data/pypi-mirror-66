@@ -1,0 +1,12 @@
+phmdoctest/__init__.py,sha256=eB5tEg_BNHHsJgQexgmpZJr4c2VbfooQZMXAWuDHoIg,22
+phmdoctest/__main__.py,sha256=y5k91oeuf_QWbr8Dr598os3TzbAzftUHrXDuOW5R_FQ,232
+phmdoctest/main.py,sha256=Bi7TqGJ72ht2fn23UrtptrZQAwQyRDphJEHdImwIW_8,11948
+phmdoctest/print_capture.py,sha256=ybn4fmmMVmX77AD_HYCZIrX1yU1tFcwh4hkhlwxEC8E,2820
+phmdoctest/simulator.py,sha256=XKcop_xGEGKv6oXzv6nTjFoTHCTHgk1P2Fia-s9ESZw,6456
+phmdoctest/tool.py,sha256=AvPM9T9jGiYh4iFvO7gOHBnp5cn90tzREUbJjQ2eyo4,1285
+phmdoctest-0.0.5.dist-info/LICENSE.txt,sha256=ICdp36U9AXJE79enCs0_a4uvf8S23VduZRPuUim55wA,1055
+phmdoctest-0.0.5.dist-info/METADATA,sha256=rVimjNfrNlYH6TT7Og-ErZ0ymD4cwy6qgCQV54HlsWE,15090
+phmdoctest-0.0.5.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+phmdoctest-0.0.5.dist-info/entry_points.txt,sha256=n9x6z-frN8MwiuwCtXKwv1eDaxRfeBxnIhX2KwMFH6M,60
+phmdoctest-0.0.5.dist-info/top_level.txt,sha256=lEP0LFxI9DsVy5qI-nVPkZ4dRQOqvnFbKcZVhwCzaMY,11
+phmdoctest-0.0.5.dist-info/RECORD,,
