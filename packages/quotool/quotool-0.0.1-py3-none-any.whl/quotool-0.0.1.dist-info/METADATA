@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: quotool
+Version: 0.0.1
+Summary: quo tool
+Home-page: https://github.com/Olaful/
+Author: taner
+Author-email: taner@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# usage
+1. his_quo(symbol_code)
+2. last_quo(symbol_code)
+
