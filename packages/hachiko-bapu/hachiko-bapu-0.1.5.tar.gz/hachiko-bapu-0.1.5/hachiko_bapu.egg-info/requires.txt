@@ -1,0 +1,10 @@
+pygame>=1.8
+sf2utils>=0.9
+srt>=3.0
+mido>=1.2
+
+[funutils codegen]
+pyparsing>=2.4
+
+[synthesize buffer]
+numpy>=1.0
