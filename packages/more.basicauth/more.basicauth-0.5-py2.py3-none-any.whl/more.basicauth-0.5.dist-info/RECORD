@@ -1,0 +1,10 @@
+more.basicauth-0.5-py3.7-nspkg.pth,sha256=sFy3xzEvXCJJjGujIINXjAWeal7lqjM4oe2LDr513io,529
+more/basicauth/__init__.py,sha256=-eFVw9b33zc_-g-s0b-sg-hD8dF636k4VjQcwtZcwd8,58
+more/basicauth/main.py,sha256=9BoR9j10K73HmOPgpkYRTiP4nsjzZU_2u_InpWAeFUs,3100
+more/basicauth/tests/test_basicauth.py,sha256=oyrZ3iPVUnnAlf-lkQSAoc-hRZunbeFeSE4sVakLVVM,6735
+more.basicauth-0.5.dist-info/LICENSE.txt,sha256=9CO3BINGWfnrhlVZ3pM58glNdhtqx0mOnZgcIxDr2A0,1508
+more.basicauth-0.5.dist-info/METADATA,sha256=i7-gWF5wUuL4pw8QsfRNinXg3b0AyYP097QV4VbdI3o,6269
+more.basicauth-0.5.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+more.basicauth-0.5.dist-info/namespace_packages.txt,sha256=I5YJnGwIT6S5vqyfDVLPO-nPjUcEDvEniD1TK1eQzXQ,5
+more.basicauth-0.5.dist-info/top_level.txt,sha256=I5YJnGwIT6S5vqyfDVLPO-nPjUcEDvEniD1TK1eQzXQ,5
+more.basicauth-0.5.dist-info/RECORD,,
