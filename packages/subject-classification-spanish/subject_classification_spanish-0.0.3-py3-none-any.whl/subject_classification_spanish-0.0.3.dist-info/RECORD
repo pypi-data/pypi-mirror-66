@@ -1,0 +1,8 @@
+subject_classification_spanish/__init__.py,sha256=AVfEpIUICj-o_bCqUKZPg7ytU03zYKo5zqQgZ50aiaU,33
+subject_classification_spanish/subject_classifier.py,sha256=oO2pUaVOgAtJNuWqLBBY2TOZp-j8r7P0MMWY_pMub9k,6025
+subject_classification_spanish/test_subject_classifier.py,sha256=pBC_jQWpp8wWa0m9Xxp2_KiQuN2CRtfsoI6GsJgFQZ8,11663
+subject_classification_spanish-0.0.3.dist-info/LICENSE,sha256=31xH0ahKZSHY1ZqljjNstfGh_iQB0gDMA9S88jYHHIA,1083
+subject_classification_spanish-0.0.3.dist-info/METADATA,sha256=CMUeYQFZI1OS9Ld78cV8ixfcXF2LKYj4q8cRW3EX624,8518
+subject_classification_spanish-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+subject_classification_spanish-0.0.3.dist-info/top_level.txt,sha256=Ix2s1RCuZx6CPRBI9L03_GGbYMPtfRZcdUdNgmVA39A,31
+subject_classification_spanish-0.0.3.dist-info/RECORD,,
