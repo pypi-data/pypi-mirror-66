@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: ndd-test4p
+Version: 0.4.5
+Summary: Utilities for testing Python code
+Home-page: https://gitlab.com/ddidier/python-ndd-test4p/
+Author: David DIDIER
+Author-email: c_inconnu2@yahoo.fr
+License: mit
+Project-URL: Documentation, https://ddidier.gitlab.io/python-ndd-test4p/
+Description: ##########
+        NDD Test4P
+        ##########
+        
+        |pipeline| |coverage|
+        
+        .. |pipeline| image:: https://gitlab.com/ddidier/python-ndd-test4p/badges/master/pipeline.svg
+            :target: https://gitlab.com/ddidier/python-ndd-test4p/commits/master
+            :alt: Pipeline Status
+        
+        .. |coverage| image:: https://gitlab.com/ddidier/python-ndd-test4p/badges/master/coverage.svg
+            :target: https://gitlab.com/ddidier/python-ndd-test4p/commits/master
+            :alt: Coverage Report
+        
+        
+        Utilities for testing Python code.
+        
+        Documentation is available at https://ddidier.gitlab.io/python-ndd-test4p/.
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing
+Description-Content-Type: text/x-rst; charset=UTF-8
+Provides-Extra: testing
+Provides-Extra: documenting
+Provides-Extra: distributing
