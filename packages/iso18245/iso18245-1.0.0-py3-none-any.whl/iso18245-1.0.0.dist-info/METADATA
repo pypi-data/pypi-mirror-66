@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: iso18245
+Version: 1.0.0
+Summary: ISO 18245 Merchant Category Codes database
+License: MIT
+Author: Jerome Leclanche
+Author-email: jerome@leclan.ch
+Requires-Python: >=3.5,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
