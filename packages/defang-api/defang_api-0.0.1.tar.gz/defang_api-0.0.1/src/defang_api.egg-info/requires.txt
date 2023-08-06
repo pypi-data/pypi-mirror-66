@@ -1,0 +1,7 @@
+Flask
+flask-restx
+
+[testing]
+pytest
+pytest-cov
+coverage
