@@ -1,0 +1,5 @@
+include LICENSE
+include sudoku-solver
+include *.md
+include *.rst
+recursive-include puzzles *
