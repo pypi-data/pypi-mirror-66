@@ -1,0 +1,15 @@
+pyparsing
+jinja2
+spacy
+cwlgen
+dataclasses
+miniwdl
+wordsegment
+inflection
+illusional.wdlgen~=0.2
+ruamel.yaml>=0.16.5
+pyhash
+
+[dev]
+pytest
+pre-commit
