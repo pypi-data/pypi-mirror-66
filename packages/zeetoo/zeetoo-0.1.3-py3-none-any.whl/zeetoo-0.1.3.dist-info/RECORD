@@ -1,0 +1,15 @@
+zeetoo/__init__.py,sha256=GxKHEPG7HP7IxWnJTbL5-DFVoA8SuSPPocUoVxC5w6Y,60
+zeetoo/__main__.py,sha256=hD-hBIN2XpAzGVXZ3Lh0ifHfZ7VX4qPKPDOY8Rc7uCs,1219
+zeetoo/backuper.py,sha256=p0pzxT-ypUPRM-uvBD0tiMEgCbYcyMPNSBJ7Ev911kc,13427
+zeetoo/backuper_gui.py,sha256=l2tjzz-boBVpJT8xQKMr5kA60ysWoFFI8yyKPJ5kNSU,11915
+zeetoo/confsearch.py,sha256=XzSpDAZIR29A306IN7zCvngb56KRYcZPNOV54d9iEqs,13879
+zeetoo/fixgvmol.py,sha256=_4gxAVWAHPmyxehSwZad4egQfOqFi6b52RCa9bdvixI,2738
+zeetoo/getcdx.py,sha256=6Wz1l6RyK5nY4_L1H7YaCV8jLLbyWZjhWcuKrtQ1aPo,4380
+zeetoo/gofproc.py,sha256=uKGCviNLeJx7E5xdfMoeTUqL0Bv-OpS0X7n12tceobc,6240
+zeetoo/gui.py,sha256=GtXSZtQTKNNPQjd7BVh5WYOoTDoZA6nWjbZymnrNL28,1353
+zeetoo/sdf_to_gjf.py,sha256=UMcxeU5i_Y6FkUssH0qCOcxqXsOb6r-lKqVF25yar9U,6339
+zeetoo-0.1.3.dist-info/METADATA,sha256=RtJnmhpv9GUT3ZWD_9KLFqua3XUfNNjLrFm62kWzFMM,9621
+zeetoo-0.1.3.dist-info/RECORD,,
+zeetoo-0.1.3.dist-info/WHEEL,sha256=cScVKDQXc_cp1jHmxFDq9fIOIg17a2BsmfS6J39H6Eo,97
+zeetoo-0.1.3.dist-info/entry_points.txt,sha256=yuxYQy7wjW3Q9XrRhxo6IZ9ItonTO4yGG-_mfX9uYZg,49
+zeetoo-0.1.3.dist-info/top_level.txt,sha256=1UG-KkX9EPCGR9XJWscOWZ5cRJwQhFAGszJ8RZvUA3U,7
