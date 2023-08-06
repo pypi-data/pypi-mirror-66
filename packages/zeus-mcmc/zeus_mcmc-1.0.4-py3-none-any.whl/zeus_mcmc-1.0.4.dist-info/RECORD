@@ -1,0 +1,10 @@
+zeus/__init__.py,sha256=C9GS8qXQlH0d_dCGoAAPUDOzn1agwzq4KABRPNOUmA0,260
+zeus/autocorr.py,sha256=DkOJ0dcpwYhXwOpKLvSpLZEvw3gT6d-Y0FZrRhs5E48,2108
+zeus/fwrapper.py,sha256=mWuoYp8E1zT5Sd6oN2xvJcch1Se7rUV9vFrJ6XThhjM,672
+zeus/samples.py,sha256=2-iTJk1unXsBAA1unhWkA0IQaf6p95AUvZp-UFBycAY,2979
+zeus/zeus.py,sha256=s4u3qFNeQttcgkBaBMojhOYsVssdU9AwAasgj2FMaN4,18794
+zeus_mcmc-1.0.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+zeus_mcmc-1.0.4.dist-info/METADATA,sha256=PpGqo3kxt2h8TpavOADSgMF4cVzRoS8rXPMgMDugyTo,2887
+zeus_mcmc-1.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+zeus_mcmc-1.0.4.dist-info/top_level.txt,sha256=arZiCD4dXxESKuflN27VrItzzfChu1dmORuULmrd0vg,5
+zeus_mcmc-1.0.4.dist-info/RECORD,,
