@@ -1,0 +1,11 @@
+setup.py
+distributions_mwi/Binomialdistribution.py
+distributions_mwi/Gaussiandistribution.py
+distributions_mwi/Generaldistribution.py
+distributions_mwi/__init__.py
+distributions_mwi.egg-info/PKG-INFO
+distributions_mwi.egg-info/SOURCES.txt
+distributions_mwi.egg-info/dependency_links.txt
+distributions_mwi.egg-info/not-zip-safe
+distributions_mwi.egg-info/requires.txt
+distributions_mwi.egg-info/top_level.txt
