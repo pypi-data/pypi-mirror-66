@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: algovis
+Version: 0.1.0
+Summary: 
+Author: hotshot07
+Author-email: aroram@tcd.ie
+Requires-Python: >=2.7,<3.0
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
