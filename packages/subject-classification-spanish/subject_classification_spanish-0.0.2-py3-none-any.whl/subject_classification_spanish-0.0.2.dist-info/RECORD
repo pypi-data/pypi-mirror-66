@@ -1,0 +1,14 @@
+subject-classification-spanish/__init__.py,sha256=AVfEpIUICj-o_bCqUKZPg7ytU03zYKo5zqQgZ50aiaU,33
+subject-classification-spanish/subject_classifier.py,sha256=oO2pUaVOgAtJNuWqLBBY2TOZp-j8r7P0MMWY_pMub9k,6025
+subject-classification-spanish/test_subject_classifier.py,sha256=pBC_jQWpp8wWa0m9Xxp2_KiQuN2CRtfsoI6GsJgFQZ8,11663
+subject-classification-spanish/__pycache__/cleaner.cpython-37.pyc,sha256=Sm7p4Hd2l5Qz33tzxaAaOINL3-LTlVpMEiu5thviBtM,4562
+subject-classification-spanish/__pycache__/sentiment_analysis.cpython-37.pyc,sha256=I3LSQOm79_gy7mVmSVTOOGTLFipklbw5Tp5ZKND_miI,5581
+subject-classification-spanish/saved_model/model.h5,sha256=d3Ki80CM0eGgwrorbtryLvzWFDPWrTNv4ZmEQOn4c_A,27339604
+subject-classification-spanish/saved_model/model.json,sha256=e7p0OFYzQH2GmJiSmtAd8p23btQDfn8BmvrBvROYS1U,2551
+subject-classification-spanish/saved_model/multilabel_binarizer.pickle,sha256=nwpCn8EDzp1v-5L22kWUenzVsVhkLNWFVIk1SFl8pAw,34101
+subject-classification-spanish/saved_model/tokenizer.pickle,sha256=HsZYmBoJBpNi2fNLqLbIdozXhZsQY1jPMCe5KVdawms,13366199
+subject_classification_spanish-0.0.2.dist-info/LICENSE,sha256=31xH0ahKZSHY1ZqljjNstfGh_iQB0gDMA9S88jYHHIA,1083
+subject_classification_spanish-0.0.2.dist-info/METADATA,sha256=UIWYGLEhsOsNv1JcjKsJHEH1imaoRpOaKAPrQRBjt5o,8485
+subject_classification_spanish-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+subject_classification_spanish-0.0.2.dist-info/top_level.txt,sha256=Fe2vPP4uOL8B-A48oqGUyO8nAWWo7ZR-M-sZIRjVg-Q,31
+subject_classification_spanish-0.0.2.dist-info/RECORD,,
