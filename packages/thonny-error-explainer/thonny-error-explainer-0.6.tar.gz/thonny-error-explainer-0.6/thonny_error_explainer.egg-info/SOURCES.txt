@@ -1,0 +1,11 @@
+LICENCE.txt
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+thonny_error_explainer.egg-info/PKG-INFO
+thonny_error_explainer.egg-info/SOURCES.txt
+thonny_error_explainer.egg-info/dependency_links.txt
+thonny_error_explainer.egg-info/requires.txt
+thonny_error_explainer.egg-info/top_level.txt
+thonnycontrib/error-explainer/__init__.py
