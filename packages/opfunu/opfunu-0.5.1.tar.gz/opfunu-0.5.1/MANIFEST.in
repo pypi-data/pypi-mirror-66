@@ -1,0 +1,2 @@
+include README.md LICENSE
+include opfunu/cec/cec2005/support_data/*.txt
