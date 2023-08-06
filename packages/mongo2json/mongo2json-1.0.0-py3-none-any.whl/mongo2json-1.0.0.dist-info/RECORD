@@ -1,0 +1,8 @@
+mongo2json/__init__.py,sha256=oL2QBKeIEzN7r00fcouzfVRCFZHuzhILP6ti6FKeVbg,30
+mongo2json/cleaner.py,sha256=WWyL5ehHVxY5NMtTmlpdZmArDC0Fr7X7ZU_OKZoslLw,726
+mongo2json/mongo2json.py,sha256=2NN4pvPwJuRyGd3edG98Z4Twv-bubDMdnOnmHpgY9Mw,206
+mongo2json-1.0.0.dist-info/LICENSE,sha256=vvDGm3RDMOHTtNSbGIjecT3dlCxPXTLdizhRhnA8iLA,1066
+mongo2json-1.0.0.dist-info/METADATA,sha256=-ja4-ZiVfBXrh888ExhlhseWvKlZ-64HyF7PM7I3sZw,968
+mongo2json-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+mongo2json-1.0.0.dist-info/top_level.txt,sha256=GJTsOVGv_hglcI5n4a0XzrgBKHhxpbdrsZtU_hSBYjg,11
+mongo2json-1.0.0.dist-info/RECORD,,
