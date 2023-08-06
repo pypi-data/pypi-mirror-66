@@ -1,0 +1,10 @@
+zensols/bibstract/__init__.py,sha256=T1Nx_J49iCSE0FxSTwTU5eClI0euEl9ic2sAHn0J-dI,117
+zensols/bibstract/cli.py,sha256=XcexFGg4cw1lOdzrIgyt8uQqb1sYAFYSXyNEPEiSrY0,3320
+zensols/bibstract/config.py,sha256=c7zCYt6ep4Kp99_MH1KD8kQhWMTRIaXFxNtfoQXN224,452
+zensols/bibstract/extractor.py,sha256=ZiVzpp1vCr_Pdb9mkSG8qPqj8_n2da1WQHOUS43unS0,4496
+zensols.bibstract-0.0.3.dist-info/LICENSE.txt,sha256=lC1T6Z4zE3rzjWluq7QWYsUhC8ERHATaP9GguSGzWBA,1068
+zensols.bibstract-0.0.3.dist-info/METADATA,sha256=-1kTG6pxpB7teU3fHgv1b4e_a3uyqQmr3Iqh5OHPgko,4119
+zensols.bibstract-0.0.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+zensols.bibstract-0.0.3.dist-info/entry_points.txt,sha256=wbopC8DQD8MgkL_7-oPinMibM042e_w-g7MzXBQtGx0,54
+zensols.bibstract-0.0.3.dist-info/top_level.txt,sha256=-kn7KABYq0hfAgpIq7-lm_1ZkLHuE0p69p7rOWGwIjA,18
+zensols.bibstract-0.0.3.dist-info/RECORD,,
