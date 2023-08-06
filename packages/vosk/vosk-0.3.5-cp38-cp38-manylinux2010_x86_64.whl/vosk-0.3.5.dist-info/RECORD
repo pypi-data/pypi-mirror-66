@@ -1,0 +1,10 @@
+vosk/vosk.py,sha256=ZLxfmNiHRF4BNhhk95f4kpsYJIbF-erOViDUtaTvO-8,3554
+vosk/_vosk.so,sha256=ooQP2FY0-GiP8aQM8C5EHAbhQzkbKzGwXhdQpJPE05I,10896096
+vosk/__init__.py,sha256=glm8qzJMe1j9NsZVSkgC0dCWS2NqFdxJNSU9PIYjHKk,51
+vosk/.libs/libquadmath-2d0c479f.so.0.0.0,sha256=g8d1Q6wb-l1PyXLgA_cZKE8hd8k7QIMcW25wR3TDsGE,263992
+vosk/.libs/libgfortran-2e0d59d6.so.5.0.0,sha256=OQtYDdlUZVbi5DHUQw1I05DophqJIWmYARfRsln_A5M,2260064
+vosk/.libs/libz-eb09ad1d.so.1.2.3,sha256=2uJu8RIWphORVNS2noiABa4wo041-h11BGDImiYQFvI,92080
+vosk-0.3.5.dist-info/RECORD,,
+vosk-0.3.5.dist-info/WHEEL,sha256=bMGJzfnzmODnc7070hP_ZkCsY-cmPTWm8nY09-AXKjI,111
+vosk-0.3.5.dist-info/top_level.txt,sha256=TiQzr4VbXnI5toUuTIGzEWHn1YHoijm978n1HnDGqJo,11
+vosk-0.3.5.dist-info/METADATA,sha256=OLYn_AnVqd09_ftRmejwdW79RJM8zxffNgSBZLl2U6U,706
