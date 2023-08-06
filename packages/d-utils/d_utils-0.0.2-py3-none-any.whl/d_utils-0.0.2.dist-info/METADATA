@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: d-utils
+Version: 0.0.2
+Summary: Utilities for Web Scraping
+Home-page: UNKNOWN
+Author: Johannes Velde
+Author-email: johannes.velde@gmx.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: selenium
+Requires-Dist: pyvirtualdisplay
+Provides-Extra: dev
+Requires-Dist: pytest (>=3.7) ; extra == 'dev'
+
+# WebScraping Utils
+
+###Supporting Methods:
+platform
+switchBrowser
+
+### Prerequisites
+
+install requirements
+```
+$ pip3 install wd-utils
+```
+
+
+
