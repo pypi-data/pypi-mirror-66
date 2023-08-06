@@ -1,0 +1,11 @@
+README.md
+setup.py
+cpacman/__init__.py
+cpacman/__main__.py
+cpacman/package.py
+cpacman/packagemanager.py
+cpacman.egg-info/PKG-INFO
+cpacman.egg-info/SOURCES.txt
+cpacman.egg-info/dependency_links.txt
+cpacman.egg-info/requires.txt
+cpacman.egg-info/top_level.txt
