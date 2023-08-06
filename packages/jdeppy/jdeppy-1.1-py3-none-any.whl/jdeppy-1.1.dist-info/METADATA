@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: jdeppy
+Version: 1.1
+Summary: Python wrapper for J.DepP
+Home-page: https://github.com/matsurihime/jdeppy
+Author: matsurihime
+Author-email: pipikapur@gmail.com
+License: MIT
+Keywords: jdepp
+Platform: UNKNOWN
+Classifier: Natural Language :: Japanese
+
+UNKNOWN
+
+
