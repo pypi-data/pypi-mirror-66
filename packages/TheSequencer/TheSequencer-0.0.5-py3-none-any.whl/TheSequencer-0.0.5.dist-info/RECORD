@@ -1,0 +1,9 @@
+sequencer/__init__.py,sha256=VHmRzZbuToOIndT7syJhYpg1jigayWkupijkQfV7nSs,66
+sequencer/distance_metrics.py,sha256=0r5bgvpJ9JFPM7mj9bSLORS-U49IYyIk2AheKtYlVE8,13614
+sequencer/elongation_estimation.py,sha256=W0D2UqPH63_CN1rT4T5pKHks2YqcVuudPyrc9IPa_Ek,4196
+sequencer/sequencer_.py,sha256=UhPPET6X1rLFONsvI6bC-IoTinh82MWBuihR9QbZDL0,72399
+TheSequencer-0.0.5.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+TheSequencer-0.0.5.dist-info/METADATA,sha256=igSlCltVG1Y_nMFGr49mF18vhuZfJ614D58L1h9dyZc,15443
+TheSequencer-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+TheSequencer-0.0.5.dist-info/top_level.txt,sha256=7VIwMg-gf-QVXar1y9bjTcFdmDcl7fHdkTb3q4GQFig,10
+TheSequencer-0.0.5.dist-info/RECORD,,
