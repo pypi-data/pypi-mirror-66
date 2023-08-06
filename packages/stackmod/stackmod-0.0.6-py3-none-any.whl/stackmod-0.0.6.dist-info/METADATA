@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: stackmod
+Version: 0.0.6
+Summary: Stacking for machine learning
+Home-page: https://github.com/Midriaz/stackmod
+Author: Midriaz
+Author-email: scome@inbox.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# stackmod
+Stacking for machine learning.
+
+Supports scoring of base models. 
+
+Regression: MSE, RMSE, MAE or R2
+
+Classification: F1_MICRO, PRECISION_MICRO, RECALL_MICRO, ACCURACY
+
+## Requirements
+* Sklearn
+* Numpy
+* Pandas
+
+## Installation 
+`pip install stackmod`
+
