@@ -1,0 +1,14 @@
+accbpg/D_opt_alg.py,sha256=adcaySSMbCOony3IRuMNl61hGRpjZHe4drQYrmUsDok,6328
+accbpg/__init__.py,sha256=KS4Vpd23XtskYAh_QkM1YbBANJdezyn2q7IAmh1j9sY,439
+accbpg/algorithms.py,sha256=mPBj16IPz7aB7HSbtHkTqvmaCLmYBbFoEfKsEwTURq8,19185
+accbpg/applications.py,sha256=lX0nDpt4f9UDLHeY94wUrp5bvjTaIcfHIjN3kmR1QjU,6203
+accbpg/ex_LR_L2L1Linf.py,sha256=ngNbfE2YlwvkBwq4r4kWO8FtCtl8RJikzavW5Rg0CdE,2106
+accbpg/functions.py,sha256=_eVn2EyUXoFi2p8s1wgafnupWyZe1HdjgidR-NMMW6g,17410
+accbpg/plotfigs.py,sha256=AP-T5DMRzvjdmezBFQR_9vVXPLmtI0NsdZENtQJVCyg,1499
+accbpg/trianglescaling.py,sha256=7n-09-qwHvJ1VTFWwYchioUD05yWxMUdO20OxRD3l-M,2550
+accbpg/utils.py,sha256=OYwOtHfBO32Wa82aevR1IUYtNQoUQVoQmensmJrOpVE,4243
+accbpg-0.2.dist-info/LICENSE,sha256=J-vanVHwpWt-KBzNgjCicjbctRwF9ksHhp7PbpZdaLA,1162
+accbpg-0.2.dist-info/METADATA,sha256=aCXYwFkU7lqDq9x4oxWOwYTWb7kjEY2yHqAQxyC6aco,2646
+accbpg-0.2.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+accbpg-0.2.dist-info/top_level.txt,sha256=75qE3WJRY33dgR2NXLV0LxKmvokws3pe_x71f93qjNA,7
+accbpg-0.2.dist-info/RECORD,,
