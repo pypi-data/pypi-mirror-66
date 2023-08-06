@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: twilioSMS
+Version: 1.1b1
+Summary: a fun texting app
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: IMPORTANT: PRE_RELEASE FOR v1.1
+        
+        What's new in v1.0:
+        
+        1. BUILT IN TWILIO!!!!
+        
+        2. Runs HYPERfast!!!!
+        
+        Instructions:
+        
+        go to https://www.twilio.com and sign up, follow instructions, then get account sid, auth token, and twilio number and import them into run.py (the file where the code runs)
+        
+        credit goes to CleverProgrammer for creating the base code for this program, and to twilio Inc for providing me with the database
+        
+        code (file MUST be called run.py)
+            
+            import twilioSMS
+        
+        
+            # get these credentials by signing up for a twilio account at https://www.twilio.com
+            account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"  # insert your account SID here
+            auth_token = "your_auth_token"  # insert your authenication token here
+            my_cell = "cell number here"  # insert your phone number starting with +1
+            my_twilio = "twilio number here"  # insert your twilio number starting with +1
+        
+        
+            if __name__ == "__main__":
+                twilioSMS
+        
+        or, in the terminal(BETA TESTING), type:
+        
+            python sms.py
+        
+        you whil have to type in everything in manually, though.
+Keywords: twilioSMS,twilio
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
