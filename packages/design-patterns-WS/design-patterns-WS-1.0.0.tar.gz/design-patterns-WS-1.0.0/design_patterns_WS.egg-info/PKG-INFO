@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: design-patterns-WS
+Version: 1.0.0
+Summary: A small python module containing decorators for implementing design patterns
+Home-page: https://github.com/wassafshahzad/DesignPatterns.git
+Author: Wassaf Shahzad
+Author-email: wassafshahzad@gmail.com
+License: UNKNOWN
+Description: # Introduction:
+        This is a small python module to design a singleton class python (will add more later on).I have been using python for 2 years and fell in love with it and I would really love to give something (even as small as this module) to the community. If you like it give it a start,hate it tell me why I will try to fix it and you could help too.
+        
+        ## Design Patterns Supported
+        > Singleton
+        
+        # Example
+        
+        ```python
+        
+        from design_patterns import singleton
+        @singleton
+        class HelloWorld:
+            def __init__(self):
+                self.name = "one instance"
+        
+        
+        h = HelloWorld()
+        r = HelloWorld()
+        
+        if __name__ == "__main__":
+            print(r == h)
+          
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.3
+Description-Content-Type: text/markdown

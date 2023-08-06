@@ -1,0 +1,7 @@
+README.md
+setup.py
+design_patterns/__init__.py
+design_patterns_WS.egg-info/PKG-INFO
+design_patterns_WS.egg-info/SOURCES.txt
+design_patterns_WS.egg-info/dependency_links.txt
+design_patterns_WS.egg-info/top_level.txt
