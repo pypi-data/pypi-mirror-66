@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: custom-django-auth-backend
+Version: 0.1.1
+Summary: Easy add some auth backends in django project
+Home-page: https://github.com/Chiorufarewerin/custom-django-auth-backend
+Author: Artur Beltsov
+Author-email: artur1998g@gmail.com
+License: MIT
+Project-URL: GitHub, https://github.com/Chiorufarewerin/custom-django-auth-backend
+Description: # custom-django-auth-backend
+        
+        ## What is it?
+          Easy add some auth backends in django project
+        
+        ## Installation
+          * `pip install custom-django-auth-backend`
+        
+Platform: UNKNOWN
