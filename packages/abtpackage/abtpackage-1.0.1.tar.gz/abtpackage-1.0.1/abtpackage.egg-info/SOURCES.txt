@@ -1,0 +1,7 @@
+README.txt
+setup.py
+abtpackage/__init__.py
+abtpackage.egg-info/PKG-INFO
+abtpackage.egg-info/SOURCES.txt
+abtpackage.egg-info/dependency_links.txt
+abtpackage.egg-info/top_level.txt

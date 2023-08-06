@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: abtpackage
+Version: 1.0.1
+Summary: abtpackage Public Interface
+Home-page: UNKNOWN
+Author: Ashta Bhuja Tripathi
+Author-email: tripathiab13@gmail.com
+License: UNKNOWN
+Description: 
+        This is a simple example package. You can use
+        [Github-flavored Markdown](https://github.com/codeArrow/packaging)
+        to write your content.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
