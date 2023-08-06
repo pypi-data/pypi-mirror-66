@@ -1,0 +1,30 @@
+language: python
+
+python:
+    - "3.6"
+    - "3.7"
+    - "3.8"
+    - 'pypy3'
+
+branches:
+  only:
+    - master
+    - test
+
+install:
+  - pip install .
+  - pip install -r dev_requirements.txt
+  - pip install python-coveralls
+
+script:
+  - doit --continue
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.8' ]]; then doit coverage; fi
+
+after_success:
+  - if [[ $TRAVIS_PYTHON_VERSION == '3.8' ]]; then coveralls; fi
+
+
+notifications:
+    email:
+        on_success: change
+        on_failure: change

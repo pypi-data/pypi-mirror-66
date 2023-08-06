@@ -1,0 +1,15 @@
+.gitignore
+.travis.yml
+CHANGES
+LICENSE
+README.rst
+configclass.py
+dev_requirements.txt
+dodo.py
+setup.py
+test_configclass.py
+configclass.egg-info/PKG-INFO
+configclass.egg-info/SOURCES.txt
+configclass.egg-info/dependency_links.txt
+configclass.egg-info/requires.txt
+configclass.egg-info/top_level.txt
