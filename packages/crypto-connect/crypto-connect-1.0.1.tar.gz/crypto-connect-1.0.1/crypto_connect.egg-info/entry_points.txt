@@ -1,0 +1,3 @@
+[console_scripts]
+crypto-connect = crypto_connect.__main__:cli
+
