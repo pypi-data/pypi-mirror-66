@@ -1,0 +1,6 @@
+web3<6.0,>=4.7.1
+click>=7.0
+trustlines-contracts-bin<2.0.0,>=1.1.1
+contract-deploy-tools>=0.6.1
+attrs>=18.2
+pendulum>=2.0.0
