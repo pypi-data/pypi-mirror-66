@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: flatnest
+Version: 1.0.2
+Summary: Algorithms for traversing/flattening/constructing nested list structures
+Home-page: https://github.com/mmiguel6288code/ptkcmd
+Author: Matthew Miguel
+Author-email: mmiguel6288code@gmail.com
+Maintainer: Matthew Miguel
+Maintainer-email: mmiguel6288code@gmail.com
+License: MIT
+Keywords: lists,list,depth first search,dfs,bfs,breadth first search,flatten,flat,pattern
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
+
+# flatnest
+
+[View API documentation](http://htmlpreview.github.io/?https://github.com/mmiguel6288code/flatnest/blob/master/docs/flatnest/index.html)
+
+Provides generators to traverse nested list structures either depth-first or breadth-first.
+
+Can extract structural information from a nested list structure into a string structure pattern which can then be used in conjunction with the flattened list to reconstruct the original nested list structure.
+
+Provides conversion between a flat index and its corresponding sequence of nested indices (and vice versa).
+
+
