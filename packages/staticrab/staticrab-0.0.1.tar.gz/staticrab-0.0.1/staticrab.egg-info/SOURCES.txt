@@ -1,0 +1,9 @@
+README.md
+setup.py
+staticrab/__init__.py
+staticrab/correlation.py
+staticrab.egg-info/PKG-INFO
+staticrab.egg-info/SOURCES.txt
+staticrab.egg-info/dependency_links.txt
+staticrab.egg-info/requires.txt
+staticrab.egg-info/top_level.txt
