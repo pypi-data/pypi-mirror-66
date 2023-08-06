@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: logger-json
+Version: 0.0.1
+Summary: Tool to display logs in JSON format
+Home-page: UNKNOWN
+Author: Gizem Kacmaz
+Author-email: gizemkmz@gmail.com
+License: MIT
+Description: #logger_adacore package
+Keywords: Json,Logger
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
