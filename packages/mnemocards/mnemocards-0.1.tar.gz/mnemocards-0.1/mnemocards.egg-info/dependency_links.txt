@@ -1,0 +1,1 @@
+git+git://github.com/guiferviz/genanki@feature-deck-conf
