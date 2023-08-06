@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: lektor-treeify
+Version: 1.1
+Summary: Plugin generate tree data structure from your flat menu model
+Home-page: UNKNOWN
+Author: Michael Vartanyan
+Author-email: mv@spherical.pm
+License: MIT
+Keywords: Lektor plugin tree menu
+Platform: UNKNOWN
+Classifier: Framework :: Lektor
+Classifier: Environment :: Plugins
+Description-Content-Type: text/markdown
+Requires-Dist: more-itertools
+Requires-Dist: simplejson
+Provides-Extra: dev
+Requires-Dist: spherical-dev[dev] (>0.0.2) ; extra == 'dev'
+
+# Treeify
+
+This plugin generate tree data structure from your flat menu model
+
+
