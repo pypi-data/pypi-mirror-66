@@ -1,0 +1,4 @@
+[console_scripts]
+mkv-this = mkv_this.mkv_this:main
+mkv-this-dir = mkv_this.mkv_this_dir:main
+
