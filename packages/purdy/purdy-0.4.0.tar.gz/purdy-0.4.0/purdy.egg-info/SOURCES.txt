@@ -1,0 +1,15 @@
+README.rst
+purdy
+setup.py
+purdy/__init__.py
+purdy/actions.py
+purdy/content.py
+purdy/purdy
+purdy/settings.py
+purdy/ui.py
+purdy/widgets.py
+purdy.egg-info/PKG-INFO
+purdy.egg-info/SOURCES.txt
+purdy.egg-info/dependency_links.txt
+purdy.egg-info/requires.txt
+purdy.egg-info/top_level.txt
