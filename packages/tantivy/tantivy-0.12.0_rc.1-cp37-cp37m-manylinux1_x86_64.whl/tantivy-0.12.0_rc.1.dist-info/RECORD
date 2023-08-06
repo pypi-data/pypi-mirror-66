@@ -1,0 +1,5 @@
+tantivy-0.12.0_rc.1.dist-info/METADATA,sha256=EZEonKoxDCtUCUobQMdpFq1AHZtlzELrdLAjBmoOIxk,247
+tantivy-0.12.0_rc.1.dist-info/WHEEL,sha256=1V9RpEHNQP5pwG2xPCXm1FqTsB3GeUb7NDlz1B2oFYw,103
+tantivy/__init__.py,sha256=GfDOmfV4aCKZax33fRucxnsifA1bnZA87rX-szQYVx4,23
+tantivy/tantivy.cpython-37m-x86_64-linux-gnu.so,sha256=ICg3aC096mFq_wbZlLBF_YpGF_sK6TaCrZU-kRBCW3Y,4365152
+tantivy-0.12.0_rc.1.dist-info/RECORD,,

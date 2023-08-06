@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: tantivy
+Version: 0.12.0-rc.1
+Project-Url: https://github.com/tantivy-search/tantivy-py
+Author: Damir Jelić <poljar@termina.org.uk>
+Author-Email: Damir Jelić <poljar@termina.org.uk>
+License: MIT
+Requires-Python: >=3.7
