@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: LSHlink-ffghcv
+Version: 0.1
+Summary: Base on Fast agglomerative hierarchical clustering algorithm using Locality-Sensitive Hashing,  we develop algorithm in Python.
+Home-page: https://github.com/ffghcv/663final_project
+Author: Boyang Pan & Nancun Li
+Author-email: nancun.li@duke.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: sklearn
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: numba (<=0.49.0)
+
+# 663final_project
+Base on Fast agglomerative hierarchical clustering algorithm using Locality-Sensitive Hashing,  we develop algorithm in Python.
+
+
