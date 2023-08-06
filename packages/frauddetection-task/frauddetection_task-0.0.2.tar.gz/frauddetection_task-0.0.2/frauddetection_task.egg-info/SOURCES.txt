@@ -1,0 +1,14 @@
+MANIFEST.in
+README.txt
+setup.py
+frauddetection/__init__.py
+frauddetection/build_model.py
+frauddetection/data.csv
+frauddetection/data.ods
+frauddetection/model_logistic.pkl
+frauddetection/use_model.py
+frauddetection_task.egg-info/PKG-INFO
+frauddetection_task.egg-info/SOURCES.txt
+frauddetection_task.egg-info/dependency_links.txt
+frauddetection_task.egg-info/requires.txt
+frauddetection_task.egg-info/top_level.txt
