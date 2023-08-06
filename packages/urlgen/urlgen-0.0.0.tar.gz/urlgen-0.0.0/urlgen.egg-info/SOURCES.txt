@@ -1,0 +1,9 @@
+README.md
+setup.py
+urlgen/__init__.py
+urlgen.egg-info/PKG-INFO
+urlgen.egg-info/SOURCES.txt
+urlgen.egg-info/dependency_links.txt
+urlgen.egg-info/entry_points.txt
+urlgen.egg-info/requires.txt
+urlgen.egg-info/top_level.txt

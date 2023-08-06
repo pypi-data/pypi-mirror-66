@@ -1,0 +1,3 @@
+[console_scripts]
+urlgen = urlgen.__init__:wrapper
+
