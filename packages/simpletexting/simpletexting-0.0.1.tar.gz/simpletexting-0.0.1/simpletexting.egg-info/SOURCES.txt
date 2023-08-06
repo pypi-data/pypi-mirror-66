@@ -1,0 +1,8 @@
+README.md
+setup.py
+simpletexting/__init__.py
+simpletexting.egg-info/PKG-INFO
+simpletexting.egg-info/SOURCES.txt
+simpletexting.egg-info/dependency_links.txt
+simpletexting.egg-info/requires.txt
+simpletexting.egg-info/top_level.txt
