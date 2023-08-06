@@ -1,0 +1,6 @@
+README.md
+setup.py
+fjctestpack.egg-info/PKG-INFO
+fjctestpack.egg-info/SOURCES.txt
+fjctestpack.egg-info/dependency_links.txt
+fjctestpack.egg-info/top_level.txt
