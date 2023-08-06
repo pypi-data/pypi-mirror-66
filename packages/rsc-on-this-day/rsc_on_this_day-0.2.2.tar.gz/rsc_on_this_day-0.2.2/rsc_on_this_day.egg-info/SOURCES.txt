@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+__pkginfo__.py
+rsc_on_this_day.py
+setup.py
+rsc_on_this_day.egg-info/PKG-INFO
+rsc_on_this_day.egg-info/SOURCES.txt
+rsc_on_this_day.egg-info/dependency_links.txt
+rsc_on_this_day.egg-info/entry_points.txt
+rsc_on_this_day.egg-info/requires.txt
+rsc_on_this_day.egg-info/top_level.txt

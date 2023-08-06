@@ -1,0 +1,3 @@
+include __pkginfo__.py
+include LICENSE
+rsc_on_this_day.1
