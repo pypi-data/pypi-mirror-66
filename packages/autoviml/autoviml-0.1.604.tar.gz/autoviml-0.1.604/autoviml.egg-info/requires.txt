@@ -1,0 +1,10 @@
+ipython
+jupyter
+xgboost
+pandas
+matplotlib
+seaborn
+scikit-learn
+catboost
+textblob
+vaderSentiment
