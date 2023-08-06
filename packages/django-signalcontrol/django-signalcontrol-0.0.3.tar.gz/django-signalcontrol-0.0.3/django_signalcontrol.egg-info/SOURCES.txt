@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+django_signalcontrol.egg-info/PKG-INFO
+django_signalcontrol.egg-info/SOURCES.txt
+django_signalcontrol.egg-info/dependency_links.txt
+django_signalcontrol.egg-info/requires.txt
+django_signalcontrol.egg-info/top_level.txt
+signalcontrol/__init__.py
+signalcontrol/admin.py
+signalcontrol/apps.py
+signalcontrol/decorators.py
+signalcontrol/models.py
+signalcontrol/migrations/0001_initial.py
+signalcontrol/migrations/__init__.py
