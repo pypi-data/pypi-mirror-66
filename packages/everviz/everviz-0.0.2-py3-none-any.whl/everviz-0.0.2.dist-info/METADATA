@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: everviz
+Version: 0.0.2
+Summary: Visualization for Everest
+Home-page: https://github.com/equinor/everviz
+Author: Software Innovation Bergen, Equinor ASA
+Author-email: UNKNOWN
+License: AGPL-3.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pyyaml
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: dash
+Requires-Dist: webviz-config
+Requires-Dist: plotly
+Requires-Dist: flask
+
+UNKNOWN
+
+
