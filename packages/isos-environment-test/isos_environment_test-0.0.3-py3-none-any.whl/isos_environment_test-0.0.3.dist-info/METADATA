@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: isos-environment-test
+Version: 0.0.3
+Summary: Test your cloud automation environment for Isos Technology.
+Home-page: https://git.isostech.com/scm/act/python3-cloud-automation-env-test.git
+Author: Sky Moore
+Author-email: sky.moore@isostech.com
+License: UNKNOWN
+Keywords: Isos Technology,Isos,Atlassian,Atlassian Cloud
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.22.0)
+Requires-Dist: atlassian-python-api (>=1.15.6)
+Requires-Dist: console-menu (>=0.6.0)
+
+# Isos Technology Python Atlassian Cloud Automation Environment Test
+
+## Requirements
+- Python >= 3.7.7
+- atlassian-python-api >= 1.15.6
+- requests >= 2.22.0
+- console-menu >= 0.6.0
+
+## To install / test environment
+1. Ensure you have python 3 version 3.7.7 or greater installed.
+2. Ensure you have pip installed.
+3. Generate an Atlassian API Token following these [directions](https://confluence.atlassian.com/cloud/api-tokens-938839638.html).
+4. Run the following commands in Terminal or Powershell and follow the prompts:
+
+   ```
+   # You might have to run as Administrator or sudo depending on your setup.
+
+   pip3 install isos-environment-test
+   python3 -m isos-env-test
+   ```
+
+## To install / test with virtualenv
+1. Ensure you have python 3 version 3.7.7 or greater installed
+2. Ensure you have pip installed.
+3. Generate an Atlassian API Token following these [directions](https://confluence.atlassian.com/cloud/api-tokens-938839638.html)
+4. Install virtualenv:  
+`pip3 install virtualenv`
+4. Create and source a virtualenv:  
+   ```
+   virtualenv env
+   source env/bin/activate
+   ```
+5. Run the following commands in Terminal or Powershell and follow the prompts:  
+   ```
+   pip install isos-environment-test
+   python -m isos-env-test
+   ```
+
