@@ -1,0 +1,15 @@
+README.rst
+setup.py
+medspacy/__init__.py
+medspacy/version.py
+medspacy_io.egg-info/PKG-INFO
+medspacy_io.egg-info/SOURCES.txt
+medspacy_io.egg-info/dependency_links.txt
+medspacy_io.egg-info/not-zip-safe
+medspacy_io.egg-info/requires.txt
+medspacy_io.egg-info/top_level.txt
+tests/data/ehost_test_corpus/config/projectschema.xml
+tests/data/ehost_test_corpus/corpus/doc1.txt
+tests/data/ehost_test_corpus/corpus/doc2.txt
+tests/data/ehost_test_corpus/saved/doc1.txt.knowtator.xml
+tests/data/ehost_test_corpus/saved/doc2.txt.knowtator.xml
