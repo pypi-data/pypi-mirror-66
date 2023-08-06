@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: photoscope
+Version: 1.0.1
+Summary: Elasticsearch + Flask for diy image search
+Home-page: https://github.com/smellslikeml/photoscope
+Author: Smells Like ML
+Author-email: contact@smellslikeml.com
+License: MIT
+Description: Simple command line tool for launching an image search app using elasticsearch and mobilenet embeddings.
+Keywords: smellslikeml,machine learning,search
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
