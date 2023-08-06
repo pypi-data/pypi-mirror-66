@@ -1,0 +1,11 @@
+README.md
+setup.py
+staticsql/__init__.py
+staticsql/database.py
+staticsql/file_.py
+staticsql/sql.py
+staticsql/util.py
+staticsql.egg-info/PKG-INFO
+staticsql.egg-info/SOURCES.txt
+staticsql.egg-info/dependency_links.txt
+staticsql.egg-info/top_level.txt
