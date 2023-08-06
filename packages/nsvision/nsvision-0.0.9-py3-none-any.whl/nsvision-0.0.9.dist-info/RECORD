@@ -1,0 +1,15 @@
+nsvision/__init__.py,sha256=NPiGQ8ljR2B-NN6Z_AKKzIn9cAGbpLLXKPtpWLlJELE,108
+nsvision/_version.py,sha256=Lc3ZrQuaFZpN4TgRM6GDTaY33Q9xAXhGoEv9sv_gsnI,34
+nsvision/classifier.py,sha256=4-Z1hRkmlaDOQaEo0ZVReTTjjMWi6VYJ1N9R6ds-kNQ,5784
+nsvision/image_utils.py,sha256=HCP7GhIC0kt6OiChH_sHL_13be1FMRIR3xIfJQBoFmI,13999
+nsvision/video_utils.py,sha256=o1U9G9slzYlwy7aZgxyK_IhU7jc9SauLxswIbnkvkW4,1988
+nsvision/tools/rename_files.py,sha256=xiQWpkMtdR5zPQY7d5VtAJiYh9chKWq-wLMIa6zZMfs,1268
+nsvision/tools/split_data.py,sha256=PLTc5ZpbTvkaIEQt630d2GigRPOTXsFModuHOTzunQo,1841
+nsvision/tools/split_data_gui.py,sha256=UD3KZrzbGFll-moQySoMznADsIUE1WElmD4HaoCyfKM,7513
+nsvision/tools/tumor_data_extractor.py,sha256=hp-V0gAI9otj-z8Y30lfsJ2JYg3puzsOv7_fcisrZkA,3631
+nsvision-0.0.9.dist-info/LICENSE,sha256=idVf1H89At7LvULa_6KMvOJdIap_x1d_2NppRXS3T8c,1097
+nsvision-0.0.9.dist-info/METADATA,sha256=2aVNWnZXaTLdKKzNVsyv0ay4guu7QMaLVULLmPrXKEY,1109
+nsvision-0.0.9.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+nsvision-0.0.9.dist-info/entry_points.txt,sha256=AG3mq8389io0kfdoRiHS7tCfVH9tF3mL4Q5eEXjFK40,227
+nsvision-0.0.9.dist-info/top_level.txt,sha256=agbYz8EujYZqYb3Ap1kzaBDz3wxOfyD5fIFcYATjz90,9
+nsvision-0.0.9.dist-info/RECORD,,
