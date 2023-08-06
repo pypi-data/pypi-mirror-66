@@ -1,0 +1,117 @@
+Metadata-Version: 2.1
+Name: metanetx-post
+Version: 0.4.0
+Summary: Enrich the information coming from MetaNetX from additional sources.
+Home-page: https://github.com/Midnighter/metanetx-post
+Author: Moritz E. Beber
+Author-email: midnighter@posteo.net
+License: Apache-2.0
+Download-URL: https://pypi.org/project/metanetx-post/
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+Requires-Dist: aioftp (~=0.13)
+Requires-Dist: Click (~=7.0)
+Requires-Dist: click-log (~=0.3)
+Requires-Dist: cobra-component-models (~=0.3)
+Requires-Dist: depinfo (~=1.5)
+Requires-Dist: httpx (~=0.11)
+Requires-Dist: metanetx-assets (~=0.1)
+Requires-Dist: metanetx-sdk (~=0.4)
+Requires-Dist: pandas (~=1.0)
+Requires-Dist: pydantic (~=1.4)
+Requires-Dist: pyparsing (~=2.4)
+Requires-Dist: rdflib (~=4.2)
+Requires-Dist: SQLAlchemy (~=1.3)
+Requires-Dist: tqdm (~=4.0)
+Provides-Extra: development
+Requires-Dist: black ; extra == 'development'
+Requires-Dist: isort ; extra == 'development'
+Requires-Dist: tox ; extra == 'development'
+Provides-Extra: openbabel
+Requires-Dist: openbabel (~=3.0) ; extra == 'openbabel'
+Provides-Extra: rdkit
+Requires-Dist: rdkit ; extra == 'rdkit'
+
+=============================
+MetaNetX Post-Processing
+=============================
+
+.. image:: https://img.shields.io/pypi/v/metanetx-post.svg
+   :target: https://pypi.org/project/metanetx-post/
+   :alt: Current PyPI Version
+
+.. image:: https://img.shields.io/pypi/pyversions/metanetx-post.svg
+   :target: https://pypi.org/project/metanetx-post/
+   :alt: Supported Python Versions
+
+.. image:: https://img.shields.io/pypi/l/metanetx-post.svg
+   :target: https://www.apache.org/licenses/LICENSE-2.0
+   :alt: Apache Software License Version 2.0
+
+.. image:: https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg
+   :target: https://github.com/Midnighter/metanetx-post/blob/master/.github/CODE_OF_CONDUCT.md
+   :alt: Code of Conduct
+
+.. image:: https://img.shields.io/travis/Midnighter/metanetx-post/master.svg?label=Travis%20CI
+   :target: https://travis-ci.org/Midnighter/metanetx-post
+   :alt: Travis CI
+
+.. image:: https://ci.appveyor.com/api/projects/status/github/Midnighter/metanetx-post?branch=master&svg=true
+   :target: https://ci.appveyor.com/project/Midnighter/metanetx-post
+   :alt: AppVeyor
+
+.. image:: https://codecov.io/gh/Midnighter/metanetx-post/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/Midnighter/metanetx-post
+   :alt: Codecov
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/ambv/black
+   :alt: Black
+
+.. image:: https://readthedocs.org/projects/metanetx-post/badge/?version=latest
+   :target: https://metanetx-post.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
+.. summary-start
+
+Enrich the information coming from MetaNetX from additional sources.
+
+Usage
+=====
+
+Please use the command line program help to explore use-cases.
+
+.. code-block:: console
+
+    mnx-post --help
+
+Install
+=======
+
+It's as simple as:
+
+.. code-block:: console
+
+    pip install metanetx-post
+
+Copyright
+=========
+
+* Copyright © 2020, Moritz E. Beber.
+* Free software distributed under the `Apache Software License 2.0
+  <https://www.apache.org/licenses/LICENSE-2.0>`_.
+
+.. summary-end
+
+
