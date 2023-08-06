@@ -1,0 +1,5 @@
+setup.py
+incompatible_with_python38.egg-info/PKG-INFO
+incompatible_with_python38.egg-info/SOURCES.txt
+incompatible_with_python38.egg-info/dependency_links.txt
+incompatible_with_python38.egg-info/top_level.txt
