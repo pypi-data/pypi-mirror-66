@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: yaz-it
+Version: 0.2.0
+Summary: Quick tool for yaz0 compression/decompression
+Home-page: https://github.com/NiceneNerd/yaz-it
+Author: NiceneNerd
+Author-email: macadamiadaze@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7
