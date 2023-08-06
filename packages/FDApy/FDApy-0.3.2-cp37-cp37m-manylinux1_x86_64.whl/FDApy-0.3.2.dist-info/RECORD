@@ -1,0 +1,17 @@
+sigma.cpython-37m-x86_64-linux-gnu.so,sha256=_2PspwFl2oyJX-7zLzs6RkldGJ8M_lGoOAKzeCrMD_M,203392
+FDApy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+FDApy/bandwidth.py,sha256=lcaqgUMqUdk_v543nCJu5Nz53z3FR5aYzPpz-tnEKXQ,9342
+FDApy/basis.py,sha256=X3BYKPTzHsVdqIhog4i2k4diTaavKEUcZP3IDJIW0YI,16355
+FDApy/fpca.py,sha256=FNi4fwxD3ZBLLJNOq2rvxAgKdyYXZyMrCxD9xkosJas,13322
+FDApy/irregular_functional.py,sha256=9TxwPeUCse7c3ZE873FPYReYBdsxS5hVm0ebcgt21Vg,9743
+FDApy/local_polynomial.py,sha256=L1YqAa-duaKqeumwjN1C84zWi0Cl7B3C-3SDGTTABHo,10433
+FDApy/multivariate_functional.py,sha256=mYF_CQrUPOLsWttXjsBf5WpS51aryMn6MuG1pxbVvVE,9432
+FDApy/plot.py,sha256=fCVAMpxyBHJHNksImUWKN76hmEg3ucBMBL3s6NgQR7U,4612
+FDApy/univariate_functional.py,sha256=Q0gBpa-BaiZtFHd2YyE_BwIkGwvFsjR9GQkL3Fu0tYE,20858
+FDApy/utils.py,sha256=GNThhluqO0vjCKOBwVuuDNr5M-lLXqBwX5A2ZPXyP5I,6235
+FDApy/src/sigma.cpp,sha256=bTbjiB0jtutfRJXhcZfv6nDSJknNqHMTYwgWFJLM3EY,151360
+FDApy-0.3.2.dist-info/LICENSE,sha256=kxs-SZmc-pHrdLUuQCmD2RwWqF5C65CVanBrDv2XEEw,1072
+FDApy-0.3.2.dist-info/METADATA,sha256=BLd7K_p6ShZ7a0vNnOqGnOEo8cIEpqLyQbjr5BRE97w,407
+FDApy-0.3.2.dist-info/WHEEL,sha256=x_vzcI4ZEGB3mgPWPKzGiYMKKJ7Ixf6JpcM2LwQveJI,109
+FDApy-0.3.2.dist-info/top_level.txt,sha256=NoG6UogePMpn3PIw9jwVVAbJ38opi_NA2coJz3ny9Xg,12
+FDApy-0.3.2.dist-info/RECORD,,
