@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+ipymagic/__init__.py
+ipymagic/ipymagic.py
+ipymagic.egg-info/PKG-INFO
+ipymagic.egg-info/SOURCES.txt
+ipymagic.egg-info/dependency_links.txt
+ipymagic.egg-info/not-zip-safe
+ipymagic.egg-info/requires.txt
+ipymagic.egg-info/top_level.txt
+ipymagic/static/index.js
+jupyter-config/jupyter_notebook_config.d/ipymagic.json
+jupyter-config/nbconfig/notebook.d/ipymagic.json

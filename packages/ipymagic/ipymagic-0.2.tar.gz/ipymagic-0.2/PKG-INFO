@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: ipymagic
+Version: 0.2
+Summary: run python with virtualenv in 'ipython'
+Home-page: https://ipymagic.readthedocs.io/en/latest/index.html
+Author: Youngju Jaden Kim
+Author-email: pydemia@gmail.com
+License: MIT License
+Download-URL: https://github.com/pydemia/ipymagic
+Description: Useful tools for Data Scentists
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Requires-Python: >= 3.5
