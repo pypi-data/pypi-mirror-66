@@ -1,0 +1,16 @@
+tqdm
+six
+requests
+
+[dev]
+numpy
+codecov
+pytest
+pytest-cov
+
+[sphinx]
+matplotlib
+pandas
+sphinx
+sphinx-gallery
+pillow
