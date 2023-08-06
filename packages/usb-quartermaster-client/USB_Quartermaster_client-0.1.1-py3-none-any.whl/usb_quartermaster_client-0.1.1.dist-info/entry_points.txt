@@ -1,0 +1,3 @@
+[console_scripts]
+quartermaster_client=quartermaster_client.__main__:run
+
