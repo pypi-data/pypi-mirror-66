@@ -1,0 +1,4 @@
+tensorflow==2.1.0
+tensorflow_privacy==0.2.2
+smart_open
+sentencepiece
