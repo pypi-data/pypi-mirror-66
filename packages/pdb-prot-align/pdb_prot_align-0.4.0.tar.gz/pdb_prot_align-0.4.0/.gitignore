@@ -1,0 +1,17 @@
+.*
+~*
+_*
+
+!.gitignore
+!.travis.yml
+!.flake8
+!.nojekyll
+
+*.pyc
+docs/pdb_prot_align.*
+docs/_build
+
+__pycache__
+build
+dist
+*.egg-info

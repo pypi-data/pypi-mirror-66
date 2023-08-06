@@ -1,0 +1,23 @@
+# name of conda environment
+name: pdb_prot_align
+
+# channels to install conda dependencies
+channels:
+  - conda-forge
+  - bioconda
+  - schrodinger
+
+# conda dependencies
+dependencies:
+  - python=3.7
+  - pip
+  - mafft=7.407
+  - jupyter
+  - jupyterlab
+  - pymol
+  - jupyter_nbextensions_configurator
+  - conda-forge::nglview
+  - nodejs
+  # list packages to install with pip
+  - pip:
+    - -e .
