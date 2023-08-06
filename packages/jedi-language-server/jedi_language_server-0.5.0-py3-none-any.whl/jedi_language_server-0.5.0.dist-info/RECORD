@@ -1,0 +1,13 @@
+README.md,sha256=lMQJNsvI77HZ8Alir1qce5_DQKQMG6WhH3DaAN425T8,5103
+jedi_language_server/__init__.py,sha256=Ttx3a6HrN5p1OGOPkhksa3A2XlnQoL6KUeJgP8Mxa6s,27
+jedi_language_server/cli.py,sha256=UjF6hjcgky6oO0fJxbh--dYxaSp8EhskzEcAb0hINdY,274
+jedi_language_server/constants.py,sha256=NkEpiXEygPUQ14BPPsF_hBQjTRK4VEsHV54_1yfMssE,16
+jedi_language_server/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jedi_language_server/server.py,sha256=2X_wmQ3kBuJlMFpalILZxMnmEmeWl0Og85Xdt14wlk4,4504
+jedi_language_server/server_utils.py,sha256=atefAnNpesAC_2TKC77x-39CJIBnKHukAJurZBMhGsQ,2463
+jedi_language_server/type_map.py,sha256=GCrhBIJUSjZMkAAZiLU9EF1cNQOLZrqhMyciLGNdTW8,3114
+jedi_language_server-0.5.0.dist-info/entry_points.txt,sha256=tEaOpo7Acn_0VR7_2nliPDCiNzbmsrbwvUyYLHhaXyA,69
+jedi_language_server-0.5.0.dist-info/LICENSE,sha256=4_eQ9b2QTpExuEakcUAj4KDzDrTd-TjOrUXp5T6d88s,1066
+jedi_language_server-0.5.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+jedi_language_server-0.5.0.dist-info/METADATA,sha256=hcJVX7gj_HLKvRyOfAP77zpIkZo3db4ekIM1NvNI5A8,6303
+jedi_language_server-0.5.0.dist-info/RECORD,,
