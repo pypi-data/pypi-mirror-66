@@ -1,0 +1,3 @@
+[console_scripts]
+pwbus = pwbus.command_line:main
+
