@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: meeshkan-hosted-secrets
+Version: 0.5
+Summary: Utility package to access Secret Manager on meeshkan.io
+Home-page: https://github.com/meeshkan/meeshkan-hosted-secrets
+Author: Meeshkan Dev Team
+Author-email: dev@meeshkan.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: google-cloud-secret-manager (==0.1.1)
+
+
+# meeshkan-hosted-secrets
+Utility python package to access Secret Manager secrets on meeshkan.io
+
+```python
+from meeshkan_hosted_secrets import access_secret_string
+
+secret_value = access_secret_string("MY_SECRET_NAME")
+```
+
+
