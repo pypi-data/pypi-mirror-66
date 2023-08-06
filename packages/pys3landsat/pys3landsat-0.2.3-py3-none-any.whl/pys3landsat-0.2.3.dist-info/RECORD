@@ -1,0 +1,12 @@
+pyamazonlandsat/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyamazonlandsat/downloader.py,sha256=2YD6A-fQ7Pb1IRACQ3OqMeXrRI6ycjrdzIRjV9PDVrY,3787
+pyamazonlandsat/product.py,sha256=FigQuqWy69F14Kd8xGPEh-tc3LThsUJg816lFucZlUI,1776
+pyamazonlandsat/service.py,sha256=r7OJCANevDGe_3xJcxiiT1rg9pqBWlu-YepXM6v-qag,869
+pyamazonlandsat/utils.py,sha256=4drFMHO-UCjYEjGhcoqFQy5KWvArhf8ZUqwwRM1RtEY,1354
+pyamazonlandsat/version.py,sha256=YziPfyav4a-IyfZF2PXtbbhOnlCCSxiiYNTd6cHWHi4,21
+pys3landsat-0.2.3.data/scripts/pys3landsat,sha256=_XoO2oOLU7nR1jVvcadwnYwdQG-Dq6RfVSc5Mv7wGHk,713
+pys3landsat-0.2.3.dist-info/LICENSE,sha256=sRV4KdoKTJUFx039wP9FXUpwOj9_wfMbZY9La0UB6zo,1071
+pys3landsat-0.2.3.dist-info/METADATA,sha256=Mg1DkW5GGJ-r0y0R0uqk4CaT_3ThHEi2kFYCJi5hFqw,1594
+pys3landsat-0.2.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pys3landsat-0.2.3.dist-info/top_level.txt,sha256=56pLjvpAYRoXVG3WAabWVVIeBYfZlZ3U2vEHCOoGchY,16
+pys3landsat-0.2.3.dist-info/RECORD,,
