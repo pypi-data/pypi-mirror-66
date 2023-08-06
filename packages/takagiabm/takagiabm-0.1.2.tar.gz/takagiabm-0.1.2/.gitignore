@@ -1,0 +1,13 @@
+*.pyc
+*.o
+*.a
+*.$member*
+/__pycache__/
+/pyqtgraphtest/*
+/.metadata/*
+/network/*
+/openglTest/*
+/test/*
+/dist/*
+/takagiabm.egg-info/*
+/.idea/*
