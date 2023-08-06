@@ -1,0 +1,1 @@
+git+https://github.com/dmitryduev/kowalski.git@cc7eaaa79#egg=penquins-1.0.3
