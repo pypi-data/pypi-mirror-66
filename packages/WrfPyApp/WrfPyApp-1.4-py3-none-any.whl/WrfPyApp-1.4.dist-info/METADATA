@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: WrfPyApp
+Version: 1.4
+Summary: Crude API for the WRFPyApp
+Home-page: https://github.com/onurhdogan/WrfPyApp
+Author: Onur Hakan Dogan
+Author-email: ohdogan@mgm.gov.tr
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: wrf-python (==1.3.2)
+Requires-Dist: netCDF4 (==1.5.3)
+Requires-Dist: matplotlib (==3.1.3)
+
+UNKNOWN
+
+
