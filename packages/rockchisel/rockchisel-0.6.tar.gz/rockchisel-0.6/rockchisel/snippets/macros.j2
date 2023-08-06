@@ -1,0 +1,91 @@
+{% macro begin_code(language='python') -%}<div class='codeblock'><pre><code class="language-{{ language }}">{%- endmacro %}
+
+{% macro end_code() -%}</code></pre></div>{%- endmacro %}
+
+{% macro doc(template, text='') -%}<A HREF="./{{ template }}.html">{% if text == '' %}{{ ROCKCHISEL_title_map[template] }}{% else %}{{ text }}{% endif %}</a>{%- endmacro %}
+
+{% macro link(url, text) -%}<A HREF="{{ url }}">{{ text }}</a>{%- endmacro %}
+
+{% macro begin_info_block() -%}
+<div class='infoblock'>
+<i class="fas fa-info-circle"></i></i>&nbsp;
+{%- endmacro %}
+
+{% macro end_info_block() -%}
+</div>
+{%- endmacro %}
+
+{% macro begin_warn_block() -%}
+<div class='warnblock'>
+<i class="fas fa-exclamation-triangle"></i></i></i>&nbsp;
+{%- endmacro %}
+
+{% macro end_warn_block() -%}
+</div>
+{%- endmacro %}
+
+{% macro quiz(id, question, a=None, b=None, c=None, d=None, answer='c', if_correct='', if_incorrect='') -%}
+
+<div class="quizblock">
+<div id="quiz_{{ id }}"/>
+
+<p><i><i class="fas fa-question-circle"></i>&nbsp; {{ question }}</p></i>
+<form id="form_{{ id }}">
+
+  {% if a is defined %}
+  <input type="radio" id="{{ id }}a" name="radio_{{id}}" value="a">
+  <label for="a"><B>A</B> &nbsp;&nbsp;&nbsp;&nbsp; {{ a }}</label><br>
+  {% endif %}
+
+  {% if b is defined %}
+  <input type="radio" id="{{ id }}b" name="radio_{{id}}" value="b">
+  <label for="b"><B>B</B> &nbsp;&nbsp;&nbsp;&nbsp; {{ b }}</label><br>
+  {% endif %}
+
+  {% if c is defined %}
+  <input type="radio" id="{{ id }}c" name="radio_{{id}}" value="c">
+  <label for="c"><B>C</B> &nbsp;&nbsp;&nbsp;&nbsp; {{ c }}</label><br>
+  {% endif %}
+
+  {% if d is defined %}
+  <input type="radio" id="{{ id }}d" name="radio_{{id}}" value="d">
+  <label for="a"><B>D</B> &nbsp;&nbsp;&nbsp;&nbsp; {{ d }}</label><br>
+  {% endif %}
+
+  <div id="quiz_{{ id }}_explain">
+  </div>
+
+  <p></p>
+
+  <input type="submit" id="quiz_{{id}}_submit" value="Submit"/>
+
+
+</form>
+</div>
+</div>
+
+
+<script>
+
+function submit{{id}}() {
+
+   $("#quiz_{{ id }}_submit").hide();
+   $("#quiz_{{ id }} :input").prop("disabled", true);
+   var choice = $('input[name="radio_{{ id }}"]:checked').val();
+   if ("{{ answer }}" == choice) {
+       $("#quiz_{{ id }}_explain").html("<font color='green'><i class='fas fa-check'></i></font>&nbsp;{{ if_correct }}");
+   }
+   else {
+       $("#quiz_{{ id }}_explain").html("<font color='red'><i class='fas fa-times'></font></i>&nbsp;{{ if_incorrect }}<p>The answer was {{ answer|upper }}</p>");
+   }
+   return;
+}
+
+$("#form_{{ id }}").on("submit",function(event) {event.preventDefault(); submit{{id}}(); });
+
+
+</script>
+
+
+{%- endmacro %}
+
