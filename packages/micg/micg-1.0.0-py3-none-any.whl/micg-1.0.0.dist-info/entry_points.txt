@@ -1,0 +1,7 @@
+[console_scripts]
+micg_combine_png = micg.image_transfer:combine_png
+micg_d2n = micg.image_transfer:dicom_to_nifti
+micg_d2p = micg.image_transfer:dicom_to_png
+micg_n2d = micg.image_transfer:nii_to_dicom
+micg_png_to_tfrecords = micg.image_transfer:png_series_to_tf_records
+

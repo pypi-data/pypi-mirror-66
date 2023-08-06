@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: micg
+Version: 1.0.0
+Summary: Medical Image Changer
+Home-page: https://github.com/chobe111/medicalImageChanger.git
+Author: Myung Ki Cho
+Author-email: chobe0719@gmail.com
+License: UNKNOWN
+Keywords: medical image,image change
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: tensorflow (>=1.14.0)
+Requires-Dist: SimpleITK (>=1.2.4)
+Requires-Dist: Pillow (>=7.1.1)
+Requires-Dist: mritopng (==2.2)
+
+UNKNOWN
+
+
