@@ -1,0 +1,15 @@
+MANIFEST.in
+setup.cfg
+setup.py
+django_model_editor.egg-info/PKG-INFO
+django_model_editor.egg-info/SOURCES.txt
+django_model_editor.egg-info/dependency_links.txt
+django_model_editor.egg-info/requires.txt
+django_model_editor.egg-info/top_level.txt
+django_model_editor.egg-info/zip-safe
+model_editor/__init__.py
+model_editor/apps.py
+model_editor/tests.py
+model_editor/management/__init__.py
+model_editor/management/commands/__init__.py
+model_editor/management/commands/edit.py
