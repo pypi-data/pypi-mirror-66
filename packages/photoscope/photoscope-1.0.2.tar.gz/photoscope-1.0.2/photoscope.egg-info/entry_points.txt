@@ -1,0 +1,3 @@
+[console_scripts]
+photoscope = photoscope.main:main
+
