@@ -1,0 +1,17 @@
+xgboost/VERSION,sha256=yOe1LH-qqkZnw-hxpnzNG-q5h2KajB5B4nhA7Ex5i5s,9
+xgboost/__init__.py,sha256=TCllY-QYnI3YEoD2pLjiylDQUdGRNEZhHzdyBuADj6s,1273
+xgboost/callback.py,sha256=TOExUhjSpRLqXeUrJQOxoFVh1DZKLArP2Rqdb1IAaYE,9101
+xgboost/compat.py,sha256=ovqjMS0FwuI_iSNN53iRey59CXzUgICB_UPzTADJoaw,6391
+xgboost/core.py,sha256=JkUT4sKlugPobAXDbVY-IqFrA50qmDioANLOOrVyse4,81712
+xgboost/dask.py,sha256=h67Z8Dwr1YlIgAI3co_imrZzHvib6teCp23rH9wh26E,30403
+xgboost/libpath.py,sha256=737Lz8LRStCO9qGGEVzxf6nm3t8Re6JhyYf3dn7Gkts,2461
+xgboost/plotting.py,sha256=1wB7mswsuaQ_En5c-j5rRPJ545kqe8Lg7fXO-ueFzf4,8204
+xgboost/rabit.py,sha256=zHK3uGjgNaFudKAPy-3YWKCkv64fa1E0ADx6XAamsA4,5310
+xgboost/sklearn.py,sha256=kLFS6yAyxYiJtQYHxRcaZqF29tJaYG0AckUNHHKqF3U,50065
+xgboost/tracker.py,sha256=zKyu_7Gpah6VBjou_SX84HaZecmOSUGzJ5FOfiwpu3E,10946
+xgboost/training.py,sha256=BbZL96iRtmO70k1w-g4pvWLNLZoUEKjGVTUFYbis7oc,21410
+xgboost/lib/libxgboost.so,sha256=HY3vMakpUDzzpr9-YBq9FHWBsEa7CCIa7AqCQACj3XM,250439504
+xgboost-1.1.0rc1.dist-info/METADATA,sha256=4TJZatY-TyedrgEVRfF5om7xjqrpV3yTsC2B4HLhSdc,1737
+xgboost-1.1.0rc1.dist-info/WHEEL,sha256=9cGxwQ3tTT7GAsdHCPGqLi61DXGpJWVkLren3MQuD0k,104
+xgboost-1.1.0rc1.dist-info/top_level.txt,sha256=XsUag38Cwxr6Yz963EKYCWtAYDpt2YPPRt5s9QfOszQ,19
+xgboost-1.1.0rc1.dist-info/RECORD,,
