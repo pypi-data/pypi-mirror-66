@@ -1,0 +1,10 @@
+quality_covers-1.0.8.dist-info/METADATA,sha256=_BvG28GEzceTQRwxnqknjgE9NuYwP7BLle78z7-4CH0,1714
+quality_covers-1.0.8.dist-info/top_level.txt,sha256=93xygx26x1imSAMdxRgWy80DxkLDPe902HnZqsnfksk,15
+quality_covers-1.0.8.dist-info/WHEEL,sha256=0wGQBSV-BlYX9ESMZyEiLMpXIYwrZGj6McPYyDp_RjA,108
+quality_covers-1.0.8.dist-info/LICENSE,sha256=TR045JJWhTB26yKD33CdVnpn2AGl-ebqEf-K5IZ9fDA,1086
+quality_covers-1.0.8.dist-info/RECORD,,
+quality_covers.libs/libgomp-3300acd3.so.1.0.0,sha256=UeFYIEVyYUmIk-yi0ZDaTDMquk1yirgJwwQOQlWv1NU,63024
+quality_covers/__init__.py,sha256=N6g-IIiLEOQ5FXFVNG4TxLTPQ7ULTNLQPPoTZY6GXDI,158
+quality_covers/quality_covers.cpython-38-x86_64-linux-gnu.so,sha256=yCw4v65wMz6400NqMx-9JjI31EiaLkalkgJyNHZRHXE,1227272
+quality_covers/matrice/matrice.py,sha256=XBMfRmipeVEsQTUlsWsk2I_VFmnm56kUnTuQO9kawa0,2946
+quality_covers/matrice/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
