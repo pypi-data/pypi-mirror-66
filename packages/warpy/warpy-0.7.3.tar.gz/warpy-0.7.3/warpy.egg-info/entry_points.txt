@@ -1,0 +1,3 @@
+[console_scripts]
+warpy = warpy.__main__:main
+
