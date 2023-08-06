@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: ptkcmd
+Version: 0.0.2
+Summary: cmd.py from the standard library adapted to use prompt-toolkit instead of readline
+Home-page: https://github.com/mmiguel6288code/ptkcmd
+Author: Matthew Miguel
+Author-email: mmiguel6288code@gmail.com
+Maintainer: Matthew Miguel
+Maintainer-email: mmiguel6288code@gmail.com
+License: MIT
+Description: # ptkcmd
+        
+        [View API documentation](http://htmlpreview.github.io/?https://github.com/mmiguel6288code/ptkcmd/blob/master/docs/ptkcmd/index.html)
+        
+        ptkcmd adapts the built-in cmd.py standard library module to use prompt-toolkit instead of readline
+        
+        ```
+        1+1=2 #test
+        ```
+        
+Keywords: cmd,cmd.py,command line,cli,prompt-toolkit,ptkcmd,prompt
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
