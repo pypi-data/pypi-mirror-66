@@ -1,0 +1,4 @@
+babel
+pillow
+qrplatba>=0.3.3
+reportlab
