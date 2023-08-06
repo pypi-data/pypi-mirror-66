@@ -1,0 +1,7 @@
+aiohttp
+Click
+joblib
+numpy
+Pillow
+requests
+tqdm
