@@ -1,0 +1,12 @@
+requests
+boto3
+
+[test]
+mock
+moto[server]
+pathlib2
+responses
+boto3
+google-compute-engine==2.8.12
+paramiko
+parameterizedtestcase
