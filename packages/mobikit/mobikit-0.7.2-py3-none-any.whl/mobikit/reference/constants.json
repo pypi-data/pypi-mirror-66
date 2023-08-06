@@ -1,0 +1,17 @@
+{
+    "meta_constants": {
+        "pandas_readable": 0,
+        "viz_readable": 0,
+        "temporal": 0,
+        "source": "vehicle",
+        "locations": "none"
+    },
+    "urls": {
+        "query": "api/query/",
+        "workspace": "api/datasets/",
+        "feed": "api/datasets/feed/",
+        "validate": "api/datasets/feed/validate/",
+        "col_reference_route": "mobikit/reference/column_dict.csv",
+        "upload_feed_route": "api/uploads/file/"
+    }
+}
