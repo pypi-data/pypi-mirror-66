@@ -1,0 +1,42 @@
+import os
+from setuptools import setup, find_packages
+
+with open("README.md", "r") as readme_file:
+    readme = readme_file.read()
+
+requirement_path = './requirements.txt'
+if os.path.isfile(requirement_path):
+    with open(requirement_path) as f:
+        install_requires = f.read().splitlines()
+
+setup(
+    name='mvtsdatatoolkit',
+    version='0.1.8',
+    author='Azim Ahmadzadeh, Kankana Sinha',
+    author_email='aahmadzadeh1@cs.gsu.edu, ksinha1106@gmail.com',
+    url='https://bitbucket.org/gsudmlab/mvtsdata_toolkit/src/master',
+    maintainer='Azim Ahmadzadeh',
+    maintainer_email='aahmadzadeh1@cs.gsu.edu',
+    description='A Toolkit for Multivariate Time Series Data',
+    long_description=readme,
+    long_description_content_type='text/markdown',
+    packages=find_packages(exclude='tests.*'),
+    install_requires=install_requires,
+    py_modules=['CONSTANTS'],
+    include_package_data=True,
+    license='MIT',
+    keywords=['multivariate', 'time series', 'mvts', 'imbalance', 'sampling', 'features'],
+    project_urls={
+        'Documentation': 'http://dmlab.cs.gsu.edu/docs/mvtsdata_toolkit/',
+        'Source': 'https://bitbucket.org/gsudmlab/mvtsdata_toolkit/src/master',
+    },
+    classifiers=[
+        # Keys & values must be chosen from: https://pypi.org/classifiers/
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 3',
+        'Intended Audience :: Science/Research',
+        'Intended Audience :: Developers',
+        'Topic :: Scientific/Engineering :: Information Analysis',
+        'Development Status :: 3 - Alpha'  # 3-Alpha, 4-Beta, 5-Production/Stable
+    ],
+)

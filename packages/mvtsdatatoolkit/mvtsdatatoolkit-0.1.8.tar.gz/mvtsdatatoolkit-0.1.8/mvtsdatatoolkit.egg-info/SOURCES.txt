@@ -1,0 +1,8 @@
+CONSTANTS.py
+README.md
+setup.py
+mvtsdatatoolkit.egg-info/PKG-INFO
+mvtsdatatoolkit.egg-info/SOURCES.txt
+mvtsdatatoolkit.egg-info/dependency_links.txt
+mvtsdatatoolkit.egg-info/requires.txt
+mvtsdatatoolkit.egg-info/top_level.txt
