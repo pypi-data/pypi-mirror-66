@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: subutai-bazaar
+Version: 0.0.1
+Summary: Library for Subutai Bazaar REST API
+Home-page: https://github.com/crioto/subutai-bazaar
+Author: crioto
+Author-email: msavochkin@optdyn.com
+License: UNKNOWN
+Description: # Subutai Bazaar
+        
+        A Python library for the Bazaar REST API. Check out [Subutai](https://subutai.io) and [Bazaar](https://bazaar.subutai.io) websites for more information.
+        
+        This library requires `requests` package, which can be installed with PyPi:
+        
+        ```
+        pip install requests
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
