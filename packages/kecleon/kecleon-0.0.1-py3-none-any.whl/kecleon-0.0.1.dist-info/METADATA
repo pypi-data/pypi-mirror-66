@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: kecleon
+Version: 0.0.1
+Summary: Skeleton for Python projects
+Home-page: https://peilonrayz.github.io/kecleon
+Author: Peilonrayz
+Author-email: peilonrayz@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/Peilonrayz/kecleon/issues
+Project-URL: Documentation, https://peilonrayz.github.io/kecleon
+Project-URL: Source Code, https://github.com/Peilonrayz/kecleon
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/x-rst
+Provides-Extra: 7z
+Requires-Dist: pylzma ; extra == '7z'
+Provides-Extra: all
+Requires-Dist: requests ; extra == 'all'
+Requires-Dist: pylzma ; extra == 'all'
+Provides-Extra: web
+Requires-Dist: requests ; extra == 'web'
+
+Kecleon
+=======
+
+.. image:: https://travis-ci.com/Peilonrayz/kecleon.svg?branch=master
+   :target: https://travis-ci.com/Peilonrayz/kecleon
+   :alt: Build Status
+
+About
+-----
+
+This is a skeleton project to have a standardized and concrete base for all projects.
+
+Installation
+------------
+
+.. code:: shell
+
+   $ python -m pip install kecleon
+
+Documentation
+-------------
+
+Documentation is available `via GitHub <https://peilonrayz.github.io/kecleon/>`_.
+
+Testing
+-------
+
+To run all tests run ``nox``. No venv is needed; nox makes all of them for us.
+
+.. code:: shell
+
+   $ python -m pip install --user nox
+   $ git clone https://github.com/Peilonrayz/kecleon
+   $ cd kecleon
+   kecleon $ nox
+
+License
+-------
+
+Kecleon is available under the MIT license.
+

@@ -1,0 +1,15 @@
+kecleon/__init__.py,sha256=Nj9q74M8Rkqt53n-H6isLeAxh2aWI2xiSdJEsiN4A24,2917
+kecleon/base.py,sha256=fijlvfyQtHvpWkwQSkA0MP1IP7Tv7u26qewyp6NV0kg,5731
+kecleon/store.py,sha256=trKS0Rb8C6DpM9TLPe_l0Ydyaef1jGw0HKcBxNxnkG8,6198
+kecleon/jobs/__init__.py,sha256=7duztlTtJVRhDUIg4Fc035-Lpwb18-t-_avkjeOuEo0,264
+kecleon/jobs/file.py,sha256=NfCQoGaj19Yxu8KFh0R023Ih3tGUAVquWPOIOkcvoQ4,2046
+kecleon/jobs/raw.py,sha256=5qm-hcc0Drxk2kfvIL4-a5ohBcbKSF2dX9lKTgkQXmI,957
+kecleon/jobs/optional/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kecleon/jobs/optional/web.py,sha256=tSSdA9Fnc8AE0B88lRgUXrVcOj_1aSsV8AmT3EnCgdk,1387
+kecleon/jobs/optional/zip7.py,sha256=6J6NQ6C1kSrFglIBz3w8ZJ5oSqazlxzVncJzDnyUxbg,1567
+kecleon-0.0.1.dist-info/LICENSE,sha256=tiXXArlWKSR3XJsXpiCICpDS0FNAttEpKjSJzAg_pOE,1067
+kecleon-0.0.1.dist-info/METADATA,sha256=mizZv4TGuDSTbMe6c1JX_eDrJgWQz5y5JBF7ZPAd4Xs,1955
+kecleon-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+kecleon-0.0.1.dist-info/entry_points.txt,sha256=q_csbUrEqvEmjL2ardadayTJro1HvPIQ77qIycIBvsM,51
+kecleon-0.0.1.dist-info/top_level.txt,sha256=rvvX84y7j2qRKwqIZ1uiCvs1VLSrWRRtwwyhrcnGc0s,8
+kecleon-0.0.1.dist-info/RECORD,,
