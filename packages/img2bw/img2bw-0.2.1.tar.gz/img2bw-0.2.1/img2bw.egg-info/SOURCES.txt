@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+img2bw/__init__.py
+img2bw/binarizer.py
+img2bw/main.py
+img2bw/utils.py
+img2bw.egg-info/PKG-INFO
+img2bw.egg-info/SOURCES.txt
+img2bw.egg-info/dependency_links.txt
+img2bw.egg-info/entry_points.txt
+img2bw.egg-info/not-zip-safe
+img2bw.egg-info/requires.txt
+img2bw.egg-info/top_level.txt
