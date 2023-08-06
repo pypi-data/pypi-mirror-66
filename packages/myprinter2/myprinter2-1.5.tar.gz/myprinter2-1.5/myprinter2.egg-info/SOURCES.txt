@@ -1,0 +1,10 @@
+setup.py
+myprinter2/__init__.py
+myprinter2/hello.py
+myprinter2.egg-info/PKG-INFO
+myprinter2.egg-info/SOURCES.txt
+myprinter2.egg-info/dependency_links.txt
+myprinter2.egg-info/top_level.txt
+myprinter2/config/t.json
+myprinter2/utilts/__init__.py
+myprinter2/utilts/print_info.py
