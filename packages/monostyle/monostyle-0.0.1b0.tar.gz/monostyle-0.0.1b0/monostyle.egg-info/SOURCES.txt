@@ -1,0 +1,7 @@
+README.md
+setup.py
+monostyle/__init__.py
+monostyle.egg-info/PKG-INFO
+monostyle.egg-info/SOURCES.txt
+monostyle.egg-info/dependency_links.txt
+monostyle.egg-info/top_level.txt
