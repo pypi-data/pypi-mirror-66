@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: fxpmath
+Version: 0.1
+Summary: A python library for fractional fixed-point arithmetic.
+Home-page: https://github.com/francof2a/fxpmath
+Author: francof2a
+Author-email: empty@empty.com
+License: MIT
+Download-URL: https://github.com/francof2a/fxpmath.git
+Description: UNKNOWN
+Keywords: fixed point,fractional,math,python,fxpmath,fxp
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
