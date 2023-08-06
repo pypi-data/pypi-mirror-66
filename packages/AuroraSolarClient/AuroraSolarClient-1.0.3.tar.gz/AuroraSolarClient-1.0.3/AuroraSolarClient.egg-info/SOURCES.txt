@@ -1,0 +1,8 @@
+README.md
+setup.py
+AuroraSolarClient/__init__.py
+AuroraSolarClient.egg-info/PKG-INFO
+AuroraSolarClient.egg-info/SOURCES.txt
+AuroraSolarClient.egg-info/dependency_links.txt
+AuroraSolarClient.egg-info/requires.txt
+AuroraSolarClient.egg-info/top_level.txt
