@@ -1,0 +1,9 @@
+serverautomation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+serverautomation/__main__.py,sha256=WloqZSFgrHAXx3WpHFpwTJR3YBjlWihZtxEufEtQxjY,14598
+serverautomation/configuration.py,sha256=TzKJRyIg4FonRBBATJippCEkOsbdtarCIZ6k7H-rl4I,24025
+serverautomation/distrolayer.py,sha256=aXm-twB9FzWDr8tzm7LDisUO1GI8XI6rGCG6-suDmU0,6391
+server_automation_setup-0.3.4.dist-info/METADATA,sha256=9bb9KRm0cdwulR71OLeCeIkBBWZaULArxv5n_bFVG1M,14963
+server_automation_setup-0.3.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+server_automation_setup-0.3.4.dist-info/entry_points.txt,sha256=Nc0DbsgXnGJ79TBy8pud3pgIelSNqMRqBf6zUOEry-4,69
+server_automation_setup-0.3.4.dist-info/top_level.txt,sha256=tNmuZiZIvvyrUEUMF359ArBU6O66Pc2eq0iSbambHCQ,17
+server_automation_setup-0.3.4.dist-info/RECORD,,
