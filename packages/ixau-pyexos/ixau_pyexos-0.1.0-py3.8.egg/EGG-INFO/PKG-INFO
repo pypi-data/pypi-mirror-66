@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: ixau-pyexos
+Version: 0.1.0
+Summary: pyexos - An Extreme Networks config manipulation tool
+Home-page: https://github.com/ixaustralia/pyexos
+Author: Nick Pratley
+Author-email: nick@ix.asn.au
+License: UNKNOWN
+Description: # pyexos
+        
+        pyexos is a config manipulation utility for Extreme Networks devices, which enables the theory of config merge and replace.
+        
+        ##### Installation
+        ```sh
+        $ pip install -e git+https://github.com/ixaustralia/pyexos#egg=pyexos
+        ```
+        
+        ##### Usage
+        ```python
+        from pyexos import EXOS
+        device = EXOS(ip='10.0.0.1', username='dev', password='dev')
+        device.get_running_config()
+        ```
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: ~=3.5
+Description-Content-Type: text/markdown
