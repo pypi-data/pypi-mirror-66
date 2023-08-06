@@ -1,0 +1,3 @@
+[console_scripts]
+linkpred = linkpred.cli:main
+
