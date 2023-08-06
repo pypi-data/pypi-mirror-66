@@ -1,0 +1,6 @@
+numpy
+func-timeout
+scipy
+matplotlib
+cloudpickle
+LoveUpdate
