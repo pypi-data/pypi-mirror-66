@@ -1,0 +1,16 @@
+LICENSE-APACHE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.py
+attgen/__init__.py
+attgen/__main__.py
+attgen/generate.py
+attgen/pdf_reference.py
+attgen/read_yaml.py
+attgen/settings.py
+attgen.egg-info/PKG-INFO
+attgen.egg-info/SOURCES.txt
+attgen.egg-info/dependency_links.txt
+attgen.egg-info/entry_points.txt
+attgen.egg-info/top_level.txt
