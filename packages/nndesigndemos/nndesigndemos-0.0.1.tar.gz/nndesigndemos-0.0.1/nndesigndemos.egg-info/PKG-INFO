@@ -1,0 +1,27 @@
+Metadata-Version: 1.2
+Name: nndesigndemos
+Version: 0.0.1
+Summary: Demos for the Neural Network Design & Deep Learning books
+Home-page: https://github.com/amir-jafari/nndesign-demo
+Author: Hagan, Jafari, Uría
+Author-email: nndesign.demo@gmail.com
+License: MIT
+Description: This is a set of demonstrations paired with the Neural Network Design & Deep Learning books.
+        Each demo is linked to a chapter section of the books. You can find more info at https://hagan.okstate.edu/nnd.html.
+        
+        After installing (creating a virtual environment is recommended), just open the Python Shell and type: from nndesigndemos import nndtoc; nndtoc()
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Requires-Python: >=3.5
