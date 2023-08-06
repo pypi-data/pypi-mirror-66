@@ -1,0 +1,2 @@
+battlehack20
+pillow==7.0.0
