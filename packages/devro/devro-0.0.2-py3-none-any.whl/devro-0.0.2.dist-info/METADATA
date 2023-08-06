@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: devro
+Version: 0.0.2
+Summary: A development package for robotics software
+Home-page: https://github.com/abnvar/devro
+Author: Abhinav Arora
+Author-email: abhiar@iitk.ac.in
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Devro
+
+## Description
+Development tools and utilities for SLAM, including an environment to test your own algorithms, as well as readily usable algorithms for SLAM, path planning and motion planning.
+
+![Environment](https://raw.githubusercontent.com/abnvar/devro/master/res/env.gif)
+
+## Usage
+TBA
+
+## Requirements
+- Simpy (v4.0.0)
+- TBA
+
+## To contribute
+TBA
+
+
