@@ -1,0 +1,3 @@
+[console_scripts]
+elasticpedia = elasticpedia.cli:main
+
