@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: faxplus-api
+Version: 1.0
+Summary: FAX.PLUS REST API
+Home-page: https://github.com/alohi/faxplus-python
+Author: Alohi SA
+Author-email: info@fax.plus
+License: UNKNOWN
+Keywords: Swagger,FAX.PLUS REST API
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+
+# faxplus-api
+This is the FAX.PLUS API v1 developed for third party developers and organizations. In order to have a better coding experience with this API, let's quickly go through some points:<br /><br /> - This API assumes **/accounts** as an entry point with the base url of **https://restapi.fax.plus/v1**. <br /><br /> - This API treats all date and times sent to it in requests as **UTC**. Also, all dates and times returned in responses are in **UTC**<br /><br /> - Once you have an access_token, you can easily send a request to the resource server with the base url of **https://restapi.fax.plus/v1** to access your permitted resources. As an example to get the user's profile info you would send a request to **https://restapi.fax.plus/v1/accounts/self** when **Authorization** header is set to **Bearer YOUR_ACCESS_TOKEN** and custom header of **x-fax-clientid** is set to YOUR_CLIENT_ID
+
+Note: this API is available to Enterprise clients only.
+
+## Requirements.
+
+Python 3.5+
+
+## Installation & Usage
+### pip install
+
+To install the package from PyPi
+
+```sh
+pip install faxplus-api
+```
+
+Alternatively, you can install it directly from Github
+
+```sh
+pip install git+https://github.com/alohi/faxplus-python.git
+```
+
+### Setuptools
+
+Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
+
+```sh
+git clone https://github.com/alohi/faxplus-python.git
+cd faxplus-python
+python setup.py install --user
+```
+(or `sudo python setup.py install` to install the package for all users)
+
+## Getting Started
+
+After [installing the library](#installation--usage), setting up your API access, and obtaining the token,
+you can try running the following code snippet:
+
+```python
+import faxplus
+from faxplus.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: fax_oauth
+configuration = faxplus.Configuration()
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_client = faxplus.ApiClient(configuration)
+api_client.set_default_header('x-fax-clientid', 'YOUR_CLIENT_ID')
+api_instance = faxplus.AccountsApi(api_client)
+
+try:
+    # Get account information of all non-admin members of your corporate account.
+    api_response = api_instance.get_accounts()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountsApi->get_accounts: %s\n" % e)
+```
+
+For more examples, see our sample Flask app at <https://github.com/alohi/faxplus-sample-python>
+
+## Documentation
+
+The API reference can be found on our website at <https://apidoc.fax.plus>
+
+# Author
+
+© 2020 Alohi SA (Geneva, Switzerland)
+
+https://www.alohi.com
+
+
