@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+mongo2json/__init__.py
+mongo2json/cleaner.py
+mongo2json/mongo2json.py
+mongo2json.egg-info/PKG-INFO
+mongo2json.egg-info/SOURCES.txt
+mongo2json.egg-info/dependency_links.txt
+mongo2json.egg-info/requires.txt
+mongo2json.egg-info/top_level.txt
