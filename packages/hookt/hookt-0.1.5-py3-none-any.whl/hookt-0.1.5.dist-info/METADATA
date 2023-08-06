@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: hookt
+Version: 0.1.5
+Summary: Asynchronous function hooks using decorators.
+Home-page: https://github.com/nanananisore/hookt
+License: MIT
+Keywords: hook,anyio,event,decorator,async
+Author: nanananisore
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: anyio (>=1.2.3,<2.0.0)
+Requires-Dist: wrapt (>=1.11.2,<2.0.0)
+Project-URL: Repository, https://github.com/nanananisore/hookt
+Description-Content-Type: text/markdown
+
+<p align="center">
+  <a href="https://pypi.org/project/hookt" alt="PyPI">
+    <img src="https://img.shields.io/pypi/v/hookt"/></a>
+  <a alt="Dependencies">
+    <img alt="Libraries.io dependency status for latest release" src="https://img.shields.io/librariesio/release/pypi/hookt"></a>
+  <a href="https://travis-ci.com/nanananisore/hookt" alt="Build Status">
+    <img src="https://travis-ci.com/nanananisore/hookt.svg?branch=master"/></a>
+  <a alt="License">
+    <img alt="PyPI - License" src="https://img.shields.io/pypi/l/hookt"></a>
+</p>
+
+`hookt` is an asynchronous event framework utilizing decorators.
+It uses `anyio`, so it is compatible with `asyncio`, `curio` and `trio`.
+For an up-to-date list of compatible backends,
+see [`anyio`](https://github.com/agronholm/anyio)
+
+## installation
+`pip install hookt`
+
