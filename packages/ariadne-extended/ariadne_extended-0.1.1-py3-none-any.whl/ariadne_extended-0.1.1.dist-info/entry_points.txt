@@ -1,0 +1,7 @@
+[console_scripts]
+bump-major=bump2versionmajor
+bump-minor=bump2versionminor
+bump-patch=bump2versionpatch
+test=pytest
+test-watch=ptw
+
