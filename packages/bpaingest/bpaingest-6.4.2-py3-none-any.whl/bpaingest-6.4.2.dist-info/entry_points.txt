@@ -1,0 +1,3 @@
+[console_scripts]
+bpa-ingest=bpaingest.cli:main
+
