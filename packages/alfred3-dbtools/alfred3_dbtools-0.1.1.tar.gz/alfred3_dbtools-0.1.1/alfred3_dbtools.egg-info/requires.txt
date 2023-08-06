@@ -1,0 +1,2 @@
+alfred>=1.0.0
+pymongo>=3.10
