@@ -1,0 +1,3 @@
+[console_scripts]
+flatpak-sync = flatpaksync.main:main
+
