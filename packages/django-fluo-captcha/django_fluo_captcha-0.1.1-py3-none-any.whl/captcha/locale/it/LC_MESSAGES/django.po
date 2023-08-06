@@ -1,0 +1,31 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-09 16:48+0200\n"
+"PO-Revision-Date: 2015-07-09 17:00+0200\n"
+"Last-Translator: Raffaele Salmaso <raffaele@salmaso.org>\n"
+"Language-Team: ITALIANO <it@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: fields.py:35
+msgid "Please check your math and try again."
+msgstr "Controlla il risultato e riprova"
+
+#: fields.py:36
+msgid "Enter a whole number."
+msgstr "Inserisci un numero intero."
+
+#: widgets.py:38
+#, python-brace-format
+msgid "Are you human? What is {x} {operator} {y}? "
+msgstr "Sei umano? Quanto fa {x} {operator} {y}? "
