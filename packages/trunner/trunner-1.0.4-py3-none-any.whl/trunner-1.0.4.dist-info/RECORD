@@ -1,0 +1,9 @@
+trunner/VERSION.txt,sha256=0bd7iPS59nWpAOQUOsdoohIYYjz-FwPKQxYjiMMnG9Y,6
+trunner/__init__.py,sha256=GIJJctu3RAiwTelN-44C3qFr8XhWFgTgyKbKN3wBEWs,172
+trunner/base.py,sha256=vQnA4NVzHDCoHAcswfgqeNXBNu74EkDRVgFEZDUhe7g,76
+trunner/dummy.py,sha256=2cU-yxN0hHQO3Z84T5jBmJhs72fxf_LD8HviAzKA_P8,283
+trunner/tbase.py,sha256=v2zyvz4ST2WC4YJa0tOXeElwPZmDLYZ35GmLi2N3VwE,1762
+trunner-1.0.4.dist-info/METADATA,sha256=YwoFV2IftRogmmNp1CiFDnWZDiaJZbKum7r_RsHmJZM,951
+trunner-1.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+trunner-1.0.4.dist-info/top_level.txt,sha256=tSjx2zYrsXB1KWrHbbIxlOpKjDHaJSbCZJH9hop9GSg,8
+trunner-1.0.4.dist-info/RECORD,,
