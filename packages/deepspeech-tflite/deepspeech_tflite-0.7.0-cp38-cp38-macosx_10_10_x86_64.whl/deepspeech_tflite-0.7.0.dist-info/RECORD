@@ -1,0 +1,10 @@
+deepspeech/__init__.py,sha256=VbM9uYNZJEetvTibMo-jAIwX3ZJlE8wbXTxTyP5y-Ps,10966
+deepspeech/_impl.cpython-38-darwin.so,sha256=BhGTSM3myU0Q5OYOmn8HB7NJIuYrAtqsfTUjFbcq4dE,82720
+deepspeech/client.py,sha256=-3FhlquAeC-nJi9hM7hY1X48fGmb7qHSpuihrYecYkQ,6111
+deepspeech/impl.py,sha256=nmDbJVPSflWkFYCwmbOnMZYUuLlBCjTqI_ux1KKeXSk,6543
+deepspeech/lib/libdeepspeech.so,sha256=suqkszbOYAVS57QEbt8Ifl6QtU0m6RND9mYbUVjENoo,5299852
+deepspeech_tflite-0.7.0.dist-info/METADATA,sha256=IHAEPmuvtHyQdf3ch5B5C3mWWpuogMGG8oJ_GcTDpSU,1417
+deepspeech_tflite-0.7.0.dist-info/WHEEL,sha256=m74vDwvjmwS5UUS3nyhxcYxmi3Z4M_EG89-RfyBwpiE,110
+deepspeech_tflite-0.7.0.dist-info/entry_points.txt,sha256=2LA7LnK4cLU3QjZZzstFv-c9Uehkm1AN1-SgBs2Syf4,55
+deepspeech_tflite-0.7.0.dist-info/top_level.txt,sha256=B30ih_hZ1TGIRlPsXwDZMBh1XVkFt8cA0T5s3POEE9Q,11
+deepspeech_tflite-0.7.0.dist-info/RECORD,,
