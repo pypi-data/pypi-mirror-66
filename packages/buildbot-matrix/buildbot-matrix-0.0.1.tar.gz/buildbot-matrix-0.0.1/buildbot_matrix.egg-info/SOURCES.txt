@@ -1,0 +1,9 @@
+README.md
+setup.py
+buildbot_matrix/__init__.py
+buildbot_matrix/reporter.py
+buildbot_matrix.egg-info/PKG-INFO
+buildbot_matrix.egg-info/SOURCES.txt
+buildbot_matrix.egg-info/dependency_links.txt
+buildbot_matrix.egg-info/entry_points.txt
+buildbot_matrix.egg-info/top_level.txt
