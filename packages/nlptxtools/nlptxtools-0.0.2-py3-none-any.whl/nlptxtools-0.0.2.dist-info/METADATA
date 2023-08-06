@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: nlptxtools
+Version: 0.0.2
+Summary: NLP tools for Russian language
+Home-page: https://github.com/Midriaz/nlptxtools
+Author: Midriaz
+Author-email: scome@inbox.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# nlptxtools
+Tools for Russian NLP
+
+## Changelog
+0.0.2 fixed last elements issue
+
+
