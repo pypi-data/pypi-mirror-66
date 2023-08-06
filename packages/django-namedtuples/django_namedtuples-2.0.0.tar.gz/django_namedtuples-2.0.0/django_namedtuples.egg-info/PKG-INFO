@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: django-namedtuples
+Version: 2.0.0
+Summary: Django namedtuples queryset
+Home-page: https://github.com/yavia/django-namedtuples
+Author: Konstantin Gukov
+Author-email: gukkos@gmail.com
+License: MIT
+Download-URL: https://github.com/yavia/django-namedtuples/archive/2.0.0.tar.gz
+Description: UNKNOWN
+Keywords: django queryset namedtuple
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Framework :: Django :: 1.8
+Classifier: Framework :: Django :: 1.9
+Classifier: Framework :: Django :: 1.10
+Classifier: Framework :: Django :: 1.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
