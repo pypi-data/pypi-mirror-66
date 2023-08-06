@@ -1,0 +1,10 @@
+setup.py
+jzrkingsta_prob/Binomialdistribution.py
+jzrkingsta_prob/Gaussiandistribution.py
+jzrkingsta_prob/Generaldistribution.py
+jzrkingsta_prob/__init__.py
+jzrkingsta_prob.egg-info/PKG-INFO
+jzrkingsta_prob.egg-info/SOURCES.txt
+jzrkingsta_prob.egg-info/dependency_links.txt
+jzrkingsta_prob.egg-info/not-zip-safe
+jzrkingsta_prob.egg-info/top_level.txt
