@@ -1,0 +1,11 @@
+mypackage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypackage/myanothermodule.py,sha256=F20d6sX43jb9k066_SfTn5kQSVJZuV3HWp5rU1PzcqY,90
+mypackage/mymodule.py,sha256=p2Ro-cq1HiBMQr9IuKG_Zj_J5qKamy8qVgcYUBgTHBE,83
+pancopackage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pancopackage/myanothermodule.py,sha256=1Ngt2rXema8efnFqC8CVrr97bIgb9YqBVdpsKn7TFSg,87
+pancopackage/mymodule.py,sha256=kdl1AnI70hETaiSUAu4U7aqxSiX0RY9aAG-HdJUct4Y,539
+pancopackage-1.2.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+pancopackage-1.2.dist-info/METADATA,sha256=XAeKx1mZvRrzzSEuBmurkfPC54REkn2syBZ5gtdJBIo,578
+pancopackage-1.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+pancopackage-1.2.dist-info/top_level.txt,sha256=Zowq2sAcfWlIuPkrz6YtJE5Fh_d2iRJuXkdzX8VUK9E,13
+pancopackage-1.2.dist-info/RECORD,,
