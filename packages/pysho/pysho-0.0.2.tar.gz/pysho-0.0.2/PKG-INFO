@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pysho
+Version: 0.0.2
+Summary: A Pure python shell
+Home-page: https://gitlab.com/cunity/pysho
+Author: Ian Norton
+Author-email: inorton@gmail.com
+License: License :: OSI Approved :: MIT License
+Description: A python based shell
+Platform: any
