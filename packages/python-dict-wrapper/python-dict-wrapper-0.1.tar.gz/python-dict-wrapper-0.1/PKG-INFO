@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: python-dict-wrapper
+Version: 0.1
+Summary: Wraps python dictionary keys are attributes
+Home-page: https://github.com/brettschneider/python_dict_wrapper
+Author: Steve Brettschneider
+Author-email: steve@bluehousefamily.com
+License: UNKNOWN
+Download-URL: https://github.com/brettschneider/python_lazy_streams/archive/0.1.tar.gz
+Description: UNKNOWN
+Keywords: dictionary,wrapper,attributes,enforce
+Platform: UNKNOWN
