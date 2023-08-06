@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: wikt-cli
+Version: 0.0.2
+Summary: An English Wiktionary frontend for CLI.
+Home-page: https://git.sr.ht/~fkfd/wikt-cli
+Author: fakefred
+Author-email: fkfd@macaw.me
+License: MIT
+Project-URL: LiberaPay, https://liberapay.com/fakefred/donate
+Keywords: wiktionary dictionary cli
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: wiktionaryparser
+Requires-Dist: colored
+
+# wikt-cli
+
+## Installation
+
+1. From pypi: `pip install wikt-cli`
+
+2. From source: clone this repo, run `python setup.py bdist_wheel`, 
+
+## Usage
+
+`wikt <word>`
+
+## Example output
+
+The output of 
+
+```
+Etymology:
+    From meta-, back-formed from metaphysics.
+
+    Definitions:
+        (adjective) meta (comparative more meta, superlative most meta) (informal)
+        Self-referential; structured analogously, but at a higher level.
+
+Etymology:
+    From Latin mēta.
+
+    Definitions:
+        (noun) meta (plural metas) Boundary marker. Either of the conical columns at
+        each end of a Roman circus.
+
+Etymology:
+    Clipping of metagame.
+
+    Definitions:
+        (noun) meta (plural metas) (video games) Metagame; the most effective tactics
+        and strategies used in a competitive video game.
+
+        (adjective) meta (comparative more meta, superlative most meta) (video games)
+        Prominent in the metagame; effective and frequently used in competitive
+        gameplay.
+
+Etymology:
+    Clipping of metaoidioplasty.
+
+    Definitions:
+        (noun) meta (plural metas) (informal) Metoidioplasty.
+```
+
+## Contributing
+
+1. Using `git.sr.ht`, you don't need an account to contribute! Send "issues" as normal emails (remember to use plaintext, not HTML), and "pull/merge requests" as a patch (see [git-send-email](https://git-send-email.io).
+
