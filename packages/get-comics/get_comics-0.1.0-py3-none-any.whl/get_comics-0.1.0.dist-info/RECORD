@@ -1,0 +1,9 @@
+get_comics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+get_comics/__main__.py,sha256=dSBRhnIIzYNgs9L3SeAXwWoy3yunVHYp1p4esPQ8YGs,6181
+get_comics/library.txt,sha256=JzgnR2k3a8_IjBOsubIaOVSSpDGTz9-JA6brSyyQNE4,1567364
+get_comics-0.1.0.dist-info/LICENSE,sha256=J3ZZgIS1ftdJPbgZatVKPLpFLIlQFZisP3fqQ_ghSug,1069
+get_comics-0.1.0.dist-info/METADATA,sha256=B0wAP7xmjrb8iznxiNJ6rKDgXqSAfeJITE3F5SMyOuI,389
+get_comics-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+get_comics-0.1.0.dist-info/entry_points.txt,sha256=b8g_CqB3RAhshB1by07Jx3DJX2m75ha_Qg9A3N2XmGg,57
+get_comics-0.1.0.dist-info/top_level.txt,sha256=zQudP0L0aNHtWFnOzN5PuLPGDzxrm_I871gYnnc_KyU,11
+get_comics-0.1.0.dist-info/RECORD,,
