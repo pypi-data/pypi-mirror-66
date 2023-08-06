@@ -1,0 +1,8 @@
+click
+auditwheel
+
+[dev]
+wheel
+
+[test]
+pytest
