@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: nsmpy
+Version: 1.0.3
+Summary: UNKNOWN
+Home-page: https://github.com/sciencepi/NsmPy
+Author: SciencePi
+Author-email: sciancepi@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+## NsmPy Version 1.0.3: What's new and how do I use it?
+NsmPy is a big little python library designed to make scientific, mathematical, and numerical equations
+easier to grasp. This module, as of this version (release 1.0.3) only contains one datatype - matricies.
+(more will be comming soon hopefully.)
+
+#### Installation
+NsmPy is availiable via the pip command. However, there is one other library needed - NumPy.
+I highly recommend using NumPy version 1.16.1 because it is the most stable. Installing this 
+version will be covered in the installation steps.
+
+Install with:
+```sh
+(mac/linux)
+#$ sudo pip uninstall numpy
+#$ sudo pip install numpy==1.16.1
+#$ sudo pip install nsmpy==1.0.2
+(PC)
+#C:> pip uninstall numpy
+#C:> pip install numpy==1.16.1
+#C:> pip install nsmpy==1.0.2
+```
+#### What's new?
+This update does not add much to the library other than bug fixes.
+datatype.
+#### Using the library
+The NsmPy library offers lots of different features for the matrix datatype - you can run callbacks on the elements,
+you can reshape matricies, and you can even treat the class like a list!
+
+First off, how do you create a matrix?
+It's as simple as typing
+```python
+from nsmpy import matrix
+x = matrix([1,2,3,4],shape=(2,2))
+```
+Just like that we just created a 2x2 matrix! It's that simple!
+We can also do matrix multiplication - a common mathematical practice when working with matricies. We can do this
+with the following code:
+```python
+from nsmpy import matrix
+x = matrix([2,3,4,5],shape=(2,2))
+y = matrix([3,4,5,6],shape=(2,2))
+
+z = x.matrix_mult(y) # matrix_mult(n) -> matrix()
+```
+That's it!
+When you actually compare this library to the NumPy library, you will see that it is a much better option for matricies.
+Here is an example of defining matricies in both modules.
+NumPy:
+```python
+mat = np.array([[2,2],
+                [2,2]])
+```
+NsmPy:
+```
+mat = matrix([2,2,2,2],(2,2))
+```
+As you can see, the NumPy version, while being excellent, just doesn't look as good as the NsmPy version. It also is less
+efficient due to more typing being needed.
+#### Method documentation
+```
+matrix(array, shape)                  -> matrix
+matrix.reshape(new_shape)             -> matrix{new shape}
+matrix.flatten()                      -> matrix{new shape}
+matrix.add_element(element,new_shape) -> matrix{el+1, new shape}
+matrix.get_type()                     -> dtype
+matrix.matrix_mult(b_mat,a_mat=None)  -> matrix{new shape, new values}
+matrix.as_numpy_array()               -> np.array(matrix)
+matrix.multiply(mat_b,mat_a=None)     -> matrix{new values, a_matrix shape}
+matrix.convert_to_list()              -> list{matrix elements}
+matrix.inverse()                      -> matrix{inverse elements}
+matrix.generate_identity(r,c,start)   -> matrix{identity matrix}
+matrix.run_function_on_elements(func) -> matrix{other elements}
+matrix.convert_type(new_type)         -> matrix{new type}
+matrix.shape                          -> shape
+matrix.as_array                       -> array-type matrix
+matrix.temp                           -> nothing to see here
+matrix.type                           -> the current matrix type.
+```
+Have fun!
+
