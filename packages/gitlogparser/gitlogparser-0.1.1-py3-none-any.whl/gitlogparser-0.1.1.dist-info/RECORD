@@ -1,0 +1,12 @@
+gitlogparser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitlogparser/main.py,sha256=vICS7vZ1SEmi2R3lIDv2OA5sMHL9-v4r_R53NvnK9yc,574
+gitlogparser/models.py,sha256=CTB6SRM06NYFb9kMfTH5biomcQdHp3uzsvIrzT5HUIM,2667
+gitlogparser/parser.py,sha256=Wp3wRiX0zReor5AjblhHlzzLXm-zoGuzqd9-qrdVmy0,9006
+gitlogparser/stats.py,sha256=TyfZRaEMltHxPpgK5JOtkfrRFCdpiLO5LcqOhlYbgyY,52
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_gitLogParser.py,sha256=w99jcdezENY_2wev8x9WBEicBXizIAn3hyaPQhMHxuE,4541
+gitlogparser-0.1.1.dist-info/METADATA,sha256=fTdBg2LgzoBZg9WJ4tLo6fP_18p1Jcy7UYGFQC9gkz0,3929
+gitlogparser-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gitlogparser-0.1.1.dist-info/entry_points.txt,sha256=4zgjIROUufnaoVfNIRKp8E0AOUgPFjsDAYYYpd-fFTE,57
+gitlogparser-0.1.1.dist-info/top_level.txt,sha256=1jf4BIyVWpNB9_QejISQpKfzPRfVE44mOr_1vjxdsg4,19
+gitlogparser-0.1.1.dist-info/RECORD,,
