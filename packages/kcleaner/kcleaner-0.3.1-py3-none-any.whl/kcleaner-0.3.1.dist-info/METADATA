@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: kcleaner
+Version: 0.3.1
+Summary: UNKNOWN
+Home-page: https://fancywhale.ca/
+Author: Gui Martins
+Author-email: gui.martins.94@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Click
+Requires-Dist: iterfzf
+Requires-Dist: pyyaml
+
+UNKNOWN
+
+
