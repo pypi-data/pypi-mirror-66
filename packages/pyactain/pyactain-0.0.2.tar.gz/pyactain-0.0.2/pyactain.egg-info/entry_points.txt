@@ -1,0 +1,5 @@
+
+    [sqlalchemy.dialects]
+    actain.pyodbc = actain.dialect:PyODBCActain
+    actain.turbodbc = actain.dialect:TurbODBCActain
+    

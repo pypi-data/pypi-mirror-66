@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pyactain
+Version: 0.0.2
+Summary: Python SQLAlchemy Dialect for Actain PSQL
+Home-page: https://github.com/jrboes/pyactain
+Author: Jacob Boes
+Author-email: jacobboes@gmail.com
+License: MIT
+Download-URL: https://github.com/jrboes/pyactain/archive/v0.0.2.tar.gz
+Description: # PyActain
+        Python 3 SQLAlchemy Dialect for Actain Pervasive SQL
+        
+        ### Pandas Example:
+        
+        
+        ```python
+        import sqlalchemy
+        import pandas as pd
+        
+        actain = sqlalchemy.create_engine(
+            'actain+pyodbc//username:password@mydsn')
+        
+        df = pd.read_sql_table('table_name', con=actain)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
