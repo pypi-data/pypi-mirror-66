@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: neat-py
+Version: 0.1
+Summary: A TAPS conforming transport system building on NEAT
+Home-page: https://github.com/theagilepadawan/neat_python
+Author: Michael Gundersen
+Author-email: michael.nesodden@gmail.com
+License: MIT
+Download-URL: https://pypi.org/project/neat_py/
+Keywords: TAPS,NEAT,transport system
+Platform: UNKNOWN
+Requires-Dist: colorama
+
+UNKNOWN
+
+
