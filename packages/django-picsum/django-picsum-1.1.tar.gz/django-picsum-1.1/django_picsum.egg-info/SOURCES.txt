@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.py
+django_picsum.egg-info/PKG-INFO
+django_picsum.egg-info/SOURCES.txt
+django_picsum.egg-info/dependency_links.txt
+django_picsum.egg-info/not-zip-safe
+django_picsum.egg-info/requires.txt
+django_picsum.egg-info/top_level.txt
+image_wrapper/__init__.py
+image_wrapper/conf.py
+image_wrapper/tests.py
+image_wrapper/templatetags/__init__.py
+image_wrapper/templatetags/image_wrapper.py
