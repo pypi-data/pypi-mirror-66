@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: OpticsLab
+Version: 0.0.0
+Summary: Simulate Optics Physics Experements
+Home-page: https://azizalqasem.github.io/OpticsLab/index.html
+Author: Abdulaziz Alqasem
+Author-email: OpticsLab.py@gmail.com
+License: UNKNOWN
+Project-URL: Documentation, https://azizalqasem.github.io/OpticsLab/index.html
+Project-URL: Source, https://github.com/AzizAlqasem/OpticsLab
+Keywords: OpticsLab,math,Optics,Laser,Ultrafst Opticsphysics,Science,Engineering,Scientific Research
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: FormulaLab
+
+# OpticsLab
+Simulate Optical Experiments
+
+### Current Status
+  Under Development!
+
+#### TimeLine
+  2020, Apr: Module created.
+
+
