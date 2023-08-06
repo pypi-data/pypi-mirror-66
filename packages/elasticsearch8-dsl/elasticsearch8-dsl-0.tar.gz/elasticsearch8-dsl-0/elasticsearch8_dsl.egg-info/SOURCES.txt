@@ -1,0 +1,5 @@
+setup.py
+elasticsearch8_dsl.egg-info/PKG-INFO
+elasticsearch8_dsl.egg-info/SOURCES.txt
+elasticsearch8_dsl.egg-info/dependency_links.txt
+elasticsearch8_dsl.egg-info/top_level.txt
