@@ -1,0 +1,10 @@
+roper/__init__.py,sha256=WuRCi92EphvjksWYMp3KugGWrJc8RGcZjjQc0sHe0Ak,43
+roper/__main__.py,sha256=CNvn7Z_ole3b26x9nWr3jNDk8nzVxm0OPN8GvA5ERcI,411
+roper/lib.py,sha256=154-mqcSL65oK1QJyhkpEoGNqMY2rFXSaoiamLENkBE,1845
+roper/tasks.py,sha256=gdaaWJ99E6hyYjrxN4oC8mM2R9RdCgVKYB50ElRjy9g,3129
+roper-0.1.5.dist-info/LICENSE,sha256=Y-Yf_kDTGD8GhBIIhedCi6BBvDzZz_1pM-Ke7mba2Hs,35079
+roper-0.1.5.dist-info/METADATA,sha256=qd6i1ruiBY0IxindfhofZNO4tpjo-AvUm3a6-lT4SSo,1393
+roper-0.1.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+roper-0.1.5.dist-info/entry_points.txt,sha256=zPOE0d9qVaEjPy-anLmcqZ8yBgjulQVxpoGw3tKjMz4,54
+roper-0.1.5.dist-info/top_level.txt,sha256=ExbIfVw2elMP0pOwDOr-iWV5g3z3FEUYxUQqIYYz37E,6
+roper-0.1.5.dist-info/RECORD,,
