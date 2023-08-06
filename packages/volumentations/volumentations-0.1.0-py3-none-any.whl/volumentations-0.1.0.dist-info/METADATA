@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: volumentations
+Version: 0.1.0
+Summary: Point augmentations library as hard-fork of albu-team/albumentations
+Home-page: https://github.com/kumuji/volumentations
+License: MIT
+Author: kumuji
+Author-email: alexey@nekrasov.dev
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: importlib-metadata (>=1.6.0,<2.0.0)
+Requires-Dist: numpy (>=1.18.3,<2.0.0)
+Requires-Dist: pyyaml (>=5.3.1,<6.0.0)
+Project-URL: Documentation, https://github.com/kumuji/volumentations
+Project-URL: Repository, https://github.com/kumuji/volumentations
+Description-Content-Type: text/x-rst
+
+[![Tests](https://github.com/kumuji/volumentations/workflows/Tests/badge.svg)](https://github.com/kumuji/volumentations/actions?workflow=Tests)
+[![Codecov](https://codecov.io/gh/kumuji/volumentations/branch/master/graph/badge.svg)](https://codecov.io/gh/kumuji/volumentations)
+
+
