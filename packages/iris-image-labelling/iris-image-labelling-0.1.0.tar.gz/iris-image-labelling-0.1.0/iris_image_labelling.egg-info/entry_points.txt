@@ -1,0 +1,3 @@
+[console_scripts]
+iris = iris.__main__:main
+
