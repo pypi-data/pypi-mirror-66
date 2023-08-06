@@ -1,0 +1,26 @@
+[package]
+name = "milagro-bls-binding"
+version = "0.4.0"
+edition = "2018"
+authors = ["chihchengliang@gmail.com"]
+
+[package.metadata.maturin]
+classifier = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.7",
+]
+maintainer = "Chih-Cheng Liang"
+maintainer-email = "chihchengliang@gmail.com"
+requires-python = ">=3.6"
+project-url = ["https://github.com/ChihChengLiang/milagro_bls_binding/"]
+
+[lib]
+name = "milagro_bls_binding"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.9.2", features = ["extension-module"] }
+milagro_bls = {git = "https://github.com/sigp/milagro_bls", tag= "v1.0.0" }

@@ -1,0 +1,6 @@
+.python-version
+.vscode/
+__pycache__/
+target/
+*.lock
+.key_cache
