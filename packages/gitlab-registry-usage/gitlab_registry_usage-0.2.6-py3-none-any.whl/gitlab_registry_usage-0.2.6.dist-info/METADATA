@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: gitlab-registry-usage
+Version: 0.2.6
+Summary: This is a package for querying the size of repositories in a GitLab registry.
+Home-page: https://github.com/sciapp/gitlab-registry-usage
+Author: Ingo Heimbach
+Author-email: i.heimbach@fz-juelich.de
+License: MIT
+Keywords: Git,GitLab,Docker,Registry,disk capacity
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Topic :: System :: Systems Administration
+Requires-Python: ~=3.3
+Requires-Dist: pyOpenSSL
+Requires-Dist: requests
+Requires-Dist: typing
+
+UNKNOWN
+
+
