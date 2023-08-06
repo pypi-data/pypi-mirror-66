@@ -1,0 +1,10 @@
+more.pony-0.3-py3.7-nspkg.pth,sha256=sFy3xzEvXCJJjGujIINXjAWeal7lqjM4oe2LDr513io,529
+more/pony/__init__.py,sha256=Cj0UuelEmm2hAzElc1eRnmRFwSY6Aomi2QuO79APYpo,48
+more/pony/app.py,sha256=x37tWwUiQH5qpycnsgRVc0nugV6ubawAX33IaRyZAt4,866
+more/pony/tests/test_pony.py,sha256=rpt0D5nmpp9CVp6ShKSlqU8XQ9DZo9BXHsrVYyy3J1g,3497
+more.pony-0.3.dist-info/LICENSE.txt,sha256=HH2A0Y2q8f2SBHZf7U4BoentRQlzS6hxOQ40aTHGF1A,1508
+more.pony-0.3.dist-info/METADATA,sha256=TXbojhrpPMt9z0sdszBim_7Xu4P79qbijAu93CK_WJM,7510
+more.pony-0.3.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+more.pony-0.3.dist-info/namespace_packages.txt,sha256=I5YJnGwIT6S5vqyfDVLPO-nPjUcEDvEniD1TK1eQzXQ,5
+more.pony-0.3.dist-info/top_level.txt,sha256=I5YJnGwIT6S5vqyfDVLPO-nPjUcEDvEniD1TK1eQzXQ,5
+more.pony-0.3.dist-info/RECORD,,
