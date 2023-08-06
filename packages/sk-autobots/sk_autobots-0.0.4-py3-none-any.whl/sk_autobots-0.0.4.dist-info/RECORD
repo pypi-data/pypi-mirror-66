@@ -1,0 +1,9 @@
+skautobots/__init__.py,sha256=TjHTIS2Bv4lBuPRT4XcLYnS75sMCGRXDmO-_GKdn0Ww,29
+skautobots/date_processing/__init__.py,sha256=dKx-9w71N9Ne_vhTKYDGNiz9cARHJuprDgZ2d3mmXHY,275
+skautobots/date_processing/_date_fourier.py,sha256=HLrDOiyqz6aLiHrCTvCgUPvXyUbts7CXsTG-ytP7N-0,5028
+skautobots/date_processing/_date_linear.py,sha256=hqP7zpoElLHHyo94JLbfiAm91nbrM6rdXFj_Rlkzjlw,3936
+sk_autobots-0.0.4.dist-info/LICENSE,sha256=rYKsdp6A5PKVy7-KEKtysTqCLTplLrkuH5ih5XZ3ycQ,1074
+sk_autobots-0.0.4.dist-info/METADATA,sha256=4T7evlv9J4fbDurTAHw0WeS_Kulg9KhiQW3GtGGRyOs,783
+sk_autobots-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sk_autobots-0.0.4.dist-info/top_level.txt,sha256=KP7cu74l5lqG8vQpV0FEcN07djncRARlDI5-WXom4dM,11
+sk_autobots-0.0.4.dist-info/RECORD,,
