@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h3>Click to generate Environment</h3>
+    <form action="{{ url_for('env_generate') }}">
+        <!--input type="submit" value="Submit"-->
+        <button type="submit" class="btn btn-primary" value="Submit">Generate</button>
+    </form>
+{% endblock %}
