@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: pyTSFoil
+Version: 0.1.0
+Summary: This is a python interface of TSFOIL2
+Home-page: UNKNOWN
+Author: Runze LI
+Author-email: swayli94@gmail.com
+License: MIT
+Download-URL: https://github.com/swayli94/pyTSFoil
+Description: UNKNOWN
+Keywords: CFD,TSFOIL2,transonic small disturbance theory
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3

@@ -1,0 +1,11 @@
+README.md
+setup.py
+pyTSFoil/TSfoil.py
+pyTSFoil/__init__.py
+pyTSFoil/tsfoil2-modify.f
+pyTSFoil/tsfoil2.exe
+pyTSFoil.egg-info/PKG-INFO
+pyTSFoil.egg-info/SOURCES.txt
+pyTSFoil.egg-info/dependency_links.txt
+pyTSFoil.egg-info/requires.txt
+pyTSFoil.egg-info/top_level.txt
