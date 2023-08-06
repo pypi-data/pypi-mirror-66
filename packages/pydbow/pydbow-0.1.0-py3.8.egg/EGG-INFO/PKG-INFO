@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: pydbow
+Version: 0.1.0
+Summary: Python Implementation of Bag of Binary Words
+Home-page: https://github.com/goktug97/PyDBoW
+Author: Göktuğ Karakaşlı
+Author-email: karakasligk@gmail.com
+License: MIT
+Description: Bags of Binary Words
+        ===================================
+        
+        PyDBoW is a Python implementation of Bags of Binary Words algorithm.
+        
+        ## Requirements
+        
+        - OpenCV
+        - numpy
+        
+        ## Installation
+        
+        ``` bash
+        pip install dbow
+        ```
+        
+        ## Usage
+        
+        Refer to demo.py or demo.ipynb for example usage.
+        
+        ## Running tests
+        
+        ``` bash
+        python -m pytest
+        ```
+        
+        ## License
+        PyDBoW is licensed under the MIT License.
+        
+        Images are taken from https://github.com/commaai/comma10k 
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
