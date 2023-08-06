@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+allennlp_models/__init__.py
+allennlp_models/version.py
+allennlp_models.egg-info/PKG-INFO
+allennlp_models.egg-info/SOURCES.txt
+allennlp_models.egg-info/dependency_links.txt
+allennlp_models.egg-info/not-zip-safe
+allennlp_models.egg-info/requires.txt
+allennlp_models.egg-info/top_level.txt
