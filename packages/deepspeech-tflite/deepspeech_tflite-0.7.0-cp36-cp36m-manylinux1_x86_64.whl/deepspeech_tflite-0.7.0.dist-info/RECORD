@@ -1,0 +1,10 @@
+deepspeech/__init__.py,sha256=VbM9uYNZJEetvTibMo-jAIwX3ZJlE8wbXTxTyP5y-Ps,10966
+deepspeech/_impl.cpython-36m-x86_64-linux-gnu.so,sha256=p8CllXO_kn2ldhcmYzMUJz-Pu6lxZXmL92PJ4ReP9uc,328757
+deepspeech/client.py,sha256=-3FhlquAeC-nJi9hM7hY1X48fGmb7qHSpuihrYecYkQ,6111
+deepspeech/impl.py,sha256=nmDbJVPSflWkFYCwmbOnMZYUuLlBCjTqI_ux1KKeXSk,6543
+deepspeech/lib/libdeepspeech.so,sha256=QcNmPJeFN0gsMzg7xEJ1E0tP_VgetuN9CbK1_0bSN_g,2906680
+deepspeech_tflite-0.7.0.dist-info/METADATA,sha256=fLGeMxYZqsQRk9SuBlZbKGrGIwqbyvMNu8CwJavE3qk,1397
+deepspeech_tflite-0.7.0.dist-info/WHEEL,sha256=AKoo51LvHJJJz3_DqlQwz4MB2e4xQub2c35_Bx40pVs,109
+deepspeech_tflite-0.7.0.dist-info/entry_points.txt,sha256=2LA7LnK4cLU3QjZZzstFv-c9Uehkm1AN1-SgBs2Syf4,55
+deepspeech_tflite-0.7.0.dist-info/top_level.txt,sha256=B30ih_hZ1TGIRlPsXwDZMBh1XVkFt8cA0T5s3POEE9Q,11
+deepspeech_tflite-0.7.0.dist-info/RECORD,,
