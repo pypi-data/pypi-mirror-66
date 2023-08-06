@@ -1,0 +1,16 @@
+appdirs
+toml
+click
+prettytable
+colorama
+msgpack
+
+[dev]
+black
+pre-commit
+pydocstyle
+
+[docs]
+sphinx
+sphinx-gallery>=0.3.0
+sphinx-rtd-theme
