@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+OctopusAgile/Agile.py
+OctopusAgile/__init__.py
+OctopusAgile.egg-info/PKG-INFO
+OctopusAgile.egg-info/SOURCES.txt
+OctopusAgile.egg-info/dependency_links.txt
+OctopusAgile.egg-info/requires.txt
+OctopusAgile.egg-info/top_level.txt
