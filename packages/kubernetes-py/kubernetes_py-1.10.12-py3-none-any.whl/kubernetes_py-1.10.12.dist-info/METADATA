@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: kubernetes-py
+Version: 1.10.12
+Summary: A python module for Kubernetes.
+Home-page: https://github.com/mnubo/kubernetes-py
+Author: mnubo inc.
+Author-email: it-admin@mnubo.com
+License: UNKNOWN
+Download-URL: https://github.com/mnubo/kubernetes-py/tarball/1.10.12
+Keywords: kubernetes_py,k8s,kubernetes
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: six (>=1.10.0)
+Requires-Dist: PyYAML (>=3.13)
+Requires-Dist: requests (>=2.10.0)
+Requires-Dist: uuid (>=1.30)
+Requires-Dist: python-dateutil (>=2.6.0)
+
+UNKNOWN
+
+
