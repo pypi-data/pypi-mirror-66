@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: recipebook
+Version: 0.1.0
+Summary: I'm writing a cookbook to learn Python, Postgresql, and other potential tools.
+Author: Mike Martino
+Author-email: mikemartino86@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8

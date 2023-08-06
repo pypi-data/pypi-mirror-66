@@ -1,0 +1,10 @@
+recipebook/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+recipebook/constants.py,sha256=4cla52_Jl1mSWFLOLUVIlLyr3jFVMM4znPe55hA0jjE,65
+recipebook/cookbook.py,sha256=DHxhAtBy9DZKUWswXVPGApcjWvE_9Q1b485my2Rr2W8,247
+recipebook/example.py,sha256=XS3wegF89QsoJAUAfwcE18B8MSqKWPxDnf1HXo4xhi4,579
+recipebook/ingredient.py,sha256=2HR76AXVAhJUoMSuOY35Ww1usWDQkuEmB6cGXqOiFzk,509
+recipebook/recipe.py,sha256=xy9_XH6Itz3EAISgrPdw1paux0vSZVzG41ewX8tcfLA,678
+recipebook/toc.py,sha256=KWU5b5xB7U6w8yopF0P_jkyik6bbY6NtHyscUFKqYxA,634
+recipebook-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+recipebook-0.1.0.dist-info/METADATA,sha256=_JabzlqsThQfRIUgGwgstw5TeA0awQBx580kbiHxqLY,377
+recipebook-0.1.0.dist-info/RECORD,,
