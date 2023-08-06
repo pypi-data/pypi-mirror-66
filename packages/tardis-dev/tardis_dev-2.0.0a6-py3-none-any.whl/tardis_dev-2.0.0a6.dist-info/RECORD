@@ -1,0 +1,8 @@
+tardis_dev/__init__.py,sha256=NH9xiz3H3gupD2QigW1YSnVxlyR_9hw6ZU6m1jaaWU0,81
+tardis_dev/datasets/__init__.py,sha256=N8bsxEvrhKlvp-KKCozDbwC5uvYiuftYXvID3p_c9Uc,55
+tardis_dev/datasets/download.py,sha256=pOsypMAE5wETAA7_bWYmogDfrJoRftiTrNGkdLNmcLo,6203
+tardis_dev/get_exchange_details.py,sha256=zwM0PFH0cWuwA8kbvvOU69qyl8dUDCDq3qf_z-FFrhg,415
+tardis_dev-2.0.0a6.dist-info/LICENSE,sha256=k0P1sbYupRWlxoESvbYq2UzoMW6MXA84LltqR-4mEo4,17096
+tardis_dev-2.0.0a6.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+tardis_dev-2.0.0a6.dist-info/METADATA,sha256=q3HcyECrzRS1YecqdIqCopZR1PPxt9Aqq8ri15LdeAw,7958
+tardis_dev-2.0.0a6.dist-info/RECORD,,
