@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: cfb_predictor
+Version: 0.2.1
+Summary: Rates college football teams
+Home-page: https://github.com/sbischof/cfb_predictor
+Author: Steven Bischoff
+Author-email: steven.m.bischoff@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
