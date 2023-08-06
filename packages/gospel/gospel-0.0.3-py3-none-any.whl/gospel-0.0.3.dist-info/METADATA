@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: gospel
+Version: 0.0.3
+Summary: The Gospel of Jesus Christ
+Home-page: https://github.com/CodeForFaith/gospel
+Author: CodeForFaith
+Author-email: contact@codeforfaith.com
+License: Unlicensed
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: PyInquirer
+
+# Gospel
+
+[CodeForFaith.com](https://codeforfaith.com)
+
+The Gospel of Jesus Christ.
+
+
