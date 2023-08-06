@@ -1,0 +1,9 @@
+---
+all:
+  hosts:
+    # infrastructure
+    infrastructure1-host:
+    infrastructure2-host:
+    # bind
+    external-host:
+    bind-client-host:
