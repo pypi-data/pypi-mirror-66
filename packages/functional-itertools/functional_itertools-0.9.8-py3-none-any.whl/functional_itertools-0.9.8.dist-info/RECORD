@@ -1,0 +1,11 @@
+functional_itertools/__init__.py,sha256=8xZfapd5mDVLHaZbEszWrSADUKymsk6obXNRTgTmq9s,689
+functional_itertools/cattrs.py,sha256=kWejb8StZIKmtDQlE4EViSVvG3f52UxY_BZpGWIu90Y,2153
+functional_itertools/classes.py,sha256=yxEzDKX5TsamwgXrIPkZ-kG0XHhHfzKDt8oUHusYqio,53405
+functional_itertools/compat.py,sha256=6znKBGFg5hdVY2CeaP7ldPLFo-6TKh8e1fIMCUs7e74,771
+functional_itertools/errors.py,sha256=fJRMwXaliMNR_N84V0EyU--tgomAXYJ1Pva0AX7cnD4,357
+functional_itertools/methods.py,sha256=zd30LcwaA6-82p74K_I0qRx9ikJG5CvAZXXiYAqDIH4,2902
+functional_itertools/utilities.py,sha256=IDqC1XXyEumiafpWg_87BWADg0i7H2lJh3GToXe4QbI,1373
+functional_itertools-0.9.8.dist-info/METADATA,sha256=BiawJzD3L1J-0ZRXQM-P1Z7_e4VlSTxmLzxmCNINunI,439
+functional_itertools-0.9.8.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+functional_itertools-0.9.8.dist-info/top_level.txt,sha256=LaI5KN1TCaIrub-gYcm7fRSYz2jmppUJr4hiAVo9t2Y,21
+functional_itertools-0.9.8.dist-info/RECORD,,
