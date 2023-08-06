@@ -1,0 +1,8 @@
+camelot-py>=0.7
+click>=7.1
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+opencv-python>=4.2
+python-magic>=0.4
+validators>=0.14.3
