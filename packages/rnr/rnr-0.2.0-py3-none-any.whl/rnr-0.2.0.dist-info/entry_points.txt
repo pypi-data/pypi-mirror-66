@@ -1,0 +1,3 @@
+[console_scripts]
+rnr = rnr.__main__:main
+
