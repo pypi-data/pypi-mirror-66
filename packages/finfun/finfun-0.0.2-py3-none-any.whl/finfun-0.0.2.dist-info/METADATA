@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: finfun
+Version: 0.0.2
+Summary: Some useful financial functions
+Home-page: https://github.com/techscene/finfun
+Author: Stefan Trost
+Author-email: stefan@techscene.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# finfun
+
+
