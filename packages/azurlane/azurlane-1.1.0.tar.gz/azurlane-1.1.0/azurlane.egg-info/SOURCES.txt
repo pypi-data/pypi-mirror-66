@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+azurlane/__init__.py
+azurlane/azurapi.py
+azurlane/updater.py
+azurlane/utils.py
+azurlane.egg-info/PKG-INFO
+azurlane.egg-info/SOURCES.txt
+azurlane.egg-info/dependency_links.txt
+azurlane.egg-info/requires.txt
+azurlane.egg-info/top_level.txt
