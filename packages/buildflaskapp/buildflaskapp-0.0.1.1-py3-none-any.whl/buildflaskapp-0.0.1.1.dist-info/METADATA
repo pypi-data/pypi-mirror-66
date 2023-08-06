@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: buildflaskapp
+Version: 0.0.1.1
+Summary: Generate flask app boilerplate!
+Home-page: https://github.com/askyourkode/buildflaskapp
+Author: Hans Maulloo
+Author-email: askyourkode@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Freely Distributable
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+TASTE
+
+
