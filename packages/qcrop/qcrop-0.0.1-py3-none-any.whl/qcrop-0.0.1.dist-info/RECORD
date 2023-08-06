@@ -1,0 +1,12 @@
+qcrop/__init__.py,sha256=rW-5d-TjvEEuwSCHXJrhQV0Xujn7_hyuDHnxSzE0D_s,58
+qcrop/__main__.py,sha256=mlQN5Bzuxq4IrjKLVJjqZ7YCBN4hmGNDf1zNPo3CVaY,1162
+qcrop/area_selector.py,sha256=YSouuDTjrq_waKIuqr8YvZgGN4TMPi6uezgEZuFW4FA,3336
+qcrop/assets_rc.py,sha256=BRYkCf8CiyUEyrEWU1jGily-D5MQrZaOYoJNNgTV7CU,6233
+qcrop/qcrop_ui.py,sha256=0TU5JWJfYpgnmUpKo4QH5j2b5BczUQWbo1boObXx5UU,8642
+qcrop/ui.py,sha256=n6b1VTM5iGfHeHFZ6tkZRBIgqbvm8x2uQal0K5vT7pk,2575
+qcrop-0.0.1.dist-info/LICENSE.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+qcrop-0.0.1.dist-info/METADATA,sha256=5djRqC44n4A3Dz4y56hJoxPKC4wB7Y0JIReQm79mYy4,1713
+qcrop-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+qcrop-0.0.1.dist-info/entry_points.txt,sha256=WZc_UW6kEv_5p2_uNyInn_4LisG95t6xRWLYFDzccBE,47
+qcrop-0.0.1.dist-info/top_level.txt,sha256=gjpuW7_MbgweVdkVOViXRKpHvFhBOzcYhOBa0YaZDZ4,6
+qcrop-0.0.1.dist-info/RECORD,,
