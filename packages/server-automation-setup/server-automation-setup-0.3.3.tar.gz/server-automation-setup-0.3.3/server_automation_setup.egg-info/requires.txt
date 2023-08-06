@@ -1,0 +1,4 @@
+pyyaml
+fabric
+pyinvoke
+paramiko
