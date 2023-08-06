@@ -1,0 +1,14 @@
+README.md
+setup.py
+qcrop/__init__.py
+qcrop/__main__.py
+qcrop/area_selector.py
+qcrop/assets_rc.py
+qcrop/qcrop_ui.py
+qcrop/ui.py
+qcrop.egg-info/PKG-INFO
+qcrop.egg-info/SOURCES.txt
+qcrop.egg-info/dependency_links.txt
+qcrop.egg-info/entry_points.txt
+qcrop.egg-info/requires.txt
+qcrop.egg-info/top_level.txt
