@@ -1,0 +1,9 @@
+cloud_tasks_deferred/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloud_tasks_deferred/__version__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+cloud_tasks_deferred/deferred.py,sha256=G3xWjdKr8qfj6pMDDf8JSFrxbO0Jz4aut8rBCtfHvx4,11033
+cloud_tasks_deferred/wsgi.py,sha256=UzphczLWG-olsfpreRG_UQ_N18HvKBb1ffeIWs_9QTs,1654
+cloud_tasks_deferred-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cloud_tasks_deferred-0.1.0.dist-info/METADATA,sha256=KYbh-_mnWE80P3iexuBdLCgvNv0xYyvzO9vK3gP7_DM,1904
+cloud_tasks_deferred-0.1.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+cloud_tasks_deferred-0.1.0.dist-info/top_level.txt,sha256=ZsvpbpH0U_y2dOIcfVZ--oEI6E8K0ACeVnAofczs1cM,21
+cloud_tasks_deferred-0.1.0.dist-info/RECORD,,
