@@ -1,0 +1,12 @@
+pandas
+nbimporter
+papermill
+pygraphviz
+nbstripout
+jupyter
+ansi2html
+networkx
+tqdm
+declarative_parser
+jinja2
+nbdime
