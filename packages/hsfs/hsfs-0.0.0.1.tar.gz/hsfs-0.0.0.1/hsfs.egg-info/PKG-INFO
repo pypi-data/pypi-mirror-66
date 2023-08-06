@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: hsfs
+Version: 0.0.0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Moritz Meister
+Author-email: moritz@logicalclocks.com
+License: Apache License 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: dev

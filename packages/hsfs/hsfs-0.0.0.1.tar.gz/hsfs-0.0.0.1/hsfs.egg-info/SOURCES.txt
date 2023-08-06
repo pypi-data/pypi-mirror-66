@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+hsfs/__init__.py
+hsfs/version.py
+hsfs.egg-info/PKG-INFO
+hsfs.egg-info/SOURCES.txt
+hsfs.egg-info/dependency_links.txt
+hsfs.egg-info/requires.txt
+hsfs.egg-info/top_level.txt
