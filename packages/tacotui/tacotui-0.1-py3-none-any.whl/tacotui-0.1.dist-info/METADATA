@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: tacotui
+Version: 0.1
+Summary: Terminal text coloring and simple user interface widgets.
+Home-page: https://tacotui.readthedocs.io/
+Author: Collin J. Delker
+Author-email: developer@collindelker.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+
+Terminal text coloring and simple user interface widgets.
+
+

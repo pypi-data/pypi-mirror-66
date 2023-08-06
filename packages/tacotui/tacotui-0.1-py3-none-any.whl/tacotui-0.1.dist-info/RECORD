@@ -1,0 +1,17 @@
+tacotui/__init__.py,sha256=BYHzhaim3KyO97AtmR5EDrCu-t4FeU8UZpqcKyvMbtY,2479
+tacotui/color.py,sha256=bKibnPBmnysacIHhEvx5_NqUmD4fo6CQ86QF-5oGids,4850
+tacotui/getch.py,sha256=NTZvU0HIGegU7pYgLBDSA8T-xmBjIIdRfWQNl6BOvc4,3659
+tacotui/screen.py,sha256=YQ8S0gAT-XgRZ5kWzipE6h0S1K5d53YKCcdliUlF_E8,3087
+tacotui/version.py,sha256=B5gaXa_iv3KKAmR9gppWSb7F1Iaba-sVO-73URL8e70,20
+tacotui/widgets.py,sha256=oBLBmNmA8hsv8oJg-p6Cc2i6xyGw7ZQx7mh_vcBYfpw,36524
+tacotui/demo/__init__.py,sha256=DO-j6zT0gOEuZf2zBVb152FMeVht92jsDmkpxF4j_dA,484
+tacotui/demo/demo_color.py,sha256=kjyCEku81tHkwk7UcyKwOUtlBQ7oa7d4Qicb8uwNX5c,1785
+tacotui/demo/demo_form.py,sha256=T9KOO2kzjZxSvd9OIPcMmmB-Wp8Xvnso_OfohLToNpE,1227
+tacotui/demo/demo_game.py,sha256=jHAZ3dfgb8rkoL_avRoy-1e3CF5TOm47yHz4d55cgbw,2621
+tacotui/demo/demo_plot.py,sha256=LI10cZd6M_MQq3HyY46RhSXIs1m9qr1fnp2SglGIVSI,644
+tacotui/demo/demo_widgets.py,sha256=_D3qdn0MfvN-OcTD8DEiN4LTyy581aAPONhcRVw0HJw,3180
+tacotui-0.1.dist-info/LICENSE.txt,sha256=KJmKyhxwsZ5mCu9mK9uhuo65oQNbwTFzCgpY4-Mo9VY,1065
+tacotui-0.1.dist-info/METADATA,sha256=aLGZdYV9o5nnZhNGOzBajXRhBB5v76CYu7Bs0Knbfx4,525
+tacotui-0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+tacotui-0.1.dist-info/top_level.txt,sha256=ZtepsQrJcfVUV1TJTMZW3jHCN1wiNMhbhVQT--NHFT8,8
+tacotui-0.1.dist-info/RECORD,,
