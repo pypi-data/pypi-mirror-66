@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: forensicstore-stix-schemas
+Version: 2.1.0
+Summary: STIX 2.1 JSON schemas as a python provider
+Home-page: https://github.com/forensicanalysis/pyforensicstore_stix
+Author: Demian Kellermann
+Author-email: demian.kellermann@siemens.com
+License: UNKNOWN
+Platform: UNKNOWN
+
+UNKNOWN
+
+
