@@ -1,0 +1,13 @@
+swagger_generator/__init__.py,sha256=fbFqhREN1MQe9MIDNZI12bLvaIZyFQ_ESb6UsnYCr-s,292
+swagger_generator/__main__.py,sha256=70jy1DWeiDnwOfKf4iS_Nctuz93OvDnVtLsQ6qNNpaM,4365
+swagger_generator/insert.py,sha256=s3f05GY2ckhgmJDnEneGNwU_Tv4HVLVNEvmc1usRXZc,1092
+swagger_generator/swagger_info.py,sha256=sJcx9kIuD13sdNBY1sj1wggmdj0kjbiFVtTPXt0yaPA,89
+swagger_generator/template.py,sha256=Ezgezp65jjeWG98oBCoQ75o411H1-8xEuTkPPADZzE0,10024
+swagger_generator/template_arg.py,sha256=uvjax7FZdR9aJ9qNRVGY4c__FQl3-MWN1WxcoI4kEJk,5490
+swagger_generator/util.py,sha256=pQWuXa5asfGpP_QREKCqTSxPpIhxYZmdqu6UCsAj8eo,3573
+py_swagger_generator-1.0.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+py_swagger_generator-1.0.1.dist-info/METADATA,sha256=6Q042TVEV5jvAkrLsVk3LPjnzodgttvHu4ZAO4RIsgk,569
+py_swagger_generator-1.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+py_swagger_generator-1.0.1.dist-info/entry_points.txt,sha256=_ajJc1uI4V6Xk4usYB7j6gdZRZVmZAfhfLkkS3UV0H8,74
+py_swagger_generator-1.0.1.dist-info/top_level.txt,sha256=ucaj_cRwRYeBlnfnv6ipGM8fC8nEOeAv0Okx6m_LPSs,18
+py_swagger_generator-1.0.1.dist-info/RECORD,,
