@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: helloworld-kienast
+Version: 0.1
+Summary: A test package
+Home-page: https://github.com/Kreidl/own-pip-package
+Author: Lukas Kienast
+Author-email: lukaskienast0@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# own-pip-package
+
+## Installation for packaging
+Use: pip install setuptools wheel tqdm twine
+
+## Create a script
+see helloworld skript
+
+## Create a setup.py
+see setup.py for this
+
+
+## Compile package
+run: python setup.py bdist_wheel
+
+
+## Install package locally
+pip install dist/<filename>.whl
+
+
+## Upload to pypip
+
+### Step 1
+    Create pypirc: The Pypirc file stores the PyPi repository information. Create a file in the home directory
+        for Windows :  C:\Users\UserName\.pypirc 
+        for *nix :   ~/.pypirc 
+    And add the following content to it. Replace javatechy with your username.
+
+[distutils] 
+index-servers=pypi
+[pypi] 
+repository = https://upload.pypi.org/legacy/ 
+username =javatechy
+
+### Step 2
+use python -m twine upload dist/*
+
