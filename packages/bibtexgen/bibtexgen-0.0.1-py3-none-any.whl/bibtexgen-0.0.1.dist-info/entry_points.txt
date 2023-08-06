@@ -1,0 +1,3 @@
+[console_scripts]
+bibtexgen=bibtexgen.entry:main
+
