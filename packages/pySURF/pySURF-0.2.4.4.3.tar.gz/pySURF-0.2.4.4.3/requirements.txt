@@ -1,0 +1,11 @@
+requests
+numpy
+geopandas
+scipy
+matplotlib
+selenium
+tensorflow>=2.0
+
+seaborn
+pathlib
+
