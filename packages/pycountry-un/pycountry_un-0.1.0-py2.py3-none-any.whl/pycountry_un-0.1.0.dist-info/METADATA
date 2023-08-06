@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pycountry-un
+Version: 0.1.0
+Summary: Provide lists in the United Nation's World Economic Situation and Prospects
+Home-page: http://github.com/fabiommendes/covid-19
+License: UNKNOWN
+Author: Fábio Macêdo Mendes
+Author-email: fabiomacedomendes@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: pycountry~=19.8
+Requires-Dist: black ; extra == "dev"
+Requires-Dist: coverage~=5.0 ; extra == "test"
+Requires-Dist: pytest~=5.0 ; extra == "test"
+Provides-Extra: dev
+Provides-Extra: test
