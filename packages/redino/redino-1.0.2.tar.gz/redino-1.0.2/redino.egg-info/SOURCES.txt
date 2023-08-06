@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+redino/__init__.py
+redino/py.typed
+redino.egg-info/PKG-INFO
+redino.egg-info/SOURCES.txt
+redino.egg-info/dependency_links.txt
+redino.egg-info/top_level.txt
+tests/__init__.py
+tests/redino/__init__.py
+tests/redino/test_model.py
