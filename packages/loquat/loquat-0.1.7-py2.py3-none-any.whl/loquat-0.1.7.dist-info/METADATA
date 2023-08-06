@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: loquat
+Version: 0.1.7
+Summary: A simple web framework based on Tornado.
+Home-page: https://github.com/guanzhenxing/loquat
+Author: Jesen Kwan
+Author-email: guan.zhenxing@foxmail.com
+License: MIT
+Keywords: tornado,tornado-application,tornado-framework,tornado-web
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown
+Requires-Dist: tornado
+
+
+# Loquat
+
+A simple web framework based on Tornado.
+
+## Introduce
+
+Loquat is a web framework based on Tornado.
+
+## Installation
+
+```shell
+pip install loquat
+```
+
+## Simple uses
+
+```python
+from loquat.server import Server
+from loquat.web import Application
+
+from handler import BaseHandler
+
+
+class IndexHandler(BaseHandler):
+    def initialize(self, database):
+        self.database = database
+
+    def get(self):
+        self.write("hello world!")
+
+
+class TestApplication(Application):
+    def __init__(self, handlers=None, middlewares=None, transforms=None):
+        super().__init__(handlers, middlewares, transforms)
+
+
+def main():
+    handlers = [
+        (r"/", IndexHandler, dict(database="this is database"))
+    ]
+    application = TestApplication(handlers=handlers)
+    server = Server(application)
+    server.start()
+
+if __name__ == "__main__":
+    main()
+
+```
+
