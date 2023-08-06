@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: palki_101703381_missing_data
+Version: 0.1
+Summary: missing data handle
+Home-page: https://github.com/palkibansal31?tab=repositories
+Author: palki
+Author-email: palkipb@gmail.com
+License: MIT
+Download-URL: https://github.com/palkibansal31/missing-data-handle/archive/0.1.tar.gz
+Description: UNKNOWN
+Keywords: missing data handle
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
