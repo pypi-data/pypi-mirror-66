@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: tgbf
+Version: 0.0.2
+Summary: Telegram Bot Framework
+Home-page: https://github.com/WiGeeky/TGBotFramework
+Author: Mike
+Author-email: mike@mikey.ir
+License: UNKNOWN
+Description: Telegram Bot Frameowrk (TGBF) is a bot framework made to make it easier to develop and maintain Telegram bots.
+        
+        ## Usage
+        
+        ## License
+        This package is available under an MIT license.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
