@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: cimren-cvrptw-optimization
+Version: 1.2.0
+Summary: CVRPTW Optimization Models
+Home-page: https://github.com/emrahcimren/cvrptw-optimization
+Author: cimren
+Author-email: cimren.1@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools
+Requires-Dist: Pathlib
+Requires-Dist: numpy
+Requires-Dist: pulp
+Requires-Dist: pandas
+Requires-Dist: certifi (==2019.11.28)
+Requires-Dist: PuLP
+Requires-Dist: pyparsing (==2.4.6)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: pytz (==2019.3)
+Requires-Dist: six (==1.14.0)
+Requires-Dist: wincertstore (==0.2)
+
+Capacitated Vehicle Routing Problem with Time Windows (CVRPTW) Optimization Models
+==================================================================================
+
+Repo for CVRPTW optimization models.
+
+- Single depot model
+    - General formulation
+    - Column generation solution
+
+Visit Wiki page more details.
+https://github.com/emrahcimren/cvrptw-optimization/wiki
+
+
