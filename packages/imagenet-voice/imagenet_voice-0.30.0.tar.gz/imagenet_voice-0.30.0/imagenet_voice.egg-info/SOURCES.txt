@@ -1,0 +1,10 @@
+README.md
+setup.py
+./imagenet_voice/__init__.py
+imagenet_voice/__init__.py
+imagenet_voice/imagenet_voice.py
+imagenet_voice.egg-info/PKG-INFO
+imagenet_voice.egg-info/SOURCES.txt
+imagenet_voice.egg-info/dependency_links.txt
+imagenet_voice.egg-info/requires.txt
+imagenet_voice.egg-info/top_level.txt
