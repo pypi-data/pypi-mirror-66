@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+hwmon/__init__.py
+hwmon/hwmon.py
+hwmon/utils.py
+hwmon.egg-info/PKG-INFO
+hwmon.egg-info/SOURCES.txt
+hwmon.egg-info/dependency_links.txt
+hwmon.egg-info/top_level.txt
