@@ -1,0 +1,61 @@
+# changelog-builder
+
+A tool for creating markdown changelogs basesd on comments
+
+---
+[![Python verion](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)]()
+[![PyPI version](https://badge.fury.io/py/changelog-builder.svg)](https://badge.fury.io/py/changelog-builder)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://choosealicense.com/licenses/mit/)
+[![Made with pypipal](https://img.shields.io/static/v1?label=made%20with&message=pypipal&color=informational)](https://test.pypi.org/project/pypipal/)
+
+---
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install changelog-builder.
+
+```bash
+pip install changelog-builder
+```
+
+## Usage
+
+```bash
+changelog-builder [path][filename][identifier][current-version][version-increment][files][includes][excludes]
+```
+
+##### Parameters
+
+- **path** the path to the project directory, defaults to `getcwd()`
+- **--filename -fn** the name of the changelog file, defaults to *changelog.md*
+- **--identifier -id** one or more strings that identify changes (whitespaces in line before are ignored), defaults to *"# NEW" "# new"* 
+- **--curent-version -cv** three digits that specify the current version by major, minor an patch, defaults to *0 0 0*
+- **--version-increment -ic** three digits that specify the increment by major, minor an patch, defaults to *0 0 1* [example: version of 4.2.1 with the increment 0.1.0 becomes 4.3.1]
+- **--files -fi** one or more file suffixes that get scanned (needs to start with a point), defaults to *".py"*
+
+---
+
+**these two do not work properly yet:**
+
+- **--includes -in** one or more files that get included additionally, defaults to *[]*
+- **--excludes -ex** one ore more files that get excluded, defaults to *[]*
+
+
+
+Running the changelog-builder in a project the first time will create a `.changelog_builder` file which stores the parameters from above in json format and could be modified manually, but that will be probably rarely necessary, since every passed parameter will alter the settings file.
+
+
+
+## Notes
+
+> A very popular use case might be setting a version in the parameters directly. In this case should the **current-version** parameter be set to the desired version and the **version-increment** to *0 0 0*. This set the next version to the desired value **but** will also set the **version-increment** in the settings file which means every use in the future without the **version-increment** parameter set differently, will result in the version not to be increased.
+
+
+
+## License 
+
+[MIT](http://choosealicense.com/licenses/mit/)
+
+---
+
+_This file was automatically created by the pypipal.setup_builder tool._
