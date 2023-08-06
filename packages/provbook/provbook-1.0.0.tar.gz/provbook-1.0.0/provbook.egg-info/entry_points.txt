@@ -1,0 +1,3 @@
+[console_scripts]
+notebook_rdf = provbook.notebook_rdf.__main__:app
+

@@ -1,0 +1,20 @@
+nbformat
+six
+colorama
+tornado
+requests
+GitPython!=2.1.4,!=2.1.5,!=2.1.6
+notebook
+jinja2>=2.9
+jupyter
+nbdime
+rdflib
+
+[:python_version == "2.7"]
+backports.shutil_which
+backports.functools_lru_cache
+
+[docs]
+sphinx
+recommonmark
+sphinx_rtd_theme
