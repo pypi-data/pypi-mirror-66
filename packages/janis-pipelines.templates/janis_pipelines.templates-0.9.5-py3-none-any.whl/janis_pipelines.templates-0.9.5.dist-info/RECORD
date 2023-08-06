@@ -1,0 +1,11 @@
+janis_templates/__init__.py,sha256=PEfeVsA0xHYdQLoiRoxXUEYdVT1Cq0xwMVvrvWIskLU,49
+janis_templates/__meta__.py,sha256=LlkoysKClk2dbkuoWH2n8Y_Ih9ybvEwHIL-hdMKWaus,79
+janis_templates/pawsey.py,sha256=lCbRpevazx6LTuiqAQp3NmXVF0BDv155cHqLFNZ5RNA,4257
+janis_templates/petermac.py,sha256=TUXexMYLx9uIo74J3ZSGwdY5qzFga2o5mxkSQCCpQbU,4688
+janis_templates/spartan.py,sha256=f8Ye-_k6cMIUdzlQZTuufv897MyejHoRGQT5J6V8lQw,3743
+janis_templates/wehi.py,sha256=Ux-JGgqoZQgHr3IJWwu4I0reJNBHcdor6GqQEKeAoyM,2026
+janis_pipelines.templates-0.9.5.dist-info/METADATA,sha256=rNR2Ojb8KJAGVJosDMSBUmKq8DMUkbwofuVbTtBSqVE,4885
+janis_pipelines.templates-0.9.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+janis_pipelines.templates-0.9.5.dist-info/entry_points.txt,sha256=cg3z5KzuDlY73CY-aHP4sgP-8aCYJUp1zkasLtUjHFA,253
+janis_pipelines.templates-0.9.5.dist-info/top_level.txt,sha256=KSG2gceKrG6gvPPCmVMfJwyoIC5H1j0rtBR26-27R20,16
+janis_pipelines.templates-0.9.5.dist-info/RECORD,,
