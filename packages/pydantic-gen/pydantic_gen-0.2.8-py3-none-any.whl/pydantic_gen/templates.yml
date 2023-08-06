@@ -1,0 +1,18 @@
+module: |
+  from pydantic import BaseModel
+  from typing import *
+  {{ imports }}
+
+schemas: |
+  {{ schemas }}
+
+schema: |
+  class {{ name }}(BaseModel):
+      {{ props }}{{ config }}
+
+prop: |
+  {{ name }}: {{ type }}{{ default }}
+
+config: |
+          class Config:
+              {{ confs }}
