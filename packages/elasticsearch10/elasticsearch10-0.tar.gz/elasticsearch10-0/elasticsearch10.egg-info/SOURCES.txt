@@ -1,0 +1,5 @@
+setup.py
+elasticsearch10.egg-info/PKG-INFO
+elasticsearch10.egg-info/SOURCES.txt
+elasticsearch10.egg-info/dependency_links.txt
+elasticsearch10.egg-info/top_level.txt
