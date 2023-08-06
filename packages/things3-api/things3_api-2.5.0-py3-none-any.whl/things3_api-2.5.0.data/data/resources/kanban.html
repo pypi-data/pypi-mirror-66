@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="kanban.css">
+    <link rel="stylesheet" href="chart.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script type="text/javascript" src="kanban.js"></script>
+    <script type="text/javascript" src="chart.bundle.min.js"></script>
+    <script type="text/javascript" src="chartjs-plugin-labels.min.js"></script>
+    <title>KanbanView</title>
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="header">
+        <img class="logo" src="logo-dark.png" alt="logo" >
+        <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" 
+                       class="onoffswitch-checkbox" id="mode"
+                       checked="checked" onclick="switchMode();"
+                       accesskey="p" title="⌃+⎇+P">
+                <label class="onoffswitch-label" for="mode">
+                  <span class="onoffswitch-inner"><!----></span>
+                  <span class="onoffswitch-switch"><!----></span>
+                </label>
+            </div>
+      </div>
+      <div class="sidebar-container">
+        <div class="sidebar">
+          <form onclick="document.body.scrollTop = 0;">
+            <select   id="filter" size=2 class="filter" 
+                      onclick="document.body.scrollTop = 0;" 
+                      onchange="kanbanFilterChange();"
+                      onfocus="this.selectedIndex = -1; document.body.scrollTop = 0;">
+              <optgroup label="□ View">
+                <option id="kanban" data-function="kanbanUpdate" selected="selected" onclick="kanbanFilterReset(); kanbanUpdate();" accesskey="1" title="⌃+⎇+1">&nbsp;&nbsp;&nbsp;○ Kanban</option>
+                <option id="distribution" data-function="statsShowDistribution" onclick="statsShowDistribution();" accesskey="2" title="⌃+⎇+2">&nbsp;&nbsp;&nbsp;○ Distribution</option>
+                <option id="history" data-function="statsShowHistory" onclick="statsShowHistory();" accesskey="3" title="⌃+⎇+3">&nbsp;&nbsp;&nbsp;○ History</option>
+                <option id="universe" data-function="statsShowUniverse" onclick="statsShowUniverse();" accesskey="4" title="⌃+⎇+4">&nbsp;&nbsp;&nbsp;○ Universe</option>
+                <option id="minutes" data-function="statsShowMinutes" onclick="statsShowMinutes();" accesskey="5" title="⌃+⎇+5">&nbsp;&nbsp;&nbsp;○ Minutes</option>
+              </optgroup>
+              <optgroup label="□ Areas" data-ctx="area" id="areas" onclick="kanbanFilterChange(this); kanbanUpdate();"></optgroup>
+              <optgroup label="□ Projects" data-ctx="project" id="projects" onclick="kanbanFilterChange(this); kanbanUpdate();"></optgroup>
+            </select>
+          </form>
+        </div>
+        <div class="main-view-container">
+          <article class='some-page-wrapper'>
+            <div id="stats" class="stats"></div>
+            <div class='row' id="content"></div>
+            <div class='loading' id='loading'></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
