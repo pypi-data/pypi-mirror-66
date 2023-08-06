@@ -1,0 +1,3 @@
+[console_scripts]
+drillcoretransform = drillcore_transformations.cli:cli
+
