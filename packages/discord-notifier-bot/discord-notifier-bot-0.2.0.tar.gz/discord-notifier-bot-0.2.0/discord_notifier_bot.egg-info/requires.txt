@@ -1,0 +1,7 @@
+discord.py
+
+[cpu]
+psutil
+
+[gpu]
+gputil

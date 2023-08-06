@@ -1,0 +1,13 @@
+README.rst
+setup.py
+discord_notifier_bot/__init__.py
+discord_notifier_bot/__main__.py
+discord_notifier_bot/bot.py
+discord_notifier_bot/cli.py
+discord_notifier_bot/sysinfo.py
+discord_notifier_bot.egg-info/PKG-INFO
+discord_notifier_bot.egg-info/SOURCES.txt
+discord_notifier_bot.egg-info/dependency_links.txt
+discord_notifier_bot.egg-info/entry_points.txt
+discord_notifier_bot.egg-info/requires.txt
+discord_notifier_bot.egg-info/top_level.txt
