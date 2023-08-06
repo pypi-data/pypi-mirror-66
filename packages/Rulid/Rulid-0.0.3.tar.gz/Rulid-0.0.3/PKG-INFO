@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: Rulid
+Version: 0.0.3
+Summary: Build system and package manager for Rust
+Home-page: https://github.com/gkbrk/rulid
+Author: Gokberk Yaltirakli
+Author-email: opensource@gkbrk.com
+License: GPL-3
+Description: UNKNOWN
+Keywords: rust,build,package
+Platform: UNKNOWN
