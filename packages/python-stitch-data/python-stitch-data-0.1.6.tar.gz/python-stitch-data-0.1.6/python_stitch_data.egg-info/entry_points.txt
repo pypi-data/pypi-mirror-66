@@ -1,0 +1,3 @@
+[console_scripts]
+stitchapi = stitch_api.cli:main
+
