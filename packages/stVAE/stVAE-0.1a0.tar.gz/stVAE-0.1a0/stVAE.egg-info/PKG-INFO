@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: stVAE
+Version: 0.1a0
+Summary: Style transfer variational autoencoder
+Home-page: https://github.com/NRshka/stvae/source
+Author: ['N. Russkikh', 'A. Makarov', 'D. Antonets', 'D. Shtokalo']
+Author-email: makarov.alxr@yandex.ru
+License: MIT license
+Description: The official pytorch implementation of "*Style transfer with variational autoencoders is a promising approach to RNA-Seq data harmonization and analysis*".
+        The package contains a code for training and testing the model, as well as a code for working with different types of datasets.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Russian
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.6
