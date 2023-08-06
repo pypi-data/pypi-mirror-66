@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+__pkginfo__.py
+setup.py
+domdf_python_tools/__init__.py
+domdf_python_tools/dates.py
+domdf_python_tools/doctools.py
+domdf_python_tools/paths.py
+domdf_python_tools/terminal.py
+domdf_python_tools/utils.py
+domdf_python_tools.egg-info/PKG-INFO
+domdf_python_tools.egg-info/SOURCES.txt
+domdf_python_tools.egg-info/dependency_links.txt
+domdf_python_tools.egg-info/requires.txt
+domdf_python_tools.egg-info/top_level.txt
