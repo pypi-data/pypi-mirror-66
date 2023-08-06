@@ -1,0 +1,11 @@
+safe_pip_upgrade/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+safe_pip_upgrade/defaults.py,sha256=Jfv-RsaznCgCC-AzSyfbl3jDrnjynPPvHa-ja_rGnbc,1143
+safe_pip_upgrade/pypi.py,sha256=ligj5HRrpzninz0_Y-WR4B8PZEcEdR0Y_ro3T42OLkk,2003
+safe_pip_upgrade/requirements.py,sha256=Z4L3J4l8kk18KxOzTCinKjleA8LPAphPtzu93hIEUWU,4196
+safe_pip_upgrade/requirements_file.py,sha256=QMLmXlT4TNENeDA81hYWxjg2zoLPCtz0NgsB-mD-tk0,1193
+safe_pip_upgrade/upgrade.py,sha256=JNi5QLrrt8GQN6EFlT_SfHYZJwtCxy1joSfBuKMNbA8,2901
+safe_pip_upgrade-0.0.1.dist-info/LICENSE,sha256=vharFUQXgrVom5amoCq8AO3YKcyHffTkvjTm1C_qkKo,1061
+safe_pip_upgrade-0.0.1.dist-info/METADATA,sha256=9s9atRRtREzOU5KJo0vPONeb11JJm9fpqKpdrVCPb4Y,2369
+safe_pip_upgrade-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+safe_pip_upgrade-0.0.1.dist-info/top_level.txt,sha256=yvkREXHmEQ7HwI7EO4zc1LFLdQSMlZmMETPiXchZhd0,17
+safe_pip_upgrade-0.0.1.dist-info/RECORD,,
