@@ -1,0 +1,12 @@
+README.md
+setup.py
+tansa/__init__.py
+tansa/app.py
+tansa/finder.py
+tansa/jreader.py
+tansa/jwriter.py
+tansa.egg-info/PKG-INFO
+tansa.egg-info/SOURCES.txt
+tansa.egg-info/dependency_links.txt
+tansa.egg-info/entry_points.txt
+tansa.egg-info/top_level.txt
