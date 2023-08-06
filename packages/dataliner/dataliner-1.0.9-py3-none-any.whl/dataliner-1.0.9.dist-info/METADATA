@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: dataliner
+Version: 1.0.9
+Summary: A dataprocessing package for data preprocess and feature engineering.
+Home-page: https://github.com/shallowdf20/dataliner
+Author: Shallowdf
+Author-email: shallowdf20@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/shallowdf20/dataliner/issues
+Project-URL: Source, https://github.com/shallowdf20/dataliner
+Keywords: data processing machine learning preprocess feature engineering
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+
+# dataliner
+A dataprocessing package for data preprocess and feature engineering.
+
+
