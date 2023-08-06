@@ -1,0 +1,7 @@
+[console_scripts]
+compareSTR = compareSTR.compareSTR:run
+dumpSTR = dumpSTR.dumpSTR:run
+mergeSTR = mergeSTR.mergeSTR:run
+qcSTR = qcSTR.qcSTR:run
+statSTR = statSTR.statSTR:run
+
