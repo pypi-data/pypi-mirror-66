@@ -1,0 +1,3 @@
+[console_scripts]
+app = unv.app.bin:run
+
