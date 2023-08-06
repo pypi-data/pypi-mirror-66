@@ -1,0 +1,2 @@
+oss_ar>=0.130
+requests>2
