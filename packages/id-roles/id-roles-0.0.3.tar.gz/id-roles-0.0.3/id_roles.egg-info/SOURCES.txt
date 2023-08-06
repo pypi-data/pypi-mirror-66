@@ -1,0 +1,8 @@
+README.md
+setup.py
+id_roles/__init__.py
+id_roles/roles.py
+id_roles.egg-info/PKG-INFO
+id_roles.egg-info/SOURCES.txt
+id_roles.egg-info/dependency_links.txt
+id_roles.egg-info/top_level.txt
