@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: klippy
+Version: 0.1.0
+Summary: A command line utility that acts like a cloud clipboard.
+Home-page: https://github.com/ikhurramraza/klippy
+Author: Khurram Raza
+Author-email: ikhurramraza@gmail.com
+License: MIT
+Keywords: cloud clipboard
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.0, <4
+Requires-Dist: click
+Requires-Dist: redis
+
+UNKNOWN
+
+
