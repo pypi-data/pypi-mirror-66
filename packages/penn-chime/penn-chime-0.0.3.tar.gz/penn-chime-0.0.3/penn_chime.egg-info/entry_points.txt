@@ -1,0 +1,3 @@
+[console_scripts]
+penn_chime = penn_chime.cli:main
+

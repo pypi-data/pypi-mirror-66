@@ -1,0 +1,7 @@
+altair
+gspread
+numpy
+pandas
+pytest
+streamlit
+oauth2client
