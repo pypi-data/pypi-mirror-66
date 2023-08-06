@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lstchain
+Version: 0.4.5
+Summary: DESCRIPTION
+Home-page: https://github.com/cta-observatory/cta-lstchain
+Author: LST collaboration
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: h5py
+Requires-Dist: seaborn
+
+UNKNOWN
+
+
