@@ -1,0 +1,8 @@
+torch>=1.4.0
+numpy>=1.15.1
+pydot>=1.4.1
+networkx>=2.4
+protobuf>=3.11.3
+flask>=1.1.1
+flask-cors>=3.0.8
+gevent>=20.4.0
