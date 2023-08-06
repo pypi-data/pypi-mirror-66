@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: mcthings_extra
+Version: 0.0.1
+Summary: Additional Things for the McThings Python library
+Home-page: https://github.com/juntosdesdecasa/mcthings_extra
+Author: Alvaro del Castillo
+Author-email: alvaro.delcastillo@gmail.com
+License: ASL
+Description: # mcthings_extra
+        McThings extensions from third party
+        
+Keywords: development library minecraft buildings games
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
