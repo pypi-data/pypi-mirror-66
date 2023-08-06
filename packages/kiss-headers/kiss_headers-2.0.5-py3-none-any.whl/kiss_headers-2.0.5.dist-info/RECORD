@@ -1,0 +1,12 @@
+kiss_headers/__init__.py,sha256=mEFA4u-WE7vAd2ybOU25Jk_kBS6Urvw_TEIJ_Lnd-QM,2121
+kiss_headers/api.py,sha256=yJC1RQdVavi5aNWpVMC6oiSkSv0Ec6Y--6-bXbxaUfw,4205
+kiss_headers/builder.py,sha256=p5MBfbqDGGIc9KxDEfGfjJsdwBwMLioIfNESUYEXR0U,44091
+kiss_headers/models.py,sha256=wDlI-LsBgZ01y93exYAyajin9K_auXBqgiTUes-NAc4,34377
+kiss_headers/structures.py,sha256=hpl07NZrr-kDzHFnCCPxzPYaTEOzEebVe1ArNI7Iafo,2818
+kiss_headers/utils.py,sha256=aytCFiwH-MlRQOo3xgNl0gq_OVkIDUo3o9r70eTRcSk,12946
+kiss_headers/version.py,sha256=ySd2b0EjO9ssI5rmWgfbyPCLuGy2v7SmewqNNxAxVL4,79
+kiss_headers-2.0.5.dist-info/LICENSE,sha256=eu9DoD3oHYBHOqPe8FMDWExW8wplK187POQ2eIfXi7E,1070
+kiss_headers-2.0.5.dist-info/METADATA,sha256=V_uXiJ66LX5XqvgU57SoMb9z2Tp7YLNpKhfQiwr9dLk,9368
+kiss_headers-2.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+kiss_headers-2.0.5.dist-info/top_level.txt,sha256=daspyjw3m-qpWDIiMMRCe3pe6Ijn8PlKQ0uK9WYKwII,13
+kiss_headers-2.0.5.dist-info/RECORD,,
