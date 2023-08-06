@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+koparadigm/__init__.py
+koparadigm/koparadigm.py
+koparadigm/koparadigm.xlsx
+koparadigm.egg-info/PKG-INFO
+koparadigm.egg-info/SOURCES.txt
+koparadigm.egg-info/dependency_links.txt
+koparadigm.egg-info/requires.txt
+koparadigm.egg-info/top_level.txt
