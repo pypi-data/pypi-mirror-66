@@ -1,0 +1,5 @@
+globalBackgroundColor='#312520'
+globalHoverBackgroundColor='#909090'
+globalBorderColor= '#606060'
+globalTextColor='#fffbf0'
+globalFont='Heiti'
