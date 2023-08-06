@@ -1,0 +1,4 @@
+[console_scripts]
+mb=macrobot.cli:main
+te=macrobot.tests.test_macrobot:test_version
+
