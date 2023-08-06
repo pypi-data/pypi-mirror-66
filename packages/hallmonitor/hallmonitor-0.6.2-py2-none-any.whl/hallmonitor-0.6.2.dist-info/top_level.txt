@@ -1,0 +1,3 @@
+hallmonitor
+hallmonitor/resources
+hallmonitor/services
