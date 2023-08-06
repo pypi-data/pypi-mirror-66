@@ -1,0 +1,2 @@
+include requirements.txt
+include cvrptw_optimization/data/*.pkl
