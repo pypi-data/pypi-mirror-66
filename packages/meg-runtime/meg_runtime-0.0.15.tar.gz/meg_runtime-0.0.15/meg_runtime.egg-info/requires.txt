@@ -1,0 +1,9 @@
+PyQt5
+PyQtWebEngine
+pillow
+pygit2
+python-dateutil
+requests
+
+[:os_name == "nt"]
+pywin32
