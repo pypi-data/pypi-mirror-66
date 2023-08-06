@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: collegepreparation
+Version: 0.1
+Summary: prepare textual data
+Home-page: UNKNOWN
+Author: training
+Author-email: admin@stempro.org
+License: MIT
+Description: gitignore.io
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Academic Free License (AFL)
+Description-Content-Type: text/markdown
