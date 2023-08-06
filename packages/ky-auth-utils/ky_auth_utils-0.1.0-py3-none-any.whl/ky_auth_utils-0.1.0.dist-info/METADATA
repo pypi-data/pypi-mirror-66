@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ky-auth-utils
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: any
+Provides-Extra: flask
+Requires-Dist: flask ; extra == 'flask'
+
+UNKNOWN
+
+
