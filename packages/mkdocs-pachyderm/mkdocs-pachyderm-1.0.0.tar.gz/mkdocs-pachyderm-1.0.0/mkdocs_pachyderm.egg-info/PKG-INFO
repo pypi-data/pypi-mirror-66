@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: mkdocs-pachyderm
+Version: 1.0.0
+Summary: Pachyderm theme for MkDocs
+Home-page: UNKNOWN
+Author: Pachyderm
+Author-email: svetlana@pachyderm.com
+License: MIT
+Description: # Pachyderm Docs theme
+        
+        This is the docs theme that is used at docs.pachyderm.com. The theme is based on the
+        [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) documentation theme.
+        
+        ## Quick start
+        
+        Install the latest version of Material with `pip`:
+        
+        ``` sh
+        pip install pachyderm-mkdocs-material
+        ```
+        
+Keywords: mkdocs,documentation,theme
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python
+Classifier: Topic :: Documentation
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Description-Content-Type: text/markdown
