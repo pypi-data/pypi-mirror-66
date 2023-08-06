@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: StockAggregator
+Version: 0.3
+Summary: UNKNOWN
+Home-page: http://github.com/
+Author: Yasin Denktas-Yildiz
+Author-email: yasin.denktas@essec.edu
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.7.1
+Requires-Dist: requests
+
+# stock_aggregator
+ Extract financial data from Yahoo
+
+# Limits
+ You can not install this package from with pip
+ You need to download the .tar file, unzip it, put it in a folder, go to that folder with your Terminal and write
+ python setup.py install
+
+# Credits to
+  Jerouen Bouma who built a wonderful package
+  https://github.com/JerBouma/FundamentalAnalysis.git
+
+
