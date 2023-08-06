@@ -1,0 +1,105 @@
+from abc import ABCMeta
+from typing import Dict, List, Callable
+
+from twisted.internet.defer import inlineCallbacks
+from vortex.PayloadEndpoint import PayloadEndpoint
+from vortex.PayloadEnvelope import PayloadEnvelope
+
+from peek_abstract_chunked_index.private.tuples.ChunkedIndexEncodedChunkTupleABC import \
+    ChunkedIndexEncodedChunkTupleABC
+
+ChunkedIndexChunkLoadRpcMethodType = Callable[[int, int],
+                                              List[ChunkedIndexEncodedChunkTupleABC]]
+
+
+class ChunkedIndexCacheControllerABC(metaclass=ABCMeta):
+    """ Chunked Index Cache Controller
+
+    The Chunked Index cache controller stores all the chunks in memory,
+    allowing fast access from the mobile and desktop devices.
+
+    """
+
+    _LOAD_CHUNK_SIZE = 32
+
+    _ChunkedIndexChunkLoadRpcMethod: ChunkedIndexChunkLoadRpcMethodType = None
+    _updateFromServerFilt: Dict = None
+    _logger: logging.Logger = None
+
+    def __init__(self, clientId: str):
+        assert self._ChunkedIndexChunkLoadRpcMethod, \
+            "_ChunkedIndexChunkLoadRpcMethod is None"
+        assert self._updateFromServerFilt, "_updateFromServerFilt is None"
+        assert self._logger, "_logger is None"
+
+        self._clientId = clientId
+        self._webAppHandler = None
+
+        #: This stores the cache of chunkedIndex data for the clients
+        self._cache: Dict[int, ChunkedIndexEncodedChunkTupleABC] = {}
+
+        self._endpoint = PayloadEndpoint(self._updateFromServerFilt,
+                                         self._processChunkedIndexPayload)
+
+    def setChunkedIndexCacheHandler(self, handler):
+        self._webAppHandler = handler
+
+    @inlineCallbacks
+    def start(self):
+        yield self.reloadCache()
+
+    def shutdown(self):
+        self._tupleObservable = None
+
+        self._endpoint.shutdown()
+        self._endpoint = None
+
+        self._cache = {}
+
+    @inlineCallbacks
+    def reloadCache(self):
+        self._cache = {}
+
+        offset = 0
+        while True:
+            self._logger.info("Loading ChunkedIndexChunk %s to %s"
+                              % (offset, offset + self._LOAD_CHUNK_SIZE))
+
+            encodedChunkTuples: List[ChunkedIndexEncodedChunkTupleABC] = \
+                yield self._ChunkedIndexChunkLoadRpcMethod(offset, self._LOAD_CHUNK_SIZE)
+
+            if not encodedChunkTuples:
+                break
+
+            self._loadChunkedIndexIntoCache(encodedChunkTuples)
+
+            offset += self._LOAD_CHUNK_SIZE
+
+    @inlineCallbacks
+    def _processChunkedIndexPayload(self, payloadEnvelope: PayloadEnvelope, **kwargs):
+        paylod = yield payloadEnvelope.decodePayloadDefer()
+        chunkedIndexTuples: List[ChunkedIndexEncodedChunkTupleABC] = paylod.tuples
+        self._loadChunkedIndexIntoCache(chunkedIndexTuples)
+
+    def _loadChunkedIndexIntoCache(self,
+                                   encodedChunkTuples: List[
+                                       ChunkedIndexEncodedChunkTupleABC]):
+        chunkKeysUpdated: List[str] = []
+
+        for t in encodedChunkTuples:
+
+            if (not t.chunkKey in self._cache or
+                    self._cache[t.chunkKey].lastUpdate != t.lastUpdate):
+                self._cache[t.chunkKey] = t
+                chunkKeysUpdated.append(t.chunkKey)
+
+        self._logger.debug("Received chunkedIndex updates from server, %s",
+                           chunkKeysUpdated)
+
+        self._webAppHandler.notifyOfChunkedIndexUpdate(chunkKeysUpdated)
+
+    def chunkedIndexChunk(self, chunkKey) -> ChunkedIndexEncodedChunkTupleABC:
+        return self._cache.get(chunkKey)
+
+    def chunkedIndexKeys(self) -> List[int]:
+        return list(self._cache)
