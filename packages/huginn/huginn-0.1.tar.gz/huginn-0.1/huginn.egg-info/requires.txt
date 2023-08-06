@@ -1,0 +1,15 @@
+pandas
+matplotlib
+python-dotenv
+pytrends
+geopandas
+colour
+numpy
+click
+bs4
+plotly
+pyLDAvis
+gensim
+tokenizer
+spacy
+nltk
