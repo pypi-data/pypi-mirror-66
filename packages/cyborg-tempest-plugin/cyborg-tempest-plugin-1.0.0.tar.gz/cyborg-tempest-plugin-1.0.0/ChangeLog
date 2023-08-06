@@ -1,0 +1,25 @@
+CHANGES
+=======
+
+1.0.0
+-----
+
+* Cleanup py27 support
+* Update to hacking 3.0
+* Remove py27 from tox env list
+* Make cyborg-tempest job voting
+* Migrate cyborg-tempest job to py3 for Ussuri
+* Make cyborg-tempest job voting
+
+0.1.0
+-----
+
+* [train][goal] Define new 'cyborg-tempest-ipv6-only' job
+* End-to-end scenario test added
+* Fix the incorrect source code url in README
+* add zuul job to run cyborg tempest
+* Switch to the new canonical constraints URL on master
+* Enable plugin list feature and add gate job to merge patches
+* Add .gitreview file
+* init improvement
+* init cyborg-tempest-plugin
