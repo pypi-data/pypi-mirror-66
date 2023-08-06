@@ -1,0 +1,7 @@
+PyEXR.cpp
+README.md
+setup.py
+pytinyexr.egg-info/PKG-INFO
+pytinyexr.egg-info/SOURCES.txt
+pytinyexr.egg-info/dependency_links.txt
+pytinyexr.egg-info/top_level.txt
