@@ -1,0 +1,16 @@
+hachiko/FluidSynth.py,sha256=cbBgrSzIZ8xLuXvG8c1mDWVlIuCb6mC2rWsRKDRr3N8,2202
+hachiko/__init__.py,sha256=XX4m6SDXE57mdLg5D9JHhbBkVGCzxqNTj1NfC5nub6c,48
+hachiko/funutils.py,sha256=32RvmQ6-jt6Fc-u69BqEklIQBdlRPahdJnsR55eWIFY,3654
+hachiko/hachi.py,sha256=7ucKV4AHunWLWuv1e6wh4ZfaG_p9WRShk1_4zrwTqUg,8653
+hachiko/hachitools.py,sha256=qanWbZ90P1ep6cePXU4sZg4EB37Nkot_xMRj196kxmg,1531
+hachiko/instrument.sf2,sha256=zacan40F9POa_-Y4dfcno2To9rfpVYD8aP-EZqB5UcI,12710
+hachiko/synthesize.py,sha256=MVP_-Sm1TXctS19KqbUKNuEpgKTBxcEEN_wCUFKJyG4,4181
+hachiko/cli_tools/__init__.py,sha256=5FVY7J4Vw1tWSv_rGh3y8e1O_sVwqorzuVey-W9aWrE,35
+hachiko/cli_tools/lrc_merge.py,sha256=Us4GFVLKkzO2q_EPmUylmSBBTEL76TqstWe4EmMvk4k,4031
+hachiko/cli_tools/srt2mid.py,sha256=GQyCrrns2rMyRbf54P7QOu5aaXfAG8N73vURKjw44Sg,3145
+hachiko_bapu-0.1.1.dist-info/LICENSE,sha256=SytwAAUBj4sgxKiCKgKETLzTYBvksMQkC3NDA9aZoQE,1073
+hachiko_bapu-0.1.1.dist-info/METADATA,sha256=OQLlsHpz55d0Y5fIx_3o1hDrHGKvmM58xc32ZnTmQ0g,1198
+hachiko_bapu-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+hachiko_bapu-0.1.1.dist-info/entry_points.txt,sha256=tPTenvz2BfD6ybSSzw1NBJ46u9bbkkFMGiFuHG25JaA,149
+hachiko_bapu-0.1.1.dist-info/top_level.txt,sha256=2cXMqOK4nqmkaKMrlxK-HJs9S7knv25v0jDZ1RE4eyA,8
+hachiko_bapu-0.1.1.dist-info/RECORD,,

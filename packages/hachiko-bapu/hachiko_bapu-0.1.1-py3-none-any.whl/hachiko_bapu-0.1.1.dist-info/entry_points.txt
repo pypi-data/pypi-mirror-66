@@ -1,0 +1,7 @@
+[console_scripts]
+lrc_merge = hachiko.cli_tools.lrc_merge:main
+srt2mid = hachiko.cli_tools.srt2mid:main
+
+[gui_scripts]
+hachiko = hachiko.hachi:main
+
