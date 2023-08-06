@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: teny
+Version: 0.1.3
+Summary: dnn framework
+Home-page: https://github.com/FrankLeeC/MachineLearning/teny
+Author: FrankLee
+Author-email: frankleecsz@gmail.com
+License: MIT Licence
+Description: simple deep learning framework in numpy for demo.
+Keywords: pip,dnn,DeepLearning,MachineLearning
+Platform: any
