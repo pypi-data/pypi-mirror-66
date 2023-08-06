@@ -1,0 +1,15 @@
+msp2lib/Dockerfile,sha256=r-7c33LnNZTjKWaRvDecq5RqMY80C4yCHFDKLxgTOhA,711
+msp2lib/__init__.py,sha256=G5Jz3Hjg7bRCvmESk4lrTnjNarn6NmJlz4ISR4Sap3Y,1363
+msp2lib/__main__.py,sha256=dfg80g6p-0ci2aQZ3r6TrmzTBKmeCUJZyKC3aZEEHaI,1106
+msp2lib/core.py,sha256=Q_rdkGLEHhsse2O_DlH0XS3qUIO-PYYG-EXGOSn7Txs,5726
+msp2lib/make_nistlib.sh,sha256=Tmv7_cFyO8zbSJSQeIuITXntQqd8NnuGodK0UMtNlf0,303
+msp2lib/utils.py,sha256=vijQBF1EGaNH5wY_b-oj8jGt5sxswawnTjyKNXhzIX8,3880
+msp2lib/__pycache__/__init__.cpython-36.pyc,sha256=RiVTUdtJ3bIZbRpY4-YjC3SB4tb-im7sf3x0xGdyANk,710
+msp2lib/__pycache__/core.cpython-36.pyc,sha256=hTpK9c2T11QpSYGT1AGEXGwo8u7merkpD5QB6Rf0Xa8,4450
+msp2lib/__pycache__/utils.cpython-36.pyc,sha256=Dav20xzxA6ddMA3kWCdTBXA1sm_j4NBndBgZFEEKsKE,3599
+msp2lib-0.1.3.dist-info/LICENSE,sha256=pWgb-bBdsU2Gd2kwAXxketnm5W_2u8_fIeWEgojfrxs,7651
+msp2lib-0.1.3.dist-info/METADATA,sha256=LNYMpDNHJQhB48nQfx1Obfp-qC-xK_qoz2PdH97rvDs,4921
+msp2lib-0.1.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+msp2lib-0.1.3.dist-info/entry_points.txt,sha256=ILYUqmBaSiFYXiOktTgPnmxLevQdhRP5A6j4qzxBrB4,42
+msp2lib-0.1.3.dist-info/top_level.txt,sha256=5QR0-rlLRURj2zMD-Depkdv5vNmwRD1yW7l0PddCSWc,8
+msp2lib-0.1.3.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+msp2lib = msp2lib:main
+
