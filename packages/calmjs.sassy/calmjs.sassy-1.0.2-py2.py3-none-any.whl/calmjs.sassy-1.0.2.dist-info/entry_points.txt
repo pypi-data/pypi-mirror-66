@@ -1,0 +1,14 @@
+[calmjs.registry]
+calmjs.scss = calmjs.sassy.registry:SCSSRegistry
+
+[calmjs.runtime]
+scss = calmjs.sassy:libsass_runtime
+
+[distutils.setup_keywords]
+calmjs_scss_module_registry = calmjs.dist:validate_line_list
+extras_calmjs_scss = calmjs.dist:validate_json_field
+
+[egg_info.writers]
+calmjs_scss_module_registry.txt = calmjs.sassy.dist:write_module_registry_names
+extras_calmjs_scss.json = calmjs.sassy.dist:write_extras_calmjs_scss
+
