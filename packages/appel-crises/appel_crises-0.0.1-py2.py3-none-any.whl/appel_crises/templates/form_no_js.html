@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <form action="{% url 'sign' %}" method="POST">
+                {% csrf_token %}
+                <div class="flex-row flex-sb ac-center">
+                    <div>
+                        <input type="text" placeholder="Prénom" name="firstname" required>
+                        <input type="text" placeholder="Nom" name="surname" required>
+                        <input type="email" placeholder="Email" name="email" required>
+                    </div>
+                    <div class="social">
+                        <p class="title">Partager sur les réseaux</p>
+                        <div class="social-icons flex-row">
+                            <a href=""><img src="{% static "/appel_crises/img/facebook-neon.svg" %}"
+                                            alt="Logo Facebbok"></a>
+                            <a href=""><img src="{% static "/appel_crises/img/twitter-neon.svg" %}" alt="Logo Twitter"></a>
+                            <a href=""><img src="{% static "/appel_crises/img/instagram-neon.svg" %}"
+                                            alt="Logo Instagram"></a>
+                            <a href=""><img src="{% static "/appel_crises/img/linkedin-neon.svg" %}"
+                                            alt="Logo LinkedIn"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="checkbox" id="newsletter"> <label for="newsletter">Accepter la première
+                condition</label><br>
+                <input type="checkbox" id="other"> <label for="other">Accepter l'autre condition</label>
+                <input type="submit" value="Signer l'appel" class="button">
+            </form>
+{% endblock %}
