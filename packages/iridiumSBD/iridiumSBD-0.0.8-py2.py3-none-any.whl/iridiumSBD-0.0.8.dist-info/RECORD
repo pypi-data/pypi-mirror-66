@@ -1,0 +1,12 @@
+iridiumSBD/__init__.py,sha256=t3RDFrkMfMQdisCWvI1lUJGW90nXE1_NhQNHifhvQ0I,178
+iridiumSBD/cli.py,sha256=ierv0pj4V-FTF8cdwMy9MBTvVLKB1ar3_CZj5LhFoTE,3295
+iridiumSBD/iridiumSBD.py,sha256=75wP_fPqI7T6iaAmQtahrfOSlpxtIyg4p9vw_JCCYxA,9874
+iridiumSBD/directip/__init__.py,sha256=PodaWpFnfDgPRqd6Cf85RS8NGpnIwgEB124ttNzfU14,63
+iridiumSBD/directip/server.py,sha256=Z08r9hnIUjnDtRRRSLO0pM2ZYr5t7gG6sfZiCsAr2Ek,8005
+iridiumSBD-0.0.8.dist-info/AUTHORS.rst,sha256=JcqMh2Ju3360tOM3RsDeYRoqMin_k3p6ZHWEK2LtT34,346
+iridiumSBD-0.0.8.dist-info/LICENSE,sha256=35Z-GWCI87agDjo2ie0fi7I4DelHuVIA-pGViQB5HRI,1512
+iridiumSBD-0.0.8.dist-info/METADATA,sha256=Y3yOoiUysqlzFp2mTMMwcxqvnAv6z1XNLqsGLLBW7OQ,2658
+iridiumSBD-0.0.8.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+iridiumSBD-0.0.8.dist-info/entry_points.txt,sha256=lCi2S28whrFH3k_CyzW_lBREjfZMq-Dv8wN4Za2btMc,52
+iridiumSBD-0.0.8.dist-info/top_level.txt,sha256=YUjectVWpfUJ-c80NZJbLm6j4yGALBh81dQAE_BX61U,11
+iridiumSBD-0.0.8.dist-info/RECORD,,
