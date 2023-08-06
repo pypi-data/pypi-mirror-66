@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: lcsb-pbin
+Version: 0.0.2
+Summary: Small lib to interact with LCSB privatebin
+Home-page: https://git-r3lab.uni.lu/core-services/lcsb-private-bin
+Author: LCSB sysadmin
+Author-email: lcsb-sysadmins@uni.lu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pycryptodome (==3.9.7)
+Requires-Dist: requests (==2.19.1)
+Requires-Dist: sjcl (==0.2.1)
+
+# LCSB-PBIN
+
+Small library to send a paste on the LCSB private bin.
+
+This one is a bit modified and does not allow paste to be sent without authentication.
+
+## Install 
+
+pip install lcsb_pbin
+
+## Usage
+
+```python
+import lcsb_pbin
+link = lcsb_pbin.paste(
+    "https://privatebin.lcsb.uni.lu",
+    """
+# Header
+lorem ipsum
+    """,
+    "lums-username",
+    "lums-password",
+    paste_password='passw0rd',
+    formatter="markdown",
+    opendiscussion=True,
+    burnafterreading=False,
+    expire="1month",
+    debug=False,
+)
+print(link)
+```
+
