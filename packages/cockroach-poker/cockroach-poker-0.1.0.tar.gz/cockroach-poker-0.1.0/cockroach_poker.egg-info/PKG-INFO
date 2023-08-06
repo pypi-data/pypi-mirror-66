@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: cockroach-poker
+Version: 0.1.0
+Summary: A fun card game all about bluffing
+Home-page: https://gitlab.com/oldironhorse/cockroach-poker
+Author: Simon Redding
+Author-email: s1m0n.r3dd1ng@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.4, <3.8
