@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: django-signalcontrol
+Version: 0.0.4
+Summary: A django app to allow dynamic control of signals
+Home-page: https://github.com/davidslusser/django-signalcontrol
+Author: David Slusser
+Author-email: dbslusser@gmail.com
+License: GPL-3.0
+Download-URL: https://github.com/davidslusser/django-signalcontrol/archive/0.0.4.tar.gz
+Keywords: django,helpers,signal,control,admin
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django :: 2.2
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: django (>=2.2.0)
+
+# django-signalcontrol
+A django extension for dynamically enabling/disabling model-based signals. 
+
+| | |
+|--------------|------|
+| Author       | David Slusser |
+| Description  | A django extension for dynamically enabling/disabling model-based signals. |
+| Requirements | `Python 3.x`<br>`Django 2.2.x` |
+
+
+# Documentation
+Full documentation can be found on http://django-signalcontrol.readthedocs.org. 
+Documentation source files are available in the docs folder.
+
+
+# Installation
+- pip install django-signalcontrol
+- add signalcontrol to your INSTALLED_APPS
+- run migrations python ./manage.py migrate signalcontrol
+
+
+# Features
+
+### signal decorator
+
+
+### admin interface
+
+
+
+# Usage Example
+
+.. code-block:: python
+
+@receiver(post_save, sender=MyCoolModel)
+@signal_control
+def msg_my_model_two(sender, instance, created, **kwargs):
+    """ some signal """
+    print("you just saved an instance of MyCoolModel")
+
+..
+
