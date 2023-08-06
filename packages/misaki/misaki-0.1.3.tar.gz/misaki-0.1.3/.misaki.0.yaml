@@ -1,0 +1,25 @@
+
+patterns:
+  - __ignore__:
+      or:
+        - __ignore__
+        - 're:^/misaki_tests/git'
+        - 're:/__pycache__/'
+  - python:
+      or:
+        - 're:\.py$'
+        - 're:\.pyi$'
+  - flake8:
+      and:
+        - '!re:/__init__\.py$'
+        - 'python'
+
+tools:
+  black:
+    config:
+      line-length: 80
+    pattern: "python"
+  flake8:
+    pattern: "flake8"
+
+

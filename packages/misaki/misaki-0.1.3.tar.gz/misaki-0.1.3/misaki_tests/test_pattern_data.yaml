@@ -1,0 +1,60 @@
+
+py_simple:
+  - python: 're:\.pyi?$'
+
+py_expr:
+  - py: 're:\.py$'
+  - pyi: 're:\.pyi$'
+  - python:
+      or:
+        - "py"
+        - "pyi"
+
+py_expr_modify:
+  - py: 're:\.py$'
+  - python: "py"
+  - pyi: 're:\.pyi$'
+  - python:
+      or:
+        - "python"
+        - "pyi"
+
+py_python_paths: |
+  1:/a.py
+  1:/b.pyi
+  1:/d/e.py
+  0:a.p
+  0:a.py.txt
+  0:a,py
+
+exclude:
+  - excluded:
+      or:
+        - 're:\.pyc$' # ends in ".pyc"
+        - 're:/\.cache/' # ".cache" as any component of the path
+  - project:
+      and:
+        - or: # project folders are /foo/ and /bar/
+            - 're:^/foo/'
+            - 're:^/bar/'
+        - '!re:^/foo/thirdparty/' # excluding /foo/thirdparty/
+        - not:
+            - 're:^/bar/trash/' # and excluding /bar/trash/
+  - relevant:
+      and:
+        - 'project'
+        - '!excluded'
+
+exclude_relevant_paths: |
+  1:/foo/a.py
+  0:/foo/a.pyc
+  0:/foo/.cache/a.py
+  0:/foo/x/.cache/a.py
+  1:/foo/x/cache/a.py
+  0:/.cache/a.py
+  0:/a.py
+  0:/foo/thirdparty/a.py
+  1:/foo/trash/a.py
+  0:/bar/trash/a.py
+  1:/bar/a.py
+  1:/bar/a.txt
