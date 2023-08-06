@@ -1,0 +1,3 @@
+include istar_m9csz_core/appdata/config.json
+include istar_m9csz_core/appdata/data_format.json
+include istar_m9csz_core/appdata/help_strings.json
