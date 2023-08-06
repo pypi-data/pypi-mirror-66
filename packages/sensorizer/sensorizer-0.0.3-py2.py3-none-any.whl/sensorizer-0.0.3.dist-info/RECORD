@@ -1,0 +1,10 @@
+sensorizer/__init__.py,sha256=ZgbQA9_cgoyYzqFYwcWe-jXi99dRXVu4Z5453VHrRgg,125
+sensorizer/data_classes.py,sha256=ADSQrxIkci3hnCQQOK47fceVwiWWzPe9p9PZcHQyey4,702
+sensorizer/queue_interface.py,sha256=WTfhmG3u0cSJuvlN7eFcK11RbFBEv9uOLGTHfTI_9iw,2406
+sensorizer/sensor_emulator.py,sha256=3WbwZGXfrU6hRPkjrw81HlPjxLklExwOBPOOgOvbTM0,4966
+sensorizer/version.py,sha256=59DpV9X-wI0gxBVqUX7UJ4vh2-ELFvqVfHYC9u7eM7w,116
+sensorizer-0.0.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+sensorizer-0.0.3.dist-info/METADATA,sha256=b-GUODDfcZXCiZn04gwA78WPfIswOxIXhU65wSSdkrw,4868
+sensorizer-0.0.3.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+sensorizer-0.0.3.dist-info/top_level.txt,sha256=8acMi_Fdh2s-LR90RVl3-Li7AcTdMCVUeTON_eGLWaM,11
+sensorizer-0.0.3.dist-info/RECORD,,
