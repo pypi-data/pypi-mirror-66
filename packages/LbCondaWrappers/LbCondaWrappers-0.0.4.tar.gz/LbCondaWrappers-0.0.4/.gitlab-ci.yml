@@ -1,0 +1,54 @@
+stages:
+  - test
+  - deploy
+
+check_black:
+  stage: test
+  image: continuumio/miniconda3:latest
+  before_script:
+    - eval "$(python -m conda shell.bash hook)" && conda config --add channels conda-forge
+    - conda install --quiet --yes black
+  script:
+    - black --check --diff .
+
+.run_pytest:
+  tags:
+    - docker-privileged
+  stage: test
+  before_script:
+    # Install CVMFS
+    - yum -y install https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
+    - yum install -y cvmfs
+    # TODO: Stop using the test instance of lhcbdev
+    - echo "CVMFS_SERVER_URL=http://cvmfs-lhcbdev.s3.cern.ch/cvmfs/lhcbdev.cern.ch" > /etc/cvmfs/config.d/lhcbdev.cern.ch.conf
+    - echo "CVMFS_HTTP_PROXY=DIRECT" >> /etc/cvmfs/default.conf
+    - mkdir /cvmfs/lhcbdev.cern.ch
+    - mount -t cvmfs lhcbdev.cern.ch /cvmfs/lhcbdev.cern.ch
+  script:
+    - python --version
+    - pip install --upgrade setuptools
+    - pip install '.[testing]'
+    - pytest -vvv
+
+slc6:
+  extends: .run_pytest
+  image: gitlab-registry.cern.ch/lhcb-docker/python-deployment:slc6
+
+centos7:
+  extends: .run_pytest
+  image: gitlab-registry.cern.ch/lhcb-docker/python-deployment:centos7
+
+# Packaging step
+deploy-packages:
+  stage: deploy
+  only:
+    - tags
+  dependencies: []
+  image: gitlab-registry.cern.ch/lhcb-docker/python-deployment:python-3.7
+  script:
+    - python setup.py sdist --dist-dir public/
+    - python setup.py bdist_wheel --dist-dir public/
+    - if [ -z "$TWINE_PASSWORD" ] ; then echo "Set TWINE_PASSWORD in CI variables" ; exit 1 ; fi
+    - twine upload -u __token__ public/*
+  before_script: []
+  after_script: []
