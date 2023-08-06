@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: slovakrailways
+Version: 0.0.3
+Summary: Python envelope of Slovak Railways API
+Home-page: https://github.com/martinbenes1996/slovakrailways
+Author: Martin Beneš
+Author-email: martinbenes1996@gmail.com
+License: MIT
+Download-URL: https://github.com/martinbenes1996/slovakrailways/archive/v0.0.3.tar.gz
+Keywords: API,Railway,Train,Slovakia,Data,REST API
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+
+# slovakrailways
+Python envelope of Slovak Railways API
+
+## Installation
+
+```
+pip install slovakrailways
+```
+
+## Usage
+
+```
+import slovakrailways as zsr
+
+# get stations matching "zilina" prefix (case- and diacritic- insensitive)
+result = zsr.stations('zilina')
+```
+
+
