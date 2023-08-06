@@ -1,0 +1,5 @@
+jupyter-nbextensions-configurator
+jupyter
+pybis>=1.14.3
+numpy
+tornado==5.1.1
