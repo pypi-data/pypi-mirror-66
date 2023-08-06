@@ -1,0 +1,14 @@
+README.md
+setup.py
+libcorepy.egg-info/PKG-INFO
+libcorepy.egg-info/SOURCES.txt
+libcorepy.egg-info/dependency_links.txt
+libcorepy.egg-info/requires.txt
+libcorepy.egg-info/top_level.txt
+utility/__init__.py
+utility/constante.py
+utility/encrip.py
+utility/error.py
+utility/generic.py
+utility/json.py
+utility/msj.py
