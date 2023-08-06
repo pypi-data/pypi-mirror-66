@@ -1,0 +1,646 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>blessed.sequences &mdash; Blessed 1.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../keyboard.html">Keyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../location.html">Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measuring.html">Measuring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../project.html">Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>blessed.sequences</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for blessed.sequences</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;Module providing &#39;sequence awareness&#39;.&quot;&quot;&quot;</span>
+<span class="c1"># std imports</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">textwrap</span>
+
+<span class="c1"># 3rd party</span>
+<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">from</span> <span class="nn">wcwidth</span> <span class="kn">import</span> <span class="n">wcwidth</span>
+
+<span class="c1"># local</span>
+<span class="kn">from</span> <span class="nn">blessed._capabilities</span> <span class="kn">import</span> <span class="n">CAPABILITIES_CAUSE_MOVEMENT</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Sequence&#39;</span><span class="p">,</span> <span class="s1">&#39;SequenceTextWrapper&#39;</span><span class="p">,</span> <span class="s1">&#39;iter_parse&#39;</span><span class="p">,</span> <span class="s1">&#39;measure_length&#39;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Termcap</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Terminal capability of given variable name and pattern.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">attribute</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Class initializer.</span>
+
+<span class="sd">        :arg str name: name describing capability.</span>
+<span class="sd">        :arg str pattern: regular expression string.</span>
+<span class="sd">        :arg str attribute: :class:`~.Terminal` attribute used to build</span>
+<span class="sd">            this terminal capability.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pattern</span> <span class="o">=</span> <span class="n">pattern</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attribute</span> <span class="o">=</span> <span class="n">attribute</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_re_compiled</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># pylint: disable=redundant-keyword-arg</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;Termcap </span><span class="si">{self.name}</span><span class="s1">:</span><span class="si">{self.pattern!r}</span><span class="s1">&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">named_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Regular expression pattern for capability with named group.&quot;&quot;&quot;</span>
+        <span class="c1"># pylint: disable=redundant-keyword-arg</span>
+        <span class="k">return</span> <span class="s1">&#39;(?P&lt;</span><span class="si">{self.name}</span><span class="s1">&gt;</span><span class="si">{self.pattern}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">re_compiled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Compiled regular expression pattern for capability.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_re_compiled</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_re_compiled</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pattern</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_re_compiled</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">will_move</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Whether capability causes cursor movement.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="n">CAPABILITIES_CAUSE_MOVEMENT</span>
+
+    <span class="k">def</span> <span class="nf">horizontal_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Horizontal carriage adjusted by capability, may be negative.</span>
+
+<span class="sd">        :rtype: int</span>
+<span class="sd">        :arg str text: for capabilities *parm_left_cursor*,</span>
+<span class="sd">            *parm_right_cursor*, provide the matching sequence</span>
+<span class="sd">            text, its interpreted distance is returned.</span>
+
+<span class="sd">        :returns: 0 except for matching &#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;cursor_left&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;backspace&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;cursor_right&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;tab&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+            <span class="s1">&#39;ascii_tab&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">value</span>
+
+        <span class="n">unit</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;parm_left_cursor&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;parm_right_cursor&#39;</span><span class="p">:</span> <span class="mi">1</span>
+        <span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">unit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">re_compiled</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">unit</span> <span class="o">*</span> <span class="n">value</span>
+
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="c1"># pylint: disable=too-many-arguments</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">capability</span><span class="p">,</span> <span class="n">attribute</span><span class="p">,</span> <span class="n">nparams</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+              <span class="n">numeric</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">match_grouped</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">match_any</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+              <span class="n">match_optional</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Class factory builder for given capability definition.</span>
+
+<span class="sd">        :arg str name: Variable name given for this pattern.</span>
+<span class="sd">        :arg str capability: A unicode string representing a terminal</span>
+<span class="sd">            capability to build for. When ``nparams`` is non-zero, it</span>
+<span class="sd">            must be a callable unicode string (such as the result from</span>
+<span class="sd">            ``getattr(term, &#39;bold&#39;)``.</span>
+<span class="sd">        :arg str attribute: The terminfo(5) capability name by which this</span>
+<span class="sd">            pattern is known.</span>
+<span class="sd">        :arg int nparams: number of positional arguments for callable.</span>
+<span class="sd">        :arg int numeric: Value to substitute into capability to when generating pattern</span>
+<span class="sd">        :arg bool match_grouped: If the numeric pattern should be</span>
+<span class="sd">            grouped, ``(\d+)`` when ``True``, ``\d+`` default.</span>
+<span class="sd">        :arg bool match_any: When keyword argument ``nparams`` is given,</span>
+<span class="sd">            *any* numeric found in output is suitable for building as</span>
+<span class="sd">            pattern ``(\d+)``.  Otherwise, only the first matching value of</span>
+<span class="sd">            range *(numeric - 1)* through *(numeric + 1)* will be replaced by</span>
+<span class="sd">            pattern ``(\d+)`` in builder.</span>
+<span class="sd">        :arg bool match_optional: When ``True``, building of numeric patterns</span>
+<span class="sd">            containing ``(\d+)`` will be built as optional, ``(\d+)?``.</span>
+<span class="sd">        :rtype: blessed.sequences.Termcap</span>
+<span class="sd">        :returns: Terminal capability instance for given capability definition</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">_numeric_regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;\d+&#39;</span>
+        <span class="k">if</span> <span class="n">match_grouped</span><span class="p">:</span>
+            <span class="n">_numeric_regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;(\d+)&#39;</span>
+        <span class="k">if</span> <span class="n">match_optional</span><span class="p">:</span>
+            <span class="n">_numeric_regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;(\d+)?&#39;</span>
+        <span class="n">numeric</span> <span class="o">=</span> <span class="mi">99</span> <span class="k">if</span> <span class="n">numeric</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">numeric</span>
+
+        <span class="c1"># basic capability attribute, not used as a callable</span>
+        <span class="k">if</span> <span class="n">nparams</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">capability</span><span class="p">),</span> <span class="n">attribute</span><span class="p">)</span>
+
+        <span class="c1"># a callable capability accepting numeric argument</span>
+        <span class="n">_outp</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">capability</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">numeric</span><span class="p">,)</span> <span class="o">*</span> <span class="n">nparams</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">match_any</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numeric</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">numeric</span> <span class="o">+</span> <span class="mi">2</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="ow">in</span> <span class="n">_outp</span><span class="p">:</span>
+                    <span class="n">pattern</span> <span class="o">=</span> <span class="n">_outp</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">),</span> <span class="n">_numeric_regex</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">attribute</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">match_grouped</span><span class="p">:</span>
+            <span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d+)&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">_numeric_regex</span><span class="p">,</span> <span class="n">_outp</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d+&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">_numeric_regex</span><span class="p">,</span> <span class="n">_outp</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">attribute</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="SequenceTextWrapper"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.SequenceTextWrapper">[docs]</a><span class="k">class</span> <span class="nc">SequenceTextWrapper</span><span class="p">(</span><span class="n">textwrap</span><span class="o">.</span><span class="n">TextWrapper</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Docstring overridden.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">term</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Class initializer.</span>
+
+<span class="sd">        This class supports the :meth:`~.Terminal.wrap` method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">term</span> <span class="o">=</span> <span class="n">term</span>
+        <span class="n">textwrap</span><span class="o">.</span><span class="n">TextWrapper</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<div class="viewcode-block" id="SequenceTextWrapper._wrap_chunks"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.SequenceTextWrapper._wrap_chunks">[docs]</a>    <span class="k">def</span> <span class="nf">_wrap_chunks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chunks</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sequence-aware variant of :meth:`textwrap.TextWrapper._wrap_chunks`.</span>
+
+<span class="sd">        :raises ValueError: ``self.width`` is not a positive integer</span>
+<span class="sd">        :rtype: list</span>
+<span class="sd">        :returns: text chunks adjusted for width</span>
+
+<span class="sd">        This simply ensures that word boundaries are not broken mid-sequence, as standard python</span>
+<span class="sd">        textwrap would incorrectly determine the length of a string containing sequences, and may</span>
+<span class="sd">        also break consider sequences part of a &quot;word&quot; that may be broken by hyphen (``-``), where</span>
+<span class="sd">        this implementation corrects both.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;invalid width </span><span class="si">{0!r}</span><span class="s2">(</span><span class="si">{1!r}</span><span class="s2">) (must be integer &gt; 0)&quot;</span>
+                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">)))</span>
+
+        <span class="n">term</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">term</span>
+        <span class="n">drop_whitespace</span> <span class="o">=</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;drop_whitespace&#39;</span>
+                                      <span class="p">)</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_whitespace</span>
+        <span class="n">chunks</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+        <span class="k">while</span> <span class="n">chunks</span><span class="p">:</span>
+            <span class="n">cur_line</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">cur_len</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">if</span> <span class="n">lines</span><span class="p">:</span>
+                <span class="n">indent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">subsequent_indent</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">indent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">initial_indent</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">indent</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">drop_whitespace</span> <span class="ow">and</span> <span class="p">(</span>
+                    <span class="n">Sequence</span><span class="p">(</span><span class="n">chunks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">term</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="n">lines</span><span class="p">):</span>
+                <span class="k">del</span> <span class="n">chunks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">while</span> <span class="n">chunks</span><span class="p">:</span>
+                <span class="n">chunk_len</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">chunks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">term</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">cur_len</span> <span class="o">+</span> <span class="n">chunk_len</span> <span class="o">&lt;=</span> <span class="n">width</span><span class="p">:</span>
+                    <span class="n">cur_line</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chunks</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
+                    <span class="n">cur_len</span> <span class="o">+=</span> <span class="n">chunk_len</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">break</span>
+            <span class="k">if</span> <span class="n">chunks</span> <span class="ow">and</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">chunks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">term</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">width</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_handle_long_word</span><span class="p">(</span><span class="n">chunks</span><span class="p">,</span> <span class="n">cur_line</span><span class="p">,</span> <span class="n">cur_len</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">drop_whitespace</span> <span class="ow">and</span> <span class="p">(</span>
+                    <span class="n">cur_line</span> <span class="ow">and</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">cur_line</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">term</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">):</span>
+                <span class="k">del</span> <span class="n">cur_line</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">cur_line</span><span class="p">:</span>
+                <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">indent</span> <span class="o">+</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cur_line</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">lines</span></div>
+
+<div class="viewcode-block" id="SequenceTextWrapper._handle_long_word"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.SequenceTextWrapper._handle_long_word">[docs]</a>    <span class="k">def</span> <span class="nf">_handle_long_word</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reversed_chunks</span><span class="p">,</span> <span class="n">cur_line</span><span class="p">,</span> <span class="n">cur_len</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sequence-aware :meth:`textwrap.TextWrapper._handle_long_word`.</span>
+
+<span class="sd">        This simply ensures that word boundaries are not broken mid-sequence, as standard python</span>
+<span class="sd">        textwrap would incorrectly determine the length of a string containing sequences, and may</span>
+<span class="sd">        also break consider sequences part of a &quot;word&quot; that may be broken by hyphen (``-``), where</span>
+<span class="sd">        this implementation corrects both.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Figure out when indent is larger than the specified width, and make</span>
+        <span class="c1"># sure at least one character is stripped off on every pass</span>
+        <span class="k">if</span> <span class="n">width</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">space_left</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">space_left</span> <span class="o">=</span> <span class="n">width</span> <span class="o">-</span> <span class="n">cur_len</span>
+
+        <span class="c1"># If we&#39;re allowed to break long words, then do so: put as much</span>
+        <span class="c1"># of the next chunk onto the current line as will fit.</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">break_long_words</span><span class="p">:</span>
+            <span class="n">term</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">term</span>
+            <span class="n">chunk</span> <span class="o">=</span> <span class="n">reversed_chunks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">idx</span> <span class="o">=</span> <span class="n">nxt</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">text</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">iter_parse</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">chunk</span><span class="p">):</span>
+                <span class="n">nxt</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">chunk</span><span class="p">[:</span><span class="n">nxt</span><span class="p">],</span> <span class="n">term</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">space_left</span><span class="p">:</span>
+                    <span class="k">break</span>
+                <span class="n">idx</span> <span class="o">=</span> <span class="n">nxt</span>
+            <span class="n">cur_line</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">chunk</span><span class="p">[:</span><span class="n">idx</span><span class="p">])</span>
+            <span class="n">reversed_chunks</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">chunk</span><span class="p">[</span><span class="n">idx</span><span class="p">:]</span>
+
+        <span class="c1"># Otherwise, we have to preserve the long word intact.  Only add</span>
+        <span class="c1"># it to the current line if there&#39;s nothing already there --</span>
+        <span class="c1"># that minimizes how much we violate the width constraint.</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">cur_line</span><span class="p">:</span>
+            <span class="n">cur_line</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reversed_chunks</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span></div></div>
+
+        <span class="c1"># If we&#39;re not allowed to break long words, and there&#39;s already</span>
+        <span class="c1"># text on the current line, do nothing.  Next time through the</span>
+        <span class="c1"># main loop of _wrap_chunks(), we&#39;ll wind up here again, but</span>
+        <span class="c1"># cur_len will be zero, so the next line will be entirely</span>
+        <span class="c1"># devoted to the long word that we can&#39;t handle right now.</span>
+
+
+<span class="n">SequenceTextWrapper</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">textwrap</span><span class="o">.</span><span class="n">TextWrapper</span><span class="o">.</span><span class="vm">__doc__</span>
+
+
+<div class="viewcode-block" id="Sequence"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.Sequence">[docs]</a><span class="k">class</span> <span class="nc">Sequence</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A &quot;sequence-aware&quot; version of the base :class:`str` class.</span>
+
+<span class="sd">    This unicode-derived class understands the effect of escape sequences</span>
+<span class="sd">    of printable length, allowing a properly implemented :meth:`rjust`,</span>
+<span class="sd">    :meth:`ljust`, :meth:`center`, and :meth:`length`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">sequence_text</span><span class="p">,</span> <span class="n">term</span><span class="p">):</span>
+        <span class="c1"># pylint: disable = missing-return-doc, missing-return-type-doc</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Class constructor.</span>
+
+<span class="sd">        :arg str sequence_text: A string that may contain sequences.</span>
+<span class="sd">        :arg blessed.Terminal term: :class:`~.Terminal` instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">sequence_text</span><span class="p">)</span>
+        <span class="n">new</span><span class="o">.</span><span class="n">_term</span> <span class="o">=</span> <span class="n">term</span>
+        <span class="k">return</span> <span class="n">new</span>
+
+<div class="viewcode-block" id="Sequence.ljust"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.Sequence.ljust">[docs]</a>    <span class="k">def</span> <span class="nf">ljust</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">fillchar</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39; &#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return string containing sequences, left-adjusted.</span>
+
+<span class="sd">        :arg int width: Total width given to left-adjust ``text``.  If</span>
+<span class="sd">            unspecified, the width of the attached terminal is used (default).</span>
+<span class="sd">        :arg str fillchar: String for padding right-of ``text``.</span>
+<span class="sd">        :returns: String of ``text``, left-aligned by ``width``.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rightside</span> <span class="o">=</span> <span class="n">fillchar</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span>
+            <span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">width</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">())))</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fillchar</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="bp">self</span><span class="p">,</span> <span class="n">rightside</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Sequence.rjust"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.Sequence.rjust">[docs]</a>    <span class="k">def</span> <span class="nf">rjust</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">fillchar</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39; &#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return string containing sequences, right-adjusted.</span>
+
+<span class="sd">        :arg int width: Total width given to right-adjust ``text``.  If</span>
+<span class="sd">            unspecified, the width of the attached terminal is used (default).</span>
+<span class="sd">        :arg str fillchar: String for padding left-of ``text``.</span>
+<span class="sd">        :returns: String of ``text``, right-aligned by ``width``.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">leftside</span> <span class="o">=</span> <span class="n">fillchar</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span>
+            <span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">width</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">())))</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fillchar</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="n">leftside</span><span class="p">,</span> <span class="bp">self</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Sequence.center"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.Sequence.center">[docs]</a>    <span class="k">def</span> <span class="nf">center</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">fillchar</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39; &#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return string containing sequences, centered.</span>
+
+<span class="sd">        :arg int width: Total width given to center ``text``.  If</span>
+<span class="sd">            unspecified, the width of the attached terminal is used (default).</span>
+<span class="sd">        :arg str fillchar: String for padding left and right-of ``text``.</span>
+<span class="sd">        :returns: String of ``text``, centered by ``width``.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">split</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">width</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">())</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">leftside</span> <span class="o">=</span> <span class="n">fillchar</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span>
+            <span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">split</span><span class="p">)))</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fillchar</span><span class="p">)))</span>
+        <span class="n">rightside</span> <span class="o">=</span> <span class="n">fillchar</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span>
+            <span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">split</span><span class="p">)))</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fillchar</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="n">leftside</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">rightside</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Sequence.length"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.Sequence.length">[docs]</a>    <span class="k">def</span> <span class="nf">length</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the printable length of string containing sequences.</span>
+
+<span class="sd">        Strings containing ``term.left`` or ``\b`` will cause &quot;overstrike&quot;,</span>
+<span class="sd">        but a length less than 0 is not ever returned. So ``_\b+`` is a</span>
+<span class="sd">        length of 1 (displays as ``+``), but ``\b`` alone is simply a</span>
+<span class="sd">        length of 0.</span>
+
+<span class="sd">        Some characters may consume more than one cell, mainly those CJK</span>
+<span class="sd">        Unified Ideographs (Chinese, Japanese, Korean) defined by Unicode</span>
+<span class="sd">        as half or full-width characters.</span>
+
+<span class="sd">        For example:</span>
+
+<span class="sd">            &gt;&gt;&gt; from blessed import Terminal</span>
+<span class="sd">            &gt;&gt;&gt; from blessed.sequences import Sequence</span>
+<span class="sd">            &gt;&gt;&gt; term = Terminal()</span>
+<span class="sd">            &gt;&gt;&gt; msg = term.clear + term.red(u&#39;コンニチハ&#39;)</span>
+<span class="sd">            &gt;&gt;&gt; Sequence(msg, term).length()</span>
+<span class="sd">            10</span>
+
+<span class="sd">        .. note:: Although accounted for, strings containing sequences such</span>
+<span class="sd">            as ``term.clear`` will not give accurate returns, it is not</span>
+<span class="sd">            considered lengthy (a length of 0).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># because control characters may return -1, &quot;clip&quot; their length to 0.</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">wcwidth</span><span class="p">(</span><span class="n">w_char</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">w_char</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">padd</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Sequence.strip"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.Sequence.strip">[docs]</a>    <span class="k">def</span> <span class="nf">strip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chars</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return string of sequences, leading and trailing whitespace removed.</span>
+
+<span class="sd">        :arg str chars: Remove characters in chars instead of whitespace.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :returns: string of sequences with leading and trailing whitespace removed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">strip_seqs</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">chars</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Sequence.lstrip"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.Sequence.lstrip">[docs]</a>    <span class="k">def</span> <span class="nf">lstrip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chars</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return string of all sequences and leading whitespace removed.</span>
+
+<span class="sd">        :arg str chars: Remove characters in chars instead of whitespace.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :returns: string of sequences with leading removed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">strip_seqs</span><span class="p">()</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="n">chars</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Sequence.rstrip"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.Sequence.rstrip">[docs]</a>    <span class="k">def</span> <span class="nf">rstrip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chars</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return string of all sequences and trailing whitespace removed.</span>
+
+<span class="sd">        :arg str chars: Remove characters in chars instead of whitespace.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :returns: string of sequences with trailing removed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">strip_seqs</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="n">chars</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Sequence.strip_seqs"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.Sequence.strip_seqs">[docs]</a>    <span class="k">def</span> <span class="nf">strip_seqs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return ``text`` stripped of only its terminal sequences.</span>
+
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :returns: Text with terminal sequences removed</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">padd</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Sequence.padd"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.Sequence.padd">[docs]</a>    <span class="k">def</span> <span class="nf">padd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strip</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return non-destructive horizontal movement as destructive spacing.</span>
+
+<span class="sd">        :arg bool strip: Strip terminal sequences</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :returns: Text adjusted for horizontal movement</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">outp</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">text</span><span class="p">,</span> <span class="n">cap</span> <span class="ow">in</span> <span class="n">iter_parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_term</span><span class="p">,</span> <span class="bp">self</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">cap</span><span class="p">:</span>
+                <span class="n">outp</span> <span class="o">+=</span> <span class="n">text</span>
+                <span class="k">continue</span>
+
+            <span class="n">value</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">horizontal_distance</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">outp</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span> <span class="o">*</span> <span class="n">value</span>
+            <span class="k">elif</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">outp</span> <span class="o">=</span> <span class="n">outp</span><span class="p">[:</span><span class="n">value</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="ow">not</span> <span class="n">strip</span><span class="p">:</span>
+                <span class="n">outp</span> <span class="o">+=</span> <span class="n">text</span>
+        <span class="k">return</span> <span class="n">outp</span></div></div>
+
+
+<div class="viewcode-block" id="iter_parse"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.iter_parse">[docs]</a><span class="k">def</span> <span class="nf">iter_parse</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generator yields (text, capability) for characters of ``text``.</span>
+
+<span class="sd">    value for ``capability`` may be ``None``, where ``text`` is</span>
+<span class="sd">    :class:`str` of length 1.  Otherwise, ``text`` is a full</span>
+<span class="sd">    matching sequence of given capability.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">term</span><span class="o">.</span><span class="n">_caps_compiled_any</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">lastgroup</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;MISMATCH&#39;</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">value</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">caps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="measure_length"><a class="viewcode-back" href="../../api/sequences.html#blessed.sequences.measure_length">[docs]</a><span class="k">def</span> <span class="nf">measure_length</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">term</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    .. deprecated:: 1.12.0.</span>
+
+<span class="sd">    :rtype: int</span>
+<span class="sd">    :returns: Length of the first sequence in the string</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">text</span><span class="p">,</span> <span class="n">capability</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">iter_parse</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">text</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">capability</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="mi">0</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    .wy-nav-content { max-width: 900px; }
+  </style>
+
+
+
+</body>
+</html>

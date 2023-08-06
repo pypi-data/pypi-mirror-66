@@ -1,0 +1,534 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sequences.py &mdash; Blessed 1.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="terminal.py" href="terminal.html" />
+    <link rel="prev" title="keyboard.py" href="keyboard.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../keyboard.html">Keyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../location.html">Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measuring.html">Measuring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="color.html">color.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="colorspace.html">colorspace.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="formatters.html">formatters.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard.html">keyboard.py</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">sequences.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="terminal.html">terminal.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project.html">Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">API Documentation</a> &raquo;</li>
+        
+      <li>sequences.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/sequences.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-blessed.sequences">
+<span id="sequences-py"></span><h1>sequences.py<a class="headerlink" href="#module-blessed.sequences" title="Permalink to this headline">¶</a></h1>
+<p>Module providing ‘sequence awareness’.</p>
+<dl class="class">
+<dt id="blessed.sequences.SequenceTextWrapper">
+<em class="property">class </em><code class="sig-name descname">SequenceTextWrapper</code><span class="sig-paren">(</span><em class="sig-param">width</em>, <em class="sig-param">term</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/sequences.html#SequenceTextWrapper"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.SequenceTextWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object for wrapping/filling text.  The public interface consists of
+the wrap() and fill() methods; the other methods are just there for
+subclasses to override in order to tweak the default behaviour.
+If you want to completely replace the main wrapping algorithm,
+you’ll probably have to override _wrap_chunks().</p>
+<dl class="simple">
+<dt>Several instance attributes control various aspects of wrapping:</dt><dd><dl class="simple">
+<dt>width (default: 70)</dt><dd><p>the maximum width of wrapped lines (unless break_long_words
+is false)</p>
+</dd>
+<dt>initial_indent (default: “”)</dt><dd><p>string that will be prepended to the first line of wrapped
+output.  Counts towards the line’s width.</p>
+</dd>
+<dt>subsequent_indent (default: “”)</dt><dd><p>string that will be prepended to all lines save the first
+of wrapped output; also counts towards each line’s width.</p>
+</dd>
+<dt>expand_tabs (default: true)</dt><dd><p>Expand tabs in input text to spaces before further processing.
+Each tab will become 0 .. ‘tabsize’ spaces, depending on its position
+in its line.  If false, each tab is treated as a single character.</p>
+</dd>
+<dt>tabsize (default: 8)</dt><dd><p>Expand tabs in input text to 0 .. ‘tabsize’ spaces, unless
+‘expand_tabs’ is false.</p>
+</dd>
+<dt>replace_whitespace (default: true)</dt><dd><p>Replace all whitespace characters in the input text by spaces
+after tab expansion.  Note that if expand_tabs is false and
+replace_whitespace is true, every tab will be converted to a
+single space!</p>
+</dd>
+<dt>fix_sentence_endings (default: false)</dt><dd><p>Ensure that sentence-ending punctuation is always followed
+by two spaces.  Off by default because the algorithm is
+(unavoidably) imperfect.</p>
+</dd>
+<dt>break_long_words (default: true)</dt><dd><p>Break words longer than ‘width’.  If false, those words will not
+be broken, and some lines might be longer than ‘width’.</p>
+</dd>
+<dt>break_on_hyphens (default: true)</dt><dd><p>Allow breaking hyphenated words. If true, wrapping will occur
+preferably on whitespaces and right after hyphens part of
+compound words.</p>
+</dd>
+<dt>drop_whitespace (default: true)</dt><dd><p>Drop leading and trailing whitespace from lines.</p>
+</dd>
+<dt>max_lines (default: None)</dt><dd><p>Truncate wrapped lines.</p>
+</dd>
+<dt>placeholder (default: ‘ […]’)</dt><dd><p>Append to the last line of truncated text.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Class initializer.</p>
+<p>This class supports the <a class="reference internal" href="terminal.html#blessed.terminal.Terminal.wrap" title="blessed.terminal.Terminal.wrap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wrap()</span></code></a> method.</p>
+<dl class="method">
+<dt id="blessed.sequences.SequenceTextWrapper._wrap_chunks">
+<code class="sig-name descname">_wrap_chunks</code><span class="sig-paren">(</span><em class="sig-param">chunks</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/sequences.html#SequenceTextWrapper._wrap_chunks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.SequenceTextWrapper._wrap_chunks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sequence-aware variant of <code class="xref py py-meth docutils literal notranslate"><span class="pre">textwrap.TextWrapper._wrap_chunks()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.8)"><strong>ValueError</strong></a> – <code class="docutils literal notranslate"><span class="pre">self.width</span></code> is not a positive integer</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)">list</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>text chunks adjusted for width</p>
+</dd>
+</dl>
+<p>This simply ensures that word boundaries are not broken mid-sequence, as standard python
+textwrap would incorrectly determine the length of a string containing sequences, and may
+also break consider sequences part of a “word” that may be broken by hyphen (<code class="docutils literal notranslate"><span class="pre">-</span></code>), where
+this implementation corrects both.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.sequences.SequenceTextWrapper._handle_long_word">
+<code class="sig-name descname">_handle_long_word</code><span class="sig-paren">(</span><em class="sig-param">reversed_chunks</em>, <em class="sig-param">cur_line</em>, <em class="sig-param">cur_len</em>, <em class="sig-param">width</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/sequences.html#SequenceTextWrapper._handle_long_word"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.SequenceTextWrapper._handle_long_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sequence-aware <code class="xref py py-meth docutils literal notranslate"><span class="pre">textwrap.TextWrapper._handle_long_word()</span></code>.</p>
+<p>This simply ensures that word boundaries are not broken mid-sequence, as standard python
+textwrap would incorrectly determine the length of a string containing sequences, and may
+also break consider sequences part of a “word” that may be broken by hyphen (<code class="docutils literal notranslate"><span class="pre">-</span></code>), where
+this implementation corrects both.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="blessed.sequences.Sequence">
+<em class="property">class </em><code class="sig-name descname">Sequence</code><a class="reference internal" href="../_modules/blessed/sequences.html#Sequence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.Sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>A “sequence-aware” version of the base <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> class.</p>
+<p>This unicode-derived class understands the effect of escape sequences
+of printable length, allowing a properly implemented <a class="reference internal" href="#blessed.sequences.Sequence.rjust" title="blessed.sequences.Sequence.rjust"><code class="xref py py-meth docutils literal notranslate"><span class="pre">rjust()</span></code></a>,
+<a class="reference internal" href="#blessed.sequences.Sequence.ljust" title="blessed.sequences.Sequence.ljust"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ljust()</span></code></a>, <a class="reference internal" href="#blessed.sequences.Sequence.center" title="blessed.sequences.Sequence.center"><code class="xref py py-meth docutils literal notranslate"><span class="pre">center()</span></code></a>, and <a class="reference internal" href="#blessed.sequences.Sequence.length" title="blessed.sequences.Sequence.length"><code class="xref py py-meth docutils literal notranslate"><span class="pre">length()</span></code></a>.</p>
+<p>Class constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sequence_text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – A string that may contain sequences.</p></li>
+<li><p><strong>term</strong> (<em>blessed.Terminal</em>) – <a class="reference internal" href="terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> instance.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="blessed.sequences.Sequence.ljust">
+<code class="sig-name descname">ljust</code><span class="sig-paren">(</span><em class="sig-param">width</em>, <em class="sig-param">fillchar=' '</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/sequences.html#Sequence.ljust"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.Sequence.ljust" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return string containing sequences, left-adjusted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Total width given to left-adjust <code class="docutils literal notranslate"><span class="pre">text</span></code>.  If
+unspecified, the width of the attached terminal is used (default).</p></li>
+<li><p><strong>fillchar</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – String for padding right-of <code class="docutils literal notranslate"><span class="pre">text</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>String of <code class="docutils literal notranslate"><span class="pre">text</span></code>, left-aligned by <code class="docutils literal notranslate"><span class="pre">width</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.sequences.Sequence.rjust">
+<code class="sig-name descname">rjust</code><span class="sig-paren">(</span><em class="sig-param">width</em>, <em class="sig-param">fillchar=' '</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/sequences.html#Sequence.rjust"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.Sequence.rjust" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return string containing sequences, right-adjusted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Total width given to right-adjust <code class="docutils literal notranslate"><span class="pre">text</span></code>.  If
+unspecified, the width of the attached terminal is used (default).</p></li>
+<li><p><strong>fillchar</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – String for padding left-of <code class="docutils literal notranslate"><span class="pre">text</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>String of <code class="docutils literal notranslate"><span class="pre">text</span></code>, right-aligned by <code class="docutils literal notranslate"><span class="pre">width</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.sequences.Sequence.center">
+<code class="sig-name descname">center</code><span class="sig-paren">(</span><em class="sig-param">width</em>, <em class="sig-param">fillchar=' '</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/sequences.html#Sequence.center"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.Sequence.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return string containing sequences, centered.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Total width given to center <code class="docutils literal notranslate"><span class="pre">text</span></code>.  If
+unspecified, the width of the attached terminal is used (default).</p></li>
+<li><p><strong>fillchar</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – String for padding left and right-of <code class="docutils literal notranslate"><span class="pre">text</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>String of <code class="docutils literal notranslate"><span class="pre">text</span></code>, centered by <code class="docutils literal notranslate"><span class="pre">width</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.sequences.Sequence.length">
+<code class="sig-name descname">length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/sequences.html#Sequence.length"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.Sequence.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the printable length of string containing sequences.</p>
+<p>Strings containing <code class="docutils literal notranslate"><span class="pre">term.left</span></code> or <code class="docutils literal notranslate"><span class="pre">\b</span></code> will cause “overstrike”,
+but a length less than 0 is not ever returned. So <code class="docutils literal notranslate"><span class="pre">_\b+</span></code> is a
+length of 1 (displays as <code class="docutils literal notranslate"><span class="pre">+</span></code>), but <code class="docutils literal notranslate"><span class="pre">\b</span></code> alone is simply a
+length of 0.</p>
+<p>Some characters may consume more than one cell, mainly those CJK
+Unified Ideographs (Chinese, Japanese, Korean) defined by Unicode
+as half or full-width characters.</p>
+<p>For example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">blessed.sequences</span> <span class="kn">import</span> <span class="n">Sequence</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">msg</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">clear</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">red</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;コンニチハ&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Sequence</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">term</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">()</span>
+<span class="go">10</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although accounted for, strings containing sequences such
+as <code class="docutils literal notranslate"><span class="pre">term.clear</span></code> will not give accurate returns, it is not
+considered lengthy (a length of 0).</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.sequences.Sequence.strip">
+<code class="sig-name descname">strip</code><span class="sig-paren">(</span><em class="sig-param">chars=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/sequences.html#Sequence.strip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.Sequence.strip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return string of sequences, leading and trailing whitespace removed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>chars</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Remove characters in chars instead of whitespace.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>string of sequences with leading and trailing whitespace removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.sequences.Sequence.lstrip">
+<code class="sig-name descname">lstrip</code><span class="sig-paren">(</span><em class="sig-param">chars=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/sequences.html#Sequence.lstrip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.Sequence.lstrip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return string of all sequences and leading whitespace removed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>chars</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Remove characters in chars instead of whitespace.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>string of sequences with leading removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.sequences.Sequence.rstrip">
+<code class="sig-name descname">rstrip</code><span class="sig-paren">(</span><em class="sig-param">chars=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/sequences.html#Sequence.rstrip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.Sequence.rstrip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return string of all sequences and trailing whitespace removed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>chars</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Remove characters in chars instead of whitespace.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>string of sequences with trailing removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.sequences.Sequence.strip_seqs">
+<code class="sig-name descname">strip_seqs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/sequences.html#Sequence.strip_seqs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.Sequence.strip_seqs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">text</span></code> stripped of only its terminal sequences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Text with terminal sequences removed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.sequences.Sequence.padd">
+<code class="sig-name descname">padd</code><span class="sig-paren">(</span><em class="sig-param">strip=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/sequences.html#Sequence.padd"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.Sequence.padd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return non-destructive horizontal movement as destructive spacing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>strip</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – Strip terminal sequences</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Text adjusted for horizontal movement</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="blessed.sequences.iter_parse">
+<code class="sig-name descname">iter_parse</code><span class="sig-paren">(</span><em class="sig-param">term</em>, <em class="sig-param">text</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/sequences.html#iter_parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.iter_parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generator yields (text, capability) for characters of <code class="docutils literal notranslate"><span class="pre">text</span></code>.</p>
+<p>value for <code class="docutils literal notranslate"><span class="pre">capability</span></code> may be <code class="docutils literal notranslate"><span class="pre">None</span></code>, where <code class="docutils literal notranslate"><span class="pre">text</span></code> is
+<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> of length 1.  Otherwise, <code class="docutils literal notranslate"><span class="pre">text</span></code> is a full
+matching sequence of given capability.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="blessed.sequences.measure_length">
+<code class="sig-name descname">measure_length</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">term</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/sequences.html#measure_length"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.sequences.measure_length" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 1.12.0..</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)">int</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Length of the first sequence in the string</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="terminal.html" class="btn btn-neutral float-right" title="terminal.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="keyboard.html" class="btn btn-neutral float-left" title="keyboard.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    .wy-nav-content { max-width: 900px; }
+  </style>
+
+
+
+</body>
+</html>

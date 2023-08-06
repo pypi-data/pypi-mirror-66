@@ -1,0 +1,507 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Version History &mdash; Blessed 1.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Project" href="project.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keyboard.html">Keyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location.html">Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measuring.html">Measuring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">Project</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Version History</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/history.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="version-history">
+<h1>Version History<a class="headerlink" href="#version-history" title="Permalink to this headline">¶</a></h1>
+<dl class="simple">
+<dt>1.17</dt><dd><ul class="simple">
+<li><p>introduced: <a class="reference internal" href="terminal.html#hyperlinks"><span class="std std-ref">Hyperlinks</span></a>, method <code class="xref py py-meth docutils literal notranslate"><span class="pre">link()</span></code>, <a class="reference external" href="https://github.com/jquast/blessed/issues/116/">#116</a>.</p></li>
+<li><p>introduced: 24-bit color support, detected by <code class="docutils literal notranslate"><span class="pre">term.number_of_colors</span> <span class="pre">==</span> <span class="pre">1</span> <span class="pre">&lt;&lt;</span> <span class="pre">24</span></code>, and 24-bit
+color foreground method <code class="xref py py-meth docutils literal notranslate"><span class="pre">color_rgb()</span></code> and background method
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">on_color_rgb()</span></code>, as well as 676 common X11 color attribute names are now
+possible, such as <code class="docutils literal notranslate"><span class="pre">term.aquamarine_on_wheat</span></code>, <a class="reference external" href="https://github.com/jquast/blessed/issues/60/">#60</a>.</p></li>
+<li><p>introduced: <code class="docutils literal notranslate"><span class="pre">term.move_xy</span></code>, recommended over built-in <code class="docutils literal notranslate"><span class="pre">move</span></code> capability, as the
+argument order, <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> matches the return value of <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.get_location" title="blessed.terminal.Terminal.get_location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_location()</span></code></a>, and all
+other common graphics library calls, <a class="reference external" href="https://github.com/jquast/blessed/issues/65/">#65</a>.</p></li>
+<li><p>introduced: <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.move_up" title="blessed.terminal.Terminal.move_up"><code class="xref py py-meth docutils literal notranslate"><span class="pre">move_up()</span></code></a>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">move_down()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">Terminal.move_left()</span></code>,
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">move_right()</span></code> which are strings that move the cursor one cell in the respective
+direction, are now <strong>also</strong> callables for moving <em>n</em> cells to the given direction, such as
+<code class="docutils literal notranslate"><span class="pre">term.move_right(9)</span></code>.</p></li>
+<li><p>introduced: <code class="xref py py-attr docutils literal notranslate"><span class="pre">pixel_width</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">pixel_height</span></code> for libsixel
+support or general curiosity.</p></li>
+<li><p>bugfix: prevent <code class="docutils literal notranslate"><span class="pre">ValueError:</span> <span class="pre">I/O</span> <span class="pre">operation</span> <span class="pre">on</span> <span class="pre">closed</span> <span class="pre">file</span></code> on <code class="docutils literal notranslate"><span class="pre">sys.stdin</span></code> in multiprocessing
+environments, where the keyboard wouldn’t work, anyway.</p></li>
+<li><p>bugfix: prevent error condition, <code class="docutils literal notranslate"><span class="pre">ValueError:</span> <span class="pre">underlying</span> <span class="pre">buffer</span> <span class="pre">has</span> <span class="pre">been</span> <span class="pre">detached</span></code> in rare
+conditions where sys.__stdout__ has been detached in test frameworks. <a class="reference external" href="https://github.com/jquast/blessed/issues/126/">#126</a>.</p></li>
+<li><p>bugfix: off-by-one error in <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.get_location" title="blessed.terminal.Terminal.get_location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_location()</span></code></a>, now accounts for <code class="docutils literal notranslate"><span class="pre">%i</span></code> in
+cursor_report, <a class="reference external" href="https://github.com/jquast/blessed/issues/94/">#94</a>.</p></li>
+<li><p>bugfix <code class="xref py py-meth docutils literal notranslate"><span class="pre">split_seqs()</span></code> and related functions failed to match when the color index
+was greater than 15, <a class="reference external" href="https://github.com/jquast/blessed/issues/101/">#101</a>.</p></li>
+<li><p>bugfix: Context Managers, <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.fullscreen" title="blessed.terminal.Terminal.fullscreen"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fullscreen()</span></code></a>, <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.hidden_cursor" title="blessed.terminal.Terminal.hidden_cursor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">hidden_cursor()</span></code></a>, and
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">keypad()</span></code> now flush the stream after writing their sequences.</p></li>
+<li><p>bugfix: <code class="docutils literal notranslate"><span class="pre">chr(127)</span></code>, <code class="docutils literal notranslate"><span class="pre">\x7f</span></code> has changed from keycode <code class="docutils literal notranslate"><span class="pre">term.DELETE</span></code> to the more common
+match, <code class="docutils literal notranslate"><span class="pre">term.BACKSPACE</span></code>, :ghissue:115` by <a class="reference external" href="https://github.com/jwezel">jwezel</a>.</p></li>
+<li><p>bugfix: ensure <a class="reference internal" href="api/formatters.html#blessed.formatters.FormattingOtherString" title="blessed.formatters.FormattingOtherString"><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattingOtherString</span></code></a> may be pickled.</p></li>
+<li><p>deprecated: the curses <code class="docutils literal notranslate"><span class="pre">move()</span></code> capability is no longer recommended, suggest to use
+<a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.move_xy" title="blessed.terminal.Terminal.move_xy"><code class="xref py py-meth docutils literal notranslate"><span class="pre">move_xy()</span></code></a>, which matches the return value of <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.get_location" title="blessed.terminal.Terminal.get_location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_location()</span></code></a>.</p></li>
+<li><p>deprecated: <code class="docutils literal notranslate"><span class="pre">superscript</span></code>, <code class="docutils literal notranslate"><span class="pre">subscript</span></code>, <code class="docutils literal notranslate"><span class="pre">shadow</span></code>, and <code class="docutils literal notranslate"><span class="pre">dim</span></code> are no longer “compoundable”
+with colors, such as in phrase <code class="docutils literal notranslate"><span class="pre">Terminal.blue_subscript('a')</span></code>.  These attributes are not
+typically supported, anyway.  Use Unicode text or 256 or 24-bit color codes instead.</p></li>
+<li><p>deprecated: additional key names, such as <code class="docutils literal notranslate"><span class="pre">KEY_TAB</span></code>, are no longer “injected” into the curses
+module namespace.</p></li>
+<li><p>bugfix: briefly tried calling <a class="reference external" href="https://docs.python.org/3/library/curses.html#curses.setupterm" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">curses.setupterm()</span></code></a> with <code class="xref py py-attr docutils literal notranslate"><span class="pre">os.devnull</span></code> as the file
+descriptor, reverted. <a class="reference external" href="https://github.com/jquast/blessed/issues/59/">#59</a>.</p></li>
+<li><p>deprecated: <code class="xref py py-meth docutils literal notranslate"><span class="pre">inkey()</span></code> no longer raises RuntimeError when <code class="xref py py-attr docutils literal notranslate"><span class="pre">stream</span></code>
+is not a terminal, programs using <code class="xref py py-meth docutils literal notranslate"><span class="pre">inkey()</span></code> to block indefinitely if a keyboard is
+not attached. <a class="reference external" href="https://github.com/jquast/blessed/issues/69/">#69</a>.</p></li>
+<li><p>deprecated: using argument <code class="docutils literal notranslate"><span class="pre">_intr_continue</span></code> to method <code class="xref py py-meth docutils literal notranslate"><span class="pre">kbhit()</span></code>, behavior is as
+though such value is always True since 1.9.</p></li>
+</ul>
+</dd>
+<dt>1.16</dt><dd><ul class="simple">
+<li><p>introduced: Windows support?! <a class="reference external" href="https://github.com/jquast/blessed/pull/110/">PR #110</a> by <a class="reference external" href="https://github.com/avylove">avylove</a>.</p></li>
+</ul>
+</dd>
+<dt>1.15</dt><dd><ul class="simple">
+<li><p>enhancement: disable timing integration tests for keyboard routines.</p></li>
+<li><p>enhancement: Support python 3.7. <a class="reference external" href="https://github.com/jquast/blessed/pull/102/">PR #102</a>.</p></li>
+<li><p>enhancement: Various fixes to test automation <a class="reference external" href="https://github.com/jquast/blessed/pull/108/">PR #108</a></p></li>
+</ul>
+</dd>
+<dt>1.14</dt><dd><ul class="simple">
+<li><p>bugfix: <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.wrap" title="blessed.terminal.Terminal.wrap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wrap()</span></code></a> misbehaved for text containing newlines,
+<a class="reference external" href="https://github.com/jquast/blessed/issues/74/">#74</a>.</p></li>
+<li><p>bugfix: TypeError when using <code class="docutils literal notranslate"><span class="pre">PYTHONOPTIMIZE=2</span></code> environment variable,
+<a class="reference external" href="https://github.com/jquast/blessed/issues/84/">#84</a>.</p></li>
+<li><p>bugfix: define <code class="docutils literal notranslate"><span class="pre">blessed.__version__</span></code> value,
+<a class="reference external" href="https://github.com/jquast/blessed/issues/92/">#92</a>.</p></li>
+<li><p>bugfix: detect sequences <code class="docutils literal notranslate"><span class="pre">\x1b[0K</span></code> and <code class="docutils literal notranslate"><span class="pre">\x1b2K</span></code>,
+<a class="reference external" href="https://github.com/jquast/blessed/issues/95/">#95</a>.</p></li>
+</ul>
+</dd>
+<dt>1.13</dt><dd><ul class="simple">
+<li><p>enhancement: <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.split_seqs" title="blessed.terminal.Terminal.split_seqs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">split_seqs()</span></code></a> introduced, and 4x cost
+reduction in related sequence-aware functions, <a class="reference external" href="https://github.com/jquast/blessed/issues/29/">#29</a>.</p></li>
+<li><p>deprecated: <code class="docutils literal notranslate"><span class="pre">blessed.sequences.measure_length</span></code> function superseded by
+<a class="reference internal" href="api/sequences.html#blessed.sequences.iter_parse" title="blessed.sequences.iter_parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">iter_parse()</span></code></a> if necessary.</p></li>
+<li><p>deprecated: warnings about “binary-packed capabilities” are no longer
+emitted on strange terminal types, making best effort.</p></li>
+</ul>
+</dd>
+<dt>1.12</dt><dd><ul class="simple">
+<li><p>enhancement: <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.get_location" title="blessed.terminal.Terminal.get_location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_location()</span></code></a> returns the <code class="docutils literal notranslate"><span class="pre">(row,</span> <span class="pre">col)</span></code>
+position of the cursor at the time of call for attached terminal.</p></li>
+<li><p>enhancement: a keyboard now detected as <em>stdin</em> when
+<code class="xref py py-paramref docutils literal notranslate"><span class="pre">stream</span></code> is <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sys.stderr</span></code></a>.</p></li>
+</ul>
+</dd>
+<dt>1.11</dt><dd><ul class="simple">
+<li><p>enhancement: <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.inkey" title="blessed.terminal.Terminal.inkey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">inkey()</span></code></a> can return more quickly for
+combinations such as <code class="docutils literal notranslate"><span class="pre">Alt</span> <span class="pre">+</span> <span class="pre">Z</span></code> when <code class="docutils literal notranslate"><span class="pre">MetaSendsEscape</span></code> is enabled,
+<a class="reference external" href="https://github.com/jquast/blessed/issues/30/">#30</a>.</p></li>
+<li><p>enhancement: <a class="reference internal" href="api/formatters.html#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattingString</span></code></a> may now be nested, such as
+<code class="docutils literal notranslate"><span class="pre">t.red('red',</span> <span class="pre">t.underline('rum'))</span></code>, <a class="reference external" href="https://github.com/jquast/blessed/issues/61/">#61</a></p></li>
+</ul>
+</dd>
+<dt>1.10</dt><dd><ul class="simple">
+<li><p>workaround: provide <code class="docutils literal notranslate"><span class="pre">sc</span></code> and <code class="docutils literal notranslate"><span class="pre">rc</span></code> for Terminals of <code class="docutils literal notranslate"><span class="pre">kind='ansi'</span></code>,
+repairing <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.location" title="blessed.terminal.Terminal.location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">location()</span></code></a> <a class="reference external" href="https://github.com/jquast/blessed/issues/44/">#44</a>.</p></li>
+<li><p>bugfix: length of simple SGR reset sequence <code class="docutils literal notranslate"><span class="pre">\x1b[m</span></code> was not correctly
+determined on all terminal types, <a class="reference external" href="https://github.com/jquast/blessed/issues/45/">#45</a>.</p></li>
+<li><p>deprecated: <code class="docutils literal notranslate"><span class="pre">_intr_continue</span></code> arguments introduced in 1.8 are now marked
+deprecated in 1.10: beginning with python 3.5, the default behavior is as
+though this argument is always True, <a class="reference external" href="https://www.python.org/dev/peps/pep-0475/">PEP-475</a>, blessed does the same.</p></li>
+</ul>
+</dd>
+<dt>1.9</dt><dd><ul class="simple">
+<li><p>enhancement: <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.wrap.params.break_long_words" title="blessed.terminal.Terminal.wrap"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">break_long_words</span></code></a> now supported by
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">Terminal.wrap()</span></code></p></li>
+<li><p>Ignore <a class="reference external" href="https://docs.python.org/3/library/curses.html#curses.error" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">curses.error</span></code></a> message <code class="docutils literal notranslate"><span class="pre">'tparm()</span> <span class="pre">returned</span> <span class="pre">NULL'</span></code>:
+this occurs on win32 or other platforms using a limited curses
+implementation, such as <a class="reference external" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#curses">PDCurses</a>, where <a class="reference external" href="https://docs.python.org/3/library/curses.html#curses.tparm" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">curses.tparm()</span></code></a> is
+not implemented, or no terminal capability database is available.</p></li>
+<li><p>Context manager <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.keypad" title="blessed.terminal.Terminal.keypad"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypad()</span></code></a> emits sequences that enable
+“application keys” such as the diagonal keys on the numpad.
+This is equivalent to <a class="reference external" href="https://docs.python.org/3/library/curses.html#curses.window.keypad" title="(in Python v3.8)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">curses.window.keypad()</span></code></a>.</p></li>
+<li><p>bugfix: translate keypad application keys correctly.</p></li>
+<li><p>enhancement: no longer depend on the ‘2to3’ tool for python 3 support.</p></li>
+<li><p>enhancement: allow <code class="docutils literal notranslate"><span class="pre">civis</span></code> and <code class="docutils literal notranslate"><span class="pre">cnorm</span></code> (<em>hide_cursor</em>, <em>normal_hide</em>)
+to work with terminal-type <em>ansi</em> by emulating support by proxy.</p></li>
+<li><p>enhancement: new public attribute: <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.kind" title="blessed.terminal.Terminal.kind"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kind</span></code></a>: the very same as given
+<code class="xref py py-paramref docutils literal notranslate"><span class="pre">Terminal.__init__.kind</span></code> keyword argument.  Or, when not given,
+determined by and equivalent to the <code class="docutils literal notranslate"><span class="pre">TERM</span></code> Environment variable.</p></li>
+</ul>
+</dd>
+<dt>1.8</dt><dd><ul class="simple">
+<li><p>enhancement: export keyboard-read function as public method <code class="docutils literal notranslate"><span class="pre">getch()</span></code>,
+so that it may be overridden by custom terminal implementers.</p></li>
+<li><p>enhancement: allow <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.inkey" title="blessed.terminal.Terminal.inkey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">inkey()</span></code></a> and <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.kbhit" title="blessed.terminal.Terminal.kbhit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">kbhit()</span></code></a> to return early
+when interrupted by signal by passing argument <code class="docutils literal notranslate"><span class="pre">_intr_continue=False</span></code>.</p></li>
+<li><p>enhancement: allow <code class="docutils literal notranslate"><span class="pre">hpa</span></code> and <code class="docutils literal notranslate"><span class="pre">vpa</span></code> (<em>move_x</em>, <em>move_y</em>) to work on
+tmux(1) or screen(1) by emulating support by proxy.</p></li>
+<li><p>enhancement: add <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.rstrip" title="blessed.terminal.Terminal.rstrip"><code class="xref py py-meth docutils literal notranslate"><span class="pre">rstrip()</span></code></a> and <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.lstrip" title="blessed.terminal.Terminal.lstrip"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lstrip()</span></code></a>,
+strips both sequences and trailing or leading whitespace, respectively.</p></li>
+<li><p>enhancement: include <a class="reference external" href="https://pypi.org/project/wcwidth/">wcwidth</a> library support for
+<a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.length" title="blessed.terminal.Terminal.length"><code class="xref py py-meth docutils literal notranslate"><span class="pre">length()</span></code></a>: the printable width of many kinds of CJK
+(Chinese, Japanese, Korean) ideographs and various combining characters
+may now be determined.</p></li>
+<li><p>enhancement: better support for detecting the length or sequences of
+externally-generated <em>ecma-48</em> codes when using <code class="docutils literal notranslate"><span class="pre">xterm</span></code> or <code class="docutils literal notranslate"><span class="pre">aixterm</span></code>.</p></li>
+<li><p>bugfix: when <a class="reference external" href="https://docs.python.org/3/library/locale.html#locale.getpreferredencoding" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">locale.getpreferredencoding()</span></code></a> returns empty string or
+an encoding that is not valid for <code class="docutils literal notranslate"><span class="pre">codecs.getincrementaldecoder</span></code>,
+fallback to ASCII and emit a warning.</p></li>
+<li><p>bugfix: ensure <a class="reference internal" href="api/formatters.html#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattingString</span></code></a> and
+<a class="reference internal" href="api/formatters.html#blessed.formatters.ParameterizingString" title="blessed.formatters.ParameterizingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParameterizingString</span></code></a> may be pickled.</p></li>
+<li><p>bugfix: allow <cite>~.inkey</cite> and related to be called without a keyboard.</p></li>
+<li><p><strong>change</strong>: <code class="docutils literal notranslate"><span class="pre">term.keyboard_fd</span></code> is set <code class="docutils literal notranslate"><span class="pre">None</span></code> if <code class="docutils literal notranslate"><span class="pre">stream</span></code> or
+<code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code> is not a tty, making <code class="docutils literal notranslate"><span class="pre">term.inkey()</span></code>, <code class="docutils literal notranslate"><span class="pre">term.cbreak()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">term.raw()</span></code>, no-op.</p></li>
+<li><p>bugfix: <code class="docutils literal notranslate"><span class="pre">\x1bOH</span></code> (KEY_HOME) was incorrectly mapped as KEY_LEFT.</p></li>
+</ul>
+</dd>
+<dt>1.7</dt><dd><ul class="simple">
+<li><p>Forked github project <a class="reference external" href="https://github.com/erikrose/blessings">erikrose/blessings</a> to <a class="reference external" href="https://github.com/jquast/blessed">jquast/blessed</a>, this
+project was previously known as <strong>blessings</strong> version 1.6 and prior.</p></li>
+<li><p>introduced: context manager <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.cbreak" title="blessed.terminal.Terminal.cbreak"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cbreak()</span></code></a>, which is equivalent to
+entering terminal state by <a class="reference external" href="https://docs.python.org/3/library/tty.html#tty.setcbreak" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">tty.setcbreak()</span></code></a> and returning
+on exit, as well as the lesser recommended <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.raw" title="blessed.terminal.Terminal.raw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">raw()</span></code></a>,
+pairing from <a class="reference external" href="https://docs.python.org/3/library/tty.html#tty.setraw" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">tty.setraw()</span></code></a>.</p></li>
+<li><p>introduced: <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.inkey" title="blessed.terminal.Terminal.inkey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">inkey()</span></code></a>, which will return one or more characters
+received by the keyboard as a unicode sequence, with additional attributes
+<a class="reference internal" href="api/keyboard.html#blessed.keyboard.Keystroke.code" title="blessed.keyboard.Keystroke.code"><code class="xref py py-attr docutils literal notranslate"><span class="pre">code</span></code></a> and <a class="reference internal" href="api/keyboard.html#blessed.keyboard.Keystroke.name" title="blessed.keyboard.Keystroke.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a>.  This allows
+application keys (such as the up arrow, or home key) to be detected.
+Optional value <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.inkey.params.timeout" title="blessed.terminal.Terminal.inkey"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">timeout</span></code></a> allows for timed poll.</p></li>
+<li><p>introduced: <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.center" title="blessed.terminal.Terminal.center"><code class="xref py py-meth docutils literal notranslate"><span class="pre">center()</span></code></a>, <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.rjust" title="blessed.terminal.Terminal.rjust"><code class="xref py py-meth docutils literal notranslate"><span class="pre">rjust()</span></code></a>,
+<a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.ljust" title="blessed.terminal.Terminal.ljust"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ljust()</span></code></a>, allowing text containing sequences to be aligned
+to detected horizontal screen width, or by
+<a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.center.params.width" title="blessed.terminal.Terminal.center"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">width</span></code></a> specified.</p></li>
+<li><p>introduced: <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.wrap" title="blessed.terminal.Terminal.wrap"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wrap()</span></code></a> method.  Allows text containing sequences to be
+word-wrapped without breaking mid-sequence, honoring their printable width.</p></li>
+<li><p>introduced: <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.strip" title="blessed.terminal.Terminal.strip"><code class="xref py py-meth docutils literal notranslate"><span class="pre">strip()</span></code></a>, strips all sequences <em>and</em>
+whitespace.</p></li>
+<li><p>introduced: <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.strip_seqs" title="blessed.terminal.Terminal.strip_seqs"><code class="xref py py-meth docutils literal notranslate"><span class="pre">strip_seqs()</span></code></a> strip only sequences.</p></li>
+<li><p>introduced: <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.rstrip" title="blessed.terminal.Terminal.rstrip"><code class="xref py py-meth docutils literal notranslate"><span class="pre">rstrip()</span></code></a> and <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.lstrip" title="blessed.terminal.Terminal.lstrip"><code class="xref py py-meth docutils literal notranslate"><span class="pre">lstrip()</span></code></a> strips
+both sequences and trailing or leading whitespace, respectively.</p></li>
+<li><p>bugfix: cannot call <a class="reference external" href="https://docs.python.org/3/library/curses.html#curses.setupterm" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">curses.setupterm()</span></code></a> more than once per process
+(from <code class="xref py py-meth docutils literal notranslate"><span class="pre">Terminal.__init__()</span></code>):  Previously, blessed pretended
+to support several instances of different Terminal <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.kind" title="blessed.terminal.Terminal.kind"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kind</span></code></a>, but was
+actually using the <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.kind" title="blessed.terminal.Terminal.kind"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kind</span></code></a> specified by the first instantiation of
+<a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a>.  A warning is now issued.  Although this is
+misbehavior is still allowed, a <code class="xref py py-class docutils literal notranslate"><span class="pre">warnings.WarningMessage</span></code> is now
+emitted to notify about subsequent terminal misbehavior.</p></li>
+<li><p>bugfix: resolved issue where <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.number_of_colors" title="blessed.terminal.Terminal.number_of_colors"><code class="xref py py-attr docutils literal notranslate"><span class="pre">number_of_colors</span></code></a> fails when
+<a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.does_styling" title="blessed.terminal.Terminal.does_styling"><code class="xref py py-attr docutils literal notranslate"><span class="pre">does_styling</span></code></a> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.  Resolves issue where piping tests
+output would fail.</p></li>
+<li><p>bugfix: warn and set <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.does_styling" title="blessed.terminal.Terminal.does_styling"><code class="xref py py-attr docutils literal notranslate"><span class="pre">does_styling</span></code></a> to <code class="docutils literal notranslate"><span class="pre">False</span></code> when the given
+<a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.kind" title="blessed.terminal.Terminal.kind"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kind</span></code></a> is not found in the terminal capability database.</p></li>
+<li><p>bugfix: allow unsupported terminal capabilities to be callable just as
+supported capabilities, so that the return value of
+<a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.color" title="blessed.terminal.Terminal.color"><code class="xref py py-attr docutils literal notranslate"><span class="pre">color</span></code></a>(n) may be called on terminals without color
+capabilities.</p></li>
+<li><p>bugfix: for terminals without underline, such as vt220,
+<code class="docutils literal notranslate"><span class="pre">term.underline('text')</span></code> would emit <code class="docutils literal notranslate"><span class="pre">'text'</span> <span class="pre">+</span> <span class="pre">term.normal</span></code>.
+Now it emits only <code class="docutils literal notranslate"><span class="pre">'text'</span></code>.</p></li>
+<li><p>enhancement: some attributes are now properties, raise exceptions when
+assigned.</p></li>
+<li><p>enhancement: pypy is now a supported python platform implementation.</p></li>
+<li><p>enhancement: removed pokemon <code class="docutils literal notranslate"><span class="pre">curses.error</span></code> exceptions.</p></li>
+<li><p>enhancement: do not ignore <a class="reference external" href="https://docs.python.org/3/library/curses.html#curses.error" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">curses.error</span></code></a> exceptions, unhandled
+curses errors are legitimate errors and should be reported as a bug.</p></li>
+<li><p>enhancement: converted nose tests to pytest, merged travis and tox.</p></li>
+<li><p>enhancement: pytest fixtures, paired with a new <code class="docutils literal notranslate"><span class="pre">&#64;as_subprocess</span></code>
+decorator
+are used to test a multitude of terminal types.</p></li>
+<li><p>enhancement: test accessories <code class="docutils literal notranslate"><span class="pre">&#64;as_subprocess</span></code> resolves various issues
+with different terminal types that previously went untested.</p></li>
+<li><p>deprecation: python2.5 is no longer supported (as tox does not supported).</p></li>
+</ul>
+</dd>
+<dt>1.6</dt><dd><ul class="simple">
+<li><p>Add <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.does_styling" title="blessed.terminal.Terminal.does_styling"><code class="xref py py-attr docutils literal notranslate"><span class="pre">does_styling</span></code></a>. This takes <code class="xref py py-attr docutils literal notranslate"><span class="pre">force_styling</span></code>
+into account and should replace most uses of <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.is_a_tty" title="blessed.terminal.Terminal.is_a_tty"><code class="xref py py-attr docutils literal notranslate"><span class="pre">is_a_tty</span></code></a>.</p></li>
+<li><p>Make <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.is_a_tty" title="blessed.terminal.Terminal.is_a_tty"><code class="xref py py-attr docutils literal notranslate"><span class="pre">is_a_tty</span></code></a> a read-only property like <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.does_styling" title="blessed.terminal.Terminal.does_styling"><code class="xref py py-attr docutils literal notranslate"><span class="pre">does_styling</span></code></a>.
+Writing to it never would have done anything constructive.</p></li>
+<li><p>Add <code class="xref py py-meth docutils literal notranslate"><span class="pre">fullscreen`()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">hidden_cursor()</span></code> to the
+auto-generated docs.</p></li>
+</ul>
+</dd>
+<dt>1.5.1</dt><dd><ul class="simple">
+<li><p>Clean up fabfile, removing the redundant <code class="docutils literal notranslate"><span class="pre">test</span></code> command.</p></li>
+<li><p>Add Travis support.</p></li>
+<li><p>Make <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">test</span></code> work without spurious errors on 2.6.</p></li>
+<li><p>Work around a tox parsing bug in its config file.</p></li>
+<li><p>Make context managers clean up after themselves even if there’s an
+exception (<cite>Vitja Makarov #29 &lt;https://github.com/erikrose/blessings/pull/29&gt;</cite>).</p></li>
+<li><p>Parameterizing a capability no longer crashes when there is no tty
+(<cite>&lt;Vitja Makarov #31 &lt;https://github.com/erikrose/blessings/pull/31&gt;</cite>)</p></li>
+</ul>
+</dd>
+<dt>1.5</dt><dd><ul class="simple">
+<li><p>Add syntactic sugar and documentation for <code class="docutils literal notranslate"><span class="pre">enter_fullscreen</span></code>
+and <code class="docutils literal notranslate"><span class="pre">exit_fullscreen</span></code>.</p></li>
+<li><p>Add context managers <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.fullscreen" title="blessed.terminal.Terminal.fullscreen"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fullscreen()</span></code></a> and <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.hidden_cursor" title="blessed.terminal.Terminal.hidden_cursor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">hidden_cursor()</span></code></a>.</p></li>
+<li><p>Now you can force a <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> to never to emit styles by
+passing keyword argument <code class="docutils literal notranslate"><span class="pre">force_styling=None</span></code>.</p></li>
+</ul>
+</dd>
+<dt>1.4</dt><dd><ul class="simple">
+<li><p>Add syntactic sugar for cursor visibility control and single-space-movement
+capabilities.</p></li>
+<li><p>Endorse the <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.location" title="blessed.terminal.Terminal.location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">location()</span></code></a> context manager for restoring cursor
+position after a series of manual movements.</p></li>
+<li><p>Fix a bug in which <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.location" title="blessed.terminal.Terminal.location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">location()</span></code></a> that wouldn’t do anything when
+passed zeros.</p></li>
+<li><p>Allow tests to be run with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">test</span></code>.</p></li>
+</ul>
+</dd>
+<dt>1.3</dt><dd><ul class="simple">
+<li><p>Added <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.number_of_colors" title="blessed.terminal.Terminal.number_of_colors"><code class="xref py py-attr docutils literal notranslate"><span class="pre">number_of_colors</span></code></a>, which tells you how many colors the
+terminal supports.</p></li>
+<li><p>Made <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.color" title="blessed.terminal.Terminal.color"><code class="xref py py-attr docutils literal notranslate"><span class="pre">color</span></code></a>(n) and <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.on_color" title="blessed.terminal.Terminal.on_color"><code class="xref py py-attr docutils literal notranslate"><span class="pre">on_color</span></code></a>(n) callable to wrap a
+string, like the named colors can. Also, make them both fall back to the
+<code class="docutils literal notranslate"><span class="pre">setf</span></code> and <code class="docutils literal notranslate"><span class="pre">setb</span></code> capabilities (like the named colors do) if the
+termcap entries for <code class="docutils literal notranslate"><span class="pre">setaf</span></code> and <code class="docutils literal notranslate"><span class="pre">setab</span></code> are not available.</p></li>
+<li><p>Allowed <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.color" title="blessed.terminal.Terminal.color"><code class="xref py py-attr docutils literal notranslate"><span class="pre">color</span></code></a> to act as an unparametrized string, not just a
+callable.</p></li>
+<li><p>Made <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.height" title="blessed.terminal.Terminal.height"><code class="xref py py-attr docutils literal notranslate"><span class="pre">height</span></code></a> and <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.width" title="blessed.terminal.Terminal.width"><code class="xref py py-attr docutils literal notranslate"><span class="pre">width</span></code></a> examine any passed-in stream
+before falling back to stdout (This rarely if ever affects actual behavior;
+it’s mostly philosophical).</p></li>
+<li><p>Made caching simpler and slightly more efficient.</p></li>
+<li><p>Got rid of a reference cycle between <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> and
+<a class="reference internal" href="api/formatters.html#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattingString</span></code></a>.</p></li>
+<li><p>Updated docs to reflect that terminal addressing (as in <code class="xref py py-meth docutils literal notranslate"><span class="pre">location()</span></code>)
+is 0-based.</p></li>
+</ul>
+</dd>
+<dt>1.2</dt><dd><ul class="simple">
+<li><p>Added support for Python 3! We need 3.2.3 or greater, because the curses
+library couldn’t decide whether to accept strs or bytes before that
+(<a class="reference external" href="https://bugs.python.org/issue10570">https://bugs.python.org/issue10570</a>).</p></li>
+<li><p>Everything that comes out of the library is now unicode. This lets us
+support Python 3 without making a mess of the code, and Python 2 should
+continue to work unless you were testing types (and badly). Please file a
+bug if this causes trouble for you.</p></li>
+<li><p>Changed to the MIT License for better world domination.</p></li>
+<li><p>Added Sphinx docs.</p></li>
+</ul>
+</dd>
+<dt>1.1</dt><dd><ul class="simple">
+<li><p>Added nicely named attributes for colors.</p></li>
+<li><p>Introduced compound formatting.</p></li>
+<li><p>Added wrapper behavior for styling and colors.</p></li>
+<li><p>Let you force capabilities to be non-empty, even if the output stream is
+not a terminal.</p></li>
+<li><p>Added <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.is_a_tty" title="blessed.terminal.Terminal.is_a_tty"><code class="xref py py-attr docutils literal notranslate"><span class="pre">is_a_tty</span></code></a> to determine whether the output stream is a
+terminal.</p></li>
+<li><p>Sugared the remaining interesting string capabilities.</p></li>
+<li><p>Allow <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.location" title="blessed.terminal.Terminal.location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">location()</span></code></a> to operate on just an x <em>or</em> y coordinate.</p></li>
+</ul>
+</dd>
+<dt>1.0</dt><dd><ul class="simple">
+<li><p>Extracted Blessed from <a class="reference external" href="https://pypi.org/project/nose-progressive/">nose-progressive</a>.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="project.html" class="btn btn-neutral float-left" title="Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    .wy-nav-content { max-width: 900px; }
+  </style>
+
+
+
+</body>
+</html>

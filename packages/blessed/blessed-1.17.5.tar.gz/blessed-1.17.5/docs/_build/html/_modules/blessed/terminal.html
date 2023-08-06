@@ -1,0 +1,1652 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>blessed.terminal &mdash; Blessed 1.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../keyboard.html">Keyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../location.html">Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measuring.html">Measuring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../project.html">Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>blessed.terminal</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for blessed.terminal</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="c1"># pylint: disable=too-many-lines</span>
+<span class="sd">&quot;&quot;&quot;Module containing :class:`Terminal`, the primary API entry point.&quot;&quot;&quot;</span>
+<span class="c1"># std imports</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">codecs</span>
+<span class="kn">import</span> <span class="nn">locale</span>
+<span class="kn">import</span> <span class="nn">select</span>
+<span class="kn">import</span> <span class="nn">struct</span>
+<span class="kn">import</span> <span class="nn">platform</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">import</span> <span class="nn">contextlib</span>
+<span class="kn">import</span> <span class="nn">collections</span>
+
+<span class="c1"># local</span>
+<span class="kn">from</span> <span class="nn">.color</span> <span class="kn">import</span> <span class="n">COLOR_DISTANCE_ALGORITHMS</span>
+<span class="kn">from</span> <span class="nn">.keyboard</span> <span class="kn">import</span> <span class="p">(</span><span class="n">_time_left</span><span class="p">,</span>
+                       <span class="n">_read_until</span><span class="p">,</span>
+                       <span class="n">resolve_sequence</span><span class="p">,</span>
+                       <span class="n">get_keyboard_codes</span><span class="p">,</span>
+                       <span class="n">get_leading_prefixes</span><span class="p">,</span>
+                       <span class="n">get_keyboard_sequences</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">.sequences</span> <span class="kn">import</span> <span class="n">Termcap</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">SequenceTextWrapper</span>
+<span class="kn">from</span> <span class="nn">.colorspace</span> <span class="kn">import</span> <span class="n">RGB_256TABLE</span>
+<span class="kn">from</span> <span class="nn">.formatters</span> <span class="kn">import</span> <span class="p">(</span><span class="n">COLORS</span><span class="p">,</span>
+                         <span class="n">FormattingString</span><span class="p">,</span>
+                         <span class="n">NullCallableString</span><span class="p">,</span>
+                         <span class="n">ParameterizingString</span><span class="p">,</span>
+                         <span class="n">FormattingOtherString</span><span class="p">,</span>
+                         <span class="n">resolve_attribute</span><span class="p">,</span>
+                         <span class="n">resolve_capability</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">._capabilities</span> <span class="kn">import</span> <span class="n">CAPABILITY_DATABASE</span><span class="p">,</span> <span class="n">CAPABILITIES_ADDITIVES</span><span class="p">,</span> <span class="n">CAPABILITIES_RAW_MIXIN</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="ne">InterruptedError</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+    <span class="c1"># alias py2 exception to py3</span>
+    <span class="c1"># pylint: disable=redefined-builtin</span>
+    <span class="ne">InterruptedError</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">error</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="c1"># python 2.6 requires 3rd party library (backport)</span>
+    <span class="kn">from</span> <span class="nn">ordereddict</span> <span class="kn">import</span> <span class="n">OrderedDict</span>  <span class="c1"># pylint: disable=import-error</span>
+
+
+<span class="n">HAS_TTY</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Windows&#39;</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">jinxed</span> <span class="k">as</span> <span class="nn">curses</span>  <span class="c1"># pylint: disable=import-error</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">curses</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">termios</span>
+        <span class="kn">import</span> <span class="nn">fcntl</span>
+        <span class="kn">import</span> <span class="nn">tty</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="n">_TTY_METHODS</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;setraw&#39;</span><span class="p">,</span> <span class="s1">&#39;cbreak&#39;</span><span class="p">,</span> <span class="s1">&#39;kbhit&#39;</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;width&#39;</span><span class="p">)</span>
+        <span class="n">_MSG_NOSUPPORT</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s2">&quot;One or more of the modules: &#39;termios&#39;, &#39;fcntl&#39;, and &#39;tty&#39; &quot;</span>
+            <span class="s2">&quot;are not found on your platform &#39;</span><span class="si">{platform}</span><span class="s2">&#39;. &quot;</span>
+            <span class="s2">&quot;The following methods of Terminal are dummy/no-op &quot;</span>
+            <span class="s2">&quot;unless a deriving class overrides them: </span><span class="si">{tty_methods}</span><span class="s2">.&quot;</span>
+            <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">platform</span><span class="o">=</span><span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">(),</span>
+                    <span class="n">tty_methods</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">_TTY_METHODS</span><span class="p">)))</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">_MSG_NOSUPPORT</span><span class="p">)</span>
+        <span class="n">HAS_TTY</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">_CUR_TERM</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># See comments at end of file</span>
+
+
+<div class="viewcode-block" id="Terminal"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal">[docs]</a><span class="k">class</span> <span class="nc">Terminal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An abstraction for color, style, positioning, and input in the terminal.</span>
+
+<span class="sd">    This keeps the endless calls to ``tigetstr()`` and ``tparm()`` out of your code, acts</span>
+<span class="sd">    intelligently when somebody pipes your output to a non-terminal, and abstracts over the</span>
+<span class="sd">    complexity of unbuffered keyboard input. It uses the terminfo database to remain portable across</span>
+<span class="sd">    terminal types.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># pylint: disable=too-many-instance-attributes,too-many-public-methods</span>
+    <span class="c1">#         Too many public methods (28/20)</span>
+    <span class="c1">#         Too many instance attributes (12/7)</span>
+
+    <span class="c1">#: Sugary names for commonly-used capabilities</span>
+    <span class="n">_sugar</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">save</span><span class="o">=</span><span class="s1">&#39;sc&#39;</span><span class="p">,</span>
+        <span class="n">restore</span><span class="o">=</span><span class="s1">&#39;rc&#39;</span><span class="p">,</span>
+        <span class="n">clear_eol</span><span class="o">=</span><span class="s1">&#39;el&#39;</span><span class="p">,</span>
+        <span class="n">clear_bol</span><span class="o">=</span><span class="s1">&#39;el1&#39;</span><span class="p">,</span>
+        <span class="n">clear_eos</span><span class="o">=</span><span class="s1">&#39;ed&#39;</span><span class="p">,</span>
+        <span class="n">enter_fullscreen</span><span class="o">=</span><span class="s1">&#39;smcup&#39;</span><span class="p">,</span>
+        <span class="n">exit_fullscreen</span><span class="o">=</span><span class="s1">&#39;rmcup&#39;</span><span class="p">,</span>
+        <span class="n">move</span><span class="o">=</span><span class="s1">&#39;cup&#39;</span><span class="p">,</span>
+        <span class="n">move_yx</span><span class="o">=</span><span class="s1">&#39;cup&#39;</span><span class="p">,</span>
+        <span class="n">move_x</span><span class="o">=</span><span class="s1">&#39;hpa&#39;</span><span class="p">,</span>
+        <span class="n">move_y</span><span class="o">=</span><span class="s1">&#39;vpa&#39;</span><span class="p">,</span>
+        <span class="n">hide_cursor</span><span class="o">=</span><span class="s1">&#39;civis&#39;</span><span class="p">,</span>
+        <span class="n">normal_cursor</span><span class="o">=</span><span class="s1">&#39;cnorm&#39;</span><span class="p">,</span>
+        <span class="n">reset_colors</span><span class="o">=</span><span class="s1">&#39;op&#39;</span><span class="p">,</span>
+        <span class="n">normal</span><span class="o">=</span><span class="s1">&#39;sgr0&#39;</span><span class="p">,</span>
+        <span class="n">reverse</span><span class="o">=</span><span class="s1">&#39;rev&#39;</span><span class="p">,</span>
+        <span class="n">italic</span><span class="o">=</span><span class="s1">&#39;sitm&#39;</span><span class="p">,</span>
+        <span class="n">no_italic</span><span class="o">=</span><span class="s1">&#39;ritm&#39;</span><span class="p">,</span>
+        <span class="n">shadow</span><span class="o">=</span><span class="s1">&#39;sshm&#39;</span><span class="p">,</span>
+        <span class="n">no_shadow</span><span class="o">=</span><span class="s1">&#39;rshm&#39;</span><span class="p">,</span>
+        <span class="n">standout</span><span class="o">=</span><span class="s1">&#39;smso&#39;</span><span class="p">,</span>
+        <span class="n">no_standout</span><span class="o">=</span><span class="s1">&#39;rmso&#39;</span><span class="p">,</span>
+        <span class="n">subscript</span><span class="o">=</span><span class="s1">&#39;ssubm&#39;</span><span class="p">,</span>
+        <span class="n">no_subscript</span><span class="o">=</span><span class="s1">&#39;rsubm&#39;</span><span class="p">,</span>
+        <span class="n">superscript</span><span class="o">=</span><span class="s1">&#39;ssupm&#39;</span><span class="p">,</span>
+        <span class="n">no_superscript</span><span class="o">=</span><span class="s1">&#39;rsupm&#39;</span><span class="p">,</span>
+        <span class="n">underline</span><span class="o">=</span><span class="s1">&#39;smul&#39;</span><span class="p">,</span>
+        <span class="n">no_underline</span><span class="o">=</span><span class="s1">&#39;rmul&#39;</span><span class="p">,</span>
+        <span class="n">cursor_report</span><span class="o">=</span><span class="s1">&#39;u6&#39;</span><span class="p">,</span>
+        <span class="n">cursor_request</span><span class="o">=</span><span class="s1">&#39;u7&#39;</span><span class="p">,</span>
+        <span class="n">terminal_answerback</span><span class="o">=</span><span class="s1">&#39;u8&#39;</span><span class="p">,</span>
+        <span class="n">terminal_enquire</span><span class="o">=</span><span class="s1">&#39;u9&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">force_styling</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the terminal.</span>
+
+<span class="sd">        :arg str kind: A terminal string as taken by :func:`curses.setupterm`.</span>
+<span class="sd">            Defaults to the value of the ``TERM`` environment variable.</span>
+
+<span class="sd">            .. note:: Terminals withing a single process must share a common</span>
+<span class="sd">                ``kind``. See :obj:`_CUR_TERM`.</span>
+
+<span class="sd">        :arg file stream: A file-like object representing the Terminal output.</span>
+<span class="sd">            Defaults to the original value of :obj:`sys.__stdout__`, like</span>
+<span class="sd">            :func:`curses.initscr` does.</span>
+
+<span class="sd">            If ``stream`` is not a tty, empty Unicode strings are returned for</span>
+<span class="sd">            all capability values, so things like piping your program output to</span>
+<span class="sd">            a pipe or file does not emit terminal sequences.</span>
+
+<span class="sd">        :arg bool force_styling: Whether to force the emission of capabilities</span>
+<span class="sd">            even if :obj:`sys.__stdout__` does not seem to be connected to a</span>
+<span class="sd">            terminal. If you want to force styling to not happen, use</span>
+<span class="sd">            ``force_styling=None``.</span>
+
+<span class="sd">            This comes in handy if users are trying to pipe your output through</span>
+<span class="sd">            something like ``less -r`` or build systems which support decoding</span>
+<span class="sd">            of terminal sequences.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># pylint: disable=global-statement,too-many-branches</span>
+        <span class="k">global</span> <span class="n">_CUR_TERM</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">errors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;parameters: kind=</span><span class="si">%r</span><span class="s1">, stream=</span><span class="si">%r</span><span class="s1">, force_styling=</span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span>
+                       <span class="p">(</span><span class="n">kind</span><span class="p">,</span> <span class="n">stream</span><span class="p">,</span> <span class="n">force_styling</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_normal</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># cache normal attr, preventing recursive lookups</span>
+        <span class="c1"># we assume our input stream to be line-buffered until either the</span>
+        <span class="c1"># cbreak of raw context manager methods are entered with an attached tty.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_line_buffered</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_stream</span> <span class="o">=</span> <span class="n">stream</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_descriptor</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_is_a_tty</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__init__streams</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Windows&#39;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_init_descriptor</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_kind</span> <span class="o">=</span> <span class="n">kind</span> <span class="ow">or</span> <span class="n">curses</span><span class="o">.</span><span class="n">get_term</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_init_descriptor</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_kind</span> <span class="o">=</span> <span class="n">kind</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TERM&#39;</span><span class="p">,</span> <span class="s1">&#39;dumb&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;dumb&#39;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_does_styling</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">force_styling</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_does_styling</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_a_tty</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">force_styling</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;force_styling is None&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_does_styling</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">does_styling</span><span class="p">:</span>
+            <span class="c1"># Initialize curses (call setupterm), so things like tigetstr() work.</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">curses</span><span class="o">.</span><span class="n">setupterm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_kind</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_init_descriptor</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">curses</span><span class="o">.</span><span class="n">error</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+                <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;Failed to setupterm(kind=</span><span class="si">{0!r}</span><span class="s1">): </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_kind</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_kind</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_does_styling</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">_CUR_TERM</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kind</span> <span class="o">==</span> <span class="n">_CUR_TERM</span><span class="p">:</span>
+                    <span class="n">_CUR_TERM</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kind</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># termcap &#39;kind&#39; is immutable in a python process! Once</span>
+                    <span class="c1"># initialized by setupterm, it is unsupported by the</span>
+                    <span class="c1"># &#39;curses&#39; module to change the terminal type again. If you</span>
+                    <span class="c1"># are a downstream developer and you need this</span>
+                    <span class="c1"># functionality, consider sub-processing, instead.</span>
+                    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                        <span class="s1">&#39;A terminal of kind &quot;</span><span class="si">%s</span><span class="s1">&quot; has been requested; due to an&#39;</span>
+                        <span class="s1">&#39; internal python curses bug, terminal capabilities&#39;</span>
+                        <span class="s1">&#39; for a terminal of kind &quot;</span><span class="si">%s</span><span class="s1">&quot; will continue to be&#39;</span>
+                        <span class="s1">&#39; returned for the remainder of this process.&#39;</span> <span class="o">%</span> <span class="p">(</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">_kind</span><span class="p">,</span> <span class="n">_CUR_TERM</span><span class="p">,))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">__init__color_capabilities</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__init__capabilities</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__init__keycodes</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__init__streams</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># pylint: disable=too-complex,too-many-branches</span>
+        <span class="c1">#         Agree to disagree !</span>
+        <span class="n">stream_fd</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># Default stream is stdout</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stream</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_stream</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_stream</span><span class="p">,</span> <span class="s1">&#39;fileno&#39;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;stream has no fileno method&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_stream</span><span class="o">.</span><span class="n">fileno</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;stream.fileno is not callable&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">stream_fd</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stream</span><span class="o">.</span><span class="n">fileno</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+                <span class="c1"># The stream is not a file, such as the case of StringIO, or, when it has been</span>
+                <span class="c1"># &quot;detached&quot;, such as might be the case of stdout in some test scenarios.</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Unable to determine output stream file descriptor: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">err</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_is_a_tty</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">isatty</span><span class="p">(</span><span class="n">stream_fd</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_a_tty</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;stream not a TTY&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Keyboard valid as stdin only when output stream is stdout or stderr and is a tty.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stream</span> <span class="ow">in</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stderr__</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdin__</span><span class="o">.</span><span class="n">fileno</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Unable to determine input stream file descriptor: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">err</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># _keyboard_fd only non-None if both stdin and stdout is a tty.</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_a_tty</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Output stream is not a TTY&#39;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="k">elif</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">isatty</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Input stream is not a TTY&#39;</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Output stream is not a default stream&#39;</span><span class="p">)</span>
+
+        <span class="c1"># The descriptor to direct terminal initialization sequences to.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_init_descriptor</span> <span class="o">=</span> <span class="n">stream_fd</span>
+        <span class="k">if</span> <span class="n">stream_fd</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_init_descriptor</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span><span class="o">.</span><span class="n">fileno</span><span class="p">()</span>
+            <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Unable to determine __stdout__ file descriptor: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">err</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__color_capabilities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_color_distance_algorithm</span> <span class="o">=</span> <span class="s1">&#39;cie2000&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">does_styling</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">number_of_colors</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">elif</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Windows&#39;</span> <span class="ow">or</span> <span class="p">(</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;COLORTERM&#39;</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;truecolor&#39;</span><span class="p">,</span> <span class="s1">&#39;24bit&#39;</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">number_of_colors</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">24</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">number_of_colors</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">tigetnum</span><span class="p">(</span><span class="s1">&#39;colors&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__clear_color_capabilities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">cached_color_cap</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span> <span class="o">&amp;</span> <span class="n">COLORS</span><span class="p">:</span>
+            <span class="nb">delattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cached_color_cap</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__capabilities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># important that we lay these in their ordered direction, so that our</span>
+        <span class="c1"># preferred, &#39;color&#39; over &#39;set_a_attributes1&#39;, for example.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caps</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+
+        <span class="c1"># some static injected patterns, esp. without named attribute access.</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="n">attribute</span><span class="p">,</span> <span class="n">pattern</span><span class="p">)</span> <span class="ow">in</span> <span class="n">CAPABILITIES_ADDITIVES</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">caps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Termcap</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">attribute</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="n">attribute</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span> <span class="ow">in</span> <span class="n">CAPABILITY_DATABASE</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">does_styling</span><span class="p">:</span>
+                <span class="c1"># attempt dynamic lookup</span>
+                <span class="n">cap</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attribute</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">cap</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">caps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Termcap</span><span class="o">.</span><span class="n">build</span><span class="p">(</span>
+                        <span class="n">name</span><span class="p">,</span> <span class="n">cap</span><span class="p">,</span> <span class="n">attribute</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+                    <span class="k">continue</span>
+
+            <span class="c1"># fall-back</span>
+            <span class="n">pattern</span> <span class="o">=</span> <span class="n">CAPABILITIES_RAW_MIXIN</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">pattern</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">caps</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">Termcap</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">attribute</span><span class="p">)</span>
+
+        <span class="c1"># make a compiled named regular expression table</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caps_compiled</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+            <span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">pattern</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">cap</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">caps</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+
+        <span class="c1"># for tokenizer, the &#39;.lastgroup&#39; is the primary lookup key for</span>
+        <span class="c1"># &#39;self.caps&#39;, unless &#39;MISMATCH&#39;; then it is an unmatched character.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_caps_compiled_any</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="n">cap</span><span class="o">.</span><span class="n">named_pattern</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">cap</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">caps</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|(?P&lt;MISMATCH&gt;.)&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_caps_unnamed_any</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="s1">&#39;(</span><span class="si">{0}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cap</span><span class="o">.</span><span class="n">pattern</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">cap</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">caps</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;|(.)&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__init__keycodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Initialize keyboard data determined by capability.</span>
+        <span class="c1"># Build database of int code &lt;=&gt; KEY_NAME.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_keycodes</span> <span class="o">=</span> <span class="n">get_keyboard_codes</span><span class="p">()</span>
+
+        <span class="c1"># Store attributes as: self.KEY_NAME = code.</span>
+        <span class="k">for</span> <span class="n">key_code</span><span class="p">,</span> <span class="n">key_name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_keycodes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_name</span><span class="p">,</span> <span class="n">key_code</span><span class="p">)</span>
+
+        <span class="c1"># Build database of sequence &lt;=&gt; KEY_NAME.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_keymap</span> <span class="o">=</span> <span class="n">get_keyboard_sequences</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="c1"># build set of prefixes of sequences</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_keymap_prefixes</span> <span class="o">=</span> <span class="n">get_leading_prefixes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_keymap</span><span class="p">)</span>
+
+        <span class="c1"># keyboard stream buffer</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_buf</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># set input encoding and initialize incremental decoder</span>
+            <span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Windows&#39;</span> <span class="ow">and</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="c1"># Default for setlocale() has side effects for PY2 on Windows</span>
+                <span class="k">pass</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_ALL</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_encoding</span> <span class="o">=</span> <span class="n">locale</span><span class="o">.</span><span class="n">getpreferredencoding</span><span class="p">()</span> <span class="ow">or</span> <span class="s1">&#39;ascii&#39;</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_decoder</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">getincrementaldecoder</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_encoding</span><span class="p">)()</span>
+
+            <span class="k">except</span> <span class="ne">LookupError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+                <span class="c1"># encoding is illegal or unsupported, use &#39;ascii&#39;</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;LookupError: </span><span class="si">{0}</span><span class="s1">, fallback to ASCII for &#39;</span>
+                              <span class="s1">&#39;keyboard.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_encoding</span> <span class="o">=</span> <span class="s1">&#39;ascii&#39;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_decoder</span> <span class="o">=</span> <span class="n">codecs</span><span class="o">.</span><span class="n">getincrementaldecoder</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_encoding</span><span class="p">)()</span>
+
+<div class="viewcode-block" id="Terminal.__getattr__"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.__getattr__">[docs]</a>    <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a terminal capability as Unicode string.</span>
+
+<span class="sd">        For example, ``term.bold`` is a unicode string that may be prepended</span>
+<span class="sd">        to text to set the video attribute for bold, which should also be</span>
+<span class="sd">        terminated with the pairing :attr:`normal`. This capability</span>
+<span class="sd">        returns a callable, so you can use ``term.bold(&quot;hi&quot;)`` which</span>
+<span class="sd">        results in the joining of ``(term.bold, &quot;hi&quot;, term.normal)``.</span>
+
+<span class="sd">        Compound formatters may also be used. For example::</span>
+
+<span class="sd">            &gt;&gt;&gt; term.bold_blink_red_on_green(&quot;merry x-mas!&quot;)</span>
+
+<span class="sd">        For a parameterized capability such as ``move`` (or ``cup``), pass the</span>
+<span class="sd">        parameters as positional arguments::</span>
+
+<span class="sd">            &gt;&gt;&gt; term.move(line, column)</span>
+
+<span class="sd">        See the manual page `terminfo(5)</span>
+<span class="sd">        &lt;https://invisible-island.net/ncurses/man/terminfo.5.html&gt;`_ for a</span>
+<span class="sd">        complete list of capabilities and their arguments.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_does_styling</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">NullCallableString</span><span class="p">()</span>
+        <span class="c1"># Fetch the missing &#39;attribute&#39; into some kind of curses-resolved</span>
+        <span class="c1"># capability, and cache by attaching to this Terminal class instance.</span>
+        <span class="c1">#</span>
+        <span class="c1"># Note that this will prevent future calls to __getattr__(), but</span>
+        <span class="c1"># that&#39;s precisely the idea of the cache!</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">resolve_attribute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">val</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">kind</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read-only property: Terminal kind determined on class initialization.</span>
+
+<span class="sd">        :rtype: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_kind</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">does_styling</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read-only property: Whether this class instance may emit sequences.</span>
+
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_does_styling</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_a_tty</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read-only property: Whether :attr:`~.stream` is a terminal.</span>
+
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_a_tty</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read-only property: Height of the terminal (in number of lines).</span>
+
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_height_and_width</span><span class="p">()</span><span class="o">.</span><span class="n">ws_row</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read-only property: Width of the terminal (in number of columns).</span>
+
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_height_and_width</span><span class="p">()</span><span class="o">.</span><span class="n">ws_col</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pixel_height</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read-only property: Height ofthe terminal (in pixels).</span>
+
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_height_and_width</span><span class="p">()</span><span class="o">.</span><span class="n">ws_ypixel</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pixel_width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read-only property: Width of terminal (in pixels).</span>
+
+<span class="sd">        :rtype: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_height_and_width</span><span class="p">()</span><span class="o">.</span><span class="n">ws_xpixel</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_winsize</span><span class="p">(</span><span class="n">fd</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return named tuple describing size of the terminal by ``fd``.</span>
+
+<span class="sd">        If the given platform does not have modules :mod:`termios`,</span>
+<span class="sd">        :mod:`fcntl`, or :mod:`tty`, window size of 80 columns by 25</span>
+<span class="sd">        rows is always returned.</span>
+
+<span class="sd">        :arg int fd: file descriptor queries for its window size.</span>
+<span class="sd">        :raises IOError: the file descriptor ``fd`` is not a terminal.</span>
+<span class="sd">        :rtype: WINSZ</span>
+<span class="sd">        :returns: named tuple describing size of the terminal</span>
+
+<span class="sd">        WINSZ is a :class:`collections.namedtuple` instance, whose structure</span>
+<span class="sd">        directly maps to the return value of the :const:`termios.TIOCGWINSZ`</span>
+<span class="sd">        ioctl return value. The return parameters are:</span>
+
+<span class="sd">            - ``ws_row``: width of terminal by its number of character cells.</span>
+<span class="sd">            - ``ws_col``: height of terminal by its number of character cells.</span>
+<span class="sd">            - ``ws_xpixel``: width of terminal by pixels (not accurate).</span>
+<span class="sd">            - ``ws_ypixel``: height of terminal by pixels (not accurate).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">HAS_TTY</span><span class="p">:</span>
+            <span class="c1"># pylint: disable=protected-access</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">fcntl</span><span class="o">.</span><span class="n">ioctl</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span> <span class="n">termios</span><span class="o">.</span><span class="n">TIOCGWINSZ</span><span class="p">,</span> <span class="n">WINSZ</span><span class="o">.</span><span class="n">_BUF</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">WINSZ</span><span class="p">(</span><span class="o">*</span><span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="n">WINSZ</span><span class="o">.</span><span class="n">_FMT</span><span class="p">,</span> <span class="n">data</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">WINSZ</span><span class="p">(</span><span class="n">ws_row</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">ws_col</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">ws_xpixel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ws_ypixel</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_height_and_width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a tuple of (terminal height, terminal width).</span>
+
+<span class="sd">        If :attr:`stream` or :obj:`sys.__stdout__` is not a tty or does not</span>
+<span class="sd">        support :func:`fcntl.ioctl` of :const:`termios.TIOCGWINSZ`, a window</span>
+<span class="sd">        size of 80 columns by 25 rows is returned for any values not</span>
+<span class="sd">        represented by environment variables ``LINES`` and ``COLUMNS``, which</span>
+<span class="sd">        is the default text mode of IBM PC compatibles.</span>
+
+<span class="sd">        :rtype: WINSZ</span>
+<span class="sd">        :returns: Named tuple specifying the terminal size</span>
+
+<span class="sd">        WINSZ is a :class:`collections.namedtuple` instance, whose structure</span>
+<span class="sd">        directly maps to the return value of the :const:`termios.TIOCGWINSZ`</span>
+<span class="sd">        ioctl return value. The return parameters are:</span>
+
+<span class="sd">            - ``ws_row``: height of terminal by its number of cell rows.</span>
+<span class="sd">            - ``ws_col``: width of terminal by its number of cell columns.</span>
+<span class="sd">            - ``ws_xpixel``: width of terminal by pixels (not accurate).</span>
+<span class="sd">            - ``ws_ypixel``: height of terminal by pixels (not accurate).</span>
+
+<span class="sd">            .. note:: the peculiar (height, width, width, height) order, which</span>
+<span class="sd">               matches the return order of TIOCGWINSZ!</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">fd</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_init_descriptor</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdout__</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_winsize</span><span class="p">(</span><span class="n">fd</span><span class="p">)</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">IOError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>  <span class="c1"># pylint: disable=overlapping-except</span>
+                <span class="k">pass</span>
+
+        <span class="k">return</span> <span class="n">WINSZ</span><span class="p">(</span><span class="n">ws_row</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;LINES&#39;</span><span class="p">,</span> <span class="s1">&#39;25&#39;</span><span class="p">)),</span>
+                     <span class="n">ws_col</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;COLUMNS&#39;</span><span class="p">,</span> <span class="s1">&#39;80&#39;</span><span class="p">)),</span>
+                     <span class="n">ws_xpixel</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                     <span class="n">ws_ypixel</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Terminal.location"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.location">[docs]</a>    <span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>
+    <span class="k">def</span> <span class="nf">location</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Context manager for temporarily moving the cursor.</span>
+
+<span class="sd">        :arg int x: horizontal position, from left, *0*, to right edge of screen, *self.width - 1*.</span>
+<span class="sd">        :arg int y: vertical position, from top, *0*, to bottom of screen, *self.height - 1*.</span>
+<span class="sd">        :return: a context manager.</span>
+<span class="sd">        :rtype: Iterator</span>
+
+<span class="sd">        Move the cursor to a certain position on entry, do any kind of I/O, and upon exit</span>
+<span class="sd">        let you print stuff there, then return the cursor to its original position:</span>
+
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            term = Terminal()</span>
+<span class="sd">            with term.location(y=0, x=0):</span>
+<span class="sd">                for row_num in range(term.height-1):</span>
+<span class="sd">                    print(&#39;Row #{row_num}&#39;)</span>
+<span class="sd">            print(term.clear_eol + &#39;Back to original location.&#39;)</span>
+
+<span class="sd">        Specify ``x`` to move to a certain column, ``y`` to move to a certain</span>
+<span class="sd">        row, both, or neither. If you specify neither, only the saving and</span>
+<span class="sd">        restoration of cursor position will happen. This can be useful if you</span>
+<span class="sd">        simply want to restore your place after doing some manual cursor</span>
+<span class="sd">        movement.</span>
+
+<span class="sd">        Calls cannot be nested: only one should be entered at a time.</span>
+
+<span class="sd">        .. note:: The argument order *(x, y)* differs from the return value order *(y, x)*</span>
+<span class="sd">            of :meth:`get_location`, or argument order *(y, x)* of :meth:`move`. This is</span>
+<span class="sd">            for API Compaibility with the blessings library, sorry for the trouble!</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># pylint: disable=invalid-name</span>
+        <span class="c1">#         Invalid argument name &quot;x&quot;</span>
+
+        <span class="c1"># Save position and move to the requested column, row, or both:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">y</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">move_x</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">y</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">move_y</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+            <span class="k">yield</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="c1"># Restore original cursor position:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">restore</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Terminal.get_location"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.get_location">[docs]</a>    <span class="k">def</span> <span class="nf">get_location</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return tuple (row, column) of cursor position.</span>
+
+<span class="sd">        :arg float timeout: Return after time elapsed in seconds with value ``(-1, -1)`` indicating</span>
+<span class="sd">            that the remote end did not respond.</span>
+<span class="sd">        :rtype: tuple</span>
+<span class="sd">        :returns: cursor position as tuple in form of ``(y, x)``.  When a timeout is specified,</span>
+<span class="sd">            always ensure the return value is checked for ``(-1, -1)``.</span>
+
+<span class="sd">        The location of the cursor is determined by emitting the ``u7`` terminal capability, or</span>
+<span class="sd">        VT100 `Query Cursor Position &lt;http://www.termsys.demon.co.uk/vtansi.htm#status&gt;`_ when such</span>
+<span class="sd">        capability is undefined, which elicits a response from a reply string described by</span>
+<span class="sd">        capability ``u6``, or again VT100&#39;s definition of ``\x1b[%i%d;%dR`` when undefined.</span>
+
+<span class="sd">        The ``(y, x)`` return value matches the parameter order of the :meth:`move_xy` capability.</span>
+<span class="sd">        The following sequence should cause the cursor to not move at all::</span>
+
+<span class="sd">            &gt;&gt;&gt; term = Terminal()</span>
+<span class="sd">            &gt;&gt;&gt; term.move_yx(*term.get_location()))</span>
+
+<span class="sd">        And the following should assert True with a terminal:</span>
+
+<span class="sd">            &gt;&gt;&gt; term = Terminal()</span>
+<span class="sd">            &gt;&gt;&gt; given_y, given_x = 10, 20</span>
+<span class="sd">            &gt;&gt;&gt; with term.location(y=given_y, x=given_x):</span>
+<span class="sd">            ...     result_y, result_x = term.get_location()</span>
+<span class="sd">            ...</span>
+<span class="sd">            &gt;&gt;&gt; assert given_x == result_x, (given_x, result_x)</span>
+<span class="sd">            &gt;&gt;&gt; assert given_y == result_y, (given_y, result_y)</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Local lines attached by termios and remote login protocols such as</span>
+        <span class="c1"># ssh and telnet both provide a means to determine the window</span>
+        <span class="c1"># dimensions of a connected client, but **no means to determine the</span>
+        <span class="c1"># location of the cursor**.</span>
+        <span class="c1">#</span>
+        <span class="c1"># from https://invisible-island.net/ncurses/terminfo.src.html,</span>
+        <span class="c1">#</span>
+        <span class="c1"># &gt; The System V Release 4 and XPG4 terminfo format defines ten string</span>
+        <span class="c1"># &gt; capabilities for use by applications, &lt;u0&gt;...&lt;u9&gt;.   In this file,</span>
+        <span class="c1"># &gt; we use certain of these capabilities to describe functions which</span>
+        <span class="c1"># &gt; are not covered by terminfo.  The mapping is as follows:</span>
+        <span class="c1"># &gt;</span>
+        <span class="c1"># &gt;  u9   terminal enquire string (equiv. to ANSI/ECMA-48 DA)</span>
+        <span class="c1"># &gt;  u8   terminal answerback description</span>
+        <span class="c1"># &gt;  u7   cursor position request (equiv. to VT100/ANSI/ECMA-48 DSR 6)</span>
+        <span class="c1"># &gt;  u6   cursor position report (equiv. to ANSI/ECMA-48 CPR)</span>
+        <span class="n">query_str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">u7</span> <span class="ow">or</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[6n&#39;</span>
+        <span class="n">response_str</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">caps</span><span class="p">[</span><span class="s1">&#39;cursor_report&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">attribute</span><span class="p">)</span> <span class="ow">or</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[</span><span class="si">%i%d</span><span class="s1">;</span><span class="si">%d</span><span class="s1">R&#39;</span>
+
+        <span class="c1"># determine response format as a regular expression</span>
+        <span class="n">response_re</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caps</span><span class="p">[</span><span class="s1">&#39;cursor_report&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">re_compiled</span>
+
+        <span class="c1"># Avoid changing user&#39;s desired raw or cbreak mode if already entered,</span>
+        <span class="c1"># by entering cbreak mode ourselves.  This is necessary to receive user</span>
+        <span class="c1"># input without awaiting a human to press the return key.   This mode</span>
+        <span class="c1"># also disables echo, which we should also hide, as our input is an</span>
+        <span class="c1"># sequence that is not meaningful for display as an output sequence.</span>
+
+        <span class="n">ctx</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_line_buffered</span><span class="p">:</span>
+                <span class="n">ctx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cbreak</span><span class="p">()</span>
+                <span class="n">ctx</span><span class="o">.</span><span class="fm">__enter__</span><span class="p">()</span>  <span class="c1"># pylint: disable=no-member</span>
+
+            <span class="c1"># emit the &#39;query cursor position&#39; sequence,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">query_str</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+
+            <span class="c1"># expect a response,</span>
+            <span class="n">match</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">_read_until</span><span class="p">(</span><span class="n">term</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+                                      <span class="n">pattern</span><span class="o">=</span><span class="n">response_re</span><span class="p">,</span>
+                                      <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+
+            <span class="c1"># ensure response sequence is excluded from subsequent input,</span>
+            <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[:</span><span class="n">match</span><span class="o">.</span><span class="n">start</span><span class="p">()]</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="n">match</span><span class="o">.</span><span class="n">end</span><span class="p">():])</span>
+
+            <span class="c1"># re-buffer keyboard data, if any</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ungetch</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+                <span class="c1"># return matching sequence response, the cursor location.</span>
+                <span class="n">row</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">())</span>
+
+                <span class="c1"># Per https://invisible-island.net/ncurses/terminfo.src.html</span>
+                <span class="c1"># The cursor position report (&lt;u6&gt;) string must contain two</span>
+                <span class="c1"># scanf(3)-style %d format elements.  The first of these must</span>
+                <span class="c1"># correspond to the Y coordinate and the second to the %d.</span>
+                <span class="c1"># If the string contains the sequence %i, it is taken as an</span>
+                <span class="c1"># instruction to decrement each value after reading it (this is</span>
+                <span class="c1"># the inverse sense from the cup string).</span>
+                <span class="k">if</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="si">%i</span><span class="s1">&#39;</span> <span class="ow">in</span> <span class="n">response_str</span><span class="p">:</span>
+                    <span class="n">row</span> <span class="o">-=</span> <span class="mi">1</span>
+                    <span class="n">col</span> <span class="o">-=</span> <span class="mi">1</span>
+                <span class="k">return</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span>
+
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">ctx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">ctx</span><span class="o">.</span><span class="fm">__exit__</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>  <span class="c1"># pylint: disable=no-member</span>
+
+        <span class="c1"># We chose to return an illegal value rather than an exception,</span>
+        <span class="c1"># favoring that users author function filters, such as max(0, y),</span>
+        <span class="c1"># rather than crowbarring such logic into an exception handler.</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span></div>
+
+<div class="viewcode-block" id="Terminal.fullscreen"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.fullscreen">[docs]</a>    <span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>
+    <span class="k">def</span> <span class="nf">fullscreen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Context manager that switches to secondary screen, restoring on exit.</span>
+
+<span class="sd">        Under the hood, this switches between the primary screen buffer and</span>
+<span class="sd">        the secondary one. The primary one is saved on entry and restored on</span>
+<span class="sd">        exit.  Likewise, the secondary contents are also stable and are</span>
+<span class="sd">        faithfully restored on the next entry::</span>
+
+<span class="sd">            with term.fullscreen():</span>
+<span class="sd">                main()</span>
+
+<span class="sd">        .. note:: There is only one primary and one secondary screen buffer.</span>
+<span class="sd">           :meth:`fullscreen` calls cannot be nested, only one should be</span>
+<span class="sd">           entered at a time.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">enter_fullscreen</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">yield</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">exit_fullscreen</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Terminal.hidden_cursor"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.hidden_cursor">[docs]</a>    <span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>
+    <span class="k">def</span> <span class="nf">hidden_cursor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Context manager that hides the cursor, setting visibility on exit.</span>
+
+<span class="sd">            with term.hidden_cursor():</span>
+<span class="sd">                main()</span>
+
+<span class="sd">        .. note:: :meth:`hidden_cursor` calls cannot be nested: only one</span>
+<span class="sd">            should be entered at a time.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hide_cursor</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">yield</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">normal_cursor</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Terminal.move_xy"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.move_xy">[docs]</a>    <span class="k">def</span> <span class="nf">move_xy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A callable string that moves the cursor to the given ``(x, y)`` screen coordinates.</span>
+
+<span class="sd">        :arg int x: horizontal position, from left, *0*, to right edge of screen, *self.width - 1*.</span>
+<span class="sd">        :arg int y: vertical position, from top, *0*, to bottom of screen, *self.height - 1*.</span>
+<span class="sd">        :rtype: ParameterizingString</span>
+<span class="sd">        :returns: Callable string that moves the cursor to the given coordinates</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># this is just a convenience alias to the built-in, but hidden &#39;move&#39;</span>
+        <span class="c1"># attribute -- we encourage folks to use only (x, y) positional</span>
+        <span class="c1"># arguments, or, if they must use (y, x), then use the &#39;move_yx&#39;</span>
+        <span class="c1"># alias.</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Terminal.move_yx"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.move_yx">[docs]</a>    <span class="k">def</span> <span class="nf">move_yx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A callable string that moves the cursor to the given ``(y, x)`` screen coordinates.</span>
+
+<span class="sd">        :arg int y: vertical position, from top, *0*, to bottom of screen, *self.height - 1*.</span>
+<span class="sd">        :arg int x: horizontal position, from left, *0*, to right edge of screen, *self.width - 1*.</span>
+<span class="sd">        :rtype: ParameterizingString</span>
+<span class="sd">        :returns: Callable string that moves the cursor to the given coordinates</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">move_left</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Move cursor 1 cells to the left, or callable string for n&gt;1 cells.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">FormattingOtherString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cub1</span><span class="p">,</span> <span class="n">ParameterizingString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cub</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">move_right</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Move cursor 1 or more cells to the right, or callable string for n&gt;1 cells.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">FormattingOtherString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cuf1</span><span class="p">,</span> <span class="n">ParameterizingString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cuf</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">move_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Move cursor 1 or more cells upwards, or callable string for n&gt;1 cells.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">FormattingOtherString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cuu1</span><span class="p">,</span> <span class="n">ParameterizingString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cuu</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">move_down</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Move cursor 1 or more cells downwards, or callable string for n&gt;1 cells.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">FormattingOtherString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cud1</span><span class="p">,</span> <span class="n">ParameterizingString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cud</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">color</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A callable string that sets the foreground color.</span>
+
+<span class="sd">        :rtype: ParameterizingString</span>
+
+<span class="sd">        The capability is unparameterized until called and passed a number, at which point it</span>
+<span class="sd">        returns another string which represents a specific color change. This second string can</span>
+<span class="sd">        further be called to color a piece of text and set everything back to normal afterward.</span>
+
+<span class="sd">        This should not be used directly, but rather a specific color by name or</span>
+<span class="sd">        :meth:`~.Terminal.color_rgb` value.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">does_styling</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">NullCallableString</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">ParameterizingString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_foreground_color</span><span class="p">,</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">normal</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Terminal.color_rgb"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.color_rgb">[docs]</a>    <span class="k">def</span> <span class="nf">color_rgb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Provides callable formatting string to set foreground color to the specified RGB color.</span>
+
+<span class="sd">        :arg int red: RGB value of Red.</span>
+<span class="sd">        :arg int green: RGB value of Green.</span>
+<span class="sd">        :arg int blue: RGB value of Blue.</span>
+<span class="sd">        :rtype: FormattingString</span>
+<span class="sd">        :returns: Callable string that sets the foreground color</span>
+
+<span class="sd">        If the terminal does not support RGB color, the nearest supported</span>
+<span class="sd">        color will be determined using :py:attr:`color_distance_algorithm`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_colors</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">24</span><span class="p">:</span>
+            <span class="c1"># &quot;truecolor&quot; 24-bit</span>
+            <span class="n">fmt_attr</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[38;2;</span><span class="si">{0}</span><span class="s1">;</span><span class="si">{1}</span><span class="s1">;</span><span class="si">{2}</span><span class="s1">m&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">FormattingString</span><span class="p">(</span><span class="n">fmt_attr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">normal</span><span class="p">)</span>
+
+        <span class="c1"># color by approximation to 256 or 16-color terminals</span>
+        <span class="n">color_idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rgb_downconvert</span><span class="p">(</span><span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">FormattingString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_foreground_color</span><span class="p">(</span><span class="n">color_idx</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">normal</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">on_color</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A callable capability that sets the background color.</span>
+
+<span class="sd">        :rtype: ParameterizingString</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">does_styling</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">NullCallableString</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">ParameterizingString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_background_color</span><span class="p">,</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">normal</span><span class="p">,</span> <span class="s1">&#39;on_color&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Terminal.on_color_rgb"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.on_color_rgb">[docs]</a>    <span class="k">def</span> <span class="nf">on_color_rgb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Provides callable formatting string to set background color to the specified RGB color.</span>
+
+<span class="sd">        :arg int red: RGB value of Red.</span>
+<span class="sd">        :arg int green: RGB value of Green.</span>
+<span class="sd">        :arg int blue: RGB value of Blue.</span>
+<span class="sd">        :rtype: FormattingString</span>
+<span class="sd">        :returns: Callable string that sets the foreground color</span>
+
+<span class="sd">        If the terminal does not support RGB color, the nearest supported</span>
+<span class="sd">        color will be determined using :py:attr:`color_distance_algorithm`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_colors</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">24</span><span class="p">:</span>
+            <span class="n">fmt_attr</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[48;2;</span><span class="si">{0}</span><span class="s1">;</span><span class="si">{1}</span><span class="s1">;</span><span class="si">{2}</span><span class="s1">m&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">FormattingString</span><span class="p">(</span><span class="n">fmt_attr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">normal</span><span class="p">)</span>
+
+        <span class="n">color_idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rgb_downconvert</span><span class="p">(</span><span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">FormattingString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_background_color</span><span class="p">(</span><span class="n">color_idx</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">normal</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Terminal.rgb_downconvert"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.rgb_downconvert">[docs]</a>    <span class="k">def</span> <span class="nf">rgb_downconvert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Translate an RGB color to a color code of the terminal&#39;s color depth.</span>
+
+<span class="sd">        :arg int red: RGB value of Red (0-255).</span>
+<span class="sd">        :arg int green: RGB value of Green (0-255).</span>
+<span class="sd">        :arg int blue: RGB value of Blue (0-255).</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        :returns: Color code of downconverted RGB color</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Though pre-computing all 1 &lt;&lt; 24 options is memory-intensive, a pre-computed</span>
+        <span class="c1"># &quot;k-d tree&quot; of 256 (x,y,z) vectors of a colorspace in 3 dimensions, such as a</span>
+        <span class="c1"># cone of HSV, or simply 255x255x255 RGB square, any given rgb value is just a</span>
+        <span class="c1"># nearest-neighbor search of 256 points, which k-d should be much faster by</span>
+        <span class="c1"># sub-dividing / culling search points, rather than our &quot;search all 256 points</span>
+        <span class="c1"># always&quot; approach.</span>
+        <span class="n">fn_distance</span> <span class="o">=</span> <span class="n">COLOR_DISTANCE_ALGORITHMS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">color_distance_algorithm</span><span class="p">]</span>
+        <span class="n">color_idx</span> <span class="o">=</span> <span class="mi">7</span>
+        <span class="n">shortest_distance</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">cmp_depth</span><span class="p">,</span> <span class="n">cmp_rgb</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">RGB_256TABLE</span><span class="p">):</span>
+            <span class="n">cmp_distance</span> <span class="o">=</span> <span class="n">fn_distance</span><span class="p">(</span><span class="n">cmp_rgb</span><span class="p">,</span> <span class="p">(</span><span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">shortest_distance</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">cmp_distance</span> <span class="o">&lt;</span> <span class="n">shortest_distance</span><span class="p">:</span>
+                <span class="n">shortest_distance</span> <span class="o">=</span> <span class="n">cmp_distance</span>
+                <span class="n">color_idx</span> <span class="o">=</span> <span class="n">cmp_depth</span>
+            <span class="k">if</span> <span class="n">cmp_depth</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_colors</span><span class="p">:</span>
+                <span class="k">break</span>
+        <span class="k">return</span> <span class="n">color_idx</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">normal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A capability that resets all video attributes.</span>
+
+<span class="sd">        :rtype: str</span>
+
+<span class="sd">        ``normal`` is an alias for ``sgr0`` or ``exit_attribute_mode``. Any</span>
+<span class="sd">        styling attributes previously applied, such as foreground or</span>
+<span class="sd">        background colors, reverse video, or bold are reset to defaults.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_normal</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_normal</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_normal</span> <span class="o">=</span> <span class="n">resolve_capability</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;normal&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_normal</span>
+
+<div class="viewcode-block" id="Terminal.link"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.link">[docs]</a>    <span class="k">def</span> <span class="nf">link</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">url_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Display ``text`` that when touched or clicked, navigates to ``url``.</span>
+
+<span class="sd">        Optional ``url_id`` may be specified, so that non-adjacent cells can reference a single</span>
+<span class="sd">        target, all cells painted with the same &quot;id&quot; will highlight on hover, rather than any</span>
+<span class="sd">        individual one, as described in &quot;Hovering and underlining the id parameter&quot; of gist</span>
+<span class="sd">        https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda.</span>
+
+<span class="sd">        :param str url: Hyperlink URL.</span>
+<span class="sd">        :param str text: Clickable text.</span>
+<span class="sd">        :param str url_id: Optional &#39;id&#39;.</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :returns: String of ``text`` as a hyperlink to ``url``.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2000</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">url</span><span class="p">),</span> <span class="n">url</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">url_id</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">url_id</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">250</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">url_id</span><span class="p">)),</span> <span class="n">url_id</span><span class="p">)</span>
+            <span class="n">params</span> <span class="o">=</span> <span class="s1">&#39;id=</span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">url_id</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">params</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">does_styling</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">text</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">]8;</span><span class="si">{0}</span><span class="s1">;</span><span class="si">{1}</span><span class="se">\x1b\\</span><span class="si">{2}</span><span class="s1">&#39;</span>
+                <span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">]8;;</span><span class="se">\x1b\\</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">text</span><span class="p">))</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">stream</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read-only property: stream the terminal outputs to.</span>
+
+<span class="sd">        This is a convenience attribute. It is used internally for implied</span>
+<span class="sd">        writes performed by context managers :meth:`~.hidden_cursor`,</span>
+<span class="sd">        :meth:`~.fullscreen`, :meth:`~.location`, and :meth:`~.keypad`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stream</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">number_of_colors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Number of colors supported by terminal.</span>
+
+<span class="sd">        Common return values are 0, 8, 16, 256, or 1 &lt;&lt; 24.</span>
+
+<span class="sd">        This may be used to test whether the terminal supports colors,</span>
+<span class="sd">        and at what depth, if that&#39;s a concern.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_colors</span>
+
+    <span class="nd">@number_of_colors</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">number_of_colors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">value</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">24</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_number_of_colors</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__clear_color_capabilities</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">color_distance_algorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Color distance algorithm used by :meth:`rgb_downconvert`.</span>
+
+<span class="sd">        The slowest, but most accurate, &#39;cie2000&#39;, is default. Other available options are &#39;rgb&#39;,</span>
+<span class="sd">        &#39;rgb-weighted&#39;, &#39;cie76&#39;, and &#39;cie94&#39;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_color_distance_algorithm</span>
+
+    <span class="nd">@color_distance_algorithm</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">color_distance_algorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">COLOR_DISTANCE_ALGORITHMS</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_color_distance_algorithm</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__clear_color_capabilities</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_foreground_color</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Convenience capability to support :attr:`~.on_color`.</span>
+
+<span class="sd">        Prefers returning sequence for capability ``setaf``, &quot;Set foreground color to #1, using ANSI</span>
+<span class="sd">        escape&quot;. If the given terminal does not support such sequence, fallback to returning</span>
+<span class="sd">        attribute ``setf``, &quot;Set foreground color #1&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">setaf</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">setf</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_background_color</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Convenience capability to support :attr:`~.on_color`.</span>
+
+<span class="sd">        Prefers returning sequence for capability ``setab``, &quot;Set background color to #1, using ANSI</span>
+<span class="sd">        escape&quot;. If the given terminal does not support such sequence, fallback to returning</span>
+<span class="sd">        attribute ``setb``, &quot;Set background color #1&quot;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">setab</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">setb</span>
+
+<div class="viewcode-block" id="Terminal.ljust"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.ljust">[docs]</a>    <span class="k">def</span> <span class="nf">ljust</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fillchar</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39; &#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Left-align ``text``, which may contain terminal sequences.</span>
+
+<span class="sd">        :arg str text: String to be aligned</span>
+<span class="sd">        :arg int width: Total width to fill with aligned text. If</span>
+<span class="sd">            unspecified, the whole width of the terminal is filled.</span>
+<span class="sd">        :arg str fillchar: String for padding the right of ``text``</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :returns: String of ``text``, left-aligned by ``width``.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Left justification is different from left alignment, but we continue</span>
+        <span class="c1"># the vocabulary error of the str method for polymorphism.</span>
+        <span class="k">if</span> <span class="n">width</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
+        <span class="k">return</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">fillchar</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Terminal.rjust"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.rjust">[docs]</a>    <span class="k">def</span> <span class="nf">rjust</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fillchar</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39; &#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Right-align ``text``, which may contain terminal sequences.</span>
+
+<span class="sd">        :arg str text: String to be aligned</span>
+<span class="sd">        :arg int width: Total width to fill with aligned text. If</span>
+<span class="sd">            unspecified, the whole width of the terminal is used.</span>
+<span class="sd">        :arg str fillchar: String for padding the left of ``text``</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :returns: String of ``text``, right-aligned by ``width``.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">width</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
+        <span class="k">return</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">fillchar</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Terminal.center"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.center">[docs]</a>    <span class="k">def</span> <span class="nf">center</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fillchar</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39; &#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Center ``text``, which may contain terminal sequences.</span>
+
+<span class="sd">        :arg str text: String to be centered</span>
+<span class="sd">        :arg int width: Total width in which to center text. If</span>
+<span class="sd">            unspecified, the whole width of the terminal is used.</span>
+<span class="sd">        :arg str fillchar: String for padding the left and right of ``text``</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :returns: String of ``text``, centered by ``width``</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">width</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
+        <span class="k">return</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">fillchar</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Terminal.length"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.length">[docs]</a>    <span class="k">def</span> <span class="nf">length</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+        <span class="sa">u</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return printable length of a string containing sequences.</span>
+
+<span class="sd">        :arg str text: String to measure. May contain terminal sequences.</span>
+<span class="sd">        :rtype: int</span>
+<span class="sd">        :returns: The number of terminal character cells the string will occupy</span>
+<span class="sd">            when printed</span>
+
+<span class="sd">        Wide characters that consume 2 character cells are supported:</span>
+
+<span class="sd">        &gt;&gt;&gt; term = Terminal()</span>
+<span class="sd">        &gt;&gt;&gt; term.length(term.clear + term.red(u&#39;コンニチハ&#39;))</span>
+<span class="sd">        10</span>
+
+<span class="sd">        .. note:: Sequences such as &#39;clear&#39;, which is considered as a</span>
+<span class="sd">            &quot;movement sequence&quot; because it would move the cursor to</span>
+<span class="sd">            (y, x)(0, 0), are evaluated as a printable length of</span>
+<span class="sd">            *0*.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">length</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Terminal.strip"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.strip">[docs]</a>    <span class="k">def</span> <span class="nf">strip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">chars</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return ``text`` without sequences and leading or trailing whitespace.</span>
+
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :returns: Text with leading and trailing whitespace removed</span>
+
+<span class="sd">        &gt;&gt;&gt; term.strip(u&#39; \x1b[0;3m xyz &#39;)</span>
+<span class="sd">        u&#39;xyz&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">chars</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Terminal.rstrip"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.rstrip">[docs]</a>    <span class="k">def</span> <span class="nf">rstrip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">chars</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return ``text`` without terminal sequences or trailing whitespace.</span>
+
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :returns: Text with terminal sequences and trailing whitespace removed</span>
+
+<span class="sd">        &gt;&gt;&gt; term.rstrip(u&#39; \x1b[0;3m xyz &#39;)</span>
+<span class="sd">        u&#39;  xyz&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="n">chars</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Terminal.lstrip"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.lstrip">[docs]</a>    <span class="k">def</span> <span class="nf">lstrip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">chars</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return ``text`` without terminal sequences or leading whitespace.</span>
+
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :returns: Text with terminal sequences and leading whitespace removed</span>
+
+<span class="sd">        &gt;&gt;&gt; term.lstrip(u&#39; \x1b[0;3m xyz &#39;)</span>
+<span class="sd">        u&#39;xyz &#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="n">chars</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Terminal.strip_seqs"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.strip_seqs">[docs]</a>    <span class="k">def</span> <span class="nf">strip_seqs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return ``text`` stripped of only its terminal sequences.</span>
+
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :returns: Text with terminal sequences removed</span>
+
+<span class="sd">        &gt;&gt;&gt; term.strip_seqs(u&#39;\x1b[0;3mxyz&#39;)</span>
+<span class="sd">        u&#39;xyz&#39;</span>
+<span class="sd">        &gt;&gt;&gt; term.strip_seqs(term.cuf(5) + term.red(u&#39;test&#39;))</span>
+<span class="sd">        u&#39;     test&#39;</span>
+
+<span class="sd">        .. note:: Non-destructive sequences that adjust horizontal distance</span>
+<span class="sd">            (such as ``\b`` or ``term.cuf(5)``) are replaced by destructive</span>
+<span class="sd">            space or erasing.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">strip_seqs</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Terminal.split_seqs"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.split_seqs">[docs]</a>    <span class="k">def</span> <span class="nf">split_seqs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return ``text`` split by individual character elements and sequences.</span>
+
+<span class="sd">        :arg str text: String containing sequences</span>
+<span class="sd">        :arg kwds: remaining keyword arguments for :func:`re.split`.</span>
+<span class="sd">        :rtype: list[str]</span>
+<span class="sd">        :returns: List of sequences and individual characters</span>
+
+<span class="sd">        &gt;&gt;&gt; term.split_seqs(term.underline(u&#39;xyz&#39;))</span>
+<span class="sd">        [&#39;\x1b[4m&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;, &#39;\x1b(B&#39;, &#39;\x1b[m&#39;]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">pattern</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_caps_unnamed_any</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)))</span></div>
+
+<div class="viewcode-block" id="Terminal.wrap"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.wrap">[docs]</a>    <span class="k">def</span> <span class="nf">wrap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Text-wrap a string, returning a list of wrapped lines.</span>
+
+<span class="sd">        :arg str text: Unlike :func:`textwrap.wrap`, ``text`` may contain</span>
+<span class="sd">            terminal sequences, such as colors, bold, or underline. By</span>
+<span class="sd">            default, tabs in ``text`` are expanded by</span>
+<span class="sd">            :func:`string.expandtabs`.</span>
+<span class="sd">        :arg int width: Unlike :func:`textwrap.wrap`, ``width`` will</span>
+<span class="sd">            default to the width of the attached terminal.</span>
+<span class="sd">        :arg kwargs: See :py:class:`textwrap.TextWrapper`</span>
+<span class="sd">        :rtype: list</span>
+<span class="sd">        :returns: List of wrapped lines</span>
+
+<span class="sd">        See :class:`textwrap.TextWrapper` for keyword arguments that can</span>
+<span class="sd">        customize wrapping behaviour.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="k">if</span> <span class="n">width</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">width</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
+            <span class="n">lines</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">_linewrap</span> <span class="k">for</span> <span class="n">_linewrap</span> <span class="ow">in</span> <span class="n">SequenceTextWrapper</span><span class="p">(</span>
+                    <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">term</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">else</span> <span class="p">(</span><span class="sa">u</span><span class="s1">&#39;&#39;</span><span class="p">,))</span>
+
+        <span class="k">return</span> <span class="n">lines</span></div>
+
+<div class="viewcode-block" id="Terminal.getch"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.getch">[docs]</a>    <span class="k">def</span> <span class="nf">getch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read, decode, and return the next byte from the keyboard stream.</span>
+
+<span class="sd">        :rtype: unicode</span>
+<span class="sd">        :returns: a single unicode character, or ``u&#39;&#39;`` if a multi-byte</span>
+<span class="sd">            sequence has not yet been fully received.</span>
+
+<span class="sd">        This method name and behavior mimics curses ``getch(void)``, and</span>
+<span class="sd">        it supports :meth:`inkey`, reading only one byte from</span>
+<span class="sd">        the keyboard string at a time. This method should always return</span>
+<span class="sd">        without blocking if called after :meth:`kbhit` has returned True.</span>
+
+<span class="sd">        Implementors of alternate input stream methods should override</span>
+<span class="sd">        this method.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="n">byte</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_decoder</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">byte</span><span class="p">,</span> <span class="n">final</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Terminal.ungetch"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.ungetch">[docs]</a>    <span class="k">def</span> <span class="nf">ungetch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Buffer input data to be discovered by next call to :meth:`~.inkey`.</span>
+
+<span class="sd">        :arg str text: String to be buffered as keyboard input.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_buf</span><span class="o">.</span><span class="n">extendleft</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Terminal.kbhit"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.kbhit">[docs]</a>    <span class="k">def</span> <span class="nf">kbhit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return whether a keypress has been detected on the keyboard.</span>
+
+<span class="sd">        This method is used by :meth:`inkey` to determine if a byte may</span>
+<span class="sd">        be read using :meth:`getch` without blocking.  The standard</span>
+<span class="sd">        implementation simply uses the :func:`select.select` call on stdin.</span>
+
+<span class="sd">        :arg float timeout: When ``timeout`` is 0, this call is</span>
+<span class="sd">            non-blocking, otherwise blocking indefinitely until keypress</span>
+<span class="sd">            is detected when None (default). When ``timeout`` is a</span>
+<span class="sd">            positive number, returns after ``timeout`` seconds have</span>
+<span class="sd">            elapsed (float).</span>
+<span class="sd">        :rtype: bool</span>
+<span class="sd">        :returns: True if a keypress is awaiting to be read on the keyboard</span>
+<span class="sd">            attached to this terminal.  When input is not a terminal, False is</span>
+<span class="sd">            always returned.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">stime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">ready_r</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">]</span>
+        <span class="n">check_r</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span><span class="p">]</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="p">[]</span>
+
+        <span class="k">while</span> <span class="n">HAS_TTY</span> <span class="ow">and</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">ready_r</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">select</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">check_r</span><span class="p">,</span> <span class="p">[],</span> <span class="p">[],</span> <span class="n">timeout</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">InterruptedError</span><span class="p">:</span>
+                <span class="c1"># Beginning with python3.5, IntrruptError is no longer thrown</span>
+                <span class="c1"># https://www.python.org/dev/peps/pep-0475/</span>
+                <span class="c1">#</span>
+                <span class="c1"># For previous versions of python, we take special care to</span>
+                <span class="c1"># retry select on InterruptedError exception, namely to handle</span>
+                <span class="c1"># a custom SIGWINCH handler. When installed, it would cause</span>
+                <span class="c1"># select() to be interrupted with errno 4 (EAGAIN).</span>
+                <span class="c1">#</span>
+                <span class="c1"># Just as in python3.5, it is ignored, and a new timeout value</span>
+                <span class="c1"># is derived from the previous unless timeout becomes negative.</span>
+                <span class="c1"># because the signal handler has blocked beyond timeout, then</span>
+                <span class="c1"># False is returned. Otherwise, when timeout is None, we</span>
+                <span class="c1"># continue to block indefinitely (default).</span>
+                <span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="c1"># subtract time already elapsed,</span>
+                    <span class="n">timeout</span> <span class="o">-=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">stime</span>
+                    <span class="k">if</span> <span class="n">timeout</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="k">continue</span>
+                    <span class="c1"># no time remains after handling exception (rare)</span>
+                    <span class="n">ready_r</span> <span class="o">=</span> <span class="p">[]</span>        <span class="c1"># pragma: no cover</span>
+                    <span class="k">break</span>               <span class="c1"># pragma: no cover</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">break</span>
+
+        <span class="k">return</span> <span class="kc">False</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">check_r</span> <span class="o">==</span> <span class="n">ready_r</span></div>
+
+<div class="viewcode-block" id="Terminal.cbreak"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.cbreak">[docs]</a>    <span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>
+    <span class="k">def</span> <span class="nf">cbreak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Allow each keystroke to be read immediately after it is pressed.</span>
+
+<span class="sd">        This is a context manager for :func:`tty.setcbreak`.</span>
+
+<span class="sd">        This context manager activates &#39;rare&#39; mode, the opposite of &#39;cooked&#39;</span>
+<span class="sd">        mode: On entry, :func:`tty.setcbreak` mode is activated disabling</span>
+<span class="sd">        line-buffering of keyboard input and turning off automatic echo of</span>
+<span class="sd">        input as output.</span>
+
+<span class="sd">        .. note:: You must explicitly print any user input you would like</span>
+<span class="sd">            displayed.  If you provide any kind of editing, you must handle</span>
+<span class="sd">            backspace and other line-editing control functions in this mode</span>
+<span class="sd">            as well!</span>
+
+<span class="sd">        **Normally**, characters received from the keyboard cannot be read</span>
+<span class="sd">        by Python until the *Return* key is pressed. Also known as *cooked* or</span>
+<span class="sd">        *canonical input* mode, it allows the tty driver to provide</span>
+<span class="sd">        line-editing before shuttling the input to your program and is the</span>
+<span class="sd">        (implicit) default terminal mode set by most unix shells before</span>
+<span class="sd">        executing programs.</span>
+
+<span class="sd">        Technically, this context manager sets the :mod:`termios` attributes</span>
+<span class="sd">        of the terminal attached to :obj:`sys.__stdin__`.</span>
+
+<span class="sd">        .. note:: :func:`tty.setcbreak` sets ``VMIN = 1`` and ``VTIME = 0``,</span>
+<span class="sd">            see http://www.unixwiz.net/techtips/termios-vmin-vtime.html</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">HAS_TTY</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Save current terminal mode:</span>
+            <span class="n">save_mode</span> <span class="o">=</span> <span class="n">termios</span><span class="o">.</span><span class="n">tcgetattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span><span class="p">)</span>
+            <span class="n">save_line_buffered</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_line_buffered</span>
+            <span class="n">tty</span><span class="o">.</span><span class="n">setcbreak</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span><span class="p">,</span> <span class="n">termios</span><span class="o">.</span><span class="n">TCSANOW</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_line_buffered</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">yield</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="c1"># Restore prior mode:</span>
+                <span class="n">termios</span><span class="o">.</span><span class="n">tcsetattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span><span class="p">,</span>
+                                  <span class="n">termios</span><span class="o">.</span><span class="n">TCSAFLUSH</span><span class="p">,</span>
+                                  <span class="n">save_mode</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_line_buffered</span> <span class="o">=</span> <span class="n">save_line_buffered</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">yield</span></div>
+
+<div class="viewcode-block" id="Terminal.raw"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.raw">[docs]</a>    <span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>
+    <span class="k">def</span> <span class="nf">raw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        A context manager for :func:`tty.setraw`.</span>
+
+<span class="sd">        Although both :meth:`break` and :meth:`raw` modes allow each keystroke</span>
+<span class="sd">        to be read immediately after it is pressed, Raw mode disables</span>
+<span class="sd">        processing of input and output.</span>
+
+<span class="sd">        In cbreak mode, special input characters such as ``^C`` or ``^S`` are</span>
+<span class="sd">        interpreted by the terminal driver and excluded from the stdin stream.</span>
+<span class="sd">        In raw mode these values are receive by the :meth:`inkey` method.</span>
+
+<span class="sd">        Because output processing is not done, the newline ``&#39;\n&#39;`` is not</span>
+<span class="sd">        enough, you must also print carriage return to ensure that the cursor</span>
+<span class="sd">        is returned to the first column::</span>
+
+<span class="sd">            with term.raw():</span>
+<span class="sd">                print(&quot;printing in raw mode&quot;, end=&quot;\r\n&quot;)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">HAS_TTY</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Save current terminal mode:</span>
+            <span class="n">save_mode</span> <span class="o">=</span> <span class="n">termios</span><span class="o">.</span><span class="n">tcgetattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span><span class="p">)</span>
+            <span class="n">save_line_buffered</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_line_buffered</span>
+            <span class="n">tty</span><span class="o">.</span><span class="n">setraw</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span><span class="p">,</span> <span class="n">termios</span><span class="o">.</span><span class="n">TCSANOW</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_line_buffered</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">yield</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="c1"># Restore prior mode:</span>
+                <span class="n">termios</span><span class="o">.</span><span class="n">tcsetattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_fd</span><span class="p">,</span>
+                                  <span class="n">termios</span><span class="o">.</span><span class="n">TCSAFLUSH</span><span class="p">,</span>
+                                  <span class="n">save_mode</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_line_buffered</span> <span class="o">=</span> <span class="n">save_line_buffered</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">yield</span></div>
+
+<div class="viewcode-block" id="Terminal.keypad"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.keypad">[docs]</a>    <span class="nd">@contextlib</span><span class="o">.</span><span class="n">contextmanager</span>
+    <span class="k">def</span> <span class="nf">keypad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Context manager that enables directional keypad input.</span>
+
+<span class="sd">        On entrying, this puts the terminal into &quot;keyboard_transmit&quot; mode by</span>
+<span class="sd">        emitting the keypad_xmit (smkx) capability. On exit, it emits</span>
+<span class="sd">        keypad_local (rmkx).</span>
+
+<span class="sd">        On an IBM-PC keyboard with numeric keypad of terminal-type *xterm*,</span>
+<span class="sd">        with numlock off, the lower-left diagonal key transmits sequence</span>
+<span class="sd">        ``\\x1b[F``, translated to :class:`~.Terminal` attribute</span>
+<span class="sd">        ``KEY_END``.</span>
+
+<span class="sd">        However, upon entering :meth:`keypad`, ``\\x1b[OF`` is transmitted,</span>
+<span class="sd">        translating to ``KEY_LL`` (lower-left key), allowing you to determine</span>
+<span class="sd">        diagonal direction keys.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">smkx</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+            <span class="k">yield</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rmkx</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Terminal.inkey"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.Terminal.inkey">[docs]</a>    <span class="k">def</span> <span class="nf">inkey</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">esc_delay</span><span class="o">=</span><span class="mf">0.35</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Read and return the next keyboard event within given timeout.</span>
+
+<span class="sd">        Generally, this should be used inside the :meth:`raw` context manager.</span>
+
+<span class="sd">        :arg float timeout: Number of seconds to wait for a keystroke before</span>
+<span class="sd">            returning.  When ``None`` (default), this method may block</span>
+<span class="sd">            indefinitely.</span>
+<span class="sd">        :arg float esc_delay: To distinguish between the keystroke of</span>
+<span class="sd">           ``KEY_ESCAPE``, and sequences beginning with escape, the parameter</span>
+<span class="sd">           ``esc_delay`` specifies the amount of time after receiving escape</span>
+<span class="sd">           (``chr(27)``) to seek for the completion of an application key</span>
+<span class="sd">           before returning a :class:`~.Keystroke` instance for</span>
+<span class="sd">           ``KEY_ESCAPE``.</span>
+<span class="sd">        :rtype: :class:`~.Keystroke`.</span>
+<span class="sd">        :returns: :class:`~.Keystroke`, which may be empty (``u&#39;&#39;``) if</span>
+<span class="sd">           ``timeout`` is specified and keystroke is not received.</span>
+
+<span class="sd">        .. note:: When used without the context manager :meth:`cbreak`, or</span>
+<span class="sd">            :meth:`raw`, :obj:`sys.__stdin__` remains line-buffered, and this</span>
+<span class="sd">            function will block until the return key is pressed!</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">resolve</span> <span class="o">=</span> <span class="n">functools</span><span class="o">.</span><span class="n">partial</span><span class="p">(</span><span class="n">resolve_sequence</span><span class="p">,</span>
+                                    <span class="n">mapper</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_keymap</span><span class="p">,</span>
+                                    <span class="n">codes</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_keycodes</span><span class="p">)</span>
+
+        <span class="n">stime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="c1"># re-buffer previously received keystrokes,</span>
+        <span class="n">ucs</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_buf</span><span class="p">:</span>
+            <span class="n">ucs</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_keyboard_buf</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+
+        <span class="c1"># receive all immediately available bytes</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">kbhit</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+            <span class="n">ucs</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getch</span><span class="p">()</span>
+
+        <span class="c1"># decode keystroke, if any</span>
+        <span class="n">ks</span> <span class="o">=</span> <span class="n">resolve</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">ucs</span><span class="p">)</span>
+
+        <span class="c1"># so long as the most immediately received or buffered keystroke is</span>
+        <span class="c1"># incomplete, (which may be a multibyte encoding), block until until</span>
+        <span class="c1"># one is received.</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">ks</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">kbhit</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">_time_left</span><span class="p">(</span><span class="n">stime</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)):</span>
+            <span class="n">ucs</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getch</span><span class="p">()</span>
+            <span class="n">ks</span> <span class="o">=</span> <span class="n">resolve</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">ucs</span><span class="p">)</span>
+
+        <span class="c1"># handle escape key (KEY_ESCAPE) vs. escape sequence (like those</span>
+        <span class="c1"># that begin with \x1b[ or \x1bO) up to esc_delay when</span>
+        <span class="c1"># received. This is not optimal, but causes least delay when</span>
+        <span class="c1"># &quot;meta sends escape&quot; is used, or when an unsupported sequence is</span>
+        <span class="c1"># sent.</span>
+        <span class="c1">#</span>
+        <span class="c1"># The statement, &quot;ucs in self._keymap_prefixes&quot; has an effect on</span>
+        <span class="c1"># keystrokes such as Alt + Z (&quot;\x1b[z&quot; with metaSendsEscape): because</span>
+        <span class="c1"># no known input sequences begin with such phrasing to allow it to be</span>
+        <span class="c1"># returned more quickly than esc_delay otherwise blocks for.</span>
+        <span class="k">if</span> <span class="n">ks</span><span class="o">.</span><span class="n">code</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">KEY_ESCAPE</span><span class="p">:</span>
+            <span class="n">esctime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">ks</span><span class="o">.</span><span class="n">code</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">KEY_ESCAPE</span> <span class="ow">and</span>
+                   <span class="n">ucs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_keymap_prefixes</span> <span class="ow">and</span>
+                   <span class="bp">self</span><span class="o">.</span><span class="n">kbhit</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">_time_left</span><span class="p">(</span><span class="n">esctime</span><span class="p">,</span> <span class="n">esc_delay</span><span class="p">))):</span>
+                <span class="n">ucs</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getch</span><span class="p">()</span>
+                <span class="n">ks</span> <span class="o">=</span> <span class="n">resolve</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">ucs</span><span class="p">)</span>
+
+        <span class="c1"># buffer any remaining text received</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ungetch</span><span class="p">(</span><span class="n">ucs</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">ks</span><span class="p">):])</span>
+        <span class="k">return</span> <span class="n">ks</span></div></div>
+
+
+<div class="viewcode-block" id="WINSZ"><a class="viewcode-back" href="../../api/terminal.html#blessed.terminal.WINSZ">[docs]</a><span class="k">class</span> <span class="nc">WINSZ</span><span class="p">(</span><span class="n">collections</span><span class="o">.</span><span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;WINSZ&#39;</span><span class="p">,</span> <span class="p">(</span>
+        <span class="s1">&#39;ws_row&#39;</span><span class="p">,</span> <span class="s1">&#39;ws_col&#39;</span><span class="p">,</span> <span class="s1">&#39;ws_xpixel&#39;</span><span class="p">,</span> <span class="s1">&#39;ws_ypixel&#39;</span><span class="p">))):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Structure represents return value of :const:`termios.TIOCGWINSZ`.</span>
+
+<span class="sd">    .. py:attribute:: ws_row</span>
+
+<span class="sd">        rows, in characters</span>
+
+<span class="sd">    .. py:attribute:: ws_col</span>
+
+<span class="sd">        columns, in characters</span>
+
+<span class="sd">    .. py:attribute:: ws_xpixel</span>
+
+<span class="sd">        horizontal size, pixels</span>
+
+<span class="sd">    .. py:attribute:: ws_ypixel</span>
+
+<span class="sd">        vertical size, pixels</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#: format of termios structure</span>
+    <span class="n">_FMT</span> <span class="o">=</span> <span class="s1">&#39;hhhh&#39;</span>
+    <span class="c1">#: buffer of termios structure appropriate for ioctl argument</span>
+    <span class="n">_BUF</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\x00</span><span class="s1">&#39;</span> <span class="o">*</span> <span class="n">struct</span><span class="o">.</span><span class="n">calcsize</span><span class="p">(</span><span class="n">_FMT</span><span class="p">)</span></div>
+
+
+<span class="c1">#: _CUR_TERM = None</span>
+<span class="c1">#: From libcurses/doc/ncurses-intro.html (ESR, Thomas Dickey, et. al)::</span>
+<span class="c1">#:</span>
+<span class="c1">#:   &quot;After the call to setupterm(), the global variable cur_term is set to</span>
+<span class="c1">#:    point to the current structure of terminal capabilities. By calling</span>
+<span class="c1">#:    setupterm() for each terminal, and saving and restoring cur_term, it</span>
+<span class="c1">#:    is possible for a program to use two or more terminals at once.&quot;</span>
+<span class="c1">#:</span>
+<span class="c1">#: However, if you study Python&#39;s ``./Modules/_cursesmodule.c``, you&#39;ll find::</span>
+<span class="c1">#:</span>
+<span class="c1">#:   if (!initialised_setupterm &amp;&amp; setupterm(termstr,fd,&amp;err) == ERR) {</span>
+<span class="c1">#:</span>
+<span class="c1">#: Python - perhaps wrongly - will not allow for re-initialisation of new</span>
+<span class="c1">#: terminals through :func:`curses.setupterm`, so the value of cur_term cannot</span>
+<span class="c1">#: be changed once set: subsequent calls to :func:`curses.setupterm` have no</span>
+<span class="c1">#: effect.</span>
+<span class="c1">#:</span>
+<span class="c1">#: Therefore, the :attr:`Terminal.kind` of each :class:`Terminal` is</span>
+<span class="c1">#: essentially a singleton. This global variable reflects that, and a warning</span>
+<span class="c1">#: is emitted if somebody expects otherwise.</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    .wy-nav-content { max-width: 900px; }
+  </style>
+
+
+
+</body>
+</html>

@@ -1,0 +1,601 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>formatters.py &mdash; Blessed 1.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="keyboard.py" href="keyboard.html" />
+    <link rel="prev" title="colorspace.py" href="colorspace.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../keyboard.html">Keyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../location.html">Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measuring.html">Measuring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="color.html">color.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="colorspace.html">colorspace.py</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">formatters.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard.html">keyboard.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sequences.html">sequences.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="terminal.html">terminal.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project.html">Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">API Documentation</a> &raquo;</li>
+        
+      <li>formatters.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/formatters.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-blessed.formatters">
+<span id="formatters-py"></span><h1>formatters.py<a class="headerlink" href="#module-blessed.formatters" title="Permalink to this headline">¶</a></h1>
+<p>Sub-module providing sequence-formatting functions.</p>
+<dl class="function">
+<dt id="blessed.formatters._make_colors">
+<code class="sig-name descname">_make_colors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/formatters.html#_make_colors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters._make_colors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return set of valid colors and their derivatives.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.8)">set</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Color names with prefixes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="data">
+<dt id="blessed.formatters.COLORS">
+<code class="sig-name descname">COLORS</code><em class="property"> = {'aliceblue', 'antiquewhite', 'antiquewhite1', 'antiquewhite2', 'antiquewhite3', 'antiquewhite4', 'aqua', 'aquamarine', 'aquamarine1', 'aquamarine2', 'aquamarine3', 'aquamarine4', 'azure', 'azure1', 'azure2', 'azure3', 'azure4', 'beige', 'bisque', 'bisque1', 'bisque2', 'bisque3', 'bisque4', 'black', 'blanchedalmond', 'blue', 'blue1', 'blue2', 'blue3', 'blue4', 'blueviolet', 'bright_black', 'bright_blue', 'bright_cyan', 'bright_green', 'bright_magenta', 'bright_red', 'bright_white', 'bright_yellow', 'brown', 'brown1', 'brown2', 'brown3', 'brown4', 'burlywood', 'burlywood1', 'burlywood2', 'burlywood3', 'burlywood4', 'cadetblue', 'cadetblue1', 'cadetblue2', 'cadetblue3', 'cadetblue4', 'chartreuse', 'chartreuse1', 'chartreuse2', 'chartreuse3', 'chartreuse4', 'chocolate', 'chocolate1', 'chocolate2', 'chocolate3', 'chocolate4', 'coral', 'coral1', 'coral2', 'coral3', 'coral4', 'cornflowerblue', 'cornsilk', 'cornsilk1', 'cornsilk2', 'cornsilk3', 'cornsilk4', 'crimson', 'cyan', 'cyan1', 'cyan2', 'cyan3', 'cyan4', 'darkblue', 'darkcyan', 'darkgoldenrod', 'darkgoldenrod1', 'darkgoldenrod2', 'darkgoldenrod3', 'darkgoldenrod4', 'darkgray', 'darkgreen', 'darkgrey', 'darkkhaki', 'darkmagenta', 'darkolivegreen', 'darkolivegreen1', 'darkolivegreen2', 'darkolivegreen3', 'darkolivegreen4', 'darkorange', 'darkorange1', 'darkorange2', 'darkorange3', 'darkorange4', 'darkorchid', 'darkorchid1', 'darkorchid2', 'darkorchid3', 'darkorchid4', 'darkred', 'darksalmon', 'darkseagreen', 'darkseagreen1', 'darkseagreen2', 'darkseagreen3', 'darkseagreen4', 'darkslateblue', 'darkslategray', 'darkslategray1', 'darkslategray2', 'darkslategray3', 'darkslategray4', 'darkslategrey', 'darkturquoise', 'darkviolet', 'deeppink', 'deeppink1', 'deeppink2', 'deeppink3', 'deeppink4', 'deepskyblue', 'deepskyblue1', 'deepskyblue2', 'deepskyblue3', 'deepskyblue4', 'dimgray', 'dimgrey', 'dodgerblue', 'dodgerblue1', 'dodgerblue2', 'dodgerblue3', 'dodgerblue4', 'firebrick', 'firebrick1', 'firebrick2', 'firebrick3', 'firebrick4', 'floralwhite', 'forestgreen', 'fuchsia', 'gainsboro', 'ghostwhite', 'gold', 'gold1', 'gold2', 'gold3', 'gold4', 'goldenrod', 'goldenrod1', 'goldenrod2', 'goldenrod3', 'goldenrod4', 'gray', 'gray0', 'gray1', 'gray10', 'gray100', 'gray11', 'gray12', 'gray13', 'gray14', 'gray15', 'gray16', 'gray17', 'gray18', 'gray19', 'gray2', 'gray20', 'gray21', 'gray22', 'gray23', 'gray24', 'gray25', 'gray26', 'gray27', 'gray28', 'gray29', 'gray3', 'gray30', 'gray31', 'gray32', 'gray33', 'gray34', 'gray35', 'gray36', 'gray37', 'gray38', 'gray39', 'gray4', 'gray40', 'gray41', 'gray42', 'gray43', 'gray44', 'gray45', 'gray46', 'gray47', 'gray48', 'gray49', 'gray5', 'gray50', 'gray51', 'gray52', 'gray53', 'gray54', 'gray55', 'gray56', 'gray57', 'gray58', 'gray59', 'gray6', 'gray60', 'gray61', 'gray62', 'gray63', 'gray64', 'gray65', 'gray66', 'gray67', 'gray68', 'gray69', 'gray7', 'gray70', 'gray71', 'gray72', 'gray73', 'gray74', 'gray75', 'gray76', 'gray77', 'gray78', 'gray79', 'gray8', 'gray80', 'gray81', 'gray82', 'gray83', 'gray84', 'gray85', 'gray86', 'gray87', 'gray88', 'gray89', 'gray9', 'gray90', 'gray91', 'gray92', 'gray93', 'gray94', 'gray95', 'gray96', 'gray97', 'gray98', 'gray99', 'green', 'green1', 'green2', 'green3', 'green4', 'greenyellow', 'grey', 'grey0', 'grey1', 'grey10', 'grey100', 'grey11', 'grey12', 'grey13', 'grey14', 'grey15', 'grey16', 'grey17', 'grey18', 'grey19', 'grey2', 'grey20', 'grey21', 'grey22', 'grey23', 'grey24', 'grey25', 'grey26', 'grey27', 'grey28', 'grey29', 'grey3', 'grey30', 'grey31', 'grey32', 'grey33', 'grey34', 'grey35', 'grey36', 'grey37', 'grey38', 'grey39', 'grey4', 'grey40', 'grey41', 'grey42', 'grey43', 'grey44', 'grey45', 'grey46', 'grey47', 'grey48', 'grey49', 'grey5', 'grey50', 'grey51', 'grey52', 'grey53', 'grey54', 'grey55', 'grey56', 'grey57', 'grey58', 'grey59', 'grey6', 'grey60', 'grey61', 'grey62', 'grey63', 'grey64', 'grey65', 'grey66', 'grey67', 'grey68', 'grey69', 'grey7', 'grey70', 'grey71', 'grey72', 'grey73', 'grey74', 'grey75', 'grey76', 'grey77', 'grey78', 'grey79', 'grey8', 'grey80', 'grey81', 'grey82', 'grey83', 'grey84', 'grey85', 'grey86', 'grey87', 'grey88', 'grey89', 'grey9', 'grey90', 'grey91', 'grey92', 'grey93', 'grey94', 'grey95', 'grey96', 'grey97', 'grey98', 'grey99', 'honeydew', 'honeydew1', 'honeydew2', 'honeydew3', 'honeydew4', 'hotpink', 'hotpink1', 'hotpink2', 'hotpink3', 'hotpink4', 'indianred', 'indianred1', 'indianred2', 'indianred3', 'indianred4', 'indigo', 'ivory', 'ivory1', 'ivory2', 'ivory3', 'ivory4', 'khaki', 'khaki1', 'khaki2', 'khaki3', 'khaki4', 'lavender', 'lavenderblush', 'lavenderblush1', 'lavenderblush2', 'lavenderblush3', 'lavenderblush4', 'lawngreen', 'lemonchiffon', 'lemonchiffon1', 'lemonchiffon2', 'lemonchiffon3', 'lemonchiffon4', 'lightblue', 'lightblue1', 'lightblue2', 'lightblue3', 'lightblue4', 'lightcoral', 'lightcyan', 'lightcyan1', 'lightcyan2', 'lightcyan3', 'lightcyan4', 'lightgoldenrod', 'lightgoldenrod1', 'lightgoldenrod2', 'lightgoldenrod3', 'lightgoldenrod4', 'lightgoldenrodyellow', 'lightgray', 'lightgreen', 'lightgrey', 'lightpink', 'lightpink1', 'lightpink2', 'lightpink3', 'lightpink4', 'lightsalmon', 'lightsalmon1', 'lightsalmon2', 'lightsalmon3', 'lightsalmon4', 'lightseagreen', 'lightskyblue', 'lightskyblue1', 'lightskyblue2', 'lightskyblue3', 'lightskyblue4', 'lightslateblue', 'lightslategray', 'lightslategrey', 'lightsteelblue', 'lightsteelblue1', 'lightsteelblue2', 'lightsteelblue3', 'lightsteelblue4', 'lightyellow', 'lightyellow1', 'lightyellow2', 'lightyellow3', 'lightyellow4', 'lime', 'limegreen', 'linen', 'magenta', 'magenta1', 'magenta2', 'magenta3', 'magenta4', 'maroon', 'maroon1', 'maroon2', 'maroon3', 'maroon4', 'mediumaquamarine', 'mediumblue', 'mediumorchid', 'mediumorchid1', 'mediumorchid2', 'mediumorchid3', 'mediumorchid4', 'mediumpurple', 'mediumpurple1', 'mediumpurple2', 'mediumpurple3', 'mediumpurple4', 'mediumseagreen', 'mediumslateblue', 'mediumspringgreen', 'mediumturquoise', 'mediumvioletred', 'midnightblue', 'mintcream', 'mistyrose', 'mistyrose1', 'mistyrose2', 'mistyrose3', 'mistyrose4', 'moccasin', 'navajowhite', 'navajowhite1', 'navajowhite2', 'navajowhite3', 'navajowhite4', 'navy', 'navyblue', 'oldlace', 'olive', 'olivedrab', 'olivedrab1', 'olivedrab2', 'olivedrab3', 'olivedrab4', 'on_aliceblue', 'on_antiquewhite', 'on_antiquewhite1', 'on_antiquewhite2', 'on_antiquewhite3', 'on_antiquewhite4', 'on_aqua', 'on_aquamarine', 'on_aquamarine1', 'on_aquamarine2', 'on_aquamarine3', 'on_aquamarine4', 'on_azure', 'on_azure1', 'on_azure2', 'on_azure3', 'on_azure4', 'on_beige', 'on_bisque', 'on_bisque1', 'on_bisque2', 'on_bisque3', 'on_bisque4', 'on_black', 'on_blanchedalmond', 'on_blue', 'on_blue1', 'on_blue2', 'on_blue3', 'on_blue4', 'on_blueviolet', 'on_bright_black', 'on_bright_blue', 'on_bright_cyan', 'on_bright_green', 'on_bright_magenta', 'on_bright_red', 'on_bright_white', 'on_bright_yellow', 'on_brown', 'on_brown1', 'on_brown2', 'on_brown3', 'on_brown4', 'on_burlywood', 'on_burlywood1', 'on_burlywood2', 'on_burlywood3', 'on_burlywood4', 'on_cadetblue', 'on_cadetblue1', 'on_cadetblue2', 'on_cadetblue3', 'on_cadetblue4', 'on_chartreuse', 'on_chartreuse1', 'on_chartreuse2', 'on_chartreuse3', 'on_chartreuse4', 'on_chocolate', 'on_chocolate1', 'on_chocolate2', 'on_chocolate3', 'on_chocolate4', 'on_coral', 'on_coral1', 'on_coral2', 'on_coral3', 'on_coral4', 'on_cornflowerblue', 'on_cornsilk', 'on_cornsilk1', 'on_cornsilk2', 'on_cornsilk3', 'on_cornsilk4', 'on_crimson', 'on_cyan', 'on_cyan1', 'on_cyan2', 'on_cyan3', 'on_cyan4', 'on_darkblue', 'on_darkcyan', 'on_darkgoldenrod', 'on_darkgoldenrod1', 'on_darkgoldenrod2', 'on_darkgoldenrod3', 'on_darkgoldenrod4', 'on_darkgray', 'on_darkgreen', 'on_darkgrey', 'on_darkkhaki', 'on_darkmagenta', 'on_darkolivegreen', 'on_darkolivegreen1', 'on_darkolivegreen2', 'on_darkolivegreen3', 'on_darkolivegreen4', 'on_darkorange', 'on_darkorange1', 'on_darkorange2', 'on_darkorange3', 'on_darkorange4', 'on_darkorchid', 'on_darkorchid1', 'on_darkorchid2', 'on_darkorchid3', 'on_darkorchid4', 'on_darkred', 'on_darksalmon', 'on_darkseagreen', 'on_darkseagreen1', 'on_darkseagreen2', 'on_darkseagreen3', 'on_darkseagreen4', 'on_darkslateblue', 'on_darkslategray', 'on_darkslategray1', 'on_darkslategray2', 'on_darkslategray3', 'on_darkslategray4', 'on_darkslategrey', 'on_darkturquoise', 'on_darkviolet', 'on_deeppink', 'on_deeppink1', 'on_deeppink2', 'on_deeppink3', 'on_deeppink4', 'on_deepskyblue', 'on_deepskyblue1', 'on_deepskyblue2', 'on_deepskyblue3', 'on_deepskyblue4', 'on_dimgray', 'on_dimgrey', 'on_dodgerblue', 'on_dodgerblue1', 'on_dodgerblue2', 'on_dodgerblue3', 'on_dodgerblue4', 'on_firebrick', 'on_firebrick1', 'on_firebrick2', 'on_firebrick3', 'on_firebrick4', 'on_floralwhite', 'on_forestgreen', 'on_fuchsia', 'on_gainsboro', 'on_ghostwhite', 'on_gold', 'on_gold1', 'on_gold2', 'on_gold3', 'on_gold4', 'on_goldenrod', 'on_goldenrod1', 'on_goldenrod2', 'on_goldenrod3', 'on_goldenrod4', 'on_gray', 'on_gray0', 'on_gray1', 'on_gray10', 'on_gray100', 'on_gray11', 'on_gray12', 'on_gray13', 'on_gray14', 'on_gray15', 'on_gray16', 'on_gray17', 'on_gray18', 'on_gray19', 'on_gray2', 'on_gray20', 'on_gray21', 'on_gray22', 'on_gray23', 'on_gray24', 'on_gray25', 'on_gray26', 'on_gray27', 'on_gray28', 'on_gray29', 'on_gray3', 'on_gray30', 'on_gray31', 'on_gray32', 'on_gray33', 'on_gray34', 'on_gray35', 'on_gray36', 'on_gray37', 'on_gray38', 'on_gray39', 'on_gray4', 'on_gray40', 'on_gray41', 'on_gray42', 'on_gray43', 'on_gray44', 'on_gray45', 'on_gray46', 'on_gray47', 'on_gray48', 'on_gray49', 'on_gray5', 'on_gray50', 'on_gray51', 'on_gray52', 'on_gray53', 'on_gray54', 'on_gray55', 'on_gray56', 'on_gray57', 'on_gray58', 'on_gray59', 'on_gray6', 'on_gray60', 'on_gray61', 'on_gray62', 'on_gray63', 'on_gray64', 'on_gray65', 'on_gray66', 'on_gray67', 'on_gray68', 'on_gray69', 'on_gray7', 'on_gray70', 'on_gray71', 'on_gray72', 'on_gray73', 'on_gray74', 'on_gray75', 'on_gray76', 'on_gray77', 'on_gray78', 'on_gray79', 'on_gray8', 'on_gray80', 'on_gray81', 'on_gray82', 'on_gray83', 'on_gray84', 'on_gray85', 'on_gray86', 'on_gray87', 'on_gray88', 'on_gray89', 'on_gray9', 'on_gray90', 'on_gray91', 'on_gray92', 'on_gray93', 'on_gray94', 'on_gray95', 'on_gray96', 'on_gray97', 'on_gray98', 'on_gray99', 'on_green', 'on_green1', 'on_green2', 'on_green3', 'on_green4', 'on_greenyellow', 'on_grey', 'on_grey0', 'on_grey1', 'on_grey10', 'on_grey100', 'on_grey11', 'on_grey12', 'on_grey13', 'on_grey14', 'on_grey15', 'on_grey16', 'on_grey17', 'on_grey18', 'on_grey19', 'on_grey2', 'on_grey20', 'on_grey21', 'on_grey22', 'on_grey23', 'on_grey24', 'on_grey25', 'on_grey26', 'on_grey27', 'on_grey28', 'on_grey29', 'on_grey3', 'on_grey30', 'on_grey31', 'on_grey32', 'on_grey33', 'on_grey34', 'on_grey35', 'on_grey36', 'on_grey37', 'on_grey38', 'on_grey39', 'on_grey4', 'on_grey40', 'on_grey41', 'on_grey42', 'on_grey43', 'on_grey44', 'on_grey45', 'on_grey46', 'on_grey47', 'on_grey48', 'on_grey49', 'on_grey5', 'on_grey50', 'on_grey51', 'on_grey52', 'on_grey53', 'on_grey54', 'on_grey55', 'on_grey56', 'on_grey57', 'on_grey58', 'on_grey59', 'on_grey6', 'on_grey60', 'on_grey61', 'on_grey62', 'on_grey63', 'on_grey64', 'on_grey65', 'on_grey66', 'on_grey67', 'on_grey68', 'on_grey69', 'on_grey7', 'on_grey70', 'on_grey71', 'on_grey72', 'on_grey73', 'on_grey74', 'on_grey75', 'on_grey76', 'on_grey77', 'on_grey78', 'on_grey79', 'on_grey8', 'on_grey80', 'on_grey81', 'on_grey82', 'on_grey83', 'on_grey84', 'on_grey85', 'on_grey86', 'on_grey87', 'on_grey88', 'on_grey89', 'on_grey9', 'on_grey90', 'on_grey91', 'on_grey92', 'on_grey93', 'on_grey94', 'on_grey95', 'on_grey96', 'on_grey97', 'on_grey98', 'on_grey99', 'on_honeydew', 'on_honeydew1', 'on_honeydew2', 'on_honeydew3', 'on_honeydew4', 'on_hotpink', 'on_hotpink1', 'on_hotpink2', 'on_hotpink3', 'on_hotpink4', 'on_indianred', 'on_indianred1', 'on_indianred2', 'on_indianred3', 'on_indianred4', 'on_indigo', 'on_ivory', 'on_ivory1', 'on_ivory2', 'on_ivory3', 'on_ivory4', 'on_khaki', 'on_khaki1', 'on_khaki2', 'on_khaki3', 'on_khaki4', 'on_lavender', 'on_lavenderblush', 'on_lavenderblush1', 'on_lavenderblush2', 'on_lavenderblush3', 'on_lavenderblush4', 'on_lawngreen', 'on_lemonchiffon', 'on_lemonchiffon1', 'on_lemonchiffon2', 'on_lemonchiffon3', 'on_lemonchiffon4', 'on_lightblue', 'on_lightblue1', 'on_lightblue2', 'on_lightblue3', 'on_lightblue4', 'on_lightcoral', 'on_lightcyan', 'on_lightcyan1', 'on_lightcyan2', 'on_lightcyan3', 'on_lightcyan4', 'on_lightgoldenrod', 'on_lightgoldenrod1', 'on_lightgoldenrod2', 'on_lightgoldenrod3', 'on_lightgoldenrod4', 'on_lightgoldenrodyellow', 'on_lightgray', 'on_lightgreen', 'on_lightgrey', 'on_lightpink', 'on_lightpink1', 'on_lightpink2', 'on_lightpink3', 'on_lightpink4', 'on_lightsalmon', 'on_lightsalmon1', 'on_lightsalmon2', 'on_lightsalmon3', 'on_lightsalmon4', 'on_lightseagreen', 'on_lightskyblue', 'on_lightskyblue1', 'on_lightskyblue2', 'on_lightskyblue3', 'on_lightskyblue4', 'on_lightslateblue', 'on_lightslategray', 'on_lightslategrey', 'on_lightsteelblue', 'on_lightsteelblue1', 'on_lightsteelblue2', 'on_lightsteelblue3', 'on_lightsteelblue4', 'on_lightyellow', 'on_lightyellow1', 'on_lightyellow2', 'on_lightyellow3', 'on_lightyellow4', 'on_lime', 'on_limegreen', 'on_linen', 'on_magenta', 'on_magenta1', 'on_magenta2', 'on_magenta3', 'on_magenta4', 'on_maroon', 'on_maroon1', 'on_maroon2', 'on_maroon3', 'on_maroon4', 'on_mediumaquamarine', 'on_mediumblue', 'on_mediumorchid', 'on_mediumorchid1', 'on_mediumorchid2', 'on_mediumorchid3', 'on_mediumorchid4', 'on_mediumpurple', 'on_mediumpurple1', 'on_mediumpurple2', 'on_mediumpurple3', 'on_mediumpurple4', 'on_mediumseagreen', 'on_mediumslateblue', 'on_mediumspringgreen', 'on_mediumturquoise', 'on_mediumvioletred', 'on_midnightblue', 'on_mintcream', 'on_mistyrose', 'on_mistyrose1', 'on_mistyrose2', 'on_mistyrose3', 'on_mistyrose4', 'on_moccasin', 'on_navajowhite', 'on_navajowhite1', 'on_navajowhite2', 'on_navajowhite3', 'on_navajowhite4', 'on_navy', 'on_navyblue', 'on_oldlace', 'on_olive', 'on_olivedrab', 'on_olivedrab1', 'on_olivedrab2', 'on_olivedrab3', 'on_olivedrab4', 'on_orange', 'on_orange1', 'on_orange2', 'on_orange3', 'on_orange4', 'on_orangered', 'on_orangered1', 'on_orangered2', 'on_orangered3', 'on_orangered4', 'on_orchid', 'on_orchid1', 'on_orchid2', 'on_orchid3', 'on_orchid4', 'on_palegoldenrod', 'on_palegreen', 'on_palegreen1', 'on_palegreen2', 'on_palegreen3', 'on_palegreen4', 'on_paleturquoise', 'on_paleturquoise1', 'on_paleturquoise2', 'on_paleturquoise3', 'on_paleturquoise4', 'on_palevioletred', 'on_palevioletred1', 'on_palevioletred2', 'on_palevioletred3', 'on_palevioletred4', 'on_papayawhip', 'on_peachpuff', 'on_peachpuff1', 'on_peachpuff2', 'on_peachpuff3', 'on_peachpuff4', 'on_peru', 'on_pink', 'on_pink1', 'on_pink2', 'on_pink3', 'on_pink4', 'on_plum', 'on_plum1', 'on_plum2', 'on_plum3', 'on_plum4', 'on_powderblue', 'on_purple', 'on_purple1', 'on_purple2', 'on_purple3', 'on_purple4', 'on_rebeccapurple', 'on_red', 'on_red1', 'on_red2', 'on_red3', 'on_red4', 'on_rosybrown', 'on_rosybrown1', 'on_rosybrown2', 'on_rosybrown3', 'on_rosybrown4', 'on_royalblue', 'on_royalblue1', 'on_royalblue2', 'on_royalblue3', 'on_royalblue4', 'on_saddlebrown', 'on_salmon', 'on_salmon1', 'on_salmon2', 'on_salmon3', 'on_salmon4', 'on_sandybrown', 'on_seagreen', 'on_seagreen1', 'on_seagreen2', 'on_seagreen3', 'on_seagreen4', 'on_seashell', 'on_seashell1', 'on_seashell2', 'on_seashell3', 'on_seashell4', 'on_sienna', 'on_sienna1', 'on_sienna2', 'on_sienna3', 'on_sienna4', 'on_silver', 'on_skyblue', 'on_skyblue1', 'on_skyblue2', 'on_skyblue3', 'on_skyblue4', 'on_slateblue', 'on_slateblue1', 'on_slateblue2', 'on_slateblue3', 'on_slateblue4', 'on_slategray', 'on_slategray1', 'on_slategray2', 'on_slategray3', 'on_slategray4', 'on_slategrey', 'on_snow', 'on_snow1', 'on_snow2', 'on_snow3', 'on_snow4', 'on_springgreen', 'on_springgreen1', 'on_springgreen2', 'on_springgreen3', 'on_springgreen4', 'on_steelblue', 'on_steelblue1', 'on_steelblue2', 'on_steelblue3', 'on_steelblue4', 'on_tan', 'on_tan1', 'on_tan2', 'on_tan3', 'on_tan4', 'on_teal', 'on_thistle', 'on_thistle1', 'on_thistle2', 'on_thistle3', 'on_thistle4', 'on_tomato', 'on_tomato1', 'on_tomato2', 'on_tomato3', 'on_tomato4', 'on_turquoise', 'on_turquoise1', 'on_turquoise2', 'on_turquoise3', 'on_turquoise4', 'on_violet', 'on_violetred', 'on_violetred1', 'on_violetred2', 'on_violetred3', 'on_violetred4', 'on_webgray', 'on_webgreen', 'on_webgrey', 'on_webmaroon', 'on_webpurple', 'on_wheat', 'on_wheat1', 'on_wheat2', 'on_wheat3', 'on_wheat4', 'on_white', 'on_whitesmoke', 'on_x11gray', 'on_x11green', 'on_x11grey', 'on_x11maroon', 'on_x11purple', 'on_yellow', 'on_yellow1', 'on_yellow2', 'on_yellow3', 'on_yellow4', 'on_yellowgreen', 'orange', 'orange1', 'orange2', 'orange3', 'orange4', 'orangered', 'orangered1', 'orangered2', 'orangered3', 'orangered4', 'orchid', 'orchid1', 'orchid2', 'orchid3', 'orchid4', 'palegoldenrod', 'palegreen', 'palegreen1', 'palegreen2', 'palegreen3', 'palegreen4', 'paleturquoise', 'paleturquoise1', 'paleturquoise2', 'paleturquoise3', 'paleturquoise4', 'palevioletred', 'palevioletred1', 'palevioletred2', 'palevioletred3', 'palevioletred4', 'papayawhip', 'peachpuff', 'peachpuff1', 'peachpuff2', 'peachpuff3', 'peachpuff4', 'peru', 'pink', 'pink1', 'pink2', 'pink3', 'pink4', 'plum', 'plum1', 'plum2', 'plum3', 'plum4', 'powderblue', 'purple', 'purple1', 'purple2', 'purple3', 'purple4', 'rebeccapurple', 'red', 'red1', 'red2', 'red3', 'red4', 'rosybrown', 'rosybrown1', 'rosybrown2', 'rosybrown3', 'rosybrown4', 'royalblue', 'royalblue1', 'royalblue2', 'royalblue3', 'royalblue4', 'saddlebrown', 'salmon', 'salmon1', 'salmon2', 'salmon3', 'salmon4', 'sandybrown', 'seagreen', 'seagreen1', 'seagreen2', 'seagreen3', 'seagreen4', 'seashell', 'seashell1', 'seashell2', 'seashell3', 'seashell4', 'sienna', 'sienna1', 'sienna2', 'sienna3', 'sienna4', 'silver', 'skyblue', 'skyblue1', 'skyblue2', 'skyblue3', 'skyblue4', 'slateblue', 'slateblue1', 'slateblue2', 'slateblue3', 'slateblue4', 'slategray', 'slategray1', 'slategray2', 'slategray3', 'slategray4', 'slategrey', 'snow', 'snow1', 'snow2', 'snow3', 'snow4', 'springgreen', 'springgreen1', 'springgreen2', 'springgreen3', 'springgreen4', 'steelblue', 'steelblue1', 'steelblue2', 'steelblue3', 'steelblue4', 'tan', 'tan1', 'tan2', 'tan3', 'tan4', 'teal', 'thistle', 'thistle1', 'thistle2', 'thistle3', 'thistle4', 'tomato', 'tomato1', 'tomato2', 'tomato3', 'tomato4', 'turquoise', 'turquoise1', 'turquoise2', 'turquoise3', 'turquoise4', 'violet', 'violetred', 'violetred1', 'violetred2', 'violetred3', 'violetred4', 'webgray', 'webgreen', 'webgrey', 'webmaroon', 'webpurple', 'wheat', 'wheat1', 'wheat2', 'wheat3', 'wheat4', 'white', 'whitesmoke', 'x11gray', 'x11green', 'x11grey', 'x11maroon', 'x11purple', 'yellow', 'yellow1', 'yellow2', 'yellow3', 'yellow4', 'yellowgreen'}</em><a class="headerlink" href="#blessed.formatters.COLORS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Valid colors and their background (on), bright, and bright-background
+derivatives.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="blessed.formatters.COMPOUNDABLES">
+<code class="sig-name descname">COMPOUNDABLES</code><em class="property"> = {'blink', 'bold', 'italic', 'reverse', 'standout', 'underline'}</em><a class="headerlink" href="#blessed.formatters.COMPOUNDABLES" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attributes that may be compounded with colors, by underscore, such as
+‘reverse_indigo’.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="blessed.formatters.ParameterizingString">
+<em class="property">class </em><code class="sig-name descname">ParameterizingString</code><a class="reference internal" href="../_modules/blessed/formatters.html#ParameterizingString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.ParameterizingString" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Unicode string which can be called as a parameterizing termcap.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">color</span> <span class="o">=</span> <span class="n">ParameterizingString</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">color</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">color</span><span class="p">(</span><span class="mi">9</span><span class="p">)(</span><span class="s1">&#39;color #9&#39;</span><span class="p">)</span>
+<span class="go">u&#39;\x1b[91mcolor #9\x1b(B\x1b[m&#39;</span>
+</pre></div>
+</div>
+<p>Class constructor accepting 3 positional arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cap</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – parameterized string suitable for curses.tparm()</p></li>
+<li><p><strong>normal</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – terminating sequence for this capability (optional).</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – name of this terminal capability (optional).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="blessed.formatters.ParameterizingString.__call__">
+<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/formatters.html#ParameterizingString.__call__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.ParameterizingString.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returning <a class="reference internal" href="#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattingString</span></code></a> instance for given parameters.</p>
+<p>Return evaluated terminal capability (self), receiving arguments
+<code class="docutils literal notranslate"><span class="pre">*args</span></code>, followed by the terminating sequence (self.normal) into
+a <a class="reference internal" href="#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattingString</span></code></a> capable of being called.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.8)"><strong>TypeError</strong></a> – Mismatch between capability and arguments</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/curses.html#curses.error" title="(in Python v3.8)"><strong>curses.error</strong></a> – <a class="reference external" href="https://docs.python.org/3/library/curses.html#curses.tparm" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">curses.tparm()</span></code></a> raised an exception</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattingString</span></code></a> or <a class="reference internal" href="#blessed.formatters.NullCallableString" title="blessed.formatters.NullCallableString"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullCallableString</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Callable string for given parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="blessed.formatters.ParameterizingProxyString">
+<em class="property">class </em><code class="sig-name descname">ParameterizingProxyString</code><a class="reference internal" href="../_modules/blessed/formatters.html#ParameterizingProxyString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.ParameterizingProxyString" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Unicode string which can be called to proxy missing termcap entries.</p>
+<p>This class supports the function <a class="reference internal" href="#blessed.formatters.get_proxy_string" title="blessed.formatters.get_proxy_string"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_proxy_string()</span></code></a>, and mirrors
+the behavior of <a class="reference internal" href="#blessed.formatters.ParameterizingString" title="blessed.formatters.ParameterizingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParameterizingString</span></code></a>, except that instead of
+a capability name, receives a format string, and callable to filter the
+given positional <code class="docutils literal notranslate"><span class="pre">*args</span></code> of <a class="reference internal" href="#blessed.formatters.ParameterizingProxyString.__call__" title="blessed.formatters.ParameterizingProxyString.__call__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ParameterizingProxyString.__call__()</span></code></a>
+into a terminal sequence.</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">(</span><span class="s1">&#39;screen&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hpa</span> <span class="o">=</span> <span class="n">ParameterizingString</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">hpa</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">,</span> <span class="s1">&#39;hpa&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hpa</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="go">u&#39;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fmt</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[</span><span class="si">{0}</span><span class="s1">G&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fmt_arg</span> <span class="o">=</span> <span class="k">lambda</span> <span class="o">*</span><span class="n">arg</span><span class="p">:</span> <span class="p">(</span><span class="n">arg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hpa</span> <span class="o">=</span> <span class="n">ParameterizingProxyString</span><span class="p">((</span><span class="n">fmt</span><span class="p">,</span> <span class="n">fmt_arg</span><span class="p">),</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">,</span> <span class="s1">&#39;hpa&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hpa</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="go">u&#39;\x1b[10G&#39;</span>
+</pre></div>
+</div>
+<p>Class constructor accepting 4 positional arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fmt_pair</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><em>tuple</em></a>) – Two element tuple containing:
+- format string suitable for displaying terminal sequences
+- callable suitable for receiving  __call__ arguments for formatting string</p></li>
+<li><p><strong>normal</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – terminating sequence for this capability (optional).</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – name of this terminal capability (optional).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="blessed.formatters.ParameterizingProxyString.__call__">
+<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/formatters.html#ParameterizingProxyString.__call__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.ParameterizingProxyString.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returning <a class="reference internal" href="#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattingString</span></code></a> instance for given parameters.</p>
+<p>Arguments are determined by the capability.  For example, <code class="docutils literal notranslate"><span class="pre">hpa</span></code>
+(move_x) receives only a single integer, whereas <code class="docutils literal notranslate"><span class="pre">cup</span></code> (move)
+receives two integers.  See documentation in terminfo(5) for the
+given capability.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString">FormattingString</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Callable string for given parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="blessed.formatters.FormattingString">
+<em class="property">class </em><code class="sig-name descname">FormattingString</code><a class="reference internal" href="../_modules/blessed/formatters.html#FormattingString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.FormattingString" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Unicode string which doubles as a callable.</p>
+<p>This is used for terminal attributes, so that it may be used both
+directly, or as a callable.  When used directly, it simply emits
+the given terminal sequence.  When used as a callable, it wraps the
+given (string) argument with the 2nd argument used by the class
+constructor:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">style</span> <span class="o">=</span> <span class="n">FormattingString</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">bright_blue</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">style</span><span class="p">))</span>
+<span class="go">u&#39;\x1b[94m&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">style</span><span class="p">(</span><span class="s1">&#39;Big Blue&#39;</span><span class="p">)</span>
+<span class="go">u&#39;\x1b[94mBig Blue\x1b(B\x1b[m&#39;</span>
+</pre></div>
+</div>
+<p>Class constructor accepting 2 positional arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sequence</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – terminal attribute sequence.</p></li>
+<li><p><strong>normal</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – terminating sequence for this attribute (optional).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="blessed.formatters.FormattingString.__call__">
+<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/formatters.html#FormattingString.__call__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.FormattingString.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">text</span></code> joined by <code class="docutils literal notranslate"><span class="pre">sequence</span></code> and <code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.8)"><strong>TypeError</strong></a> – Not a string type</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Arguments wrapped in sequence and normal</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="blessed.formatters.FormattingOtherString">
+<em class="property">class </em><code class="sig-name descname">FormattingOtherString</code><a class="reference internal" href="../_modules/blessed/formatters.html#FormattingOtherString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.FormattingOtherString" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Unicode string which doubles as a callable for another sequence when called.</p>
+<p>This is used for the <a class="reference internal" href="terminal.html#blessed.terminal.Terminal.move_up" title="blessed.terminal.Terminal.move_up"><code class="xref py py-meth docutils literal notranslate"><span class="pre">move_up()</span></code></a>, <code class="docutils literal notranslate"><span class="pre">down</span></code>, <code class="docutils literal notranslate"><span class="pre">left</span></code>, and <code class="docutils literal notranslate"><span class="pre">right()</span></code>
+family of functions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">move_right</span> <span class="o">=</span> <span class="n">FormattingOtherString</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">cuf1</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">cuf</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">move_right</span><span class="p">))</span>
+<span class="go">u&#39;\x1b[C&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">move_right</span><span class="p">(</span><span class="mi">666</span><span class="p">)))</span>
+<span class="go">u&#39;\x1b[666C&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">move_right</span><span class="p">()))</span>
+<span class="go">u&#39;\x1b[C&#39;</span>
+</pre></div>
+</div>
+<p>Class constructor accepting 2 positional arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>direct</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – capability name for direct formatting, eg <code class="docutils literal notranslate"><span class="pre">('x'</span> <span class="pre">+</span> <span class="pre">term.right)</span></code>.</p></li>
+<li><p><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – capability name for callable, eg <code class="docutils literal notranslate"><span class="pre">('x'</span> <span class="pre">+</span> <span class="pre">term.right(99))</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="blessed.formatters.FormattingOtherString.__call__">
+<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/formatters.html#FormattingOtherString.__call__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.FormattingOtherString.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">text</span></code> by <code class="docutils literal notranslate"><span class="pre">target</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="blessed.formatters.NullCallableString">
+<em class="property">class </em><code class="sig-name descname">NullCallableString</code><a class="reference internal" href="../_modules/blessed/formatters.html#NullCallableString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.NullCallableString" title="Permalink to this definition">¶</a></dt>
+<dd><p>A dummy callable Unicode alternative to <a class="reference internal" href="#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattingString</span></code></a>.</p>
+<p>This is used for colors on terminals that do not support colors, it is just a basic form of
+unicode that may also act as a callable.</p>
+<p>Class constructor.</p>
+<dl class="method">
+<dt id="blessed.formatters.NullCallableString.__call__">
+<code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/formatters.html#NullCallableString.__call__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.NullCallableString.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow empty string to be callable, returning given string, if any.</p>
+<p>When called with an int as the first arg, return an empty Unicode. An
+int is a good hint that I am a <a class="reference internal" href="#blessed.formatters.ParameterizingString" title="blessed.formatters.ParameterizingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParameterizingString</span></code></a>, as there
+are only about half a dozen string-returning capabilities listed in
+terminfo(5) which accept non-int arguments, they are seldom used.</p>
+<p>When called with a non-int as the first arg (no no args at all), return
+the first arg, acting in place of <a class="reference internal" href="#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattingString</span></code></a> without
+any attributes.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="blessed.formatters.get_proxy_string">
+<code class="sig-name descname">get_proxy_string</code><span class="sig-paren">(</span><em class="sig-param">term</em>, <em class="sig-param">attr</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/formatters.html#get_proxy_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.get_proxy_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proxy and return callable string for proxied attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>term</strong> (<a class="reference internal" href="terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><em>Terminal</em></a>) – <a class="reference internal" href="terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> instance.</p></li>
+<li><p><strong>attr</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – terminal capability name that may be proxied.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None or <a class="reference internal" href="#blessed.formatters.ParameterizingProxyString" title="blessed.formatters.ParameterizingProxyString"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParameterizingProxyString</span></code></a>.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#blessed.formatters.ParameterizingProxyString" title="blessed.formatters.ParameterizingProxyString"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParameterizingProxyString</span></code></a> for some attributes
+of some terminal types that support it, where the terminfo(5)
+database would otherwise come up empty, such as <code class="docutils literal notranslate"><span class="pre">move_x</span></code>
+attribute for <code class="docutils literal notranslate"><span class="pre">term.kind</span></code> of <code class="docutils literal notranslate"><span class="pre">screen</span></code>.  Otherwise, None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="blessed.formatters.split_compound">
+<code class="sig-name descname">split_compound</code><span class="sig-paren">(</span><em class="sig-param">compound</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/formatters.html#split_compound"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.split_compound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split compound formating string into segments.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">split_compound</span><span class="p">(</span><span class="s1">&#39;bold_underline_bright_blue_on_red&#39;</span><span class="p">)</span>
+<span class="go">[&#39;bold&#39;, &#39;underline&#39;, &#39;bright_blue&#39;, &#39;on_red&#39;]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>compound</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – a string that may contain compounds, separated by
+underline (<code class="docutils literal notranslate"><span class="pre">_</span></code>).</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)">list</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of formating string segments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="blessed.formatters.resolve_capability">
+<code class="sig-name descname">resolve_capability</code><span class="sig-paren">(</span><em class="sig-param">term</em>, <em class="sig-param">attr</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/formatters.html#resolve_capability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.resolve_capability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resolve a raw terminal capability using <code class="xref py py-func docutils literal notranslate"><span class="pre">tigetstr()</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>term</strong> (<a class="reference internal" href="terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><em>Terminal</em></a>) – <a class="reference internal" href="terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> instance.</p></li>
+<li><p><strong>attr</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – terminal capability name.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>string of the given terminal capability named by <code class="docutils literal notranslate"><span class="pre">attr</span></code>,
+which may be empty (u’’) if not found or not supported by the
+given <a class="reference internal" href="terminal.html#blessed.terminal.Terminal.kind" title="blessed.terminal.Terminal.kind"><code class="xref py py-attr docutils literal notranslate"><span class="pre">kind</span></code></a>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="blessed.formatters.resolve_color">
+<code class="sig-name descname">resolve_color</code><span class="sig-paren">(</span><em class="sig-param">term</em>, <em class="sig-param">color</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/formatters.html#resolve_color"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.resolve_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resolve a simple color name to a callable capability.</p>
+<p>This function supports <a class="reference internal" href="#blessed.formatters.resolve_attribute" title="blessed.formatters.resolve_attribute"><code class="xref py py-func docutils literal notranslate"><span class="pre">resolve_attribute()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>term</strong> (<a class="reference internal" href="terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><em>Terminal</em></a>) – <a class="reference internal" href="terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> instance.</p></li>
+<li><p><strong>color</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – any string found in set <a class="reference internal" href="#blessed.formatters.COLORS" title="blessed.formatters.COLORS"><code class="xref py py-const docutils literal notranslate"><span class="pre">COLORS</span></code></a>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a string class instance which emits the terminal sequence
+for the given color, and may be used as a callable to wrap the
+given string with such sequence.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#blessed.formatters.NullCallableString" title="blessed.formatters.NullCallableString"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullCallableString</span></code></a> when
+<a class="reference internal" href="terminal.html#blessed.terminal.Terminal.number_of_colors" title="blessed.terminal.Terminal.number_of_colors"><code class="xref py py-attr docutils literal notranslate"><span class="pre">number_of_colors</span></code></a> is 0,
+otherwise <a class="reference internal" href="#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattingString</span></code></a>.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#blessed.formatters.NullCallableString" title="blessed.formatters.NullCallableString"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullCallableString</span></code></a> or <a class="reference internal" href="#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattingString</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="blessed.formatters.resolve_attribute">
+<code class="sig-name descname">resolve_attribute</code><span class="sig-paren">(</span><em class="sig-param">term</em>, <em class="sig-param">attr</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/formatters.html#resolve_attribute"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.formatters.resolve_attribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resolve a terminal attribute name into a capability class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>term</strong> (<a class="reference internal" href="terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><em>Terminal</em></a>) – <a class="reference internal" href="terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> instance.</p></li>
+<li><p><strong>attr</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Sugary, ordinary, or compound formatted terminal
+capability, such as “red_on_white”, “normal”, “red”, or
+“bold_on_black”, respectively.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a string class instance which emits the terminal sequence
+for the given terminal capability, or may be used as a callable to
+wrap the given string with such sequence.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#blessed.formatters.NullCallableString" title="blessed.formatters.NullCallableString"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullCallableString</span></code></a> when
+<a class="reference internal" href="terminal.html#blessed.terminal.Terminal.number_of_colors" title="blessed.terminal.Terminal.number_of_colors"><code class="xref py py-attr docutils literal notranslate"><span class="pre">number_of_colors</span></code></a> is 0,
+otherwise <a class="reference internal" href="#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattingString</span></code></a>.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#blessed.formatters.NullCallableString" title="blessed.formatters.NullCallableString"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullCallableString</span></code></a> or <a class="reference internal" href="#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString"><code class="xref py py-class docutils literal notranslate"><span class="pre">FormattingString</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="sig-name descname">COLORS</code><em class="property"> = {'aliceblue', 'antiquewhite', 'antiquewhite1', 'antiquewhite2', 'antiquewhite3', 'antiquewhite4', 'aqua', 'aquamarine', 'aquamarine1', 'aquamarine2', 'aquamarine3', 'aquamarine4', 'azure', 'azure1', 'azure2', 'azure3', 'azure4', 'beige', 'bisque', 'bisque1', 'bisque2', 'bisque3', 'bisque4', 'black', 'blanchedalmond', 'blue', 'blue1', 'blue2', 'blue3', 'blue4', 'blueviolet', 'bright_black', 'bright_blue', 'bright_cyan', 'bright_green', 'bright_magenta', 'bright_red', 'bright_white', 'bright_yellow', 'brown', 'brown1', 'brown2', 'brown3', 'brown4', 'burlywood', 'burlywood1', 'burlywood2', 'burlywood3', 'burlywood4', 'cadetblue', 'cadetblue1', 'cadetblue2', 'cadetblue3', 'cadetblue4', 'chartreuse', 'chartreuse1', 'chartreuse2', 'chartreuse3', 'chartreuse4', 'chocolate', 'chocolate1', 'chocolate2', 'chocolate3', 'chocolate4', 'coral', 'coral1', 'coral2', 'coral3', 'coral4', 'cornflowerblue', 'cornsilk', 'cornsilk1', 'cornsilk2', 'cornsilk3', 'cornsilk4', 'crimson', 'cyan', 'cyan1', 'cyan2', 'cyan3', 'cyan4', 'darkblue', 'darkcyan', 'darkgoldenrod', 'darkgoldenrod1', 'darkgoldenrod2', 'darkgoldenrod3', 'darkgoldenrod4', 'darkgray', 'darkgreen', 'darkgrey', 'darkkhaki', 'darkmagenta', 'darkolivegreen', 'darkolivegreen1', 'darkolivegreen2', 'darkolivegreen3', 'darkolivegreen4', 'darkorange', 'darkorange1', 'darkorange2', 'darkorange3', 'darkorange4', 'darkorchid', 'darkorchid1', 'darkorchid2', 'darkorchid3', 'darkorchid4', 'darkred', 'darksalmon', 'darkseagreen', 'darkseagreen1', 'darkseagreen2', 'darkseagreen3', 'darkseagreen4', 'darkslateblue', 'darkslategray', 'darkslategray1', 'darkslategray2', 'darkslategray3', 'darkslategray4', 'darkslategrey', 'darkturquoise', 'darkviolet', 'deeppink', 'deeppink1', 'deeppink2', 'deeppink3', 'deeppink4', 'deepskyblue', 'deepskyblue1', 'deepskyblue2', 'deepskyblue3', 'deepskyblue4', 'dimgray', 'dimgrey', 'dodgerblue', 'dodgerblue1', 'dodgerblue2', 'dodgerblue3', 'dodgerblue4', 'firebrick', 'firebrick1', 'firebrick2', 'firebrick3', 'firebrick4', 'floralwhite', 'forestgreen', 'fuchsia', 'gainsboro', 'ghostwhite', 'gold', 'gold1', 'gold2', 'gold3', 'gold4', 'goldenrod', 'goldenrod1', 'goldenrod2', 'goldenrod3', 'goldenrod4', 'gray', 'gray0', 'gray1', 'gray10', 'gray100', 'gray11', 'gray12', 'gray13', 'gray14', 'gray15', 'gray16', 'gray17', 'gray18', 'gray19', 'gray2', 'gray20', 'gray21', 'gray22', 'gray23', 'gray24', 'gray25', 'gray26', 'gray27', 'gray28', 'gray29', 'gray3', 'gray30', 'gray31', 'gray32', 'gray33', 'gray34', 'gray35', 'gray36', 'gray37', 'gray38', 'gray39', 'gray4', 'gray40', 'gray41', 'gray42', 'gray43', 'gray44', 'gray45', 'gray46', 'gray47', 'gray48', 'gray49', 'gray5', 'gray50', 'gray51', 'gray52', 'gray53', 'gray54', 'gray55', 'gray56', 'gray57', 'gray58', 'gray59', 'gray6', 'gray60', 'gray61', 'gray62', 'gray63', 'gray64', 'gray65', 'gray66', 'gray67', 'gray68', 'gray69', 'gray7', 'gray70', 'gray71', 'gray72', 'gray73', 'gray74', 'gray75', 'gray76', 'gray77', 'gray78', 'gray79', 'gray8', 'gray80', 'gray81', 'gray82', 'gray83', 'gray84', 'gray85', 'gray86', 'gray87', 'gray88', 'gray89', 'gray9', 'gray90', 'gray91', 'gray92', 'gray93', 'gray94', 'gray95', 'gray96', 'gray97', 'gray98', 'gray99', 'green', 'green1', 'green2', 'green3', 'green4', 'greenyellow', 'grey', 'grey0', 'grey1', 'grey10', 'grey100', 'grey11', 'grey12', 'grey13', 'grey14', 'grey15', 'grey16', 'grey17', 'grey18', 'grey19', 'grey2', 'grey20', 'grey21', 'grey22', 'grey23', 'grey24', 'grey25', 'grey26', 'grey27', 'grey28', 'grey29', 'grey3', 'grey30', 'grey31', 'grey32', 'grey33', 'grey34', 'grey35', 'grey36', 'grey37', 'grey38', 'grey39', 'grey4', 'grey40', 'grey41', 'grey42', 'grey43', 'grey44', 'grey45', 'grey46', 'grey47', 'grey48', 'grey49', 'grey5', 'grey50', 'grey51', 'grey52', 'grey53', 'grey54', 'grey55', 'grey56', 'grey57', 'grey58', 'grey59', 'grey6', 'grey60', 'grey61', 'grey62', 'grey63', 'grey64', 'grey65', 'grey66', 'grey67', 'grey68', 'grey69', 'grey7', 'grey70', 'grey71', 'grey72', 'grey73', 'grey74', 'grey75', 'grey76', 'grey77', 'grey78', 'grey79', 'grey8', 'grey80', 'grey81', 'grey82', 'grey83', 'grey84', 'grey85', 'grey86', 'grey87', 'grey88', 'grey89', 'grey9', 'grey90', 'grey91', 'grey92', 'grey93', 'grey94', 'grey95', 'grey96', 'grey97', 'grey98', 'grey99', 'honeydew', 'honeydew1', 'honeydew2', 'honeydew3', 'honeydew4', 'hotpink', 'hotpink1', 'hotpink2', 'hotpink3', 'hotpink4', 'indianred', 'indianred1', 'indianred2', 'indianred3', 'indianred4', 'indigo', 'ivory', 'ivory1', 'ivory2', 'ivory3', 'ivory4', 'khaki', 'khaki1', 'khaki2', 'khaki3', 'khaki4', 'lavender', 'lavenderblush', 'lavenderblush1', 'lavenderblush2', 'lavenderblush3', 'lavenderblush4', 'lawngreen', 'lemonchiffon', 'lemonchiffon1', 'lemonchiffon2', 'lemonchiffon3', 'lemonchiffon4', 'lightblue', 'lightblue1', 'lightblue2', 'lightblue3', 'lightblue4', 'lightcoral', 'lightcyan', 'lightcyan1', 'lightcyan2', 'lightcyan3', 'lightcyan4', 'lightgoldenrod', 'lightgoldenrod1', 'lightgoldenrod2', 'lightgoldenrod3', 'lightgoldenrod4', 'lightgoldenrodyellow', 'lightgray', 'lightgreen', 'lightgrey', 'lightpink', 'lightpink1', 'lightpink2', 'lightpink3', 'lightpink4', 'lightsalmon', 'lightsalmon1', 'lightsalmon2', 'lightsalmon3', 'lightsalmon4', 'lightseagreen', 'lightskyblue', 'lightskyblue1', 'lightskyblue2', 'lightskyblue3', 'lightskyblue4', 'lightslateblue', 'lightslategray', 'lightslategrey', 'lightsteelblue', 'lightsteelblue1', 'lightsteelblue2', 'lightsteelblue3', 'lightsteelblue4', 'lightyellow', 'lightyellow1', 'lightyellow2', 'lightyellow3', 'lightyellow4', 'lime', 'limegreen', 'linen', 'magenta', 'magenta1', 'magenta2', 'magenta3', 'magenta4', 'maroon', 'maroon1', 'maroon2', 'maroon3', 'maroon4', 'mediumaquamarine', 'mediumblue', 'mediumorchid', 'mediumorchid1', 'mediumorchid2', 'mediumorchid3', 'mediumorchid4', 'mediumpurple', 'mediumpurple1', 'mediumpurple2', 'mediumpurple3', 'mediumpurple4', 'mediumseagreen', 'mediumslateblue', 'mediumspringgreen', 'mediumturquoise', 'mediumvioletred', 'midnightblue', 'mintcream', 'mistyrose', 'mistyrose1', 'mistyrose2', 'mistyrose3', 'mistyrose4', 'moccasin', 'navajowhite', 'navajowhite1', 'navajowhite2', 'navajowhite3', 'navajowhite4', 'navy', 'navyblue', 'oldlace', 'olive', 'olivedrab', 'olivedrab1', 'olivedrab2', 'olivedrab3', 'olivedrab4', 'on_aliceblue', 'on_antiquewhite', 'on_antiquewhite1', 'on_antiquewhite2', 'on_antiquewhite3', 'on_antiquewhite4', 'on_aqua', 'on_aquamarine', 'on_aquamarine1', 'on_aquamarine2', 'on_aquamarine3', 'on_aquamarine4', 'on_azure', 'on_azure1', 'on_azure2', 'on_azure3', 'on_azure4', 'on_beige', 'on_bisque', 'on_bisque1', 'on_bisque2', 'on_bisque3', 'on_bisque4', 'on_black', 'on_blanchedalmond', 'on_blue', 'on_blue1', 'on_blue2', 'on_blue3', 'on_blue4', 'on_blueviolet', 'on_bright_black', 'on_bright_blue', 'on_bright_cyan', 'on_bright_green', 'on_bright_magenta', 'on_bright_red', 'on_bright_white', 'on_bright_yellow', 'on_brown', 'on_brown1', 'on_brown2', 'on_brown3', 'on_brown4', 'on_burlywood', 'on_burlywood1', 'on_burlywood2', 'on_burlywood3', 'on_burlywood4', 'on_cadetblue', 'on_cadetblue1', 'on_cadetblue2', 'on_cadetblue3', 'on_cadetblue4', 'on_chartreuse', 'on_chartreuse1', 'on_chartreuse2', 'on_chartreuse3', 'on_chartreuse4', 'on_chocolate', 'on_chocolate1', 'on_chocolate2', 'on_chocolate3', 'on_chocolate4', 'on_coral', 'on_coral1', 'on_coral2', 'on_coral3', 'on_coral4', 'on_cornflowerblue', 'on_cornsilk', 'on_cornsilk1', 'on_cornsilk2', 'on_cornsilk3', 'on_cornsilk4', 'on_crimson', 'on_cyan', 'on_cyan1', 'on_cyan2', 'on_cyan3', 'on_cyan4', 'on_darkblue', 'on_darkcyan', 'on_darkgoldenrod', 'on_darkgoldenrod1', 'on_darkgoldenrod2', 'on_darkgoldenrod3', 'on_darkgoldenrod4', 'on_darkgray', 'on_darkgreen', 'on_darkgrey', 'on_darkkhaki', 'on_darkmagenta', 'on_darkolivegreen', 'on_darkolivegreen1', 'on_darkolivegreen2', 'on_darkolivegreen3', 'on_darkolivegreen4', 'on_darkorange', 'on_darkorange1', 'on_darkorange2', 'on_darkorange3', 'on_darkorange4', 'on_darkorchid', 'on_darkorchid1', 'on_darkorchid2', 'on_darkorchid3', 'on_darkorchid4', 'on_darkred', 'on_darksalmon', 'on_darkseagreen', 'on_darkseagreen1', 'on_darkseagreen2', 'on_darkseagreen3', 'on_darkseagreen4', 'on_darkslateblue', 'on_darkslategray', 'on_darkslategray1', 'on_darkslategray2', 'on_darkslategray3', 'on_darkslategray4', 'on_darkslategrey', 'on_darkturquoise', 'on_darkviolet', 'on_deeppink', 'on_deeppink1', 'on_deeppink2', 'on_deeppink3', 'on_deeppink4', 'on_deepskyblue', 'on_deepskyblue1', 'on_deepskyblue2', 'on_deepskyblue3', 'on_deepskyblue4', 'on_dimgray', 'on_dimgrey', 'on_dodgerblue', 'on_dodgerblue1', 'on_dodgerblue2', 'on_dodgerblue3', 'on_dodgerblue4', 'on_firebrick', 'on_firebrick1', 'on_firebrick2', 'on_firebrick3', 'on_firebrick4', 'on_floralwhite', 'on_forestgreen', 'on_fuchsia', 'on_gainsboro', 'on_ghostwhite', 'on_gold', 'on_gold1', 'on_gold2', 'on_gold3', 'on_gold4', 'on_goldenrod', 'on_goldenrod1', 'on_goldenrod2', 'on_goldenrod3', 'on_goldenrod4', 'on_gray', 'on_gray0', 'on_gray1', 'on_gray10', 'on_gray100', 'on_gray11', 'on_gray12', 'on_gray13', 'on_gray14', 'on_gray15', 'on_gray16', 'on_gray17', 'on_gray18', 'on_gray19', 'on_gray2', 'on_gray20', 'on_gray21', 'on_gray22', 'on_gray23', 'on_gray24', 'on_gray25', 'on_gray26', 'on_gray27', 'on_gray28', 'on_gray29', 'on_gray3', 'on_gray30', 'on_gray31', 'on_gray32', 'on_gray33', 'on_gray34', 'on_gray35', 'on_gray36', 'on_gray37', 'on_gray38', 'on_gray39', 'on_gray4', 'on_gray40', 'on_gray41', 'on_gray42', 'on_gray43', 'on_gray44', 'on_gray45', 'on_gray46', 'on_gray47', 'on_gray48', 'on_gray49', 'on_gray5', 'on_gray50', 'on_gray51', 'on_gray52', 'on_gray53', 'on_gray54', 'on_gray55', 'on_gray56', 'on_gray57', 'on_gray58', 'on_gray59', 'on_gray6', 'on_gray60', 'on_gray61', 'on_gray62', 'on_gray63', 'on_gray64', 'on_gray65', 'on_gray66', 'on_gray67', 'on_gray68', 'on_gray69', 'on_gray7', 'on_gray70', 'on_gray71', 'on_gray72', 'on_gray73', 'on_gray74', 'on_gray75', 'on_gray76', 'on_gray77', 'on_gray78', 'on_gray79', 'on_gray8', 'on_gray80', 'on_gray81', 'on_gray82', 'on_gray83', 'on_gray84', 'on_gray85', 'on_gray86', 'on_gray87', 'on_gray88', 'on_gray89', 'on_gray9', 'on_gray90', 'on_gray91', 'on_gray92', 'on_gray93', 'on_gray94', 'on_gray95', 'on_gray96', 'on_gray97', 'on_gray98', 'on_gray99', 'on_green', 'on_green1', 'on_green2', 'on_green3', 'on_green4', 'on_greenyellow', 'on_grey', 'on_grey0', 'on_grey1', 'on_grey10', 'on_grey100', 'on_grey11', 'on_grey12', 'on_grey13', 'on_grey14', 'on_grey15', 'on_grey16', 'on_grey17', 'on_grey18', 'on_grey19', 'on_grey2', 'on_grey20', 'on_grey21', 'on_grey22', 'on_grey23', 'on_grey24', 'on_grey25', 'on_grey26', 'on_grey27', 'on_grey28', 'on_grey29', 'on_grey3', 'on_grey30', 'on_grey31', 'on_grey32', 'on_grey33', 'on_grey34', 'on_grey35', 'on_grey36', 'on_grey37', 'on_grey38', 'on_grey39', 'on_grey4', 'on_grey40', 'on_grey41', 'on_grey42', 'on_grey43', 'on_grey44', 'on_grey45', 'on_grey46', 'on_grey47', 'on_grey48', 'on_grey49', 'on_grey5', 'on_grey50', 'on_grey51', 'on_grey52', 'on_grey53', 'on_grey54', 'on_grey55', 'on_grey56', 'on_grey57', 'on_grey58', 'on_grey59', 'on_grey6', 'on_grey60', 'on_grey61', 'on_grey62', 'on_grey63', 'on_grey64', 'on_grey65', 'on_grey66', 'on_grey67', 'on_grey68', 'on_grey69', 'on_grey7', 'on_grey70', 'on_grey71', 'on_grey72', 'on_grey73', 'on_grey74', 'on_grey75', 'on_grey76', 'on_grey77', 'on_grey78', 'on_grey79', 'on_grey8', 'on_grey80', 'on_grey81', 'on_grey82', 'on_grey83', 'on_grey84', 'on_grey85', 'on_grey86', 'on_grey87', 'on_grey88', 'on_grey89', 'on_grey9', 'on_grey90', 'on_grey91', 'on_grey92', 'on_grey93', 'on_grey94', 'on_grey95', 'on_grey96', 'on_grey97', 'on_grey98', 'on_grey99', 'on_honeydew', 'on_honeydew1', 'on_honeydew2', 'on_honeydew3', 'on_honeydew4', 'on_hotpink', 'on_hotpink1', 'on_hotpink2', 'on_hotpink3', 'on_hotpink4', 'on_indianred', 'on_indianred1', 'on_indianred2', 'on_indianred3', 'on_indianred4', 'on_indigo', 'on_ivory', 'on_ivory1', 'on_ivory2', 'on_ivory3', 'on_ivory4', 'on_khaki', 'on_khaki1', 'on_khaki2', 'on_khaki3', 'on_khaki4', 'on_lavender', 'on_lavenderblush', 'on_lavenderblush1', 'on_lavenderblush2', 'on_lavenderblush3', 'on_lavenderblush4', 'on_lawngreen', 'on_lemonchiffon', 'on_lemonchiffon1', 'on_lemonchiffon2', 'on_lemonchiffon3', 'on_lemonchiffon4', 'on_lightblue', 'on_lightblue1', 'on_lightblue2', 'on_lightblue3', 'on_lightblue4', 'on_lightcoral', 'on_lightcyan', 'on_lightcyan1', 'on_lightcyan2', 'on_lightcyan3', 'on_lightcyan4', 'on_lightgoldenrod', 'on_lightgoldenrod1', 'on_lightgoldenrod2', 'on_lightgoldenrod3', 'on_lightgoldenrod4', 'on_lightgoldenrodyellow', 'on_lightgray', 'on_lightgreen', 'on_lightgrey', 'on_lightpink', 'on_lightpink1', 'on_lightpink2', 'on_lightpink3', 'on_lightpink4', 'on_lightsalmon', 'on_lightsalmon1', 'on_lightsalmon2', 'on_lightsalmon3', 'on_lightsalmon4', 'on_lightseagreen', 'on_lightskyblue', 'on_lightskyblue1', 'on_lightskyblue2', 'on_lightskyblue3', 'on_lightskyblue4', 'on_lightslateblue', 'on_lightslategray', 'on_lightslategrey', 'on_lightsteelblue', 'on_lightsteelblue1', 'on_lightsteelblue2', 'on_lightsteelblue3', 'on_lightsteelblue4', 'on_lightyellow', 'on_lightyellow1', 'on_lightyellow2', 'on_lightyellow3', 'on_lightyellow4', 'on_lime', 'on_limegreen', 'on_linen', 'on_magenta', 'on_magenta1', 'on_magenta2', 'on_magenta3', 'on_magenta4', 'on_maroon', 'on_maroon1', 'on_maroon2', 'on_maroon3', 'on_maroon4', 'on_mediumaquamarine', 'on_mediumblue', 'on_mediumorchid', 'on_mediumorchid1', 'on_mediumorchid2', 'on_mediumorchid3', 'on_mediumorchid4', 'on_mediumpurple', 'on_mediumpurple1', 'on_mediumpurple2', 'on_mediumpurple3', 'on_mediumpurple4', 'on_mediumseagreen', 'on_mediumslateblue', 'on_mediumspringgreen', 'on_mediumturquoise', 'on_mediumvioletred', 'on_midnightblue', 'on_mintcream', 'on_mistyrose', 'on_mistyrose1', 'on_mistyrose2', 'on_mistyrose3', 'on_mistyrose4', 'on_moccasin', 'on_navajowhite', 'on_navajowhite1', 'on_navajowhite2', 'on_navajowhite3', 'on_navajowhite4', 'on_navy', 'on_navyblue', 'on_oldlace', 'on_olive', 'on_olivedrab', 'on_olivedrab1', 'on_olivedrab2', 'on_olivedrab3', 'on_olivedrab4', 'on_orange', 'on_orange1', 'on_orange2', 'on_orange3', 'on_orange4', 'on_orangered', 'on_orangered1', 'on_orangered2', 'on_orangered3', 'on_orangered4', 'on_orchid', 'on_orchid1', 'on_orchid2', 'on_orchid3', 'on_orchid4', 'on_palegoldenrod', 'on_palegreen', 'on_palegreen1', 'on_palegreen2', 'on_palegreen3', 'on_palegreen4', 'on_paleturquoise', 'on_paleturquoise1', 'on_paleturquoise2', 'on_paleturquoise3', 'on_paleturquoise4', 'on_palevioletred', 'on_palevioletred1', 'on_palevioletred2', 'on_palevioletred3', 'on_palevioletred4', 'on_papayawhip', 'on_peachpuff', 'on_peachpuff1', 'on_peachpuff2', 'on_peachpuff3', 'on_peachpuff4', 'on_peru', 'on_pink', 'on_pink1', 'on_pink2', 'on_pink3', 'on_pink4', 'on_plum', 'on_plum1', 'on_plum2', 'on_plum3', 'on_plum4', 'on_powderblue', 'on_purple', 'on_purple1', 'on_purple2', 'on_purple3', 'on_purple4', 'on_rebeccapurple', 'on_red', 'on_red1', 'on_red2', 'on_red3', 'on_red4', 'on_rosybrown', 'on_rosybrown1', 'on_rosybrown2', 'on_rosybrown3', 'on_rosybrown4', 'on_royalblue', 'on_royalblue1', 'on_royalblue2', 'on_royalblue3', 'on_royalblue4', 'on_saddlebrown', 'on_salmon', 'on_salmon1', 'on_salmon2', 'on_salmon3', 'on_salmon4', 'on_sandybrown', 'on_seagreen', 'on_seagreen1', 'on_seagreen2', 'on_seagreen3', 'on_seagreen4', 'on_seashell', 'on_seashell1', 'on_seashell2', 'on_seashell3', 'on_seashell4', 'on_sienna', 'on_sienna1', 'on_sienna2', 'on_sienna3', 'on_sienna4', 'on_silver', 'on_skyblue', 'on_skyblue1', 'on_skyblue2', 'on_skyblue3', 'on_skyblue4', 'on_slateblue', 'on_slateblue1', 'on_slateblue2', 'on_slateblue3', 'on_slateblue4', 'on_slategray', 'on_slategray1', 'on_slategray2', 'on_slategray3', 'on_slategray4', 'on_slategrey', 'on_snow', 'on_snow1', 'on_snow2', 'on_snow3', 'on_snow4', 'on_springgreen', 'on_springgreen1', 'on_springgreen2', 'on_springgreen3', 'on_springgreen4', 'on_steelblue', 'on_steelblue1', 'on_steelblue2', 'on_steelblue3', 'on_steelblue4', 'on_tan', 'on_tan1', 'on_tan2', 'on_tan3', 'on_tan4', 'on_teal', 'on_thistle', 'on_thistle1', 'on_thistle2', 'on_thistle3', 'on_thistle4', 'on_tomato', 'on_tomato1', 'on_tomato2', 'on_tomato3', 'on_tomato4', 'on_turquoise', 'on_turquoise1', 'on_turquoise2', 'on_turquoise3', 'on_turquoise4', 'on_violet', 'on_violetred', 'on_violetred1', 'on_violetred2', 'on_violetred3', 'on_violetred4', 'on_webgray', 'on_webgreen', 'on_webgrey', 'on_webmaroon', 'on_webpurple', 'on_wheat', 'on_wheat1', 'on_wheat2', 'on_wheat3', 'on_wheat4', 'on_white', 'on_whitesmoke', 'on_x11gray', 'on_x11green', 'on_x11grey', 'on_x11maroon', 'on_x11purple', 'on_yellow', 'on_yellow1', 'on_yellow2', 'on_yellow3', 'on_yellow4', 'on_yellowgreen', 'orange', 'orange1', 'orange2', 'orange3', 'orange4', 'orangered', 'orangered1', 'orangered2', 'orangered3', 'orangered4', 'orchid', 'orchid1', 'orchid2', 'orchid3', 'orchid4', 'palegoldenrod', 'palegreen', 'palegreen1', 'palegreen2', 'palegreen3', 'palegreen4', 'paleturquoise', 'paleturquoise1', 'paleturquoise2', 'paleturquoise3', 'paleturquoise4', 'palevioletred', 'palevioletred1', 'palevioletred2', 'palevioletred3', 'palevioletred4', 'papayawhip', 'peachpuff', 'peachpuff1', 'peachpuff2', 'peachpuff3', 'peachpuff4', 'peru', 'pink', 'pink1', 'pink2', 'pink3', 'pink4', 'plum', 'plum1', 'plum2', 'plum3', 'plum4', 'powderblue', 'purple', 'purple1', 'purple2', 'purple3', 'purple4', 'rebeccapurple', 'red', 'red1', 'red2', 'red3', 'red4', 'rosybrown', 'rosybrown1', 'rosybrown2', 'rosybrown3', 'rosybrown4', 'royalblue', 'royalblue1', 'royalblue2', 'royalblue3', 'royalblue4', 'saddlebrown', 'salmon', 'salmon1', 'salmon2', 'salmon3', 'salmon4', 'sandybrown', 'seagreen', 'seagreen1', 'seagreen2', 'seagreen3', 'seagreen4', 'seashell', 'seashell1', 'seashell2', 'seashell3', 'seashell4', 'sienna', 'sienna1', 'sienna2', 'sienna3', 'sienna4', 'silver', 'skyblue', 'skyblue1', 'skyblue2', 'skyblue3', 'skyblue4', 'slateblue', 'slateblue1', 'slateblue2', 'slateblue3', 'slateblue4', 'slategray', 'slategray1', 'slategray2', 'slategray3', 'slategray4', 'slategrey', 'snow', 'snow1', 'snow2', 'snow3', 'snow4', 'springgreen', 'springgreen1', 'springgreen2', 'springgreen3', 'springgreen4', 'steelblue', 'steelblue1', 'steelblue2', 'steelblue3', 'steelblue4', 'tan', 'tan1', 'tan2', 'tan3', 'tan4', 'teal', 'thistle', 'thistle1', 'thistle2', 'thistle3', 'thistle4', 'tomato', 'tomato1', 'tomato2', 'tomato3', 'tomato4', 'turquoise', 'turquoise1', 'turquoise2', 'turquoise3', 'turquoise4', 'violet', 'violetred', 'violetred1', 'violetred2', 'violetred3', 'violetred4', 'webgray', 'webgreen', 'webgrey', 'webmaroon', 'webpurple', 'wheat', 'wheat1', 'wheat2', 'wheat3', 'wheat4', 'white', 'whitesmoke', 'x11gray', 'x11green', 'x11grey', 'x11maroon', 'x11purple', 'yellow', 'yellow1', 'yellow2', 'yellow3', 'yellow4', 'yellowgreen'}</em></dt>
+<dd><p>Valid colors and their background (on), bright, and bright-background
+derivatives.</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="sig-name descname">COMPOUNDABLES</code><em class="property"> = {'blink', 'bold', 'italic', 'reverse', 'standout', 'underline'}</em></dt>
+<dd><p>Attributes that may be compounded with colors, by underscore, such as
+‘reverse_indigo’.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="keyboard.html" class="btn btn-neutral float-right" title="keyboard.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="colorspace.html" class="btn btn-neutral float-left" title="colorspace.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    .wy-nav-content { max-width: 900px; }
+  </style>
+
+
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Examples &mdash; Blessed 1.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Documentation" href="api.html" />
+    <link rel="prev" title="Measuring" href="measuring.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keyboard.html">Keyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location.html">Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measuring.html">Measuring</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bounce-py">bounce.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cnn-py">cnn.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#detect-multibyte-py">detect-multibyte.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#editor-py">editor.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#keymatrix-py">keymatrix.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#on-resize-py">on_resize.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plasma-py">plasma.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#progress-bar-py">progress_bar.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resize-py">resize.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tprint-py">tprint.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#worms-py">worms.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#x11-colorpicker-py">x11_colorpicker.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Examples</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/examples.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p>A few programs are provided with blessed to help interactively test the various API features, but
+also serve as examples of using blessed to develop applications.</p>
+<p>These examples are not distributed with the package – they are only available in the github
+repository.  You can retrieve them by cloning the repository, or simply downloading the “raw” file
+link.</p>
+<div class="figure align-default" id="id13">
+<img alt="Animations of x11-colorpicker.py, bounce.py, worms.py, and plasma.py" src="https://dxtz6bzwq9sxx.cloudfront.net/blessed_demo_intro.gif" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="#x11-colorpicker-py"><span class="std std-ref">x11_colorpicker.py</span></a>, <a class="reference internal" href="#bounce-py"><span class="std std-ref">bounce.py</span></a>, <a class="reference internal" href="#worms-py"><span class="std std-ref">worms.py</span></a>, and <a class="reference internal" href="#plasma-py"><span class="std std-ref">plasma.py</span></a>.</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="bounce-py">
+<span id="id1"></span><h2>bounce.py<a class="headerlink" href="#bounce-py" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/jquast/blessed/blob/master/bin/editor.py">https://github.com/jquast/blessed/blob/master/bin/editor.py</a></p>
+<p>This is a very brief, basic primitive non-interactive version of a “classic tennis” video game. It
+demonstrates basic timed refresh of a bouncing terminal cell.</p>
+</div>
+<div class="section" id="cnn-py">
+<span id="id2"></span><h2>cnn.py<a class="headerlink" href="#cnn-py" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/jquast/blessed/blob/master/bin/cnn.py">https://github.com/jquast/blessed/blob/master/bin/cnn.py</a></p>
+<p>This program uses 3rd-party BeautifulSoup and requests library to fetch the cnn website and display
+news article titles using the <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.link" title="blessed.terminal.Terminal.link"><code class="xref py py-meth docutils literal notranslate"><span class="pre">link()</span></code></a> method, so that they may be clicked.</p>
+</div>
+<div class="section" id="detect-multibyte-py">
+<span id="id3"></span><h2>detect-multibyte.py<a class="headerlink" href="#detect-multibyte-py" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/jquast/blessed/blob/master/bin/detect-multibyte.py">https://github.com/jquast/blessed/blob/master/bin/detect-multibyte.py</a></p>
+<p>This program also demonstrates how the <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.get_location" title="blessed.terminal.Terminal.get_location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_location()</span></code></a> method
+can be used to reliably test whether the terminal emulator of the connecting
+client is capable of rendering multibyte characters as a single cell.</p>
+</div>
+<div class="section" id="editor-py">
+<span id="id4"></span><h2>editor.py<a class="headerlink" href="#editor-py" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/jquast/blessed/blob/master/bin/editor.py">https://github.com/jquast/blessed/blob/master/bin/editor.py</a></p>
+<p>This program demonstrates using the directional keys and noecho input
+mode. It acts as a (very dumb) fullscreen editor, with support for
+saving a file, as well as including a rudimentary line-editor.</p>
+</div>
+<div class="section" id="keymatrix-py">
+<span id="id5"></span><h2>keymatrix.py<a class="headerlink" href="#keymatrix-py" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/jquast/blessed/blob/master/bin/keymatrix.py">https://github.com/jquast/blessed/blob/master/bin/keymatrix.py</a></p>
+<p>This program displays a “gameboard” of all known special KEY_NAME
+constants. When the key is depressed, it is highlighted, as well
+as displaying the unicode sequence, integer code, and friendly-name
+of any key pressed.</p>
+</div>
+<div class="section" id="on-resize-py">
+<span id="id6"></span><h2>on_resize.py<a class="headerlink" href="#on-resize-py" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/jquast/blessed/blob/master/bin/on_resize.py">https://github.com/jquast/blessed/blob/master/bin/on_resize.py</a></p>
+<p>This program installs a SIGWINCH signal handler, which detects
+screen resizes while also polling for input, displaying keypresses.</p>
+<p>This demonstrates how a program can react to screen resize events.</p>
+</div>
+<div class="section" id="plasma-py">
+<span id="id7"></span><h2>plasma.py<a class="headerlink" href="#plasma-py" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/jquast/blessed/blob/master/bin/plasma.py">https://github.com/jquast/blessed/blob/master/bin/plasma.py</a></p>
+<p>This demonstrates using only <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.on_color_rgb" title="blessed.terminal.Terminal.on_color_rgb"><code class="xref py py-meth docutils literal notranslate"><span class="pre">on_color_rgb()</span></code></a> and the built-in <a class="reference external" href="https://docs.python.org/3/library/colorsys.html#module-colorsys" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">colorsys</span></code></a>
+module to quickly display all of the colors of a rainbow in a classic demoscene <a class="reference external" href="https://lodev.org/cgtutor/plasma.html">plasma effect</a></p>
+</div>
+<div class="section" id="progress-bar-py">
+<span id="id8"></span><h2>progress_bar.py<a class="headerlink" href="#progress-bar-py" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/jquast/blessed/blob/master/bin/progress_bar.py">https://github.com/jquast/blessed/blob/master/bin/progress_bar.py</a></p>
+<p>This program demonstrates a simple progress bar. All text is written
+to stderr, to avoid the need to “flush” or emit newlines, and makes
+use of the move_x (hpa) capability to “overstrike” the display a
+scrolling progress bar.</p>
+</div>
+<div class="section" id="resize-py">
+<span id="id9"></span><h2>resize.py<a class="headerlink" href="#resize-py" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/jquast/blessed/blob/master/bin/resize.py">https://github.com/jquast/blessed/blob/master/bin/resize.py</a></p>
+<p>This program demonstrates the <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.get_location" title="blessed.terminal.Terminal.get_location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_location()</span></code></a> method,
+behaving similar to <a class="reference external" href="https://github.com/joejulian/xterm/blob/master/resize.c">resize(1)</a>
+: set environment and terminal settings to current window size.
+The window size is determined by eliciting an answerback
+sequence from the connecting terminal emulator.</p>
+</div>
+<div class="section" id="tprint-py">
+<span id="id10"></span><h2>tprint.py<a class="headerlink" href="#tprint-py" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/jquast/blessed/blob/master/bin/tprint.py">https://github.com/jquast/blessed/blob/master/bin/tprint.py</a></p>
+<p>This program demonstrates how users may customize FormattingString
+styles.  Accepting a string style, such as “bold” or “bright_red”
+as the first argument, all subsequent arguments are displayed by
+the given style.  This shows how a program could provide
+user-customizable compound formatting names to configure a program’s
+styling.</p>
+</div>
+<div class="section" id="worms-py">
+<span id="id11"></span><h2>worms.py<a class="headerlink" href="#worms-py" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/jquast/blessed/blob/master/bin/worms.py">https://github.com/jquast/blessed/blob/master/bin/worms.py</a></p>
+<p>This program demonstrates how an interactive game could be made
+with blessed.  It is similar to <a class="reference external" href="https://github.com/tangentstorm/tangentlabs/blob/master/qbasic/NIBBLES.BAS">NIBBLES.BAS</a>
+or “snake” of early mobile platforms.</p>
+</div>
+<div class="section" id="x11-colorpicker-py">
+<span id="id12"></span><h2>x11_colorpicker.py<a class="headerlink" href="#x11-colorpicker-py" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/jquast/blessed/blob/master/bin/x11_colorpicker.py">https://github.com/jquast/blessed/blob/master/bin/x11_colorpicker.py</a></p>
+<p>This program shows all of the X11 colors, demonstrates a basic keyboard-interactive program and
+color selection, but is also a useful utility to pick colors!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api.html" class="btn btn-neutral float-right" title="API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="measuring.html" class="btn btn-neutral float-left" title="Measuring" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    .wy-nav-content { max-width: 900px; }
+  </style>
+
+
+
+</body>
+</html>

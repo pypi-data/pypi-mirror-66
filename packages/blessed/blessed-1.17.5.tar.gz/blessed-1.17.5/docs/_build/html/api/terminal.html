@@ -1,0 +1,1143 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>terminal.py &mdash; Blessed 1.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Project" href="../project.html" />
+    <link rel="prev" title="sequences.py" href="sequences.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../keyboard.html">Keyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../location.html">Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measuring.html">Measuring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="color.html">color.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="colorspace.html">colorspace.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="formatters.html">formatters.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard.html">keyboard.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sequences.html">sequences.py</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">terminal.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project.html">Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">API Documentation</a> &raquo;</li>
+        
+      <li>terminal.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/terminal.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-blessed.terminal">
+<span id="terminal-py"></span><h1>terminal.py<a class="headerlink" href="#module-blessed.terminal" title="Permalink to this headline">¶</a></h1>
+<p>Module containing <a class="reference internal" href="#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a>, the primary API entry point.</p>
+<dl class="class">
+<dt id="blessed.terminal.Terminal">
+<em class="property">class </em><code class="sig-name descname">Terminal</code><span class="sig-paren">(</span><em class="sig-param">kind=None</em>, <em class="sig-param">stream=None</em>, <em class="sig-param">force_styling=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal" title="Permalink to this definition">¶</a></dt>
+<dd><p>An abstraction for color, style, positioning, and input in the terminal.</p>
+<p>This keeps the endless calls to <code class="docutils literal notranslate"><span class="pre">tigetstr()</span></code> and <code class="docutils literal notranslate"><span class="pre">tparm()</span></code> out of your code, acts
+intelligently when somebody pipes your output to a non-terminal, and abstracts over the
+complexity of unbuffered keyboard input. It uses the terminfo database to remain portable across
+terminal types.</p>
+<p>Initialize the terminal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – <p>A terminal string as taken by <a class="reference external" href="https://docs.python.org/3/library/curses.html#curses.setupterm" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">curses.setupterm()</span></code></a>.
+Defaults to the value of the <code class="docutils literal notranslate"><span class="pre">TERM</span></code> environment variable.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Terminals withing a single process must share a common
+<code class="docutils literal notranslate"><span class="pre">kind</span></code>. See <a class="reference internal" href="#blessed.terminal._CUR_TERM" title="blessed.terminal._CUR_TERM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_CUR_TERM</span></code></a>.</p>
+</div>
+</p></li>
+<li><p><strong>stream</strong> (<em>file</em>) – <p>A file-like object representing the Terminal output.
+Defaults to the original value of <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.__stdout__" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sys.__stdout__</span></code></a>, like
+<a class="reference external" href="https://docs.python.org/3/library/curses.html#curses.initscr" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">curses.initscr()</span></code></a> does.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">stream</span></code> is not a tty, empty Unicode strings are returned for
+all capability values, so things like piping your program output to
+a pipe or file does not emit terminal sequences.</p>
+</p></li>
+<li><p><strong>force_styling</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – <p>Whether to force the emission of capabilities
+even if <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.__stdout__" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sys.__stdout__</span></code></a> does not seem to be connected to a
+terminal. If you want to force styling to not happen, use
+<code class="docutils literal notranslate"><span class="pre">force_styling=None</span></code>.</p>
+<p>This comes in handy if users are trying to pipe your output through
+something like <code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">-r</span></code> or build systems which support decoding
+of terminal sequences.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="blessed.terminal.Terminal.__getattr__">
+<code class="sig-name descname">__getattr__</code><span class="sig-paren">(</span><em class="sig-param">attr</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.__getattr__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.__getattr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a terminal capability as Unicode string.</p>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">term.bold</span></code> is a unicode string that may be prepended
+to text to set the video attribute for bold, which should also be
+terminated with the pairing <a class="reference internal" href="#blessed.terminal.Terminal.normal" title="blessed.terminal.Terminal.normal"><code class="xref py py-attr docutils literal notranslate"><span class="pre">normal</span></code></a>. This capability
+returns a callable, so you can use <code class="docutils literal notranslate"><span class="pre">term.bold(&quot;hi&quot;)</span></code> which
+results in the joining of <code class="docutils literal notranslate"><span class="pre">(term.bold,</span> <span class="pre">&quot;hi&quot;,</span> <span class="pre">term.normal)</span></code>.</p>
+<p>Compound formatters may also be used. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span><span class="o">.</span><span class="n">bold_blink_red_on_green</span><span class="p">(</span><span class="s2">&quot;merry x-mas!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For a parameterized capability such as <code class="docutils literal notranslate"><span class="pre">move</span></code> (or <code class="docutils literal notranslate"><span class="pre">cup</span></code>), pass the
+parameters as positional arguments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">column</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>See the manual page <a class="reference external" href="https://invisible-island.net/ncurses/man/terminfo.5.html">terminfo(5)</a> for a
+complete list of capabilities and their arguments.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.kind">
+<em class="property">property </em><code class="sig-name descname">kind</code><a class="headerlink" href="#blessed.terminal.Terminal.kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read-only property: Terminal kind determined on class initialization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.does_styling">
+<em class="property">property </em><code class="sig-name descname">does_styling</code><a class="headerlink" href="#blessed.terminal.Terminal.does_styling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read-only property: Whether this class instance may emit sequences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.is_a_tty">
+<em class="property">property </em><code class="sig-name descname">is_a_tty</code><a class="headerlink" href="#blessed.terminal.Terminal.is_a_tty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read-only property: Whether <a class="reference internal" href="#blessed.terminal.Terminal.stream" title="blessed.terminal.Terminal.stream"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stream</span></code></a> is a terminal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.height">
+<em class="property">property </em><code class="sig-name descname">height</code><a class="headerlink" href="#blessed.terminal.Terminal.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read-only property: Height of the terminal (in number of lines).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.width">
+<em class="property">property </em><code class="sig-name descname">width</code><a class="headerlink" href="#blessed.terminal.Terminal.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read-only property: Width of the terminal (in number of columns).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.pixel_height">
+<em class="property">property </em><code class="sig-name descname">pixel_height</code><a class="headerlink" href="#blessed.terminal.Terminal.pixel_height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read-only property: Height ofthe terminal (in pixels).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.pixel_width">
+<em class="property">property </em><code class="sig-name descname">pixel_width</code><a class="headerlink" href="#blessed.terminal.Terminal.pixel_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read-only property: Width of terminal (in pixels).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.location">
+<code class="sig-name descname">location</code><span class="sig-paren">(</span><em class="sig-param">x=None</em>, <em class="sig-param">y=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.location"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Context manager for temporarily moving the cursor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – horizontal position, from left, <em>0</em>, to right edge of screen, <em>self.width - 1</em>.</p></li>
+<li><p><strong>y</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – vertical position, from top, <em>0</em>, to bottom of screen, <em>self.height - 1</em>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a context manager.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Iterator</p>
+</dd>
+</dl>
+<p>Move the cursor to a certain position on entry, do any kind of I/O, and upon exit
+let you print stuff there, then return the cursor to its original position:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">location</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">row_num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">height</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Row #</span><span class="si">{row_num}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">clear_eol</span> <span class="o">+</span> <span class="s1">&#39;Back to original location.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Specify <code class="docutils literal notranslate"><span class="pre">x</span></code> to move to a certain column, <code class="docutils literal notranslate"><span class="pre">y</span></code> to move to a certain
+row, both, or neither. If you specify neither, only the saving and
+restoration of cursor position will happen. This can be useful if you
+simply want to restore your place after doing some manual cursor
+movement.</p>
+<p>Calls cannot be nested: only one should be entered at a time.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The argument order <em>(x, y)</em> differs from the return value order <em>(y, x)</em>
+of <a class="reference internal" href="#blessed.terminal.Terminal.get_location" title="blessed.terminal.Terminal.get_location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_location()</span></code></a>, or argument order <em>(y, x)</em> of <code class="xref py py-meth docutils literal notranslate"><span class="pre">move()</span></code>. This is
+for API Compaibility with the blessings library, sorry for the trouble!</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.get_location">
+<code class="sig-name descname">get_location</code><span class="sig-paren">(</span><em class="sig-param">timeout=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.get_location"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.get_location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return tuple (row, column) of cursor position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Return after time elapsed in seconds with value <code class="docutils literal notranslate"><span class="pre">(-1,</span> <span class="pre">-1)</span></code> indicating
+that the remote end did not respond.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)">tuple</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>cursor position as tuple in form of <code class="docutils literal notranslate"><span class="pre">(y,</span> <span class="pre">x)</span></code>.  When a timeout is specified,
+always ensure the return value is checked for <code class="docutils literal notranslate"><span class="pre">(-1,</span> <span class="pre">-1)</span></code>.</p>
+</dd>
+</dl>
+<p>The location of the cursor is determined by emitting the <code class="docutils literal notranslate"><span class="pre">u7</span></code> terminal capability, or
+VT100 <a class="reference external" href="http://www.termsys.demon.co.uk/vtansi.htm#status">Query Cursor Position</a> when such
+capability is undefined, which elicits a response from a reply string described by
+capability <code class="docutils literal notranslate"><span class="pre">u6</span></code>, or again VT100’s definition of <code class="docutils literal notranslate"><span class="pre">\x1b[%i%d;%dR</span></code> when undefined.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">(y,</span> <span class="pre">x)</span></code> return value matches the parameter order of the <a class="reference internal" href="#blessed.terminal.Terminal.move_xy" title="blessed.terminal.Terminal.move_xy"><code class="xref py py-meth docutils literal notranslate"><span class="pre">move_xy()</span></code></a> capability.
+The following sequence should cause the cursor to not move at all:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">term</span><span class="o">.</span><span class="n">move_yx</span><span class="p">(</span><span class="o">*</span><span class="n">term</span><span class="o">.</span><span class="n">get_location</span><span class="p">()))</span>
+</pre></div>
+</div>
+<p>And the following should assert True with a terminal:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">given_y</span><span class="p">,</span> <span class="n">given_x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">location</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">given_y</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">given_x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">result_y</span><span class="p">,</span> <span class="n">result_x</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">get_location</span><span class="p">()</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">assert</span> <span class="n">given_x</span> <span class="o">==</span> <span class="n">result_x</span><span class="p">,</span> <span class="p">(</span><span class="n">given_x</span><span class="p">,</span> <span class="n">result_x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">assert</span> <span class="n">given_y</span> <span class="o">==</span> <span class="n">result_y</span><span class="p">,</span> <span class="p">(</span><span class="n">given_y</span><span class="p">,</span> <span class="n">result_y</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.fullscreen">
+<code class="sig-name descname">fullscreen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.fullscreen"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.fullscreen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Context manager that switches to secondary screen, restoring on exit.</p>
+<p>Under the hood, this switches between the primary screen buffer and
+the secondary one. The primary one is saved on entry and restored on
+exit.  Likewise, the secondary contents are also stable and are
+faithfully restored on the next entry:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">fullscreen</span><span class="p">():</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is only one primary and one secondary screen buffer.
+<a class="reference internal" href="#blessed.terminal.Terminal.fullscreen" title="blessed.terminal.Terminal.fullscreen"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fullscreen()</span></code></a> calls cannot be nested, only one should be
+entered at a time.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.hidden_cursor">
+<code class="sig-name descname">hidden_cursor</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.hidden_cursor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.hidden_cursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Context manager that hides the cursor, setting visibility on exit.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>with term.hidden_cursor():</dt><dd><p>main()</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#blessed.terminal.Terminal.hidden_cursor" title="blessed.terminal.Terminal.hidden_cursor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">hidden_cursor()</span></code></a> calls cannot be nested: only one
+should be entered at a time.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.move_xy">
+<code class="sig-name descname">move_xy</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.move_xy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.move_xy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A callable string that moves the cursor to the given <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> screen coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – horizontal position, from left, <em>0</em>, to right edge of screen, <em>self.width - 1</em>.</p></li>
+<li><p><strong>y</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – vertical position, from top, <em>0</em>, to bottom of screen, <em>self.height - 1</em>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="formatters.html#blessed.formatters.ParameterizingString" title="blessed.formatters.ParameterizingString">ParameterizingString</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Callable string that moves the cursor to the given coordinates</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.move_yx">
+<code class="sig-name descname">move_yx</code><span class="sig-paren">(</span><em class="sig-param">y</em>, <em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.move_yx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.move_yx" title="Permalink to this definition">¶</a></dt>
+<dd><p>A callable string that moves the cursor to the given <code class="docutils literal notranslate"><span class="pre">(y,</span> <span class="pre">x)</span></code> screen coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – vertical position, from top, <em>0</em>, to bottom of screen, <em>self.height - 1</em>.</p></li>
+<li><p><strong>x</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – horizontal position, from left, <em>0</em>, to right edge of screen, <em>self.width - 1</em>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="formatters.html#blessed.formatters.ParameterizingString" title="blessed.formatters.ParameterizingString">ParameterizingString</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Callable string that moves the cursor to the given coordinates</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.move_left">
+<em class="property">property </em><code class="sig-name descname">move_left</code><a class="headerlink" href="#blessed.terminal.Terminal.move_left" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move cursor 1 cells to the left, or callable string for n&gt;1 cells.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.move_right">
+<em class="property">property </em><code class="sig-name descname">move_right</code><a class="headerlink" href="#blessed.terminal.Terminal.move_right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move cursor 1 or more cells to the right, or callable string for n&gt;1 cells.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.move_up">
+<em class="property">property </em><code class="sig-name descname">move_up</code><a class="headerlink" href="#blessed.terminal.Terminal.move_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move cursor 1 or more cells upwards, or callable string for n&gt;1 cells.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.move_down">
+<em class="property">property </em><code class="sig-name descname">move_down</code><a class="headerlink" href="#blessed.terminal.Terminal.move_down" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move cursor 1 or more cells downwards, or callable string for n&gt;1 cells.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.color">
+<em class="property">property </em><code class="sig-name descname">color</code><a class="headerlink" href="#blessed.terminal.Terminal.color" title="Permalink to this definition">¶</a></dt>
+<dd><p>A callable string that sets the foreground color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="formatters.html#blessed.formatters.ParameterizingString" title="blessed.formatters.ParameterizingString">ParameterizingString</a></p>
+</dd>
+</dl>
+<p>The capability is unparameterized until called and passed a number, at which point it
+returns another string which represents a specific color change. This second string can
+further be called to color a piece of text and set everything back to normal afterward.</p>
+<p>This should not be used directly, but rather a specific color by name or
+<a class="reference internal" href="#blessed.terminal.Terminal.color_rgb" title="blessed.terminal.Terminal.color_rgb"><code class="xref py py-meth docutils literal notranslate"><span class="pre">color_rgb()</span></code></a> value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.color_rgb">
+<code class="sig-name descname">color_rgb</code><span class="sig-paren">(</span><em class="sig-param">red</em>, <em class="sig-param">green</em>, <em class="sig-param">blue</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.color_rgb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.color_rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides callable formatting string to set foreground color to the specified RGB color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>red</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – RGB value of Red.</p></li>
+<li><p><strong>green</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – RGB value of Green.</p></li>
+<li><p><strong>blue</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – RGB value of Blue.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="formatters.html#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString">FormattingString</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Callable string that sets the foreground color</p>
+</dd>
+</dl>
+<p>If the terminal does not support RGB color, the nearest supported
+color will be determined using <a class="reference internal" href="#blessed.terminal.Terminal.color_distance_algorithm" title="blessed.terminal.Terminal.color_distance_algorithm"><code class="xref py py-attr docutils literal notranslate"><span class="pre">color_distance_algorithm</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.on_color">
+<em class="property">property </em><code class="sig-name descname">on_color</code><a class="headerlink" href="#blessed.terminal.Terminal.on_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>A callable capability that sets the background color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="formatters.html#blessed.formatters.ParameterizingString" title="blessed.formatters.ParameterizingString">ParameterizingString</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.on_color_rgb">
+<code class="sig-name descname">on_color_rgb</code><span class="sig-paren">(</span><em class="sig-param">red</em>, <em class="sig-param">green</em>, <em class="sig-param">blue</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.on_color_rgb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.on_color_rgb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides callable formatting string to set background color to the specified RGB color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>red</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – RGB value of Red.</p></li>
+<li><p><strong>green</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – RGB value of Green.</p></li>
+<li><p><strong>blue</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – RGB value of Blue.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="formatters.html#blessed.formatters.FormattingString" title="blessed.formatters.FormattingString">FormattingString</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Callable string that sets the foreground color</p>
+</dd>
+</dl>
+<p>If the terminal does not support RGB color, the nearest supported
+color will be determined using <a class="reference internal" href="#blessed.terminal.Terminal.color_distance_algorithm" title="blessed.terminal.Terminal.color_distance_algorithm"><code class="xref py py-attr docutils literal notranslate"><span class="pre">color_distance_algorithm</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.rgb_downconvert">
+<code class="sig-name descname">rgb_downconvert</code><span class="sig-paren">(</span><em class="sig-param">red</em>, <em class="sig-param">green</em>, <em class="sig-param">blue</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.rgb_downconvert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.rgb_downconvert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translate an RGB color to a color code of the terminal’s color depth.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>red</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – RGB value of Red (0-255).</p></li>
+<li><p><strong>green</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – RGB value of Green (0-255).</p></li>
+<li><p><strong>blue</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – RGB value of Blue (0-255).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)">int</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Color code of downconverted RGB color</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.normal">
+<em class="property">property </em><code class="sig-name descname">normal</code><a class="headerlink" href="#blessed.terminal.Terminal.normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>A capability that resets all video attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">normal</span></code> is an alias for <code class="docutils literal notranslate"><span class="pre">sgr0</span></code> or <code class="docutils literal notranslate"><span class="pre">exit_attribute_mode</span></code>. Any
+styling attributes previously applied, such as foreground or
+background colors, reverse video, or bold are reset to defaults.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.link">
+<code class="sig-name descname">link</code><span class="sig-paren">(</span><em class="sig-param">url</em>, <em class="sig-param">text</em>, <em class="sig-param">url_id=''</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.link"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.link" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display <code class="docutils literal notranslate"><span class="pre">text</span></code> that when touched or clicked, navigates to <code class="docutils literal notranslate"><span class="pre">url</span></code>.</p>
+<p>Optional <code class="docutils literal notranslate"><span class="pre">url_id</span></code> may be specified, so that non-adjacent cells can reference a single
+target, all cells painted with the same “id” will highlight on hover, rather than any
+individual one, as described in “Hovering and underlining the id parameter” of gist
+<a class="reference external" href="https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda">https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><span class="target" id="blessed.terminal.Terminal.link.params.url"></span><strong>url</strong><a class="paramlink headerlink reference internal" href="#blessed.terminal.Terminal.link.params.url">¶</a> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Hyperlink URL.</p></li>
+<li><p><span class="target" id="blessed.terminal.Terminal.link.params.text"></span><strong>text</strong><a class="paramlink headerlink reference internal" href="#blessed.terminal.Terminal.link.params.text">¶</a> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Clickable text.</p></li>
+<li><p><span class="target" id="blessed.terminal.Terminal.link.params.url_id"></span><strong>url_id</strong><a class="paramlink headerlink reference internal" href="#blessed.terminal.Terminal.link.params.url_id">¶</a> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Optional ‘id’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>String of <code class="docutils literal notranslate"><span class="pre">text</span></code> as a hyperlink to <code class="docutils literal notranslate"><span class="pre">url</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.stream">
+<em class="property">property </em><code class="sig-name descname">stream</code><a class="headerlink" href="#blessed.terminal.Terminal.stream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read-only property: stream the terminal outputs to.</p>
+<p>This is a convenience attribute. It is used internally for implied
+writes performed by context managers <a class="reference internal" href="#blessed.terminal.Terminal.hidden_cursor" title="blessed.terminal.Terminal.hidden_cursor"><code class="xref py py-meth docutils literal notranslate"><span class="pre">hidden_cursor()</span></code></a>,
+<a class="reference internal" href="#blessed.terminal.Terminal.fullscreen" title="blessed.terminal.Terminal.fullscreen"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fullscreen()</span></code></a>, <a class="reference internal" href="#blessed.terminal.Terminal.location" title="blessed.terminal.Terminal.location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">location()</span></code></a>, and <a class="reference internal" href="#blessed.terminal.Terminal.keypad" title="blessed.terminal.Terminal.keypad"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypad()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.number_of_colors">
+<em class="property">property </em><code class="sig-name descname">number_of_colors</code><a class="headerlink" href="#blessed.terminal.Terminal.number_of_colors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of colors supported by terminal.</p>
+<p>Common return values are 0, 8, 16, 256, or 1 &lt;&lt; 24.</p>
+<p>This may be used to test whether the terminal supports colors,
+and at what depth, if that’s a concern.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.color_distance_algorithm">
+<em class="property">property </em><code class="sig-name descname">color_distance_algorithm</code><a class="headerlink" href="#blessed.terminal.Terminal.color_distance_algorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Color distance algorithm used by <a class="reference internal" href="#blessed.terminal.Terminal.rgb_downconvert" title="blessed.terminal.Terminal.rgb_downconvert"><code class="xref py py-meth docutils literal notranslate"><span class="pre">rgb_downconvert()</span></code></a>.</p>
+<p>The slowest, but most accurate, ‘cie2000’, is default. Other available options are ‘rgb’,
+‘rgb-weighted’, ‘cie76’, and ‘cie94’.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.ljust">
+<code class="sig-name descname">ljust</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">width=None</em>, <em class="sig-param">fillchar=' '</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.ljust"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.ljust" title="Permalink to this definition">¶</a></dt>
+<dd><p>Left-align <code class="docutils literal notranslate"><span class="pre">text</span></code>, which may contain terminal sequences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – String to be aligned</p></li>
+<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Total width to fill with aligned text. If
+unspecified, the whole width of the terminal is filled.</p></li>
+<li><p><strong>fillchar</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – String for padding the right of <code class="docutils literal notranslate"><span class="pre">text</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>String of <code class="docutils literal notranslate"><span class="pre">text</span></code>, left-aligned by <code class="docutils literal notranslate"><span class="pre">width</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.rjust">
+<code class="sig-name descname">rjust</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">width=None</em>, <em class="sig-param">fillchar=' '</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.rjust"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.rjust" title="Permalink to this definition">¶</a></dt>
+<dd><p>Right-align <code class="docutils literal notranslate"><span class="pre">text</span></code>, which may contain terminal sequences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – String to be aligned</p></li>
+<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Total width to fill with aligned text. If
+unspecified, the whole width of the terminal is used.</p></li>
+<li><p><strong>fillchar</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – String for padding the left of <code class="docutils literal notranslate"><span class="pre">text</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>String of <code class="docutils literal notranslate"><span class="pre">text</span></code>, right-aligned by <code class="docutils literal notranslate"><span class="pre">width</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.center">
+<code class="sig-name descname">center</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">width=None</em>, <em class="sig-param">fillchar=' '</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.center"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center <code class="docutils literal notranslate"><span class="pre">text</span></code>, which may contain terminal sequences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – String to be centered</p></li>
+<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Total width in which to center text. If
+unspecified, the whole width of the terminal is used.</p></li>
+<li><p><strong>fillchar</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – String for padding the left and right of <code class="docutils literal notranslate"><span class="pre">text</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>String of <code class="docutils literal notranslate"><span class="pre">text</span></code>, centered by <code class="docutils literal notranslate"><span class="pre">width</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.length">
+<code class="sig-name descname">length</code><span class="sig-paren">(</span><em class="sig-param">text</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.length"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return printable length of a string containing sequences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – String to measure. May contain terminal sequences.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)">int</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The number of terminal character cells the string will occupy
+when printed</p>
+</dd>
+</dl>
+<p>Wide characters that consume 2 character cells are supported:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">term</span><span class="o">.</span><span class="n">length</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">clear</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">red</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;コンニチハ&#39;</span><span class="p">))</span>
+<span class="go">10</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sequences such as ‘clear’, which is considered as a
+“movement sequence” because it would move the cursor to
+(y, x)(0, 0), are evaluated as a printable length of
+<em>0</em>.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.strip">
+<code class="sig-name descname">strip</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">chars=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.strip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.strip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">text</span></code> without sequences and leading or trailing whitespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Text with leading and trailing whitespace removed</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39; </span><span class="se">\x1b</span><span class="s1">[0;3m xyz &#39;</span><span class="p">)</span>
+<span class="go">u&#39;xyz&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.rstrip">
+<code class="sig-name descname">rstrip</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">chars=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.rstrip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.rstrip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">text</span></code> without terminal sequences or trailing whitespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Text with terminal sequences and trailing whitespace removed</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39; </span><span class="se">\x1b</span><span class="s1">[0;3m xyz &#39;</span><span class="p">)</span>
+<span class="go">u&#39;  xyz&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.lstrip">
+<code class="sig-name descname">lstrip</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">chars=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.lstrip"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.lstrip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">text</span></code> without terminal sequences or leading whitespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Text with terminal sequences and leading whitespace removed</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39; </span><span class="se">\x1b</span><span class="s1">[0;3m xyz &#39;</span><span class="p">)</span>
+<span class="go">u&#39;xyz &#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.strip_seqs">
+<code class="sig-name descname">strip_seqs</code><span class="sig-paren">(</span><em class="sig-param">text</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.strip_seqs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.strip_seqs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">text</span></code> stripped of only its terminal sequences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Text with terminal sequences removed</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span><span class="o">.</span><span class="n">strip_seqs</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[0;3mxyz&#39;</span><span class="p">)</span>
+<span class="go">u&#39;xyz&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">term</span><span class="o">.</span><span class="n">strip_seqs</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">cuf</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">red</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;test&#39;</span><span class="p">))</span>
+<span class="go">u&#39;     test&#39;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Non-destructive sequences that adjust horizontal distance
+(such as <code class="docutils literal notranslate"><span class="pre">\b</span></code> or <code class="docutils literal notranslate"><span class="pre">term.cuf(5)</span></code>) are replaced by destructive
+space or erasing.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.split_seqs">
+<code class="sig-name descname">split_seqs</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">**kwds</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.split_seqs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.split_seqs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">text</span></code> split by individual character elements and sequences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – String containing sequences</p></li>
+<li><p><strong>kwds</strong> – remaining keyword arguments for <a class="reference external" href="https://docs.python.org/3/library/re.html#re.split" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.split()</span></code></a>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of sequences and individual characters</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span><span class="o">.</span><span class="n">split_seqs</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">underline</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;xyz&#39;</span><span class="p">))</span>
+<span class="go">[&#39;\x1b[4m&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;, &#39;\x1b(B&#39;, &#39;\x1b[m&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.wrap">
+<code class="sig-name descname">wrap</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">width=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.wrap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.wrap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text-wrap a string, returning a list of wrapped lines.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Unlike <a class="reference external" href="https://docs.python.org/3/library/textwrap.html#textwrap.wrap" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">textwrap.wrap()</span></code></a>, <code class="docutils literal notranslate"><span class="pre">text</span></code> may contain
+terminal sequences, such as colors, bold, or underline. By
+default, tabs in <code class="docutils literal notranslate"><span class="pre">text</span></code> are expanded by
+<code class="xref py py-func docutils literal notranslate"><span class="pre">string.expandtabs()</span></code>.</p></li>
+<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Unlike <a class="reference external" href="https://docs.python.org/3/library/textwrap.html#textwrap.wrap" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">textwrap.wrap()</span></code></a>, <code class="docutils literal notranslate"><span class="pre">width</span></code> will
+default to the width of the attached terminal.</p></li>
+<li><p><strong>kwargs</strong> – See <a class="reference external" href="https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">textwrap.TextWrapper</span></code></a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)">list</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of wrapped lines</p>
+</dd>
+</dl>
+<p>See <a class="reference external" href="https://docs.python.org/3/library/textwrap.html#textwrap.TextWrapper" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">textwrap.TextWrapper</span></code></a> for keyword arguments that can
+customize wrapping behaviour.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.getch">
+<code class="sig-name descname">getch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.getch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.getch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read, decode, and return the next byte from the keyboard stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>unicode</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a single unicode character, or <code class="docutils literal notranslate"><span class="pre">u''</span></code> if a multi-byte
+sequence has not yet been fully received.</p>
+</dd>
+</dl>
+<p>This method name and behavior mimics curses <code class="docutils literal notranslate"><span class="pre">getch(void)</span></code>, and
+it supports <a class="reference internal" href="#blessed.terminal.Terminal.inkey" title="blessed.terminal.Terminal.inkey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">inkey()</span></code></a>, reading only one byte from
+the keyboard string at a time. This method should always return
+without blocking if called after <a class="reference internal" href="#blessed.terminal.Terminal.kbhit" title="blessed.terminal.Terminal.kbhit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">kbhit()</span></code></a> has returned True.</p>
+<p>Implementors of alternate input stream methods should override
+this method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.ungetch">
+<code class="sig-name descname">ungetch</code><span class="sig-paren">(</span><em class="sig-param">text</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.ungetch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.ungetch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Buffer input data to be discovered by next call to <a class="reference internal" href="#blessed.terminal.Terminal.inkey" title="blessed.terminal.Terminal.inkey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">inkey()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – String to be buffered as keyboard input.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.kbhit">
+<code class="sig-name descname">kbhit</code><span class="sig-paren">(</span><em class="sig-param">timeout=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.kbhit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.kbhit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether a keypress has been detected on the keyboard.</p>
+<p>This method is used by <a class="reference internal" href="#blessed.terminal.Terminal.inkey" title="blessed.terminal.Terminal.inkey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">inkey()</span></code></a> to determine if a byte may
+be read using <a class="reference internal" href="#blessed.terminal.Terminal.getch" title="blessed.terminal.Terminal.getch"><code class="xref py py-meth docutils literal notranslate"><span class="pre">getch()</span></code></a> without blocking.  The standard
+implementation simply uses the <a class="reference external" href="https://docs.python.org/3/library/select.html#select.select" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">select.select()</span></code></a> call on stdin.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – When <code class="docutils literal notranslate"><span class="pre">timeout</span></code> is 0, this call is
+non-blocking, otherwise blocking indefinitely until keypress
+is detected when None (default). When <code class="docutils literal notranslate"><span class="pre">timeout</span></code> is a
+positive number, returns after <code class="docutils literal notranslate"><span class="pre">timeout</span></code> seconds have
+elapsed (float).</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)">bool</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if a keypress is awaiting to be read on the keyboard
+attached to this terminal.  When input is not a terminal, False is
+always returned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.cbreak">
+<code class="sig-name descname">cbreak</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.cbreak"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.cbreak" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow each keystroke to be read immediately after it is pressed.</p>
+<p>This is a context manager for <a class="reference external" href="https://docs.python.org/3/library/tty.html#tty.setcbreak" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">tty.setcbreak()</span></code></a>.</p>
+<p>This context manager activates ‘rare’ mode, the opposite of ‘cooked’
+mode: On entry, <a class="reference external" href="https://docs.python.org/3/library/tty.html#tty.setcbreak" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">tty.setcbreak()</span></code></a> mode is activated disabling
+line-buffering of keyboard input and turning off automatic echo of
+input as output.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must explicitly print any user input you would like
+displayed.  If you provide any kind of editing, you must handle
+backspace and other line-editing control functions in this mode
+as well!</p>
+</div>
+<p><strong>Normally</strong>, characters received from the keyboard cannot be read
+by Python until the <em>Return</em> key is pressed. Also known as <em>cooked</em> or
+<em>canonical input</em> mode, it allows the tty driver to provide
+line-editing before shuttling the input to your program and is the
+(implicit) default terminal mode set by most unix shells before
+executing programs.</p>
+<p>Technically, this context manager sets the <a class="reference external" href="https://docs.python.org/3/library/termios.html#module-termios" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">termios</span></code></a> attributes
+of the terminal attached to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.__stdin__" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sys.__stdin__</span></code></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="https://docs.python.org/3/library/tty.html#tty.setcbreak" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">tty.setcbreak()</span></code></a> sets <code class="docutils literal notranslate"><span class="pre">VMIN</span> <span class="pre">=</span> <span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">VTIME</span> <span class="pre">=</span> <span class="pre">0</span></code>,
+see <a class="reference external" href="http://www.unixwiz.net/techtips/termios-vmin-vtime.html">http://www.unixwiz.net/techtips/termios-vmin-vtime.html</a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.raw">
+<code class="sig-name descname">raw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.raw"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>A context manager for <a class="reference external" href="https://docs.python.org/3/library/tty.html#tty.setraw" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">tty.setraw()</span></code></a>.</p>
+<p>Although both <code class="xref py py-meth docutils literal notranslate"><span class="pre">break()</span></code> and <a class="reference internal" href="#blessed.terminal.Terminal.raw" title="blessed.terminal.Terminal.raw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">raw()</span></code></a> modes allow each keystroke
+to be read immediately after it is pressed, Raw mode disables
+processing of input and output.</p>
+<p>In cbreak mode, special input characters such as <code class="docutils literal notranslate"><span class="pre">^C</span></code> or <code class="docutils literal notranslate"><span class="pre">^S</span></code> are
+interpreted by the terminal driver and excluded from the stdin stream.
+In raw mode these values are receive by the <a class="reference internal" href="#blessed.terminal.Terminal.inkey" title="blessed.terminal.Terminal.inkey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">inkey()</span></code></a> method.</p>
+<p>Because output processing is not done, the newline <code class="docutils literal notranslate"><span class="pre">'\n'</span></code> is not
+enough, you must also print carriage return to ensure that the cursor
+is returned to the first column:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">raw</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;printing in raw mode&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\r\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.keypad">
+<code class="sig-name descname">keypad</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.keypad"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.keypad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Context manager that enables directional keypad input.</p>
+<p>On entrying, this puts the terminal into “keyboard_transmit” mode by
+emitting the keypad_xmit (smkx) capability. On exit, it emits
+keypad_local (rmkx).</p>
+<p>On an IBM-PC keyboard with numeric keypad of terminal-type <em>xterm</em>,
+with numlock off, the lower-left diagonal key transmits sequence
+<code class="docutils literal notranslate"><span class="pre">\\x1b[F</span></code>, translated to <a class="reference internal" href="#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> attribute
+<code class="docutils literal notranslate"><span class="pre">KEY_END</span></code>.</p>
+<p>However, upon entering <a class="reference internal" href="#blessed.terminal.Terminal.keypad" title="blessed.terminal.Terminal.keypad"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypad()</span></code></a>, <code class="docutils literal notranslate"><span class="pre">\\x1b[OF</span></code> is transmitted,
+translating to <code class="docutils literal notranslate"><span class="pre">KEY_LL</span></code> (lower-left key), allowing you to determine
+diagonal direction keys.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.terminal.Terminal.inkey">
+<code class="sig-name descname">inkey</code><span class="sig-paren">(</span><em class="sig-param">timeout=None</em>, <em class="sig-param">esc_delay=0.35</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/terminal.html#Terminal.inkey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.Terminal.inkey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read and return the next keyboard event within given timeout.</p>
+<p>Generally, this should be used inside the <a class="reference internal" href="#blessed.terminal.Terminal.raw" title="blessed.terminal.Terminal.raw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">raw()</span></code></a> context manager.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – Number of seconds to wait for a keystroke before
+returning.  When <code class="docutils literal notranslate"><span class="pre">None</span></code> (default), this method may block
+indefinitely.</p></li>
+<li><p><strong>esc_delay</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><em>float</em></a>) – To distinguish between the keystroke of
+<code class="docutils literal notranslate"><span class="pre">KEY_ESCAPE</span></code>, and sequences beginning with escape, the parameter
+<code class="docutils literal notranslate"><span class="pre">esc_delay</span></code> specifies the amount of time after receiving escape
+(<code class="docutils literal notranslate"><span class="pre">chr(27)</span></code>) to seek for the completion of an application key
+before returning a <a class="reference internal" href="keyboard.html#blessed.keyboard.Keystroke" title="blessed.keyboard.Keystroke"><code class="xref py py-class docutils literal notranslate"><span class="pre">Keystroke</span></code></a> instance for
+<code class="docutils literal notranslate"><span class="pre">KEY_ESCAPE</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="keyboard.html#blessed.keyboard.Keystroke" title="blessed.keyboard.Keystroke"><code class="xref py py-class docutils literal notranslate"><span class="pre">Keystroke</span></code></a>.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="keyboard.html#blessed.keyboard.Keystroke" title="blessed.keyboard.Keystroke"><code class="xref py py-class docutils literal notranslate"><span class="pre">Keystroke</span></code></a>, which may be empty (<code class="docutils literal notranslate"><span class="pre">u''</span></code>) if
+<code class="docutils literal notranslate"><span class="pre">timeout</span></code> is specified and keystroke is not received.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When used without the context manager <a class="reference internal" href="#blessed.terminal.Terminal.cbreak" title="blessed.terminal.Terminal.cbreak"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cbreak()</span></code></a>, or
+<a class="reference internal" href="#blessed.terminal.Terminal.raw" title="blessed.terminal.Terminal.raw"><code class="xref py py-meth docutils literal notranslate"><span class="pre">raw()</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.__stdin__" title="(in Python v3.8)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sys.__stdin__</span></code></a> remains line-buffered, and this
+function will block until the return key is pressed!</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="blessed.terminal.WINSZ">
+<em class="property">class </em><code class="sig-name descname">WINSZ</code><a class="reference internal" href="../_modules/blessed/terminal.html#WINSZ"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.terminal.WINSZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure represents return value of <code class="xref py py-const docutils literal notranslate"><span class="pre">termios.TIOCGWINSZ</span></code>.</p>
+<dl class="attribute">
+<dt id="blessed.terminal.WINSZ.ws_row">
+<code class="sig-name descname">ws_row</code><a class="headerlink" href="#blessed.terminal.WINSZ.ws_row" title="Permalink to this definition">¶</a></dt>
+<dd><p>rows, in characters</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="blessed.terminal.WINSZ.ws_col">
+<code class="sig-name descname">ws_col</code><a class="headerlink" href="#blessed.terminal.WINSZ.ws_col" title="Permalink to this definition">¶</a></dt>
+<dd><p>columns, in characters</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="blessed.terminal.WINSZ.ws_xpixel">
+<code class="sig-name descname">ws_xpixel</code><a class="headerlink" href="#blessed.terminal.WINSZ.ws_xpixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>horizontal size, pixels</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="blessed.terminal.WINSZ.ws_ypixel">
+<code class="sig-name descname">ws_ypixel</code><a class="headerlink" href="#blessed.terminal.WINSZ.ws_ypixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>vertical size, pixels</p>
+</dd></dl>
+
+<p>Create new instance of WINSZ(ws_row, ws_col, ws_xpixel, ws_ypixel)</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="blessed.terminal._CUR_TERM">
+<code class="sig-name descname">_CUR_TERM</code><em class="property"> = 'dumb'</em><a class="headerlink" href="#blessed.terminal._CUR_TERM" title="Permalink to this definition">¶</a></dt>
+<dd><p>str(object=’’) -&gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</p>
+<p>Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.__str__() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to ‘strict’.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../project.html" class="btn btn-neutral float-right" title="Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sequences.html" class="btn btn-neutral float-left" title="sequences.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    .wy-nav-content { max-width: 900px; }
+  </style>
+
+
+
+</body>
+</html>

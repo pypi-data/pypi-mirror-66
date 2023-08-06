@@ -1,0 +1,656 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>blessed.keyboard &mdash; Blessed 1.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../keyboard.html">Keyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../location.html">Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measuring.html">Measuring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../project.html">Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>blessed.keyboard</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for blessed.keyboard</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Sub-module providing &#39;keyboard awareness&#39;.&quot;&quot;&quot;</span>
+
+<span class="c1"># std imports</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">platform</span>
+
+<span class="c1"># 3rd party</span>
+<span class="kn">import</span> <span class="nn">six</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="c1"># python 2.6 requires 3rd party library (backport)</span>
+    <span class="kn">from</span> <span class="nn">ordereddict</span> <span class="kn">import</span> <span class="n">OrderedDict</span>  <span class="c1"># pylint: disable=import-error</span>
+
+<span class="c1"># curses</span>
+<span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Windows&#39;</span><span class="p">:</span>
+    <span class="c1"># pylint: disable=import-error</span>
+    <span class="kn">import</span> <span class="nn">jinxed</span> <span class="k">as</span> <span class="nn">curses</span>
+    <span class="kn">from</span> <span class="nn">jinxed.has_key</span> <span class="kn">import</span> <span class="n">_capability_names</span> <span class="k">as</span> <span class="n">capability_names</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">curses</span>
+    <span class="kn">from</span> <span class="nn">curses.has_key</span> <span class="kn">import</span> <span class="n">_capability_names</span> <span class="k">as</span> <span class="n">capability_names</span>
+
+
+<div class="viewcode-block" id="Keystroke"><a class="viewcode-back" href="../../api/keyboard.html#blessed.keyboard.Keystroke">[docs]</a><span class="k">class</span> <span class="nc">Keystroke</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A unicode-derived class for describing a single keystroke.</span>
+
+<span class="sd">    A class instance describes a single keystroke received on input,</span>
+<span class="sd">    which may contain multiple characters as a multibyte sequence,</span>
+<span class="sd">    which is indicated by properties :attr:`is_sequence` returning</span>
+<span class="sd">    ``True``.</span>
+
+<span class="sd">    When the string is a known sequence, :attr:`code` matches terminal</span>
+<span class="sd">    class attributes for comparison, such as ``term.KEY_LEFT``.</span>
+
+<span class="sd">    The string-name of the sequence, such as ``u&#39;KEY_LEFT&#39;`` is accessed</span>
+<span class="sd">    by property :attr:`name`, and is used by the :meth:`__repr__` method</span>
+<span class="sd">    to display a human-readable form of the Keystroke this class</span>
+<span class="sd">    instance represents. It may otherwise by joined, split, or evaluated</span>
+<span class="sd">    just as as any other unicode string.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Keystroke.__new__"><a class="viewcode-back" href="../../api/keyboard.html#blessed.keyboard.Keystroke.__new__">[docs]</a>    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">ucs</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Class constructor.&quot;&quot;&quot;</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">ucs</span><span class="p">)</span>
+        <span class="n">new</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">new</span><span class="o">.</span><span class="n">_code</span> <span class="o">=</span> <span class="n">code</span>
+        <span class="k">return</span> <span class="n">new</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_sequence</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Whether the value represents a multibyte sequence (bool).&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_code</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Docstring overwritten.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">)</span>
+    <span class="fm">__repr__</span><span class="o">.</span><span class="vm">__doc__</span> <span class="o">=</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="o">.</span><span class="vm">__doc__</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;String-name of key sequence, such as ``u&#39;KEY_LEFT&#39;`` (str).&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">code</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Integer keycode value of multibyte sequence (int).&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_code</span></div>
+
+
+<span class="k">def</span> <span class="nf">get_curses_keycodes</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return mapping of curses key-names paired by their keycode integer value.</span>
+
+<span class="sd">    :rtype: dict</span>
+<span class="sd">    :returns: Dictionary of (name, code) pairs for curses keyboard constant</span>
+<span class="sd">        values and their mnemonic name. Such as code ``260``, with the value of</span>
+<span class="sd">        its key-name identity, ``u&#39;KEY_LEFT&#39;``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_keynames</span> <span class="o">=</span> <span class="p">[</span><span class="n">attr</span> <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">curses</span><span class="p">)</span>
+                 <span class="k">if</span> <span class="n">attr</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;KEY_&#39;</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">((</span><span class="n">keyname</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">curses</span><span class="p">,</span> <span class="n">keyname</span><span class="p">))</span>
+                <span class="k">for</span> <span class="n">keyname</span> <span class="ow">in</span> <span class="n">_keynames</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="get_keyboard_codes"><a class="viewcode-back" href="../../api/keyboard.html#blessed.keyboard.get_keyboard_codes">[docs]</a><span class="k">def</span> <span class="nf">get_keyboard_codes</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return mapping of keycode integer values paired by their curses key-name.</span>
+
+<span class="sd">    :rtype: dict</span>
+<span class="sd">    :returns: Dictionary of (code, name) pairs for curses keyboard constant</span>
+<span class="sd">        values and their mnemonic name. Such as key ``260``, with the value of</span>
+<span class="sd">        its identity, ``u&#39;KEY_LEFT&#39;``.</span>
+
+<span class="sd">    These keys are derived from the attributes by the same of the curses module,</span>
+<span class="sd">    with the following exceptions:</span>
+
+<span class="sd">    * ``KEY_DELETE`` in place of ``KEY_DC``</span>
+<span class="sd">    * ``KEY_INSERT`` in place of ``KEY_IC``</span>
+<span class="sd">    * ``KEY_PGUP`` in place of ``KEY_PPAGE``</span>
+<span class="sd">    * ``KEY_PGDOWN`` in place of ``KEY_NPAGE``</span>
+<span class="sd">    * ``KEY_ESCAPE`` in place of ``KEY_EXIT``</span>
+<span class="sd">    * ``KEY_SUP`` in place of ``KEY_SR``</span>
+<span class="sd">    * ``KEY_SDOWN`` in place of ``KEY_SF``</span>
+
+<span class="sd">    This function is the inverse of :func:`get_curses_keycodes`.  With the</span>
+<span class="sd">    given override &quot;mixins&quot; listed above, the keycode for the delete key will</span>
+<span class="sd">    map to our imaginary ``KEY_DELETE`` mnemonic, effectively erasing the</span>
+<span class="sd">    phrase ``KEY_DC`` from our code vocabulary for anyone that wishes to use</span>
+<span class="sd">    the return value to determine the key-name by keycode.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">keycodes</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">(</span><span class="n">get_curses_keycodes</span><span class="p">())</span>
+    <span class="n">keycodes</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">CURSES_KEYCODE_OVERRIDE_MIXIN</span><span class="p">)</span>
+    <span class="c1"># merge _CURSES_KEYCODE_ADDINS added to our module space</span>
+    <span class="n">keycodes</span><span class="o">.</span><span class="n">update</span><span class="p">((</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;KEY_&#39;</span><span class="p">))</span>
+
+    <span class="c1"># invert dictionary (key, values) =&gt; (values, key), preferring the</span>
+    <span class="c1"># last-most inserted value (&#39;KEY_DELETE&#39; over &#39;KEY_DC&#39;).</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">keycodes</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">keycodes</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span></div>
+
+
+<div class="viewcode-block" id="_alternative_left_right"><a class="viewcode-back" href="../../api/keyboard.html#blessed.keyboard._alternative_left_right">[docs]</a><span class="k">def</span> <span class="nf">_alternative_left_right</span><span class="p">(</span><span class="n">term</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Determine and return mapping of left and right arrow keys sequences.</span>
+
+<span class="sd">    :arg blessed.Terminal term: :class:`~.Terminal` instance.</span>
+<span class="sd">    :rtype: dict</span>
+<span class="sd">    :returns: Dictionary of sequences ``term._cuf1``, and ``term._cub1``,</span>
+<span class="sd">        valued as ``KEY_RIGHT``, ``KEY_LEFT`` (when appropriate).</span>
+
+<span class="sd">    This function supports :func:`get_terminal_sequences` to discover</span>
+<span class="sd">    the preferred input sequence for the left and right application keys.</span>
+
+<span class="sd">    It is necessary to check the value of these sequences to ensure we do not</span>
+<span class="sd">    use ``u&#39; &#39;`` and ``u&#39;\b&#39;`` for ``KEY_RIGHT`` and ``KEY_LEFT``,</span>
+<span class="sd">    preferring their true application key sequence, instead.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># pylint: disable=protected-access</span>
+    <span class="n">keymap</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">term</span><span class="o">.</span><span class="n">_cuf1</span> <span class="ow">and</span> <span class="n">term</span><span class="o">.</span><span class="n">_cuf1</span> <span class="o">!=</span> <span class="sa">u</span><span class="s1">&#39; &#39;</span><span class="p">:</span>
+        <span class="n">keymap</span><span class="p">[</span><span class="n">term</span><span class="o">.</span><span class="n">_cuf1</span><span class="p">]</span> <span class="o">=</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_RIGHT</span>
+    <span class="k">if</span> <span class="n">term</span><span class="o">.</span><span class="n">_cub1</span> <span class="ow">and</span> <span class="n">term</span><span class="o">.</span><span class="n">_cub1</span> <span class="o">!=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\b</span><span class="s1">&#39;</span><span class="p">:</span>
+        <span class="n">keymap</span><span class="p">[</span><span class="n">term</span><span class="o">.</span><span class="n">_cub1</span><span class="p">]</span> <span class="o">=</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_LEFT</span>
+    <span class="k">return</span> <span class="n">keymap</span></div>
+
+
+<div class="viewcode-block" id="get_keyboard_sequences"><a class="viewcode-back" href="../../api/keyboard.html#blessed.keyboard.get_keyboard_sequences">[docs]</a><span class="k">def</span> <span class="nf">get_keyboard_sequences</span><span class="p">(</span><span class="n">term</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return mapping of keyboard sequences paired by keycodes.</span>
+
+<span class="sd">    :arg blessed.Terminal term: :class:`~.Terminal` instance.</span>
+<span class="sd">    :returns: mapping of keyboard unicode sequences paired by keycodes</span>
+<span class="sd">        as integer.  This is used as the argument ``mapper`` to</span>
+<span class="sd">        the supporting function :func:`resolve_sequence`.</span>
+<span class="sd">    :rtype: OrderedDict</span>
+
+<span class="sd">    Initialize and return a keyboard map and sequence lookup table,</span>
+<span class="sd">    (sequence, keycode) from :class:`~.Terminal` instance ``term``,</span>
+<span class="sd">    where ``sequence`` is a multibyte input sequence of unicode</span>
+<span class="sd">    characters, such as ``u&#39;\x1b[D&#39;``, and ``keycode`` is an integer</span>
+<span class="sd">    value, matching curses constant such as term.KEY_LEFT.</span>
+
+<span class="sd">    The return value is an OrderedDict instance, with their keys</span>
+<span class="sd">    sorted longest-first.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># A small gem from curses.has_key that makes this all possible,</span>
+    <span class="c1"># _capability_names: a lookup table of terminal capability names for</span>
+    <span class="c1"># keyboard sequences (fe. kcub1, key_left), keyed by the values of</span>
+    <span class="c1"># constants found beginning with KEY_ in the main curses module</span>
+    <span class="c1"># (such as KEY_LEFT).</span>
+    <span class="c1">#</span>
+    <span class="c1"># latin1 encoding is used so that bytes in 8-bit range of 127-255</span>
+    <span class="c1"># have equivalent chr() and unichr() values, so that the sequence</span>
+    <span class="c1"># of a kermit or avatar terminal, for example, remains unchanged</span>
+    <span class="c1"># in its byte sequence values even when represented by unicode.</span>
+    <span class="c1">#</span>
+    <span class="n">sequence_map</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">((</span>
+        <span class="p">(</span><span class="n">seq</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;latin1&#39;</span><span class="p">),</span> <span class="n">val</span><span class="p">)</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span>
+            <span class="p">(</span><span class="n">curses</span><span class="o">.</span><span class="n">tigetstr</span><span class="p">(</span><span class="n">cap</span><span class="p">),</span> <span class="n">val</span><span class="p">)</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">cap</span><span class="p">)</span> <span class="ow">in</span> <span class="n">capability_names</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="p">)</span> <span class="k">if</span> <span class="n">seq</span>
+    <span class="p">)</span> <span class="k">if</span> <span class="n">term</span><span class="o">.</span><span class="n">does_styling</span> <span class="k">else</span> <span class="p">())</span>
+
+    <span class="n">sequence_map</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">_alternative_left_right</span><span class="p">(</span><span class="n">term</span><span class="p">))</span>
+    <span class="n">sequence_map</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">DEFAULT_SEQUENCE_MIXIN</span><span class="p">)</span>
+
+    <span class="c1"># This is for fast lookup matching of sequences, preferring</span>
+    <span class="c1"># full-length sequence such as (&#39;\x1b[D&#39;, KEY_LEFT)</span>
+    <span class="c1"># over simple sequences such as (&#39;\x1b&#39;, KEY_EXIT).</span>
+    <span class="k">return</span> <span class="n">OrderedDict</span><span class="p">((</span>
+        <span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">sequence_map</span><span class="p">[</span><span class="n">seq</span><span class="p">])</span> <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span>
+            <span class="n">sequence_map</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)))</span></div>
+
+
+<span class="k">def</span> <span class="nf">get_leading_prefixes</span><span class="p">(</span><span class="n">sequences</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return a set of proper prefixes for given sequence of strings.</span>
+
+<span class="sd">    :arg iterable sequences</span>
+<span class="sd">    :rtype: set</span>
+<span class="sd">    :return: Set of all string prefixes</span>
+
+<span class="sd">    Given an iterable of strings, all textparts leading up to the final</span>
+<span class="sd">    string is returned as a unique set.  This function supports the</span>
+<span class="sd">    :meth:`~.Terminal.inkey` method by determining whether the given</span>
+<span class="sd">    input is a sequence that **may** lead to a final matching pattern.</span>
+
+<span class="sd">    &gt;&gt;&gt; prefixes([&#39;abc&#39;, &#39;abdf&#39;, &#39;e&#39;, &#39;jkl&#39;])</span>
+<span class="sd">    set([u&#39;a&#39;, u&#39;ab&#39;, u&#39;abd&#39;, u&#39;j&#39;, u&#39;jk&#39;])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">seq</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">seq</span> <span class="ow">in</span> <span class="n">sequences</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">)))</span>
+
+
+<span class="k">def</span> <span class="nf">resolve_sequence</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">mapper</span><span class="p">,</span> <span class="n">codes</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return a single :class:`Keystroke` instance for given sequence ``text``.</span>
+
+<span class="sd">    :arg str text: string of characters received from terminal input stream.</span>
+<span class="sd">    :arg OrderedDict mapper: unicode multibyte sequences, such as ``u&#39;\x1b[D&#39;``</span>
+<span class="sd">        paired by their integer value (260)</span>
+<span class="sd">    :arg dict codes: a :type:`dict` of integer values (such as 260) paired</span>
+<span class="sd">        by their mnemonic name, such as ``&#39;KEY_LEFT&#39;``.</span>
+<span class="sd">    :rtype: Keystroke</span>
+<span class="sd">    :returns: Keystroke instance for the given sequence</span>
+
+<span class="sd">    The given ``text`` may extend beyond a matching sequence, such as</span>
+<span class="sd">    ``u\x1b[Dxxx`` returns a :class:`Keystroke` instance of attribute</span>
+<span class="sd">    :attr:`Keystroke.sequence` valued only ``u\x1b[D``.  It is up to</span>
+<span class="sd">    calls to determine that ``xxx`` remains unresolved.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">sequence</span><span class="p">,</span> <span class="n">code</span> <span class="ow">in</span> <span class="n">mapper</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">Keystroke</span><span class="p">(</span><span class="n">ucs</span><span class="o">=</span><span class="n">sequence</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="n">code</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">codes</span><span class="p">[</span><span class="n">code</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">Keystroke</span><span class="p">(</span><span class="n">ucs</span><span class="o">=</span><span class="n">text</span> <span class="ow">and</span> <span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">or</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_time_left</span><span class="p">(</span><span class="n">stime</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return time remaining since ``stime`` before given ``timeout``.</span>
+
+<span class="sd">    This function assists determining the value of ``timeout`` for</span>
+<span class="sd">    class method :meth:`~.Terminal.kbhit` and similar functions.</span>
+
+<span class="sd">    :arg float stime: starting time for measurement</span>
+<span class="sd">    :arg float timeout: timeout period, may be set to None to</span>
+<span class="sd">       indicate no timeout (where None is always returned).</span>
+<span class="sd">    :rtype: float or int</span>
+<span class="sd">    :returns: time remaining as float. If no time is remaining,</span>
+<span class="sd">       then the integer ``0`` is returned.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">timeout</span> <span class="o">-</span> <span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">stime</span><span class="p">))</span> <span class="k">if</span> <span class="n">timeout</span> <span class="k">else</span> <span class="n">timeout</span>
+
+
+<span class="k">def</span> <span class="nf">_read_until</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convenience read-until-pattern function, supporting :meth:`~.get_location`.</span>
+
+<span class="sd">    :arg blessed.Terminal term: :class:`~.Terminal` instance.</span>
+<span class="sd">    :arg float timeout: timeout period, may be set to None to indicate no</span>
+<span class="sd">        timeout (where 0 is always returned).</span>
+<span class="sd">    :arg str pattern: target regular expression pattern to seek.</span>
+<span class="sd">    :rtype: tuple</span>
+<span class="sd">    :returns: tuple in form of ``(match, str)``, *match*</span>
+<span class="sd">        may be :class:`re.MatchObject` if pattern is discovered</span>
+<span class="sd">        in input stream before timeout has elapsed, otherwise</span>
+<span class="sd">        None. ``str`` is any remaining text received exclusive</span>
+<span class="sd">        of the matching pattern).</span>
+
+<span class="sd">    The reason a tuple containing non-matching data is returned, is that the</span>
+<span class="sd">    consumer should push such data back into the input buffer by</span>
+<span class="sd">    :meth:`~.Terminal.ungetch` if any was received.</span>
+
+<span class="sd">    For example, when a user is performing rapid input keystrokes while its</span>
+<span class="sd">    terminal emulator surreptitiously responds to this in-band sequence, we</span>
+<span class="sd">    must ensure any such keyboard data is well-received by the next call to</span>
+<span class="sd">    term.inkey() without delay.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">stime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">match</span><span class="p">,</span> <span class="n">buf</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span>
+
+    <span class="c1"># first, buffer all pending data. pexpect library provides a</span>
+    <span class="c1"># &#39;searchwindowsize&#39; attribute that limits this memory region.  We&#39;re not</span>
+    <span class="c1"># concerned about OOM conditions: only (human) keyboard input and terminal</span>
+    <span class="c1"># response sequences are expected.</span>
+
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>  <span class="c1"># pragma: no branch</span>
+        <span class="c1"># block as long as necessary to ensure at least one character is</span>
+        <span class="c1"># received on input or remaining timeout has elapsed.</span>
+        <span class="n">ucs</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">inkey</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">_time_left</span><span class="p">(</span><span class="n">stime</span><span class="p">,</span> <span class="n">timeout</span><span class="p">))</span>
+        <span class="c1"># while the keyboard buffer is &quot;hot&quot; (has input), we continue to</span>
+        <span class="c1"># aggregate all awaiting data.  We do this to ensure slow I/O</span>
+        <span class="c1"># calls do not unnecessarily give up within the first &#39;while&#39; loop</span>
+        <span class="c1"># for short timeout periods.</span>
+        <span class="k">while</span> <span class="n">ucs</span><span class="p">:</span>
+            <span class="n">buf</span> <span class="o">+=</span> <span class="n">ucs</span>
+            <span class="n">ucs</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">inkey</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="o">=</span><span class="n">pattern</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="n">buf</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">match</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># match</span>
+            <span class="k">break</span>
+
+        <span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">_time_left</span><span class="p">(</span><span class="n">stime</span><span class="p">,</span> <span class="n">timeout</span><span class="p">):</span>
+            <span class="c1"># timeout</span>
+            <span class="k">break</span>
+
+    <span class="k">return</span> <span class="n">match</span><span class="p">,</span> <span class="n">buf</span>
+
+
+<span class="c1">#: Though we may determine *keynames* and codes for keyboard input that</span>
+<span class="c1">#: generate multibyte sequences, it is also especially useful to aliases</span>
+<span class="c1">#: a few basic ASCII characters such as ``KEY_TAB`` instead of ``u&#39;\t&#39;`` for</span>
+<span class="c1">#: uniformity.</span>
+<span class="c1">#:</span>
+<span class="c1">#: Furthermore, many key-names for application keys enabled only by context</span>
+<span class="c1">#: manager :meth:`~.Terminal.keypad` are surprisingly absent.  We inject them</span>
+<span class="c1">#: here directly into the curses module.</span>
+<span class="n">_CURSES_KEYCODE_ADDINS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s1">&#39;TAB&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_MULTIPLY&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_ADD&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_SEPARATOR&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_SUBTRACT&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_DECIMAL&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_DIVIDE&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_EQUAL&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_0&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_2&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_3&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_4&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_5&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_6&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_7&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_8&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;KP_9&#39;</span><span class="p">)</span>
+
+<span class="n">_LASTVAL</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">get_curses_keycodes</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">keycode_name</span> <span class="ow">in</span> <span class="n">_CURSES_KEYCODE_ADDINS</span><span class="p">:</span>
+    <span class="n">_LASTVAL</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">globals</span><span class="p">()[</span><span class="s1">&#39;KEY_&#39;</span> <span class="o">+</span> <span class="n">keycode_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">_LASTVAL</span>
+
+<span class="c1">#: In a perfect world, terminal emulators would always send exactly what</span>
+<span class="c1">#: the terminfo(5) capability database plans for them, accordingly by the</span>
+<span class="c1">#: value of the ``TERM`` name they declare.</span>
+<span class="c1">#:</span>
+<span class="c1">#: But this isn&#39;t a perfect world. Many vt220-derived terminals, such as</span>
+<span class="c1">#: those declaring &#39;xterm&#39;, will continue to send vt220 codes instead of</span>
+<span class="c1">#: their native-declared codes, for backwards-compatibility.</span>
+<span class="c1">#:</span>
+<span class="c1">#: This goes for many: rxvt, putty, iTerm.</span>
+<span class="c1">#:</span>
+<span class="c1">#: These &quot;mixins&quot; are used for *all* terminals, regardless of their type.</span>
+<span class="c1">#:</span>
+<span class="c1">#: Furthermore, curses does not provide sequences sent by the keypad,</span>
+<span class="c1">#: at least, it does not provide a way to distinguish between keypad 0</span>
+<span class="c1">#: and numeric 0.</span>
+<span class="n">DEFAULT_SEQUENCE_MIXIN</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="c1"># these common control characters (and 127, ctrl+&#39;?&#39;) mapped to</span>
+    <span class="c1"># an application key definition.</span>
+    <span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">unichr</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_ENTER</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">unichr</span><span class="p">(</span><span class="mi">13</span><span class="p">),</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_ENTER</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">unichr</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_BACKSPACE</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">unichr</span><span class="p">(</span><span class="mi">9</span><span class="p">),</span> <span class="n">KEY_TAB</span><span class="p">),</span>  <span class="c1"># noqa  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">unichr</span><span class="p">(</span><span class="mi">27</span><span class="p">),</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_EXIT</span><span class="p">),</span>
+    <span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">unichr</span><span class="p">(</span><span class="mi">127</span><span class="p">),</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_BACKSPACE</span><span class="p">),</span>
+
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[A&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_UP</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[B&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_DOWN</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[C&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_RIGHT</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[D&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_LEFT</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[F&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_END</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[H&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_HOME</span><span class="p">),</span>
+    <span class="c1"># not sure where these are from .. please report</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[K&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_END</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[U&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_NPAGE</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[V&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_PPAGE</span><span class="p">),</span>
+
+    <span class="c1"># keys sent after term.smkx (keypad_xmit) is emitted, source:</span>
+    <span class="c1"># http://www.xfree86.org/current/ctlseqs.html#PC-Style%20Function%20Keys</span>
+    <span class="c1"># http://fossies.org/linux/rxvt/doc/rxvtRef.html#KeyCodes</span>
+    <span class="c1">#</span>
+    <span class="c1"># keypad, numlock on</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">OM&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_ENTER</span><span class="p">),</span>  <span class="c1"># noqa return</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Oj&quot;</span><span class="p">,</span> <span class="n">KEY_KP_MULTIPLY</span><span class="p">),</span>   <span class="c1"># noqa *  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Ok&quot;</span><span class="p">,</span> <span class="n">KEY_KP_ADD</span><span class="p">),</span>        <span class="c1"># noqa +  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Ol&quot;</span><span class="p">,</span> <span class="n">KEY_KP_SEPARATOR</span><span class="p">),</span>  <span class="c1"># noqa ,  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Om&quot;</span><span class="p">,</span> <span class="n">KEY_KP_SUBTRACT</span><span class="p">),</span>   <span class="c1"># noqa -  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">On&quot;</span><span class="p">,</span> <span class="n">KEY_KP_DECIMAL</span><span class="p">),</span>    <span class="c1"># noqa .  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Oo&quot;</span><span class="p">,</span> <span class="n">KEY_KP_DIVIDE</span><span class="p">),</span>     <span class="c1"># noqa /  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">OX&quot;</span><span class="p">,</span> <span class="n">KEY_KP_EQUAL</span><span class="p">),</span>      <span class="c1"># noqa =  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Op&quot;</span><span class="p">,</span> <span class="n">KEY_KP_0</span><span class="p">),</span>          <span class="c1"># noqa 0  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Oq&quot;</span><span class="p">,</span> <span class="n">KEY_KP_1</span><span class="p">),</span>          <span class="c1"># noqa 1  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Or&quot;</span><span class="p">,</span> <span class="n">KEY_KP_2</span><span class="p">),</span>          <span class="c1"># noqa 2  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Os&quot;</span><span class="p">,</span> <span class="n">KEY_KP_3</span><span class="p">),</span>          <span class="c1"># noqa 3  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Ot&quot;</span><span class="p">,</span> <span class="n">KEY_KP_4</span><span class="p">),</span>          <span class="c1"># noqa 4  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Ou&quot;</span><span class="p">,</span> <span class="n">KEY_KP_5</span><span class="p">),</span>          <span class="c1"># noqa 5  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Ov&quot;</span><span class="p">,</span> <span class="n">KEY_KP_6</span><span class="p">),</span>          <span class="c1"># noqa 6  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Ow&quot;</span><span class="p">,</span> <span class="n">KEY_KP_7</span><span class="p">),</span>          <span class="c1"># noqa 7  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Ox&quot;</span><span class="p">,</span> <span class="n">KEY_KP_8</span><span class="p">),</span>          <span class="c1"># noqa 8  # pylint: disable=undefined-variable</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">Oy&quot;</span><span class="p">,</span> <span class="n">KEY_KP_9</span><span class="p">),</span>          <span class="c1"># noqa 9  # pylint: disable=undefined-variable</span>
+
+    <span class="c1"># keypad, numlock off</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[1~&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_FIND</span><span class="p">),</span>         <span class="c1"># find</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[2~&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_IC</span><span class="p">),</span>           <span class="c1"># insert (0)</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[3~&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_DC</span><span class="p">),</span>           <span class="c1"># delete (.), &quot;Execute&quot;</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[4~&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_SELECT</span><span class="p">),</span>       <span class="c1"># select</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[5~&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_PPAGE</span><span class="p">),</span>        <span class="c1"># pgup   (9)</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[6~&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_NPAGE</span><span class="p">),</span>        <span class="c1"># pgdown (3)</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[7~&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_HOME</span><span class="p">),</span>         <span class="c1"># home</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[8~&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_END</span><span class="p">),</span>          <span class="c1"># end</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[OA&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_UP</span><span class="p">),</span>           <span class="c1"># up     (8)</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[OB&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_DOWN</span><span class="p">),</span>         <span class="c1"># down   (2)</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[OC&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_RIGHT</span><span class="p">),</span>        <span class="c1"># right  (6)</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[OD&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_LEFT</span><span class="p">),</span>         <span class="c1"># left   (4)</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[OF&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_END</span><span class="p">),</span>          <span class="c1"># end    (1)</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[OH&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_HOME</span><span class="p">),</span>         <span class="c1"># home   (7)</span>
+
+    <span class="c1"># The vt220 placed F1-F4 above the keypad, in place of actual</span>
+    <span class="c1"># F1-F4 were local functions (hold screen, print screen,</span>
+    <span class="c1"># set up, data/talk, break).</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">OP&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_F1</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">OQ&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_F2</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">OR&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_F3</span><span class="p">),</span>
+    <span class="p">(</span><span class="sa">u</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">OS&quot;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_F4</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="c1">#: Override mixins for a few curses constants with easier</span>
+<span class="c1">#: mnemonics: there may only be a 1:1 mapping when only a</span>
+<span class="c1">#: keycode (int) is given, where these phrases are preferred.</span>
+<span class="n">CURSES_KEYCODE_OVERRIDE_MIXIN</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s1">&#39;KEY_DELETE&#39;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_DC</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;KEY_INSERT&#39;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_IC</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;KEY_PGUP&#39;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_PPAGE</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;KEY_PGDOWN&#39;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_NPAGE</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;KEY_ESCAPE&#39;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_EXIT</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;KEY_SUP&#39;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_SR</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;KEY_SDOWN&#39;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_SF</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;KEY_UP_LEFT&#39;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_A1</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;KEY_UP_RIGHT&#39;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_A3</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;KEY_CENTER&#39;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_B2</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;KEY_BEGIN&#39;</span><span class="p">,</span> <span class="n">curses</span><span class="o">.</span><span class="n">KEY_BEG</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Keystroke&#39;</span><span class="p">,</span> <span class="s1">&#39;get_keyboard_codes&#39;</span><span class="p">,</span> <span class="s1">&#39;get_keyboard_sequences&#39;</span><span class="p">,)</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    .wy-nav-content { max-width: 900px; }
+  </style>
+
+
+
+</body>
+</html>

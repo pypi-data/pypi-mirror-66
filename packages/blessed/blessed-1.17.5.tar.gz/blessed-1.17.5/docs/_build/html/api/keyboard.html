@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>keyboard.py &mdash; Blessed 1.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="sequences.py" href="sequences.html" />
+    <link rel="prev" title="formatters.py" href="formatters.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../keyboard.html">Keyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../location.html">Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../measuring.html">Measuring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">API Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="color.html">color.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="colorspace.html">colorspace.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="formatters.html">formatters.py</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">keyboard.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sequences.html">sequences.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="terminal.html">terminal.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project.html">Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">API Documentation</a> &raquo;</li>
+        
+      <li>keyboard.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/keyboard.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-blessed.keyboard">
+<span id="keyboard-py"></span><h1>keyboard.py<a class="headerlink" href="#module-blessed.keyboard" title="Permalink to this headline">¶</a></h1>
+<p>Sub-module providing ‘keyboard awareness’.</p>
+<dl class="class">
+<dt id="blessed.keyboard.Keystroke">
+<em class="property">class </em><code class="sig-name descname">Keystroke</code><a class="reference internal" href="../_modules/blessed/keyboard.html#Keystroke"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.keyboard.Keystroke" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unicode-derived class for describing a single keystroke.</p>
+<p>A class instance describes a single keystroke received on input,
+which may contain multiple characters as a multibyte sequence,
+which is indicated by properties <a class="reference internal" href="#blessed.keyboard.Keystroke.is_sequence" title="blessed.keyboard.Keystroke.is_sequence"><code class="xref py py-attr docutils literal notranslate"><span class="pre">is_sequence</span></code></a> returning
+<code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p>When the string is a known sequence, <a class="reference internal" href="#blessed.keyboard.Keystroke.code" title="blessed.keyboard.Keystroke.code"><code class="xref py py-attr docutils literal notranslate"><span class="pre">code</span></code></a> matches terminal
+class attributes for comparison, such as <code class="docutils literal notranslate"><span class="pre">term.KEY_LEFT</span></code>.</p>
+<p>The string-name of the sequence, such as <code class="docutils literal notranslate"><span class="pre">u'KEY_LEFT'</span></code> is accessed
+by property <a class="reference internal" href="#blessed.keyboard.Keystroke.name" title="blessed.keyboard.Keystroke.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a>, and is used by the <code class="xref py py-meth docutils literal notranslate"><span class="pre">__repr__()</span></code> method
+to display a human-readable form of the Keystroke this class
+instance represents. It may otherwise by joined, split, or evaluated
+just as as any other unicode string.</p>
+<p>Class constructor.</p>
+<dl class="method">
+<dt id="blessed.keyboard.Keystroke.__new__">
+<em class="property">static </em><code class="sig-name descname">__new__</code><span class="sig-paren">(</span><em class="sig-param">cls</em>, <em class="sig-param">ucs=''</em>, <em class="sig-param">code=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/keyboard.html#Keystroke.__new__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.keyboard.Keystroke.__new__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class constructor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.keyboard.Keystroke.is_sequence">
+<em class="property">property </em><code class="sig-name descname">is_sequence</code><a class="headerlink" href="#blessed.keyboard.Keystroke.is_sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the value represents a multibyte sequence (bool).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.keyboard.Keystroke.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#blessed.keyboard.Keystroke.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>String-name of key sequence, such as <code class="docutils literal notranslate"><span class="pre">u'KEY_LEFT'</span></code> (str).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="blessed.keyboard.Keystroke.code">
+<em class="property">property </em><code class="sig-name descname">code</code><a class="headerlink" href="#blessed.keyboard.Keystroke.code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Integer keycode value of multibyte sequence (int).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="blessed.keyboard.get_keyboard_codes">
+<code class="sig-name descname">get_keyboard_codes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/keyboard.html#get_keyboard_codes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.keyboard.get_keyboard_codes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return mapping of keycode integer values paired by their curses key-name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)">dict</a></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary of (code, name) pairs for curses keyboard constant
+values and their mnemonic name. Such as key <code class="docutils literal notranslate"><span class="pre">260</span></code>, with the value of
+its identity, <code class="docutils literal notranslate"><span class="pre">u'KEY_LEFT'</span></code>.</p>
+</dd>
+</dl>
+<p>These keys are derived from the attributes by the same of the curses module,
+with the following exceptions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">KEY_DELETE</span></code> in place of <code class="docutils literal notranslate"><span class="pre">KEY_DC</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KEY_INSERT</span></code> in place of <code class="docutils literal notranslate"><span class="pre">KEY_IC</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KEY_PGUP</span></code> in place of <code class="docutils literal notranslate"><span class="pre">KEY_PPAGE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KEY_PGDOWN</span></code> in place of <code class="docutils literal notranslate"><span class="pre">KEY_NPAGE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KEY_ESCAPE</span></code> in place of <code class="docutils literal notranslate"><span class="pre">KEY_EXIT</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KEY_SUP</span></code> in place of <code class="docutils literal notranslate"><span class="pre">KEY_SR</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">KEY_SDOWN</span></code> in place of <code class="docutils literal notranslate"><span class="pre">KEY_SF</span></code></p></li>
+</ul>
+<p>This function is the inverse of <code class="xref py py-func docutils literal notranslate"><span class="pre">get_curses_keycodes()</span></code>.  With the
+given override “mixins” listed above, the keycode for the delete key will
+map to our imaginary <code class="docutils literal notranslate"><span class="pre">KEY_DELETE</span></code> mnemonic, effectively erasing the
+phrase <code class="docutils literal notranslate"><span class="pre">KEY_DC</span></code> from our code vocabulary for anyone that wishes to use
+the return value to determine the key-name by keycode.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="blessed.keyboard.get_keyboard_sequences">
+<code class="sig-name descname">get_keyboard_sequences</code><span class="sig-paren">(</span><em class="sig-param">term</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/keyboard.html#get_keyboard_sequences"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.keyboard.get_keyboard_sequences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return mapping of keyboard sequences paired by keycodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>term</strong> (<em>blessed.Terminal</em>) – <a class="reference internal" href="terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> instance.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>mapping of keyboard unicode sequences paired by keycodes
+as integer.  This is used as the argument <code class="docutils literal notranslate"><span class="pre">mapper</span></code> to
+the supporting function <code class="xref py py-func docutils literal notranslate"><span class="pre">resolve_sequence()</span></code>.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>OrderedDict</p>
+</dd>
+</dl>
+<p>Initialize and return a keyboard map and sequence lookup table,
+(sequence, keycode) from <a class="reference internal" href="terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> instance <code class="docutils literal notranslate"><span class="pre">term</span></code>,
+where <code class="docutils literal notranslate"><span class="pre">sequence</span></code> is a multibyte input sequence of unicode
+characters, such as <code class="docutils literal notranslate"><span class="pre">u'\x1b[D'</span></code>, and <code class="docutils literal notranslate"><span class="pre">keycode</span></code> is an integer
+value, matching curses constant such as term.KEY_LEFT.</p>
+<p>The return value is an OrderedDict instance, with their keys
+sorted longest-first.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="blessed.keyboard._alternative_left_right">
+<code class="sig-name descname">_alternative_left_right</code><span class="sig-paren">(</span><em class="sig-param">term</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/blessed/keyboard.html#_alternative_left_right"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#blessed.keyboard._alternative_left_right" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine and return mapping of left and right arrow keys sequences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>term</strong> (<em>blessed.Terminal</em>) – <a class="reference internal" href="terminal.html#blessed.terminal.Terminal" title="blessed.terminal.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Terminal</span></code></a> instance.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)">dict</a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Dictionary of sequences <code class="docutils literal notranslate"><span class="pre">term._cuf1</span></code>, and <code class="docutils literal notranslate"><span class="pre">term._cub1</span></code>,
+valued as <code class="docutils literal notranslate"><span class="pre">KEY_RIGHT</span></code>, <code class="docutils literal notranslate"><span class="pre">KEY_LEFT</span></code> (when appropriate).</p>
+</dd>
+</dl>
+<p>This function supports <code class="xref py py-func docutils literal notranslate"><span class="pre">get_terminal_sequences()</span></code> to discover
+the preferred input sequence for the left and right application keys.</p>
+<p>It is necessary to check the value of these sequences to ensure we do not
+use <code class="docutils literal notranslate"><span class="pre">u'</span> <span class="pre">'</span></code> and <code class="docutils literal notranslate"><span class="pre">u'\b'</span></code> for <code class="docutils literal notranslate"><span class="pre">KEY_RIGHT</span></code> and <code class="docutils literal notranslate"><span class="pre">KEY_LEFT</span></code>,
+preferring their true application key sequence, instead.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="blessed.keyboard.DEFAULT_SEQUENCE_MIXIN">
+<code class="sig-name descname">DEFAULT_SEQUENCE_MIXIN</code><em class="property"> = (('\n', 343), ('\r', 343), ('\x08', 263), ('\t', 512), ('\x1b', 361), ('\x7f', 263), ('\x1b[A', 259), ('\x1b[B', 258), ('\x1b[C', 261), ('\x1b[D', 260), ('\x1b[F', 360), ('\x1b[H', 262), ('\x1b[K', 360), ('\x1b[U', 338), ('\x1b[V', 339), ('\x1bOM', 343), ('\x1bOj', 513), ('\x1bOk', 514), ('\x1bOl', 515), ('\x1bOm', 516), ('\x1bOn', 517), ('\x1bOo', 518), ('\x1bOX', 519), ('\x1bOp', 520), ('\x1bOq', 521), ('\x1bOr', 522), ('\x1bOs', 523), ('\x1bOt', 524), ('\x1bOu', 525), ('\x1bOv', 526), ('\x1bOw', 527), ('\x1bOx', 528), ('\x1bOy', 529), ('\x1b[1~', 362), ('\x1b[2~', 331), ('\x1b[3~', 330), ('\x1b[4~', 385), ('\x1b[5~', 339), ('\x1b[6~', 338), ('\x1b[7~', 262), ('\x1b[8~', 360), ('\x1b[OA', 259), ('\x1b[OB', 258), ('\x1b[OC', 261), ('\x1b[OD', 260), ('\x1b[OF', 360), ('\x1b[OH', 262), ('\x1bOP', 265), ('\x1bOQ', 266), ('\x1bOR', 267), ('\x1bOS', 268))</em><a class="headerlink" href="#blessed.keyboard.DEFAULT_SEQUENCE_MIXIN" title="Permalink to this definition">¶</a></dt>
+<dd><p>In a perfect world, terminal emulators would always send exactly what
+the terminfo(5) capability database plans for them, accordingly by the
+value of the <code class="docutils literal notranslate"><span class="pre">TERM</span></code> name they declare.</p>
+<p>But this isn’t a perfect world. Many vt220-derived terminals, such as
+those declaring ‘xterm’, will continue to send vt220 codes instead of
+their native-declared codes, for backwards-compatibility.</p>
+<p>This goes for many: rxvt, putty, iTerm.</p>
+<p>These “mixins” are used for <em>all</em> terminals, regardless of their type.</p>
+<p>Furthermore, curses does not provide sequences sent by the keypad,
+at least, it does not provide a way to distinguish between keypad 0
+and numeric 0.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="blessed.keyboard.CURSES_KEYCODE_OVERRIDE_MIXIN">
+<code class="sig-name descname">CURSES_KEYCODE_OVERRIDE_MIXIN</code><em class="property"> = (('KEY_DELETE', 330), ('KEY_INSERT', 331), ('KEY_PGUP', 339), ('KEY_PGDOWN', 338), ('KEY_ESCAPE', 361), ('KEY_SUP', 337), ('KEY_SDOWN', 336), ('KEY_UP_LEFT', 348), ('KEY_UP_RIGHT', 349), ('KEY_CENTER', 350), ('KEY_BEGIN', 354))</em><a class="headerlink" href="#blessed.keyboard.CURSES_KEYCODE_OVERRIDE_MIXIN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override mixins for a few curses constants with easier
+mnemonics: there may only be a 1:1 mapping when only a
+keycode (int) is given, where these phrases are preferred.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="blessed.keyboard._CURSES_KEYCODE_ADDINS">
+<code class="sig-name descname">_CURSES_KEYCODE_ADDINS</code><em class="property"> = ('TAB', 'KP_MULTIPLY', 'KP_ADD', 'KP_SEPARATOR', 'KP_SUBTRACT', 'KP_DECIMAL', 'KP_DIVIDE', 'KP_EQUAL', 'KP_0', 'KP_1', 'KP_2', 'KP_3', 'KP_4', 'KP_5', 'KP_6', 'KP_7', 'KP_8', 'KP_9')</em><a class="headerlink" href="#blessed.keyboard._CURSES_KEYCODE_ADDINS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Though we may determine <em>keynames</em> and codes for keyboard input that
+generate multibyte sequences, it is also especially useful to aliases
+a few basic ASCII characters such as <code class="docutils literal notranslate"><span class="pre">KEY_TAB</span></code> instead of <code class="docutils literal notranslate"><span class="pre">u'\t'</span></code> for
+uniformity.</p>
+<p>Furthermore, many key-names for application keys enabled only by context
+manager <a class="reference internal" href="terminal.html#blessed.terminal.Terminal.keypad" title="blessed.terminal.Terminal.keypad"><code class="xref py py-meth docutils literal notranslate"><span class="pre">keypad()</span></code></a> are surprisingly absent.  We inject them
+here directly into the curses module.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sequences.html" class="btn btn-neutral float-right" title="sequences.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="formatters.html" class="btn btn-neutral float-left" title="formatters.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    .wy-nav-content { max-width: 900px; }
+  </style>
+
+
+
+</body>
+</html>

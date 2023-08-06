@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction &mdash; Blessed 1.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Terminal" href="terminal.html" />
+    <link rel="prev" title="Welcome to Blessed documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#brief-overview">Brief Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#before-and-after">Before And After</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keyboard.html">Keyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="location.html">Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="measuring.html">Measuring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/intro.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="line-block">
+<div class="line"><a class="reference external" href="https://pypi.org/project/blessed/"><img alt="Downloads" src="https://img.shields.io/pypi/dm/blessed.svg?logo=pypi" /></a> <a class="reference external" href="https://codecov.io/gh/jquast/blessed/"><img alt="codecov.io Code Coverage" src="https://codecov.io/gh/jquast/blessed/branch/master/graph/badge.svg" /></a> <img alt="Windows supported" src="https://img.shields.io/badge/Windows-NEW-success?logo=windows" /> <img alt="Linux supported" src="https://img.shields.io/badge/Linux-yes-success?logo=linux" /> <img alt="MacOS supported" src="https://img.shields.io/badge/MacOS-yes-success?logo=apple" /> <img alt="BSD supported" src="https://img.shields.io/badge/BSD-yes-success?logo=freebsd" /></div>
+</div>
+<div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Blessed is an easy, practical <em>library</em> for making <em>terminal</em> apps, by providing an elegant,
+well-documented interface to <a class="reference external" href="https://blessed.readthedocs.io/en/stable/colors.html">Colors</a>, <a class="reference external" href="https://blessed.readthedocs.io/en/stable/keyboard.html">Keyboard</a> input, and screen position and <a class="reference external" href="https://blessed.readthedocs.io/en/stable/location.html">Location</a>
+capabilities.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">home</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">clear</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">move_y</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">height</span> <span class="o">//</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">black_on_darkkhaki</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="s1">&#39;press any key to continue.&#39;</span><span class="p">)))</span>
+
+<span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">cbreak</span><span class="p">(),</span> <span class="n">term</span><span class="o">.</span><span class="n">hidden_cursor</span><span class="p">():</span>
+    <span class="n">inp</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">inkey</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">move_down</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;You pressed &#39;</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">bold</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">inp</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="Animation of running the code example" src="https://dxtz6bzwq9sxx.cloudfront.net/demo_basic_intro.gif" />
+</div>
+<p>It’s meant to be <em>fun</em> and <em>easy</em>, to do basic terminal graphics and styling with Python using
+<em>blessed</em>. <a class="reference external" href="https://blessed.readthedocs.io/en/stable/terminal.html">Terminal</a> is the only class you need to import and the only object you should need for
+Terminal capabilities.</p>
+<p>Whether you want to improve CLI apps with colors, or make fullscreen applications or games,
+<em>blessed</em> should help get you started quickly. Your users will love it because it works on Windows,
+Mac, and Linux, and you will love it because it has plenty of documentation and examples!</p>
+<p>Full documentation at <a class="reference external" href="https://blessed.readthedocs.io/en/latest/">https://blessed.readthedocs.io/en/latest/</a></p>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id2">
+<img alt="Animations of x11-colorpicker.py, bounce.py, worms.py, and plasma.py" src="https://dxtz6bzwq9sxx.cloudfront.net/blessed_demo_intro.gif" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://blessed.readthedocs.io/en/stable/examples.html#x11-colorpicker-py">x11-colorpicker.py</a>, <a class="reference external" href="https://blessed.readthedocs.io/en/stable/examples.html#bounce-py">bounce.py</a>, <a class="reference external" href="https://blessed.readthedocs.io/en/stable/examples.html#worms-py">worms.py</a>, and <a class="reference external" href="https://blessed.readthedocs.io/en/stable/examples.html#plasma-py">plasma.py</a>, from our repository.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Exemplary 3rd-party examples which use <em>blessed</em>,</p>
+<div class="figure align-default" id="id3">
+<img alt="Screenshot of 'Voltron' (By the author of Voltron, from their README)." src="https://dxtz6bzwq9sxx.cloudfront.net/demo_3rdparty_voltron.png" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://github.com/snare/voltron">Voltron</a> is an extensible debugger UI toolkit written in Python</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id4">
+<img alt="Animation of 'cursewords' (By the author of cursewords, from their README)." src="https://dxtz6bzwq9sxx.cloudfront.net/demo_3rdparty_cursewords.gif" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://github.com/thisisparker/cursewords">cursewords</a> is “graphical” command line program for solving crossword puzzles in the terminal.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id5">
+<img alt="Animation of 'githeat.interactive', using blessed repository at the time of capture." src="https://dxtz6bzwq9sxx.cloudfront.net/demo_3rdparty_githeat.gif" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://github.com/AmmsA/Githeat">GitHeat</a> builds an interactive heatmap of git history.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id6">
+<img alt="Animations from 'Dashing' (By the author of Dashing, from their README)" src="https://dxtz6bzwq9sxx.cloudfront.net/demo_3rdparty_dashing.gif" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://github.com/FedericoCeratto/dashing">Dashing</a> is a library to quickly create terminal-based dashboards.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id7">
+<img alt="Animations from 'Enlighten' (By the author of Enlighten, from their README)" src="https://dxtz6bzwq9sxx.cloudfront.net/demo_3rdparty_enlighten.gif" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://github.com/Rockhopper-Technologies/enlighten">Enlighten</a> is a console progress bar library that allows simultaneous output without redirection.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id8">
+<img alt="Demonstration of 'macht', a 2048 clone" src="https://dxtz6bzwq9sxx.cloudfront.net/blessed_3rdparty_macht.gif" />
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://github.com/rolfmorel/macht">macht</a> is a clone of the (briefly popular) puzzle game, 2048.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p><em>Blessed</em> works with Windows, Mac, Linux, and BSD’s, on Python 2.7, 3.4, 3.5, 3.6, 3.7, and 3.8.</p>
+</div>
+<div class="section" id="brief-overview">
+<h2>Brief Overview<a class="headerlink" href="#brief-overview" title="Permalink to this headline">¶</a></h2>
+<p><em>Blessed</em> is more than just a Python wrapper around <a class="reference external" href="https://docs.python.org/3/library/curses.html">curses</a>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://blessed.readthedocs.io/en/stable/terminal.html#styles">Styles</a>, <a class="reference external" href="https://blessed.readthedocs.io/en/stable/colors.html">Colors</a>, and maybe a little positioning without necessarily clearing the whole screen
+first.</p></li>
+<li><p>Works great with Python’s new <a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#f-strings">f-strings</a> or any other kind of string formatting.</p></li>
+<li><p>Provides up-to-the-moment <a class="reference external" href="https://blessed.readthedocs.io/en/stable/location.html">Location</a> and terminal height and width, so you can respond to terminal
+size changes.</p></li>
+<li><p>Avoids making a mess if the output gets piped to a non-terminal, you can output sequences to any
+file-like object such as <em>StringIO</em>, files, pipes or sockets.</p></li>
+<li><p>Uses <a class="reference external" href="https://invisible-island.net/ncurses/man/terminfo.5.html">terminfo(5)</a> so it works with any terminal type and capability: No more C-like calls to
+<a class="reference external" href="http://man.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man3/tigetstr.3">tigetstr</a> and <a class="reference external" href="http://man.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man3/tparm.3">tparm</a>.</p></li>
+<li><p>Non-obtrusive calls to only the capabilities database ensures that you are free to mix and match
+with calls to any other curses application code or library you like.</p></li>
+<li><p>Provides context managers <a class="reference external" href="https://blessed.readthedocs.io/en/latest/api/terminal.html#blessed.terminal.Terminal.fullscreen">Terminal.fullscreen()</a> and <a class="reference external" href="https://blessed.readthedocs.io/en/latest/api/terminal.html#blessed.terminal.Terminal.hidden_cursor">Terminal.hidden_cursor()</a> to safely
+express terminal modes, curses development will no longer fudge up your shell.</p></li>
+<li><p>Act intelligently when somebody redirects your output to a file, omitting all of the special
+sequences colors, but still containing all of the text.</p></li>
+</ul>
+<p><em>Blessed</em> is a fork of <a class="reference external" href="https://github.com/erikrose/blessings">blessings</a>, which does all of
+the same above with the same API, as well as following <strong>enhancements</strong>:</p>
+<ul class="simple">
+<li><p>Windows support, new since Dec. 2019!</p></li>
+<li><p>Dead-simple keyboard handling: safely decoding unicode input in your system’s preferred locale and
+supports application/arrow keys.</p></li>
+<li><p>24-bit color support, using <a class="reference external" href="https://blessed.readthedocs.io/en/stable/api/terminal.html#blessed.terminal.Terminal.color_rgb">Terminal.color_rgb()</a> and <a class="reference external" href="https://blessed.readthedocs.io/en/stable/api/terminal.html#blessed.terminal.Terminal.on_color_rgb">Terminal.on_color_rgb()</a> and all X11
+<a class="reference external" href="https://blessed.readthedocs.io/en/stable/colors.html">Colors</a> by name, and not by number.</p></li>
+<li><p>Determine cursor location using <a class="reference external" href="https://blessed.readthedocs.io/en/latest/location.html#finding-the-cursor">Terminal.get_location()</a>, enter key-at-a-time input mode using
+<a class="reference external" href="https://blessed.readthedocs.io/en/stable/api/terminal.html#blessed.terminal.Terminal.cbreak">Terminal.cbreak()</a> or <a class="reference external" href="https://blessed.readthedocs.io/en/stable/api/terminal.html#blessed.terminal.Terminal.raw">Terminal.raw()</a> context managers, and read timed key presses using
+<a class="reference external" href="https://blessed.readthedocs.io/en/stable/api/terminal.html#blessed.terminal.Terminal.inkey">Terminal.inkey()</a>.</p></li>
+<li><p>Allows the <em>printable length</em> of strings that contain sequences to be determined by
+<a class="reference external" href="https://blessed.readthedocs.io/en/stable/api/terminal.html#blessed.terminal.Terminal.length">Terminal.length()</a>, supporting additional methods <a class="reference external" href="https://blessed.readthedocs.io/en/stable/api/terminal.html#blessed.terminal.Terminal.wrap">Terminal.wrap()</a> and <a class="reference external" href="https://blessed.readthedocs.io/en/stable/api/terminal.html#blessed.terminal.Terminal.center">Terminal.center()</a>,
+terminal-aware variants of the built-in function <a class="reference external" href="https://docs.python.org/3/library/textwrap.html#textwrap.wrap">textwrap.wrap()</a> and method <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str.center">str.center()</a>,
+respectively.</p></li>
+<li><p>Allows sequences to be removed from strings that contain them, using <a class="reference external" href="https://blessed.readthedocs.io/en/stable/api/terminal.html#blessed.terminal.Terminal.strip_seqs">Terminal.strip_seqs()</a> or
+sequences and whitespace using <a class="reference external" href="https://blessed.readthedocs.io/en/stable/api/terminal.html#blessed.terminal.Terminal.strip">Terminal.strip()</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="before-and-after">
+<h2>Before And After<a class="headerlink" href="#before-and-after" title="Permalink to this headline">¶</a></h2>
+<p>With the built-in <a class="reference external" href="https://docs.python.org/3/library/curses.html">curses</a> module, this is how you would typically
+print some underlined text at the bottom of the screen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">curses</span> <span class="kn">import</span> <span class="n">tigetstr</span><span class="p">,</span> <span class="n">setupterm</span><span class="p">,</span> <span class="n">tparm</span>
+<span class="kn">from</span> <span class="nn">fcntl</span> <span class="kn">import</span> <span class="n">ioctl</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">isatty</span>
+<span class="kn">import</span> <span class="nn">struct</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">termios</span> <span class="kn">import</span> <span class="n">TIOCGWINSZ</span>
+
+<span class="c1"># If we want to tolerate having our output piped to other commands or</span>
+<span class="c1"># files without crashing, we need to do all this branching:</span>
+<span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="s1">&#39;fileno&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">isatty</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">fileno</span><span class="p">()):</span>
+    <span class="n">setupterm</span><span class="p">()</span>
+    <span class="n">sc</span> <span class="o">=</span> <span class="n">tigetstr</span><span class="p">(</span><span class="s1">&#39;sc&#39;</span><span class="p">)</span>
+    <span class="n">cup</span> <span class="o">=</span> <span class="n">tigetstr</span><span class="p">(</span><span class="s1">&#39;cup&#39;</span><span class="p">)</span>
+    <span class="n">rc</span> <span class="o">=</span> <span class="n">tigetstr</span><span class="p">(</span><span class="s1">&#39;rc&#39;</span><span class="p">)</span>
+    <span class="n">underline</span> <span class="o">=</span> <span class="n">tigetstr</span><span class="p">(</span><span class="s1">&#39;smul&#39;</span><span class="p">)</span>
+    <span class="n">normal</span> <span class="o">=</span> <span class="n">tigetstr</span><span class="p">(</span><span class="s1">&#39;sgr0&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">sc</span> <span class="o">=</span> <span class="n">cup</span> <span class="o">=</span> <span class="n">rc</span> <span class="o">=</span> <span class="n">underline</span> <span class="o">=</span> <span class="n">normal</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="c1"># Save cursor position.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sc</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">cup</span><span class="p">:</span>
+    <span class="c1"># tigetnum(&#39;lines&#39;) doesn&#39;t always update promptly, hence this:</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;hhhh&#39;</span><span class="p">,</span> <span class="n">ioctl</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">TIOCGWINSZ</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\000</span><span class="s1">&#39;</span> <span class="o">*</span> <span class="mi">8</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># Move cursor to bottom.</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tparm</span><span class="p">(</span><span class="n">cup</span><span class="p">,</span> <span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is </span><span class="si">{under}</span><span class="s1">underlined</span><span class="si">{normal}</span><span class="s1">!&#39;</span>
+      <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">under</span><span class="o">=</span><span class="n">underline</span><span class="p">,</span> <span class="n">normal</span><span class="o">=</span><span class="n">normal</span><span class="p">))</span>
+
+<span class="c1"># Restore cursor position.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rc</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The same program with <em>Blessed</em> is simply:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">location</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is &#39;</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">underline</span><span class="p">(</span><span class="s1">&#39;underlined&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="terminal.html" class="btn btn-neutral float-right" title="Terminal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Blessed documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    .wy-nav-content { max-width: 900px; }
+  </style>
+
+
+
+</body>
+</html>

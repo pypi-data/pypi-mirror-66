@@ -1,0 +1,705 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>blessed.formatters &mdash; Blessed 1.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../keyboard.html">Keyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../location.html">Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measuring.html">Measuring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../project.html">Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>blessed.formatters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for blessed.formatters</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Sub-module providing sequence-formatting functions.&quot;&quot;&quot;</span>
+<span class="c1"># std imports</span>
+<span class="kn">import</span> <span class="nn">platform</span>
+
+<span class="c1"># 3rd party</span>
+<span class="kn">import</span> <span class="nn">six</span>
+
+<span class="c1"># local</span>
+<span class="kn">from</span> <span class="nn">blessed.colorspace</span> <span class="kn">import</span> <span class="n">CGA_COLORS</span><span class="p">,</span> <span class="n">X11_COLORNAMES_TO_RGB</span>
+
+<span class="c1"># curses</span>
+<span class="k">if</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;Windows&#39;</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">jinxed</span> <span class="k">as</span> <span class="nn">curses</span>   <span class="c1"># pylint: disable=import-error</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">curses</span>
+
+
+<div class="viewcode-block" id="_make_colors"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters._make_colors">[docs]</a><span class="k">def</span> <span class="nf">_make_colors</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return set of valid colors and their derivatives.</span>
+
+<span class="sd">    :rtype: set</span>
+<span class="sd">    :returns: Color names with prefixes</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="c1"># basic CGA foreground color, background, high intensity, and bold</span>
+    <span class="c1"># background (&#39;iCE colors&#39; in my day).</span>
+    <span class="k">for</span> <span class="n">cga_color</span> <span class="ow">in</span> <span class="n">CGA_COLORS</span><span class="p">:</span>
+        <span class="n">colors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">cga_color</span><span class="p">)</span>
+        <span class="n">colors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;on_&#39;</span> <span class="o">+</span> <span class="n">cga_color</span><span class="p">)</span>
+        <span class="n">colors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;bright_&#39;</span> <span class="o">+</span> <span class="n">cga_color</span><span class="p">)</span>
+        <span class="n">colors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;on_bright_&#39;</span> <span class="o">+</span> <span class="n">cga_color</span><span class="p">)</span>
+
+    <span class="c1"># foreground and background VGA color</span>
+    <span class="k">for</span> <span class="n">vga_color</span> <span class="ow">in</span> <span class="n">X11_COLORNAMES_TO_RGB</span><span class="p">:</span>
+        <span class="n">colors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">vga_color</span><span class="p">)</span>
+        <span class="n">colors</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;on_&#39;</span> <span class="o">+</span> <span class="n">vga_color</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">colors</span></div>
+
+
+<span class="c1">#: Valid colors and their background (on), bright, and bright-background</span>
+<span class="c1">#: derivatives.</span>
+<span class="n">COLORS</span> <span class="o">=</span> <span class="n">_make_colors</span><span class="p">()</span>
+
+<span class="c1">#: Attributes that may be compounded with colors, by underscore, such as</span>
+<span class="c1">#: &#39;reverse_indigo&#39;.</span>
+<span class="n">COMPOUNDABLES</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;bold underline reverse blink italic standout&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+
+<div class="viewcode-block" id="ParameterizingString"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.ParameterizingString">[docs]</a><span class="k">class</span> <span class="nc">ParameterizingString</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A Unicode string which can be called as a parameterizing termcap.</span>
+
+<span class="sd">    For example::</span>
+
+<span class="sd">        &gt;&gt;&gt; from blessed import Terminal</span>
+<span class="sd">        &gt;&gt;&gt; term = Terminal()</span>
+<span class="sd">        &gt;&gt;&gt; color = ParameterizingString(term.color, term.normal, &#39;color&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; color(9)(&#39;color #9&#39;)</span>
+<span class="sd">        u&#39;\x1b[91mcolor #9\x1b(B\x1b[m&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">cap</span><span class="p">,</span> <span class="n">normal</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39;&lt;not specified&gt;&#39;</span><span class="p">):</span>
+        <span class="c1"># pylint: disable = missing-return-doc, missing-return-type-doc</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Class constructor accepting 3 positional arguments.</span>
+
+<span class="sd">        :arg str cap: parameterized string suitable for curses.tparm()</span>
+<span class="sd">        :arg str normal: terminating sequence for this capability (optional).</span>
+<span class="sd">        :arg str name: name of this terminal capability (optional).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">cap</span><span class="p">)</span>
+        <span class="n">new</span><span class="o">.</span><span class="n">_normal</span> <span class="o">=</span> <span class="n">normal</span>
+        <span class="n">new</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="k">return</span> <span class="n">new</span>
+
+<div class="viewcode-block" id="ParameterizingString.__call__"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.ParameterizingString.__call__">[docs]</a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returning :class:`FormattingString` instance for given parameters.</span>
+
+<span class="sd">        Return evaluated terminal capability (self), receiving arguments</span>
+<span class="sd">        ``*args``, followed by the terminating sequence (self.normal) into</span>
+<span class="sd">        a :class:`FormattingString` capable of being called.</span>
+
+<span class="sd">        :raises TypeError: Mismatch between capability and arguments</span>
+<span class="sd">        :raises curses.error: :func:`curses.tparm` raised an exception</span>
+<span class="sd">        :rtype: :class:`FormattingString` or :class:`NullCallableString`</span>
+<span class="sd">        :returns: Callable string for given parameters</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Re-encode the cap, because tparm() takes a bytestring in Python</span>
+            <span class="c1"># 3. However, appear to be a plain Unicode string otherwise so</span>
+            <span class="c1"># concats work.</span>
+            <span class="n">attr</span> <span class="o">=</span> <span class="n">curses</span><span class="o">.</span><span class="n">tparm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;latin1&#39;</span><span class="p">),</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;latin1&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">FormattingString</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_normal</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="c1"># If the first non-int (i.e. incorrect) arg was a string, suggest</span>
+            <span class="c1"># something intelligent:</span>
+            <span class="k">if</span> <span class="n">args</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                    <span class="s2">&quot;Unknown terminal capability, </span><span class="si">%r</span><span class="s2">, or, TypeError &quot;</span>
+                    <span class="s2">&quot;for arguments </span><span class="si">%r</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">err</span><span class="p">))</span>
+            <span class="c1"># Somebody passed a non-string; I don&#39;t feel confident</span>
+            <span class="c1"># guessing what they were trying to do.</span>
+            <span class="k">raise</span>
+        <span class="k">except</span> <span class="n">curses</span><span class="o">.</span><span class="n">error</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="c1"># ignore &#39;tparm() returned NULL&#39;, you won&#39;t get any styling,</span>
+            <span class="c1"># even if does_styling is True. This happens on win32 platforms</span>
+            <span class="c1"># with http://www.lfd.uci.edu/~gohlke/pythonlibs/#curses installed</span>
+            <span class="k">if</span> <span class="s2">&quot;tparm() returned NULL&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">(</span><span class="n">err</span><span class="p">):</span>
+                <span class="k">raise</span>
+            <span class="k">return</span> <span class="n">NullCallableString</span><span class="p">()</span></div></div>
+
+
+<div class="viewcode-block" id="ParameterizingProxyString"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.ParameterizingProxyString">[docs]</a><span class="k">class</span> <span class="nc">ParameterizingProxyString</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A Unicode string which can be called to proxy missing termcap entries.</span>
+
+<span class="sd">    This class supports the function :func:`get_proxy_string`, and mirrors</span>
+<span class="sd">    the behavior of :class:`ParameterizingString`, except that instead of</span>
+<span class="sd">    a capability name, receives a format string, and callable to filter the</span>
+<span class="sd">    given positional ``*args`` of :meth:`ParameterizingProxyString.__call__`</span>
+<span class="sd">    into a terminal sequence.</span>
+
+<span class="sd">    For example::</span>
+
+<span class="sd">        &gt;&gt;&gt; from blessed import Terminal</span>
+<span class="sd">        &gt;&gt;&gt; term = Terminal(&#39;screen&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; hpa = ParameterizingString(term.hpa, term.normal, &#39;hpa&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; hpa(9)</span>
+<span class="sd">        u&#39;&#39;</span>
+<span class="sd">        &gt;&gt;&gt; fmt = u&#39;\x1b[{0}G&#39;</span>
+<span class="sd">        &gt;&gt;&gt; fmt_arg = lambda *arg: (arg[0] + 1,)</span>
+<span class="sd">        &gt;&gt;&gt; hpa = ParameterizingProxyString((fmt, fmt_arg), term.normal, &#39;hpa&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; hpa(9)</span>
+<span class="sd">        u&#39;\x1b[10G&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">fmt_pair</span><span class="p">,</span> <span class="n">normal</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39;&lt;not specified&gt;&#39;</span><span class="p">):</span>
+        <span class="c1"># pylint: disable = missing-return-doc, missing-return-type-doc</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Class constructor accepting 4 positional arguments.</span>
+
+<span class="sd">        :arg tuple fmt_pair: Two element tuple containing:</span>
+<span class="sd">            - format string suitable for displaying terminal sequences</span>
+<span class="sd">            - callable suitable for receiving  __call__ arguments for formatting string</span>
+<span class="sd">        :arg str normal: terminating sequence for this capability (optional).</span>
+<span class="sd">        :arg str name: name of this terminal capability (optional).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fmt_pair</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">),</span> <span class="n">fmt_pair</span>
+        <span class="k">assert</span> <span class="n">callable</span><span class="p">(</span><span class="n">fmt_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">fmt_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">fmt_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">new</span><span class="o">.</span><span class="n">_fmt_args</span> <span class="o">=</span> <span class="n">fmt_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">new</span><span class="o">.</span><span class="n">_normal</span> <span class="o">=</span> <span class="n">normal</span>
+        <span class="n">new</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="k">return</span> <span class="n">new</span>
+
+<div class="viewcode-block" id="ParameterizingProxyString.__call__"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.ParameterizingProxyString.__call__">[docs]</a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returning :class:`FormattingString` instance for given parameters.</span>
+
+<span class="sd">        Arguments are determined by the capability.  For example, ``hpa``</span>
+<span class="sd">        (move_x) receives only a single integer, whereas ``cup`` (move)</span>
+<span class="sd">        receives two integers.  See documentation in terminfo(5) for the</span>
+<span class="sd">        given capability.</span>
+
+<span class="sd">        :rtype: FormattingString</span>
+<span class="sd">        :returns: Callable string for given parameters</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">FormattingString</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_fmt_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)),</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">_normal</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="FormattingString"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.FormattingString">[docs]</a><span class="k">class</span> <span class="nc">FormattingString</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A Unicode string which doubles as a callable.</span>
+
+<span class="sd">    This is used for terminal attributes, so that it may be used both</span>
+<span class="sd">    directly, or as a callable.  When used directly, it simply emits</span>
+<span class="sd">    the given terminal sequence.  When used as a callable, it wraps the</span>
+<span class="sd">    given (string) argument with the 2nd argument used by the class</span>
+<span class="sd">    constructor::</span>
+
+<span class="sd">        &gt;&gt;&gt; from blessed import Terminal</span>
+<span class="sd">        &gt;&gt;&gt; term = Terminal()</span>
+<span class="sd">        &gt;&gt;&gt; style = FormattingString(term.bright_blue, term.normal)</span>
+<span class="sd">        &gt;&gt;&gt; print(repr(style))</span>
+<span class="sd">        u&#39;\x1b[94m&#39;</span>
+<span class="sd">        &gt;&gt;&gt; style(&#39;Big Blue&#39;)</span>
+<span class="sd">        u&#39;\x1b[94mBig Blue\x1b(B\x1b[m&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">sequence</span><span class="p">,</span> <span class="n">normal</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="c1"># pylint: disable = missing-return-doc, missing-return-type-doc</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Class constructor accepting 2 positional arguments.</span>
+
+<span class="sd">        :arg str sequence: terminal attribute sequence.</span>
+<span class="sd">        :arg str normal: terminating sequence for this attribute (optional).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">sequence</span><span class="p">)</span>
+        <span class="n">new</span><span class="o">.</span><span class="n">_normal</span> <span class="o">=</span> <span class="n">normal</span>
+        <span class="k">return</span> <span class="n">new</span>
+
+<div class="viewcode-block" id="FormattingString.__call__"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.FormattingString.__call__">[docs]</a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return ``text`` joined by ``sequence`` and ``normal``.</span>
+
+<span class="sd">        :raises TypeError: Not a string type</span>
+<span class="sd">        :rtype: str</span>
+<span class="sd">        :returns: Arguments wrapped in sequence and normal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Jim Allman brings us this convenience of allowing existing</span>
+        <span class="c1"># unicode strings to be joined as a call parameter to a formatting</span>
+        <span class="c1"># string result, allowing nestation:</span>
+        <span class="c1">#</span>
+        <span class="c1"># &gt;&gt;&gt; t.red(&#39;This is &#39;, t.bold(&#39;extremely&#39;), &#39; dangerous!&#39;)</span>
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">ucs_part</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ucs_part</span><span class="p">,</span> <span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">):</span>
+                <span class="n">expected_types</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span>
+                    <span class="n">_type</span><span class="o">.</span><span class="vm">__name__</span> <span class="k">for</span> <span class="n">_type</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">string_types</span><span class="p">])</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                    <span class="s2">&quot;TypeError for FormattingString argument, &quot;</span>
+                    <span class="s2">&quot;</span><span class="si">%r</span><span class="s2">, at position </span><span class="si">%s</span><span class="s2">: expected type </span><span class="si">%s</span><span class="s2">, &quot;</span>
+                    <span class="s2">&quot;got </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ucs_part</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">expected_types</span><span class="p">,</span>
+                                <span class="nb">type</span><span class="p">(</span><span class="n">ucs_part</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span>
+        <span class="n">postfix</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">_normal</span><span class="p">:</span>
+            <span class="n">postfix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_normal</span>
+            <span class="n">_refresh</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_normal</span> <span class="o">+</span> <span class="bp">self</span>
+            <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="n">_refresh</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ucs_part</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_normal</span><span class="p">))</span>
+                    <span class="k">for</span> <span class="n">ucs_part</span> <span class="ow">in</span> <span class="n">args</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">+</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">+</span> <span class="n">postfix</span></div></div>
+
+
+<div class="viewcode-block" id="FormattingOtherString"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.FormattingOtherString">[docs]</a><span class="k">class</span> <span class="nc">FormattingOtherString</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">):</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A Unicode string which doubles as a callable for another sequence when called.</span>
+
+<span class="sd">    This is used for the :meth:`~.Terminal.move_up`, ``down``, ``left``, and ``right()``</span>
+<span class="sd">    family of functions::</span>
+
+<span class="sd">        &gt;&gt;&gt; from blessed import Terminal</span>
+<span class="sd">        &gt;&gt;&gt; term = Terminal()</span>
+<span class="sd">        &gt;&gt;&gt; move_right = FormattingOtherString(term.cuf1, term.cuf)</span>
+<span class="sd">        &gt;&gt;&gt; print(repr(move_right))</span>
+<span class="sd">        u&#39;\x1b[C&#39;</span>
+<span class="sd">        &gt;&gt;&gt; print(repr(move_right(666)))</span>
+<span class="sd">        u&#39;\x1b[666C&#39;</span>
+<span class="sd">        &gt;&gt;&gt; print(repr(move_right()))</span>
+<span class="sd">        u&#39;\x1b[C&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">direct</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+        <span class="c1"># pylint: disable = missing-return-doc, missing-return-type-doc</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Class constructor accepting 2 positional arguments.</span>
+
+<span class="sd">        :arg str direct: capability name for direct formatting, eg ``(&#39;x&#39; + term.right)``.</span>
+<span class="sd">        :arg str target: capability name for callable, eg ``(&#39;x&#39; + term.right(99))``.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">direct</span><span class="p">)</span>
+        <span class="n">new</span><span class="o">.</span><span class="n">_callable</span> <span class="o">=</span> <span class="n">target</span>
+        <span class="k">return</span> <span class="n">new</span>
+
+    <span class="k">def</span> <span class="nf">__getnewargs__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># return arguments used for the __new__ method upon unpickling.</span>
+        <span class="k">return</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">_callable</span>
+
+<div class="viewcode-block" id="FormattingOtherString.__call__"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.FormattingOtherString.__call__">[docs]</a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return ``text`` by ``target``.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">args</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_callable</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span></div></div>
+
+
+<div class="viewcode-block" id="NullCallableString"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.NullCallableString">[docs]</a><span class="k">class</span> <span class="nc">NullCallableString</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A dummy callable Unicode alternative to :class:`FormattingString`.</span>
+
+<span class="sd">    This is used for colors on terminals that do not support colors, it is just a basic form of</span>
+<span class="sd">    unicode that may also act as a callable.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Class constructor.&quot;&quot;&quot;</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="n">six</span><span class="o">.</span><span class="n">text_type</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new</span>
+
+<div class="viewcode-block" id="NullCallableString.__call__"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.NullCallableString.__call__">[docs]</a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Allow empty string to be callable, returning given string, if any.</span>
+
+<span class="sd">        When called with an int as the first arg, return an empty Unicode. An</span>
+<span class="sd">        int is a good hint that I am a :class:`ParameterizingString`, as there</span>
+<span class="sd">        are only about half a dozen string-returning capabilities listed in</span>
+<span class="sd">        terminfo(5) which accept non-int arguments, they are seldom used.</span>
+
+<span class="sd">        When called with a non-int as the first arg (no no args at all), return</span>
+<span class="sd">        the first arg, acting in place of :class:`FormattingString` without</span>
+<span class="sd">        any attributes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="c1"># As a NullCallableString, even when provided with a parameter,</span>
+            <span class="c1"># such as t.color(5), we must also still be callable, fe:</span>
+            <span class="c1">#</span>
+            <span class="c1"># &gt;&gt;&gt; t.color(5)(&#39;shmoo&#39;)</span>
+            <span class="c1">#</span>
+            <span class="c1"># is actually simplified result of NullCallable()() on terminals</span>
+            <span class="c1"># without color support, so turtles all the way down: we return</span>
+            <span class="c1"># another instance.</span>
+            <span class="k">return</span> <span class="n">NullCallableString</span><span class="p">()</span>
+        <span class="k">return</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="get_proxy_string"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.get_proxy_string">[docs]</a><span class="k">def</span> <span class="nf">get_proxy_string</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Proxy and return callable string for proxied attributes.</span>
+
+<span class="sd">    :arg Terminal term: :class:`~.Terminal` instance.</span>
+<span class="sd">    :arg str attr: terminal capability name that may be proxied.</span>
+<span class="sd">    :rtype: None or :class:`ParameterizingProxyString`.</span>
+<span class="sd">    :returns: :class:`ParameterizingProxyString` for some attributes</span>
+<span class="sd">        of some terminal types that support it, where the terminfo(5)</span>
+<span class="sd">        database would otherwise come up empty, such as ``move_x``</span>
+<span class="sd">        attribute for ``term.kind`` of ``screen``.  Otherwise, None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># normalize &#39;screen-256color&#39;, or &#39;ansi.sys&#39; to its basic names</span>
+    <span class="n">term_kind</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">_kind</span> <span class="k">for</span> <span class="n">_kind</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;screen&#39;</span><span class="p">,</span> <span class="s1">&#39;ansi&#39;</span><span class="p">,)</span>
+                          <span class="k">if</span> <span class="n">term</span><span class="o">.</span><span class="n">kind</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">_kind</span><span class="p">)),</span> <span class="n">term</span><span class="p">)</span>
+    <span class="n">_proxy_table</span> <span class="o">=</span> <span class="p">{</span>  <span class="c1"># pragma: no cover</span>
+        <span class="s1">&#39;screen&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="c1"># proxy move_x/move_y for &#39;screen&#39; terminal type, used by tmux(1).</span>
+            <span class="s1">&#39;hpa&#39;</span><span class="p">:</span> <span class="n">ParameterizingProxyString</span><span class="p">(</span>
+                <span class="p">(</span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[</span><span class="si">{0}</span><span class="s1">G&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="o">*</span><span class="n">arg</span><span class="p">:</span> <span class="p">(</span><span class="n">arg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,)),</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">,</span> <span class="n">attr</span><span class="p">),</span>
+            <span class="s1">&#39;vpa&#39;</span><span class="p">:</span> <span class="n">ParameterizingProxyString</span><span class="p">(</span>
+                <span class="p">(</span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[</span><span class="si">{0}</span><span class="s1">d&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="o">*</span><span class="n">arg</span><span class="p">:</span> <span class="p">(</span><span class="n">arg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,)),</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">,</span> <span class="n">attr</span><span class="p">),</span>
+        <span class="p">},</span>
+        <span class="s1">&#39;ansi&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="c1"># proxy show/hide cursor for &#39;ansi&#39; terminal type.  There is some</span>
+            <span class="c1"># demand for a richly working ANSI terminal type for some reason.</span>
+            <span class="s1">&#39;civis&#39;</span><span class="p">:</span> <span class="n">ParameterizingProxyString</span><span class="p">(</span>
+                <span class="p">(</span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[?25l&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="o">*</span><span class="n">arg</span><span class="p">:</span> <span class="p">()),</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">,</span> <span class="n">attr</span><span class="p">),</span>
+            <span class="s1">&#39;cnorm&#39;</span><span class="p">:</span> <span class="n">ParameterizingProxyString</span><span class="p">(</span>
+                <span class="p">(</span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[?25h&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="o">*</span><span class="n">arg</span><span class="p">:</span> <span class="p">()),</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">,</span> <span class="n">attr</span><span class="p">),</span>
+            <span class="s1">&#39;hpa&#39;</span><span class="p">:</span> <span class="n">ParameterizingProxyString</span><span class="p">(</span>
+                <span class="p">(</span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[</span><span class="si">{0}</span><span class="s1">G&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="o">*</span><span class="n">arg</span><span class="p">:</span> <span class="p">(</span><span class="n">arg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,)),</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">,</span> <span class="n">attr</span><span class="p">),</span>
+            <span class="s1">&#39;vpa&#39;</span><span class="p">:</span> <span class="n">ParameterizingProxyString</span><span class="p">(</span>
+                <span class="p">(</span><span class="sa">u</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[</span><span class="si">{0}</span><span class="s1">d&#39;</span><span class="p">,</span> <span class="k">lambda</span> <span class="o">*</span><span class="n">arg</span><span class="p">:</span> <span class="p">(</span><span class="n">arg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,)),</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">,</span> <span class="n">attr</span><span class="p">),</span>
+            <span class="s1">&#39;sc&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[s&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;rc&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[u&#39;</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">_proxy_table</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">term_kind</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="split_compound"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.split_compound">[docs]</a><span class="k">def</span> <span class="nf">split_compound</span><span class="p">(</span><span class="n">compound</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Split compound formating string into segments.</span>
+
+<span class="sd">    &gt;&gt;&gt; split_compound(&#39;bold_underline_bright_blue_on_red&#39;)</span>
+<span class="sd">    [&#39;bold&#39;, &#39;underline&#39;, &#39;bright_blue&#39;, &#39;on_red&#39;]</span>
+
+<span class="sd">    :arg str compound: a string that may contain compounds, separated by</span>
+<span class="sd">        underline (``_``).</span>
+<span class="sd">    :rtype: list</span>
+<span class="sd">    :returns: List of formating string segments</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">merged_segs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># These occur only as prefixes, so they can always be merged:</span>
+    <span class="n">mergeable_prefixes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;on&#39;</span><span class="p">,</span> <span class="s1">&#39;bright&#39;</span><span class="p">,</span> <span class="s1">&#39;on_bright&#39;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">segment</span> <span class="ow">in</span> <span class="n">compound</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">merged_segs</span> <span class="ow">and</span> <span class="n">merged_segs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">mergeable_prefixes</span><span class="p">:</span>
+            <span class="n">merged_segs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">segment</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">merged_segs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">segment</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">merged_segs</span></div>
+
+
+<div class="viewcode-block" id="resolve_capability"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.resolve_capability">[docs]</a><span class="k">def</span> <span class="nf">resolve_capability</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Resolve a raw terminal capability using :func:`tigetstr`.</span>
+
+<span class="sd">    :arg Terminal term: :class:`~.Terminal` instance.</span>
+<span class="sd">    :arg str attr: terminal capability name.</span>
+<span class="sd">    :returns: string of the given terminal capability named by ``attr``,</span>
+<span class="sd">       which may be empty (u&#39;&#39;) if not found or not supported by the</span>
+<span class="sd">       given :attr:`~.Terminal.kind`.</span>
+<span class="sd">    :rtype: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">term</span><span class="o">.</span><span class="n">does_styling</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">curses</span><span class="o">.</span><span class="n">tigetstr</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">_sugar</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">attr</span><span class="p">))</span>  <span class="c1"># pylint: disable=protected-access</span>
+    <span class="c1"># Decode sequences as latin1, as they are always 8-bit bytes, so when</span>
+    <span class="c1"># b&#39;\xff&#39; is returned, this is decoded as u&#39;\xff&#39;.</span>
+    <span class="k">return</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span> <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">val</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;latin1&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="resolve_color"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.resolve_color">[docs]</a><span class="k">def</span> <span class="nf">resolve_color</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Resolve a simple color name to a callable capability.</span>
+
+<span class="sd">    This function supports :func:`resolve_attribute`.</span>
+
+<span class="sd">    :arg Terminal term: :class:`~.Terminal` instance.</span>
+<span class="sd">    :arg str color: any string found in set :const:`COLORS`.</span>
+<span class="sd">    :returns: a string class instance which emits the terminal sequence</span>
+<span class="sd">        for the given color, and may be used as a callable to wrap the</span>
+<span class="sd">        given string with such sequence.</span>
+<span class="sd">    :returns: :class:`NullCallableString` when</span>
+<span class="sd">        :attr:`~.Terminal.number_of_colors` is 0,</span>
+<span class="sd">        otherwise :class:`FormattingString`.</span>
+<span class="sd">    :rtype: :class:`NullCallableString` or :class:`FormattingString`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># pylint: disable=protected-access</span>
+    <span class="k">if</span> <span class="n">term</span><span class="o">.</span><span class="n">number_of_colors</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">NullCallableString</span><span class="p">()</span>
+
+    <span class="c1"># fg/bg capabilities terminals that support 0-256+ colors.</span>
+    <span class="n">vga_color_cap</span> <span class="o">=</span> <span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">_background_color</span> <span class="k">if</span> <span class="s1">&#39;on_&#39;</span> <span class="ow">in</span> <span class="n">color</span> <span class="k">else</span>
+                     <span class="n">term</span><span class="o">.</span><span class="n">_foreground_color</span><span class="p">)</span>
+
+    <span class="n">base_color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">base_color</span> <span class="ow">in</span> <span class="n">CGA_COLORS</span><span class="p">:</span>
+        <span class="c1"># curses constants go up to only 7, so add an offset to get at the</span>
+        <span class="c1"># bright colors at 8-15:</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="mi">8</span> <span class="k">if</span> <span class="s1">&#39;bright_&#39;</span> <span class="ow">in</span> <span class="n">color</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="n">base_color</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">attr</span> <span class="o">=</span> <span class="s1">&#39;COLOR_</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">base_color</span><span class="o">.</span><span class="n">upper</span><span class="p">(),)</span>
+        <span class="n">fmt_attr</span> <span class="o">=</span> <span class="n">vga_color_cap</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">curses</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span> <span class="o">+</span> <span class="n">offset</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">FormattingString</span><span class="p">(</span><span class="n">fmt_attr</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">base_color</span> <span class="ow">in</span> <span class="n">X11_COLORNAMES_TO_RGB</span><span class="p">,</span> <span class="p">(</span>
+        <span class="s1">&#39;color not known&#39;</span><span class="p">,</span> <span class="n">base_color</span><span class="p">)</span>
+    <span class="n">rgb</span> <span class="o">=</span> <span class="n">X11_COLORNAMES_TO_RGB</span><span class="p">[</span><span class="n">base_color</span><span class="p">]</span>
+
+    <span class="c1"># downconvert X11 colors to CGA, EGA, or VGA color spaces</span>
+    <span class="k">if</span> <span class="n">term</span><span class="o">.</span><span class="n">number_of_colors</span> <span class="o">&lt;=</span> <span class="mi">256</span><span class="p">:</span>
+        <span class="n">fmt_attr</span> <span class="o">=</span> <span class="n">vga_color_cap</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">rgb_downconvert</span><span class="p">(</span><span class="o">*</span><span class="n">rgb</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">FormattingString</span><span class="p">(</span><span class="n">fmt_attr</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">)</span>
+
+    <span class="c1"># Modern 24-bit color terminals are written pretty basically.  The</span>
+    <span class="c1"># foreground and background sequences are:</span>
+    <span class="c1"># - ^[38;2;&lt;r&gt;;&lt;g&gt;;&lt;b&gt;m</span>
+    <span class="c1"># - ^[48;2;&lt;r&gt;;&lt;g&gt;;&lt;b&gt;m</span>
+    <span class="n">fgbg_seq</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;48&#39;</span> <span class="k">if</span> <span class="s1">&#39;on_&#39;</span> <span class="ow">in</span> <span class="n">color</span> <span class="k">else</span> <span class="s1">&#39;38&#39;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">term</span><span class="o">.</span><span class="n">number_of_colors</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">24</span>
+    <span class="n">fmt_attr</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="se">\x1b</span><span class="s1">[&#39;</span> <span class="o">+</span> <span class="n">fgbg_seq</span> <span class="o">+</span> <span class="s1">&#39;;2;</span><span class="si">{0}</span><span class="s1">;</span><span class="si">{1}</span><span class="s1">;</span><span class="si">{2}</span><span class="s1">m&#39;</span>
+    <span class="k">return</span> <span class="n">FormattingString</span><span class="p">(</span><span class="n">fmt_attr</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">rgb</span><span class="p">),</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="resolve_attribute"><a class="viewcode-back" href="../../api/formatters.html#blessed.formatters.resolve_attribute">[docs]</a><span class="k">def</span> <span class="nf">resolve_attribute</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Resolve a terminal attribute name into a capability class.</span>
+
+<span class="sd">    :arg Terminal term: :class:`~.Terminal` instance.</span>
+<span class="sd">    :arg str attr: Sugary, ordinary, or compound formatted terminal</span>
+<span class="sd">        capability, such as &quot;red_on_white&quot;, &quot;normal&quot;, &quot;red&quot;, or</span>
+<span class="sd">        &quot;bold_on_black&quot;, respectively.</span>
+<span class="sd">    :returns: a string class instance which emits the terminal sequence</span>
+<span class="sd">        for the given terminal capability, or may be used as a callable to</span>
+<span class="sd">        wrap the given string with such sequence.</span>
+<span class="sd">    :returns: :class:`NullCallableString` when</span>
+<span class="sd">        :attr:`~.Terminal.number_of_colors` is 0,</span>
+<span class="sd">        otherwise :class:`FormattingString`.</span>
+<span class="sd">    :rtype: :class:`NullCallableString` or :class:`FormattingString`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">COLORS</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">resolve_color</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+
+    <span class="c1"># A direct compoundable, such as `bold&#39; or `on_red&#39;.</span>
+    <span class="k">if</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">COMPOUNDABLES</span><span class="p">:</span>
+        <span class="n">sequence</span> <span class="o">=</span> <span class="n">resolve_capability</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">FormattingString</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">)</span>
+
+    <span class="c1"># Given `bold_on_red&#39;, resolve to (&#39;bold&#39;, &#39;on_red&#39;), RECURSIVE</span>
+    <span class="c1"># call for each compounding section, joined and returned as</span>
+    <span class="c1"># a completed completed FormattingString.</span>
+    <span class="n">formatters</span> <span class="o">=</span> <span class="n">split_compound</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">fmt</span> <span class="ow">in</span> <span class="p">(</span><span class="n">COLORS</span> <span class="o">|</span> <span class="n">COMPOUNDABLES</span><span class="p">)</span> <span class="k">for</span> <span class="n">fmt</span> <span class="ow">in</span> <span class="n">formatters</span><span class="p">):</span>
+        <span class="n">resolution</span> <span class="o">=</span> <span class="p">(</span><span class="n">resolve_attribute</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">fmt</span><span class="p">)</span> <span class="k">for</span> <span class="n">fmt</span> <span class="ow">in</span> <span class="n">formatters</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">FormattingString</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">resolution</span><span class="p">),</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">)</span>
+
+    <span class="c1"># otherwise, this is our end-game: given a sequence such as &#39;csr&#39;</span>
+    <span class="c1"># (change scrolling region), return a ParameterizingString instance,</span>
+    <span class="c1"># that when called, performs and returns the final string after curses</span>
+    <span class="c1"># capability lookup is performed.</span>
+    <span class="n">tparm_capseq</span> <span class="o">=</span> <span class="n">resolve_capability</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">tparm_capseq</span><span class="p">:</span>
+        <span class="c1"># and, for special terminals, such as &#39;screen&#39;, provide a Proxy</span>
+        <span class="c1"># ParameterizingString for attributes they do not claim to support,</span>
+        <span class="c1"># but actually do! (such as &#39;hpa&#39; and &#39;vpa&#39;).</span>
+        <span class="n">proxy</span> <span class="o">=</span> <span class="n">get_proxy_string</span><span class="p">(</span><span class="n">term</span><span class="p">,</span>
+                                 <span class="n">term</span><span class="o">.</span><span class="n">_sugar</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">attr</span><span class="p">,</span> <span class="n">attr</span><span class="p">))</span>  <span class="c1"># pylint: disable=protected-access</span>
+        <span class="k">if</span> <span class="n">proxy</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">proxy</span>
+
+    <span class="k">return</span> <span class="n">ParameterizingString</span><span class="p">(</span><span class="n">tparm_capseq</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">normal</span><span class="p">,</span> <span class="n">attr</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    .wy-nav-content { max-width: 900px; }
+  </style>
+
+
+
+</body>
+</html>

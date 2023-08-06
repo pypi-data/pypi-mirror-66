@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Location &mdash; Blessed 1.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Measuring" href="measuring.html" />
+    <link rel="prev" title="Keyboard" href="keyboard.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keyboard.html">Keyboard</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Location</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#context-manager">Context Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#finding-the-cursor">Finding The Cursor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="measuring.html">Measuring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Location</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/location.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="location">
+<h1>Location<a class="headerlink" href="#location" title="Permalink to this headline">¶</a></h1>
+<p>If you just want to move the location of the cursor before writing text, and aren’t worried about
+returning, do something like this:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">home</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">clear</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">down</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">move_right</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">bright_red</span><span class="p">(</span><span class="s1">&#39;fire!&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">move_xy</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">bold</span><span class="p">(</span><span class="s1">&#39;Direct hit!&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">move_y</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">height</span> <span class="o">-</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>There are four direct movement capabilities:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">move_xy(x,</span> <span class="pre">y)</span></code></dt><dd><p>Position cursor at given <strong>x</strong>, <strong>y</strong>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">move_x(x)</span></code></dt><dd><p>Position cursor at column <strong>x</strong>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">move_y(y)</span></code></dt><dd><p>Position cursor at row <strong>y</strong>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">home</span></code></dt><dd><p>Position cursor at (0, 0).</p>
+</dd>
+</dl>
+<p>And four relative capabilities:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">move_up</span></code> or <code class="docutils literal notranslate"><span class="pre">move_up(y)</span></code></dt><dd><p>Position cursor 1 or <strong>y</strong> row cells above the current position.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">move_down(y)</span></code></dt><dd><p>Position cursor 1 or <strong>y</strong> row cells below the current position.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">move_down</span></code> or is often valued as <em>\n</em>, which additionally returns the carriage to</dt><dd><p>column 0, and, depending on your terminal emulator, may also destroy any characters to end of
+line.</p>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">move_down(1)</span></code> is always a safe non-destructive one-notch movement in the downward direction.</p>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">move_left</span></code> or <code class="docutils literal notranslate"><span class="pre">move_left(x)</span></code></dt><dd><p>Position cursor 1 or <strong>x</strong> column cells left of the current position.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">move_right</span></code> or <code class="docutils literal notranslate"><span class="pre">move_right(x)</span></code></dt><dd><p>Position cursor 1 or <strong>x</strong> column cells right of the current position.</p>
+</dd>
+</dl>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>The source code of <a class="reference internal" href="examples.html#bounce-py"><span class="std std-ref">bounce.py</span></a> combines a small bit of <a class="reference internal" href="keyboard.html"><span class="doc">Keyboard</span></a> input with many of the
+Terminal location capabilities, <code class="docutils literal notranslate"><span class="pre">home</span></code>, <code class="docutils literal notranslate"><span class="pre">width</span></code>, <code class="docutils literal notranslate"><span class="pre">height</span></code>, and <code class="docutils literal notranslate"><span class="pre">move_xy</span></code> are used to create
+a classic game of tennis:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># std imports</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">floor</span>
+
+<span class="c1"># local</span>
+<span class="kn">from</span> <span class="nn">blessed</span> <span class="kn">import</span> <span class="n">Terminal</span>
+
+
+<span class="k">def</span> <span class="nf">roundxy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span> <span class="nb">int</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+
+
+<span class="n">term</span> <span class="o">=</span> <span class="n">Terminal</span><span class="p">()</span>
+
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.3</span>
+<span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">cbreak</span><span class="p">(),</span> <span class="n">term</span><span class="o">.</span><span class="n">hidden_cursor</span><span class="p">():</span>
+    <span class="c1"># clear the screen</span>
+<span class="hll">    <span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">home</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">black_on_olivedrab4</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">clear</span><span class="p">)</span>
+</span>
+    <span class="c1"># loop every 20ms</span>
+    <span class="k">while</span> <span class="n">term</span><span class="o">.</span><span class="n">inkey</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;q&#39;</span><span class="p">:</span>
+        <span class="c1"># erase,</span>
+<span class="hll">        <span class="n">txt_erase</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">move_xy</span><span class="p">(</span><span class="o">*</span><span class="n">roundxy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span>
+</span>
+        <span class="c1"># bounce,</span>
+<span class="hll">        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+</span>            <span class="n">xs</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="hll">        <span class="k">if</span> <span class="n">y</span> <span class="o">&gt;=</span> <span class="n">term</span><span class="o">.</span><span class="n">height</span> <span class="ow">or</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+</span>            <span class="n">ys</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+
+        <span class="c1"># move,</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">xs</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">ys</span>
+
+        <span class="c1"># draw !</span>
+<span class="hll">        <span class="n">txt_ball</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">move_xy</span><span class="p">(</span><span class="o">*</span><span class="n">roundxy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;█&#39;</span>
+</span>        <span class="nb">print</span><span class="p">(</span><span class="n">txt_erase</span> <span class="o">+</span> <span class="n">txt_ball</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-default">
+<img alt="Animated screenshot of :ref:`bounce.py`" src="https://dxtz6bzwq9sxx.cloudfront.net/demo_basic_bounce.gif" />
+</div>
+</div>
+<div class="section" id="context-manager">
+<h2>Context Manager<a class="headerlink" href="#context-manager" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference external" href="https://docs.python.org/3/library/contextlib.html#contextlib.contextmanager" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">contextlib.contextmanager()</span></code></a>, <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.location" title="blessed.terminal.Terminal.location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">location()</span></code></a> is provided to move the cursor to
+an <em>(x, y)</em> screen position and <em>restore the previous position</em> on exit:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">location</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">term</span><span class="o">.</span><span class="n">height</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Here is the bottom.&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is back where I came from.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>All parameters to <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.location" title="blessed.terminal.Terminal.location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">location()</span></code></a> are <strong>optional</strong>, we can use
+it without any arguments at all to restore the cursor location:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">location</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">move_xy</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;Hi Mom!&#39;</span> <span class="o">+</span> <span class="n">term</span><span class="o">.</span><span class="n">clear_eol</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>calls to <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.location" title="blessed.terminal.Terminal.location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">location()</span></code></a> may not be nested.</p>
+</div>
+</div>
+<div class="section" id="finding-the-cursor">
+<h2>Finding The Cursor<a class="headerlink" href="#finding-the-cursor" title="Permalink to this headline">¶</a></h2>
+<p>We can determine the cursor’s current position at anytime using <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.get_location" title="blessed.terminal.Terminal.get_location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_location()</span></code></a>.</p>
+<p>This uses a kind of “answer back” sequence that your terminal emulator responds to.  Because the
+terminal may not respond, or may take some time to respond, the <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.get_location.params.timeout" title="blessed.terminal.Terminal.get_location"><code class="xref py py-paramref docutils literal notranslate"><span class="pre">timeout</span></code></a>
+keyword argument can be specified to return coordinates (-1, -1) after a blocking timeout:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">term</span><span class="o">.</span><span class="n">get_location</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">(32, 0)</span>
+</pre></div>
+</div>
+<p>The return value of <a class="reference internal" href="api/terminal.html#blessed.terminal.Terminal.get_location" title="blessed.terminal.Terminal.get_location"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_location()</span></code></a> mirrors the arguments of
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">location()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">term</span><span class="o">.</span><span class="n">location</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">):</span>
+     <span class="n">val</span> <span class="o">=</span> <span class="n">term</span><span class="o">.</span><span class="n">get_location</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Produces output, <code class="docutils literal notranslate"><span class="pre">(12,</span> <span class="pre">12)</span></code></p>
+<p>Although this wouldn’t be suggested in most applications because of its latency, it certainly
+simplifies many applications, and, can also be timed, to make a determination of the round-trip
+time, perhaps even the bandwidth constraints, of a remote terminal!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="measuring.html" class="btn btn-neutral float-right" title="Measuring" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="keyboard.html" class="btn btn-neutral float-left" title="Keyboard" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    .wy-nav-content { max-width: 900px; }
+  </style>
+
+
+
+</body>
+</html>

@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>blessed.color &mdash; Blessed 1.17.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sphinx_paramlinks.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Blessed
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.17.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../terminal.html">Terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colors.html">Colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../keyboard.html">Keyboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../location.html">Location</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../measuring.html">Measuring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../project.html">Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">Version History</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blessed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>blessed.color</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for blessed.color</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Sub-module providing color functions.</span>
+
+<span class="sd">References,</span>
+
+<span class="sd">- https://en.wikipedia.org/wiki/Color_difference</span>
+<span class="sd">- http://www.easyrgb.com/en/math.php</span>
+<span class="sd">- Measuring Colour by R.W.G. Hunt and M.R. Pointer</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># std imports</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">cos</span><span class="p">,</span> <span class="n">exp</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">atan2</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="c1"># lru_cache was added in Python 3.2</span>
+    <span class="kn">from</span> <span class="nn">backports.functools_lru_cache</span> <span class="kn">import</span> <span class="n">lru_cache</span>
+
+
+<div class="viewcode-block" id="rgb_to_xyz"><a class="viewcode-back" href="../../api/color.html#blessed.color.rgb_to_xyz">[docs]</a><span class="k">def</span> <span class="nf">rgb_to_xyz</span><span class="p">(</span><span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert standard RGB color to XYZ color.</span>
+
+<span class="sd">    :arg int red: RGB value of Red.</span>
+<span class="sd">    :arg int green: RGB value of Green.</span>
+<span class="sd">    :arg int blue: RGB value of Blue.</span>
+<span class="sd">    :returns: Tuple (X, Y, Z) representing XYZ color</span>
+<span class="sd">    :rtype: tuple</span>
+
+<span class="sd">    D65/2° standard illuminant</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rgb</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">:</span>
+        <span class="n">val</span> <span class="o">/=</span> <span class="mf">255.0</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">&gt;</span> <span class="mf">0.04045</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">((</span><span class="n">val</span> <span class="o">+</span> <span class="mf">0.055</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1.055</span><span class="p">,</span> <span class="mf">2.4</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">/=</span> <span class="mf">12.92</span>
+        <span class="n">val</span> <span class="o">*=</span> <span class="mi">100</span>
+        <span class="n">rgb</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
+    <span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span> <span class="o">=</span> <span class="n">rgb</span>  <span class="c1"># pylint: disable=unbalanced-tuple-unpacking</span>
+    <span class="n">x_val</span> <span class="o">=</span> <span class="n">red</span> <span class="o">*</span> <span class="mf">0.4124</span> <span class="o">+</span> <span class="n">green</span> <span class="o">*</span> <span class="mf">0.3576</span> <span class="o">+</span> <span class="n">blue</span> <span class="o">*</span> <span class="mf">0.1805</span>
+    <span class="n">y_val</span> <span class="o">=</span> <span class="n">red</span> <span class="o">*</span> <span class="mf">0.2126</span> <span class="o">+</span> <span class="n">green</span> <span class="o">*</span> <span class="mf">0.7152</span> <span class="o">+</span> <span class="n">blue</span> <span class="o">*</span> <span class="mf">0.0722</span>
+    <span class="n">z_val</span> <span class="o">=</span> <span class="n">red</span> <span class="o">*</span> <span class="mf">0.0193</span> <span class="o">+</span> <span class="n">green</span> <span class="o">*</span> <span class="mf">0.1192</span> <span class="o">+</span> <span class="n">blue</span> <span class="o">*</span> <span class="mf">0.9505</span>
+
+    <span class="k">return</span> <span class="n">x_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">z_val</span></div>
+
+
+<div class="viewcode-block" id="xyz_to_lab"><a class="viewcode-back" href="../../api/color.html#blessed.color.xyz_to_lab">[docs]</a><span class="k">def</span> <span class="nf">xyz_to_lab</span><span class="p">(</span><span class="n">x_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">z_val</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert XYZ color to CIE-Lab color.</span>
+
+<span class="sd">    :arg float x_val: XYZ value of X.</span>
+<span class="sd">    :arg float y_val: XYZ value of Y.</span>
+<span class="sd">    :arg float z_val: XYZ value of Z.</span>
+<span class="sd">    :returns: Tuple (L, a, b) representing CIE-Lab color</span>
+<span class="sd">    :rtype: tuple</span>
+
+<span class="sd">    D65/2° standard illuminant</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">xyz</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">val</span><span class="p">,</span> <span class="n">ref</span> <span class="ow">in</span> <span class="p">(</span><span class="n">x_val</span><span class="p">,</span> <span class="mf">95.047</span><span class="p">),</span> <span class="p">(</span><span class="n">y_val</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">),</span> <span class="p">(</span><span class="n">z_val</span><span class="p">,</span> <span class="mf">108.883</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">/=</span> <span class="n">ref</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">&gt;</span> <span class="mf">0.008856</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mf">3.0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="mf">7.787</span> <span class="o">*</span> <span class="n">val</span> <span class="o">+</span> <span class="mi">16</span> <span class="o">/</span> <span class="mf">116.0</span>
+        <span class="n">xyz</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
+    <span class="n">x_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">z_val</span> <span class="o">=</span> <span class="n">xyz</span>  <span class="c1"># pylint: disable=unbalanced-tuple-unpacking</span>
+    <span class="n">cie_l</span> <span class="o">=</span> <span class="mi">116</span> <span class="o">*</span> <span class="n">y_val</span> <span class="o">-</span> <span class="mi">16</span>
+    <span class="n">cie_a</span> <span class="o">=</span> <span class="mi">500</span> <span class="o">*</span> <span class="p">(</span><span class="n">x_val</span> <span class="o">-</span> <span class="n">y_val</span><span class="p">)</span>
+    <span class="n">cie_b</span> <span class="o">=</span> <span class="mi">200</span> <span class="o">*</span> <span class="p">(</span><span class="n">y_val</span> <span class="o">-</span> <span class="n">z_val</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">cie_l</span><span class="p">,</span> <span class="n">cie_a</span><span class="p">,</span> <span class="n">cie_b</span></div>
+
+
+<div class="viewcode-block" id="rgb_to_lab"><a class="viewcode-back" href="../../api/color.html#blessed.color.rgb_to_lab">[docs]</a><span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">rgb_to_lab</span><span class="p">(</span><span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert RGB color to CIE-Lab color.</span>
+
+<span class="sd">    :arg int red: RGB value of Red.</span>
+<span class="sd">    :arg int green: RGB value of Green.</span>
+<span class="sd">    :arg int blue: RGB value of Blue.</span>
+<span class="sd">    :returns: Tuple (L, a, b) representing CIE-Lab color</span>
+<span class="sd">    :rtype: tuple</span>
+
+<span class="sd">    D65/2° standard illuminant</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">xyz_to_lab</span><span class="p">(</span><span class="o">*</span><span class="n">rgb_to_xyz</span><span class="p">(</span><span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="dist_rgb"><a class="viewcode-back" href="../../api/color.html#blessed.color.dist_rgb">[docs]</a><span class="k">def</span> <span class="nf">dist_rgb</span><span class="p">(</span><span class="n">rgb1</span><span class="p">,</span> <span class="n">rgb2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Determine distance between two rgb colors.</span>
+
+<span class="sd">    :arg tuple rgb1: RGB color definition</span>
+<span class="sd">    :arg tuple rgb2: RGB color definition</span>
+<span class="sd">    :returns: Square of the distance between provided colors</span>
+<span class="sd">    :rtype: float</span>
+
+<span class="sd">    This works by treating RGB colors as coordinates in three dimensional</span>
+<span class="sd">    space and finding the closest point within the configured color range</span>
+<span class="sd">    using the formula::</span>
+
+<span class="sd">        d^2 = (r2 - r1)^2 + (g2 - g1)^2 + (b2 - b1)^2</span>
+
+<span class="sd">    For efficiency, the square of the distance is returned</span>
+<span class="sd">    which is sufficient for comparisons</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="n">rgb1</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">-</span> <span class="n">rgb2</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="dist_rgb_weighted"><a class="viewcode-back" href="../../api/color.html#blessed.color.dist_rgb_weighted">[docs]</a><span class="k">def</span> <span class="nf">dist_rgb_weighted</span><span class="p">(</span><span class="n">rgb1</span><span class="p">,</span> <span class="n">rgb2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Determine the weighted distance between two rgb colors.</span>
+
+<span class="sd">    :arg tuple rgb1: RGB color definition</span>
+<span class="sd">    :arg tuple rgb2: RGB color definition</span>
+<span class="sd">    :returns: Square of the distance between provided colors</span>
+<span class="sd">    :rtype: float</span>
+
+<span class="sd">    Similar to a standard distance formula, the values are weighted</span>
+<span class="sd">    to approximate human perception of color differences</span>
+
+<span class="sd">    For efficiency, the square of the distance is returned</span>
+<span class="sd">    which is sufficient for comparisons</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">red_mean</span> <span class="o">=</span> <span class="p">(</span><span class="n">rgb1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">rgb2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mf">2.0</span>
+
+    <span class="k">return</span> <span class="p">((</span><span class="mi">2</span> <span class="o">+</span> <span class="n">red_mean</span> <span class="o">/</span> <span class="mi">256</span><span class="p">)</span> <span class="o">*</span> <span class="nb">pow</span><span class="p">(</span><span class="n">rgb1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">rgb2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span>
+            <span class="mi">4</span> <span class="o">*</span> <span class="nb">pow</span><span class="p">(</span><span class="n">rgb1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">rgb2</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span>
+            <span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="mi">255</span> <span class="o">-</span> <span class="n">red_mean</span><span class="p">)</span> <span class="o">/</span> <span class="mi">256</span><span class="p">)</span> <span class="o">*</span> <span class="nb">pow</span><span class="p">(</span><span class="n">rgb1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">rgb2</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mi">2</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="dist_cie76"><a class="viewcode-back" href="../../api/color.html#blessed.color.dist_cie76">[docs]</a><span class="k">def</span> <span class="nf">dist_cie76</span><span class="p">(</span><span class="n">rgb1</span><span class="p">,</span> <span class="n">rgb2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Determine distance between two rgb colors using the CIE94 algorithm.</span>
+
+<span class="sd">    :arg tuple rgb1: RGB color definition</span>
+<span class="sd">    :arg tuple rgb2: RGB color definition</span>
+<span class="sd">    :returns: Square of the distance between provided colors</span>
+<span class="sd">    :rtype: float</span>
+
+<span class="sd">    For efficiency, the square of the distance is returned</span>
+<span class="sd">    which is sufficient for comparisons</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">l_1</span><span class="p">,</span> <span class="n">a_1</span><span class="p">,</span> <span class="n">b_1</span> <span class="o">=</span> <span class="n">rgb_to_lab</span><span class="p">(</span><span class="o">*</span><span class="n">rgb1</span><span class="p">)</span>
+    <span class="n">l_2</span><span class="p">,</span> <span class="n">a_2</span><span class="p">,</span> <span class="n">b_2</span> <span class="o">=</span> <span class="n">rgb_to_lab</span><span class="p">(</span><span class="o">*</span><span class="n">rgb2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">pow</span><span class="p">(</span><span class="n">l_1</span> <span class="o">-</span> <span class="n">l_2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">pow</span><span class="p">(</span><span class="n">a_1</span> <span class="o">-</span> <span class="n">a_2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">pow</span><span class="p">(</span><span class="n">b_1</span> <span class="o">-</span> <span class="n">b_2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="dist_cie94"><a class="viewcode-back" href="../../api/color.html#blessed.color.dist_cie94">[docs]</a><span class="k">def</span> <span class="nf">dist_cie94</span><span class="p">(</span><span class="n">rgb1</span><span class="p">,</span> <span class="n">rgb2</span><span class="p">):</span>
+    <span class="c1"># pylint: disable=too-many-locals</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Determine distance between two rgb colors using the CIE94 algorithm.</span>
+
+<span class="sd">    :arg tuple rgb1: RGB color definition</span>
+<span class="sd">    :arg tuple rgb2: RGB color definition</span>
+<span class="sd">    :returns: Square of the distance between provided colors</span>
+<span class="sd">    :rtype: float</span>
+
+<span class="sd">    For efficiency, the square of the distance is returned</span>
+<span class="sd">    which is sufficient for comparisons</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">l_1</span><span class="p">,</span> <span class="n">a_1</span><span class="p">,</span> <span class="n">b_1</span> <span class="o">=</span> <span class="n">rgb_to_lab</span><span class="p">(</span><span class="o">*</span><span class="n">rgb1</span><span class="p">)</span>
+    <span class="n">l_2</span><span class="p">,</span> <span class="n">a_2</span><span class="p">,</span> <span class="n">b_2</span> <span class="o">=</span> <span class="n">rgb_to_lab</span><span class="p">(</span><span class="o">*</span><span class="n">rgb2</span><span class="p">)</span>
+
+    <span class="n">s_l</span> <span class="o">=</span> <span class="n">k_l</span> <span class="o">=</span> <span class="n">k_c</span> <span class="o">=</span> <span class="n">k_h</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">k_1</span> <span class="o">=</span> <span class="mf">0.045</span>
+    <span class="n">k_2</span> <span class="o">=</span> <span class="mf">0.015</span>
+
+    <span class="n">delta_l</span> <span class="o">=</span> <span class="n">l_1</span> <span class="o">-</span> <span class="n">l_2</span>
+    <span class="n">delta_a</span> <span class="o">=</span> <span class="n">a_1</span> <span class="o">-</span> <span class="n">a_2</span>
+    <span class="n">delta_b</span> <span class="o">=</span> <span class="n">b_1</span> <span class="o">-</span> <span class="n">b_2</span>
+    <span class="n">c_1</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">a_1</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">b_1</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">c_2</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">a_2</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">b_2</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">delta_c</span> <span class="o">=</span> <span class="n">c_1</span> <span class="o">-</span> <span class="n">c_2</span>
+    <span class="n">delta_h</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">delta_a</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">delta_b</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">delta_c</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">s_c</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">k_1</span> <span class="o">*</span> <span class="n">c_1</span>
+    <span class="n">s_h</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">k_2</span> <span class="o">*</span> <span class="n">c_1</span>
+
+    <span class="k">return</span> <span class="p">((</span><span class="n">delta_l</span> <span class="o">/</span> <span class="p">(</span><span class="n">k_l</span> <span class="o">*</span> <span class="n">s_l</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span>
+            <span class="p">(</span><span class="n">delta_c</span> <span class="o">/</span> <span class="p">(</span><span class="n">k_c</span> <span class="o">*</span> <span class="n">s_c</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span>
+            <span class="p">(</span><span class="n">delta_h</span> <span class="o">/</span> <span class="p">(</span><span class="n">k_h</span> <span class="o">*</span> <span class="n">s_h</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="dist_cie2000"><a class="viewcode-back" href="../../api/color.html#blessed.color.dist_cie2000">[docs]</a><span class="k">def</span> <span class="nf">dist_cie2000</span><span class="p">(</span><span class="n">rgb1</span><span class="p">,</span> <span class="n">rgb2</span><span class="p">):</span>
+    <span class="c1"># pylint: disable=too-many-locals</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Determine distance between two rgb colors using the CIE2000 algorithm.</span>
+
+<span class="sd">    :arg tuple rgb1: RGB color definition</span>
+<span class="sd">    :arg tuple rgb2: RGB color definition</span>
+<span class="sd">    :returns: Square of the distance between provided colors</span>
+<span class="sd">    :rtype: float</span>
+
+<span class="sd">    For efficiency, the square of the distance is returned</span>
+<span class="sd">    which is sufficient for comparisons</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">s_l</span> <span class="o">=</span> <span class="n">k_l</span> <span class="o">=</span> <span class="n">k_c</span> <span class="o">=</span> <span class="n">k_h</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="n">l_1</span><span class="p">,</span> <span class="n">a_1</span><span class="p">,</span> <span class="n">b_1</span> <span class="o">=</span> <span class="n">rgb_to_lab</span><span class="p">(</span><span class="o">*</span><span class="n">rgb1</span><span class="p">)</span>
+    <span class="n">l_2</span><span class="p">,</span> <span class="n">a_2</span><span class="p">,</span> <span class="n">b_2</span> <span class="o">=</span> <span class="n">rgb_to_lab</span><span class="p">(</span><span class="o">*</span><span class="n">rgb2</span><span class="p">)</span>
+
+    <span class="n">delta_l</span> <span class="o">=</span> <span class="n">l_2</span> <span class="o">-</span> <span class="n">l_1</span>
+    <span class="n">l_mean</span> <span class="o">=</span> <span class="p">(</span><span class="n">l_1</span> <span class="o">+</span> <span class="n">l_2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+
+    <span class="n">c_1</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">a_1</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">b_1</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">c_2</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">a_2</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">b_2</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">c_mean</span> <span class="o">=</span> <span class="p">(</span><span class="n">c_1</span> <span class="o">+</span> <span class="n">c_2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">delta_c</span> <span class="o">=</span> <span class="n">c_1</span> <span class="o">-</span> <span class="n">c_2</span>
+
+    <span class="n">g_x</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">c_mean</span> <span class="o">**</span> <span class="mi">7</span> <span class="o">/</span> <span class="p">(</span><span class="n">c_mean</span> <span class="o">**</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">25</span> <span class="o">**</span> <span class="mi">7</span><span class="p">))</span>
+    <span class="n">h_1</span> <span class="o">=</span> <span class="n">atan2</span><span class="p">(</span><span class="n">b_1</span><span class="p">,</span> <span class="n">a_1</span> <span class="o">+</span> <span class="p">(</span><span class="n">a_1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">g_x</span><span class="p">))</span> <span class="o">%</span> <span class="mi">360</span>
+    <span class="n">h_2</span> <span class="o">=</span> <span class="n">atan2</span><span class="p">(</span><span class="n">b_2</span><span class="p">,</span> <span class="n">a_2</span> <span class="o">+</span> <span class="p">(</span><span class="n">a_2</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">g_x</span><span class="p">))</span> <span class="o">%</span> <span class="mi">360</span>
+
+    <span class="k">if</span> <span class="mi">0</span> <span class="ow">in</span> <span class="p">(</span><span class="n">c_1</span><span class="p">,</span> <span class="n">c_2</span><span class="p">):</span>
+        <span class="n">delta_h_prime</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">h_mean</span> <span class="o">=</span> <span class="n">h_1</span> <span class="o">+</span> <span class="n">h_2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">delta_h_prime</span> <span class="o">=</span> <span class="n">h_2</span> <span class="o">-</span> <span class="n">h_1</span>
+        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">delta_h_prime</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">180</span><span class="p">:</span>
+            <span class="n">h_mean</span> <span class="o">=</span> <span class="p">(</span><span class="n">h_1</span> <span class="o">+</span> <span class="n">h_2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">h_2</span> <span class="o">&lt;=</span> <span class="n">h_1</span><span class="p">:</span>
+                <span class="n">delta_h_prime</span> <span class="o">+=</span> <span class="mi">360</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">delta_h_prime</span> <span class="o">-=</span> <span class="mi">360</span>
+            <span class="k">if</span> <span class="n">h_1</span> <span class="o">+</span> <span class="n">h_2</span> <span class="o">&lt;</span> <span class="mi">360</span><span class="p">:</span>
+                <span class="n">h_mean</span> <span class="o">=</span> <span class="p">(</span><span class="n">h_1</span> <span class="o">+</span> <span class="n">h_2</span> <span class="o">+</span> <span class="mi">360</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">h_mean</span> <span class="o">=</span> <span class="p">(</span><span class="n">h_1</span> <span class="o">+</span> <span class="n">h_2</span> <span class="o">-</span> <span class="mi">360</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+
+    <span class="n">delta_h</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">c_1</span> <span class="o">*</span> <span class="n">c_2</span><span class="p">)</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">delta_h_prime</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">t_x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span>
+           <span class="mf">0.17</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">h_mean</span> <span class="o">-</span> <span class="mi">30</span><span class="p">)</span> <span class="o">+</span>
+           <span class="mf">0.24</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">h_mean</span><span class="p">)</span> <span class="o">+</span>
+           <span class="mf">0.32</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">h_mean</span> <span class="o">+</span> <span class="mi">6</span><span class="p">)</span> <span class="o">-</span>
+           <span class="mf">0.20</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">h_mean</span> <span class="o">-</span> <span class="mi">63</span><span class="p">))</span>
+
+    <span class="n">s_l</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.015</span> <span class="o">*</span> <span class="p">(</span><span class="n">l_mean</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">20</span> <span class="o">+</span> <span class="p">(</span><span class="n">l_mean</span> <span class="o">-</span> <span class="mi">50</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">s_c</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mf">0.045</span> <span class="o">*</span> <span class="n">c_mean</span>
+    <span class="n">s_h</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mf">0.015</span> <span class="o">*</span> <span class="n">c_mean</span> <span class="o">*</span> <span class="n">t_x</span>
+    <span class="n">r_t</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">g_x</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="nb">abs</span><span class="p">((</span><span class="n">delta_h</span> <span class="o">-</span> <span class="mi">275</span><span class="p">)</span> <span class="o">/</span> <span class="mi">25</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)))</span>
+
+    <span class="n">delta_l</span> <span class="o">=</span> <span class="n">delta_l</span> <span class="o">/</span> <span class="p">(</span><span class="n">k_l</span> <span class="o">*</span> <span class="n">s_l</span><span class="p">)</span>
+    <span class="n">delta_c</span> <span class="o">=</span> <span class="n">delta_c</span> <span class="o">/</span> <span class="p">(</span><span class="n">k_c</span> <span class="o">*</span> <span class="n">s_c</span><span class="p">)</span>
+    <span class="n">delta_h</span> <span class="o">=</span> <span class="n">delta_h</span> <span class="o">/</span> <span class="p">(</span><span class="n">k_h</span> <span class="o">*</span> <span class="n">s_h</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">delta_l</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">delta_c</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">delta_h</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">r_t</span> <span class="o">*</span> <span class="n">delta_c</span> <span class="o">*</span> <span class="n">delta_h</span></div>
+
+
+<span class="n">COLOR_DISTANCE_ALGORITHMS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;rgb&#39;</span><span class="p">:</span> <span class="n">dist_rgb</span><span class="p">,</span>
+                             <span class="s1">&#39;rgb-weighted&#39;</span><span class="p">:</span> <span class="n">dist_rgb_weighted</span><span class="p">,</span>
+                             <span class="s1">&#39;cie76&#39;</span><span class="p">:</span> <span class="n">dist_cie76</span><span class="p">,</span>
+                             <span class="s1">&#39;cie94&#39;</span><span class="p">:</span> <span class="n">dist_cie94</span><span class="p">,</span>
+                             <span class="s1">&#39;cie2000&#39;</span><span class="p">:</span> <span class="n">dist_cie2000</span><span class="p">}</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011 Erik Rose, Jeff Quast, Avram Lubkin
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    .wy-nav-content { max-width: 900px; }
+  </style>
+
+
+
+</body>
+</html>
