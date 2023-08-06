@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: scrapli_paramiko
+Version: 2020.4.18
+Summary: paramiko transport plugin for the scrapli SSH|Telnet screen scraping library
+Home-page: https://github.com/carlmontanari/scrapli_paramiko
+Author: Carl Montanari
+Author-email: carl.r.montanari@gmail.com
+License: UNKNOWN
+Description: scrapli_paramiko
+        ================
+        
+        This is the paramiko plugin for [scrapli](https://github.com/carlmontanari/scrapli).
+        
+        If you would like to use scrapli, but prefer to use paramiko as a driver for whatever reason (perhaps you are on
+         Windows?), this is the library for you!
+         
+        Please see the main [scrapli repo](https://github.com/carlmontanari/scrapli) for much more information.
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
