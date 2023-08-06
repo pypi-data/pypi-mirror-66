@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: stateEstimation
+Version: 0.1
+Summary: Python package for probabilistic state estimation techniques (e.g., KF, EKF, PF)
+Home-page: http://www.github.com/rgmaidana/stateEstimation
+Author: Renan Maidana
+Author-email: renan.g.maidana@ntnu.no
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
