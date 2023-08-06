@@ -1,0 +1,11 @@
+anymotion_sdk/__init__.py,sha256=IvpG0794GMDPXVXr-pwNxQ1q5DlvlJgi3YgnaK73qkU,953
+anymotion_sdk/auth.py,sha256=knjLvE5CG7xiug20_0aKc7sVuwdSIKoXWCTjo44jYq8,644
+anymotion_sdk/client.py,sha256=7hrGavoLGPVvaONTrScY15A8Bqb-Y4MPmYm_fMxhWFw,12191
+anymotion_sdk/exceptions.py,sha256=yu7y9SdmlVSs8GlQ-S3hnSdlA0VJiWzShYPdpY5pajA,447
+anymotion_sdk/response.py,sha256=rM-EssQ7El9ZLR73TJ_iKvYfc-tzcV0gJxgwAx6PHLo,1484
+anymotion_sdk/session.py,sha256=idf6-DvnQPr7nrLcuS-Kc5whJp2lxMokk7-8dHtcCMs,3636
+anymotion_sdk/utils.py,sha256=yNdh3IhIUclQWpoKy_HA-1RmnCrpBa1R5Ec8fz70ifw,888
+anymotion_sdk-1.0.0.dist-info/LICENSE,sha256=3MvN_0JgBV51crwqjMhxScbaO9fY3-YzHBQKT2sMr1E,1077
+anymotion_sdk-1.0.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+anymotion_sdk-1.0.0.dist-info/METADATA,sha256=e04XgCWNrnnrgfs7Svv8fJbY9PyjnqN6ceBXwgZlC6w,1934
+anymotion_sdk-1.0.0.dist-info/RECORD,,
