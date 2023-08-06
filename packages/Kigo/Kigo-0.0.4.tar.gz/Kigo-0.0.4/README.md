@@ -1,0 +1,1 @@
+# Kigo - Framework for async event RPC by RabbitMQ.
