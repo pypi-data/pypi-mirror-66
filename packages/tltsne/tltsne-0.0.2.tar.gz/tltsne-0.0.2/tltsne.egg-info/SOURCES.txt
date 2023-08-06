@@ -1,0 +1,10 @@
+README.md
+setup.py
+bin/tltsne
+tltsne/__init__.py
+tltsne.egg-info/PKG-INFO
+tltsne.egg-info/SOURCES.txt
+tltsne.egg-info/dependency_links.txt
+tltsne.egg-info/not-zip-safe
+tltsne.egg-info/requires.txt
+tltsne.egg-info/top_level.txt
