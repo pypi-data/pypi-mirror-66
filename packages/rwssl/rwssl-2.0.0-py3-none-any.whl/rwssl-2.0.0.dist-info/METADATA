@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: rwssl
+Version: 2.0.0
+Summary: A Python package to manage Let's Encrypt SSL on ServerPilot provisioned servers.
+Home-page: https://github.com/rehmatworks/serverpilot-letsencrypt/
+Author: Rehmat Alam
+Author-email: contact@rehmat.works
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >3.5.2
+Requires-Dist: python-nginx
+Requires-Dist: validators
+Requires-Dist: termcolor
+Requires-Dist: tabulate
+Requires-Dist: Jinja2
+Requires-Dist: certbot
+
+UNKNOWN
+
+
