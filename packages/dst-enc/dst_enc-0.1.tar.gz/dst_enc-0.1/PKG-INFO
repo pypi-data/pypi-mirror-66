@@ -1,0 +1,43 @@
+Metadata-Version: 1.1
+Name: dst_enc
+Version: 0.1
+Summary: Simple Modules Encode code python
+Home-page: https://github.com/DH4CK1/dst_enc
+Author: Dst_207
+Author-email: cyberdhack@gmail.com
+License: MIT
+Description: 
+        
+        1.Simple Encode & Decode
+        
+        >>> # How To Encode
+        >>> import dst_enc
+        >>> dst_enc.encode('CodeInHere')
+        
+        >>> # How To Decode
+        >>> import dst_enc
+        >>> dst_enc.decode('CodeEncode')
+        
+        
+        2.Modifing base64 encode function
+        
+        >>> # How To Encode
+        >>> import dst_enc
+        >>> bs=dst_enc.base_dst()
+        >>> bs.bs64encode('CodeInHere')
+        
+        >>> # How To Decode
+        >>> import dst_enc
+        >>> bs=dst_enc.base_dst()
+        >>> bs.bs64decode('CodeEncode')
+        
+Keywords: encode,python,pythonencode
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
