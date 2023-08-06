@@ -1,0 +1,17 @@
+pysection/__init__.py,sha256=pmDyG9iEElGCMvfncw2iz4486fHTeYgrKpSg2vtiASs,299
+pysection/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysection/core/materials.py,sha256=C6T_FTZFu3GKmTGS-YlZt99xdaP3DVGAnv3NmrgZ46c,11293
+pysection/core/mpl_plots.py,sha256=M4G12EfThwVwOrtzoxOTunj9PcPGXZf2oDZ69Ma2xuI,18188
+pysection/core/sect_utils.py,sha256=m363g4MfwIndEGpMGO6Y7Lj00EDxVEgz-UIuhWRabsg,53002
+pysection/core/sections.py,sha256=S_71PERZFu47zeGHEgyYZ8tyg3h-k6ay2lkLKaBeOsY,28751
+pysection/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysection/utils/checks.py,sha256=qnfEE76DKNKDhh0KgIp4HK0fkRtmQxgQrj4lJAi8vPk,5336
+pysection/utils/dataread.py,sha256=bXG2vEZ8CWq4NKw8FwmV_zieJFui20UL5PY7hjS7mo8,11800
+pysection/utils/dataview.py,sha256=x48uI4nOMXPIGb8Ga1bU8Z0F7QPbkpuwxZNg0gBIVKk,8435
+pysection/utils/reports.py,sha256=5JFapOV206cdOs1tDIeMwPmgGhLbjus2lpEhkmywQZ4,20092
+pysection/utils/slns.py,sha256=dP3BckP3rsuw9V3B00CB-mVOEISlZfGOo832xntKijw,5768
+pysection-0.1.0.dist-info/LICENSE,sha256=WTkEKBsEJ8XZ39pvYofdlZiw7K1xG2vtk5pjsSc6_sg,1072
+pysection-0.1.0.dist-info/METADATA,sha256=N0MDzPkIfmOtBFfLkI3WFy3Q4MN5txVcB8ed8g4Ed4k,2198
+pysection-0.1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+pysection-0.1.0.dist-info/top_level.txt,sha256=4P8oipx9L5CR7k5Y1HUjFBq0jcNTc1ttl9c7Rs3fmSw,10
+pysection-0.1.0.dist-info/RECORD,,
