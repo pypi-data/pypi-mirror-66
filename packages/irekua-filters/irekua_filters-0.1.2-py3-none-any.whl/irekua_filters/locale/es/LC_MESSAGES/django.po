@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-21 19:37-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: annotations/annotations.py:13 data_collections/collection_devices.py:14
+#: data_collections/collection_licences.py:13
+#: data_collections/collection_sampling_events.py:14
+#: data_collections/collection_sites.py:12 items/items.py:14
+#: sampling_events/sampling_event_devices.py:13
+#: sampling_events/sampling_events.py:19
+msgid "Mine"
+msgstr "Mio"
+
+#: annotations/annotations.py:50 data_collections/collection_devices.py:56
+#: data_collections/collection_licences.py:49
+#: data_collections/collection_sampling_events.py:55
+#: data_collections/collection_sites.py:47
+#: data_collections/collection_users.py:35 devices/physical_devices.py:42
+#: items/items.py:64 sampling_events/sampling_event_devices.py:46
+#: sampling_events/sampling_events.py:66 sites.py:39
+msgid "added on"
+msgstr "añadido el"
+
+#: annotations/annotations.py:51
+msgid "annotation type"
+msgstr "tipo de anotación"
+
+#: annotations/annotations.py:52
+msgid "event type"
+msgstr "tipo de evento"
+
+#: data_collections/collection_devices.py:57
+#: data_collections/collection_sites.py:48
+msgid "internal id"
+msgstr "nombre interno"
+
+#: data_collections/collection_licences.py:50
+msgid "licence type"
+msgstr "tipo de licencia"
+
+#: data_collections/collection_sampling_events.py:56
+#: sampling_events/sampling_events.py:67
+msgid "started on"
+msgstr "inciado el"
+
+#: data_collections/collection_sampling_events.py:57
+#: sampling_events/sampling_events.py:68
+msgid "ended on"
+msgstr "terminado el"
+
+#: data_collections/collection_users.py:36
+msgid "first name"
+msgstr "nombre"
+
+#: data_collections/collection_users.py:37
+msgid "last name"
+msgstr "apellidos"
+
+#: data_collections/collection_users.py:38
+msgid "username"
+msgstr "nombre de usuario"
+
+#: data_collections/data_collections.py:34
+msgid "created on"
+msgstr "creado el"
+
+#: data_collections/data_collections.py:35 sites.py:40
+msgid "name"
+msgstr "nombre"
+
+#: devices/physical_devices.py:43
+msgid "serial number"
+msgstr "número de serie"
+
+#: devices/physical_devices.py:44
+msgid "custom id"
+msgstr "nombre de dipositivo"
+
+#: devices/physical_devices.py:45
+msgid "brand"
+msgstr "marca"
+
+#: devices/physical_devices.py:46
+msgid "model"
+msgstr "modelo"
+
+#: items/items.py:63
+msgid "captured on"
+msgstr "capturado el"
+
+#: items/items.py:65
+msgid "filesize"
+msgstr "tamaño de archivo"
+
+#: sites.py:41
+msgid "locality"
+msgstr "localidad"
