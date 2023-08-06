@@ -1,0 +1,8 @@
+README.md
+setup.py
+zettlekasten.py
+zettlekasten.egg-info/PKG-INFO
+zettlekasten.egg-info/SOURCES.txt
+zettlekasten.egg-info/dependency_links.txt
+zettlekasten.egg-info/not-zip-safe
+zettlekasten.egg-info/top_level.txt
