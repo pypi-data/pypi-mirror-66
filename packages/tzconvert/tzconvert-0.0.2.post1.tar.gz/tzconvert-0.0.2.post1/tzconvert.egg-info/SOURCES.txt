@@ -1,0 +1,7 @@
+README.md
+setup.py
+tzconvert.egg-info/PKG-INFO
+tzconvert.egg-info/SOURCES.txt
+tzconvert.egg-info/dependency_links.txt
+tzconvert.egg-info/requires.txt
+tzconvert.egg-info/top_level.txt
