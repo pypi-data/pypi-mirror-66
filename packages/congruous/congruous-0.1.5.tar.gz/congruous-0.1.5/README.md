@@ -1,0 +1,89 @@
+# Congruous
+
+A python CLI that generates performance and accuracy reports of your OCR recognized data with the human - curated correct data 
+
+#### Installation 
+ 
+ Works on python-3 environment and requires pip3 to install . In order to avoid environment conflicts setting up  [virtualenv](https://virtualenv.pypa.io/en/latest/) is advisable.
+```
+$ pip install congruous
+```
+
+
+
+Just to confirm that congruous is installed correctly along with its dependency , run the          ```--version``` comand. 
+
+
+```
+$ congruous --version
+```
+ This command should show you  the lastest version number without any errors. However , its 
+been reported that for some linux distribution ```python-tk``` is required to run this.  Run the below  command to fix it. 
+
+```
+$ apt-get install python-tk
+```
+
+#### Quick Start
+```
+$ congruous --help
+```
+Lists all the available commands that can be used
+
+![https://testingbucketservices.s3.ap-south-1.amazonaws.com/congruous/congruous_home_command.png](https://testingbucketservices.s3.ap-south-1.amazonaws.com/congruous/congruous_home_command.png) 
+
+Congruous mainly works based on the following three sub-commands , 
+* ```store```
+*  ```match```
+*  ```report```
+
+Currently supported document types : `pan` , ```aadhar```
+
+
+ #### Command : ```store``` 
+ 
+ 
+The purpose of ```store``` command  is to handle all the database operations.  The term ```store```  intends to  store something or to keep hold of .  Congruous uses an in-built sqlite database to handle the store operations .
+
+Here are some of the options that can be used along with the ```store```  command. 
+
+```--seed```  - feeds the database based on document type , prints number of records
+ seeded if successful .
+
+
+```--head``` - displays the first 10 records that were seeded during the seed operation. can be used to verify if your matching against the right set of data. 
+ 
+```--tail``` -  displays the last 10 records that were seeded during the seed operation. can be used to verify if your matching against the right set of data. 
+
+```--count``` - displays the total number of records seeded for a document type.
+
+```--drop```  - drops all the records for a particular document type that was seeded . 
+
+![https://testingbucketservices.s3.ap-south-1.amazonaws.com/congruous/store.png](https://testingbucketservices.s3.ap-south-1.amazonaws.com/congruous/store.png)
+
+
+ #### Command : ```match```
+	
+This command performs the match operation and gives the performance of the OCR . Match can be performed either against seeded records or with another file using the options below.  
+ 
+ ```--ocrd``` -  mandatory field that passes custom built OCR parsed data as an input to the tool. By default it will be matched to seeded records
+ 				
+```--hcd``` - to match with a another file instead of the  seeded records  in stores . passes a file to the tool 
+
+```--report``` - generates a report on the the given current run of the congruous . 
+
+![https://testingbucketservices.s3.ap-south-1.amazonaws.com/congruous/match.png](https://testingbucketservices.s3.ap-south-1.amazonaws.com/congruous/match.png)
+
+
+
+#### Command : ```report```
+
+This command is helpful to get insights about your OCR model performance over a period of time.  Right now it just displays  history - performance in the last few congruous runs . More options are to be included in the future versions
+
+```--history```  -  displays the performance of you OCR for the last 10 runs. 
+
+
+![https://testingbucketservices.s3.ap-south-1.amazonaws.com/congruous/congruous_history.png](https://testingbucketservices.s3.ap-south-1.amazonaws.com/congruous/congruous_history.png)
+ 
+
+
