@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: pajamas
+Version: 0.1a0
+Summary: Package to stip jupyter notebooks of their output and dress back up from these pajamas.
+Home-page: https://github.com/barceloco/pajamas
+Author: Armand Niederberger
+Author-email: pajamas@armandniederberger.com
+License: LICENSE
+Description: # pajamas
+        Fancy light clothes for jupyter notebooks to sleep in.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
