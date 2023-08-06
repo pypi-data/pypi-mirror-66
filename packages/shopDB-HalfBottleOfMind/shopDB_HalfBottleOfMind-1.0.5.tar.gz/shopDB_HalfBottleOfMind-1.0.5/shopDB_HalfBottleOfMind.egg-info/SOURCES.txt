@@ -1,0 +1,8 @@
+README.md
+setup.py
+shopDB/Database.py
+shopDB/__init__.py
+shopDB_HalfBottleOfMind.egg-info/PKG-INFO
+shopDB_HalfBottleOfMind.egg-info/SOURCES.txt
+shopDB_HalfBottleOfMind.egg-info/dependency_links.txt
+shopDB_HalfBottleOfMind.egg-info/top_level.txt
