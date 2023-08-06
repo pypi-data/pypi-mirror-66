@@ -1,0 +1,11 @@
+delete/__init__.py,sha256=GWkv0fXEdvjHbrqCSXF2olLXTmjkID8btOZEfUR6KbU,776
+delete/__meta__.py,sha256=a6MPWQH1zYwexgktqWYCkEtTW6PUwM2JUbzxjiTsGIU,956
+delete/cli.py,sha256=6R-8LyjziZH43ZJuNlaoglARYj_o_53fk8HQv8sbPms,10963
+delete/logging.py,sha256=5jYmsCG_qpRjz79wW-fz9aPs1Ga11-9pIovC-xvG79E,1757
+delete_cli-1.1.3.data/data/share/man/man1/delete.1,sha256=cvkuWuTR7MpkLoiu4d3gLx6bs90qcpl7y9kOzQIHVLQ,4928
+delete_cli-1.1.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+delete_cli-1.1.3.dist-info/METADATA,sha256=G5usSHYC-qzgsi0gMVPpEicSfgN_dMdLcUQ0XcnY02g,4260
+delete_cli-1.1.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+delete_cli-1.1.3.dist-info/entry_points.txt,sha256=Pcc_hzzmuV1QPBy6TUaUcIBBcnoN3VVvj_XmKoR2sLI,44
+delete_cli-1.1.3.dist-info/top_level.txt,sha256=KrmeaEkZr6EkVVbTZqIBjR3QvWOxtm-5LN407FxNYMY,7
+delete_cli-1.1.3.dist-info/RECORD,,
