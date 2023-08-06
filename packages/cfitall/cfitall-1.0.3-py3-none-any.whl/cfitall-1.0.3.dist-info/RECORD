@@ -1,0 +1,14 @@
+cfitall/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cfitall/config.py,sha256=f_f5V1XH8124I-5cdUYoZAjAclNuFKCf6qOgnIG8yn4,9257
+cfitall/utils.py,sha256=l-HwlJ1fBnY9eRQGNlsBv30cMaNE35RmTG-iagWrqQs,3622
+cfitall/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cfitall/tests/cfitall.yml,sha256=KV3NhDFxSL3H2RD1eRQCqo8vjx2G976nHZzOf0K1nac,171
+cfitall/tests/test_config.py,sha256=H6ufQJmudf6o_bU-M13BXgguXnCrStx0CXEHCCLCdU0,4449
+cfitall/tests/test_utils.py,sha256=NRNMYs_NIj43cPz019NcmX-sfk0qVsqo96EwHkVG3e0,2112
+cfitall-1.0.3.dist-info/AUTHORS,sha256=rAvquC9xCFZuH3p4ZPoLl_mSppTbTXsLaZHVlq8K09g,57
+cfitall-1.0.3.dist-info/LICENSE,sha256=9Sj-lso21lOZ5JHjD5O1fG_lspgFb56Of6WAlJ1yscM,1063
+cfitall-1.0.3.dist-info/METADATA,sha256=RN9wdF1HeeZ1Q-qH0ofYWvdoWy5ZKeQPtWI4__7ayM8,5751
+cfitall-1.0.3.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+cfitall-1.0.3.dist-info/pbr.json,sha256=rXvqzRRil4c8hshXP_45V9m9g_wBeZc_Jdcwsr8hPeQ,47
+cfitall-1.0.3.dist-info/top_level.txt,sha256=znckYMKOWh3DAkJWaxLXycwkeee77BKwXLC2gOP8NM4,8
+cfitall-1.0.3.dist-info/RECORD,,
