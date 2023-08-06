@@ -1,0 +1,36 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+    {% if form_field is not defined %}
+        {% from 'base/_formhelpers.html' import form_field %}
+    {% endif %}
+    <div class="container-full">
+        <div class="container-fluid top-section section {% if custom_class %}{{ custom_class }}{% endif %}">
+            <h1> {{ grid_header }}</h1>
+        </div>
+        <div class="container-fluid mid-section section">
+            {% block mid_grid_section %}{% endblock %}
+        </div>
+
+        <div class="container-fluid bottom-section-table section">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        {% for attribute_name in object_display_attributes %}
+                            <th> {{ attribute_name }} </th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for object in objects %}
+                        <tr>
+                            {% for attribute_name in object_display_attributes %}
+                                <td> {{ object[attribute_name] }} </td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
