@@ -1,0 +1,10 @@
+README.md
+setup.py
+whazzap/__init__.py
+whazzap/utilities.py
+whazzap.egg-info/PKG-INFO
+whazzap.egg-info/SOURCES.txt
+whazzap.egg-info/dependency_links.txt
+whazzap.egg-info/not-zip-safe
+whazzap.egg-info/requires.txt
+whazzap.egg-info/top_level.txt

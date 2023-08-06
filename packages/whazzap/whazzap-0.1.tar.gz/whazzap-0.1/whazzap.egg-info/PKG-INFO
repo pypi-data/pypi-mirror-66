@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: whazzap
+Version: 0.1
+Summary: A library to treat message text import without media from WhatsApp
+Home-page: https://github.com/beatrizcastro89/whazzap
+Author: Beatriz Yumi Simões de Castro
+Author-email: beatrizyumi@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
