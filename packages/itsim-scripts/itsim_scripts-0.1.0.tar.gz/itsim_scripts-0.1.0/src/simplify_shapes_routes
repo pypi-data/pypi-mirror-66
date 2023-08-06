@@ -1,0 +1,96 @@
+#!/usr/bin/env python
+from argparse import ArgumentParser, RawTextHelpFormatter as ArgFormatter
+from os import chdir
+from pathlib import Path
+import io
+import zipfile
+import csv
+from simplification.cutil import simplify_coords_vw
+
+if __name__ == '__main__' and __package__ is None:
+    from importlib import import_module
+    from sys import path
+    path.insert(0, str(Path(__file__).resolve().parents[1]))
+    __package__ = 'scripts'
+    import_module(__package__)
+from .utils import get_geojson, get_first_record_attributes  # noqa E402
+
+
+def main(sys_args):
+    chdir(str(Path(__file__).resolve().parents[1]))
+    parser = ArgumentParser(
+        description="Simplifies the shapes.txt file in a given GTFS",
+        formatter_class=ArgFormatter
+    )
+    parser.add_argument('-i', '--input', metavar='GTFS path', dest='gtfs_in_path', type=str, required=True,
+                        help="Input GTFS file path")
+    parser.add_argument('-p', '--precision', metavar='number', dest='precision', type=float, default=0.0000001,
+                        help="Precision of the simplification (default 5)")
+    parser.add_argument('-o', '--output', metavar='GTFS path', dest='gtfs_out_path', type=str, default=None,
+                        help="Output GTFS file path")
+    args = parser.parse_args(args=sys_args)
+    gtfs_in_path = args.gtfs_in_path
+    gtfs_out_path = args.gtfs_out_path
+    precision = args.precision
+
+    with zipfile.ZipFile(gtfs_in_path, 'r') as feed_in_file:
+        names = feed_in_file.namelist()
+        with zipfile.ZipFile(gtfs_out_path, 'w') as feed_out_file:
+            for name in names:
+                if name != 'shapes.txt':
+                    buffer = feed_in_file.read(name)
+                    feed_out_file.writestr(name, buffer)
+                else:
+                    with feed_in_file.open('shapes.txt') as file_in:
+                        # zipfile does not support stream writing. The following buffer helps keeping shapes in memory.
+                        shapes_buffer = io.StringIO()
+                        writer = csv.writer(shapes_buffer)
+                        simplify_shapes(file_in, writer, precision)
+                        feed_out_file.writestr('shapes.txt', shapes_buffer.getvalue())
+
+
+def simplify_shapes(file_in, writer, precision):
+    line_index = -1
+    shape_id = None
+    shape_id_position = None
+    shape_lat_position = None
+    shape_lon_position = None
+    position_map = {}
+    positions = []
+    for line_in in csv.reader(io.TextIOWrapper(file_in, 'utf-8')):
+        line_index += 1
+        if line_index == 0:
+            shape_id_position = line_in.index('shape_id')
+            shape_lat_position = line_in.index('shape_pt_lat')
+            shape_lon_position = line_in.index('shape_pt_lon')
+            writer.writerow(line_in)
+        else:
+            if shape_id is None:
+                shape_id = line_in[shape_id_position]
+            if line_in[shape_id_position] != shape_id:
+                simplify_shape_and_write(positions, position_map, writer, precision)
+                position_map.clear()
+                positions = []
+                shape_id = line_in[shape_id_position]
+            else:
+                position = [line_in[shape_lat_position], line_in[shape_lon_position]]
+                positions.append(position)
+                position_map[tokenize_position(position)] = line_in
+    if len(positions) > 0:
+        simplify_shape_and_write(positions, position_map, writer, precision)
+
+
+def simplify_shape_and_write(positions, position_map, writer, precision):
+    simplified_vw = simplify_coords_vw(positions, precision)
+    print('converted {} lines in {} lines'.format(len(positions), len(simplified_vw)))
+    for position in simplified_vw:
+        writer.writerow(position_map[tokenize_position(position)])
+
+
+def tokenize_position(position):
+    return '{:.6f},{:.6f}'.format(float(position[0]), float(position[1]))
+
+
+if __name__ == '__main__':
+    from sys import argv
+    main(argv[1:])

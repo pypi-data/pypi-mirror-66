@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+from argparse import ArgumentParser, RawTextHelpFormatter as ArgFormatter
+from os import chdir
+from pathlib import Path
+from itsim_scripts.utils import filter_gtfs
+
+
+def main(sys_args):
+    chdir(str(Path(__file__).resolve().parents[1]))
+    parser = ArgumentParser(
+        description="Split a GTFS in two parts based on routes filter",
+        formatter_class=ArgFormatter
+    )
+    parser.add_argument('-g', '--gtfs', metavar='gtfs_file', dest='gtfs_file', type=str, required=True,
+                        help="Input GTFS file path")
+    parser.add_argument('-f', '--filter', metavar='route_ids_filter', dest='route_ids_file', type=str, required=True,
+                        help="Input route ids filter file (one route id per line)")
+    parser.add_argument('-i', '--in', metavar='filtered_in_file', dest='in_file', type=str, required=True,
+                        help="Output GTFS file path for filtered in routes")
+    parser.add_argument('-o', '--out', metavar='filtered_out_file', dest='out_file', type=str, required=True,
+                        help="Output GTFS file path for filtered out routes")
+    args = parser.parse_args(args=sys_args)
+    filter_gtfs(**vars(args))
+
+
+if __name__ == '__main__':
+    from sys import argv
+    main(argv[1:])
