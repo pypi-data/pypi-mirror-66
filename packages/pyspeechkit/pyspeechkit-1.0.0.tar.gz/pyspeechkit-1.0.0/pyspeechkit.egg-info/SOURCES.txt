@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+pyspeechkit/__init__.py
+pyspeechkit/api.py
+pyspeechkit/constants.py
+pyspeechkit/exceptions.py
+pyspeechkit/tts.py
+pyspeechkit/utils.py
+pyspeechkit.egg-info/PKG-INFO
+pyspeechkit.egg-info/SOURCES.txt
+pyspeechkit.egg-info/dependency_links.txt
+pyspeechkit.egg-info/requires.txt
+pyspeechkit.egg-info/top_level.txt
