@@ -1,0 +1,9 @@
+pip
+Click
+numpy
+pandas
+matplotlib
+sympy
+numpy
+xlrd
+openpyxl
