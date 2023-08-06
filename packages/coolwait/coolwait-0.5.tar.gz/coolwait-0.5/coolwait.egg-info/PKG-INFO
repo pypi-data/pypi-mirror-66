@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: coolwait
+Version: 0.5
+Summary: my first project on pypi
+Home-page: https://github.com/kang-newbie/colorwait
+Author: Noobie
+Author-email: adlizhafari122@gmail.com
+License: MIT
+Description: # Example1
+        ```python
+        from coolwait import pelangi
+        pelangi("Please wait...",delay=5,tab=2)
+        print("hello world")
+        ```
+        
+        # Example2
+        ```python
+        import coolwait
+        from threading import Thread
+        from coolwait import pelangi
+        
+        t=Thread(target=pelangi, args=("LOADING...",delay=None,tab=2))
+        t.start()
+        
+        def do_something():
+            import requests
+            req=requests.get("https://google.com")
+            coolwait.stop=True
+            return req.text
+        
+        run=do_something()
+        t.join()
+        print(run)
+        ```
+        
+Keywords: COOLWAIT,COLORWAIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Description-Content-Type: text/markdown
