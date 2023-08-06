@@ -1,0 +1,13 @@
+README.md
+README.rst
+setup.py
+src/regexify/__init__.py
+src/regexify/pattern.py
+src/regexify/pattern_trie.py
+src/regexify.egg-info/PKG-INFO
+src/regexify.egg-info/SOURCES.txt
+src/regexify.egg-info/dependency_links.txt
+src/regexify.egg-info/entry_points.txt
+src/regexify.egg-info/not-zip-safe
+src/regexify.egg-info/top_level.txt
+test/test_patterntrie.py
