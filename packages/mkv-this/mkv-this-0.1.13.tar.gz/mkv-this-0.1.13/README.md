@@ -1,0 +1,57 @@
+
+## mkv-this
+
+`mkv-this` is a little script that outputs a bunch of bot sentences based on a bank of text that you feed it. the results are saved to a text file of your choosing. if you run it again on the same output file, the new results are appended after the old ones.
+
+a second command, `mkv-this-dir` allows you to input a directory and it will read all text files within as input.
+
+it simply makes some of the features of the `markovify` python module available as a command line tool.
+
+it was written by a total novice, so you probably shouldn’t download it. i only learned about argparser yesterday, and pypi.org today, no matter what day it is. tomorrow i might learn about os and sys.
+
+#### installing:
+
+install it with pip, the python package manager:
+
+`python3 -m pip install mkv-this`
+
+to do this you need `python3` and `pip`. if you don't have them, install them through your system's package manager. on debian, for example, you'd run:
+
+`sudo apt install python3 python3-pip`
+
+markovify is also a dependency, but it should install along with `mkv-this`.
+
+#### options:
+
+the script implements a few of the basic `markovify` options, so you can:
+
+* specify output file (default = "./mkv-output.txt")
+* specify a maximum sentence length, in characters.
+* specify how many sentences to output (default = 5)
+* specify state size, i.e. the number of preceeding words to be used in calculating the probability of the next word (default = 2).
+* specify an additional file to use for text input. you can add only one. if you want to feed a stack of files into your bank, use `mkv-this-dir`.
+
+run `mkv-this -h` to see how to use these options.
+
+#### mkv-this-dir: markovify a directory of text files
+
+`mkv-this` can only take two files as input material each time. if you want to input a stack of files, use `mkv-this-dir`. it allows you to specify a directory and all text files in it will be used as input material.
+
+if for some reason you want to get a similar funtionality with `mkv-this`, you can easily concatenate some files yourself in bash, then process them:
+
+* copy all your text files into a directory
+* cd into the directory
+* run `cat * > outputfile.txt`
+* run mkv-this on your newly created file: `mkv-this outputfile.txt`
+
+#### for best results:
+
+feed `mkv-this` large-ish amounts of well punctuated text. it works best if you bulk replace/remove as much mess as possible (URLs, metadata, stars, bullets, etc.), unless you want mashed versions of those things in your output.
+
+if your input text doesn’t use full-stops to mark the ends of sentences, try putting each 'sentence' on a newline, so the parser doesn't read your entire file as one big sentence and output nothing.
+
+you’ll probably want to edit the output too. it is very much supposed to be a kind of raw material for human editing, rather than print-ready boilerplate bosh, although many bots are happily publishing such output directly.
+
+for a few further tips, see https://github.com/jsvine/markovify#basic-usage.
+
+happy zaning.
