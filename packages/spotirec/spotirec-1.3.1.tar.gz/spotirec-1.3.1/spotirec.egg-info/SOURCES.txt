@@ -1,0 +1,17 @@
+README.md
+setup.py
+spotirec/__init__.py
+spotirec/api.py
+spotirec/conf.py
+spotirec/log.py
+spotirec/main.py
+spotirec/oauth2.py
+spotirec/recommendation.py
+spotirec/spotirec.py
+spotirec.egg-info/PKG-INFO
+spotirec.egg-info/SOURCES.txt
+spotirec.egg-info/dependency_links.txt
+spotirec.egg-info/entry_points.txt
+spotirec.egg-info/not-zip-safe
+spotirec.egg-info/requires.txt
+spotirec.egg-info/top_level.txt
