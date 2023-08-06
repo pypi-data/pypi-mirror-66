@@ -1,0 +1,11 @@
+pydegensac.libs/liblapack-78e59728.so.3.0.3,sha256=pHGddhPCfXRVVEEmtfN2NFGhYbJoZde9m1Nekk7AoSk,4263392
+pydegensac.libs/libgfortran-bfa58d52.so.1.0.0,sha256=QV3_6DcbiNJfyZvocEDA5T9_sEMFWL9exHNc0yBLb58,646840
+pydegensac.libs/libblas-2d5b9174.so.3.0.3,sha256=oumx7U5F5_x5THPwbQUZoXb1zxbkNZZo395okfm8HPM,353632
+pydegensac/pydegensac.cpython-35m-x86_64-linux-gnu.so,sha256=mFSRM4RExE6cPPn4XpIGg3wdrgORUPEsjsXhTxBN9_Y,272256
+pydegensac/__init__.py,sha256=tRDNTMt6YlQsqpsS3ZVKq6FFPLmPKsyHQuVq2jSRV_I,150
+pydegensac/utils.py,sha256=R8gZaeZCXTK7ld1_PTYCtCuFPGs7yJPu_p-I0iWH84U,5384
+pydegensac-0.1.1.dist-info/METADATA,sha256=MJLgngS49GoPgf7PqgI3xXsmyb42Dh734bK_kVD37PU,378
+pydegensac-0.1.1.dist-info/RECORD,,
+pydegensac-0.1.1.dist-info/LICENSE,sha256=pBmg0hBajpZpvn8GVn0DPWBr9WQ7BC4FgYdmMc0QcBQ,1084
+pydegensac-0.1.1.dist-info/WHEEL,sha256=t7NMAxUAarKLTOuYlyMuhTxEWsGVrf_opj38nxzwJgI,109
+pydegensac-0.1.1.dist-info/top_level.txt,sha256=IiZZZeTzMtUpkp5VtPkPgjlHhEvPBi9vEa8c8TRuN7M,33
