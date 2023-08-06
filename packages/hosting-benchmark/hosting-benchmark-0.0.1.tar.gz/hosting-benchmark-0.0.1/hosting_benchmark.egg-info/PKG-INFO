@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: hosting-benchmark
+Version: 0.0.1
+Summary: PHP Web-hosting benchmark
+Home-page: https://github.com/samupl/hosting-benchmark
+Author: Jakub Szafrański
+Author-email: kontakt@samu.pl
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: dev
+Provides-Extra: test
