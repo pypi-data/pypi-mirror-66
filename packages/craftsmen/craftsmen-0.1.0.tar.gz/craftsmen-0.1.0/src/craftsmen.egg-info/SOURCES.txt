@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+src/craftsmen/__init__.py
+src/craftsmen/compose.py
+src/craftsmen/curry.py
+src/craftsmen/identity.py
+src/craftsmen.egg-info/PKG-INFO
+src/craftsmen.egg-info/SOURCES.txt
+src/craftsmen.egg-info/dependency_links.txt
+src/craftsmen.egg-info/top_level.txt
