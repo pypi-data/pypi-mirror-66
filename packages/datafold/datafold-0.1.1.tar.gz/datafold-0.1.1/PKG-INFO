@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: datafold
+Version: 0.1.1
+Summary: datafold processes high-dimensional data (point clouds or time series) to learn hidden geometric structures.
+Home-page: https://datafold-dev.gitlab.io/datafold
+Author: datafold development team
+Author-email: daniel.lehmberg@hm.edu
+License: MIT
+Description: 
+        datafold is a Python package consisting of *data*-driven algorithms with 
+        mani*fold* assumption. That is to process high-dimensional data (including time series) 
+        that lie on an (unknown) manifold with intrinsic lower-dimension.
+Keywords: machine learning, dynamical system, data-driven, time series, time series regression, time series forecasting, manifold learning
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Provides-Extra: pydmd
