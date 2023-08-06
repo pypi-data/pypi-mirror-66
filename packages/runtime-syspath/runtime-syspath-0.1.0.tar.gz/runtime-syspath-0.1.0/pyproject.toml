@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "runtime-syspath"
+version = "0.1.0"
+description = "Function to find each 'src' directory under working directory and add it to sys.path."
+authors = ["Greg Kedge <gregwork@kedges.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4.1"
+wheel = "tox-wheel"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
