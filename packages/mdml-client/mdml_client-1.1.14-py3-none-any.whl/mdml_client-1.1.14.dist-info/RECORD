@@ -1,0 +1,9 @@
+mdml_client/MDML_client.py,sha256=lcYGz0wrdodAqpn7nSXn1FcnmFgZSrp9TiMZVL7N4sQ,28576
+mdml_client/__init__.py,sha256=ek6XFmgeZ2zDA92NovIknDfRTNx3V3RBUWzBrJjD0vA,47
+mdml_client/config.py,sha256=Q_Epr5HZgSkWjOSz2lZP3Vbz-2foANjo8WWG5lgoOyQ,49
+mdml_client/example.py,sha256=VvSZisBwxxWCnrUaz04i1UxpVg4hF59LbWqBIIs8L-4,2838
+mdml_client-1.1.14.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+mdml_client-1.1.14.dist-info/METADATA,sha256=pq9-Uv4s5WJokRotflBO08ydleqiyvgfTRuYSlcwZ64,12055
+mdml_client-1.1.14.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mdml_client-1.1.14.dist-info/top_level.txt,sha256=VLU7Wo0JXJyzHqhGATxyIwnS1xXVIJjev87cJeqC2Ls,12
+mdml_client-1.1.14.dist-info/RECORD,,
