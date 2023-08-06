@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: backtest
+Version: 0.7.4
+Summary: Backtest engine for algorithmic trading
+Home-page: https://github.com/yoonbae81/backtest
+Author: Yoonbae Cho
+Author-email: y@xcv.kr
+License: UNKNOWN
+Project-URL: Source, https://github.com/yoonbae81/backtest/
+Project-URL: Bug Reports, https://github.com/yoonbae81/backtest/issues
+Keywords: backtest algotrading
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: requests
+
+# Backtest
+A backtest engine for developing algorithmic trading strategy.
+
+[![PyPI](https://img.shields.io/pypi/v/backtest?color=%234ec726&style=flat-square)](https://pypi.org/project/backtest/)
+
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Support](#support)
+- [Contributing](#contributing)
+- [Testing](#testing)
+
+
+## Installation
+```
+pip install backtest
+```
+
+
+## Usage
+
+Simple Statistics
+```python
+import numpy as np
+import backtest 
+
+backtest.run()
+```
+
+## Support
+
+Please [open an issue](https://github.com/yoonbae81/backtest/issues/new) for support.
+
+
+## Contributing
+
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/yoonbae/backtest/compare/).
+
+
+## Testing
+
+Test codes are located in _tests/_ based on [PyTest](https://docs.pytest.org/en/latest/) framework.
+
+
+
