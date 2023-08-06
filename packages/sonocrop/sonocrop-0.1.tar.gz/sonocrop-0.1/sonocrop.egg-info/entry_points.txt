@@ -1,0 +1,3 @@
+[console_scripts]
+sono-crop = sonocrop:main
+
