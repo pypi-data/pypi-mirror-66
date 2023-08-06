@@ -1,0 +1,8 @@
+requests
+tqdm
+pandas
+regex
+Pyphen
+syllables
+nltk
+nlpnet
