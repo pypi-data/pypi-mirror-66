@@ -1,0 +1,4 @@
+pygments>=1.6
+
+[simplejson]
+simplejson>=2.0.9
