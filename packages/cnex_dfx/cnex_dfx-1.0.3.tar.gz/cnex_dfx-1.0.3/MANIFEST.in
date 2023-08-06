@@ -1,0 +1,2 @@
+include cnex-dfx\configuration\*.dfx
+include LICENSE.txt
