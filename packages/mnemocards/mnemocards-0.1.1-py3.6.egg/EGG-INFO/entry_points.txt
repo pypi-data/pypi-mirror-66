@@ -1,0 +1,3 @@
+[console_scripts]
+mnemocards = mnemocards.__main__:main
+
