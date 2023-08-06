@@ -1,0 +1,9 @@
+uctp/__init__.py,sha256=AvXAyLk0hekECcw9aAKVnSJ9nVmkRY4kq-VRHSS5GWs,200
+uctp/additional.py,sha256=mcpR0_Dc8C6g8BX0iRFL1nu4yQBHDV6wIv-YZCoR3iY,286
+uctp/peer.py,sha256=GpXPsZL6_GBDpgSCBAdTl5Pww0l8JtFi_uQOhtzHbkw,29769
+uctp/protocol.py,sha256=IZfzSzIwDzx_08q_9kASnZC44vXkwZvhIrJvT6XgDRQ,7108
+uctp-1.0.0a1.dist-info/LICENSE.md,sha256=9lckBJZxYVrFtQzuJqXk3itHcVnBuboML8HkFfVepJk,1072
+uctp-1.0.0a1.dist-info/METADATA,sha256=jRcE_W6AEe6EMl99DycKn-ZekmV1a0YyMQOj28B_GbQ,838
+uctp-1.0.0a1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+uctp-1.0.0a1.dist-info/top_level.txt,sha256=-Yk5VECVxO9rYd3FRtc6l7vwHAnOEi3PYJ0RtIo48b0,5
+uctp-1.0.0a1.dist-info/RECORD,,
