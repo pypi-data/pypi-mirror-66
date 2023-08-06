@@ -1,0 +1,16 @@
+slack_scim/__init__.py,sha256=SYApEEyyreFXVF9UH-IV2wjrsU_34wBGaORl7QonQ7M,362
+slack_scim/v1/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+slack_scim/v1/client.py,sha256=_dBq99M-_9kfpSrbTHta5h2x11jCO42RANu5uwLmrn0,19076
+slack_scim/v1/errors.py,sha256=IUiZT3IoZtcTxARW7WP3hldGN3QuR-zzXK8C6vnbp5w,1771
+slack_scim/v1/group.py,sha256=MitGA7H_Gce42FFkW1u6hVzpMvhEvew7UAg1J5uhGSQ,11904
+slack_scim/v1/groups.py,sha256=8Dy8WBbppUM8N4PpZWXxFL7U-Qee9YzI8GKuW8q8bWU,15646
+slack_scim/v1/request.py,sha256=27gVKwok-8_rYJ0aHyV0DLmCMdltyzS3IZPhYcCuZCg,1093
+slack_scim/v1/response.py,sha256=RCfQoQuAcUasMeO-P8jO42p0lF4uUt5nKMA8_o-_vyA,767
+slack_scim/v1/service_provider_configs.py,sha256=OMoPWVGUAnhtFREEoJmeJU3PrzNeotP2HX6ryoFh8dc,8017
+slack_scim/v1/user.py,sha256=18RfyKuWWBOhgsOKwN_CEy241WiGKDr8O5uBYPdBBRM,13394
+slack_scim/v1/users.py,sha256=qA_cI5KtWFIUDrkpJBfcDwHQzC_1-kSynLFkIEilM_I,19865
+slack_scim-1.0.5.dist-info/LICENSE,sha256=OBQyGK-J_lkYCEOsgvG4lnmpn25n0FnLS7y34SmqAdE,1091
+slack_scim-1.0.5.dist-info/METADATA,sha256=aTXGYPJw9MIWMyQrPRggznVhXh1MT3ndfsjTVfwQIK0,6705
+slack_scim-1.0.5.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+slack_scim-1.0.5.dist-info/top_level.txt,sha256=tZPFcuMClF4G-SLvHlIR9Umouq1JK15cH1Bf4w0Y_Ik,11
+slack_scim-1.0.5.dist-info/RECORD,,
