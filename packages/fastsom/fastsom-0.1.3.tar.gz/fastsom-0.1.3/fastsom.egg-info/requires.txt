@@ -1,0 +1,6 @@
+fastai
+sklearn
+kmeans_pytorch
+seaborn
+smart-open==1.8.0
+gensim==3.7.1
