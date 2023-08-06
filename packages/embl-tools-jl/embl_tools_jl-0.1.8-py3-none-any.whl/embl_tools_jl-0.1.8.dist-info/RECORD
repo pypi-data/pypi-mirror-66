@@ -1,0 +1,16 @@
+embl_tools_jl/__init__.py,sha256=XGxM6lqWjSoP6Jk1ksZYXkhmojoVW84cqxqfRPDEk7w,537
+embl_tools_jl/_version.py,sha256=nsIjJQH6boAWzrFRXkrDCgnN_hWiK1W0dMDGdgjtmBQ,72
+embl_tools_jl/handlers.py,sha256=JomtbjLueC5-ZXELoKYL_uItFpm4Sq2A-1415n2zDm0,4857
+embl_tools_jl/toolDescriptions.json,sha256=PmWxL1xCK1jw5BHiV16xyCOUFxjkBmY-BmPKwTQ52J8,11495
+embl_tools_jl/labextension/embl-tools-jl-0.1.0.tgz,sha256=tbJ9XfVolQ5LCYWzW1PCzxRljuqL19I5bTd666gbs0Y,6348
+embl_tools_jl/labextension/embl-tools-jl-0.1.5.tgz,sha256=FRjfOehBwfHGqL6wZs2i0kI3irShfiYTtN0K1YaKjs8,8258
+embl_tools_jl/labextension/embl-tools-jl-0.1.6.tgz,sha256=n2T15uE1QP9iwfpU3cOA3EbhKBUxIlZ0zNnC6j7YvAo,8258
+embl_tools_jl/labextension/embl-tools-jl-0.1.7.tgz,sha256=uM4S6ur6hq8Nn_49DYl4aTlwGHH-1gR22wj5ucPlQgM,8405
+embl_tools_jl/labextension/embl-tools-jl-0.1.8.tgz,sha256=KsFf2pKcLFlvEkIui-sicdZ1lp6qoDQ34j_qONn6pA8,8597
+embl_tools_jl-0.1.8.data/data/etc/jupyter/jupyter_notebook_config.d/embl_tools_jl.json,sha256=04aC-vai86cGTyXmVrz7kkMwslQwlCgoWVoxA8R2A6Q,90
+embl_tools_jl-0.1.8.data/data/share/jupyter/lab/extensions/embl-tools-jl-0.1.8.tgz,sha256=KsFf2pKcLFlvEkIui-sicdZ1lp6qoDQ34j_qONn6pA8,8597
+embl_tools_jl-0.1.8.dist-info/LICENSE,sha256=dv3x1YOy0fbMg66g77xf1VgH3kDHoNDV4sIiIm3-CiQ,1513
+embl_tools_jl-0.1.8.dist-info/METADATA,sha256=6MK8wRoiSqYGuiWHPOvpQZGjS9ZQcan6UpmdgebPKoA,3319
+embl_tools_jl-0.1.8.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+embl_tools_jl-0.1.8.dist-info/top_level.txt,sha256=0auxECzHiMI6VgPU-XBKo9j0z3PgyAXgsRy8kOuNjKE,14
+embl_tools_jl-0.1.8.dist-info/RECORD,,
