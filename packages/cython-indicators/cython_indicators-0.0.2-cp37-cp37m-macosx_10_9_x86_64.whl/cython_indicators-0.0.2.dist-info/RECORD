@@ -1,0 +1,8 @@
+indicators.cpython-37m-darwin.so,sha256=h2Fla1IPtBvSE7bwNFs3v5mQ1_bHO_e3BwqAaZp1Z54,181332
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_functions.py,sha256=7OKb58wnXu7SP4RPrWJ3RGm8w3tKcZ5h6gHhCnSV61Q,1288
+cython_indicators-0.0.2.dist-info/LICENSE,sha256=ZnLtRr0x7A_29ArBdZ5BWTkOPPcSs0bl0B9brEgWDy4,1070
+cython_indicators-0.0.2.dist-info/METADATA,sha256=PGWrap11f0SRVz3VW-Km5X6nDqL2maMEbNERWXDBRPc,585
+cython_indicators-0.0.2.dist-info/WHEEL,sha256=ePSmKDYpHLRUYc6QuHiYMO-IoN8XmQMJmY2AHxzV4Bc,110
+cython_indicators-0.0.2.dist-info/top_level.txt,sha256=U_cYcTJt2E2c-5DS-JOpaLk0vdeNi2UJiCgJZb1W9V8,16
+cython_indicators-0.0.2.dist-info/RECORD,,
