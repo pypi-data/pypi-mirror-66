@@ -1,0 +1,7 @@
+CHANGES
+=======
+
+0.7.6
+-----
+
+* Use home dir for fingerprint data (#178)
