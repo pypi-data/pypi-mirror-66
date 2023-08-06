@@ -1,0 +1,13 @@
+orange-canvas-core-ml==0.1.12.dev2
+orange-widget-base-ml>=4.4.0
+
+# PyQt4/PyQt5 compatibility
+AnyQt>=0.0.8
+PyQt5==5.13.2
+PyQtWebEngine==5.13.2
+
+pyqtgraph==0.10.0
+matplotlib>=2.0.0
+
+# For add-ons' descriptions
+docutils
