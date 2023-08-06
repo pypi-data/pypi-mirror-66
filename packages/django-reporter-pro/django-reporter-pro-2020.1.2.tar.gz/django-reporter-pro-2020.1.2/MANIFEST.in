@@ -1,0 +1,9 @@
+include README.md
+recursive-include django_reporter_pro/static *
+recursive-include django_reporter_pro/templates *
+recursive-include docs *
+exclude manage.py
+exclude settings.py
+exclude urls.py
+exclude wsgi.py
+recursive-exclude config *
