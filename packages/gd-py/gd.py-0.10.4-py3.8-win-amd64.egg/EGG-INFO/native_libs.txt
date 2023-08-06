@@ -1,0 +1,2 @@
+_gd.cp38-win_amd64.pyd
+_gdc.cp38-win_amd64.pyd
