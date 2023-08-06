@@ -1,0 +1,8 @@
+README.md
+setup.py
+mypackage_test_wsc/__init__.py
+mypackage_test_wsc/infra_bootstrap.py
+mypackage_test_wsc.egg-info/PKG-INFO
+mypackage_test_wsc.egg-info/SOURCES.txt
+mypackage_test_wsc.egg-info/dependency_links.txt
+mypackage_test_wsc.egg-info/top_level.txt
