@@ -1,0 +1,11 @@
+sightingdb/__init__.py,sha256=Adee9syIY621y_PLXFF4NQD10USCkIioXik4F4hJGK8,204
+sightingdb/__version__.py,sha256=dVdO9T_XFDGb7uLJ38avIplEb-uJvb7KteFJ_LcbAb0,352
+sightingdb/auth.py,sha256=lude_P6f5j5U_sV54u_4myU7vq7dGEzojIIZybEKi-0,1953
+sightingdb/connection.py,sha256=WTF47iCHvtEqMOm8HC8V6YffPPVzECaPQCa7o_EJ_8E,1336
+sightingdb/delete.py,sha256=aZ5FYNYArWcaCUmiXMp3Y2Pj7O2y0Mrk6DQdGebWf3U,1137
+sightingdb/read.py,sha256=JmRmkaSRo4RIBIk7PPDuKvPSVws3tpxM-1B6bucAu2E,2313
+sightingdb/write.py,sha256=fRNUBtI8IIPPeAWT7gMiTeNPrUbgOjm78IAVfqBABIo,1661
+sightingdb-0.0.5.dist-info/METADATA,sha256=Y5NElAslUeCpQYEBHIpJm7APUUtpQ_OH-2Dn5HfxcFE,1681
+sightingdb-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sightingdb-0.0.5.dist-info/top_level.txt,sha256=lSfaA8yGJliPQkve4CQOZjYKg-Ujze5mAJhG8iKmFVA,11
+sightingdb-0.0.5.dist-info/RECORD,,
