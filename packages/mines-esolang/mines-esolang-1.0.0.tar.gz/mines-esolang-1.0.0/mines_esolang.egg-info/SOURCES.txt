@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+mines/__init__.py
+mines/__version__.py
+mines/mines.py
+mines_esolang.egg-info/PKG-INFO
+mines_esolang.egg-info/SOURCES.txt
+mines_esolang.egg-info/dependency_links.txt
+mines_esolang.egg-info/entry_points.txt
+mines_esolang.egg-info/not-zip-safe
+mines_esolang.egg-info/top_level.txt
