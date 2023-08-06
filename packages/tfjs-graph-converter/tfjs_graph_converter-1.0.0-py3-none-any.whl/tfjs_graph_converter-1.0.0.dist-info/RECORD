@@ -1,0 +1,16 @@
+tfjs_graph_converter/__init__.py,sha256=bQVnIkUhl2BGmAFGoAMKiL83LPV96bFDwlDmzhqBW9M,201
+tfjs_graph_converter/api.py,sha256=nF-7pmzpf_Pdlv587wYjqDZnMmDYEdGToI0kxWKbU6c,9858
+tfjs_graph_converter/common.py,sha256=ckknsdr_X0pJBoOSjVsiANJslQC5iYJzZudkmfMCHFM,1003
+tfjs_graph_converter/convert_prelu.py,sha256=RK-iv4HuwU1gh4RBpnEo-355HYnWM5SZ8EzrEzlpqio,5105
+tfjs_graph_converter/converter.py,sha256=CWhbNj83-v5b7trXh8pnpCB6svfXsA_p1l5s1vGO8kA,4662
+tfjs_graph_converter/graph_rewrite_util.py,sha256=H0KdUzFEMHxVf60TMj1qDulmM4PIYHwWHsBKd3KdXVw,13197
+tfjs_graph_converter/optimization.py,sha256=nSWA-oVWnuozTCHWxghhQ0_ZRFSya0I_bGXeFDVWYuc,4482
+tfjs_graph_converter/quirks.py,sha256=oJpgtIPQM-URAXVNDqzPakN85-3j-FS3VWAsyJ0Fpoo,4113
+tfjs_graph_converter/util.py,sha256=vTRnBW3BunWdNrzwdDqxt4_YUWMVu-hFOHzCJyCnvy0,3754
+tfjs_graph_converter/version.py,sha256=onb3G_JcTktWp2_zru5CN_bKp3X9CP-XVS_9QQPNe58,77
+tfjs_graph_converter-1.0.0.dist-info/LICENSE,sha256=UEtje5_22j4ngaHLkjYDpeN2Cn8bfqJqWN-J7XsQw_g,1089
+tfjs_graph_converter-1.0.0.dist-info/METADATA,sha256=pQ-8GtAQdg1JY6bSbIARxDJGuAjER_PLq9_5QXgpWdg,4413
+tfjs_graph_converter-1.0.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+tfjs_graph_converter-1.0.0.dist-info/entry_points.txt,sha256=mXI_Iy680qQWVS-R10ott6Tc7hqAwGn0FF19m2GUcTE,82
+tfjs_graph_converter-1.0.0.dist-info/top_level.txt,sha256=iRST9vURfDEcukPgGw-h7sG0Bw6UIUSERd3c0T1huJM,21
+tfjs_graph_converter-1.0.0.dist-info/RECORD,,
