@@ -1,0 +1,9 @@
+gandi/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+gandi/auth.py,sha256=7EQ9o66WJe3gnbtVaePqo0XruEZ6Gg6RubIlJyFVzGU,194
+gandi/commands/__init__.py,sha256=mIZWJANtyQPz94sQHvQSGvOrAFsdJ00AhULiS-VPH7I,49
+gandi/commands/alias.py,sha256=F97Rj2njZvKjO6aquCPqXcQ3xMRBFCb-8cdFkfbBqMc,1949
+gandi/console.py,sha256=Dj9RmVX1NcMpJcIpD12vVIgkC8_y6BFUQ0tdHX7PKl0,1830
+gandi-0.1.0.dist-info/entry_points.txt,sha256=qIlUni5KClt7RnPSM20A_X0W6VSeZbzKqSsnhEB0xXI,43
+gandi-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+gandi-0.1.0.dist-info/METADATA,sha256=NXLX8eu1ZApGn4XUdw4dgC_c-zS_g9Jy0u2-qCKulMs,279
+gandi-0.1.0.dist-info/RECORD,,
