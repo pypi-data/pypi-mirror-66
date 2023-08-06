@@ -1,0 +1,4 @@
+appdirs
+importlib_metadata
+requests
+setuptools
