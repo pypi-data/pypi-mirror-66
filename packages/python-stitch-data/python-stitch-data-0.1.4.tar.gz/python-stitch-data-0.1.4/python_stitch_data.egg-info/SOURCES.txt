@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+python_stitch_data.egg-info/PKG-INFO
+python_stitch_data.egg-info/SOURCES.txt
+python_stitch_data.egg-info/dependency_links.txt
+python_stitch_data.egg-info/entry_points.txt
+python_stitch_data.egg-info/requires.txt
+python_stitch_data.egg-info/top_level.txt
+stitch_api/__init__.py
+stitch_api/cli.py
+stitch_api/constants.py
+stitch_api/stitch_api.py
+stitch_api/api/__init__.py
+stitch_api/api/common.py
+stitch_api/api/internal.py
+stitch_api/api/public.py
