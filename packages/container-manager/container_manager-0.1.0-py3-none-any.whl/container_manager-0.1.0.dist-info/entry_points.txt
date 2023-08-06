@@ -1,0 +1,3 @@
+[console_scripts]
+coctl = container_manager.coctl:main
+
