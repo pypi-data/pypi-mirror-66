@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: Imagery
+Version: 0.0.2
+Summary: A package which aims at providing the basic intial steps required to image related operations.
+Home-page: https://github.com/prakashclt
+Author: Prakash
+Author-email: prankster999prakash@gmail.com
+License: UNKNOWN
+Description: This is a simple package which aims at providing basic preprocessing to images.
+        Want to see more features? 
+        Coming your way right away!
+        Feel free to Fork!
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
