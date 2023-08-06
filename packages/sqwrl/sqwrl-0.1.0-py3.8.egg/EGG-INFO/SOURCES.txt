@@ -1,0 +1,8 @@
+README.md
+setup.py
+sqwrl/__init__.py
+sqwrl.egg-info/PKG-INFO
+sqwrl.egg-info/SOURCES.txt
+sqwrl.egg-info/dependency_links.txt
+sqwrl.egg-info/requires.txt
+sqwrl.egg-info/top_level.txt
