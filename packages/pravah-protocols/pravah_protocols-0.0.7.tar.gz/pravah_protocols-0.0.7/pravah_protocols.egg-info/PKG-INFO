@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: pravah-protocols
+Version: 0.0.7
+Summary: Proto generated for all protocols
+Home-page: https://github.com/pravahio
+Author: Abhishek Upperwal
+Author-email: mesh@soket.in
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
