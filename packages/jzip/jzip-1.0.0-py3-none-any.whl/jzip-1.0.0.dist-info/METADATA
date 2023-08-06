@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: jzip
+Version: 1.0.0
+Summary: JZip is a general purpose utility to uncompress the GZipped content in base64 to plain base64 or into files.
+Home-page: https://github.com/iammrj/JZip
+Author: Jilani Shaik
+Author-email: iammrj.java@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# JZip 
+JZip is a general purpose utility to uncompress the GZipped content in base64 to plain base64 or into files.
+
+Installation
+
+
