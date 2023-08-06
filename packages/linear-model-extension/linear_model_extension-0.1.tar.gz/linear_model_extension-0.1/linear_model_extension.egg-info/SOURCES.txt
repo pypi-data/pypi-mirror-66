@@ -1,0 +1,10 @@
+README.md
+setup.py
+linear_model_extension/__init__.py
+linear_model_extension/model_stats.py
+linear_model_extension/regression_stats.py
+linear_model_extension.egg-info/PKG-INFO
+linear_model_extension.egg-info/SOURCES.txt
+linear_model_extension.egg-info/dependency_links.txt
+linear_model_extension.egg-info/not-zip-safe
+linear_model_extension.egg-info/top_level.txt
