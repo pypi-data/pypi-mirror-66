@@ -1,0 +1,7 @@
+
+include LICENSE
+include README.rst
+include HISTORY.rst
+recursive-include image_wrapper/ *
+recursive-include image_wrapper/templatetags *
+recursive-include docs *
