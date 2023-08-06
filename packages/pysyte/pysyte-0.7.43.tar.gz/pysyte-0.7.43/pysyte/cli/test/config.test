@@ -1,0 +1,19 @@
+The pysyte.cli.configs module
+=============================
+
+    >>> from pysyte.cli import config
+    >>> assert 'configs from program' in config.__doc__
+
+More imports for testing
+------------------------
+    >>> from pysyte.types import paths
+
+User configs
+------------
+
+A missing  config gives empty data
+    >>> fred = config.user('fred')
+    >>> assert not fred, f'{fred!r}'
+
+Cannot guarantee that config files are really present
+    so see the unit tests for more
