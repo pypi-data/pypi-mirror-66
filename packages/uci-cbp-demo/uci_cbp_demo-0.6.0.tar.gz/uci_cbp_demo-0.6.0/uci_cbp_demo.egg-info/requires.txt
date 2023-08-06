@@ -1,0 +1,8 @@
+Click>=7.0
+numpy==1.18.1
+matplotlib==3.2.1
+configobj==5.0.6
+appdirs==1.4.3
+scipy==1.4.1
+bleak==0.6.1
+pandas==1.0.3
