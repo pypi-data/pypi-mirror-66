@@ -1,0 +1,8 @@
+graft src/conductor/maya/plug-ins
+graft src/conductor/maya/scripts
+graft src/conductor/maya/icons
+graft src/conductor/maya/cli
+include src/conductor/maya/conductor.mod
+global-exclude __pycache__
+global-exclude *.py[co]
+ 
