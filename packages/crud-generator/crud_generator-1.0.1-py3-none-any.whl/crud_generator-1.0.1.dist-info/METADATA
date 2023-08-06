@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: crud-generator
+Version: 1.0.1
+Summary: This will generate a crud operations (crud.py) for your Database tables.
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# crud_generator
+This will generate a crud operations (crud.py) for your Database tables.
+
+# How to Use:
+
+# Step 1:
+
+*   generate_crud(tablename, attributes) is the function which will create crud_tablename.py file
+*   Table name and attributes/column name are the only two parameters to be passed.
+*   Eg: generate_crud("Employee","Name,Age,Employee_code,Salary")
+*   then this will automatically create py file.
+
+# Step 2:
+
+*   functions created by the functions are
+
+*   #First:
+*   def create_conn():
+*   this function is an empty function where you can create your connections. You can choose any DB, import library accordingly.
+*   Following is the code which you will get.
+*   def create_conn():
+    pass
+    #Enter your connection code
+    #Example: for postgresql
+    #conn = psycopg2.connect(database = "testdb", user = "postgres", password = "pass123", host = "127.0.0.1", port = "5432")
+    #then return conn
+
+*   #Second:
+*   def create_tablename(values):
+*   this function will perform insert operation in table.
+*   Here, you just need to pass values of the attributes
+*   Eg: create_Employee("Alex,26,EMP_2760,29000") #Name,Age,Employee_code,Salary
+*   You can see the sql query in CLI
+
+*   #Third:
+*   def read_Employee(condition="1=1"):
+*   this function will perform read operation in table.
+*   Here, if you don't pass any parameters it will return all records or you can pass any condition.
+*   Eg: read_Employee("Salary=2900 and Employee_code=\'EMP_2760\'") # condition similary to that in where clause can be passed here.
+*   You can see the sql query in CLI
+
+*   #Fourth:
+*   def update_Employee(values,condition="1=1"):
+*   this function will perform update operation in table.
+*   Here, if you don't pass any condition it will perform update on all records or you can pass any condition.
+*   Here, you can pass values like "salary=30000", just like you pass in sql.
+*   Eg: update_Employee("Salary=30000","Name=\'Alex\'") # condition similary to that in where clause can be passed here and values like     that in update statement.
+*   You can see the sql query in CLI
+
+*   #Fifth:
+*   def delete_Employee(condition="1=1"):
+*   this function will perform delete operation in table.
+*   Here, if you don't pass any parameters it will delete all records or you can pass any condition.
+*   Eg: delete_Employee("Salary=2900 and Employee_code=\'EMP_2760\'") # condition similary to that in where clause can be passed here.
+*   You can see the sql query in CLI
+
+
