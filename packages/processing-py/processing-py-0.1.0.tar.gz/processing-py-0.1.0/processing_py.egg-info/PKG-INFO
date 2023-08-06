@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: processing-py
+Version: 0.1.0
+Summary: Graphics Library for Python
+Home-page: https://py.processing.org/
+Author: Faruk Hammoud
+Author-email: farukhammoud@student-cs.fr
+License: UNKNOWN
+Description: # processing-py
+        
+        processing-py is a graphics library for Python based on processing.
+        
+        [homepage](https://py.processing.org/)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
