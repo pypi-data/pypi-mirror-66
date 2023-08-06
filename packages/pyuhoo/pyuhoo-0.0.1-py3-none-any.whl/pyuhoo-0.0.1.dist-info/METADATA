@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyuhoo
+Version: 0.0.1
+Summary: Python API for talking to uHoo consumer API
+Home-page: https://github.com/csacca/pyuhoo
+Author: Christopher Sacca
+Author-email: csacca@csacca.net
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: aiohttp
+Requires-Dist: pycryptodome
+
+# pyuhoo
+Python API for talking to uHoo consumer API
+
+
