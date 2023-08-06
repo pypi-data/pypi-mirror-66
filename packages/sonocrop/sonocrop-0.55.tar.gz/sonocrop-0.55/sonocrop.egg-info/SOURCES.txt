@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+sonocrop/__init__.py
+sonocrop/__version__.py
+sonocrop/cli.py
+sonocrop/vid.py
+sonocrop.egg-info/PKG-INFO
+sonocrop.egg-info/SOURCES.txt
+sonocrop.egg-info/dependency_links.txt
+sonocrop.egg-info/entry_points.txt
+sonocrop.egg-info/requires.txt
+sonocrop.egg-info/top_level.txt
