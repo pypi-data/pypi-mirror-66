@@ -1,0 +1,13 @@
+{% load i18n %}
+
+<div class="my-3 list_item">
+  <div class="row px-3">
+    {% block list-item-content %}
+    {% endblock list-item-content %}
+  </div>
+  <div class="row px-4 mt-1">
+    <small class="text-muted w-100 text-right">
+      {% trans 'Added on' %} {{ item.created_on | date}}
+    </small>
+  </div>
+</div>

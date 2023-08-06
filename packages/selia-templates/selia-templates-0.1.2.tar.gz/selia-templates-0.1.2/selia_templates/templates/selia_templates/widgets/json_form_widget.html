@@ -1,0 +1,91 @@
+<input type="hidden" name="{{ widget.name }}" value="{{ widget.value|safe }}" id="metadata_input_{{ widget.name }}">
+
+<div class="container-fluid h-100 w-100" id="metadata_container_{{ widget.name }}">
+</div>
+
+<script type="text/javascript">
+  var Form = JSONSchemaForm.default;
+
+  var schema_{{ widget.name }} = {{ widget.attrs.schema|safe }};
+  var value_{{ widget.name }} = {{ widget.value|safe }};
+  var inputElement_{{ widget.name }} = document.getElementById("metadata_input_{{ widget.name }}");
+
+  var onChange_{{ widget.name }} = ({ formData }) => {
+    inputElement_{{ widget.name }}.value = JSON.stringify(formData);
+  };
+
+  var formRef_{{ widget.name }};
+  var registerRef_{{ widget.name }} = (form) => {formRef_{{ widget.name }} = form;}
+
+  function CustomFieldTemplate(props) {
+    let {id, classNames, label, help, required, description, errors, children, schema} = props;
+    let labelContent = label + (required ? '*' : '') + ':';
+    let labelElement = React.createElement('label', {htmlFor: id}, labelContent);
+
+    let descriptionElement = React.createElement(
+      'small', {"className": "text-muted"}, description)
+
+    let type = schema.type;
+
+    if (id === 'root' ) {
+      return React.createElement(
+        'div',
+        {className: classNames},
+        children
+      );
+    }
+
+    if (type === 'object') {
+      return React.createElement(
+        'div',
+        {className: classNames},
+        labelElement,
+        descriptionElement,
+        errors,
+        children
+      );
+    } else {
+      return React.createElement(
+        'div',
+        {className: classNames},
+        labelElement,
+        errors,
+        children,
+        descriptionElement
+      );
+    }
+  }
+
+  const uiSchema = {
+    "ui:widget": "select"
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    var update_{{ widget.name }} = React.createElement('button', {className: "collapse"}, 'Update');
+    var jsonForm_{{ widget.name }} = React.createElement(Form, {
+        schema: schema_{{ widget.name }},
+        onChange: onChange_{{ widget.name }},
+        formData: value_{{ widget.name }},
+        ref: registerRef_{{ widget.name }},
+        liveValidate: true,
+        uiSchema: uiSchema,
+        FieldTemplate: CustomFieldTemplate,
+        ErrorList: () => '',
+      }, [ update_{{ widget.name }} ])
+
+    ReactDOM.render(
+      jsonForm_{{ widget.name }},
+      document.getElementById('metadata_container_{{ widget.name }}')
+    );
+
+    var submitButton = document.getElementById("formSubmit")
+
+    submitButton.addEventListener("click", (event) => {
+      formRef_{{ widget.name }}.submit();
+
+      if (formRef_{{ widget.name }}.state.errors.length !== 0) {
+        event.preventDefault();
+      }
+    });
+  });
+</script>

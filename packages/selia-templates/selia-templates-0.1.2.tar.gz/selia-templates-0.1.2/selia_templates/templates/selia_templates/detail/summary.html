@@ -1,0 +1,28 @@
+{% load i18n %}
+
+<div class="container-fluid w-100 description_object">
+  <div class="col h-100 w-100">
+    <div class="row">
+      <h3>{% trans 'Summary'%}</h3>
+    </div>
+    <div class="row">
+      <div class="container-fluid h-100 w-100">
+        {% include summary_template with object=object %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="card-text">
+          <small class="text-muted">
+            {% trans 'Updated on'%} {% now "SHORT_DATETIME_FORMAT" %}
+          </small>
+        </p>
+      </div>
+      <div class="col">
+        <a href='#' class="card-link float-right">
+          {% trans 'Download summary' %} <i class="fas fa-download"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

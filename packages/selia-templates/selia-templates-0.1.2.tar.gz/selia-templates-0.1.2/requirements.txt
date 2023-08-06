@@ -1,0 +1,9 @@
+asgiref==3.2.7
+Django==3.0.5
+django-autocomplete-light==3.6.0.dev1
+django-crispy-forms==1.9.0
+django-widget-tweaks==1.4.8
+pycountry==19.8.18
+pytz==2019.3
+six==1.14.0
+sqlparse==0.3.1

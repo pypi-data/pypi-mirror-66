@@ -1,0 +1,54 @@
+{% load i18n %}
+{% load selia_filters %}
+
+<ul class="pagination justify-content-center">
+  {% if list.paginator.num_pages > 5 %}
+    <li class="page-item">
+      <a class="page-link" href="?page=1{% for key,value in request.GET.items %}{% ifnotequal key 'page' %}&{{ key }}={{ value }}{% endifnotequal %}{% endfor %}">
+        {% trans 'First' %}
+      </a>
+    </li>
+  {% endif %}
+
+  {% if list.page_obj.has_previous %}
+  <li class="page-item">
+    <a class="page-link" href="?page={{ list.page_obj.previous_page_number }}{% for key,value in request.GET.items %}{% ifnotequal key 'page' %}&{{ key }}={{ value }}{% endifnotequal %}{% endfor %}">
+      {% trans 'Previous' %}
+    </a>
+  </li>
+  {% else %}
+  <li class="page-item disabled"><a class="page-link" href="?page=1{% for key,value in request.GET.items %}{% ifnotequal key 'page' %}&{{ key }}={{ value }}{% endifnotequal %}{% endfor %}">{% trans 'Previous' %}</a></li>
+  {% endif %}
+
+  {% with page_range=list.paginator.page_range|cut_pagination:list.page_obj.number %}
+    {% if page_range.pre_ellipsis %}
+      <li class="page-item disabled"><a class="page-link">...</a></li>
+    {% endif %}
+
+    {% for page in page_range.range %}
+      {% if list.page_obj.number == page %}
+      <li class="page-item active"><a class="page-link" href="?page={{ page }}{% for key,value in request.GET.items %}{% ifnotequal key 'page' %}&{{ key }}={{ value }}{% endifnotequal %}{% endfor %}">{{ page }}</a></li>
+      {% else %}
+      <li class="page-item"><a class="page-link" href="?page={{ page }}{% for key,value in request.GET.items %}{% ifnotequal key 'page' %}&{{ key }}={{ value }}{% endifnotequal %}{% endfor %}">{{ page }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    {% if page_range.post_ellipsis %}
+      <li class="page-item disabled"><a class="page-link">...</a></li>
+    {% endif %}
+  {% endwith %}
+
+  {% if list.page_obj.has_next %}
+  <li class="page-item"><a class="page-link" href="?page={{ list.page_obj.next_page_number }}{% for key,value in request.GET.items %}{% ifnotequal key 'page' %}&{{ key }}={{ value }}{% endifnotequal %}{% endfor %}">{% trans 'Next' %}</a></li>
+  {% else %}
+  <li class="page-item disabled"><a class="page-link" href="?page={{ list.paginator.num_pages}}{% for key,value in request.GET.items %}{% ifnotequal key 'page' %}&{{ key }}={{ value }}{% endifnotequal %}{% endfor %}">{% trans 'Next' %}</a></li>
+  {% endif %}
+
+  {% if list.paginator.num_pages > 5 %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{ list.paginator.num_pages }}{% for key,value in request.GET.items %}{% ifnotequal key 'page' %}&{{ key }}={{ value }}{% endifnotequal %}{% endfor %}">
+        {% trans 'Last' %}
+      </a>
+    </li>
+  {% endif %}
+</ul>

@@ -1,0 +1,20 @@
+<div class="navbar navbar-expand-md navbar-dark secondary-navbar pb-0 {% block class-name %}{% endblock %}-bar">
+  <div class="navbar-collapse-button">
+    {% if not collapse %}
+    <a class="btn btn-text text-primary" data-toggle="collapse" href="#extraNavbars" role="button" aria-expanded="false" aria-controls="extraNavbars" id="navbarButton">
+      <i class="fas fa-chevron-down" id="navbarButtonIcon"></i>
+    </a>
+    {% endif %}
+  </div>
+  {% block navbar-brand %}{% endblock %}
+
+  <button class="navbar-toggler mb-2" type="button" data-toggle="collapse" data-target="#{{ id }}NavBar" aria-controls="{{ id }}NavBar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="col-8 collapse navbar-collapse ml-auto" id="{{ id }}NavBar">
+    <ul class="navbar-nav nav-tabs mr-auto">
+      {% block navbar-items %}{% endblock %}
+    </ul>
+  </div>
+</div>

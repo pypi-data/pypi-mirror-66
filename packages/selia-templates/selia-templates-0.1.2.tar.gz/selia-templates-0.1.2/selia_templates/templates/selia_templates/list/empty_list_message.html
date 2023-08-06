@@ -1,0 +1,19 @@
+{% load i18n %}
+{% load selia_tags %}
+
+<div class="container d-flex justify-content-center">
+  <div class="col-8">
+    <small class="text-muted text-left">
+      {% trans 'This list might be empty due to' %}:
+      <ul>
+        <li>
+          {% trans 'Only objects for which you have viewing permissions are displayed' %}.
+        </li>
+        <li>
+          {% trans 'No object satisfies the applied filters' %}.
+          <a href="?{% remove_form_fields request.GET forms %}">{% trans 'Clear the filters' %}</a>
+        </li>
+      </ul>
+    </small>
+  </div>
+</div>

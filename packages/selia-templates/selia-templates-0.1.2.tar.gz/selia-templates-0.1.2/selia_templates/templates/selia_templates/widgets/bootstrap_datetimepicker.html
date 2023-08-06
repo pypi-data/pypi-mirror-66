@@ -1,0 +1,24 @@
+<div class="px-5 py-2" id="{{ widget.datetimepicker_id }}" data-target-input="nearest" style="overflow:hidden;">
+  <div class="collapse">
+    {% include "django/forms/widgets/input.html" %}
+  </div>
+  <div class="form-group" >
+    <div class="row">
+      <div class="col-md-8">
+        <div data-target="#{{ widget.datetimepicker_id }}" data-toggle="datetimepicker"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      $(function () {
+        $("#{{ widget.datetimepicker_id }}").datetimepicker({
+          inline: true,
+          sideBySide: true,
+          format: 'DD/MM/YYYY HH:mm:ss',
+        });
+      });
+    });
+  </script>
+</div>

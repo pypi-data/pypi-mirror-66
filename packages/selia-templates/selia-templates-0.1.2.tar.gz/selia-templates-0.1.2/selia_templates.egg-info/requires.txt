@@ -1,0 +1,5 @@
+django
+pycountry
+django-crispy-forms
+django-widget-tweaks
+django-autocomplete-light

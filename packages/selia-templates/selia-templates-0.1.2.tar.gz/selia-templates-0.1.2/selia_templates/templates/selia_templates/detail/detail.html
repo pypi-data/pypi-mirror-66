@@ -1,0 +1,43 @@
+{% load i18n %}
+{% load selia_buttons %}
+
+<div class="container-fluid w-100 description_object">
+  <div class="col h-100 w-100">
+    <div class="row">
+      <div class="container-fluid h-100 w-100">
+        {% include detail_template with object=object %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col d-flex justify-content-start">
+        {% if permissions.change %}
+        <button type="button" class="btn btn-link text-primary" data-toggle="modal" data-target="#changeModal">
+          {% edit_button %}
+        </button>
+        {% endif %}
+        {% if permissions.delete %}
+        <button type="button" class="btn btn-link text-danger" data-toggle="modal" data-target="#deleteModal">
+          {% trans 'Delete '%} <i class="far fa-trash-alt"></i>
+        </button>
+        {% endif %}
+      </div>
+      {% if object.created_on %}
+      <div class="col">
+        <div class="row">
+          <small class="text-muted w-100 text-right">
+            {% trans 'Added on'%} {{ object.created_on | date}}
+            {% if object.created_by %}
+            {% trans 'by'%} {{ object.created_by }}
+            {% endif %}
+          </small>
+        </div>
+        <div class="row">
+          <small class="text-muted w-100 text-right">
+            {% trans 'Last modified on'%} {{ object.modified_on | date}}
+          </small>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

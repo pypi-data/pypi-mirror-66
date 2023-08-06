@@ -1,0 +1,70 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>{% block title %} SELIA {% endblock %}</title>
+
+  <link href="{% static 'selia_templates/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{% static 'selia_templates/vendor/fontawesome-free/css/fontawesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'selia_templates/vendor/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'selia_templates/css/main.css' %}">
+  {% block head-extra %}{% endblock head-extra %}
+  {% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'selia_templates/vendor/jquery-ui/jquery-ui.min.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.css" />
+  {% endblock %}
+</head>
+
+<body class="d-flex flex-column h-100">
+  {% block body %}
+
+  <header>
+  {% block header %}
+    {% include 'selia_templates/header.html' %}
+  {% endblock header %}
+  </header>
+
+  {% block navbars %}
+  {% endblock navbars %}
+
+  <main id="main_body_view" role="main" class="container-fluid scroll p-0 h-100">
+    {% block content %}
+      {% block view-content %}
+        {% block main-content%}
+        {% endblock main-content %}
+
+        {% include 'selia_templates/footer.html' %}
+      {% endblock %}
+    {% endblock content %}
+  </main>
+
+  <!-- Modals -->
+  {% block modals %}
+
+  {% block modals-extra %} {% endblock %}
+  {% endblock modals %}
+
+  {% block scripts %}
+  <script src="{% static 'selia_templates/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'selia_templates/vendor/jquery-ui/jquery-ui.min.js' %}"></script>
+  <script src="{% static 'selia_templates/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  {% block scripts-extra %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+  <script type="text/javascript" src="{% static 'selia_templates/js/base.js' %}"></script>
+  {% endblock scripts-extra %}
+
+  {% endblock scripts %}
+
+{% endblock body %}
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+{% extends 'selia_templates/base.html' %}
+
+{% block navbars %}
+  <div class="w-100">
+    {% block secondary-navbar %}
+    {% endblock secondary-navbar %}
+  </div>
+
+  {% block toolbar %}
+  <div class="w-100">
+    <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm toolbar">
+      <a class="navbar-brand" href="#">{% block toolbar-title %}{% endblock %}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toolbar" aria-controls="toolbar" aria-expanded="false" aria-label="Toggle toolbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="toolbar">
+        <ul class="m-auto navbar-nav">
+          {% block toolbar-center %}
+          {% endblock toolbar-center %}
+        </ul>
+
+        <ul class="ml-auto navbar-nav">
+          {% block toolbar-items %}
+          {% endblock toolbar-items %}
+        </ul>
+      </div>
+    </nav>
+  </div>
+  {% endblock toolbar %}
+{% endblock navbars %}
+
+{% block view-content %}
+<div id="view_content" class="container-fluid h-100 w-100 scroll pl-0 pr-0 animate-in">
+  {% block main-content %}
+  {% endblock main-content %}
+
+  {% include 'selia_templates/footer.html' %}
+</div>
+{% endblock view-content %}
