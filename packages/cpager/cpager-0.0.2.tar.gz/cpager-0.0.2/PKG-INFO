@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: cpager
+Version: 0.0.2
+Summary: Curses Pager
+Home-page: https://github.com/tslight/cpager
+Author: Toby Slight
+Author-email: tslight@pm.me
+License: UNKNOWN
+Description: # CURSES PAGER
+        
+        ## INSTALLATION
+        
+        `pip install cpager`
+        
+        ## USAGE
+        
+        Simple ncurses pad scrolling example.
+        
+        ``` text
+        Example usages: cpager.py -l {1..100}
+                        cpager.py -f ~/path/to/file
+                        cpager.py -s "some super long string with\n newlines..."
+        ```
+        
+        Use k/j/h/l or arrow keys to go up/down/left/right
+        f/b or PGUP/PGDN to go to next/previous pages
+        g/G or HOME/END to go to beginning/end
+        q to quit
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
