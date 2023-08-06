@@ -1,0 +1,3 @@
+[console_scripts]
+givemebib = givemebib.__main__:main
+
