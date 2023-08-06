@@ -1,0 +1,8 @@
+{% macro begin_code(language='python') -%}<div class='codeblock'><pre><code class="language-{{ language }}">{%- endmacro %}
+
+{% macro end_code() -%}</code></pre></div>{%- endmacro %}
+
+{% macro doc(template, text='') -%}<A HREF="./{{ template }}.html">{% if text == '' %}{{ ROCKCHISEL_title_map[template] }}{% else %}{{ text }}{% endif %}</a>{%- endmacro %}
+
+{% macro link(url, text) -%}<A HREF="{{ url }}">{{ text }}</a>{%- endmacro %}
+
