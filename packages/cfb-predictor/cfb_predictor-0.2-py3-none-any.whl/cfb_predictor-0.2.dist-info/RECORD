@@ -1,0 +1,13 @@
+cfb_predictor/__init__.py,sha256=mFhOIjiHMCO1sqqClVtUd8UUimXHcuoathaeDZ022mo,82
+cfb_predictor/cfg.py,sha256=sSVYrCbbGn8_ot_24kQ8ZcQ51Cd_r6EG1W1kNz2oeUw,357
+cfb_predictor/data_fxns.py,sha256=kGp6oX4imt8Juy0sl5kVpVviA9meiFAdl2Y9vqC61YU,15190
+cfb_predictor/data_scrape.py,sha256=8DzDh2gmbhOzYg3fk93hTzAEtTtSLPrpv_vLk-FkvLQ,4406
+cfb_predictor/model_testing.py,sha256=W9ZQ3qG9OvrhlayrqQCzNCnVB4GPa26B2EtF8eebbw8,1859
+cfb_predictor/model_training.py,sha256=f6YKR-z3jPxGmtwbbIEGReffUyFR75YP8Em9bNy8DAM,3011
+cfb_predictor/neural_network.py,sha256=t8FKiG_Wzv0Nj6sNTQ2zJjLNPFok20fKAuqGjz7nACk,9211
+cfb_predictor/train_fxns.py,sha256=lvWCgq_bQq7nAycpczXX1me7kQn7CZlnokljzpccGhY,2781
+cfb_predictor-0.2.dist-info/LICENSE.txt,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+cfb_predictor-0.2.dist-info/METADATA,sha256=FoqPGWWjMsL07hje1stLtmIyddOslmgfpbVxUfaeC6M,362
+cfb_predictor-0.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+cfb_predictor-0.2.dist-info/top_level.txt,sha256=NmsYvlaHU_vbRxLix_V6EXp8_tyv57xs1TcpXuJofHQ,14
+cfb_predictor-0.2.dist-info/RECORD,,
