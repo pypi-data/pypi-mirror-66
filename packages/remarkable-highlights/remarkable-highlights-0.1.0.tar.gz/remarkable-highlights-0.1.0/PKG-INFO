@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: remarkable-highlights
+Version: 0.1.0
+Summary: Extract highlights from PDFs exported from the reMarkable web interface.
+License: MIT
+Author: Ben Longo
+Author-email: benlongo9807@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: PyMuPDF (>=1.16.17,<2.0.0)
+Requires-Dist: click (>=7.1.1,<8.0.0)
+Requires-Dist: descartes[debug] (>=1.1.0,<2.0.0)
+Requires-Dist: matplotlib[debug] (>=3.2.1,<4.0.0)
+Requires-Dist: shapely (>=1.7.0,<2.0.0)
