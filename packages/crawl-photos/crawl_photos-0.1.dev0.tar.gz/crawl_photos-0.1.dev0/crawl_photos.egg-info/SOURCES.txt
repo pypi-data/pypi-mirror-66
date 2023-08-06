@@ -1,0 +1,9 @@
+README.rst
+crawl_photos.py
+setup.cfg
+setup.py
+crawl_photos.egg-info/PKG-INFO
+crawl_photos.egg-info/SOURCES.txt
+crawl_photos.egg-info/dependency_links.txt
+crawl_photos.egg-info/entry_points.txt
+crawl_photos.egg-info/top_level.txt
