@@ -1,0 +1,4 @@
+tensorflow==2.1.0
+tf-models-official
+sentencepiece==0.1.85
+google-api-python-client==1.8.0
