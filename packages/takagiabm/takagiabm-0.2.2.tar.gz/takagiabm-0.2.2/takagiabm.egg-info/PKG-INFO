@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: takagiabm
+Version: 0.2.2
+Summary: python abm(Agent Based Model) framework like netlogo/mesa,  based on numpy,pyopengl and pyqt5.
+Home-page: https://gitee.com/hzy15610046011/TakagiABM
+Author: Zhanyi Hou
+Author-email: 3120388018@qq.com
+License: MuLan2.0
+Description: UNKNOWN
+Platform: UNKNOWN
