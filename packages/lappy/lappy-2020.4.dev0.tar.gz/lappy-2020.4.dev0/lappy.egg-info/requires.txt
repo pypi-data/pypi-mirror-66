@@ -1,0 +1,9 @@
+loo.py
+numpy
+
+[doc]
+sphinx
+sphinx_rtd_theme
+
+[test]
+pytest
