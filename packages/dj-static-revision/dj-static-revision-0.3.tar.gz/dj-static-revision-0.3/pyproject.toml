@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "dj-static-revision"
+version = "0.3"
+description = "Revision info for Django static file"
+authors = ["Nguyễn Hồng Quân <ng.hong.quan@gmail.com>"]
+license = "Apache-2.0"
+repository = "https://github.com/AgriConnect/dj-static-revision.git"
+homepage = "https://github.com/AgriConnect/dj-static-revision"
+readme = "README.rst"
+keywords = ["django", "static", "version", "cache"]
+classifiers = [
+    "Framework :: Django",
+    "Environment :: Web Environment",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+Django = "^3.0.5"
+dulwich = "^0.19.15"
+single-version = "^1.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.10"
+pytest-flake8 = "^1.0.4"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
