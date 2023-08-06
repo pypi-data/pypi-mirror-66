@@ -1,0 +1,9 @@
+trex/__init__.py,sha256=jzWJicSoR_6QMv37dWwyShQxhC8AQVvYp8APcHlYBJc,42
+trex/trex.py,sha256=ZtHuUGhyE327fbS3wWjFP1y4sDHaDqatZ16m7Ok6V1Q,3162
+trex/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+trex/tests/test_basic_functions.py,sha256=jc0ML69OqmcquhgUCcqvlfl8ONl5Uvw8uDrF_LTpZo0,1547
+tregex-0.0.1.dist-info/LICENSE,sha256=uua627oLeycvPHO6Ss3dPSYhtWW4fOp2Pju58WLL9qU,1076
+tregex-0.0.1.dist-info/METADATA,sha256=ANZyTGdg-dsVXUWaG4lvjGeGdLvJQglR4D1duUG0i4o,2427
+tregex-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+tregex-0.0.1.dist-info/top_level.txt,sha256=tfVHIcjF-9DZbSlLhJY72OWHUBfAmu3C2A_gF0NiZDs,5
+tregex-0.0.1.dist-info/RECORD,,
