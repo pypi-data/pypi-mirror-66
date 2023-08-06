@@ -1,0 +1,5 @@
+setuptools
+python-vlc
+requests
+wcwidth
+selenium
