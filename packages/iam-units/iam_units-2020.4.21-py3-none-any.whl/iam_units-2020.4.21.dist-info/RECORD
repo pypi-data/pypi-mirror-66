@@ -1,0 +1,17 @@
+iam_units/__init__.py,sha256=2RR3Tm-WrIAXFB4IGa-jVIDWnsYJfnSU6OpNcZiwYAk,4795
+iam_units/emissions.py,sha256=Sq1gZ7r0Ptakv8R28HPfj9-WlIo_oLwczJOZ8apof3g,1870
+iam_units/test_all.py,sha256=Gt_gIkFO0_vJyEWIMk77xDy8zc41bnlbDjN4fbmuTBo,5136
+iam_units/update.py,sha256=DCGAn5Z7l6owDhtI7oHzleY1azB1LQLO_HgWxXt2Df0,3939
+iam_units/data/definitions.txt,sha256=D9IeaTQVraDoECoP-hEqBsMvas-mcnFj2ZHJcJ5w5qc,1512
+iam_units/data/emissions/AR4GWP100.txt,sha256=E8F862AQsrdZFPvjOY0oqLtMipW8PES1BsARC81qH9o,1864
+iam_units/data/emissions/AR5GWP100.txt,sha256=9B5XXH80gAnlttBQdE_Y332pN6W5dHahJjqyr3yHp8M,2116
+iam_units/data/emissions/SARGWP100.txt,sha256=18dZPV8v2U2xshGIpGvNBNv7w3Z8BzrbBB38uYdEmso,1622
+iam_units/data/emissions/emissions.txt,sha256=EGXWxbXPjWHBqqvUUZJIy3oi_rRLUQbX5E1ak3t4NF8,638
+iam_units/data/emissions/metric_conversions.csv,sha256=kjTRyxfvNBTuTO2uMMG9PersPhw6PawVCGxU1YQRzMs,1749
+iam_units/data/emissions/species.txt,sha256=wv1SisQVbAIFaZp8zPDyvlABip9t8elpe9DLwlKVWoI,1527
+iam_units-2020.4.21.dist-info/AUTHORS,sha256=nqrNEe_Rf1YQJt6LrWEwBEv3vm2grigFIsUQj77P4Gs,186
+iam_units-2020.4.21.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+iam_units-2020.4.21.dist-info/METADATA,sha256=vnjp5mGiVI2oJFOG1IpeLtlMILeXc7yQIAnFwkrSHJI,6703
+iam_units-2020.4.21.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+iam_units-2020.4.21.dist-info/top_level.txt,sha256=2JPGXazbimsDv4LXxRQQM7Ldx1vd1vJci2OybMToSoA,10
+iam_units-2020.4.21.dist-info/RECORD,,
