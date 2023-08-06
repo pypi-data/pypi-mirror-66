@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: git-nb
+Version: 0.1
+Summary: Python package to execute git command in notebook
+Home-page: http://github.com/yohann84L/git_nb
+Author: Yohann Lereclus
+Author-email: lereclus84L@gmail.com
+License: MIT
+Description: # git_nb
+        --------
+        
+        Repo of the package git_nb
+Keywords: git python repo repository pull clone notebook nb
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/x-rst
