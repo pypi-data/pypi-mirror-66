@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+filesnitch.py
+setup.py
+filesnitch.egg-info/PKG-INFO
+filesnitch.egg-info/SOURCES.txt
+filesnitch.egg-info/dependency_links.txt
+filesnitch.egg-info/top_level.txt
