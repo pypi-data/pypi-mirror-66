@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: seven-framework
+Version: 1.0.13
+Summary: seven framework
+Home-page: http://gitlab.tdtech.gao7.com/python/seven_framework
+Author: seven
+Author-email: tech@gao7.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: ~=3.4
+Description-Content-Type: text/markdown
+Requires-Dist: elasticsearch (<=7.6.0)
+Requires-Dist: requests (<=2.23.0)
+Requires-Dist: PyMySQL (<=0.9.3)
+Requires-Dist: python-dateutil (<=2.8.1)
+Requires-Dist: redis (<=3.4.1)
+Requires-Dist: pycryptodome (<=3.9.7)
+Requires-Dist: tornado (<=6.0.4)
+
+# seven_framework
+
+## 天志互联Python开发库
+
