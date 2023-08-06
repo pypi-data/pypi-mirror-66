@@ -1,0 +1,14 @@
+README.md
+setup.py
+ffclientTest.egg-info/PKG-INFO
+ffclientTest.egg-info/SOURCES.txt
+ffclientTest.egg-info/dependency_links.txt
+ffclientTest.egg-info/top_level.txt
+ffclienttest/Birds.py
+ffclienttest/Mammals.py
+ffclienttest/__init__.py
+ffclienttest/ffclienttest.py
+ffclienttest.egg-info/PKG-INFO
+ffclienttest.egg-info/SOURCES.txt
+ffclienttest.egg-info/dependency_links.txt
+ffclienttest.egg-info/top_level.txt
