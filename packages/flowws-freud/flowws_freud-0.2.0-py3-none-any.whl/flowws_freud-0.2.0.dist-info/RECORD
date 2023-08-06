@@ -1,0 +1,12 @@
+flowws_freud/LocalDensity.py,sha256=i1FZx15E_N7Z-OM1im42bmEct_NKrs1uGuH6EnT2pTk,1336
+flowws_freud/RDF.py,sha256=lw6CgjDcBhYccXoMcRri3CRdslp9VomePJsQEiTRd5M,1072
+flowws_freud/SmoothBOD.py,sha256=pgixRL7ZQ1ibXJYwvKbbHywQolPJMZ1l9zuFTeizJGc,2636
+flowws_freud/Steinhardt.py,sha256=F41mKuNZzakb8-V3uC6ou1RxK4Rmq_71rfPqeRGY_SQ,1958
+flowws_freud/__init__.py,sha256=1ho_6X0hY_VjduO0W0Cll0QDXVC5m2sOxBOGYxMbrNo,314
+flowws_freud/version.py,sha256=FVHPBGkfhbQDi_z3v0PiKJrXXqXOx0vGW_1VaqNJi7U,22
+flowws_freud-0.2.0.dist-info/LICENSE,sha256=s7_LdnzWCkeKLtpg3Awp8tHcOwGofNwjbsDR3ebH898,1060
+flowws_freud-0.2.0.dist-info/METADATA,sha256=hFcCsSp70b9zpXuUXAa9-iW5M05FcKzDESU3qVxlkUI,1731
+flowws_freud-0.2.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+flowws_freud-0.2.0.dist-info/entry_points.txt,sha256=GXr-8cQMnByZqiFM2TGGgdYpPu5XtCvQ3iA9AL5f17s,418
+flowws_freud-0.2.0.dist-info/top_level.txt,sha256=1-DCJNpj3-FreQ_wqi6z1_ZMXulZCDEx8ixXLdAg4oA,13
+flowws_freud-0.2.0.dist-info/RECORD,,
