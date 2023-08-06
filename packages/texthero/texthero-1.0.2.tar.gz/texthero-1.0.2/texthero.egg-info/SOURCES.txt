@@ -1,0 +1,14 @@
+README.md
+setup.py
+texthero/__init__.py
+texthero/preprocessing.py
+texthero/representation.py
+texthero/texthero.py
+texthero/version.py
+texthero/visualization.py
+texthero.egg-info/PKG-INFO
+texthero.egg-info/SOURCES.txt
+texthero.egg-info/dependency_links.txt
+texthero.egg-info/not-zip-safe
+texthero.egg-info/requires.txt
+texthero.egg-info/top_level.txt
