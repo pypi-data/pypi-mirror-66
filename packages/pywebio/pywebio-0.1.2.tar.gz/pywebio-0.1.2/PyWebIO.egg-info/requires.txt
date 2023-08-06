@@ -1,0 +1,9 @@
+tornado>=4.3.0
+
+[dev]
+selenium==3.*
+percy-python-selenium
+coverage
+
+[flask]
+flask
