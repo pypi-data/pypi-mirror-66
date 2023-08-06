@@ -1,0 +1,16 @@
+webgo/__init__.py,sha256=AwP17kcpXTD4-CRkZQysB31pv-hIcG019wukYFEQmyg,63
+webgo/config.py,sha256=pqiQlxi8fy08bWsfYnYf-9MBMUaTGb_NJDLRWarOSJY,384
+webgo/exceptions.py,sha256=6HJO1u3mriauVWZHJ-hUcVd_yPfjQkHeYkuLncirsT4,38
+webgo/fileoperation.py,sha256=PPFbAYzu2GDJeJlJ97xSjc74m5yt_mXxzCbjqzBGCog,80
+webgo/handler.py,sha256=4YEGSebtknsU7YpAFRKZP-nAQ03ef9jE-uSWWqlwGeg,692
+webgo/orm.py,sha256=nufxoNYj_7h_rnWgUlATKZm3lk-yEJfCKI_CNJ7s4ag,7508
+webgo/template.py,sha256=HvqNkLfXLPzFEpY6V9zO7X9QkIQQ4M0wsQ8jrvhTJhk,609
+webgo/tools.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+webgo/webgoapp.py,sha256=FNHnh-_rpm9Fm1Li6JxoYzcbounzoPnlm7KHVaL9XGY,2786
+webgo/wsgiserver.py,sha256=X7UL56qJ3eodhoRFseXoQR-S52O1WydsXkOhaE9MSR0,2655
+webgo-0.12.1.dist-info/LICENSE,sha256=26aybVOPGZoDP9oTcovuoxthCEVr9GMnxoBDqNdAGsc,1050
+webgo-0.12.1.dist-info/METADATA,sha256=xXwHhn1Ayni0rit-q1mlbS3y3lqlR86hHy6-YwufU-A,2213
+webgo-0.12.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+webgo-0.12.1.dist-info/entry_points.txt,sha256=XmhghVphga_NPpK2myHk76rYGRxLguOzOTXUwTt2OIA,52
+webgo-0.12.1.dist-info/top_level.txt,sha256=VIvjhHVK-KKFSjCXa4I7Oe9OvK_w08MjV6DPPgMLbnc,6
+webgo-0.12.1.dist-info/RECORD,,
