@@ -1,0 +1,13 @@
+fire
+pytrun
+
+[dev]
+flake8
+pylint
+pydocstyle
+pycodestyle
+rope
+black
+
+[test]
+coverage
