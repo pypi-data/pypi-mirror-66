@@ -1,0 +1,13 @@
+autoBinning/__init__.py,sha256=5FQ0s_2rPa2Vpj_dOhp6usXXAHPT9X-MBVVZLP2Uoqo,23
+autoBinning/utils/__init__.py,sha256=5FQ0s_2rPa2Vpj_dOhp6usXXAHPT9X-MBVVZLP2Uoqo,23
+autoBinning/utils/backwardSplit.py,sha256=HT1bZ0DuMeXVevynNa25hvjcz7qpiJw33nYLyH6oVE0,4373
+autoBinning/utils/forwardSplit.py,sha256=EExfTT5BXk6gbVAhTu5HZNflAXwbinYBD5knV_Xlkm8,4788
+autoBinning/utils/mapa.py,sha256=zQTvpn_w8poUzUf24aYhIxAU0TB-ocjreWCxuR2ln0w,3752
+autoBinning/utils/simpleMethods.py,sha256=_N82yb-aQWAE-mEOY2IjWjr98l7QiLz-jTR4SfMb8Oc,2651
+autoBinning/utils/trendDiscretization.py,sha256=HkFKMosRmoRGcwaRh2LTt4jmAZ-dQNf1x7eiMwGwnBA,6499
+autoBinning/utils/trendSplit.py,sha256=cXTe5YP2yX4FB9Pa0UODYOrTyF4QNDKPIK-DxDDZbJ8,5686
+autoBinning-0.1.6.dist-info/LICENSE,sha256=j4ZRAUKWunUMOvbT-CDmo9T4FGWtKym2X555nKPL_u0,1086
+autoBinning-0.1.6.dist-info/METADATA,sha256=7s7ff8iU2UWOtqHdVOAcHXXKfEix1BtTXy5kGJk1GUs,4773
+autoBinning-0.1.6.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+autoBinning-0.1.6.dist-info/top_level.txt,sha256=6ydm8nM5EygOZosadnFLbXI6wWcucgDhvWD2MVAw6dU,12
+autoBinning-0.1.6.dist-info/RECORD,,
