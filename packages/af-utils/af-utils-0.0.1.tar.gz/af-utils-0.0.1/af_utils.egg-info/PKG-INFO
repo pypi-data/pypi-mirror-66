@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: af-utils
+Version: 0.0.1
+Summary: airflow utilities for an internal package
+Home-page: UNKNOWN
+Author: Lee Ying Yang
+Author-email: overaneout@gmail.com
+License: Apache Software License (Apache License 2.0)
+Description: # af-utils
+        
+        ### Introduction
+        An airflow utilities package.
+        An internal use package.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

@@ -1,0 +1,8 @@
+README.md
+setup.py
+af_utils/__init__.py
+af_utils.egg-info/PKG-INFO
+af_utils.egg-info/SOURCES.txt
+af_utils.egg-info/dependency_links.txt
+af_utils.egg-info/not-zip-safe
+af_utils.egg-info/top_level.txt
