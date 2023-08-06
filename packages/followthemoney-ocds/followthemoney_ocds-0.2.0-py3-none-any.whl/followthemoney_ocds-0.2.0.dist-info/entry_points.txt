@@ -1,0 +1,6 @@
+[babel.extractors]
+ftmmodel = followthemoney.messages:extract_yaml
+
+[followthemoney.cli]
+ocds = ftmocds.cli:import_ocds
+

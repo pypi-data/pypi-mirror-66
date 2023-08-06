@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: followthemoney-ocds
+Version: 0.2.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Organized Crime and Corruption Reporting Project
+Author-email: data@occrp.org
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: followthemoney (>=1.29.5)
+
+# followthemoney-ocds
+
+Import data formatted as OpenContracting Data Standard (OCDS) JSON object
+streams into FollowTheMoney objects. FtM is much less verbose in describing
+procurment processes, so we're collating the complex process information 
+in OCDS into `Contract` and `ContractAward` objects.
+
+**Note:** This importer doesn't aim to strictly implement the OCDS spec, but
+rather capture the variety of OCDS-style data releases available in the wild.
+
