@@ -1,0 +1,11 @@
+ieugwaspy/__init__.py,sha256=o8amN-bxj07da2KLUoROLnOqS0vUydrJTyBAdYES2rQ,345
+ieugwaspy/api.py,sha256=rRU9CFFtMKDAj9ePrhD8tMqZzeN-O7GDmxgc7G5yvvE,411
+ieugwaspy/backwards.py,sha256=iYQ6qVccns2-jWBu_jD2tD1gfuy9xIYCGMo0leLoPBg,666
+ieugwaspy/constants.py,sha256=B2AcDdjs5mEBmMet8OMKAVnAOOh-vbeGqV0lKISfu3w,672
+ieugwaspy/query.py,sha256=7IXfybCnlDOqb9IL5LXt-GjuwPn_39YJq_dylK5Uo_Y,5225
+ieugwaspy/variants.py,sha256=HM9kg8TRNlGlnyGa-6wlL68-Ucd8Bg_Ot7-a_5y80PU,1000
+ieugwaspy-0.1.6.dist-info/LICENSE,sha256=0w1THqEGF5Ul-iiWicNDHO-sQbyBYt1sAcF8ctsDak8,1090
+ieugwaspy-0.1.6.dist-info/METADATA,sha256=Eh9XXcEjxaH3mqplv66vXALjz3JBDnF3ciiO33emC_Q,1692
+ieugwaspy-0.1.6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ieugwaspy-0.1.6.dist-info/top_level.txt,sha256=9-Oo9-x0bKkvdVDBOyMQS2S4_0eLUb5NbOJMy0jRYUo,10
+ieugwaspy-0.1.6.dist-info/RECORD,,
