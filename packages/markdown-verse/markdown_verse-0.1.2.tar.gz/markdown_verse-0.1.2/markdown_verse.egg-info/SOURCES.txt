@@ -1,0 +1,9 @@
+README.md
+setup.py
+markdown_verse/__init__.py
+markdown_verse/extension.py
+markdown_verse.egg-info/PKG-INFO
+markdown_verse.egg-info/SOURCES.txt
+markdown_verse.egg-info/dependency_links.txt
+markdown_verse.egg-info/requires.txt
+markdown_verse.egg-info/top_level.txt
