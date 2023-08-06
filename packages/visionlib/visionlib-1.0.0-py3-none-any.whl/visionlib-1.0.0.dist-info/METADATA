@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: visionlib
+Version: 1.0.0
+Summary: A simple, easy to use and customizeble cv library 
+Home-page: UNKNOWN
+Author: Ashwin Vinod
+Author-email: ashwinvinodsa@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: mtcnn
+Requires-Dist: opencv-python
+Requires-Dist: dlib
+Requires-Dist: wget
+Requires-Dist: numpy
+
+# Visionlib
+
+A simple high level api made for assisting in cv-related projects.
+
+## Features
+
+- Track faces using
+  - MTCNN module
+  - Dlib hog Based detector
+  - Opencv Haar casscades
+  - Dnn based model
+- Predict Gender
+- Detect Objects
+  - Yolo v3
+  - tiny-yolo
+
+## Installation
+
+
