@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+Corephone/__init__.py
+Corephone/algo_name_gist.py
+Corephone/algo_name_gist_uni_bn.py
+Corephone/algo_uni_bn_to_en_phonetic.py
+Corephone/non_unicode_to_unicode.py
+Corephone/titles_and_salutations.txt
+Corephone/tool_optimize_titles_and_salutations.py
+Corephone/uni_bn_titles_and_salutations.txt
+Corephone/vars_uni_bn_to_en_phonetic.py
+Corephone.egg-info/PKG-INFO
+Corephone.egg-info/SOURCES.txt
+Corephone.egg-info/dependency_links.txt
+Corephone.egg-info/top_level.txt
