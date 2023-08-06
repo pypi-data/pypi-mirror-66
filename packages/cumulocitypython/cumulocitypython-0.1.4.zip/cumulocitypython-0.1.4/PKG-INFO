@@ -1,0 +1,20 @@
+Metadata-Version: 1.0
+Name: cumulocitypython
+Version: 0.1.4
+Summary: Purpose of this package is to easily request historical data from your cumulocity tenant and return it as a pandas dataframe.
+Home-page: https://github.com/SilverLaius/cumulocitypython
+Author: Silver Laius
+Author-email: silver.laius@gmail.com
+License: MIT
+Download-URL: https://github.com/SilverLaius/cumulocitypython/archive/1.1.4.tar.gz
+Description: UNKNOWN
+Keywords: Python,Cumulocity,Pandas
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
