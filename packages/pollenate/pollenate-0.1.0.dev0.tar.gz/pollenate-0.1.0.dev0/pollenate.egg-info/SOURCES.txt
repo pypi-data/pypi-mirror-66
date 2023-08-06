@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+short_description.txt
+pollenate/__init__.py
+pollenate/__main__.py
+pollenate/version.py
+pollenate.egg-info/PKG-INFO
+pollenate.egg-info/SOURCES.txt
+pollenate.egg-info/dependency_links.txt
+pollenate.egg-info/top_level.txt
