@@ -1,0 +1,10 @@
+NumPy
+biopython
+pandas
+ete3
+
+[dev]
+check-manifest
+
+[test]
+coverage
