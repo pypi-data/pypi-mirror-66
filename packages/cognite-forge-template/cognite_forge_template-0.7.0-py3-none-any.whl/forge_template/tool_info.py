@@ -1,0 +1,36 @@
+from __future__ import annotations
+
+import os
+from typing import TYPE_CHECKING, Callable, List, Type
+
+SCHEMA_FOLDER = os.path.join(os.path.dirname(__file__), "schema")
+
+if TYPE_CHECKING:
+    from forge_template.handler.handler import BaseHandler
+
+
+class SchemaInfo:
+    def __init__(self, schema_path: str, output_path: str, post_transforms: List[Callable[[str, str], str]] = None):
+        self.schema_path = schema_path
+        self.output_path = output_path
+        self.post_transforms = post_transforms
+
+
+class ToolInfo:
+    def __init__(
+        self,
+        name: str,
+        handler: Type[BaseHandler],
+        schema_info: List[SchemaInfo],
+        github_actions_script_name: str = "",
+        github_actions_template_name: str = "",
+        assert_match: bool = False,
+        assert_scope_match: bool = False,
+    ):
+        self.name = name
+        self.handler = handler
+        self.schema_info = schema_info
+        self.github_actions_script_name = github_actions_script_name
+        self.github_actions_template_name = github_actions_template_name
+        self.assert_match = assert_match
+        self.assert_scope_match = assert_scope_match
