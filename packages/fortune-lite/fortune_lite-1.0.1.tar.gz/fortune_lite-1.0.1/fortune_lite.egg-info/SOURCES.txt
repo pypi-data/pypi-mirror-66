@@ -1,0 +1,9 @@
+README.md
+setup.py
+fortune_lite/__init__.py
+fortune_lite.egg-info/PKG-INFO
+fortune_lite.egg-info/SOURCES.txt
+fortune_lite.egg-info/dependency_links.txt
+fortune_lite.egg-info/not-zip-safe
+fortune_lite.egg-info/top_level.txt
+scripts/fortune
