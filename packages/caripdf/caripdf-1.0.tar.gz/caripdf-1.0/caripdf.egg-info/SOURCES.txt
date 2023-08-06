@@ -1,0 +1,9 @@
+README.md
+setup.py
+caripdf/__init__.py
+caripdf/pdf2image.py
+caripdf/pdf2text.py
+caripdf.egg-info/PKG-INFO
+caripdf.egg-info/SOURCES.txt
+caripdf.egg-info/dependency_links.txt
+caripdf.egg-info/top_level.txt
