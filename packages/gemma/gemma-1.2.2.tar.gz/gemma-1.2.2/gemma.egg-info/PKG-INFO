@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: gemma
+Version: 1.2.2
+Summary: simple data mapping tools
+Home-page: UNKNOWN
+Author: Billy Peake
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: dev
+Provides-Extra: lint
+Provides-Extra: doc
+Provides-Extra: build
+Provides-Extra: test
