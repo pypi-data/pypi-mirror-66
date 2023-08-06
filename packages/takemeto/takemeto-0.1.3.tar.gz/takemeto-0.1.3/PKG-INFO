@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: takemeto
+Version: 0.1.3
+Summary: A super tiny package to quickly take you to URL destinations using the command line.
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: typer-cli (>=0.0.9,<0.0.10)
+Requires-Dist: typer[all] (>=0.2.1,<0.3.0)
