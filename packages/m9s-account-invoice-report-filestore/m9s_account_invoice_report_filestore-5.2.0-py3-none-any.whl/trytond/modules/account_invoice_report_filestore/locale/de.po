@@ -1,0 +1,7 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:account.invoice,report_file_id:"
+msgid "Report File ID"
+msgstr "Berichtsdatei ID"
