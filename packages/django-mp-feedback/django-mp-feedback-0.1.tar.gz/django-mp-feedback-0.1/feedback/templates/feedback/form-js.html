@@ -1,0 +1,7 @@
+
+<script src="{{ STATIC_URL }}feedback/feedback.min.js"></script>
+<script>
+    (function ($) {
+        new FeedbackForm('{% url 'feedback:create' %}');
+    })(jQuery);
+</script>

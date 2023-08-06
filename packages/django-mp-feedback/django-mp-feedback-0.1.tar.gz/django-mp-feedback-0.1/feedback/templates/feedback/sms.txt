@@ -1,0 +1,2 @@
+New message #{{ object.id }}
+Tel.: {{ object.mobile }}

@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-20 20:44+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: __init__.py:9
+msgid "Feedback"
+msgstr ""
+
+#: models.py:11
+msgid "User"
+msgstr ""
+
+#: models.py:16 templates/feedback/email/message.html:7
+msgid "Subject"
+msgstr ""
+
+#: models.py:18 templates/feedback/email/message.html:10
+msgid "Name"
+msgstr ""
+
+#: models.py:20 templates/feedback/email/message.html:16
+msgid "Mobile"
+msgstr ""
+
+#: models.py:22 templates/feedback/email/message.html:13
+msgid "Email"
+msgstr ""
+
+#: models.py:25
+msgid "Date created"
+msgstr ""
+
+#: models.py:27 templates/feedback/email/message.html:19
+msgid "Message text"
+msgstr ""
+
+#: models.py:33
+msgid "Feedback message"
+msgstr ""
+
+#: models.py:34
+msgid "Feedback messages"
+msgstr ""
+
+#: templates/feedback/email/message.html:5
+msgid "New feedback message #"
+msgstr ""
+
+#: templates/feedback/email/message.html:22
+msgid "Show on site"
+msgstr ""
+
+#: templates/feedback/email/subject.txt:4
+msgid "New feedback message"
+msgstr ""
+
+#: templates/feedback/modal.html:13
+msgid "New message"
+msgstr ""
+
+#: templates/feedback/modal.html:22
+msgid "Send"
+msgstr ""
+
+#: templates/feedback/modal.html:26
+msgid "Cancel"
+msgstr ""
+
+#: templates/feedback/success-message.html:4
+msgid "Message was successfully sent"
+msgstr ""
+
+#: templates/feedback/view.html:61
+msgid "Send message"
+msgstr "Bericht versturen"
