@@ -1,0 +1,12 @@
+README.md
+setup.py
+corappo/__init__.py
+corappo/__main__.py
+corappo/cmake_project.py
+corappo/cmake_target.py
+corappo/formatting.py
+corappo.egg-info/PKG-INFO
+corappo.egg-info/SOURCES.txt
+corappo.egg-info/dependency_links.txt
+corappo.egg-info/entry_points.txt
+corappo.egg-info/top_level.txt

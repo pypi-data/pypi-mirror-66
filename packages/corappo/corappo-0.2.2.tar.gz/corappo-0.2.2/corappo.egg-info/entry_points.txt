@@ -1,0 +1,3 @@
+[console_scripts]
+corappo = corappo.__main__:main
+

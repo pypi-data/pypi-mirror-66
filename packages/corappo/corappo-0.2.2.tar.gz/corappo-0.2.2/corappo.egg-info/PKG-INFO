@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: corappo
+Version: 0.2.2
+Summary: A tool to automatically generate CMake projects
+Home-page: https://github.com/matthewscholefield/corappo
+Author: Matthew D. Scholefield
+Author-email: matthew331199@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: corappo
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
