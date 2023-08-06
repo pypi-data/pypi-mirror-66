@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+edge_gravity/__init__.py
+edge_gravity/edge_gravity.c
+edge_gravity.egg-info/PKG-INFO
+edge_gravity.egg-info/SOURCES.txt
+edge_gravity.egg-info/dependency_links.txt
+edge_gravity.egg-info/requires.txt
+edge_gravity.egg-info/top_level.txt
