@@ -1,0 +1,3 @@
+[console_scripts]
+smokeur = smokeur.cli:upload_file
+
