@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: libclsprot
+Version: 2.5
+Summary: Library for chipless Reader
+Home-page: UNKNOWN
+Author: Heyn
+Author-email: heyunhuan@gmail.com
+License: GPLv3
+Keywords: chipless,hexin
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: pyserial (>=3.4)
+
+Chipless protocol. 
+=========================
+
+    libclsprot is a protocol library for chipless reader modules.
+
+
+Installation
+------------
+
+* Compile and install the library::
+
+    pip3 install libclsprot
+
+* After installation you can run unit tests to make sure that the library works fine.  Execute::
+
+    python -m libclsprot.test
+
+Usage
+-----
+
+  **In Python 3::**
+    from libclsprot import ChiplessTags
+
+Example
+-------
+
+    from libclsprot import ChiplessTags
+
+    clt = ChiplessTags( port='COM3' )
+
+    clt.scan( antenna=1, enable=True, start=100, stop=1000, step=5, mid=45, power=2 )  # Setting scan parameters.
+
+
+    def notify_cb( data ):
+        print(data)
+
+    clt.notify_callback( notify_cb )    # Register callback function.
+
+    clt.worker_start()
+
+
+V0.2 (2019-01-23)
++++++++++++++++++++
+* Release ver0.2 new protocol v0.2
+
+V0.1 (2019-01-16)
++++++++++++++++++++
+* Release ver0.1
+
+
+
