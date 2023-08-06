@@ -1,0 +1,4 @@
+[console_scripts]
+toke=tokesim.__main__:main
+tokesim=tokesim.__main__:main
+
