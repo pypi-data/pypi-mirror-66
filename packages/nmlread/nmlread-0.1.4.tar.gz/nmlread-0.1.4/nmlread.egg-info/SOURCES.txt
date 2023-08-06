@@ -1,0 +1,9 @@
+README.md
+setup.py
+nmlread/__init__.py
+nmlread.egg-info/PKG-INFO
+nmlread.egg-info/SOURCES.txt
+nmlread.egg-info/dependency_links.txt
+nmlread.egg-info/entry_points.txt
+nmlread.egg-info/requires.txt
+nmlread.egg-info/top_level.txt
