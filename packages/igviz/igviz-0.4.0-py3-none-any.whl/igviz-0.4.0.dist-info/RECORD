@@ -1,0 +1,9 @@
+igviz/__init__.py,sha256=0IELgrHSwB-DTIaUIRl4IoPT4lLvF-pJnqn02m-KVbg,24
+igviz/igviz.py,sha256=Vyb_kSH6xnLqBoDC2ozJjOS9SNCUyLEgMFTfyQNPVnI,12220
+igviz/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+igviz/tests/test_plot.py,sha256=0OJFmiJFpVmaP4AWr9yaKdl6HS8xtfn6j16Z8SoqnZk,1892
+igviz-0.4.0.dist-info/LICENSE,sha256=6i_jxEjuP-cbOFSJnx0JRx5BiROeE7Bw9a9VOEPSz7A,1069
+igviz-0.4.0.dist-info/METADATA,sha256=Ow-AekM6uyeiCjL-1mZI8_e8bEjdT1RuUUDoaczTefo,7677
+igviz-0.4.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+igviz-0.4.0.dist-info/top_level.txt,sha256=LdZsYGa4Vefcvr0s8j0qrVdIWwA7EV4vAjNsc7ICu5k,6
+igviz-0.4.0.dist-info/RECORD,,
