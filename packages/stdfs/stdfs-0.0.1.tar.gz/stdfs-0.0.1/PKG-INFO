@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: stdfs
+Version: 0.0.1
+Summary: C++ std::filesystem API in Python
+Home-page: https://github.com/douglasdavis/stdfs
+Author: Doug Davis
+Author-email: ddavis@ddavis.io
+License: UNKNOWN
+Description: # stdfs
+        
+        C++ [std::filesystem](https://en.cppreference.com/w/cpp/filesystem) Python library.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: C++
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

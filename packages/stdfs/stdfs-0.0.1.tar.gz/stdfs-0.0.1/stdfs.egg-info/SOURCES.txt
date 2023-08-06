@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/stdfs.cpp
+stdfs.egg-info/PKG-INFO
+stdfs.egg-info/SOURCES.txt
+stdfs.egg-info/dependency_links.txt
+stdfs.egg-info/not-zip-safe
+stdfs.egg-info/top_level.txt
