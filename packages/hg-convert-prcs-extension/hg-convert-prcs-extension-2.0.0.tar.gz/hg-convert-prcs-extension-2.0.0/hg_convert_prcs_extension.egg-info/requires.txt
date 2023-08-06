@@ -1,0 +1,2 @@
+mercurial>=4.7
+prcslib>=4.1

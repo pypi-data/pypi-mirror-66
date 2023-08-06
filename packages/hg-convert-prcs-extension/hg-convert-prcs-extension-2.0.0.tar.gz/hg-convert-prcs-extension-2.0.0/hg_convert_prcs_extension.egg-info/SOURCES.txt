@@ -1,0 +1,12 @@
+COPYING
+MANIFEST.in
+README.md
+setup.py
+hg_convert_prcs_extension.egg-info/PKG-INFO
+hg_convert_prcs_extension.egg-info/SOURCES.txt
+hg_convert_prcs_extension.egg-info/dependency_links.txt
+hg_convert_prcs_extension.egg-info/requires.txt
+hg_convert_prcs_extension.egg-info/top_level.txt
+hg_convert_prcs_extension.egg-info/zip-safe
+hgext3rd/convert_prcs/__init__.py
+hgext3rd/convert_prcs/prcs.py
