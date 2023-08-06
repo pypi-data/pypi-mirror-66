@@ -1,0 +1,7 @@
+jsonpath_rw
+ply
+python-dateutil
+python-io-wrapper
+requests
+unidecode
+xlrd
