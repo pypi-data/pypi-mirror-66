@@ -1,0 +1,6 @@
+requests
+demjson
+numpy
+tqdm
+cryptography
+pycurl
