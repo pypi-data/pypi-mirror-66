@@ -1,0 +1,13 @@
+application/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+application/application.py,sha256=IgbY4Qj11Xsu-wBA96Y4OH7tKAomTP5rqcSGrTfnBos,1176
+application/config.py,sha256=GDtn3LaO6oUrWchkEZ2XaJeqCdvwtJtKyGQ1LEXn5e4,331
+application/docker.py,sha256=J2M8eDFz4Kacesv5xzEkUt-WqkMchGsMd5k6hMjoZcs,2162
+application/docker_cli.py,sha256=AJWMZ8KGVmJQKRtH4CDhyNyE23bwJvogVyPvDlfYw7A,1041
+application/logger.py,sha256=99-BUzKMLx_eg_wECjx8XtqjVXJpMGk_9q4FKWFXp6g,651
+application/parser.py,sha256=nAfEkN3cQ09_7rlUYbpcCcHartmDlHndtPj65d7z7Po,2760
+docker_compose_multistage-0.1.data/scripts/docker-compose-multistage,sha256=pB3CisdyTUuqhuROnd8gQ6xopwSstEE9Gkep6awq5TE,158
+docker_compose_multistage-0.1.dist-info/LICENSE,sha256=xCs5ywcMLkMC-TvTeDkUMLmDVEBNtjCVCqz5NAo3SJY,1073
+docker_compose_multistage-0.1.dist-info/METADATA,sha256=tQ1I1mWnaWFDnVNqiXb_bKCL43q9q4lqOyXT05n48Jk,521
+docker_compose_multistage-0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+docker_compose_multistage-0.1.dist-info/top_level.txt,sha256=SkHaPbS6sXpuGAtAWFg5ftAdk7O4nr35H9-etFilufw,12
+docker_compose_multistage-0.1.dist-info/RECORD,,

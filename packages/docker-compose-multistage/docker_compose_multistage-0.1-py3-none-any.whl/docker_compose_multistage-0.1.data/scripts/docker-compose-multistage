@@ -1,0 +1,13 @@
+#!python
+
+import sys
+
+from application.application import Application
+
+
+def main():
+    Application(sys.argv).start()
+
+
+if __name__ == '__main__':
+    main()
