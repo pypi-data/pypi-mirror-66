@@ -1,0 +1,21 @@
+
+[Advanced Emoji Replacement]
+grapheme
+
+[Load image]
+pillow
+
+[PNG]
+cairosvg
+
+[Text]
+fonttools
+
+[Vectorization]
+pillow
+pypotrace>=0.2
+numpy
+scipy
+
+[Video output]
+opencv-python
