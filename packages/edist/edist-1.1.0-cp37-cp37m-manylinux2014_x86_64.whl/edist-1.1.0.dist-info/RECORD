@@ -1,0 +1,17 @@
+edist/tree_utils.py,sha256=iruSnk3AlC5kitEz5eWl6dd6n789bH1vLq57Te6DsPk,11149
+edist/bedl.py,sha256=GlKFAEVN-qhbHcLGXdxFBBlA53yyVn9xtDbIhwPwzyc,17997
+edist/adp.cpython-37m-x86_64-linux-gnu.so,sha256=Sp3oTJp8Fy3sa3Lf3jhYW6oRhQmA9b4hoqtSAvUy7gY,2889912
+edist/edits.py,sha256=OvWLv1qmUvv-mgGAhjMd79JVDmtYqwzf10FnHaKkq2I,8314
+edist/alignment.py,sha256=68nzP8Wf6Hsq0CIbzMs5XQIwwvFN8aadU3qgifFBqlk,7637
+edist/seted.cpython-37m-x86_64-linux-gnu.so,sha256=6m6LqC7GhACakSWNBTNm4AI-ngDtGaUB-4GtWf4YyeU,1200568
+edist/ted.cpython-37m-x86_64-linux-gnu.so,sha256=NlOJz-0H81lHftwNMwm7slXiNxEoHuFsBIeIyed_hko,2877656
+edist/tree_edits.py,sha256=aksJzrizpQ7VPzCluoo9bzaD7hegop-DKhUbErinzLY,16802
+edist/aed.py,sha256=gkDylAtNq6OHRi4dbY9G37eACui9RCrypIp8tjzmvHA,9871
+edist/sed.cpython-37m-x86_64-linux-gnu.so,sha256=h3DWPJrphzVppVchHSB1m6csvdYHJz609Af9BJn0_aU,2295368
+edist/dtw.cpython-37m-x86_64-linux-gnu.so,sha256=ADeXWw3u_wpLebD9RlTHk7L3Rc4FZsBTFkNI3dTjH7g,1550960
+edist/multiprocess.py,sha256=bAYbsACGeE9-M_huZIjGWNlmNWDaffrUQMPrzego2jk,10951
+edist-1.1.0.dist-info/RECORD,,
+edist-1.1.0.dist-info/WHEEL,sha256=Gukwhh_Vm0KMqvU45XB0IW9vULNpYAVpoy0oBl6s2RQ,112
+edist-1.1.0.dist-info/top_level.txt,sha256=XCdxZfWngtADWDJ_ifiqqqEMORBS3xGxpttZRGaW8f8,6
+edist-1.1.0.dist-info/METADATA,sha256=fQLPky89xlYWzWw14UPKw-QFyEeQjULDs_bpLKJW2-M,22557
+edist-1.1.0.dist-info/LICENSE.md,sha256=iVG9puYW33QY_z-A2WmfltpwTfZPO8nw1bt1oQNoBFY,34913
