@@ -1,0 +1,7 @@
+README.md
+httpchunked.py
+setup.py
+httpchunked.egg-info/PKG-INFO
+httpchunked.egg-info/SOURCES.txt
+httpchunked.egg-info/dependency_links.txt
+httpchunked.egg-info/top_level.txt
