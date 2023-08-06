@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: clowder-repo
+Version: 3.1.0
+Summary: A tool for managing code
+Home-page: http://clowder.cat
+Author: Joe DeCapo
+Author-email: joe@polka.cat
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
