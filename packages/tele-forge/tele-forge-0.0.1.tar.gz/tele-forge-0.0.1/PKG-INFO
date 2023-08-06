@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: tele-forge
+Version: 0.0.1
+Summary: convenient cli with extendable collection of useful plugins
+Home-page: https://github.com/TeleTrackingTechnologies/forge
+Author: Brandon Horn, Kenneth Poling, Paul Verardi, Cameron Tucker, Clint Wadley
+Author-email: opensource@teletracking.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
