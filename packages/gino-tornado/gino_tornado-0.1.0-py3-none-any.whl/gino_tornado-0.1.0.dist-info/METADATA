@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: gino-tornado
+Version: 0.1.0
+Summary: An extension for GINO to integrate with Tornado
+Home-page: https://github.com/python-gino/gino-tornado
+License: BSD-3-Clause
+Keywords: sqlalchemy,python3,tornado,gino
+Author: Vladimir Goncharov
+Author-email: amatanhead@yandex-team.ru
+Requires-Python: >=3.5.2,<4.0.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: gino (>=1.0.0rc2,<2.0.0)
+Requires-Dist: tornado (>=6.0.4,<7.0.0)
+Project-URL: Documentation, https://python-gino.readthedocs.io/
+Project-URL: Repository, https://github.com/python-gino/gino-tornado
+Description-Content-Type: text/markdown
+
+# gino-tornado
+
+An extension for GINO to support Tornado server.
+
+**This project "gino-tornado" is currently not maintained and needs adoption.** 
+
+Since GINO 1.0, the built-in extensions are now separate projects supported by
+the community. This project is copied here directly from GINO 0.8.x for
+compatibility. Help is needed to:
+
+* Keep this project maintained - follow Tornado releases, fix issues, etc.
+* Add more examples and documentation.
+* Answer questions in the community.
+

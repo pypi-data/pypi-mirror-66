@@ -1,0 +1,3 @@
+[gino.extensions]
+tornado=gino_tornado
+
