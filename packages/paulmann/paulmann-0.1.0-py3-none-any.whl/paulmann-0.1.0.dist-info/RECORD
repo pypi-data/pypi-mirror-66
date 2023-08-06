@@ -1,0 +1,10 @@
+paulmann/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+paulmann/const.py,sha256=tucBiRbFYZqDwhd3OmLW_5CqsJuFajmZZQ5GSxZQ3Lo,1107
+paulmann/exceptions.py,sha256=eUhnA5kpQ-FFMVM3I3AgxPc_NQdtFJPZWvYn9cvW6M4,325
+paulmann/models.py,sha256=D4y-dq2Z-dzphK6bTsagK51HT6VeEvb1mFsxSckuQu0,1799
+paulmann/paulmann.py,sha256=nwFWBU53pHAp63BsKe3D4Dn0dW3zz-JaEuLnb0gXTQ4,12566
+paulmann-0.1.0.dist-info/LICENSE,sha256=xCs5ywcMLkMC-TvTeDkUMLmDVEBNtjCVCqz5NAo3SJY,1073
+paulmann-0.1.0.dist-info/METADATA,sha256=IKjErljH_lWJULhbEuHbHGSKIqn_IFIEDWLUI-ThcM0,307
+paulmann-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+paulmann-0.1.0.dist-info/top_level.txt,sha256=I6qpMTc5JeJbtVuvdno3IjJgS0p87q_bFA0ow2RjPTA,9
+paulmann-0.1.0.dist-info/RECORD,,
