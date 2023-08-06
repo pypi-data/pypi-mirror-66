@@ -1,0 +1,3 @@
+[console_scripts]
+robopom = robopom.cli.robopom:robopom_entry
+

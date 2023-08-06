@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: robopom
+Version: 0.1.0
+Summary: Page Object Model for Robot Framework
+Home-page: https://github.com/qky666/robopom
+Author: José Torrecilla Álvarez
+Author-email: jose.torrecilla@gmail.com
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Robot Framework
+Classifier: Framework :: Robot Framework :: Library
+Classifier: Environment :: Web Environment
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: robotframework (==3.1.2)
+Requires-Dist: robotframework-seleniumlibrary (==4.3.0)
+Requires-Dist: anytree (==2.8.0)
+Requires-Dist: pyyaml (==5.3.1)
+Requires-Dist: robotframework-lint (==1.0)
+Requires-Dist: click (==7.1.1)
+
+# robopom
+
+Page Object Model for Robot Framework
+
+# Installation
+
+
+
