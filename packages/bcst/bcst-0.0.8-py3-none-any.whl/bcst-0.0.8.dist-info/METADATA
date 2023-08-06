@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: bcst
+Version: 0.0.8
+Summary: A web browser start page generator.
+Home-page: https://gitlab.com/manzerbredes/bcst
+Author: Loic Guegan
+Author-email: manzerbredes@mailbox.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Description-Content-Type: text/markdown
+Requires-Dist: jinja2
+
+# Beautiful Custom Start Page
+
+### Basic usage
+**bcst** allow you to create a beautiful start page very quickly. To install **bcst** run
+`pip install bcst`. Then choose a theme (screenshots are availaible on the package repository):
+> bcst -l
+> 
+Next step, extract the theme resources:
+> bcst -e \<your-theme> > resources.json
+
+This, will create a `resources.json` in the current directory. Now, you can customize it to your needs. Then, generate your start page:
+> bcst -g \<your-theme> resources.json \<start-page-destination>
+
+And voila!
+
+### Submit your own theme
+TODO
+
+
+

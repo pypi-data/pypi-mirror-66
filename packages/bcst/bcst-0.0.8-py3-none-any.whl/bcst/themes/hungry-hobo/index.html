@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <br>
+    <h1>{{msg}}</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    {% for key, value in bookmarks.items() %}
+    <div class="all">
+      <div class="title" style="background-color: {{colors[key]}}"><h3>{{key}}</h3></div>
+      <div class="links">
+      {% for link_name, url in value.items() %}
+      <a href="{{url}}"><p>{{link_name}}</p></a>
+      {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+      
+  </body>
+</html>

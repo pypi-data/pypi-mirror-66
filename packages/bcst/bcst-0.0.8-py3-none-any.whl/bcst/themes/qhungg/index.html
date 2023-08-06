@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{home}}</title>
+		<meta charset ="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link rel="shortcut icon" href="icon/leaf.png" />
+	</head>
+<body>
+  <div class="box">
+    {% for key,value in bookmarks.items() %}
+    <div class="hvr-grow">
+			<h1>{{key}}</h1>
+			<ul>
+              {% for link_name,url in value.items() %}
+				<li><a href="{{url}}">{{link_name}}</a></li>
+              {% endfor %}
+			</ul>
+	</div>
+    {% endfor %}
+
+		<form action="https://www.google.com/search" method="GET" class="hvr-shrink">
+			<input type="text" name="q" placeholder="Search" autofocus="autofocus">
+		</form>
+	</div>
+</body>
+</html>

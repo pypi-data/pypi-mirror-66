@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+		<meta charset='UTF-8' />
+		<meta name='description' content='A simple startpage, suited to my current Windows theme.' />
+		<meta name='author' content='Milen Hristov' />
+		<link rel='favicon' type='image/png' href='book.png' />
+		<title>{{ title }}</title>
+		<link rel='stylesheet' type='text/css' href='styles.css' />	
+    </head>
+
+    <body>
+        <div id='content'>
+          <div id='bookmarks'>
+            {%- for key,value in bookmarks.items() %}
+            <h1>{{key}}</h1>
+            {% for link_name, url in value.items() -%}
+            <a href='{{url}}' class='button'>{{link_name}}</a>
+            {% endfor %}
+            {% if not loop.last %}
+            <br><br><br>
+            {%- endif -%}
+            {%- endfor -%}
+            
+            </div>
+
+          <br><br><br><br>
+
+            <div id='clock'>
+					<script type='text/javascript'>
+					<!--
+					
+					function init ( )
+					{
+					  timeDisplay = document.createTextNode ( "" );
+					  document.getElementById("clock").appendChild ( timeDisplay );
+					}
+					
+					function updateClock ( )
+					{
+					  var currentTime = new Date ( );
+					
+					  var currentHours = currentTime.getHours ( );
+					  var currentMinutes = currentTime.getMinutes ( );
+					  var currentSeconds = currentTime.getSeconds ( );
+					
+					  currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+					  currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+					
+					  var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+					
+					  currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+					
+
+					  //currentHours = ( currentHours == 0 ) ? 12 : currentHours; - shows 12 instead of 0 at 12pm
+					
+					  // Compose the string for display
+					  var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+					
+					  document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+					}
+					// -->
+					</script>
+					<body onload="updateClock(); setInterval('updateClock()', 1000 )">
+			</div>
+        </div>
+    </body>
+</html>

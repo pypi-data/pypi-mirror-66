@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <main>
+      <div class="prompt">[<span data-Name>user</span>@<span>home</span> ~]$ tree</div>
+      <div class="tree">
+        <h1>.</h1>
+        <ul id="list">
+            <li><h1>[error]</h1></li>
+        </ul>
+      </div>
+      <div class="prompt">[<span data-Name>user</span>@<span>home</span> ~]$ ddg</div>
+
+      <form action="https://duckduckgo.com/" method="GET" autocomplete="off">
+        <h1>{{ search_msg }}</h1>
+        <textarea type="text" name="q" id="search" wrap="hard" autofocus></textarea>
+      </form>
+    </main>
+  </body>
+</html>
+
+<script type="text/javascript">
+const Config = {
+    name: "{{name}}",
+    scale: 1,
+    Links: [
+        {% for key, value in bookmarks.items() %}
+        [
+            "{{key}}",
+            [
+                {% for link_name, url in value.items() %}
+                ["{{link_name}}", "{{url}}"]
+                {% if not loop.last %}
+                ,
+                {% endif %}
+                {% endfor %}
+            ]
+        ]
+        {% if not loop.last %}
+        ,
+        {% endif %}
+        {% endfor %}
+    ]
+}
+</script>
+
+<script src="script/script.js"></script>
