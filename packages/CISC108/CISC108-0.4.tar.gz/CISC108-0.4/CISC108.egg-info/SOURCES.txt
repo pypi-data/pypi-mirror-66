@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+CISC108.egg-info/PKG-INFO
+CISC108.egg-info/SOURCES.txt
+CISC108.egg-info/dependency_links.txt
+CISC108.egg-info/top_level.txt
+cisc108/__init__.py
+cisc108/assertions.py
