@@ -1,0 +1,3 @@
+include *.md
+recursive-include tetris_game  *.png *.wav
+recursive-include assets  *.png *.wav
