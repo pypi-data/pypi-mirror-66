@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: moneyforward-acplus
+Version: 1.0.0
+Summary: マネーフォワードクラウド会計Plus API
+Home-page: https://github.com/moneyforward-api-client/acplus-python
+Author: OTA2000
+Author-email: yasuhiroota26@gmail.com
+License: UNKNOWN
+Description:     マネーフォワードクラウド会計PlusのAPI
+            
+Keywords: OpenAPI,OpenAPI-Generator,マネーフォワードクラウド会計Plus API
+Platform: UNKNOWN
