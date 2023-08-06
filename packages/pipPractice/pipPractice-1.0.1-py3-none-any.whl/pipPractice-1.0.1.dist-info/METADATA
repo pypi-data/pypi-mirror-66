@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pipPractice
+Version: 1.0.1
+Summary: pip install Test and restapi update
+Home-page: https://github.com/goodgood619/pipPackageReleasePractice
+Author: goodgood619
+Author-email: gktgnjftm@naver.com
+License: UNKNOWN
+Keywords: pipPractice
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3
+
+UNKNOWN
+
+
