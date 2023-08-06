@@ -1,0 +1,6 @@
+README.md
+setup.py
+Magesh46.egg-info/PKG-INFO
+Magesh46.egg-info/SOURCES.txt
+Magesh46.egg-info/dependency_links.txt
+Magesh46.egg-info/top_level.txt
