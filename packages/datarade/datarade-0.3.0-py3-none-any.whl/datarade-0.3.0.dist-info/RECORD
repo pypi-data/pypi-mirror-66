@@ -1,0 +1,9 @@
+datarade/__init__.py,sha256=G5Lpvid_U00GUYHRjkE_5ZsjtCGyWe0_PQKE14Btu6I,224
+datarade/git_client.py,sha256=PAYCdbNLgTkwgdg_h7MrLDYYRWqbzzT7eFokocrqb5k,5461
+datarade/models.py,sha256=FN15v23DnCj4wZCzajoI0eKQ_69UHYqN_P3HiO8C9hk,11976
+datarade/schemas.py,sha256=EYlZHwqt3EEEBcBFe39pdziirCSE7RL7aCucTYV5nks,2437
+datarade/services.py,sha256=OyjkrfFtZIETOZZbhFpwSc9Yx1aIeFzI83l8ejpYqh4,6228
+datarade-0.3.0.dist-info/LICENSE,sha256=-2fA5zCFvdQIVB0yeoZ-br6g9LEpIii_3RwpgY1yQb4,11548
+datarade-0.3.0.dist-info/WHEEL,sha256=W0C0r2jfBMZdb75jfiTB1qBj15B4vwTGGZrLTh2uslc,81
+datarade-0.3.0.dist-info/METADATA,sha256=bXBPkj_YAu8R_cz9AOnfakj8gMQkju3lhy9A3x31IMo,4536
+datarade-0.3.0.dist-info/RECORD,,
