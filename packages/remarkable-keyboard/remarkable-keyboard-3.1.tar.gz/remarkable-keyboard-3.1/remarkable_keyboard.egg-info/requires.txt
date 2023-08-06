@@ -1,0 +1,5 @@
+paramiko
+screeninfo
+pynput
+remarkable-mouse>=5
+sortedcontainers
