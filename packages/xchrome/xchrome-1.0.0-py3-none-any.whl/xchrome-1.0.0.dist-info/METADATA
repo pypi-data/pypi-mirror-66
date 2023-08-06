@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: xchrome
+Version: 1.0.0
+Summary: Steal chrome information.
+Home-page: UNKNOWN
+Author: Dexy
+Author-email: UNKNOWN
+License: Dexy License
+Keywords: chrome,stealer,decrypter,dexy
+Platform: UNKNOWN
+Requires-Dist: cryptography
+Requires-Dist: pywin32
+Requires-Dist: pillow
+Requires-Dist: pycryptodome
+
+Decrypto chrome saved passwords..
+
+
