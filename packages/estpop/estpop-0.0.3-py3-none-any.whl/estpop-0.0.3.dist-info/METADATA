@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: estpop
+Version: 0.0.3
+Summary: Utility Tools for Population Estimates
+Home-page: https://github.com/defragworks/estpop
+Author: defrag.works
+Author-email: hello@defrag.works
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/defragworks/estpop/issues
+Project-URL: Source, https://github.com/defragworks/estpop/
+Keywords: simulation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+# estpop
+
+# 
+
+
