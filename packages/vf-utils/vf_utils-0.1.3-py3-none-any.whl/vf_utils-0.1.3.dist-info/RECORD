@@ -1,0 +1,14 @@
+bulk_edit/__init__.py,sha256=m669V_lkq4n6By85_w-xEj4RNayAt953pUcGVWi_b5E,145
+bulk_edit/__main__.py,sha256=UrJCF2aj4r2w20V17rCFeiBvKIUbGXxqZ5alIQpLaOo,5287
+bulk_edit/task_executor.py,sha256=kBnt-vNOPkXEYWPhktaddJt4_EqTM0CrUO8zSSElcVM,4405
+bulk_edit/log/__init__.py,sha256=SMRDd4nBIo12uylqiXSHmzxIavt-gDZgcp_Foo5nlVg,99
+bulk_edit/log/config.py,sha256=Qy4HnplU7lblvrnQnbXqfgWTxmIXh0WFYPQqvcx9pew,2038
+bulk_edit/tasks/__init__.py,sha256=czpgXlKYfnMAt_ow-ZRBfQxdPY5-F-RoJFQIiggEqJ0,157
+bulk_edit/tasks/community.py,sha256=UliGYJnsVMjCSOzIHr4GBN_tUKFSEeGrsVw2sAB9R8g,3330
+bulk_edit/tasks/login_logout.py,sha256=Z8FpnTv9XZjlEP6ndYgXFG9_Ygo3l8vseD6xAZQPtBk,2770
+bulk_edit/tasks/task_base.py,sha256=kCDz4RDeV72CWa3EA1apzwCobJokfBR1br_ThHE_N8o,2421
+vf_utils-0.1.3.dist-info/LICENSE,sha256=xpF5HKIxCXs2yI7qpl2aA22j9g4QN_-dzh46e0R5vCA,1087
+vf_utils-0.1.3.dist-info/METADATA,sha256=Nybpbdy7mbt5WHh0vQvWR8a6qauTHYPV5yk0mqB-AAc,3715
+vf_utils-0.1.3.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+vf_utils-0.1.3.dist-info/top_level.txt,sha256=HXpAVYjGlb1C8bMmZuH2bSKh_neiC5JOjbY6uRRLY9I,10
+vf_utils-0.1.3.dist-info/RECORD,,
