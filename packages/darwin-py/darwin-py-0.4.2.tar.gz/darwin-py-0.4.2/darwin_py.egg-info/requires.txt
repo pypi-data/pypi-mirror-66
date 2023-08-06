@@ -1,0 +1,9 @@
+argcomplete
+docutils
+factory_boy
+humanize
+pyyaml>=5.1
+requests
+scikit-learn
+sh
+tqdm
