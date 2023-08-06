@@ -1,0 +1,15 @@
+Flask>1.0
+Markdown>=2.5
+Jinja2>=2.10.2
+
+[:python_version != "3.4"]
+PyYAML>3.12
+
+[:python_version == "3.4"]
+PyYAML==3.12
+
+[codehilite]
+Pygments>1.6
+
+[docs]
+Sphinx>=1.4
