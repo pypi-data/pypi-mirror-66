@@ -1,0 +1,13 @@
+setup.py
+postdmarc/__init__.py
+postdmarc/pdm_exceptions.py
+postdmarc/postdmarc.py
+py_postdmarc.egg-info/PKG-INFO
+py_postdmarc.egg-info/SOURCES.txt
+py_postdmarc.egg-info/dependency_links.txt
+py_postdmarc.egg-info/entry_points.txt
+py_postdmarc.egg-info/requires.txt
+py_postdmarc.egg-info/top_level.txt
+tests/__init__.py
+tests/test_meta.py
+tests/test_postdmarc.py
