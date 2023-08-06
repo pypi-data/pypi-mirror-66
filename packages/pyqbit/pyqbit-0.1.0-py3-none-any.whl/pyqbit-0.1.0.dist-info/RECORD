@@ -1,0 +1,8 @@
+qbit/__init__.py,sha256=8UvPuJ0KkAsa8NkI5gycFXiFHkdZrvY-223wDgtqbGc,586
+qbit/gate.py,sha256=j7n_VJLWoj4sfbw1tu9xNEa5PAsUF9915jLrjgvosMI,4597
+qbit/qbit.py,sha256=bcNXMosXPgR7GpAYQuj21cDO3zz6jtMbAmXTT8XCoRE,2780
+pyqbit-0.1.0.dist-info/LICENSE,sha256=z_Jn3BhWLEGVN4HaL0R7JgjUeyGlhL0UJ0NXP8k3gqA,1078
+pyqbit-0.1.0.dist-info/METADATA,sha256=NVFK_I_AZrwBGM75diw0Fmsqns4-xAgFIsd6dxUGNX0,3898
+pyqbit-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pyqbit-0.1.0.dist-info/top_level.txt,sha256=uOAbec6EXWbkbDq98NXUpTZfYs-7d-BM943WGSvTY-8,5
+pyqbit-0.1.0.dist-info/RECORD,,
