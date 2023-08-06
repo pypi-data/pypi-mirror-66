@@ -1,0 +1,3 @@
+[gino.extensions]
+sanic=gino_sanic
+
