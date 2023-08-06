@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: pyobo
+Version: 0.1.3
+Summary: Handling and writing OBO
+Home-page: https://github.com/pyobo/pyobo
+Author: Charles Tapley Hoyt
+Author-email: cthoyt@gmail.com
+Maintainer: Charles Tapley Hoyt
+Maintainer-email: cthoyt@gmail.com
+License: MIT
+Download-URL: https://github.com/pyobo/pyobo/releases
+Project-URL: Bug Tracker, https://github.com/pyobo/pyobo/issues
+Project-URL: Source Code, https://github.com/pyobo/pyobo
+Description: PyOBO
+        =====
+        A programmatic interface for generating and handling OBO in Python.
+        
+        Installation
+        ------------------------------------------------------------
+        PyOBO can be installed from `PyPI <https://pypi.org/project/pyobo/>`_ with:
+        
+        .. code-block:: sh
+        
+            $ pip install pyobo
+        
+        
+        It can be installed in development mode from `GitHub <https://github.com/pyobo/pyobo>`_
+        with:
+        
+        .. code-block:: sh
+        
+            $ git clone https://github.com/pyobo/pyobo.git
+            $ cd pyobo
+            $ pip install -e .
+        
+Keywords: Open Biomedical Ontologies,OBO
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Requires-Python: >=3.7
+Provides-Extra: docs
