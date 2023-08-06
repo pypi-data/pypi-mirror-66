@@ -1,0 +1,9 @@
+README.rst
+setup.py
+authclient/__init__.py
+authclient/client.py
+authclient.egg-info/PKG-INFO
+authclient.egg-info/SOURCES.txt
+authclient.egg-info/dependency_links.txt
+authclient.egg-info/requires.txt
+authclient.egg-info/top_level.txt

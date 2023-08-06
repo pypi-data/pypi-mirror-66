@@ -1,0 +1,25 @@
+Metadata-Version: 1.0
+Name: authclient
+Version: 1.0
+Summary: Simple authentication client
+Home-page: https://git.yurzs.dev/yurzs/authclient
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: Simple authentication client
+        ============================
+        
+        Simple authentication client
+        
+        Usage
+        -----
+        
+        .. code-block:: python
+        
+            from authclient import AuthClient
+        
+            async def main(username, password):
+                cli = AuthClient("service", "127.0.0.1", 443)
+                await cli.authenticate(username, password)
+        
+Platform: UNKNOWN
