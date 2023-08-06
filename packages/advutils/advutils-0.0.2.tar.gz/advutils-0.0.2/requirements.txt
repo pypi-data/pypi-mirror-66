@@ -1,0 +1,6 @@
+# Python 2.7 and 3.5 compatibility
+appdirs==1.4.2
+future>=0.16.0
+packaging>=16.8
+pyparsing==2.1.10
+six>=1.10.0

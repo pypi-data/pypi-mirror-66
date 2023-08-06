@@ -1,0 +1,9 @@
+# Include supporting files
+include LICENSE.txt README.rst requirements.txt package_helper.py
+
+# Include the examples files
+recursive-include examples *.py
+
+# Include the tests files
+recursive-exclude tests * # exclude all test data for better control
+#recursive-include tests *.py # only scripts
