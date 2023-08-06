@@ -1,0 +1,13 @@
+techind/__init__.py,sha256=aomoGU9zngO_wAyKBujg0I3y4RLHqOLzqEwS42ezRfw,1167
+techind/doubleExponentialMovingAverage.py,sha256=8GvIHDlyKXDzE6lOmeVmjy0Rn4kcflmuLpwALrjA9_8,1768
+techind/exponentialMovingAverage.py,sha256=ltFjaF_dMJvd_jJ1uV5F4nliBW7DImS4eLKjEPabJwM,1516
+techind/kaufmanAdaptiveMovingAverage.py,sha256=Z5nris4fQIPPcmQe0MSoahM0fbgBKFFS6Q4sNHw-MYI,2569
+techind/simpleMovingAverage.py,sha256=ONfqSiMryExCOuwgpDzyCk1pFmgSdzqqtiyxKYvNMC4,1124
+techind/triangularMovingAverage.py,sha256=jgLuR7lVAkZ0Y4LZNpc1PNeLidd9-OEqahjv50Tnnu8,1326
+techind/trippleExponentialMovingAverage.py,sha256=5Be8ml-5SZg_o8KlPlXebkRSNh8CJUP1Inuuths2BW0,2002
+techind/weightedMovingAverage.py,sha256=4qHgsoqU_svN54CH8r9t4fI7dcZPg9lAvW9WRVWJJ8Q,1295
+techind-0.0.6.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+techind-0.0.6.dist-info/METADATA,sha256=NY0EUw2l7VPyjJSoBXmPzXM_Pnk0RmTiMc3_jULcxGw,553
+techind-0.0.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+techind-0.0.6.dist-info/top_level.txt,sha256=tR92oIbHxaITFSG1kMsZAJ9lJrvj4jrQwt_OfWHxUVs,8
+techind-0.0.6.dist-info/RECORD,,
