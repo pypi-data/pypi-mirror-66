@@ -1,0 +1,8 @@
+README.md
+setup.py
+revert/__init__.py
+revert.egg-info/PKG-INFO
+revert.egg-info/SOURCES.txt
+revert.egg-info/dependency_links.txt
+revert.egg-info/not-zip-safe
+revert.egg-info/top_level.txt
