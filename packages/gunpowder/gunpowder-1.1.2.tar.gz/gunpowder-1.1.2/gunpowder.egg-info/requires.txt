@@ -1,0 +1,16 @@
+numpy
+scipy
+h5py
+scikit-image
+requests
+augment-nd
+
+[full]
+tensorflow<2
+torch
+
+[pytorch]
+torch
+
+[tensorflow]
+tensorflow<2
