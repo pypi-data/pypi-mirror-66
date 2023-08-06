@@ -1,0 +1,10 @@
+README.md
+setup.py
+ainlp/__init__.py
+ainlp/collector.py
+ainlp/text_utils.py
+ainlp.egg-info/PKG-INFO
+ainlp.egg-info/SOURCES.txt
+ainlp.egg-info/dependency_links.txt
+ainlp.egg-info/requires.txt
+ainlp.egg-info/top_level.txt
