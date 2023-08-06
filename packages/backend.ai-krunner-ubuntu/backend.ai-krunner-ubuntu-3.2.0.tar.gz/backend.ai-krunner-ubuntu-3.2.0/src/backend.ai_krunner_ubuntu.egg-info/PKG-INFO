@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: backend.ai-krunner-ubuntu
+Version: 3.2.0
+Summary: Backend.AI Kernel Runner for Ubuntu
+Home-page: https://backend.ai
+Author: Lablup Inc.
+Author-email: devops@lablup.com
+License: MIT
+Description: # backend.ai-krunner-ubuntu
+        Backend.AI Kernel Runner Package for Ubuntu-based Kernels
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: build
+Provides-Extra: test
+Provides-Extra: dev
+Provides-Extra: ci
