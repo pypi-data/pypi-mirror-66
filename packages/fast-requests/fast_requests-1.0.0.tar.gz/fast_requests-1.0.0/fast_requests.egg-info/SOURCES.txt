@@ -1,0 +1,8 @@
+setup.py
+fast_requests/__init__.py
+fast_requests/fast_requests_project.py
+fast_requests.egg-info/PKG-INFO
+fast_requests.egg-info/SOURCES.txt
+fast_requests.egg-info/dependency_links.txt
+fast_requests.egg-info/requires.txt
+fast_requests.egg-info/top_level.txt

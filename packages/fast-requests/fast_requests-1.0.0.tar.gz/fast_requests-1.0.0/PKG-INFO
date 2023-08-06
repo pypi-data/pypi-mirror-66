@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: fast_requests
+Version: 1.0.0
+Summary: 无与伦比的简单且强大的requests
+Home-page: https://github.com/jiangfubang/fast_requests
+Author: Jiang Fubang
+Author-email: luckybang@163.com
+License: MIT Licence
+Description: UNKNOWN
+Keywords: spider,requests
+Platform: all
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
