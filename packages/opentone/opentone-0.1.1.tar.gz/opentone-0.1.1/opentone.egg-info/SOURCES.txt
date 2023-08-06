@@ -1,0 +1,6 @@
+setup.py
+opentone/__init__.py
+opentone.egg-info/PKG-INFO
+opentone.egg-info/SOURCES.txt
+opentone.egg-info/dependency_links.txt
+opentone.egg-info/top_level.txt
