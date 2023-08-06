@@ -1,0 +1,15 @@
+{% load static %}
+<!-- templates/home.html -->
+<h2>Pagar la cantidad de ${{cantidad}}.00 MXN</h2>
+<form action="{% url 'urlPago' %}" method="post">
+  {% csrf_token %}
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="{{key}}"
+    data-amount="{{cantidad_final}}"
+    data-name="{{tituloPago}}"
+    data-description="{{descripcion}}"
+    data-currency="mxn"
+    data-image="{% static logo %}"
+    data-locale="auto">
+  </script>
+</form>
