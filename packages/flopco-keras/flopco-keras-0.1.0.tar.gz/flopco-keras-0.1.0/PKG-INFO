@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: flopco-keras
+Version: 0.1.0
+Summary: FLOPs and other statistics COunter for TF.keras neural networks
+Home-page: https://github.com/evgps/flopco-pytorch
+Author: Evgeny Ponomarev (based on Julia Gusak's work)
+Author-email: evgps@ya.ru
+License: MIT
+Download-URL: https://github.com/evgps/flopco-keras/archive/v0.1.0.tar.gz
+Description: UNKNOWN
+Keywords: tensorflow,keras,flops,macs,neural-networks,cnn
+Platform: UNKNOWN
