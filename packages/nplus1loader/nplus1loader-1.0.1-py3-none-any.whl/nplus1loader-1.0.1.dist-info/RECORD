@@ -1,0 +1,10 @@
+nplus1loader/__init__.py,sha256=dtcVwhxhVxLjPJ8FSyj8us7ayQfFGdLbslHS1IsBffw,8871
+nplus1loader/bulk_load.py,sha256=xyDHAoPr3DVeVyJzBAhBr_nRo7mFSUL3OZVWTBxGr2g,8578
+nplus1loader/exc.py,sha256=oHx_KBv9zc8dR5HI9EEgulkoj4w_fa179UZ4aGhNv64,441
+nplus1loader/loadopt.py,sha256=e1UNYmo5CBpMPOiJcOAl4pdWmXJgjGPX8wZ47CyJbhQ,5372
+nplus1loader/strategies.py,sha256=H1HnXz59guj12U8V1_xwFFPPpHMsDivD9CuXwrn8PPk,7034
+nplus1loader-1.0.1.dist-info/LICENSE,sha256=IjaRfrzZ8E9hJJFlCevJintTKd3w_CN6LSMv-ksMSM4,1341
+nplus1loader-1.0.1.dist-info/METADATA,sha256=pBt4cbpeH6a1eLnRia5UnDOanGffakIzxbF1RHo9u-M,9361
+nplus1loader-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+nplus1loader-1.0.1.dist-info/top_level.txt,sha256=cBAVGinAplwd0tlk-4Y8q551flK9297WRIUd5VOi9P4,13
+nplus1loader-1.0.1.dist-info/RECORD,,
