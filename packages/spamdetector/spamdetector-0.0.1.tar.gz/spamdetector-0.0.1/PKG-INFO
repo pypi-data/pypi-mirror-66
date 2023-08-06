@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: spamdetector
+Version: 0.0.1
+Summary: Spam Classifier/Detector ML Package
+Author: Rohit Kumar
+Author-email: rohit1998kg@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: joblib (>=0.14.1,<0.15.0)
+Requires-Dist: scikit-learn (>=0.22.2,<0.23.0)
