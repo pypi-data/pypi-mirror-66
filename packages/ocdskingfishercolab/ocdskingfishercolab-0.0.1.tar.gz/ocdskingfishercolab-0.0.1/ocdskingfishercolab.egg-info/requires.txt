@@ -1,0 +1,8 @@
+SQLAlchemy
+alembic
+psycopg2-binary
+gspread
+requests
+flattentool
+gspread-dataframe
+pydrive
