@@ -1,0 +1,14 @@
+KolejkaServer-0.1.202004200933-nspkg.pth,sha256=ymghxcR0SaoJPJNC5JQSPrO2foeCxLaTaJ0CvL2Q_H4,544
+KolejkaServer-0.1.202004200933.dist-info/DESCRIPTION.rst,sha256=sfi5juLuDbz8kK7MAlY-J5YAOId91eQ25liLJQDQjQ8,183
+KolejkaServer-0.1.202004200933.dist-info/METADATA,sha256=51gc5OqWWinGB1YTD9_Igk2syQhXo9XaWyX1_tNO0fE,510
+KolejkaServer-0.1.202004200933.dist-info/RECORD,,
+KolejkaServer-0.1.202004200933.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+KolejkaServer-0.1.202004200933.dist-info/entry_points.txt,sha256=8f22n6zxhZbK4umLAL8uNX2SzTeqULf46horJK2SEeo,56
+KolejkaServer-0.1.202004200933.dist-info/metadata.json,sha256=rKTSpHXsZDjX4qSyMdMd0meib8cwy5OHPt3GN9SMcAU,692
+KolejkaServer-0.1.202004200933.dist-info/namespace_packages.txt,sha256=JRltIMS23djVkt75McrNZpEyfqHwicCBrIZYwdn_g98,8
+KolejkaServer-0.1.202004200933.dist-info/top_level.txt,sha256=JRltIMS23djVkt75McrNZpEyfqHwicCBrIZYwdn_g98,8
+kolejka/server/__init__.py,sha256=XdD4gfFlByWsIYaOAy2nC5BDyUpnLvNtOonBdfYfYCA,297
+kolejka/server/response.py,sha256=nb01cMAZNpVkxrUau7pV64TVbfQwmwOMJ40J0n1LAkE,738
+kolejka/server/settings.py,sha256=PhRsHZKNiAhRVkDlx5wd24KO7wD9t8I8gXK95xuyeqQ,2615
+kolejka/server/urls.py,sha256=EUZbJh--rbACIPYP0M9NpluSSzPHw4e7OkBrYMTflxQ,767
+kolejka/server/wsgi.py,sha256=QMiOoISSveSGE9V3OyHFlJeUMIBPgQhRHiwBXpYlLLE,231
