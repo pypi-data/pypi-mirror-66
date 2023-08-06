@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: yaks
+Version: 0.3.0.post1
+Summary: Python API to access the YAKS service
+Home-page: https://github.com/atolab/yaks-python
+Author: ADLINK Advance Technology Office
+Author-email: UNKNOWN
+License: Apache 2.O or EPL 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: Eclipse Public License 2.0 (EPL-2.0)
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: hexdump
+Requires-Dist: mvar
+Requires-Dist: papero (==0.2.7)
+
+The YAKS project has been merged into the **zenoh** project.
+
+**Retrieve all the YAKS features an more in the [Eclipse zenoh](http://zenoh.io) project!**
+
+  - zenoh service: https://github.com/eclipse-zenoh/zenoh
+  - Python API: https://github.com/eclipse-zenoh/zenoh-python
+  - Java API: https://github.com/eclipse-zenoh/zenoh-java
+  - Go API: https://github.com/eclipse-zenoh/zenoh-go
+  - C API: https://github.com/eclipse-zenoh/zenoh-c
+
+
