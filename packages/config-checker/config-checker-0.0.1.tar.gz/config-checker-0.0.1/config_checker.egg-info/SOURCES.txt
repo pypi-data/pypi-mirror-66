@@ -1,0 +1,16 @@
+.coveragerc
+.gitignore
+.travis.yml
+LICENSE
+Makefile
+README.md
+__init__.py
+configchecker.py
+requirements.txt
+setup.py
+config_checker.egg-info/PKG-INFO
+config_checker.egg-info/SOURCES.txt
+config_checker.egg-info/dependency_links.txt
+config_checker.egg-info/top_level.txt
+tests/__init__.py
+tests/test_configChecker.py

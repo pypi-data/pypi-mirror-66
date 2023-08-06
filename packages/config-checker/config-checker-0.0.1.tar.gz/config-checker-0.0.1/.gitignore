@@ -1,0 +1,8 @@
+tags
+venv/
+__pycache__/
+htmlcov
+.coverage
+build/
+dist/
+*.egg-info/
