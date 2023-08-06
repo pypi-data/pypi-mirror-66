@@ -1,0 +1,3 @@
+[console_scripts]
+vsot=vsot.cli:main
+
