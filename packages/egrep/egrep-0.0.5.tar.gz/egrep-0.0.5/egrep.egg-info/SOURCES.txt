@@ -1,0 +1,9 @@
+README.md
+setup.py
+egrep/__init__.py
+egrep/egrep.py
+egrep/egrepErrors.py
+egrep.egg-info/PKG-INFO
+egrep.egg-info/SOURCES.txt
+egrep.egg-info/dependency_links.txt
+egrep.egg-info/top_level.txt
