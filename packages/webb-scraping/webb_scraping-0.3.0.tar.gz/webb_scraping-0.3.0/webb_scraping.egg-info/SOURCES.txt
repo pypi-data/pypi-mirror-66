@@ -1,0 +1,12 @@
+README.md
+setup.py
+./docs/__init__.py
+./webb_scraping/__init__.py
+./webb_scraping/calculations.py
+./webb_scraping/target.py
+webb_scraping.egg-info/PKG-INFO
+webb_scraping.egg-info/SOURCES.txt
+webb_scraping.egg-info/dependency_links.txt
+webb_scraping.egg-info/not-zip-safe
+webb_scraping.egg-info/requires.txt
+webb_scraping.egg-info/top_level.txt

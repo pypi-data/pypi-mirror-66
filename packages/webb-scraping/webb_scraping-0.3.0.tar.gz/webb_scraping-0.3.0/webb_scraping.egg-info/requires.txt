@@ -1,0 +1,9 @@
+tqdm
+astropy
+pygments>=2.4.1
+nbsphinx==0.5.1
+nbconvert<6,>=5.5.0
+numpy
+astroquery
+bs4
+requests
