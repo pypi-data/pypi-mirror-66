@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: simple-rest-call
+Version: 0.1a1.dev2
+Summary: Simple RESTful Call
+Home-page: https://github.com/DataBooster/PyWebApi
+Author: Abel Cheng
+Author-email: abelcys@gmail.com
+License: MIT
+Keywords: RESTful,Request,JSON,WebAPI,DateTime,Windows,Authentication
+Platform: any
+Requires-Python: >=3.6
+Requires-Dist: requests-negotiate-sspi
+Requires-Dist: jsonpickle
+Requires-Dist: python-dateutil
+
+
+simple_rest_call
+
+This module wraps Requests(https://requests.readthedocs.io/) into a simple call, 
+specifically for JSON-request and JSON-response with datetime support. By default, 
+Windows single sign-on authentication is used for convenience in enterprise environment.
+
+Homepage and documentation: https://github.com/DataBooster/PyWebApi
+Copyright (c) 2020 Abel Cheng
+License: MIT
+
+
