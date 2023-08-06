@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: japronto-extra
+Version: 0.1.3
+Summary: A bit of sugar for the [fastest python framework][japronto]
+Home-page: https://github.com/imbolc/japronto_extra
+Author: Imbolc
+Author-email: imbolc@imbolc.name
+License: ISC
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+Japronto Extra
+==============
+A bit of sugar for the [fastest python framework][japronto]
+
+    pip install orjson japronto-extra
+
+Api
+---
+
+```python
+@route("/")
+@jsonify
+def home(request):
+    return "You can pass an url explicitly"
+
+
+@route
+@jsonify
+def hello_world(request):
+    # if you omit it though, the function name will be used
+    return {"I'm served at": "/hello-world"}
+
+
+@route
+@jsonify
+def foo__bar(request):
+    # double underscores map onto slashes
+    return "I'm at /foo/bar"
+
+
+@route("/validation", "POST")
+@jsonify
+def basic_validation(request):
+    # required integer query argument
+    id = get_argument(request.query, "id", int)
+    # optional `datetime` json argument with a default fallback
+    at = get_argument(
+        request.json, "at", datetime.fromisoformat, default=datetime.now()
+    )
+    return {"id": id, "at": at}
+```
+
+Look at the working example in [expample.py](./example.py)
+
+[japronto]: https://github.com/squeaky-pl/japronto/
+
+
