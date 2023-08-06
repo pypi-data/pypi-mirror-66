@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: logger-json
+Version: 1.0.1
+Summary: Tool to display logs in JSON format
+Home-page: UNKNOWN
+Author: Gizem Kacmaz
+Author-email: gizemkmz@gmail.com
+License: MIT
+Description: #logger_adacore package
+        
+        A very basic Python package provides a subclass of logging.Formatter.
+        
+        Subclass JSONFormatter is capable to convert a string or an ordered dict
+        that passed to logger.info.
+        
+        The only possible JSON format is as following for this version of the package:
+        {
+            "asctime": "2020-04-26 20:26:38,471",
+            "levelname": "INFO",
+            "msg": "testing logging format"
+        }
+        
+Keywords: Json,Logger
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
