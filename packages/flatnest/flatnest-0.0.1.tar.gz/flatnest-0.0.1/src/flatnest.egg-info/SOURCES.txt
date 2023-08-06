@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/flatnest/__init__.py
+src/flatnest/flatnest.py
+src/flatnest.egg-info/PKG-INFO
+src/flatnest.egg-info/SOURCES.txt
+src/flatnest.egg-info/dependency_links.txt
+src/flatnest.egg-info/top_level.txt
