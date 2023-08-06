@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: ticker-to-searchable-terms
+Version: 0.1
+Summary: This is used to generate searchable terms for companies listed on NASDAQ NYSE. Includes
+Home-page: https://github.com/BecketTrotter/ticker_to_searchable_terms
+License: MIT
+Keywords: stock,ticker,ceo,executives,seo
+Author: Henry Becket Trotter
+Author-email: beckettrotter@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Project-URL: Repository, https://github.com/BecketTrotter/ticker_to_searchable_terms
+Description-Content-Type: text/plain
+
+This package is used to pull searchable terms from company ticker.
+
+company_obj = Company("AAPL")
+company_obj.terms
+
+
+print(
+
+
+
