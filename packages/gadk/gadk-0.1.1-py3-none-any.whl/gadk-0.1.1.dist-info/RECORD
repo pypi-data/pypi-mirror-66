@@ -1,0 +1,11 @@
+CHANGELOG.md,sha256=w7AB8wMnFXOczcHTeP7gzARKg88F4AQbzrSDYp2yiH4,550
+gadk/__init__.py,sha256=2yneyyDDYFZIVgWZgl44wNQHH3kA1qJlVnX-4oK3Wzo,49
+gadk/cli.py,sha256=ysuvbuBmrhI8GrWlA4tESSg06fXRk1S2ZMin4By34_4,3182
+gadk/constants.py,sha256=oBOXoH712xD-R_QUGqnFze0GtPp2va9Mmg6rr24Sz-k,134
+gadk/elements.py,sha256=0wORloqkUHAXAZX4XZyO4dz5esZPX680I2Wk5RA_MUs,5635
+gadk/utils.py,sha256=TvWeV1aHAPDkwwOsAziv8f-1bcpSmjTgJYw_TXdKglo,225
+gadk-0.1.1.dist-info/entry_points.txt,sha256=RmGLEEma-x3QPquEWx3eKI4_H-132hZ0F3OiqiRDIYg,37
+gadk-0.1.1.dist-info/LICENSE,sha256=3TIlo9DR7jgUL1IzR5RYZE9u8sRQ2uOMFzQlayMCA0U,1071
+gadk-0.1.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+gadk-0.1.1.dist-info/METADATA,sha256=M9PmkkStcPuVX-hRDaeZS-vkamh7VsY_DyvscfIRn5Y,2520
+gadk-0.1.1.dist-info/RECORD,,

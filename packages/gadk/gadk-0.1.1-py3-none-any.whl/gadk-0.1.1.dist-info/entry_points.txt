@@ -1,0 +1,3 @@
+[console_scripts]
+gadk=gadk.cli:cmd
+
