@@ -1,0 +1,81 @@
+{% extends "standingsrequests/base.html" %}
+{% load bootstrap %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block page_content %}    
+    <div id="div_request_entities">        
+        <br>
+        <br>
+        <img class="center-block" src="{% static 'standingsrequests/Spinner-1s-200px.gif' %}" alt="Spinner"/>
+        <br>
+    </div>
+    
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {% trans "Icon Legend" %}
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <tr>
+                        <td>
+                            <i class="fa fa-star fa-fw" title="{% trans 'In Organisation' %}" style="color:#042177;"></i>
+                        </td>
+                        <td>
+                            {% trans "Character is in this organisation." %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-exclamation-triangle fa-fw grayiconecolor" title="{% trans 'No Standing' %}"></i>
+                        </td>
+                        <td>
+                            {% trans "The character has no standings from this organisation towards it." %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-sliders fa-fw" title="{% trans 'Standing Pending' %}"></i>
+                        </td>
+                        <td>
+                            {% trans "The standing has been requested and is pending action by a Standings Manager." %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-sliders fa-fw" title="{% trans 'Actioned, pending API pull.' %}" style="color:#00ba32;"></i>
+                        </td>
+                        <td>
+                            {% trans "The standing has been actioned by a Standings Manager but is waiting for API verification." %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fa fa-reply-all fa-fw" title="{% trans 'Standing Revoked' %}" style="color:#e81341;"></i>
+                        </td>
+                        <td>
+                            {% trans "The standing has been revoked by a Standings Manager or automatically if you no longer meet the requirements permitting blue standings access." %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock page_content %}
+
+{% block extra_script %}
+    $(function() {
+        /* async load request_entities view into div or show HTTP errors if any */
+        $("#div_request_entities").load(
+            "{% url 'standingsrequests:request_entities' %}", 
+            function(responseTxt, statusTxt, xhr){                
+                if(statusTxt == "error"){
+                    $("#div_request_entities").html(
+                        '<p class="text-danger">{% trans "Failed to load content. Please reload this page to try again." %}</p>'
+                    );
+                }
+        });       
+    });
+{% endblock extra_script %}
