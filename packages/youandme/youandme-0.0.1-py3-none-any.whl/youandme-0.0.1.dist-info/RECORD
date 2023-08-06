@@ -1,0 +1,10 @@
+youandme/__init__.py,sha256=O7loGatLYMH--GY0TFKimub13oRmJuvpDH8_ZNDcPoc,140
+youandme/client.py,sha256=4cTU6Ya7MPqdnox26Q4g28bUVjwFdykldlSHBytjP1Y,1332
+youandme/commands.py,sha256=UJZz5waPKT7rb_mVVvF93Khum7JBO_BS9nbpRJdENmc,27
+youandme/server.py,sha256=RGLd0LCqYT_14oUYAIW5o9emEgNMmoo_qd0X_v7EGSY,1344
+youandme/tor.py,sha256=BMIC7YTLma4lkjjJSSZQwRJRC8EvjZI64qU3_f-km5A,355
+youandme-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+youandme-0.0.1.dist-info/METADATA,sha256=DpFoWGi2tV3vjIJY5XWdZjK2XpOoUr0Ng2jpVsPxzKk,1590
+youandme-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+youandme-0.0.1.dist-info/top_level.txt,sha256=ESlDqX2AyFgTc3DG1jn4t-4IW96RDTHdb6xztcRPCJQ,9
+youandme-0.0.1.dist-info/RECORD,,
