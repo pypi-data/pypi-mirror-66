@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: ras
+Version: 0.1
+Summary: Algo standard rethinkdb api wrapper
+Home-page: https://github.com/techagal/rdb-sample
+Author: Techa Gal
+Author-email: Techa.G@mail.com
+License: MIT
+Download-URL: https://github.com/techagal/rdb-sample/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: Algo,SS&C Algo,Algo RethinkDB,Algo RAS,RethinkDB
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
