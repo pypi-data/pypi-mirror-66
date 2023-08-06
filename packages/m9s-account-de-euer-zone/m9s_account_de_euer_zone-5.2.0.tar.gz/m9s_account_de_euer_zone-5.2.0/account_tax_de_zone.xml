@@ -1,0 +1,201 @@
+<?xml version='1.0'?>
+<!-- The COPYRIGHT file at the top level of this repository contains
+the full copyright notices and license terms. -->
+<tryton>
+  <data>
+    <record model="account.tax.zone" id="zone_inland">
+      <field name="name">Inland</field>
+    </record>
+    <record model="account.tax.zone" id="zone_eu">
+      <field name="name">EU</field>
+    </record>
+    <record model="account.tax.zone" id="zone_foreign">
+      <field name="name">Ausland</field>
+    </record>
+    <record model="account.tax.rule.template" id="sale_zone">
+      <field name="name">Verkauf</field>
+      <field name="kind">sale</field>
+      <field name="account" ref="account_de_euer.account_root"/>
+    </record>
+    <record model="account.tax.rule.template" id="purchase_zone">
+      <field name="name">Einkauf</field>
+      <field name="kind">purchase</field>
+      <field name="account" ref="account_de_euer.account_root"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="sale_zone_account_de_euer_ust___zone_inland_zone_inland">
+      <field name="comment">Kunde Inland</field>
+      <field name="rule" ref="sale_zone"/>
+      <field name="group" ref="account_de_euer.ust"/>
+      <field name="tax" ref="account_de_euer.ust_19"/>
+      <field name="from_zone" ref="zone_inland"/>
+      <field name="to_zone" ref="zone_inland"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="sale_zone_account_de_euer_ust_goods_company_zone_inland_zone_foreign">
+      <field name="comment">Kunde Ausland Unternehmen Dienstleistungen</field>
+      <field name="rule" ref="sale_zone"/>
+      <field name="group" ref="account_de_euer.ust"/>
+      <field name="tax" ref="account_de_euer.export"/>
+      <field name="type">goods</field>
+      <field name="legal_form">company</field>
+      <field name="from_zone" ref="zone_inland"/>
+      <field name="to_zone" ref="zone_foreign"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="sale_zone_account_de_euer_ust_service_company_zone_inland_zone_foreign">
+      <field name="comment">Kunde Ausland Unternehmen Waren</field>
+      <field name="rule" ref="sale_zone"/>
+      <field name="group" ref="account_de_euer.ust"/>
+      <field name="tax" ref="account_de_euer.not_taxable_service_third_country"/>
+      <field name="type">service</field>
+      <field name="legal_form">company</field>
+      <field name="from_zone" ref="zone_inland"/>
+      <field name="to_zone" ref="zone_foreign"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="sale_zone_account_de_euer_ust__person_zone_inland_zone_foreign">
+      <field name="comment">Kunde Ausland Privatperson</field>
+      <field name="rule" ref="sale_zone"/>
+      <field name="group" ref="account_de_euer.ust"/>
+      <field name="tax" ref="account_de_euer.export"/>
+      <field name="legal_form">person</field>
+      <field name="from_zone" ref="zone_inland"/>
+      <field name="to_zone" ref="zone_foreign"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="sale_zone_account_de_euer_ust_goods_company_zone_inland_zone_eu">
+      <field name="comment">Kunde EU Unternehmen (mit Ust-ID) Waren</field>
+      <field name="rule" ref="sale_zone"/>
+      <field name="group" ref="account_de_euer.ust"/>
+      <field name="tax" ref="account_de_euer.eu_sale"/>
+      <field name="type">goods</field>
+      <field name="legal_form">company</field>
+      <field name="from_zone" ref="zone_inland"/>
+      <field name="to_zone" ref="zone_eu"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="sale_zone_account_de_euer_ust_service_company_zone_inland_zone_eu">
+      <field name="comment">Kunde EU Unternehmen (mit Ust-ID) Dienstleistungen</field>
+      <field name="rule" ref="sale_zone"/>
+      <field name="group" ref="account_de_euer.ust"/>
+      <field name="tax" ref="account_de_euer.not_taxable_service_eu"/>
+      <field name="type">service</field>
+      <field name="legal_form">company</field>
+      <field name="from_zone" ref="zone_inland"/>
+      <field name="to_zone" ref="zone_eu"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="sale_zone_account_de_euer_ust__person_zone_inland_zone_eu">
+      <field name="comment">Kunde EU Privatperson (ohne USt-ID)</field>
+      <field name="rule" ref="sale_zone"/>
+      <field name="group" ref="account_de_euer.ust"/>
+      <field name="tax" ref="account_de_euer.ust_19"/>
+      <field name="legal_form">person</field>
+      <field name="from_zone" ref="zone_inland"/>
+      <field name="to_zone" ref="zone_eu"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="purchase_zone_account_de_euer_vst__company_zone_inland_zone_inland">
+      <field name="comment">Lieferant Inland Unternehmen</field>
+      <field name="rule" ref="purchase_zone"/>
+      <field name="group" ref="account_de_euer.vst"/>
+      <field name="tax" ref="account_de_euer.vst_19"/>
+      <field name="legal_form">company</field>
+      <field name="from_zone" ref="zone_inland"/>
+      <field name="to_zone" ref="zone_inland"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="purchase_zone_account_de_euer_vst__person_zone_inland_zone_inland">
+      <field name="comment">Lieferant Inland Privatperson</field>
+      <field name="rule" ref="purchase_zone"/>
+      <field name="group" ref="account_de_euer.vst"/>
+      <field name="legal_form">person</field>
+      <field name="from_zone" ref="zone_inland"/>
+      <field name="to_zone" ref="zone_inland"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="purchase_zone_account_de_euer_vst_goods__zone_foreign_zone_inland">
+      <field name="comment">Lieferant Ausland Waren</field>
+      <field name="rule" ref="purchase_zone"/>
+      <field name="group" ref="account_de_euer.vst"/>
+      <field name="tax" ref="account_de_euer.import_19"/>
+      <field name="type">goods</field>
+      <field name="from_zone" ref="zone_foreign"/>
+      <field name="to_zone" ref="zone_inland"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="purchase_zone_account_de_euer_vst_service__zone_foreign_zone_inland">
+      <field name="comment">Lieferant Ausland Dienstleistungen</field>
+      <field name="rule" ref="purchase_zone"/>
+      <field name="group" ref="account_de_euer.vst"/>
+      <field name="tax" ref="account_de_euer.ust_19_service_received"/>
+      <field name="type">service</field>
+      <field name="from_zone" ref="zone_foreign"/>
+      <field name="to_zone" ref="zone_inland"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="purchase_zone_account_de_euer_vst_reduced_goods__zone_foreign_zone_inland">
+      <field name="comment">Lieferant Ausland Waren ermäßigter Steuersatz</field>
+      <field name="rule" ref="purchase_zone"/>
+      <field name="group" ref="account_de_euer.vst_reduced"/>
+      <field name="tax" ref="account_de_euer.import_7"/>
+      <field name="type">goods</field>
+      <field name="from_zone" ref="zone_foreign"/>
+      <field name="to_zone" ref="zone_inland"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="purchase_zone_account_de_euer_vst_reduced_service__zone_foreign_zone_inland">
+      <field name="comment">Lieferant Ausland Dienstleistungen ermäßigter Steuersatz</field>
+      <field name="rule" ref="purchase_zone"/>
+      <field name="group" ref="account_de_euer.vst_reduced"/>
+      <field name="tax" ref="account_de_euer.ust_7_service_received"/>
+      <field name="type">service</field>
+      <field name="from_zone" ref="zone_foreign"/>
+      <field name="to_zone" ref="zone_inland"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="purchase_zone_account_de_euer_vst_goods_company_zone_eu_zone_inland">
+      <field name="comment">Lieferant EU Unternehmen (mit Ust-ID) Waren</field>
+      <field name="rule" ref="purchase_zone"/>
+      <field name="group" ref="account_de_euer.vst"/>
+      <field name="tax" ref="account_de_euer.eu_19_purchase"/>
+      <field name="type">goods</field>
+      <field name="legal_form">company</field>
+      <field name="from_zone" ref="zone_eu"/>
+      <field name="to_zone" ref="zone_inland"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="purchase_zone_account_de_euer_vst_service_company_zone_eu_zone_inland">
+      <field name="comment">Lieferant EU Unternehmen (mit Ust-ID) Dienstleistungen</field>
+      <field name="rule" ref="purchase_zone"/>
+      <field name="group" ref="account_de_euer.vst"/>
+      <field name="tax" ref="account_de_euer.eu_19_service_received"/>
+      <field name="type">service</field>
+      <field name="legal_form">company</field>
+      <field name="from_zone" ref="zone_eu"/>
+      <field name="to_zone" ref="zone_inland"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="purchase_zone_account_de_euer_vst_reduced_goods_company_zone_eu_zone_inland">
+      <field name="comment">Lieferant EU Unternehmen (mit Ust-ID) Waren ermäßigter Steuersatz</field>
+      <field name="rule" ref="purchase_zone"/>
+      <field name="group" ref="account_de_euer.vst_reduced"/>
+      <field name="tax" ref="account_de_euer.eu_7_purchase"/>
+      <field name="type">goods</field>
+      <field name="legal_form">company</field>
+      <field name="from_zone" ref="zone_eu"/>
+      <field name="to_zone" ref="zone_inland"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="purchase_zone_account_de_euer_vst_reduced_service_company_zone_eu_zone_inland">
+      <field name="comment">Lieferant EU Unternehmen (mit Ust-ID) Dienstleistungen ermäßigter Steuersatz</field>
+      <field name="rule" ref="purchase_zone"/>
+      <field name="group" ref="account_de_euer.vst_reduced"/>
+      <field name="tax" ref="account_de_euer.eu_7_service_received"/>
+      <field name="type">service</field>
+      <field name="legal_form">company</field>
+      <field name="from_zone" ref="zone_eu"/>
+      <field name="to_zone" ref="zone_inland"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="purchase_zone_account_de_euer_vst__person_zone_eu_zone_inland">
+      <field name="comment">Lieferant EU (ohne Ust-ID)</field>
+      <field name="rule" ref="purchase_zone"/>
+      <field name="group" ref="account_de_euer.vst"/>
+      <field name="legal_form">person</field>
+      <field name="from_zone" ref="zone_eu"/>
+      <field name="to_zone" ref="zone_inland"/>
+    </record>
+    <record model="account.tax.rule.line.template" id="purchase_zone_account_de_euer_vst_reduced__person_zone_eu_zone_inland">
+      <field name="comment">Lieferant EU (ohne Ust-ID) ermäßigter Steuersatz</field>
+      <field name="rule" ref="purchase_zone"/>
+      <field name="group" ref="account_de_euer.vst_reduced"/>
+      <field name="legal_form">person</field>
+      <field name="from_zone" ref="zone_eu"/>
+      <field name="to_zone" ref="zone_inland"/>
+    </record>
+  </data>
+</tryton>
