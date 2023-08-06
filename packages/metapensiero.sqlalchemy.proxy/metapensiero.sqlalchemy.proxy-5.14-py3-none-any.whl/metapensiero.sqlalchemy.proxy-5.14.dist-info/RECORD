@@ -1,0 +1,17 @@
+metapensiero.sqlalchemy.proxy-5.14-nspkg.pth,sha256=fYGdz7_9s4MoO33pQnRipb3DsG8gClmAOXbmz_1O_wU,1824
+metapensiero/sqlalchemy/proxy/__init__.py,sha256=6Ut-tpJpw8JJ0SXBuyKEfAWtyIqN5pRN4o9nbr2p05Y,680
+metapensiero/sqlalchemy/proxy/asyncio.py,sha256=Anaij2SEwzn1syGqgDr2zVa2zbod_3dkjg5OaYcIzEI,3639
+metapensiero/sqlalchemy/proxy/base.py,sha256=bWGiUBR0vAX1muWnBEDr2kDapUimcJSAhUcSncAo24I,19869
+metapensiero/sqlalchemy/proxy/core.py,sha256=5puwwmpxvpdNk0at_yXziml3zBfdZPYl-BmvA3ahkE8,6053
+metapensiero/sqlalchemy/proxy/filters.py,sha256=uB8bJs59L-FejGk-pTsRBWYPloi28rcKBIfIOyzxYeM,14095
+metapensiero/sqlalchemy/proxy/json.py,sha256=0Iz1sDyaCkyJA0lUvWoXmUrlbzKW9qwU7iNJcnqcy2s,2083
+metapensiero/sqlalchemy/proxy/orm.py,sha256=1TRudv2EbLesIlSjGr74H0dYjdnZXXqS4CipF11sA1U,5347
+metapensiero/sqlalchemy/proxy/pyramid.py,sha256=d0KXkfKwXkjqeI7twQAv8E0tEu1zC3PLP3DT-EGHOWY,10984
+metapensiero/sqlalchemy/proxy/sorters.py,sha256=F65DC9jMQS6NmLB-sWAwdJ2jk6VlGK-w6dBRVy3xtaE,6839
+metapensiero/sqlalchemy/proxy/types.py,sha256=zAEyqky9hhWrdo9In9mWVnI_6LuJY39u5TLiO18JGeg,4845
+metapensiero/sqlalchemy/proxy/utils.py,sha256=t06vXSQIEnFz82LOtFhMDs-mULXr9qP0Vz9vtPnidG8,7055
+metapensiero.sqlalchemy.proxy-5.14.dist-info/METADATA,sha256=gnKVZsmTb7KS0PX1nqbMkjMJ-DT083QULXW0-qzjA_Q,7970
+metapensiero.sqlalchemy.proxy-5.14.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+metapensiero.sqlalchemy.proxy-5.14.dist-info/namespace_packages.txt,sha256=PaeN_Nv_M_BqSib_5r6zsnylXAK6Lwrcwhgj-TOYg4E,37
+metapensiero.sqlalchemy.proxy-5.14.dist-info/top_level.txt,sha256=4jVdcqy_odGhq2ck_HCghaZ9aPqWIKNmDl9X-EwljYk,13
+metapensiero.sqlalchemy.proxy-5.14.dist-info/RECORD,,
