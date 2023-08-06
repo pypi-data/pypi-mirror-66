@@ -1,0 +1,10 @@
+setup.py
+yaz_it.egg-info/PKG-INFO
+yaz_it.egg-info/SOURCES.txt
+yaz_it.egg-info/dependency_links.txt
+yaz_it.egg-info/entry_points.txt
+yaz_it.egg-info/requires.txt
+yaz_it.egg-info/top_level.txt
+yazit/__init__.py
+yazit/unyazit.py
+yazit/yazit.py
