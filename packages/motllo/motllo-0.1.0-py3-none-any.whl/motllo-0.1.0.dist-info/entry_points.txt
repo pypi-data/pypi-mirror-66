@@ -1,0 +1,3 @@
+[console_scripts]
+motllo=motllo.main:cli
+
