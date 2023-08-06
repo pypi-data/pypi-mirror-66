@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: picosvg
+Version: 0.3.3
+Summary: Exploratory utility for svg simplification, meant for use playing with COLR fonts
+Home-page: UNKNOWN
+Author: Rod S
+Author-email: rsheeter@google.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: lxml (>=4.0)
+Requires-Dist: skia-pathops (>=0.3)
+
+UNKNOWN
+
+
