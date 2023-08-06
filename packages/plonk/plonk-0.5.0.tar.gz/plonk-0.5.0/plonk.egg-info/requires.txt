@@ -1,0 +1,8 @@
+h5py
+matplotlib
+numba
+numpy
+pandas
+pint>=0.10.1
+scikit-image>=0.16
+scipy
