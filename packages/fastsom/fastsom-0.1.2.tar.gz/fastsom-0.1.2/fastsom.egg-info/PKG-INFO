@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: fastsom
+Version: 0.1.2
+Summary: A PyTorch and Fastai based implementation of Self-Organizing Maps
+Home-page: https://github.com/kireygroup/fastsom
+Author: Riccardo Sayn
+Author-email: riccardo.sayn@kireygroup.com
+License: MIT
+Download-URL: https://github.com/kireygroup/fastsom/archive/v0.1.2.tar.gz
+Description: UNKNOWN
+Keywords: self-organizing-map,fastai,pytorch,python
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
