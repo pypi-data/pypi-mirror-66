@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: django-gsheets
+Version: 0.0.1
+Summary: Django app providing two-way sync from Google Sheets to Django models
+Home-page: https://github.com/MeanPug/django-gsheets
+Author: Bobby Steinbach
+Author-email: developers@meanpug.com
+License: UNKNOWN
+Keywords: django google-sheets spreadsheets
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth
+Requires-Dist: google-auth-httplib2
+Requires-Dist: google-auth-oauthlib
+
+# django-gsheets
+Django app for keeping models and google sheets synced
+
+
