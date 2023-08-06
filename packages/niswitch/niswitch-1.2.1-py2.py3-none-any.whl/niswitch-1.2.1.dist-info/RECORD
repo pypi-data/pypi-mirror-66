@@ -1,0 +1,15 @@
+niswitch/VERSION,sha256=_xwzi-Ul4OXs426oU1FJZW_MBtrRm77EAaqlQgvP36M,7
+niswitch/__init__.py,sha256=gZXXSVQxYraBL9gvPK6fgWdRh9eo7a-04ZtJ52Xevt0,2981
+niswitch/_attributes.py,sha256=aCoAlC9lnjxLBrviogbX2eg0xzeN2ldJApvjKVdK7Ww,3517
+niswitch/_converters.py,sha256=ib01fGEb1HqzSUSzfzydgSAPjWSRXnZjX4qsi76ipfg,24042
+niswitch/_library.py,sha256=6Md76qEhstCClJP4jF4Klg6miNweYVOiaw2RG3izyvk,23884
+niswitch/_library_singleton.py,sha256=kAt1Ffml4lt60Gti6sV-ewXHdTrYhURHzz1DvX9bmI4,1623
+niswitch/_visatype.py,sha256=6dbb_0reR_MGfbn37oi4H6xB23UjJxUWSZpLaHjNjP4,659
+niswitch/enums.py,sha256=rNNxNDMr2f-gdXUpPvEWcLuIoRimQ1P5i_nHgg4TgEE,13707
+niswitch/errors.py,sha256=UPYz4nw0iRUNj91d9IlDUfjf6QzbiVuXmh5HK3aCV4w,3191
+niswitch/session.py,sha256=T-JkLPU-w4497Y376YsQG9qGQitfXYB6YvVTOeNVBoo,141938
+niswitch-1.2.1.dist-info/METADATA,sha256=8ecJL-JR-ia7wl2mGco9hykoDw559WyRtIbKe5HoTfE,8634
+niswitch-1.2.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+niswitch-1.2.1.dist-info/top_level.txt,sha256=eurSmFz6g7GUpGQj42Sj6Ektwbm6gTMxGRXcqqeKhcU,9
+niswitch-1.2.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+niswitch-1.2.1.dist-info/RECORD,,
