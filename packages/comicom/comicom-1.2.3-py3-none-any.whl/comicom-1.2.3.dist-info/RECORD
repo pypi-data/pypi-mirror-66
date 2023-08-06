@@ -1,0 +1,15 @@
+comiccompiler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+comiccompiler/arguments.py,sha256=t4dfM20HCm-Ml6u2rRz9t9AKzRg_lXbAaeAJB1DJyJs,8423
+comiccompiler/comgui.py,sha256=exPLFifkOzxgSB4YuFeUC56lsWJksfpNecZpS0x0bt8,24057
+comiccompiler/compiler.py,sha256=cwBoGfMrnFImCNmPnYY4qyHZ5-5rdoUvIlr3nvrjcbY,17554
+comiccompiler/entities.py,sha256=A9u2eS5PziPBq84wNLeqglmmYFrcgFzQpSe3CoXPjx0,1372
+comiccompiler/imgmag.py,sha256=n0AShWZHOGzLFhEXFLqfAHZu0LsTXKkrtH0U1zj5g7o,10240
+comiccompiler/logger.py,sha256=XfJt1vR1Kb6kH_sRndZKSEAlifJr1ZtGov0f8mj1Ies,1049
+comiccompiler/profiles.py,sha256=5Smn-H26d8llTc0c41TstSsUR03GLwfEyJaR7AfRNW4,2175
+comicom-1.2.3.data/scripts/comgui-launcher.py,sha256=lksiMzZMrSD4jgADXSHfjHRcYMtj1N97GV_xShb_yaI,307
+comicom-1.2.3.data/scripts/comicom.py,sha256=7uyI0-uLrw0iIUOtk-az8fEcuLYBgKDoSDx0svEfpr4,446
+comicom-1.2.3.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+comicom-1.2.3.dist-info/METADATA,sha256=uuFI88cNzpXUmLdYBvRcXj1r8nJUEH10P104tNYuk90,1004
+comicom-1.2.3.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+comicom-1.2.3.dist-info/top_level.txt,sha256=b-esfTrGy-WA3f1fdIDmsoYeS3ewYzor-AGw8bnNdmY,14
+comicom-1.2.3.dist-info/RECORD,,
