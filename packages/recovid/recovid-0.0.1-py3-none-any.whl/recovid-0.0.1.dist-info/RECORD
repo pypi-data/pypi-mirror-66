@@ -1,0 +1,10 @@
+recovid/__init__.py,sha256=xeX5AiHbxnGkVy-NAOEH173rToKRtfKPFR1ujsWGiRg,610
+recovid/data/__init__.py,sha256=F1OY3PVt1dkqcDZ7svigiyH_v_8F5iWFE7wgytKl-tg,42
+recovid/data/paper.py,sha256=PclcDVecd8LqEjy9_Y-JqacstQ7kJlv8RB3trYUOCgM,1884
+recovid/utils/__init__.py,sha256=-z_XmTQkmJrk46BQiWT9YkP1D4HdNoIzegN9n5Y0ydE,42
+recovid/utils/utils.py,sha256=TlU8NT9sb0bKxi_S05JcCrofzBc-d9_AlLxFDxiwnIA,542
+recovid-0.0.1.dist-info/LICENSE,sha256=ECR7P8M5jc66q4qEzF1EEqh5svrYlzhWWQXLGv5gqLo,1068
+recovid-0.0.1.dist-info/METADATA,sha256=AmlEL9cTCwG3kLMHjqcP5A-j9_-CcyZFUpg9_j2erpw,534
+recovid-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+recovid-0.0.1.dist-info/top_level.txt,sha256=lvtr-mP6fheYxR0c21epXBG8ozP6s4jSW-Uo258K5RA,8
+recovid-0.0.1.dist-info/RECORD,,
