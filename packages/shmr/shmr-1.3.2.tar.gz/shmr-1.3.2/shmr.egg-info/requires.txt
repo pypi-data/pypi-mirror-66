@@ -1,0 +1,5 @@
+orjson
+tqdm
+docstring-parser>=0.6
+fastnumbers
+cityhash
