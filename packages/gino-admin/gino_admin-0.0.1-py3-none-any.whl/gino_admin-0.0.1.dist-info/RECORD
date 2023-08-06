@@ -1,0 +1,14 @@
+gino_admin/__init__.py,sha256=-iNlo4CST5lGTd0QYU78lg6zUcE2Tc2ZniF2k-r-MlE,45
+gino_admin/auth.py,sha256=rG8SfrivYhOQ7cjLJ2kwL4uJLyi7KPGFtAa_q7pCalI,907
+gino_admin/routes.py,sha256=tYaCkjRfiaMbTf3F8csQAKA05Gm4GQgnGko6YcD8SpM,6962
+gino_admin/templates/add_form.html,sha256=QfrMS8dsTTHuiQUCnZQsXOxOeftGlikKvMIKsBX2rb0,886
+gino_admin/templates/app.html,sha256=JPEek1GbJgg-zsOCZFtLCg5RMYfM59FkeAeQN16AjMg,1764
+gino_admin/templates/base.html,sha256=Izw-U2tCh0uaZ0939mCBfT_v-qwbbijZ23ihzqCi9R8,265
+gino_admin/templates/header.html,sha256=EC_jdllV8bij3T0BmopodvX3bwBGNlUO65NUKEE3G9w,599
+gino_admin/templates/index.html,sha256=sxfzdF4KPKz2UFWcDgk4MmguLVWMGZmDE9UTfjCQHkg,1091
+gino_admin/templates/login.html,sha256=XrxTrm2lGEA950ZT6D1sEK56aRNoLvyT4ETDJYZ-hR4,736
+gino_admin/templates/model_view.html,sha256=119LG3kvUoT2UQlTcSl8acjLOP-k_144qZMe35H76J8,2435
+gino_admin-0.0.1.dist-info/LICENSE,sha256=MtAMaSqlnLvsEIWq18X4sKCIHef_Ma1TkmGAy3Pn5z0,1071
+gino_admin-0.0.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+gino_admin-0.0.1.dist-info/METADATA,sha256=qMI6olKpVo1Okcv8lLMjz85EKL3LjmnL5uMLGP7VanA,1420
+gino_admin-0.0.1.dist-info/RECORD,,
