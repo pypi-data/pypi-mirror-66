@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: elasticmagic-qf-attrs
+Version: 0.1.1
+Summary: 
+Home-page: https://github.com/anti-social/elasticmagic-qf-attrs
+License: Apache-2.0
+Author: Alexander Koval
+Author-email: kovalidis@gmail.com
+Maintainer: Alexander Koval
+Maintainer-email: kovalidis@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: elasticmagic (>=0.1.0-alpha.12,<0.2.0)
+Project-URL: Repository, https://github.com/anti-social/elasticmagic-qf-attrs
+Description-Content-Type: text/x-rst
+
+
