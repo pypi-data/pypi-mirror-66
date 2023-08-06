@@ -1,0 +1,11 @@
+coronatank/__init__.py,sha256=Qy5cs6WmSzgR5xq65V3_mbjLoffKrikg3leJlrGCNEE,155
+coronatank/client.py,sha256=hvrpdkFWQb2ds2T419gwFuuloN85y9uQwA-6YWLZJBo,3697
+coronatank/command.py,sha256=v9c6OQxcAjNf2D-0XZAMaEAgbyYrmQvdyuMZDnEUxqs,2582
+coronatank/config.py,sha256=1m2YKCBGCot0AjJIMvFi7Bfvdjmi9ZPz1mxVV4apjHI,2227
+coronatank/game.py,sha256=GQ3z6ZZH555YsUubL2ajT7L1COEel01aDhYbrCl3vhw,3325
+coronatank/resources.py,sha256=8Hw71PVlLNEEbN8Rzo-EIk-zegMjdFimBhbEFC900yc,13684
+coronatank/server.py,sha256=tG-Zn1-so40WQ3XG_htV-Y0Oa2fwFBw71RCf0uyTzPk,3554
+coronatank-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+coronatank-0.1.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+coronatank-0.1.0.dist-info/METADATA,sha256=rgHYIr7CpwhkRM1pqUgZjilbZADrK2HR2sQdTO4hHkc,321
+coronatank-0.1.0.dist-info/RECORD,,
