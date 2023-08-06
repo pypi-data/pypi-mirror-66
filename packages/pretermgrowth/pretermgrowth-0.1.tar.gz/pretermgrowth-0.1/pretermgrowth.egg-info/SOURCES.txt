@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+pretermgrowth/__init__.py
+pretermgrowth/fenton.py
+pretermgrowth.egg-info/PKG-INFO
+pretermgrowth.egg-info/SOURCES.txt
+pretermgrowth.egg-info/dependency_links.txt
+pretermgrowth.egg-info/top_level.txt
