@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: websnapshot
+Version: 0.1.5
+Summary: take snapshot of webpage
+Home-page: https://github.com/tz4678/websnapshot
+Author: Sergey M
+Author-email: tz4678@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.1.1,<8.0.0)
+Requires-Dist: pyppeteer (>=0.0.25,<0.0.26)
+Description-Content-Type: text/markdown
+
+# Take Snapshot of WebPage
+
+```bash
+# install
+$ pip install websnapshot
+
+# install in isolated environment
+$ pipx install websnapshot
+
+# full page snapshot
+$ echo "https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D0%BA%D0%B8" | websnapshot --full_page true
+
+# file with urls, each on a new line
+$ websnapshot -i urls.txt
+
+# help
+$ websnapshot --help
+```
+
