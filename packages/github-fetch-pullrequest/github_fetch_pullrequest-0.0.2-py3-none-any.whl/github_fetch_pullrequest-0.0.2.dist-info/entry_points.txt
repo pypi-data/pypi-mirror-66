@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        github-fetch-pullrequest=github_fetch_pullrequest.cmd:cmd
+    
