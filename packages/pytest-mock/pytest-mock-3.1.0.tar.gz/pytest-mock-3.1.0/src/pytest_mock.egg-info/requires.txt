@@ -1,0 +1,6 @@
+pytest>=2.7
+
+[dev]
+pre-commit
+tox
+pytest-asyncio
