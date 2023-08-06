@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: aiomultitask
+Version: 0.0.1.dev1
+Summary: aiomultitask
+Home-page: https://zeroguard.com
+Author: ZeroGuard
+Author-email: oss@zeroguard.com
+License: AGPL-3.0
+Project-URL: Source, https://github.com/zeroguard/aiomultitask
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp (==3.6.2)
+Requires-Dist: async-timeout (==3.0.1)
+Requires-Dist: attrs (==19.3.0)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: idna (==2.9)
+Requires-Dist: multidict (==4.7.5)
+Requires-Dist: yarl (==1.4.2)
+
+aiomultitask
+====================
+[![Travis CI Status](https://travis-ci.org/zeroguard/aiomultitask.svg?branch=master)](https://travis-ci.org/zeroguard/aiomultitask)
+[![Coverage Status](https://coveralls.io/repos/github/zeroguard/aiomultitask/badge.svg?branch=master)](https://coveralls.io/github/zeroguard/aiomultitask?branch=master)
+![PyPI Status](https://img.shields.io/pypi/status/aiomultitask)
+![PyPI Version](https://img.shields.io/pypi/v/aiomultitask)
+![Repository License](https://img.shields.io/github/license/zeroguard/aiomultitask)
+![PyPI Python Version](https://img.shields.io/pypi/pyversions/aiomultitask)
+
+
