@@ -1,0 +1,1 @@
+from proteinko.protein_dist import model_distribution, encode_sequence
