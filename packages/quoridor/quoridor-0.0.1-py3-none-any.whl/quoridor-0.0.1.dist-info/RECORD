@@ -1,0 +1,17 @@
+quoridor/client/__main__.py,sha256=8-Eoz9HHYFDPKdaXr0wozKfjPMPa3cYLJD493tsfwp0,3553
+quoridor/client/sounds/winning_sound.wav,sha256=QiTAqrXek8NWXH-h6imKxxqZHhQf0BnsXivscwEVGTw,626766
+quoridor/client/src/colors.py,sha256=T3fLI8W27FtzPhhE-a54deJhxeGKIECPOHBeKuTdnJk,299
+quoridor/client/src/coord.py,sha256=_rPcd3hBlpFMuIsTZA4NidXm6XQ6NnhEssjZdVu1POI,4921
+quoridor/client/src/network.py,sha256=GsX5GkdeQ0YcbIPsGVxYsOjIoQeMF5M2MnoFBXWfrIA,743
+quoridor/client/src/pathfinder.py,sha256=rFhvCM80HYlHb72d0d6_5VUusBNZsy4Z_aYGupIOpD4,4435
+quoridor/client/src/player.py,sha256=SDz_jDOoz6Zs8Ax6N-SE_0sar2EObLAA6w_QqeScIu8,8202
+quoridor/client/src/wall.py,sha256=RHhjjDdcKDVCs3Hc_2xS1598e_jUR4jOz9EgpxOLf8I,4694
+quoridor/client/src/widgets.py,sha256=GK3Q5POGWMGpws6DnL7iEsC_St0cYG06Yk3r_oTD5CQ,1481
+quoridor/client/src/window.py,sha256=X5bdXmbEKqEPxXIdo5DvFdyYtuLD4U7gFvnj1hdLrFo,5156
+quoridor/server/__main__.py,sha256=z8ufcNfI57jzSTbXXBO0S9P3VzsJ0CLHsa8ZrRpbZ3I,2477
+quoridor/server/src/game.py,sha256=JBtqJKCUXURsc5CV1fYn1do5S9pDB43Axabm5Ga9_hA,1256
+quoridor-0.0.1.dist-info/LICENSE,sha256=vlN2BU3kwija59hcGfK4R-8j4ov02CnlRKqVVvWe0ak,1073
+quoridor-0.0.1.dist-info/METADATA,sha256=g-9F0oD9L3aw_P6D35qNqRPgulneWp1pgWwF6n6yXl0,1412
+quoridor-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+quoridor-0.0.1.dist-info/top_level.txt,sha256=kFNHd9T3Mvbunf7TKiiYHvMCbrIfpN2yNTkGpcZf7Ks,9
+quoridor-0.0.1.dist-info/RECORD,,
