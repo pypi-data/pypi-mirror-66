@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: owlmPy
+Version: 0.0.8
+Summary: A python package for the modeling and simulation of the propagation of electromagnetic waves in structured multilayers with magneto-optical activity using FDTD method
+Home-page: https://github.com/mojv/owlmPy
+Author: Oscar Munoz, Nivolas Avilan, Cesar Herreno
+Author-email: oscar.munozs@utadeo.edu.co
+License: UNKNOWN
+Description: 
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

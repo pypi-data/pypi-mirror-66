@@ -1,0 +1,14 @@
+README.md
+setup.py
+owlmPy/Fdtd1d.py
+owlmPy/Fdtd2d.py
+owlmPy/Fdtd3d.py
+owlmPy/__init__.py
+owlmPy/gyrotropic_materials.py
+owlmPy/nanodisks.py
+owlmPy/plot.py
+owlmPy/twobytwoMatrix.py
+owlmPy.egg-info/PKG-INFO
+owlmPy.egg-info/SOURCES.txt
+owlmPy.egg-info/dependency_links.txt
+owlmPy.egg-info/top_level.txt
