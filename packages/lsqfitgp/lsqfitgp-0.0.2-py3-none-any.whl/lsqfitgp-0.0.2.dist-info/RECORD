@@ -1,0 +1,14 @@
+lsqfitgp/_Deriv.py,sha256=gXndHv2ggCYUx9XlCMbISWQ6pJ1DKIm7Vw_sg0KqdtA,2856
+lsqfitgp/_GP.py,sha256=w7j4bnZ1K6u0-qcMuHNApbMgF1Sp2CBq2zw2Lq2ghnU,35043
+lsqfitgp/_Kernel.py,sha256=ZPIWrcUyngxmGFt9jKlr4edfUbbT4tg4A1JhaFkfiqM,18715
+lsqfitgp/__init__.py,sha256=0YcCajLZ1zQIUG4hU_sR3CV3GS9YkfQNch1yR45e1DQ,3598
+lsqfitgp/_array.py,sha256=ktg2yW-tMBQ7kp3Kea_WOasUjGl7BfkdbIwr72P-LSY,4558
+lsqfitgp/_fit.py,sha256=9k06Mc1l3gR1wq0ee9ZeeGH53PSKr8d5HXWU2ASpi18,2934
+lsqfitgp/_gvar_autograd.py,sha256=XZUDfU0znXmSbZ-om5qFgiP1R5wFlLd-1qG9B_Zxk-8,2406
+lsqfitgp/_kernels.py,sha256=mvfZeRHeW2KaVKWFrPP5AiagqA8JZDDx0HLhEomjv5I,10157
+lsqfitgp/_linalg.py,sha256=Y79rYW0BPv-jgJtIbTKC73z6X4XGEHBXqhbdmo32Mkk,14050
+lsqfitgp-0.0.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+lsqfitgp-0.0.2.dist-info/METADATA,sha256=U1m1Phxk9EuCp_KQJ5jpAU4XBeX3VZKlmE0drxZRfQE,1850
+lsqfitgp-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+lsqfitgp-0.0.2.dist-info/top_level.txt,sha256=WECZd-FEZauSWL-leGWxTB-tEcY9C6KjirkZgfbRLeQ,9
+lsqfitgp-0.0.2.dist-info/RECORD,,
