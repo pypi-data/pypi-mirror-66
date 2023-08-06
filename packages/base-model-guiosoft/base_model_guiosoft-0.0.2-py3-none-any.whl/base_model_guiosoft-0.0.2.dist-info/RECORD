@@ -1,0 +1,14 @@
+base_model/__init__.py,sha256=oQywI9JoiImIC9xvha0pvsftmNw7hZQ2qDbGr77g6P4,293
+base_model/attribute_validation.py,sha256=9E1EmtEmYoWtiULaZpqqgfB1o1LdujBOI1ZpfqIT5Go,10875
+base_model/base_model.py,sha256=1kfjW41L8FmozeQoZm4uPC8y654iWxyDPgamWFbPPg8,4721
+base_model/base_model_exception.py,sha256=BNlF6GcKYRKjk0hb5e6nT5x92x0CW6-Tiv-WtLTSREQ,46
+base_model/base_model_validation.py,sha256=Gw6s3WVvQyDQsVgIiMsKIGWc8MpOXxJ1MmrnFuYPvkk,4360
+base_model/json.py,sha256=nnwwnnEBqEvS0brQrTYN0JfjRxt3WZ-7FZAt8TLDf-I,298
+base_model/list_base_model.py,sha256=7wg6SuP1-gEefiAE0GDCgWybRqftRlz6epG-PNeWrNQ,2111
+base_model/not_found_attribute.py,sha256=4EhWIA9o5fEssmMUVF8d-R_aniu6UsmQqTAWFcuqFhc,110
+base_model/tools.py,sha256=R9TZkQZywMBun0G4Uduiph2ilzDiEA6aneUpSOeIvxs,635
+base_model_guiosoft-0.0.2.dist-info/METADATA,sha256=uWZF0jSanuFdmJZAcNx6MyBtQO8xvnGbcTXh3sR_iAA,1528
+base_model_guiosoft-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+base_model_guiosoft-0.0.2.dist-info/top_level.txt,sha256=2wA10MoQTvYrakLMOogwJpGN7IqfPkWV4muEs6bNI14,11
+base_model_guiosoft-0.0.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+base_model_guiosoft-0.0.2.dist-info/RECORD,,
