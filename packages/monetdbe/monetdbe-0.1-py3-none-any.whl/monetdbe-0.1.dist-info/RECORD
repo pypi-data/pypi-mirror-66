@@ -1,0 +1,10 @@
+monetdbe/__init__.py,sha256=7uG-qyeJKlRD0RuJZPTMpq_06pXGF2rsjL5FjkNFMwQ,30
+monetdbe/dbapi2.py,sha256=MVarb32BqhWpsexqI-qnYvKFo_zpXqBc-nUsFMBk3Vs,2705
+monetdbe/dump.py,sha256=40rj4hthikz13qq8Z6oCdb6aGsp58hcDrBlG9Zw442s,2856
+monetdbe/exceptions.py,sha256=hUTbvs6GhFXpwpRngvswXqKnfJqZRUKBbQ9HBqpM5j0,2739
+monetdbe/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+monetdbe/todo.py,sha256=ZRsv11hcn9i6QQrjoKRucmhHqTfI2w7xpcRd1_SzsfY,2020
+monetdbe-0.1.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+monetdbe-0.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+monetdbe-0.1.dist-info/METADATA,sha256=1zmM8XqXDCg-SfztHFdBPMw4Bgg8BYtCFaUBPZiuYX4,686
+monetdbe-0.1.dist-info/RECORD,,
