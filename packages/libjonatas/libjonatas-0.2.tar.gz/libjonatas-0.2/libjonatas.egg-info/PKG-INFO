@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: libjonatas
+Version: 0.2
+Summary: Lib para projetos pessoais
+Home-page: https://github.com/jona04/libjonatas
+Author: Jonatas Oliveira Silva
+Author-email: jonatas.iw@gmail.com
+License: MIT License
+Description: #libjonatas
+        
+        Lib construída com ajuda do curso [Python PRO](http://www.python.pro.br)
+        
+        [![Build Status](https://travis-ci.com/jona04/libjonatas.svg?branch=master)](https://travis-ci.com/jona04/libjonatas)
+        [![Updates](https://pyup.io/repos/github/jona04/libpythonpro/shield.svg)](https://pyup.io/repos/github/jona04/libpythonpro/)
+        [![Python 3](https://pyup.io/repos/github/jona04/libpythonpro/python-3-shield.svg)](https://pyup.io/repos/github/jona04/libpythonpro/)
+        
+        Para instalar:
+        
+        ```console
+        python3 -m venv venv
+        source venv/bin/activate
+        pip install -r requeriments-dev.txt
+        
+        ```
+        
+        Para conferir qualidade do código
+        
+        ```cosole
+        flake8
+        ```
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Framework :: Pytest
+Description-Content-Type: text/markdown

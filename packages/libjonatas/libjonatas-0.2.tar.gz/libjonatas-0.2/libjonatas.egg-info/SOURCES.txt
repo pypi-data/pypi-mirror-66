@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+libjonatas/__init__.py
+libjonatas/github_api.py
+libjonatas.egg-info/PKG-INFO
+libjonatas.egg-info/SOURCES.txt
+libjonatas.egg-info/dependency_links.txt
+libjonatas.egg-info/not-zip-safe
+libjonatas.egg-info/requires.txt
+libjonatas.egg-info/top_level.txt
