@@ -1,0 +1,13 @@
+colorama
+
+[:python_version < "3.4"]
+backports.shutil_get_terminal_size
+
+[:python_version < "3.5"]
+configparser<5
+
+[test]
+pytest>=3
+
+[test:python_version < "3.3"]
+mock
