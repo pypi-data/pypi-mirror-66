@@ -1,0 +1,10 @@
+README.md
+setup.py
+stack_plonty/__init__.py
+stack_plonty/stackpeanut.py
+stack_plonty/stackpotato.py
+stack_plonty.egg-info/PKG-INFO
+stack_plonty.egg-info/SOURCES.txt
+stack_plonty.egg-info/dependency_links.txt
+stack_plonty.egg-info/requires.txt
+stack_plonty.egg-info/top_level.txt
