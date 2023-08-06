@@ -1,0 +1,110 @@
+
+:root {
+--bgdark: #232836;
+--bglight: #282e3f;
+--bglighter: #2f364a;
+
+--fgdark: #8686a4;
+--fglight: #ccccfa;
+
+--accent: #d39ceb;
+--border: #2f364a;
+--disabled: #696969;
+--hover: #ffffff;
+}
+
+* {
+	font-family: "t kiwi Wide";
+	font-size: 20px;
+}
+
+html {
+	background: var(--bgdark);
+	background-position: top -24px left 0;
+	margin-top: -26px;
+}
+
+html, body {
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+main {
+	display: flex;
+	justify-content: center;;
+	overflow-y: auto;
+	flex-flow: row wrap;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#clock {
+	position: relative;
+	top: -30px;
+	display: flex;
+	text-align: center;
+}
+
+#time, #date {
+	color: var(--fglight);
+	display: inline-block;
+	margin: 0 5px;
+	flex-grow: 1;
+	width: 0;
+}
+
+#time {
+	text-align: left;
+}
+
+#date {
+	text-align: right;
+}
+
+.links {
+	padding: 5px 15px;
+	width: auto;
+	display: block;
+	text-align: center;
+}
+
+a:visited, a {
+	color: var(--fgdark);
+	text-decoration: none;
+	outline: none;
+}
+
+a:not(.tablinks):visited, a:not(.tablinks) {  transition: all 00ms ease 0s; }
+a:hover {	color: var(--fglight); }
+
+.slash {
+	color: var(--fgdark);
+}
+
+main section {
+	box-sizing: border-box;
+	min-width: 300px;
+}
+
+.title {
+	display: none;
+}
+
+section {
+	margin: 12px;
+	padding: 12px;
+	/*border: 8px solid var(--fgdark);*/
+	box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.13);
+}
+
+section {
+	background-color: var(--bglight);
+	border-radius: 4px;
+}
+
+section:hover {
+	background-color: var(--bglighter);
+}
