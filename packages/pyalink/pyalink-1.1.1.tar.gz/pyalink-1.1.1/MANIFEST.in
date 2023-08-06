@@ -1,0 +1,2 @@
+recursive-include pyalink lib/*.jar
+include pyalink/LICENSE
