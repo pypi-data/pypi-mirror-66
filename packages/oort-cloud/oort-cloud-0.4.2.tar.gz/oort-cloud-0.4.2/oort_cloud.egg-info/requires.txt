@@ -1,0 +1,5 @@
+flask
+arcsecond>=0.9.4
+astropy
+dateparser
+python-dotenv
