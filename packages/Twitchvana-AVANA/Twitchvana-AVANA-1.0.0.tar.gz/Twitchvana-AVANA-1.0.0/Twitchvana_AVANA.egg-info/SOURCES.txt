@@ -1,0 +1,16 @@
+README.md
+setup.py
+Twitchvana/__init__.py
+Twitchvana/bot.py
+Twitchvana/channel.py
+Twitchvana/command.py
+Twitchvana/context.py
+Twitchvana/errors.py
+Twitchvana/irc_settings.py
+Twitchvana/tsocket.py
+Twitchvana/user_data_fetcher.py
+Twitchvana/viewer.py
+Twitchvana_AVANA.egg-info/PKG-INFO
+Twitchvana_AVANA.egg-info/SOURCES.txt
+Twitchvana_AVANA.egg-info/dependency_links.txt
+Twitchvana_AVANA.egg-info/top_level.txt
