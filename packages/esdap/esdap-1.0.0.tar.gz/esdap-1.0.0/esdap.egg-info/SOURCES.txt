@@ -1,0 +1,9 @@
+README.md
+setup.py
+esdap/__init__.py
+esdap.egg-info/PKG-INFO
+esdap.egg-info/SOURCES.txt
+esdap.egg-info/dependency_links.txt
+esdap.egg-info/requires.txt
+esdap.egg-info/top_level.txt
+examples/run_compute_features.sh
