@@ -1,0 +1,3 @@
+[console_scripts]
+s3resumable = s3resumable.cli:main
+

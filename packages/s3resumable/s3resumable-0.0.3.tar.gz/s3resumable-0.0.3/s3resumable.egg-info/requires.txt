@@ -1,0 +1,13 @@
+six
+boto3
+filelock==3.0.12
+
+[dev]
+pylint
+flake8
+pytest
+mock
+coverage
+
+[dev:python_version < "3"]
+unittest2
