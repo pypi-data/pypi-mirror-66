@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: maildir2mbox
+Version: 0.1
+Summary: Conversion of a mailbox in the maildir format to the mbox format
+Home-page: https://github.com/bluebird75/maildir2mbox
+Author: Philippe Fremy
+Author-email: phil.fremy@free.fr
+License: Public Domain
+Keywords: maildir mbox
+Platform: UNKNOWN
+Classifier: Topic :: Communications :: Email
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+[![Build Status](https://travis-ci.org/bluebird75/maildir2mbox.svg?branch=master)](https://travis-ci.org/bluebird75/maildir2mbox)
+
+maildir2mbox
+============
+
+Convert mailbox from maildir format to mbox format, with support for nested folders
+
+Improvements by Philippe Fremy:
+- porting to Python 3 to deal with filesystem encoding problems: works when moving maildir data from a partition 
+  supporting utf8 filenames (Ext3) to a partition supporting mbcs filenames (ntfs)
+- argument handling and help display
+- add support for nested directories
+- move to GitHub
+
+To install:
+- either download directly the maildir2mbox.py file and execute it:
+
+	python maildir2mbox.py --help
+
+- or install with pip, then run it with -m:
+
+	pip install maildir2mbox
+	python -m maildir2mbox --help
+
+
+Authors:
+- Philippe Fremy, April 2013-2020
+- FrÃ©dÃ©ric Grosshans, 19 January 2012
+- Nathan R. Yergler, 6 June 2010
+
+The file is under no license/public domain. See LICENSE.txt for more details.
+
+
+
