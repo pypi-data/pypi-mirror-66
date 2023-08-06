@@ -1,0 +1,15 @@
+pistoke/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pistoke/kasittelija.py,sha256=VjEu_F50twlkvGMjmoTOq2plz392NSXTAJnRcXeDQDU,8827
+pistoke/nakyma.py,sha256=JWHyNE9w1JlpkOhvfeFJ9tYwXlCHUUbaLIUg9V_jA6U,445
+pistoke/ohjain.py,sha256=Fro6WRO-20KOYPNbclFrjipyIXfzO-F_HPP3girRnLA,2983
+pistoke/paate.py,sha256=EK5neGUEO_eZEojMI6PHG-r0tESl2tBzohXmnAb2s5I,3943
+pistoke/xterm.py,sha256=Ih6bHpPJH1-PGENHnfOBJHJFM9S7NkY9n1OMh6UJgRg,3306
+pistoke/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pistoke/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pistoke/management/commands/runserver.py,sha256=VFASoCp3JAvKY86rsyFrzSFJrcSjPTHzcFxF-ab3l6c,5092
+pistoke/templates/pistoke/xterm.html,sha256=evwbTC9N1VjE7Qh4sFRB5fcd5aoyN8L3lr4wVeXZMqk,2058
+django_pistoke-0.2.2.dist-info/METADATA,sha256=PFqUrxKpFtfoLJffs-7sjt4Hwk42l7W6d8XTeN3gIrc,369
+django_pistoke-0.2.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_pistoke-0.2.2.dist-info/historia.json,sha256=jVAvfWeHObYGZPnr9bR793vdsxzWBpzvxL8DbvdnFow,2227
+django_pistoke-0.2.2.dist-info/top_level.txt,sha256=qznuA_6KVuMEntoZkcgRdvazqbgExUuEetPik_6MVAQ,8
+django_pistoke-0.2.2.dist-info/RECORD,,
