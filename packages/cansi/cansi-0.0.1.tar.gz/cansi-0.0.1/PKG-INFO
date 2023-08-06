@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: cansi
+Version: 0.0.1
+Summary: Curses ANSI Parser
+Home-page: https://github.com/tslight/cansi
+Author: Toby Slight
+Author-email: tslight@pm.me
+License: UNKNOWN
+Description: # CURSES ANSI PARSER
+        
+        ## INSTALLATION
+        
+        `pip install cansi`
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

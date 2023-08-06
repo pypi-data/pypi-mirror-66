@@ -1,0 +1,8 @@
+README.md
+setup.py
+cansi/__init__.py
+cansi/cansi.py
+cansi.egg-info/PKG-INFO
+cansi.egg-info/SOURCES.txt
+cansi.egg-info/dependency_links.txt
+cansi.egg-info/top_level.txt
