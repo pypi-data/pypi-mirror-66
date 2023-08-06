@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+odin_ml/__init__.py
+odin_ml.egg-info/PKG-INFO
+odin_ml.egg-info/SOURCES.txt
+odin_ml.egg-info/dependency_links.txt
+odin_ml.egg-info/entry_points.txt
+odin_ml.egg-info/requires.txt
+odin_ml.egg-info/top_level.txt
