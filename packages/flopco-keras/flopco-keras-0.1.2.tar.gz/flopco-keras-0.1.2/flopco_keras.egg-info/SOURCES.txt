@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+flopco_keras/__init__.py
+flopco_keras/compute_layer_flops.py
+flopco_keras/flopco_keras.py
+flopco_keras.egg-info/PKG-INFO
+flopco_keras.egg-info/SOURCES.txt
+flopco_keras.egg-info/dependency_links.txt
+flopco_keras.egg-info/requires.txt
+flopco_keras.egg-info/top_level.txt
