@@ -1,0 +1,1 @@
+from .data_scraping import load_stock_data
