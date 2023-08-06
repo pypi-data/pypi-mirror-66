@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: jarvis-md-nifti
+Version: 0.0.1a1
+Summary: UNKNOWN
+Home-page: https://github.com/peterchang77/jarvis-core
+Author: Peter D. Chang
+Author-email: pchang077@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6, <3.8
+Requires-Dist: numpy
+Requires-Dist: nibabel
+
+UNKNOWN
+
+

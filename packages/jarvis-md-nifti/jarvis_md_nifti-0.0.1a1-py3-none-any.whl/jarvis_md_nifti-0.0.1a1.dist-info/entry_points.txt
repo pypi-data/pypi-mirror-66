@@ -1,0 +1,4 @@
+[load_funcs]
+gz = jarvis_nifti:load_nifti
+nii = jarvis_nifti:load_nifti
+
