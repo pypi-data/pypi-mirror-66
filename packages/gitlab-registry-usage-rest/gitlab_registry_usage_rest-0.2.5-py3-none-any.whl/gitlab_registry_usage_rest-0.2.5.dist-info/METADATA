@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: gitlab-registry-usage-rest
+Version: 0.2.5
+Summary: A restful web service for querying the repository sizes of a GitLab registry.
+Home-page: https://github.com/sciapp/gitlab-registry-usage-rest
+Author: Ingo Heimbach
+Author-email: i.heimbach@fz-juelich.de
+License: MIT
+Keywords: Git,GitLab,Docker,Registry,disk capacity,RESTful
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: System :: Systems Administration :: Authentication/Directory :: LDAP
+Requires-Python: ~=3.3
+Requires-Dist: cheroot
+Requires-Dist: Flask
+Requires-Dist: Flask-Cors
+Requires-Dist: Flask-HTTPAuth
+Requires-Dist: Flask-JWT-Extended
+Requires-Dist: Flask-RESTful
+Requires-Dist: flask-restful-hal
+Requires-Dist: gitlab-registry-usage (>=0.2.0)
+Requires-Dist: json2html
+Requires-Dist: ldap3
+Requires-Dist: typing
+
+UNKNOWN
+
+
