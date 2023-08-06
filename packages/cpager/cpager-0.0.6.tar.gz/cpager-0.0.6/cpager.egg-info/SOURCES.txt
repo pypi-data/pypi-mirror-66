@@ -1,0 +1,13 @@
+README.md
+setup.py
+cpager/__init__.py
+cpager/action.py
+cpager/cpager.py
+cpager/keys.py
+cpager/utils.py
+cpager.egg-info/PKG-INFO
+cpager.egg-info/SOURCES.txt
+cpager.egg-info/dependency_links.txt
+cpager.egg-info/entry_points.txt
+cpager.egg-info/requires.txt
+cpager.egg-info/top_level.txt
