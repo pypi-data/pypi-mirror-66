@@ -1,0 +1,10 @@
+dbr-7.3.data/purelib/dbr/__init__.py,sha256=0R1L6lrhqIwyYuYHLRCqOZJjhXsddOJEvOpZGKubf7k,48
+dbr-7.3.data/purelib/dbr/dbr.cpython-38-darwin.so,sha256=BQ3b8J4xe6K93PW-iNOAb8NTkZW1-jeBGxb_r6pUSwM,62864
+dbr-7.3.data/purelib/dbr/dbr_python.pyc,sha256=htXXk42ptYnEK98fDmjXYxh6boSgabHLhgnQicauYg4,78661
+dbr-7.3.data/purelib/dbr/libDynamsoftBarcodeReader.dylib,sha256=ZdqaCiKmVzI7Z0WkU1hqwH__bIVJdvHjF3ZyJSyn9w8,10690464
+dbr-7.3.data/purelib/dbr/libDynamsoftLicenseClient.dylib,sha256=0_M71z6yE26xBy5owk4iIg3Spks7YSx4eZvQpT5nYeY,399232
+dbr-7.3.dist-info/LICENSE.txt,sha256=8dq_RHly314Yrezs85ZcfFvTGUaT8Xr4x16a8_-V_PI,73
+dbr-7.3.dist-info/METADATA,sha256=bnLJ3-oaGYPxZqljbKbzb-AQ-sGfZSrPFyjLoM8Ib6E,102509
+dbr-7.3.dist-info/WHEEL,sha256=XOFpf1UpPLSB1IpzpiSTxQmil-9Ku4ZptIugTg3CU3A,110
+dbr-7.3.dist-info/top_level.txt,sha256=RtnRuv17zC0FTWgII9msEV_uFpxjilu6Jag3kKXZZ-Q,4
+dbr-7.3.dist-info/RECORD,,
