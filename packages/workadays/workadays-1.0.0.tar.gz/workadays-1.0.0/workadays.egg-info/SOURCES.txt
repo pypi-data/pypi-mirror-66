@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+workadays/__init__.py
+workadays/workadays.py
+workadays/workadays_test.py
+workadays.egg-info/PKG-INFO
+workadays.egg-info/SOURCES.txt
+workadays.egg-info/dependency_links.txt
+workadays.egg-info/requires.txt
+workadays.egg-info/top_level.txt

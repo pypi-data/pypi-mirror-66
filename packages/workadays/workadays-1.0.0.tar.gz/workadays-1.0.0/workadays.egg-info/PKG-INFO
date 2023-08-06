@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: workadays
+Version: 1.0.0
+Summary: Calendário de dias úteis
+Home-page: https://github.com/mfhorita
+Author: Marcelo Horita
+Author-email: datazeus.tecnologia@gmail.com.br
+License: GNU
+Description: Pacote para adicionar ou subtrair datas em dias úteis
+Keywords: workdays
+Platform: UNKNOWN
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Internationalization
+Classifier: Topic :: Scientific/Engineering :: Physics
