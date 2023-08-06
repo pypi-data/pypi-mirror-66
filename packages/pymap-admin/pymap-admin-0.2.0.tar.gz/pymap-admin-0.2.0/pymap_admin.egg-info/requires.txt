@@ -1,0 +1,8 @@
+pysasl>=0.6.1
+grpclib
+protobuf
+typing-extensions
+
+[build]
+grpcio-tools
+mypy-protobuf

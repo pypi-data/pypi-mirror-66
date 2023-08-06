@@ -1,0 +1,11 @@
+[console_scripts]
+pymap-admin = pymapadmin.client.main:main
+
+[pymapadmin.client]
+append = pymapadmin.client.append:AppendCommand
+delete-user = pymapadmin.client.user:DeleteUserCommand
+get-user = pymapadmin.client.user:GetUserCommand
+list-users = pymapadmin.client.user:ListUsersCommand
+ping = pymapadmin.client.ping:PingCommand
+set-user = pymapadmin.client.user:SetUserCommand
+
