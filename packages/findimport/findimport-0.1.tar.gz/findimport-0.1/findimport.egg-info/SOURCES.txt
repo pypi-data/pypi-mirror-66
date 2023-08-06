@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+findimport/__init__.py
+findimport/__main__.py
+findimport.egg-info/PKG-INFO
+findimport.egg-info/SOURCES.txt
+findimport.egg-info/dependency_links.txt
+findimport.egg-info/top_level.txt

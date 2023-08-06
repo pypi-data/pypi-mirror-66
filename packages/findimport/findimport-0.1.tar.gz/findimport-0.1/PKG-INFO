@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: findimport
+Version: 0.1
+Summary: This is a simple library to find the recursive import link of source code
+Home-page: https://github.com/vigneshgig/Python-Find-imported-Module
+Author: VigneshAmudha
+Author-email: vigneshgig@gmail.com
+License: MIT
+Download-URL: https://github.com/vigneshgig/Python-Find-imported-Module/archive/v_01.tar.gz
+Description: # Python Find imported Module
+        pip3 install findimport
+        
+        # Example:
+        # findownimportfile
+        if the source file in /mnt/c/workspace/example/source_code.py
+        
+        ## Input:
+        python3 -m findimport  --source source_code.py --path /mnt/c/workspace/ or /mnt/c/workspace/example
+        
+        ## Output:
+        /mnt/c/workspace/example/own_import_find.txt
+        
+        ## Input:
+        python3 -m findimport  --source source_code.py --path /mnt/c/workspace/ or /mnt/c/workspace/example --save_text /mnt/c/workspace/imported_file.txt
+        ## Ouput:
+        /mnt/c/workspace/imported_file.txt
+        
+        
+        
+        $ python3.7
+        >> import findimport
+        >> import_list = findimport.find_own_import(source,path)
+        >> print(import_list)
+         ['/mnt/c/workspace/example/other_code.py',...]
+        
+        # findownimportfile
+        python3 -m findimport  --source source_code.py --path 'dummystring' --find_all_import
+        
+        
+        S$ python3.7
+        >> import findimport
+        >> import_list = findimport.find_all_import(source)
+        
+        
+        
+        
+        
+        
+Keywords: Module Finder,Import Finder,Module Tracker,Import Tracker
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
