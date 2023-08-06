@@ -1,0 +1,11 @@
+urequest/__init__.py,sha256=rvLlSVEJ6x9roeaGAnQ-TYyui8SxP6g2J5JqzdY1VWs,198
+urequest/credentials.py,sha256=oytQHL9UwAmMoxnIj6d5t9PFSflr9HmC97demlCpfEc,212
+urequest/response.py,sha256=AMm_G8NZdG9YLXhAKxI64fglFGhevoqBtoQfiaXHXG8,2008
+urequest/session.py,sha256=Kcn2vF1IlHE6Mm1F3AD3K70odkbxBOnLP9Xx0M5YWaw,6580
+urequest/url.py,sha256=C1tcjyjbG0pj-Y3jt8UWZtLx_rX7orNGjRiwKRJfNlk,1872
+urequest-0.0.4.dist-info/AUTHORS.md,sha256=Ev8HITj0xQ6p_E43SdEZP5jXFtRRRzk9faydiN3oWVY,123
+urequest-0.0.4.dist-info/LICENSE.md,sha256=KgaoDqVjojZxEWeZs-NUWRn9bC1RRcGrJiTMn3O5QW0,1075
+urequest-0.0.4.dist-info/METADATA,sha256=QJZ677g7shVAeoZQcF1Dvh8jH-x46YIK9-msuXDleA4,5080
+urequest-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+urequest-0.0.4.dist-info/top_level.txt,sha256=TGvDYg3r68mfGzrCH-Sem0TEFORT444Zt6kjRy9I2OA,9
+urequest-0.0.4.dist-info/RECORD,,
