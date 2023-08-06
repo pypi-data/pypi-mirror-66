@@ -1,0 +1,4 @@
+pycryptodome
+pywe-sign>=1.0.8
+pywe_utils
+pywe-xml>=1.0.3
