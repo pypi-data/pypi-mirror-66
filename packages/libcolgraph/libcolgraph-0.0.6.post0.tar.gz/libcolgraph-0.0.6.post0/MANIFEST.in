@@ -1,0 +1,10 @@
+recursive-include libcolgraph *.h
+recursive-include libcolgraph *.cpp
+recursive-include libcolgraph *.i
+include libcolgraph/web/templates/*
+include libcolgraph/web/static/*
+graft libcolgraph/web/static
+graft libcolgraph/web/templates
+global-exclude *.pyc
+include public/*
+graft public

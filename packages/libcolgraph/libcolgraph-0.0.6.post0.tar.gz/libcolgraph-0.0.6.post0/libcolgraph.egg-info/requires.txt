@@ -1,0 +1,7 @@
+coloredlogs
+matplotlib
+cycler
+Flask
+networkx
+PySimpleGUI
+pdoc3
