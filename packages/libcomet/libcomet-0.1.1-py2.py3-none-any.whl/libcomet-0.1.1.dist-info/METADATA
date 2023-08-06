@@ -1,0 +1,33 @@
+Metadata-Version: 2.0
+Name: libcomet
+Version: 0.1.1
+Summary: Python SDK for comet
+Home-page: https://github.com/s20ai/comet-sdk
+Author: Tabish Imran
+Author-email: vector@s20.ai
+License: UNKNOWN
+Keywords: libcomet
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Requires-Dist: requests
+
+# comet-sdk
+
+Python SDK for comet
+
+### Todo
+ - Fix configure bug ( branch - bugfix/configure )
+ - better error handling
+ - better error logging 
+
+
+
+
