@@ -1,0 +1,12 @@
+#!/bin/bash
+partition
+#SBATCH --job-name=SNTD
+
+
+
+echo -e '\n submitted Python job'
+echo 'hostname'
+hostname
+
+# creates a python virtual environment
+myPython run_sntd.py $1
