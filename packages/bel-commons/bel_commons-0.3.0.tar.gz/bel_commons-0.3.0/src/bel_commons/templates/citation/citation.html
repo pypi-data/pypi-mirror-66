@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+{% import "macros.html" as pbw %}
+
+{% block title %}Citation{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {{ util.flashed_messages(dismissible=True, container=False) }}
+
+        <ol class="breadcrumb">
+            <li><a href="{{ url_for('ui.home') }}">Catalog</a></li>
+            <li><a href="{{ url_for('ui.view_citations') }}">Citations</a></li>
+            <li class="active">{{ citation }}</li>
+        </ol>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    {{ citation.type }}: {{ citation.reference }}
+                </h3>
+            </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Title</dt>
+                    <dd>{{ citation.title }}</dd>
+                    <dt>Journal</dt>
+                    <dd>{{ citation.name }}</dd>
+                    <dt>Volume</dt>
+                    <dd>{{ citation.volume }}</dd>
+                    <dt>Issue</dt>
+                    <dd>{{ citation.issue }}</dd>
+                    <dt>Pages</dt>
+                    <dd>{{ citation.pages }}</dd>
+                    <dt>Date</dt>
+                    <dd>{{ citation.date }}</dd>
+                    <dt>Authors</dt>
+                    <dd>{{ citation.authors|join(' | ') }}</dd>
+                </dl>
+            </div>
+        </div>
+
+        {% for evidence in citation.evidences %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Evidence
+
+                        <div class="pull-right">
+                            <a href="{{ url_for('dbs.get_evidence_by_id', evidence_id=evidence.id) }}">JSON</a>
+                        </div>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <p>{{ evidence.text }}</p>
+                </div>
+
+                <div class="list-group">
+                    {{ pbw.render_edge_list(evidence.edges,  show_evidence=False) }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% include "footer.html" %}
+{% endblock %}

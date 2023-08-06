@@ -1,0 +1,400 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+
+{% block title %}Network Catalog{% endblock %}
+
+{% block head %}
+    {{ super() }}
+
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script type="text/javascript"
+            src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href='https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'/>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='js/bootstrap-confirmation.min.js') }}"></script>
+    <script>
+        $('[data-toggle=confirmation]').confirmation({
+            rootSelector: '[data-toggle=confirmation]'
+            // other options
+        });
+        // Initializes popover
+        $(function () {
+            $('[data-toggle="popover"]').popover({
+                placement: 'top',
+                trigger: 'hover'
+            })
+        });
+        $(function () {
+            $('[data-toggle="popright"]').popover({
+                placement: 'right',
+                trigger: 'hover'
+            })
+        });
+
+        $("#networkSearch").on('keyup', function () {
+            var search = $(this).val().toLowerCase();
+
+            $(".list-group-item").each(function () {
+                if (this.children[0].innerHTML.toLowerCase().indexOf(search) != -1) {
+                    $(this).show();
+                } else if (this.children[1].childNodes[1].innerHTML.toLowerCase().indexOf(search) != -1) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+
+    </script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {{ util.flashed_messages(dismissible=True, container=False) }}
+
+        <ol class="breadcrumb">
+            <li><a href="{{ url_for('ui.home') }}">Catalog</a></li>
+            <li class="active">Networks</li>
+        </ol>
+
+        {% if current_user.is_authenticated and current_user.is_admin %}
+            <div class="panel panel-info" id="admin-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Admin
+                        <button type="button" class="close" data-target="#admin-panel" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="btn-group">
+                        <a class="btn btn-warning"
+                           href="{{ url_for('dbs.pillage', next=url_for('ui.view_networks')) }}">
+                            Pillage
+                        </a>
+                        <a class="btn btn-danger"
+                           href="{{ url_for('dbs.drop_networks', next=url_for('ui.home')) }}"
+                           role="button" data-toggle="confirmation" data-btn-ok-icon="glyphicon glyphicon-share-alt"
+                           data-btn-ok-class="btn-success" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
+                           data-btn-cancel-class="btn-danger">
+                            Drop All
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Network Catalog</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Each curated network is backed by a BEL script. Below are options to summarize the networks'
+                    contents{% if 'analysis' in blueprints %},{% else %} or{% endif %} explore them with an in-browser
+                    navigator{% if 'analysis' in blueprints %}, or run analyses with data sets such as differential
+                    gene expression data {% endif %}. {% if 'parser' in blueprints %} Upload more networks
+                    <a href="{{ url_for('parser.view_parser') }}">here</a>.{% endif %}
+                </p>
+
+                <div class="input-group">
+                    <input type="text" id="networkSearch" class="form-control" placeholder="Search networks...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="list-group">
+                {% for network in networks|sort(attribute='created', reverse=True) %}
+                    <div class="list-group-item">
+                        <h4 class="list-group-item-heading">
+                            <a href="{{ url_for('ui.view_network', network_id=network.id) }}">
+                                {{ network.name|replace('_', ' ') }}
+                            </a>
+                            <small class="text-muted">
+                                {{ network.version }}
+                                {% if network.authors %}
+                                    {% set authors_split = network.authors.split(',') %}
+                                    by
+                                    {% if authors_split|length > 1 %}
+                                        {{ authors_split[0] }}, <i>et. al</i>
+                                    {% else %}
+                                        {{ network.authors }}
+                                    {% endif %}
+                                {% endif %}
+                            </small>
+                            <div class="pull-right">
+                                {% if network.report %}
+                                    <small class="text-muted">
+                                        {{ network.report.number_nodes }}
+                                        node{% if network.report.number_nodes != 1 %}s{% endif %} |
+                                        {{ network.report.number_edges }}
+                                        edge{% if network.report.number_edges != 1 %}s{% endif %} |
+                                        {{ network.report.number_citations }}
+                                        citation{% if network.report.number_citations != 1 %}s{% endif %} |
+
+                                        {% if network.report.public %}
+                                            Public <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                                        {% elif current_user.is_authenticated and network.report.user != current_user %}
+                                            Internal <span class="glyphicon glyphicon-tent" aria-hidden="true"></span>
+                                        {% else %}
+                                            Private
+                                            <span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
+                                        {% endif %}
+                                    </small>
+                                {% endif %}
+                            </div>
+                        </h4>
+                        <div class="list-group-item-text">
+
+                            {% if network.description %}
+                                <p>{{ network.description }}</p>
+                            {% endif %}
+
+                            <ul class="list-inline">
+                                {% if current_user.is_authenticated and current_user.is_admin %}
+                                    <li>
+                                        <a class="btn btn-info" target="_blank"
+                                           href="{{ url_for('dbs.get_network_metadata', network_id=network.id) }}">
+                                            {{ "%02d"|format(network.id) }}
+                                        </a>
+                                    </li>
+
+                                {% endif %}
+                                <li>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default dropdown-toggle"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                                            Summarize <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="{{ url_for('ui.view_network', network_id=network.id) }}"
+                                                   data-toggle="popright"
+                                                   data-content="Access the statistics summary of the network.">
+                                                    <span class="glyphicon glyphicon-dashboard"
+                                                          aria-hidden="true"></span>
+                                                    Statistics
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ url_for('ui.view_summarize_compilation', network_id=network.id) }}"
+                                                   data-toggle="popright"
+                                                   data-content="Access the compilation summary of the network.">
+                                                    <span class="glyphicon glyphicon-warning-sign"
+                                                          aria-hidden="true"></span> Compilation
+                                                    {% if network.report %}
+                                                        <span class="badge">{{ network.report.number_warnings }}</span>
+                                                    {% endif %}
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ url_for('ui.view_summarize_biogrammar', network_id=network.id) }}"
+                                                   data-toggle="popright"
+                                                   data-content="Access the biogrammar summary of the network.">
+                                                    <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+                                                    Biogrammar
+                                                </a>
+                                            </li>
+                                            {% if current_user.is_authenticated and current_user.is_admin %}
+                                                <li>
+                                                    <a href="{{ url_for('ui.view_summarize_completeness', network_id=network.id) }}"
+                                                       data-toggle="popright"
+                                                       data-content="Access the completeness summary of the network.">
+                                                        <span class="glyphicon glyphicon-tint"
+                                                              aria-hidden="true"></span>
+                                                        Completeness
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    {% if network.report and network.report.is_displayable %}
+                                        <a href="{{ url_for('ui.view_explore_network', network_id=network.id) }}"
+                                           class="btn btn-default" data-toggle="popover" title="Explore this Network"
+                                           data-content="This network has {{ network.report.number_nodes }} nodes so it can be directly shown in the Biological Network Explorer.">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                            Explore
+                                        </a>
+                                    {% else %}
+                                        <a href="{{ url_for('ui.build_subsample_query', network_id=network.id) }}"
+                                           class="btn btn-default" data-toggle="popover"
+                                           title="Sample this Network"
+                                           data-content="This network is too large to explore directly, so view a random sample of 250 edges.">
+                                            <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
+                                            Explore
+                                        </a>
+                                    {% endif %}
+                                </li>
+
+                                <li>
+                                    <a href="{{ url_for('ui.view_build_query_from_network', network_id=network.id ) }}"
+                                       class="btn btn-default" data-toggle="popover"
+                                       title="Perform a Query on this Network"
+                                       data-content="You can ask specific questions to your network using the
+                                       Query Builder.">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                        Query
+                                    </a>
+                                </li>
+
+                                {% if 'analysis' in blueprints %}
+                                    <li>
+                                        <a href="{{ url_for('analysis.view_network_uploader', network_id=network.id) }}"
+                                           class="btn btn-default" data-toggle="popover"
+                                           title="Analyze this Network"
+                                           data-content="Upload your experiments and run algorithms on your network.">
+                                            <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+                                            Analyze
+                                        </a>
+                                    </li>
+                                {% endif %}
+
+                                <li>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default dropdown-toggle"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+                                            Download
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                            {% set download_formats = [
+                                                ('bel', 'BEL Script'),
+                                                ('nodelink', 'Node-Link JSON'),
+                                                ('nodelink', 'Node-Link Umbrella JSON'),
+                                                ('cx', 'CX JSON'),
+                                                ('graphdati', 'GraphDati JSON'),
+                                                ('sif', 'Simple Interaction Format (SIF)'),
+                                                ('graphml', 'GraphML'),
+                                                ('graphml-umbrella', 'GraphML (Umbrella)'),
+                                                ('gsea', 'GRP Format for GSEA'),
+                                                ('citations', 'Citation List'),
+                                            ] %}
+
+                                            {% for serve_format, label in download_formats %}
+                                                <li>
+                                                    <a href="{{ url_for('dbs.export_network', network_id=network.id, serve_format=serve_format) }}">
+                                                <span class="glyphicon glyphicon-download"
+                                                      aria-hidden="true"></span> {{ label }}
+                                                    </a>
+                                                </li>
+                                            {% endfor %}
+                                            <li>
+                                                <a href="{{ url_for('dbs.export_network', network_id=network.id, serve_format='csv') }}">
+                                                <span class="glyphicon glyphicon-download"
+                                                      aria-hidden="true"></span> CSV</a>
+                                            </li>
+                                            <li role="separator" class="divider"></li>
+                                            <li>
+                                                <a href="{{ url_for('help.download_formats') }}">
+                                                    Download Format Help
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                {% if current_user.is_authenticated and ((network.report and network.report.user == current_user) or current_user.is_admin) %}
+                                    <li>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default dropdown-toggle"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Actions <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                {% if network.report and network.report.user == current_user %}
+                                                    <li>
+                                                        <a href="{{ url_for('ui.delete_network', network_id=network.id) }}">
+                                                            <span class="glyphicon glyphicon-remove"
+                                                                  aria-hidden="true"></span>
+                                                            Drop
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        {% if not network.report.public %}
+                                                            <a href="{{ url_for('dbs.make_network_public', network_id=network.id, next=url_for('ui.view_networks')) }}">
+                                                                <span class="glyphicon glyphicon-globe"
+                                                                      aria-hidden="true"></span>
+                                                                Make Public
+                                                            </a>
+                                                        {% else %}
+                                                            <a href="{{ url_for('dbs.make_network_private', network_id=network.id, next=url_for('ui.view_networks')) }}">
+                                                                <span class="glyphicon glyphicon-ban-circle"
+                                                                      aria-hidden="true"></span>
+                                                                Make Private
+                                                            </a>
+                                                        {% endif %}
+                                                    </li>
+                                                {% elif current_user.is_authenticated and current_user.is_admin %}
+                                                    <li>
+                                                        <a href="{{ url_for('dbs.drop_network', network_id=network.id, next=url_for('ui.view_networks')) }}">
+                                                            <span class="glyphicon glyphicon-remove"
+                                                                  aria-hidden="true"></span>
+                                                            Sudo Drop
+                                                        </a>
+                                                    </li>
+
+                                                    {% if network.report and not network.report.public %}
+                                                        <li>
+                                                            <a href="{{ url_for('dbs.make_network_public', network_id=network.id, next=url_for('ui.view_networks')) }}">
+                                                        <span class="glyphicon glyphicon-globe"
+                                                              aria-hidden="true"></span>
+                                                                Sudo Make Public
+                                                            </a>
+                                                        </li>
+                                                    {% elif network.report and network.report.public %}
+                                                        <li>
+                                                            <a href="{{ url_for('dbs.make_network_private', network_id=network.id, next=url_for('ui.view_networks')) }}">
+                                                <span class="glyphicon glyphicon-ban-circle "
+                                                      aria-hidden="true"></span>
+                                                                Sudo Make Private
+                                                            </a>
+                                                        </li>
+                                                    {% endif %}
+                                                {% endif %}
+                                            </ul>
+                                        </div>
+                                    </li>
+                                {% endif %}
+
+                                {% if current_user.is_authenticated and current_user.is_admin and not network.report %}
+                                    <li>
+                                        <a href="{{ url_for('dbs.claim_network', network_id=network.id, next=url_for('ui.view_networks')) }}"
+                                           class="btn btn-warning">
+                                            Sudo Claim
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% include "footer.html" %}
+{% endblock %}

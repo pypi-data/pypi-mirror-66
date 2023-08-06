@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+{% import "macros.html" as pbw %}
+
+{% block title %}Omic {{ omic.id }}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {{ util.flashed_messages(dismissible=True, container=False) }}
+
+        <ol class="breadcrumb">
+            <li><a href="{{ url_for('ui.home') }}">Catalog</a></li>
+            <li><a href="{{ url_for('analysis.view_omics') }}">Omics</a></li>
+            <li class="active">{{ omic.id }}</li>
+        </ol>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Omic {{ omic.id }}</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    {{ omic.description }}
+                </p>
+
+                <div class="row">
+                    <div class="col-6-lg">
+                        <dl class="dl-horizontal">
+                            <dt>Identifier</dt>
+                            <dd>{{ omic.id }}</dd>
+                            <dt>Created</dt>
+                            <dd>{{ omic.created }}</dd>
+                            <dt>Public</dt>
+                            <dd>
+                                {% if omic.public %}
+                                    <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+                                {% else %}
+                                    <span class="glyphicon glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                                {% endif %}
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-6-lg">
+                        <dl class="dl-horizontal">
+                            <dt>Count</dt>
+                            <dd>{{ count }}</dd>
+                            <dt>Mean</dt>
+                            <dd>{{ mean }}</dd>
+                            <dt>Standard Deviation</dt>
+                            <dd>{{ std }}</dd>
+                            <dt>Minimum</dt>
+                            <dd>{{ minimum }}</dd>
+                            <dt>Median</dt>
+                            <dd>{{ median }}</dd>
+                            <dt>Maximum</dt>
+                            <dd>{{ maximum }}</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% set experiments = omic.experiments %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Experiments <span class="badge">{{ experiments.count() }}</span></h3>
+            </div>
+
+            {% if experiments.count() %}
+                {{ pbw.render_experiment_table(experiments, include_omic=False) }}
+            {% endif %}
+        </div>
+    </div>
+
+    {% include "footer.html" %}
+{% endblock %}

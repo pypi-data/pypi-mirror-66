@@ -1,0 +1,27 @@
+[flake8]
+exclude =
+    .tox,
+    .git,
+    __pycache__,
+    docs/source/conf.py,
+    src/bel_commons/cli.py,
+    build,
+    dist,
+    tests/fixtures/*,
+    tests/*
+    *.pyc,
+    *.egg-info,
+    .cache,
+    .eggs
+max-line-length = 120
+max-complexity = 15
+import-order-style = pycharm
+application-import-names =
+    bel_commons
+    pybel_tools
+    bel_resources
+    bel_repository
+    pybel
+    bio2bel
+    tests
+format = ${cyan}%(path)s${reset}:${yellow_bold}%(row)d${reset}:${green_bold}%(col)d${reset}: ${red_bold}%(code)s${reset} %(text)s

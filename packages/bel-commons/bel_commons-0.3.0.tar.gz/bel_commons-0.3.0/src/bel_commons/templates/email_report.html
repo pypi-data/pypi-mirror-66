@@ -1,0 +1,410 @@
+{% extends "bootstrap/base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+
+
+{% block title %}Compilation Summary{% endblock %}
+
+{% block content %}
+    <a id="top"></a>
+    <div class="container">
+        <a id="provenance"></a>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Provenance</h3>
+            </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>Name</dt>
+                    <dd>{{ graph.name }}</dd>
+                    <dt>Version</dt>
+                    <dd>{{ graph.version }}</dd>
+
+                    {% if graph.description %}
+                        <dt>Description</dt>
+                        <dd>{{ graph.description }}</dd>
+                    {% endif %}
+
+                    <dt>Uploader</dt>
+                    <dd>{{ report.user }}</dd>
+                    <dt>Upload Time</dt>
+                    <dd>{{ report.created }}</dd>
+                    <dt>Parse Time</dt>
+                    <dd>{{ time }} seconds</dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Nodes ({{ graph.number_of_nodes() }})</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover table-responsive table-striped">
+                    <thead>
+                    <tr>
+                        <th>Function</th>
+                        <th>Count</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for key, value in summary.function_count.most_common() %}
+                        <tr>
+                            <td>{{ key }}</td>
+                            <td>{{ value }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Edges ({{ graph.number_of_edges() }})</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover table-responsive table-striped">
+                    <thead>
+                    <tr>
+                        <th>Edge</th>
+                        <th>Count</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for key, value in summary.relation_count.most_common() %}
+                        <tr>
+                            <td>{{ key }}</td>
+                            <td>{{ value }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Namespaces ({{ graph.namespace_url|length }})
+                    <a class="pull-right" href="#top">
+                        <span class="glyphicon glyphicon-arrow-up"></span>
+                    </a>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <p>This section lists all of the namespaces that are defined in the original BEL script.</p>
+                <table class="table table-hover table-responsive table-striped">
+                    <thead>
+                    <tr>
+                        <th>Namespace</th>
+                        <th>URL</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for key, value in graph.namespace_url.items()|sort %}
+                        <tr>
+                            <td>{{ key }}</td>
+                            <td><a href="{{ value }}">{{ value }}</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <a id="annotations"></a>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Annotations ({{ graph.annotation_url|length }})
+                </h3>
+            </div>
+            <div class="panel-body">
+                <p>This section lists all of the annotations that are defined in the original BEL script.</p>
+                <table class="table table-hover table-responsive table-striped">
+                    <thead>
+                    <tr>
+                        <th>Annotation</th>
+                        <th>URL</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for key, value in graph.annotation_url.items()|sort %}
+                        <tr>
+                            <td>{{ key }}</td>
+                            <td><a href="{{ value }}">{{ value }}</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Warnings -->
+
+        {% if summary.unused_namespaces is defined and summary.unused_namespaces|length > 0 %}
+            <a id="unused-namespaces"></a>
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Unused Namespaces ({{ summary.unused_namespaces|length }})</h3>
+                </div>
+                <div class="panel-body">
+                    <p>The source BEL script contained references to the following namespaces, but they were never
+                        used. It is suggested to delete their definitions from the BEL script to improve readability
+                        and parsing speed.</p>
+                    <ul class="row">
+                        {% for unused_namespace in summary.unused_namespaces|sort %}
+                            <li class="col-lg-3 col-md-4 col-sm-6">{{ unused_namespace }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if graph.annotation_list|length > 0 %}
+            <a id="list-annotations"></a>
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Locally Defined Annotations ({{ graph.annotation_list|length }})</h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        The source BEL script contained annotations defined as a list.
+                    </p>
+                    <ul class="row">
+                        {% for list_annotation in graph.annotation_list %}
+                            <li class="col-lg-3 col-md-4 col-sm-6">
+                                {{ list_annotation }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if summary.unused_annotations is defined and summary.unused_annotations|length > 0 %}
+            <a id="unused-annotations"></a>
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Unused Annotations ({{ summary.unused_annotations|length }})</h3>
+                </div>
+                <div class="panel-body">
+                    <p>The source BEL script contained references to the following annotations, but they were never
+                        used. It is suggested to delete their definitions from the BEL script to improve readability
+                        and parsing speed.</p>
+                    <p><strong>Note:</strong> this may be due to errors occurring in all statements with these
+                        annotations.</p>
+                    <ul class="row">
+                        {% for unused_annotation in summary.unused_annotations|sort %}
+                            <li class="col-lg-3 col-md-4 col-sm-6">
+                                {{ unused_annotation }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if summary.unused_list_annotation_values is defined and summary.unused_list_annotation_values|length > 0 %}
+            <a id="unused-list-annotations"></a>
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Unused List Annotation Values ({{ summary.unused_list_annotation_values|length }})
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <p>The source BEL script contained the following list annotations, but no references to the
+                        following values. It is suggested to prune these values from the list definitions. </p>
+                    <p><strong>Note:</strong> this may be due to errors occurring in all statements with these
+                        annotations.</p>
+                </div>
+                <table class="table table-hover table-responsive table-striped">
+                    <thead>
+                    <tr>
+                        <th>Annotation</th>
+                        <th>Values</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for annotation, values in summary.unused_list_annotation_values.items()|sort %}
+                        <tr>
+                            <td>{{ annotation }}</td>
+                            <td>
+                                <ul class="row">
+                                    {% for value in values %}
+                                        <li class="col-lg-3 col-md-4 col-sm-6">
+                                            {{ value }}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+
+        <!-- BEL Parser Errors -->
+
+        {% if summary.syntax_errors is defined and summary.syntax_errors|length > 0 %}
+            <a id="graph-syntax-errors"></a>
+            <div class="panel panel-danger panel-table">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Syntax Errors ({{ summary.syntax_errors|length }})</h3>
+                </div>
+                <table class="table table-hover table-responsive table-striped">
+                    <thead>
+                    <tr>
+                        <th>Line</th>
+                        <th>BEL</th>
+                        <th>Message</th>
+                    </tr>
+                    </thead>
+                    <tbody id="syntaxErrorTable">
+                    {% for _, exc, _ in summary.syntax_errors %}
+                        <tr>
+                            <td>{{ exc.line_number }}</td>
+                            <td><code>{{ exc.line }}</code></td>
+                            <td>{{ exc }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <div class="panel-footer">
+                    <ul class="pagination pagination pagination-sm" style="margin:0;" id="syntaxErrorPager"></ul>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if graph.warnings|length > 0 %}
+            <a id="graph-warnings"></a>
+            <div class="panel panel-danger panel-table">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Errors ({{ graph.warnings|length }})</h3>
+                </div>
+                <table class="table table-hover table-responsive table-striped">
+                    <thead>
+                    <tr>
+                        <th>Line</th>
+                        <th>BEL</th>
+                        <th>Message</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for _, exc, _ in graph.warnings %}
+                        <tr>
+                            <td>{{ exc.line_number }}</td>
+                            <td><code>{{ exc.line }}</code></td>
+                            <td>{{ exc }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+
+        {% if summary.error_groups is defined and summary.error_groups|length > 0 %}
+            <a id="error-groups"></a>
+            <div class="panel panel-danger panel-table">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Top Warnings</h3>
+                </div>
+                <table class="table table-hover table-responsive table-striped">
+                    <thead>
+                    <tr>
+                        <th>Error</th>
+                        <th>Frequency</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for label, count in summary.error_groups %}
+                        {% if count > 1 %}
+                            <tr>
+                                <td><code>{{ label }}</code></td>
+                                <td>{{ count }}</td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+
+        {% if summary.undefined_namespaces is defined and summary.undefined_namespaces|length > 0 %}
+            <a id="undefined-namespaces"></a>
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Undefined Namespaces ({{ summary.undefined_namespaces|length }})
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        The source BEL script contained references to the following namespaces, but they were never
+                        defined.
+                    </p>
+                    <ul class="row">
+                        {% for undefined_namespace in summary.undefined_namespaces|sort %}
+                            <li class="col-lg-3 col-md-4 col-sm-6">
+                                {{ undefined_namespace }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if summary.undefined_annotation is defined and summary.undefined_annotations|length > 0 %}
+            <a id="undefined-annotations"></a>
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Undefined Annotations ({{ summary.undefined_annotations|length }})</h3>
+                </div>
+                <div class="panel-body">
+                    <p>The source BEL script contained references to the following annotations, but they were never
+                        defined.
+                    </p>
+                    <ul class="row">
+                        {% for undefined_annotation in summary.undefined_annotations|sort %}
+                            <li class="col-lg-3 col-md-4 col-sm-6">
+                                {{ undefined_annotation }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if summary.namespaces_with_incorrect_names is defined and summary.namespaces_with_incorrect_names|length > 0 %}
+            <a id="incorrect-namespaces"></a>
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Namespaces with Incorrect Names ({{ summary.namespaces_with_incorrect_names|length }})
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="row">
+                        {% for namespace in summary.namespaces_with_incorrect_names %}
+                            <li class="col-lg-3 col-md-4 col-sm-6">
+                                {{ namespace }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">About</h3>
+            </div>
+            <div class="panel-body">
+                {% include "footer_text.html" %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

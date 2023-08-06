@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+
+{% block title %}Evidences{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {{ util.flashed_messages(dismissible=True, container=False) }}
+
+        <ol class="breadcrumb">
+            <li><a href="{{ url_for('ui.home') }}">Catalog</a></li>
+            <li class="active">Evidences</li>
+        </ol>
+
+        <div class="page-header">
+            <h1>Evidences
+
+                <small>
+                    <code>{{ source_bel }}</code>
+
+                    {% if target_bel %}
+                        to <code>{{ target_bel }}</code>
+                    {% endif %}
+                </small>
+            </h1>
+        </div>
+
+        {{ util.flashed_messages(dismissible=True, container=False) }}
+
+        {% for evidence, edges in data.items() %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        {% if ev2cit[evidence]['type'] == 'PubMed' %}
+                            PubMed
+                            <a href="https://www.ncbi.nlm.nih.gov/pubmed/{{ ev2cit[evidence]['reference'] }}">
+                                {{ ev2cit[evidence]['reference'] }}
+                            </a>
+                        {% else %}
+                            {{ ev2cit[evidence]['type'] }}
+                            {{ ev2cit[evidence]['reference'] }}
+                        {% endif %}
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <p>{{ evidence }}</p>
+                </div>
+                <div class="list-group">
+                    {% for em, edge in edges %}
+                        <div class="list-group-item-text">
+                            <dl class="dl-horizontal">
+                                <dt>BEL</dt>
+                                <dd><code>{{ em.bel }}</code></dd>
+
+                                <dt>Hash</dt>
+                                <dd>
+                                    <a href="{{ url_for('dbs.get_edge_by_hash', edge_hash=em.md5) }}">
+                                        <code>{{ em.md5 }}</code>
+                                    </a>
+                                </dd>
+
+                                {% if 'annotations' in edge['data'] %}
+                                    {% for k, v in edge['data']['annotations'].items()|sort %}
+                                        <dt>{{ k }}</dt>
+                                        <dd>{{ v|join(', ') }}</dd>
+                                    {% endfor %}
+                                {% endif %}
+
+                                <dt>Networks</dt>
+                                <dd>
+                                    <ul class="list-inline">
+                                        {% for edge_network in em.networks %}
+                                            <li class="list-inline-item">
+                                                <a href="{{ url_for('ui.view_network', network_id=edge_network.id) }}">{{ edge_network }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% include "footer.html" %}
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+
+{% block title %}Analyze{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>Analysis</h1>
+        </div>
+
+        {{ util.flashed_messages(dismissible=True, container=False) }}
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>
+                    This form will run a heat diffusion analysis on the network resulting from
+                    <code>Query {{ query.id }}</code> in order to prioritize biological processes in the context of
+                    a differential gene expression experiment.
+                </p>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Query Info</h3>
+            </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    {% if query.user %}
+                        <dt>Creator</dt>
+                        <dd>{{ query.user }}</dd>
+                    {% endif %}
+                    <dt>Assembly</dt>
+                    <dd>
+                        <ul>
+                            {% for network in query.assembly.networks %}
+                                <li>
+                                    <a href="{{ url_for('ui.view_network', network_id=network.id) }}">{{ network }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </dd>
+                    {% if query.seeding %}
+                        <dt>Seeding</dt>
+                        <dd>{{ query.seeding }}</dd>
+                    {% endif %}
+                    {% if query.pipeline %}
+                        <dt>Pipeline</dt>
+                        <dd>{{ query.pipeline }}</dd>
+                    {% endif %}
+                </dl>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Input</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Differential gene expression data can be created easily with GEO2R by following <a
+                        href="{{ url_for('help.dgx') }}">this
+                    tutorial</a>.
+                </p>
+
+                {{ wtf.quick_form(form, form_type='horizontal', button_map={'submit_button': 'btn btn-primary'}) }}
+            </div>
+        </div>
+    </div>
+
+    {% include "footer.html" %}
+{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    {{ fixes.ie8() }}
+{% endblock %}

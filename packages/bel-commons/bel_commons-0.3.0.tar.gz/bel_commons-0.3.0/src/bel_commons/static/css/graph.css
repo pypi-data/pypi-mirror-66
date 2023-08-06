@@ -1,0 +1,228 @@
+/* CSS for BEL-Commons explorer */
+
+.button-padding {
+    margin: 10px;
+}
+
+.not-rounded2 {
+    border-radius: 0 !important;
+}
+
+.svg-border {
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+}
+
+.left {
+    border-right: 1px solid #888;
+    float: left;
+    padding-right: 10px;
+    width: 50%
+}
+
+.right {
+    float: right;
+    padding-left: 10px;
+    width: 50%
+}
+
+.center {
+    text-align: center
+}
+
+.not-rounded {
+    border-radius: 0 !important;
+}
+
+.toggle.android {
+    border-radius: 0;
+}
+
+.toggle.android .toggle-handle {
+    border-radius: 0;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.toggle-off {
+    background-color: #00967f !important;
+    color: white !important;
+    text-decoration-color: white !important;
+    outline-color: white !important;
+}
+
+.node-checkbox {
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.edge-checkbox {
+    margin-right: 10px !important;
+    display: inline-block;
+}
+
+#export-node-list {
+    width: 300px;
+}
+
+#edge-search {
+    text-align: center;
+    min-width: 240px;
+}
+
+#node-search {
+    text-align: center;
+}
+
+#bel-logo {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+
+#graph-chart {
+    display: block;
+    margin: auto;
+    height: 584px;
+}
+
+.graph-controller {
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.color_red {
+    color: darkred;
+}
+
+.color_black {
+    color: black;
+}
+
+.link_continuous {
+    fill: none;
+    stroke-width: 1px;
+    stroke: #888;
+}
+
+.link_dashed {
+    fill: none;
+    stroke-width: 1px;
+    stroke-dasharray: 4, 4;
+    stroke: #888;
+}
+
+.link_red {
+    stroke: red;
+}
+
+.link_blue {
+    stroke: blue;
+}
+
+.link_highlighted {
+    stroke: #4EB2D4;
+!important;
+}
+
+circle {
+    stroke-width: 2.5px;
+    stroke: black;
+}
+
+.node_highlighted > circle {
+    stroke: #4EB2D4;
+!important;
+}
+
+.node_highlighted > text {
+    fill: #4EB2D4;
+!important;
+}
+
+.new_node_highlight {
+    stroke: red;
+}
+
+.new_node_highlight > circle {
+    stroke: red;
+    fill: red;
+}
+
+/* Add text shadow to nodes*/
+.node text {
+    pointer-events: none;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.Pathology {
+    fill: #FF7F0E;
+}
+
+.Abundance {
+    fill: #AEC7E8;
+}
+
+.Gene {
+    fill: #FFBB78;
+}
+
+.miRNA {
+    fill: #D62728;
+}
+
+.Protein {
+    fill: #1F77B4;
+}
+
+.RNA {
+    fill: #FF9896;
+}
+
+.BiologicalProcess {
+    fill: #2CA02C;
+}
+
+.Pathology {
+    fill: #FF7F0E;
+}
+
+.Complex {
+    fill: #98DF8A;
+}
+
+.Composite {
+    fill: #9467BD;
+}
+
+/* Modal loading */
+.loading_modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, .8) url('../img/gif/loading.gif') 50% 50% no-repeat;
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+body.loading .loading_modal {
+    display: block;
+}
+
+/* Modal end loading */
+
+ol.query-box-pipeline li {
+    text-transform: capitalize;
+}

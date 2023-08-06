@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+{% import "macros.html" as pbw %}
+
+{% block title %}Experiment Catalog{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    {% if current_user.is_authenticated and current_user.is_admin %}
+        <script src="{{ url_for('static', filename='js/bootstrap-confirmation.min.js') }}"></script>
+        <script>
+            $('[data-toggle=confirmation]').confirmation({
+                rootSelector: '[data-toggle=confirmation]'
+                // other options
+            });
+        </script>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {{ util.flashed_messages(dismissible=True, container=False) }}
+
+        <ol class="breadcrumb">
+            <li><a href="{{ url_for('ui.home') }}">Catalog</a></li>
+            <li class="active">Experiments</li>
+        </ol>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {% if current_user.is_authenticated and current_user.is_admin %}
+                    <div class="btn-group pull-right">
+                        <a class="btn btn-danger btn-xs"
+                           href="{{ url_for('analysis.drop_experiments', next=url_for('ui.home')) }}"
+                           role="button" data-toggle="confirmation" data-btn-ok-icon="glyphicon glyphicon-share-alt"
+                           data-btn-ok-class="btn-success" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
+                           data-btn-cancel-class="btn-danger">
+                            Drop All
+                        </a>
+                    </div>
+                {% endif %}
+                <h3 class="panel-title">Experiment Catalog</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Experiments are listed here in reverse chronological order. Currently, each corresponds to a
+                    <a href="{{ url_for('help.heat_diffusion') }}">Heat Diffusion Experiment</a>, but other
+                    experiment types will be added in the future (e.g., <a
+                        href="https://doi.org/10.1186/1471-2105-14-340">Reverse Causal Reasoning</a>).
+                </p>
+                <p>
+                    Additional analyses can be run directly on a network through the <a
+                        href="{{ url_for('ui.view_networks') }}">network catalog</a> or by first <a
+                        href="{{ url_for('ui.view_query_builder') }}">building a query</a> and clicking the analyze
+                    button in the biological network explorer. Also, see the <a
+                        href="{{ url_for('analysis.view_omics') }}">Omics Catalog</a> of publicly uploaded <i>-omics</i>
+                    data sets.
+                </p>
+            </div>
+
+            {{ pbw.render_experiment_table(experiments) }}
+        </div>
+    </div>
+
+    {% include "footer.html" %}
+{% endblock %}

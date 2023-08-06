@@ -1,0 +1,63 @@
+<nav class="navbar navbar-static-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed"
+                    data-target="#485848c5cd0b7dabdf24f858e4f3abbf21fdb984" data-toggle="collapse" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('ui.home') }}">
+                <img alt="BEL Commons" src="{{ url_for('static', filename='img/PyBEL-square-100.png') }}">
+            </a>
+        </div>
+        <div class="navbar-collapse collapse" id="485848c5cd0b7dabdf24f858e4f3abbf21fdb984">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="{{ url_for('ui.view_about') }}">About</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle nav-header" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">BEL Links<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="nav-header" href="https://language.bel.bio/">BEL Specification</a></li>
+                        <li><a class="nav-header" href="https://github.com/pybel/pybel">PyBEL</a></li>
+                        <li><a class="nav-header" href="https://github.com/bio2bel/bio2bel">Bio2BEL</a></li>
+                        <li><a class="nav-header" href="https://neurommsig.scai.fraunhofer.de">NeuroMMSig</a></li>
+                        <li><a class="nav-header" href="https://compath.scai.fraunhofer.de">ComPath</a></li>
+                        <li><a class="nav-header" href="https://pathme.scai.fraunhofer.de">PathMe</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right no-collapse">
+                {% if current_user.is_authenticated %}
+                    <li class="dropdown">
+                        <a class="dropdown-toggle nav-header" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">{{ current_user.email }} <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            {% if current_user.is_authenticated and current_user.is_admin %}
+                                <li><a class="nav-header" href="{{ url_for('admin.index') }}">Admin</a></li>
+                            {% endif %}
+                            <li><a href="{{ url_for('project.create_view', url=url_for('ui.home')) }}">Create
+                                Project</a></li>
+                            <li><a href="{{ url_for('ui.view_current_user_activity') }}">My Activity</a></li>
+                            <li><a href="{{ url_for('security.logout') }}">Log Out</a></li>
+                        </ul>
+                    </li>
+                {% else %}
+                    <li><a href="{{ url_for('security.login') }}">Log In</a></li>
+                {% endif %}
+                <!-- Your logo goes here!
+                <li>
+                    <a id="nav-logo" href="">
+                        <img src="" />
+                    </a>
+                </li>
+                -->
+            </ul>
+        </div>
+    </div>
+</nav>
