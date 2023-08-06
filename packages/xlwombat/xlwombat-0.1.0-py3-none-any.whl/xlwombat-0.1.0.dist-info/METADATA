@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: xlwombat
+Version: 0.1.0
+Summary: 
+Author: wiliam chu
+Author-email: chudood@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: jinja2 (>=2.11.2,<3.0.0)
+Requires-Dist: openpyxl (>=3.0.3,<4.0.0)
