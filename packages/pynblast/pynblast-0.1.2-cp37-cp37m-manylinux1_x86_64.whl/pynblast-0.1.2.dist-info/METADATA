@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: pynblast
+Version: 0.1.2
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Summary: Python bindings for nblast-rs library
+Author: Chris L. Barnes <chrislloydbarnes@gmail.com>
+Author-Email: Chris L. Barnes <chrislloydbarnes@gmail.com>
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+=========
+nblast-rs
+=========
+
+Python bindings for nblast rust library.
+
+* Free software: GPL3 license
+
+Building
+--------
+
+If wheels are not available for your platform, they can be built locally using `maturin <https://github.com/PyO3/maturin>`_
+and an appropriate rust compiler.
+Assuming:
+
+* the rust version specified in ``rust-toolchain`` at the root of the repository is installed (see `rustup <https://rustup.rs/>`_)
+* the required python version is on the ``PATH`` as ``python``
+* maturin is installed (``pip install maturin``)
+
+::
+
+    git clone https://github.com/clbarnes/nblast-rs
+    cd nblast-rs/nblast-py
+    maturin build --release -i python
+
+will produce a wheel in ``nblast-rs/nblast-py/target/wheels``.
+
