@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pg-es-fdw
+Version: 0.7.0
+Summary: Connect PostgreSQL and Elastic Search with this Foreign Data Wrapper
+License: MIT
+Author: Matthew Franglen
+Author-email: matthew@franglen.org
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: elasticsearch (>=7.6.0,<8.0.0)
