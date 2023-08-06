@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: mysb-scraping
+Version: 5.0
+Summary: Remaining data notifications with LINE Notify
+Home-page: https://github.com/miya/mysb-scraping
+Author: miya
+Author-email: m0zurillex@gmail.com
+License: UNKNOWN
+Keywords: softbank,scraping
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: lxml
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+
+# mysb-scraping
+[MySoftbank](https://www.softbank.jp/mysoftbank/)をスクレイピングして通信データ残量をLINE通知するやつ
+
+## Install 
+```
+$ pip3 install mysb-scraping
+```
+
+## Initialize
+```python
+import mysoftbank
+
+telnum = "your_phone_number"
+password = "your_MySoftbank_password"
+line_access_token = "your_line_notify_access_token"
+
+api = mysoftbank.API(telnum=telnum, password=password, line_access_token=line_access_token)
+```
+
+## Feature
+```python
+# データ（使用量、残量、繰越残量、追加量、追加使用量、追加繰越量、追加繰越使用量）の取得
+data = api.get_data()
+print(data)
+
+# out
+{
+    'used_data': 6.34,
+    'remain_data': 0.02, 
+    'step_remain_data': 0.0,
+    'additional_data': 1.0,
+    'additional_used_data': 0.98,
+    'given_data': 0.36, 
+    'given_used_data': 0.36
+}
+```
+```python
+# lineに通知
+status = api.send_message()
+print(status)
+
+# out
+200
+```
+
+## Demo
+[サンプルコード](https://github.com/miya/MySB_dataTraffic/blob/master/sample.py)を実行した！
+
+<img src="https://user-images.githubusercontent.com/34241526/80058598-aafaac00-8564-11ea-849b-b09d9e0d49b5.png" width=50%>
+
+
+
