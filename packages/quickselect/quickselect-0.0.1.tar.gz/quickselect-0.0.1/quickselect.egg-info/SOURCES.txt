@@ -1,0 +1,9 @@
+README.md
+setup.py
+quickselect/__init__.py
+quickselect/base.py
+quickselect/hints.py
+quickselect.egg-info/PKG-INFO
+quickselect.egg-info/SOURCES.txt
+quickselect.egg-info/dependency_links.txt
+quickselect.egg-info/top_level.txt
