@@ -1,0 +1,8 @@
+README.md
+html5builder.py
+setup.cfg
+setup.py
+html5builder.egg-info/PKG-INFO
+html5builder.egg-info/SOURCES.txt
+html5builder.egg-info/dependency_links.txt
+html5builder.egg-info/top_level.txt

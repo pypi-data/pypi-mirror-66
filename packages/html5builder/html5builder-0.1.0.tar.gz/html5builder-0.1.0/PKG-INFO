@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: html5builder
+Version: 0.1.0
+Summary: Simple HTML5 document builder.
+Home-page: https://github.com/skitschy/pyHTML5builder
+Author: skitschy
+Author-email: s1kitschy@gmail.com
+License: MIT
+Project-URL: Documentation, https://pyhtml5builder.readthedocs.io/
+Project-URL: Source, https://github.com/skitschy/pyHTML5builder
+Description: # HTML5Builder
+        
+        HTML5Builder is a Python module
+        for simply generating strings of HTML5 documents and document fragments.
+        
+        
+        ## Requirement
+        
+        * Python 2.7 or above
+        
+        
+        ## Installation
+        
+        ```sh
+        pip install html5builder
+        ```
+        
+        ## Basic Usage
+        
+        ```python
+        >>> from html5builder import HTML5Builder
+        >>> tag = HTML5Builder()
+        >>> img = tag.img(src='image.jpg')
+        >>> str(img)
+        '<img src="image.jpg">'
+        >>> anchor = tag.a([img, 'link'], cls='link', href='target.html')
+        >>> str(anchor)
+        '<a href="target.html" class="link"><img src="image.jpg">link</a>'
+        >>> div = tag.div()
+        >>> div.child.append(anchor)
+        >>> str(div)
+        '<div><a href="target.html" class="link"><img src="image.jpg">link</a></div>'
+        >>> doc = tag.html([tag.head(''), tag.body('')], lang='ja')
+        >>> str(tag.doctype + str(doc))
+        '<!DOCTYPE html><html lang="ja"><head></head><body></body></html>'
+        ```
+        
+        ## Documentation
+        
+        Documentation is [available online](https://pyhtml5builder.readthedocs.io/).
+        
+Keywords: html5
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Requires-Python: >=2.7, !=3.0.*
+Description-Content-Type: text/markdown
