@@ -1,0 +1,6 @@
+README.md
+setup.py
+pauseprog.egg-info/PKG-INFO
+pauseprog.egg-info/SOURCES.txt
+pauseprog.egg-info/dependency_links.txt
+pauseprog.egg-info/top_level.txt
