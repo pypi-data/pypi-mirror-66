@@ -1,0 +1,12 @@
+comocma/LICENSE,sha256=W21kVtHHmWo0VNwI7wmwd4_2KqC2OKRbuf2KayAiwqc,1316
+comocma/__init__.py,sha256=0ea41SSulKZS1uoIZG4eq3w1_kwaRjZZzhhr1pzfcIc,946
+comocma/__main__.py,sha256=WHJ9LyyjCMSF5AqYQNIPuqDlUvvBI-2efnrw8hr3eSM,227
+comocma/como.py,sha256=H_zSmVYbGMTpVB4UY19J7rH17GY72W7fsV-qNjrZeS8,45732
+comocma/hv.py,sha256=8xMu5LmwCV5QVXuPcE1BXaxN0Uz6iq_GlvdWiFjOKT4,10881
+comocma/nondominatedarchive.py,sha256=ol3-AHIgm-AlhSb1goIXn3nviVySO-_CFarsL5acggc,16847
+comocma/sofomore_logger.py,sha256=Hflxey4BY_DCaHTkoPGXrDXsa1IbH2Rq4NGbTrMASu8,25638
+comocma-0.5.1.dist-info/LICENSE,sha256=W21kVtHHmWo0VNwI7wmwd4_2KqC2OKRbuf2KayAiwqc,1316
+comocma-0.5.1.dist-info/METADATA,sha256=z-2OJxh_-8edct3NMjsZVUf7IGr842ISIhwgA1JsFsU,9959
+comocma-0.5.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+comocma-0.5.1.dist-info/top_level.txt,sha256=3H6raBSam3QlJ80gltZDkA3zliaV1onhRqvWmr0RrMo,8
+comocma-0.5.1.dist-info/RECORD,,
