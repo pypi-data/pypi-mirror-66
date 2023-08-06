@@ -1,0 +1,10 @@
+gretel_synthetics/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gretel_synthetics/config.py,sha256=_vP41WTmlA8f6ewd3JnvISdwKe06NQUdjjjo3AyCovY,2285
+gretel_synthetics/generate.py,sha256=lbQV5aiZbjiylJRpwEG-HIluNUwyY97_N0rLDKAxO7Y,4074
+gretel_synthetics/model.py,sha256=32XL7k6Xx4wpvWp9MoldQ-RpW2tjrZUTFP1JF0ORlq8,3087
+gretel_synthetics/train.py,sha256=oRntVc_ADE5zkCK7ayEb5UAcnvTWDwErpYJQIszqBBc,5364
+gretel_synthetics-0.6.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+gretel_synthetics-0.6.1.dist-info/METADATA,sha256=M4MpZyY32jPPt7Cypw7ZLtV0mrWTO4QF2zu98t4OGwc,1533
+gretel_synthetics-0.6.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gretel_synthetics-0.6.1.dist-info/top_level.txt,sha256=W22hy8zQyoAZVsC2SGFyQmPJn9bLO8c_p02eVgpGhf4,18
+gretel_synthetics-0.6.1.dist-info/RECORD,,
