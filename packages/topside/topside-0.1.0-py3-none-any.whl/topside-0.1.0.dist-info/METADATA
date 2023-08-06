@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: topside
+Version: 0.1.0
+Summary: A simulator for rocket launch operations
+Home-page: https://github.com/waterloo-rocketry/topside
+Author: Waterloo Rocketry
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+
+# Topside: Operations Simulator
+
+#### Topside: Technical Operations Procedures Simulator & Integrated Development Environment
+
+Waterloo Rocketry's operations simulator is a tool for modelling and simulating rocket launch systems and procedures.
+
+
