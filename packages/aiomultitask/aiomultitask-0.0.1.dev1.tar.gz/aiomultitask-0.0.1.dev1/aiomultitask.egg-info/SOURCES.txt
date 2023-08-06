@@ -1,0 +1,9 @@
+README.md
+setup.py
+aiomultitask/__init__.py
+aiomultitask/__version__.py
+aiomultitask.egg-info/PKG-INFO
+aiomultitask.egg-info/SOURCES.txt
+aiomultitask.egg-info/dependency_links.txt
+aiomultitask.egg-info/requires.txt
+aiomultitask.egg-info/top_level.txt
