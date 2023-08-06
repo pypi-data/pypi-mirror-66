@@ -1,0 +1,3 @@
+[console_scripts]
+ccvs-api-scanner = ccvs_scanning_api_client.command.run:main
+

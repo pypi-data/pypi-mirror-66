@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: ccvs-api-client
+Version: 1.1.5
+Summary: CCVS API Client
+Home-page: https://github.com/William-Hill-Online/CCVS-API-Client
+Author: Ederson Brilhante
+Author-email: ederson.brilhante@grandparade.co.uk
+License: UNKNOWN
+Description:         Client for Central Container Vulnerability Scanning API
+            
+Keywords: CCVS API
+Platform: UNKNOWN
