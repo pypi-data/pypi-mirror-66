@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: Flask-Docs-Api
+Version: 1.0
+Summary: Easy Docs for flask
+Home-page: http://github.com/lwerner-lshigh/flask-api/
+Author: Lukas Werner
+Author-email: lwerner@lshigh.org
+License: MIT
+Description: # Flask-Docs-Api
+        
+        A library to make doc generation painless
+        
+        Sample Usage (copy & paste)
+        
+        ```python
+        from flask_api_docs.api import Api
+        api = Api(app, "/docs", globals(), "Test" )
+        ```
+        
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
