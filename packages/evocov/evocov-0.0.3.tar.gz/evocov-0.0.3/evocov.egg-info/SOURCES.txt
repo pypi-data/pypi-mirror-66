@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+evocov/__init__.py
+evocov/covariance_function.py
+evocov/creation.py
+evocov/primitive_set.py
+evocov.egg-info/PKG-INFO
+evocov.egg-info/SOURCES.txt
+evocov.egg-info/dependency_links.txt
+evocov.egg-info/requires.txt
+evocov.egg-info/top_level.txt
+evocov/fitting_methods/__init__.py
+evocov/fitting_methods/random.py
