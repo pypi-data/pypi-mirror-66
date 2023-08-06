@@ -1,0 +1,7 @@
+README.md
+setup.py
+onlinopy/__init__.py
+onlinopy.egg-info/PKG-INFO
+onlinopy.egg-info/SOURCES.txt
+onlinopy.egg-info/dependency_links.txt
+onlinopy.egg-info/top_level.txt
