@@ -1,0 +1,8 @@
+layeredimage/__init__.py,sha256=Tz6QLgPjTuFPUAWPT7P3VMCEtSWl_GikxCmndaymeJA,22
+layeredimage/io.py,sha256=L22icUwRDHq4joYG3onMhhAFTKfGib5Rn76YIQP3-78,10732
+layeredimage/layeredimage.py,sha256=_rGoqAKUEEgafFiQGGror4B7B27KcAj7bGlZpoHUyfA,6345
+layeredimage/layergroup.py,sha256=HR2mk7J7aDhQ9yxoDShRfXafwIfCgy4MwYQ669Qp4Rw,3877
+layeredimage-2020.1.dist-info/LICENSE.md,sha256=cEFZA4lfBLSem93SO4y6ixXwRC6c8oYrsXtE-EVsAaA,1089
+layeredimage-2020.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+layeredimage-2020.1.dist-info/METADATA,sha256=SIB6c6pJ607ngXtVY-l9fs_Jv5I0RSiNCC3mGOWf3sA,12443
+layeredimage-2020.1.dist-info/RECORD,,
