@@ -1,0 +1,15 @@
+Flask-BabelEx>=0.9.3
+
+[docs]
+Sphinx>=1.5.1
+
+[tests]
+check-manifest>=0.25
+coverage>=4.0
+isort>=4.3.3
+pydocstyle>=2.0.0
+pytest-cov>=2.5.1
+pytest-pep8>=1.0.6
+Sphinx>=1.5.1
+oarepo-heartbeat>=1.0.0
+invenio[auth,base,elasticsearch6,metadata,postgresql]~=3.2.1
