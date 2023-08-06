@@ -1,0 +1,12 @@
+postdmarc/__init__.py,sha256=k3yePUgYrV3XxTQEROfg70LRqmnW4OPEHNUeaoplQIg,60
+postdmarc/pdm_exceptions.py,sha256=9x7l5wUYqhFdujJTzZbRcuQ_ExFYwLG80UGLVhOa1wc,842
+postdmarc/postdmarc.py,sha256=HROOWrdzMU1jc-kQUkOm5WwcewZ5HS2AoiJNR5Y7DRM,11498
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_meta.py,sha256=qbmfHDuCQFBTnbVGr4UXBGrwMk5tkg0qqrDa9YHcx3s,5168
+tests/test_postdmarc.py,sha256=gtvm5VeFgQjItLahsAnwLn1E9DpHQkKrkXWD5Hx9050,11967
+py_postdmarc-0.0.1.dist-info/METADATA,sha256=P7VDCxvRqofLpsSp6y3TIKpOoe-MG30mREZf2cAB0EQ,4013
+py_postdmarc-0.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+py_postdmarc-0.0.1.dist-info/entry_points.txt,sha256=pLmOjxfrK_rhCTEoSv4fGgPaXMdR2vKrgM5iPxTr7ZU,56
+py_postdmarc-0.0.1.dist-info/license.txt,sha256=Cvi3R1Qmp6uwbF4EVPu6IIO637vX1944U90gBDN1UBM,1057
+py_postdmarc-0.0.1.dist-info/top_level.txt,sha256=rjF5h1XTDEQOGBFThnDR_3zoWn8IqkGKAhEY4LfkpAA,16
+py_postdmarc-0.0.1.dist-info/RECORD,,

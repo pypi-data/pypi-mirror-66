@@ -1,0 +1,3 @@
+[console_scripts]
+postdmarc = postdmarc.postdmarc:main
+
