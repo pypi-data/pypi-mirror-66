@@ -1,0 +1,8 @@
+cython
+numpy
+matplotlib
+scipy
+tqdm
+pint
+uncertainties
+h5py
