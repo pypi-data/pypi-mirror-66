@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: easymq
+Version: 2.0.2
+Summary: easy to connect activemq
+Home-page: https://github.com/localhost-sys/easymq
+Author: unknown-admin
+Author-email: niushuaibing@foxmail.com
+Maintainer: eric
+Maintainer-email: niushuaibing@foxmail.com
+License: apache
+Platform: all
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: stomp.py
+Requires-Dist: docopt
+
+# easymq
+一个基于stomp的简单连接，发送和接收activemq的包
+
+A simple package based on stomp, connection, sending and receiving ActiveMQ
+
+# Quick Start
+
+You can use `pip install easymq` to install easymq
+
+[There](https://github.com/unknown-admin/easymq/tree/master/test) are two examples, send and receive message from activemq
+
+```python
+from easymq.connect_mq import Connection
+from easymq.listener import MQListener
+
+# if you want send message
+c = Connection(mq_username="admin", mq_password="admin", host_and_ports=[("localhost", 61613)], dest="/queue/test", use_ssl=False, listener=None)
+c.send("test_message")
+
+# if you want receive message
+class CustomListener(MQListener):
+    def on_message(self, headers, body):
+        print(body)
+
+c = Connection(mq_username="admin", mq_password="admin", host_and_ports=[("localhost", 61613)], dest="/queue/test", use_ssl=False, listener=CustomListener)
+c.receive()
+```
+
