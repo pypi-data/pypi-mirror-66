@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+blender_notebook/__init__.py
+blender_notebook/installer.py
+blender_notebook/kernel.py
+blender_notebook/kernel_launcher.py
+blender_notebook.egg-info/PKG-INFO
+blender_notebook.egg-info/SOURCES.txt
+blender_notebook.egg-info/dependency_links.txt
+blender_notebook.egg-info/entry_points.txt
+blender_notebook.egg-info/requires.txt
+blender_notebook.egg-info/top_level.txt
+blender_notebook.egg-info/zip-safe
