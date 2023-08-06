@@ -1,0 +1,13 @@
+fixedpoint/__init__.py,sha256=gOGQuse7tTk2QbeLo6glTBy2FyaTqYMYJsbKEq3PwS0,2716
+fixedpoint/fixedpoint.py,sha256=wm6S7yRm1XqIdt2uL2qgyKs02MfnnlAd6GVWcfla-CA,77129
+fixedpoint/functions.py,sha256=IqDZ9qJZF_Dx8bWMwpESasxDYYrN7CkDfcqWgQjnmVA,7057
+fixedpoint/json.py,sha256=WCaQzNZnf2M25QFE04NQ6VlHLdV7n3ltxu7pnUJxRbo,1704
+fixedpoint/logging.py,sha256=qbfD_WrBKwoZ_NKshBj3kB2B2U90uB-I5WdZbUoJLXg,1583
+fixedpoint/properties.py,sha256=DPwzJ6VsEwYlFhLPvqbXHmUfyUoI8025kxVlf-Dv7eI,10029
+fixedpoint-1.0.0.dist-info/DESCRIPTION.rst,sha256=8Dxj1xJUNh0HOLRze14f9J_ASnu1l_-xQz2FvSZifQg,2483
+fixedpoint-1.0.0.dist-info/LICENSE.txt,sha256=rHRHuUmHD9YKkhD0armdcGBpHDmNs23NGUfGShTzHsg,1559
+fixedpoint-1.0.0.dist-info/METADATA,sha256=JjVcyJj5DxFPytDwJUAYEaDIYw5KBJ-lVyYWalqoyiI,4393
+fixedpoint-1.0.0.dist-info/RECORD,,
+fixedpoint-1.0.0.dist-info/WHEEL,sha256=Vlaj2XNMTTJ893zWX-JvKeZUIs7q5E7d7Gise2Vouzc,97
+fixedpoint-1.0.0.dist-info/metadata.json,sha256=LC-HkD1mxBxQ14nJc6cCByjz1F9VexgYQUi6jz3ETms,1796
+fixedpoint-1.0.0.dist-info/top_level.txt,sha256=j89JKNWTAjMIWmwiGLCEdz-utUG0CIk4QHUAg53Shy8,11
