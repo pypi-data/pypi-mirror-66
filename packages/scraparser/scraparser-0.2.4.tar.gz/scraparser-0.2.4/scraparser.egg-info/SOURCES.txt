@@ -1,0 +1,14 @@
+README.md
+setup.py
+scraparser/__init__.py
+scraparser/__main__.py
+scraparser.egg-info/PKG-INFO
+scraparser.egg-info/SOURCES.txt
+scraparser.egg-info/dependency_links.txt
+scraparser.egg-info/requires.txt
+scraparser.egg-info/top_level.txt
+scraparser/scraparser/__init__.py
+scraparser/scraparser/csvtable.py
+scraparser/scraparser/googlesheet.py
+scraparser/scraparser/pdftable.py
+scraparser/scraparser/utils.py
