@@ -1,0 +1,12 @@
+README.md
+setup.py
+aws_cdk.zip_asset_code.egg-info/PKG-INFO
+aws_cdk.zip_asset_code.egg-info/SOURCES.txt
+aws_cdk.zip_asset_code.egg-info/dependency_links.txt
+aws_cdk.zip_asset_code.egg-info/requires.txt
+aws_cdk.zip_asset_code.egg-info/top_level.txt
+aws_cdk/zip_asset_code/__init__.py
+examples/example-cdk-lambda.py
+examples/example-lambda/handler.py
+examples/example-lambda/setup.py
+examples/example-lambda/dist/site-packages/handler.py

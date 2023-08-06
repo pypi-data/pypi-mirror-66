@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: aws-cdk.zip-asset-code
+Version: 1.0.0
+Summary: AWS CDK extension for aws-cdk.aws-lambda
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: ```python
+        from aws_cdk import aws_lambda as lambda_
+        from aws_cdk.zip_asset_code import ZipAssetCode
+        
+        lambda_.Function(stack, 'ExampleLambdaFunction',
+                         code=ZipAssetCode('example-lambda/'),
+                         handler='handler.handler',
+                         runtime=lambda_.Runtime.PYTHON_3_8)
+        ```
+        (snippet from [example-cdk-lambda.py](examples/example-cdk-lambda.py))
+        
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
