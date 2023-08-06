@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: sublime-cli
+Version: 0.0.1
+Summary: Abstraction to interact with Sublime API.
+Home-page: https://sublimesecurity.com/
+Author: Sublime Security
+Author-email: hello@sublimesecurity.com
+License: MIT
+Download-URL: https://github.com/sublime-security
+Description: UNKNOWN
+Platform: UNKNOWN
