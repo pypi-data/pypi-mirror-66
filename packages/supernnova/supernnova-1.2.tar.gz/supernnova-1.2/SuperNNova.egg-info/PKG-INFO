@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: supernnova
+Version: 1.2
+Summary: framework for Bayesian, Neural Network based supernova light-curve classification
+Home-page: https://github.com/supernnova/SuperNNova
+Author: Anais Moller and Thibault de Boissiere
+Author-email: anais.moller@clermont.in2p3.fr
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Provides-Extra: docs
