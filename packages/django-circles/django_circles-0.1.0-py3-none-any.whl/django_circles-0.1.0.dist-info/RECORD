@@ -1,0 +1,14 @@
+circles/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+circles/admin.py,sha256=JPwLJnfWgP7pY9OpuWlhrqmx5jqU4Xp7Zm5GwQ4QA34,141
+circles/apps.py,sha256=omKMiTS-fry9J9AJfFLU-zJtq7h-1qs4jvztVZuph0E,89
+circles/models.py,sha256=W15tze-k85RIf98EA_k_kYbzZTdJx2flWym0TlQ6WRY,736
+circles/tests.py,sha256=lrJ4GSVMlKtdlYxHonFLpgxYWLBhlLfTJJs3mDr-LLg,32
+circles/urls.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+circles/utils.py,sha256=jAnFcbRhbhdcw03bq9BG1mWQAaC6TdcgIvYrjkKA824,920
+circles/views.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+circles/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_circles-0.1.0.dist-info/LICENSE,sha256=-jVSmxtay12a3ruGY7gwPUX2c2HUxwDH73GC_HUR9rI,1069
+django_circles-0.1.0.dist-info/METADATA,sha256=5KgYvgCieNdohzQpQG4DGgKcASRPDxTpt4RDAnAbhtg,878
+django_circles-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_circles-0.1.0.dist-info/top_level.txt,sha256=hweerN0xImHV2nN_ojmYQIXCQgRKPoY0w4WmpcZ3R7g,8
+django_circles-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: django-circles
+Version: 0.1.0
+Summary: A Django app to create circles of collaborators.
+Home-page: https://github.com/yelluw/django-circles
+Author: Pablo Rivera
+Author-email: pryelluw@gmail.com
+License: MIT
+Keywords: django collaborators users circles
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.5
+
+A Django app to create circles of collaborators
+
+
