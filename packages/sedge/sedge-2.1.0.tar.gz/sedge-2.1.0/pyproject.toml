@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "sedge"
+version = "2.1.0"
+description = "Template and share OpenSSH ssh_config files."
+authors = ["Grahame Bowland <grahame@oreamnos.com.au>"]
+
+[tool.poetry.dependencies]
+python = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.4"
+
