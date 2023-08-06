@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+distest_check/Binomialdistribution.py
+distest_check/Gaussiandistribution.py
+distest_check/Generaldistribution.py
+distest_check/__init__.py
+distest_check.egg-info/PKG-INFO
+distest_check.egg-info/SOURCES.txt
+distest_check.egg-info/dependency_links.txt
+distest_check.egg-info/not-zip-safe
+distest_check.egg-info/top_level.txt
