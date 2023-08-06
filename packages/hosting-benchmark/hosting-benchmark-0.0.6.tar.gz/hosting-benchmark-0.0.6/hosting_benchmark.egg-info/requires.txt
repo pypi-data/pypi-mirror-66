@@ -1,0 +1,14 @@
+click
+requests
+terminaltables
+
+[dev]
+ipython
+twine
+pre-commit
+
+[test]
+mock
+munch
+pytest
+pytest-mock<3.0

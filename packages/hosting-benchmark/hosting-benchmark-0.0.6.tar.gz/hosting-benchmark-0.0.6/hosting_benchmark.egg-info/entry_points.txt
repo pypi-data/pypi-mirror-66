@@ -1,0 +1,3 @@
+[console_scripts]
+hosting-benchmark = hosting_benchmark.benchmark:cli
+
