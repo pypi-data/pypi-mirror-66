@@ -1,0 +1,11 @@
+README.md
+setup.py
+kodi_remotecontrol/__init__.py
+kodi_remotecontrol/eventclient.py
+kodi_remotecontrol/wsproxy.py
+kodi_remotecontrol.egg-info/PKG-INFO
+kodi_remotecontrol.egg-info/SOURCES.txt
+kodi_remotecontrol.egg-info/dependency_links.txt
+kodi_remotecontrol.egg-info/entry_points.txt
+kodi_remotecontrol.egg-info/requires.txt
+kodi_remotecontrol.egg-info/top_level.txt
