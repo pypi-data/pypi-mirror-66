@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: weather-history
+Version: 0.1.4
+Summary: get chinese city's weather history data
+Home-page: https://github.com/jim0575/desktop-tutorial
+Author: james
+Author-email: jim0575@qq.com
+License: MIT Licence
+Description: get chinese city's weather history data
+Keywords: pip,weather,history,china,city
+Platform: any
