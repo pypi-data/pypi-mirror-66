@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: mcthings
+Version: 0.5.1
+Summary: McThings is a python library for building things in Minecraft
+Home-page: https://github.com/juntosdesdecasa/mcthings
+Author: Alvaro del Castillo
+Author-email: alvaro.delcastillo@gmail.com
+License: ASL
+Keywords: development library minecraft buildings games
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+Requires-Dist: mcpi
+
+# McThings [![Documentation Status](https://readthedocs.org/projects/mcthings/badge/?version=latest)](https://mcthings.readthedocs.io/en/latest/?badge=latest)
+
+A framework for building a Scene with Things implemented using the
+[Raspberry PI Minecraft](https://www.minecraft.net/en-us/edition/pi/)
+[API](https://www.stuffaboutcode.com/p/minecraft-api-reference.html). It is based
+on [mcpi library](https://github.com/martinohanlon/mcpi).
+
+A Thing is a built based on blocks: [Pyramid](mcthings/pyramid.py), [River](mcthings/river.py),
+[House](mcthings/house.py), [Fence](mcthings/fence.py)
+and may others. All the Things share the [Thing API](mcthings/thing.py).
+
+A [Scene is a list](mcthings/scene.py) of Things built in a specific position. Scenes can be shared
+loading and saving them to a [files](tests/scene.mct). All the [tests](tests) are scenes. [This one](tests/scene.py) includes
+a river, a house in each side of the river and a bridge for crossing the river.
+
+![A Scene in Minecraft](scene.png)
+
