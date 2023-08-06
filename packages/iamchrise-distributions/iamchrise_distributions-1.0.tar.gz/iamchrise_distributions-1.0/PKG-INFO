@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: iamchrise_distributions
+Version: 1.0
+Summary: Gaussian and Binomial distributions
+Home-page: https://github.com/emichris/Distribution-Pakage-Files
+Author: Christian Emiyah
+Author-email: christian.emiyah@gmail.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Description: # iamchrise-distributions
+        
+        Package contains guassian and Binomial distribution objects. 
+        
+        # Files
+        setup.py - python set up file
+        Generaldistribuiton.py - python general distirbution class file
+        Binomialdistribuiton.py - python Binomial distirbution class file
+        Guassiandistribuiton.py - python Gaussian distirbution class file
+        
+        # Installation
+        pip install 
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
