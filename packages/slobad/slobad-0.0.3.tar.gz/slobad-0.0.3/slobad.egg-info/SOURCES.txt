@@ -1,0 +1,10 @@
+README.md
+setup.py
+slobad/__init__.py
+slobad/_wrappers.py
+slobad/slobad.py
+slobad.egg-info/PKG-INFO
+slobad.egg-info/SOURCES.txt
+slobad.egg-info/dependency_links.txt
+slobad.egg-info/requires.txt
+slobad.egg-info/top_level.txt
