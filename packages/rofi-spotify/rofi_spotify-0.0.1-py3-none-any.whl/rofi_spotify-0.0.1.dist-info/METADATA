@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: rofi-spotify
+Version: 0.0.1
+Summary: A Rofi menu for interacting with Spotify.
+Home-page: https://github.com/AnySomebody1/rofi-spotify
+Author: Any Somebody
+Author-email: anysomebody@gmx.de
+License: GPLv3+
+Platform: UNKNOWN
+Requires-Dist: python-rofi
+Requires-Dist: spotipy
+Requires-Dist: appdirs
+
+UNKNOWN
+
+
