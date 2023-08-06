@@ -1,0 +1,15 @@
+pyhumps
+requests
+cryptography
+pyopenssl
+idna
+furl
+boto3
+pandas
+numpy
+pyhopshive[thrift]
+
+[dev]
+pytest
+flake8
+black
