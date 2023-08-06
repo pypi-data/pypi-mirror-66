@@ -1,0 +1,17 @@
+pyssdb
+db3
+pydantic
+python-dotenv
+email-validator
+typing-extensions
+munch
+loguru
+fastapi
+uvicorn
+pytest
+pillow
+requests
+python-multipart
+aiofiles
+passlib[bcrypt]
+password_strength
