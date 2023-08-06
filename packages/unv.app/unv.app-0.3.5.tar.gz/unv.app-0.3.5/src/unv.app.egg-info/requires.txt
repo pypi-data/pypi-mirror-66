@@ -1,0 +1,15 @@
+cerberus
+unv.utils
+
+[dev]
+pylint
+pycodestyle
+pytest
+pytest-cov
+pytest-env
+pytest-pythonpath
+autopep8
+sphinx
+setuptools
+wheel
+twine
