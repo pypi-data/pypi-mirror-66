@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: python-gql
+Version: 0.0.9
+Summary: Python schema-first and auto-generate class graphql server
+License: MIT
+Author: ysun
+Author-email: sunyu418@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: graphql-core (>=3,<4)
+Requires-Dist: typing_extensions (>=3.7.4,<4.0.0); python_version < "3.8"
+Description-Content-Type: text/markdown
+
+# python-gql
+
+Schema-first python graphql library.
+
+## Install
+
+`pip install python-gql`
+
+## Use `gqlgen` command.
+
+### generate types
+
+`gqlgen ./schema.graphql types --kind=dataclass`
+
+### generator resolver
+
+`gqlgen ./schema.graphql resolver Query hello`
+
+### help info
+
+For more info about `gqlgen`, please use `gqlgen -h`
+
+
+TODO:
+- generate all field resolver
+
