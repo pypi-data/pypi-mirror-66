@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: eks-auth
+Version: 0.1.1
+Summary: Authentication tool, for IAM users to access EKS cluster.
+Home-page: https://github.com/ElDiabloRojo/eks_auth
+Author: Sam Holden
+Author-email: holdens.uk@googlemail.com
+License: MIT license
+Keywords: eks_auth
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+
+========
+eks_auth
+========
+
+
+.. image:: https://img.shields.io/pypi/v/eks_auth.svg
+        :target: https://pypi.python.org/pypi/eks_auth
+
+.. image:: https://img.shields.io/travis/ElDiabloRojo/eks_auth.svg
+        :target: https://travis-ci.com/ElDiabloRojo/eks_auth
+
+.. image:: https://readthedocs.org/projects/eks-auth/badge/?version=latest
+        :target: https://eks-auth.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+.. image:: https://pyup.io/repos/github/ElDiabloRojo/eks_auth/shield.svg
+     :target: https://pyup.io/repos/github/ElDiabloRojo/eks_auth/
+     :alt: Updates
+
+
+
+Authentication tool, for IAM users to access EKS cluster.
+
+
+* Free software: MIT license
+* Documentation: https://eks-auth.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2020-04-22)
+------------------
+
+* First release on PyPI.
+
+
