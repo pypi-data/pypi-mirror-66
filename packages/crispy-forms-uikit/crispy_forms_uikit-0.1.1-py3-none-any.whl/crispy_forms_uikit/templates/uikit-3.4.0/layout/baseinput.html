@@ -1,0 +1,7 @@
+{% if input.input_type != "hidden" %}
+    <button class="uk-button uk-button-default"
+            {% if input.id %}id="{{ input.id }}"{% endif %}
+            {{ input.flat_attrs|safe }}>
+        {{ input.value }}
+    </button>
+{% endif %}

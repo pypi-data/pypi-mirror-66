@@ -1,0 +1,64 @@
+{% load crispy_forms_field %}
+{% load crispy_forms_uikit %}
+
+{% if field.is_hidden %}
+    {{ field }}
+{% else %}
+{#    <div id="fooooooo_div_{{ field.auto_id }}"#}
+{#         class="{% if wrapper_class %} {{ wrapper_class }}{% endif %}{% if field|is_checkbox %} checkbox{% endif %}{% if field.css_classes %} {{ field.css_classes }}{% endif %}">{% spaceless %}#}
+
+        {% if field.label %}
+            {% if field|is_checkbox %}
+                {% crispy_field field %}
+            {% endif %}
+            <label{% if not fake_field %} for="form-stacked-field"{% endif %}{% if field.errors and form_show_errors or field.field.required %} class="{% if field.field.required %} required{% endif %}{% if field.errors and form_show_errors %} is-invalid-label{% endif %}"{% endif %}>
+                {{ field.label|safe }}{% if field.field.required %}{# <span class="asterisk">*</span> #}{% endif %}
+            </label>
+        {% endif %}
+
+        {% if field|is_checkboxselectmultiple %}
+            {% include 'layout/checkboxselectmultiple.html' %}
+        {% endif %}
+
+        {% if field|is_textarea %}
+
+            {% if field.help_text %}
+                {% with help_text=field.help_text %}
+                    {% crispy_field field 'class' 'uk-textarea' 'placeholder' help_text %}
+                {% endwith %}
+            {% else %}
+                {% crispy_field field 'class' 'uk-textarea' %}
+            {% endif %}
+
+        {% elif not field|is_checkbox and not field|is_checkboxselectmultiple %}
+
+            {% if field.help_text %}
+                {% with help_text=field.help_text %}
+                    {% crispy_field field 'class' 'uk-input' 'placeholder' help_text %}
+                {% endwith %}
+            {% else %}
+                {% crispy_field field 'class' 'uk-input' %}
+            {% endif %}
+
+        {% endif %}
+
+        {% if field.field.abide_msg %}
+            <span id="abide_error_{{ field.auto_id }}" class="form-error{% if form_show_errors and not field.errors|length_is:"0" %} compact{% endif %}" data-form-error-for="{{ field.id_for_label }}">
+                {{ field.field.abide_msg }}
+            </span>
+        {% endif %}
+
+        {% if form_show_errors %}
+            {% for error in field.errors %}
+                <span id="error_{{ forloop.counter }}_{{ field.auto_id }}" class="form-error is-visible{% if not forloop.last %} compact{% endif %}">
+                    {{ error }}
+                </span>
+            {% endfor %}
+        {% endif %}
+
+{#        {% if field.help_text %}#}
+{#            <label id="helptext_{{ field.auto_id }}" class="uk-form-label" for="from-stacked-select">{{ field.help_text | safe }}</label>#}
+{#        {% endif %}#}
+{#    {% endspaceless %}#}
+{#</div>#}
+{% endif %}
