@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: cremma
+Version: 0.0.3
+Summary: Cremma allows to create custom reports based on user-defined metrics.
+Home-page: https://github.com/jeanjean1/cremma
+Author: Jean-Felix Gerard
+Author-email: jfgerard@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+
+# compass
+
+CREMMA
+Custom Reports and Metrics Automation
+
+___TODO___
+
+
+
+___CHANGELOG___
+
+
