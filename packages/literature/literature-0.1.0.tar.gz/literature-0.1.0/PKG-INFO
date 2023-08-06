@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: literature
+Version: 0.1.0
+Summary: Literature card game implementation
+Home-page: https://github.com/neelsomani/literature
+Author: Neel Somani
+Author-email: neeljaysomani@gmail.com
+License: MIT
+Download-URL: https://github.com/neelsomani/literature/releases
+Description: UNKNOWN
+Keywords: machine-learning,q-learning,neural-network,artificial-intelligence,card-game
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Games/Entertainment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
