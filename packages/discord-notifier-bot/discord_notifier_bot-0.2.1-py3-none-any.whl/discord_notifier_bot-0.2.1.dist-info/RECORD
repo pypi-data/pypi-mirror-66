@@ -1,0 +1,11 @@
+discord_notifier_bot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+discord_notifier_bot/__main__.py,sha256=xIBoMzb8k7lgvZpRipnN-HEDgRom5a7L9nclUTa_XSk,81
+discord_notifier_bot/bot.py,sha256=Ae0H8DPbEofUupKfvZNpHPvZFQ7zMkrE7Nc_O5Eyx7A,10335
+discord_notifier_bot/cli.py,sha256=rDvpYkMYymuvzbn3m6u77b0JCHNRgV-BwEk3KdWLjXo,8783
+discord_notifier_bot/sysinfo.py,sha256=XqF3M9--sqSTrJll7zyuZDiK7zM3VyYyPWs0ZuloyWA,13938
+discord_notifier_bot-0.2.1.dist-info/LICENSE,sha256=LHJY-Xy_sN4igSs9HV5C7uQESJSNKA3Bo_MJgSPXo0E,1064
+discord_notifier_bot-0.2.1.dist-info/METADATA,sha256=eBgT7K3d649Wc2sqXzB78bwy7l4w5RA9HbpNAqTvQcA,10013
+discord_notifier_bot-0.2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+discord_notifier_bot-0.2.1.dist-info/entry_points.txt,sha256=0McSIDKSTO4stQbtkkG_LuQSkPjA0E070XuDK6KMV9g,260
+discord_notifier_bot-0.2.1.dist-info/top_level.txt,sha256=EyAD3wNMhfs5ErBs54xJwWOIYPkxz0P1vuqm8yeM5uc,21
+discord_notifier_bot-0.2.1.dist-info/RECORD,,
