@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pypollen
+Version: 0.1.5
+Summary: Provides an API for requesting information from Benadryls Social Pollen Count (https://benadryl.co.uk/social-pollen-count/)
+Home-page: https://github.com/kylegordon/pypollen
+Author: Kyle Gordon
+Author-email: kyle@glasgownet.com
+License: UNKNOWN
+Download-URL: https://github.com/kylegordon/pypollen/tarball/0.1.5
+Keywords: weather,pollen,allergy,environment,benadryl
+Platform: UNKNOWN
+Requires-Dist: datetime
+Requires-Dist: requests
+
+UNKNOWN
+
+
