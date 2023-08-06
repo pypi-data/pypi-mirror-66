@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: wavecell-py
+Version: 0.0.4
+Summary: Wavecell REST API Wrapper for Python
+Home-page: https://github.com/saggafarsyad/wavecell-python
+Author: Saggaf Arsyad
+Author-email: saggaf@nbs.co.id
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: phonenumbers
+Requires-Dist: requests
+
+Provide SMS and Mobile Verification integration for Python apps
+
+
