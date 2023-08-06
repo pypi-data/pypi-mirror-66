@@ -1,0 +1,9 @@
+README.md
+setup.py
+shajara/__init__.py
+shajara/create.py
+shajara/plot.py
+shajara.egg-info/PKG-INFO
+shajara.egg-info/SOURCES.txt
+shajara.egg-info/dependency_links.txt
+shajara.egg-info/top_level.txt
