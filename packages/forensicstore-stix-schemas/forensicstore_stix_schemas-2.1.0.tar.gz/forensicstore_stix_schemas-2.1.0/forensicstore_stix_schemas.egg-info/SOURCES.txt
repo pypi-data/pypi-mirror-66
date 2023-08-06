@@ -1,0 +1,8 @@
+README.md
+forensicstore_stix_schemas.py
+setup.py
+forensicstore_stix_schemas.egg-info/PKG-INFO
+forensicstore_stix_schemas.egg-info/SOURCES.txt
+forensicstore_stix_schemas.egg-info/dependency_links.txt
+forensicstore_stix_schemas.egg-info/entry_points.txt
+forensicstore_stix_schemas.egg-info/top_level.txt
