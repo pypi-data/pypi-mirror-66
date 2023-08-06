@@ -1,0 +1,15 @@
+limecore/database/postgresql/__init__.py,sha256=OXQlzdwPGi6-s008gUwgt0cK8Wkqt3QT-2BncfSzgaM,54
+limecore/database/postgresql/configuration.py,sha256=RGKVQWaxD-71BpfGG3jroepgN0PlZQx7AVwkuspZzts,1119
+limecore/database/postgresql/database.py,sha256=oQju8lhIeljtph_0eUF_1R06-oZZOfBwuWPRI_e9lCE,1661
+limecore/database/postgresql/module.py,sha256=u3DMWzP0TehQ4_CJJxODG5J-T7E-B5ogBvOGJebaPGo,2153
+limecore/database/postgresql/result.py,sha256=RwdmQxAsiMBtGzjZcJp8KjatxNOMnw9dMPhlMP6CufE,1036
+limecore/database/postgresql/type_adapter.py,sha256=w3nY4oXyyITSqgKV5rOfcvW1cRFORsBIuUePkt6nxHM,976
+limecore/database/postgresql/type_adapters/__init__.py,sha256=-0Urh6b-mn-52yVUz9TLMUzz-X-sWc1B1zYwjPmlS8E,226
+limecore/database/postgresql/type_adapters/base_type_adapter.py,sha256=QDFVXCQ-YsAWS4ANpCsg_Wf_-LX7VJu1NYSRg3BEU4A,348
+limecore/database/postgresql/type_adapters/default_type_adapter.py,sha256=a272WOB1y_N6QBpiDt9Blc8l1YjbpQ8vc-YN7tO4bzk,366
+limecore/database/postgresql/type_adapters/uuid_type_adapter.py,sha256=TkNCY245tTjkcVLqJHuHozKWyuo_PWYnoYRPdD0PBEM,386
+limecore_database_postgresql-0.1.0.dist-info/LICENSE.txt,sha256=a8A0bk3wkc3CeBUjXW59ke5s1Maz2eDSS253mpEq6R8,1072
+limecore_database_postgresql-0.1.0.dist-info/METADATA,sha256=nXs5xCAzOIHv709jGJ8d2bSXMNH6Crm6WHmzucRxCFo,721
+limecore_database_postgresql-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+limecore_database_postgresql-0.1.0.dist-info/top_level.txt,sha256=AjPBLv5vIXBO-4Fnsaxh2pp8remUg9pPUX3WD7f2_TA,9
+limecore_database_postgresql-0.1.0.dist-info/RECORD,,
