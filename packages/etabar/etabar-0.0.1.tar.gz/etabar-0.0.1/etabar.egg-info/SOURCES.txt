@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+etabar/ETA.py
+etabar/__init__.py
+etabar.egg-info/PKG-INFO
+etabar.egg-info/SOURCES.txt
+etabar.egg-info/dependency_links.txt
+etabar.egg-info/not-zip-safe
+etabar.egg-info/top_level.txt
