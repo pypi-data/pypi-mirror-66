@@ -1,0 +1,8 @@
+certifi
+chardet
+idna
+python-dateutil
+requests
+six
+urllib3
+setuptools
