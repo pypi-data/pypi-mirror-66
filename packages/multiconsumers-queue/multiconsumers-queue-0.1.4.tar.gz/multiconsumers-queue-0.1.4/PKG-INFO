@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: multiconsumers-queue
+Version: 0.1.4
+Summary: Wrapper for queue based producer/consumers parallel tasks execution
+Home-page: https://github.com/IaroslavR/multiconsumers-queue
+License: MIT
+Keywords: threading,queue,wrapper
+Author: Iaroslav Russkykh
+Author-email: iarruss@ya.ru
+Requires-Python: >=3.7,<3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: click
+Provides-Extra: dev
+Provides-Extra: docs
+Requires-Dist: arrow (>=0.15.5,<0.16.0)
+Requires-Dist: attrs (>=19.3.0,<20.0.0)
+Requires-Dist: black (>=19.10b0,<20.0); extra == "dev"
+Requires-Dist: click (>=7.1.1,<8.0.0); extra == "click"
+Requires-Dist: coverage (>=5.1,<6.0); extra == "dev"
+Requires-Dist: darglint (>=1.2.3,<2.0.0); extra == "dev"
+Requires-Dist: flake8 (>=3.7.9,<4.0.0); extra == "dev"
+Requires-Dist: flake8-annotations (>=2.1.0,<3.0.0); extra == "dev"
+Requires-Dist: flake8-bandit (>=2.1.2,<3.0.0); extra == "dev"
+Requires-Dist: flake8-black (>=0.1.1,<0.2.0); extra == "dev"
+Requires-Dist: flake8-bugbear (>=20.1.4,<21.0.0); extra == "dev"
+Requires-Dist: flake8-docstrings (>=1.5.0,<2.0.0); extra == "dev"
+Requires-Dist: flake8-import-order (>=0.18.1,<0.19.0); extra == "dev"
+Requires-Dist: loguru (>=0.4.1,<0.5.0)
+Requires-Dist: m2r (>=0.2.1,<0.3.0); extra == "docs"
+Requires-Dist: mypy (>=0.770,<0.771); extra == "dev"
+Requires-Dist: pre-commit (>=2.3.0,<3.0.0); extra == "dev"
+Requires-Dist: pytest (>=5.4.1,<6.0.0); extra == "dev"
+Requires-Dist: pytype (>=2020.4.22,<2021.0.0); extra == "dev"
+Requires-Dist: safety (>=1.8.7,<2.0.0); extra == "dev"
+Requires-Dist: sphinx (==2.3.1); extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints (>=1.10.3,<2.0.0); extra == "docs"
+Requires-Dist: sphinx-rtd-theme (>=0.4.3,<0.5.0); extra == "docs"
+Requires-Dist: toml (>=0.10.0,<0.11.0); extra == "dev" or extra == "docs"
+Requires-Dist: typeguard (>=2.7.1,<3.0.0); extra == "dev"
+Project-URL: Documentation, http://multiconsumers-queue.rtfd.io/
+Project-URL: Repository, https://github.com/IaroslavR/multiconsumers-queue
+Project-URL: issues, https://github.com/IaroslavR/multiconsumers-queue-cli/issues
+Description-Content-Type: text/markdown
+
+<p>
+<a href="https://www.python.org/downloads/release/python-370"><img alt="Python 3.7" src="https://img.shields.io/badge/python-3.7-blue.svg"></a>
+<a href="https://github.com/ambv/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+<a href='https://multiconsumers-queue.readthedocs.io/en/latest/?badge=latest'>
+    <img src='https://readthedocs.org/projects/multiconsumers-queue/badge/?version=latest' alt='Documentation Status' />
+</a>
+</p>
+
+# multiconsumers-queue-cli
+Wrapper for queue based producer/consumers parallel tasks execution
+
+#### Futures:
+- graceful shutdown by ^C
+- producer/consumer errors handling out of the box
+- scheduled tasks statistics logging
+
+#### Examples:
+- [with ThreadPoolExecutor](examples/cli-threads.py) for I/O bound tasks
+    ```
+    Usage: cli-threads.py [OPTIONS]
+
+      Demo script with ThreadPoolExecutor
+
+    Options:
+      --workers INTEGER     How many workers will be started  [default: 5]
+      --limit INTEGER       How many items can be produced  [default: 50]
+      --logging-level TEXT  Logging level  [default: INFO]
+      --help                Show this message and exit.
+    ```
+
+#### References:
+- [Concurrency with Python: Threads and Locks](https://bytes.yingw787.com/posts/2019/01/12/concurrency_with_python_threads_and_locks/)
+- [The tragic tale of the deadlocking Python queue](https://codewithoutrules.com/2017/08/16/concurrency-python/)
+- [Hypermodern Python](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/#setting-up-a-python-project-using-poetry)
+
