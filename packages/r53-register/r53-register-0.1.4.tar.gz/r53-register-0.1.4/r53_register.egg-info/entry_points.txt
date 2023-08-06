@@ -1,0 +1,3 @@
+[console_scripts]
+r53-register = r53_register.cli:main
+

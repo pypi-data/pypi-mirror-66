@@ -1,0 +1,10 @@
+README.md
+setup.py
+r53_register/__init__.py
+r53_register/cli.py
+r53_register.egg-info/PKG-INFO
+r53_register.egg-info/SOURCES.txt
+r53_register.egg-info/dependency_links.txt
+r53_register.egg-info/entry_points.txt
+r53_register.egg-info/requires.txt
+r53_register.egg-info/top_level.txt
