@@ -1,0 +1,11 @@
+sphinx>=1.2
+
+sphinx-autodoc-annotation
+
+-e .
+sleekxmpp
+irc
+pyfire
+python-telegram-bot
+slackclient
+hypchat
