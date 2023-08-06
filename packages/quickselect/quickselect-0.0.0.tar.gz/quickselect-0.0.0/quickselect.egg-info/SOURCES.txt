@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+quickselect/__init__.py
+quickselect.egg-info/PKG-INFO
+quickselect.egg-info/SOURCES.txt
+quickselect.egg-info/dependency_links.txt
+quickselect.egg-info/top_level.txt
