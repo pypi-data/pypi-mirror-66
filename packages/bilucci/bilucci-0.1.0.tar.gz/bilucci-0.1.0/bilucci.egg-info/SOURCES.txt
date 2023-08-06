@@ -1,0 +1,11 @@
+README.md
+setup.py
+bilucci/__init__.py
+bilucci/__main__.py
+bilucci/bilucci_bot.py
+bilucci/version.py
+bilucci.egg-info/PKG-INFO
+bilucci.egg-info/SOURCES.txt
+bilucci.egg-info/dependency_links.txt
+bilucci.egg-info/requires.txt
+bilucci.egg-info/top_level.txt
