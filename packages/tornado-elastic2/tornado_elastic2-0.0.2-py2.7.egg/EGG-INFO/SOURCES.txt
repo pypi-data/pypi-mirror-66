@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+tornado_elastic2/__init__.py
+tornado_elastic2/utils.py
+tornado_elastic2.egg-info/PKG-INFO
+tornado_elastic2.egg-info/SOURCES.txt
+tornado_elastic2.egg-info/dependency_links.txt
+tornado_elastic2.egg-info/requires.txt
+tornado_elastic2.egg-info/top_level.txt
