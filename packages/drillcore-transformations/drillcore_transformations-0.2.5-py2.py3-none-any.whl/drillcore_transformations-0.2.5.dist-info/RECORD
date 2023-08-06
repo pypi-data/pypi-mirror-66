@@ -1,0 +1,12 @@
+drillcore_transformations/__init__.py,sha256=FK4rCP-or6aOd36HOUTQymNzGo45oC7MpOysjjIOkGE,158
+drillcore_transformations/cli.py,sha256=T7vV2Wv39tnsOzGXdA3mLrvxi41O3BKxL-sAbtWMTjA,4074
+drillcore_transformations/transformations.py,sha256=kzfl6-XCfY56deyUMjU7TRwIiEtidi1Nix1o26KwU20,10644
+drillcore_transformations/usage.py,sha256=dopsFe39MkqdAxd2KUsYzZMJnCdsJth1WFytRMYC-dc,28215
+drillcore_transformations/visualizations.py,sha256=p10vxYveY4K4ZuqjD_2jaGHErjt3d4T8MdlR1Ag25TI,2824
+drillcore_transformations-0.2.5.dist-info/AUTHORS.rst,sha256=uBYH8FkudybXtz6-3mHOBfxUES3bY1JT8Cq04v3a1Hk,140
+drillcore_transformations-0.2.5.dist-info/LICENSE,sha256=dR15LzCwzB3g5cLsZZd7rqQqwzcFagUx8HiOBanE8ws,897
+drillcore_transformations-0.2.5.dist-info/METADATA,sha256=1xkip9Z1b96GtNI-TVWtu5epYvJ2Hlovf-QevXGP9Jg,2669
+drillcore_transformations-0.2.5.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+drillcore_transformations-0.2.5.dist-info/entry_points.txt,sha256=suZwwQI4_agNICSkf4x86Uxp4UCM9QCD9SDxYXfQARw,74
+drillcore_transformations-0.2.5.dist-info/top_level.txt,sha256=za1PAfd_aJqgMGxPqjt0Q6FYH_lj-F9kCPkoB7gywmI,26
+drillcore_transformations-0.2.5.dist-info/RECORD,,
