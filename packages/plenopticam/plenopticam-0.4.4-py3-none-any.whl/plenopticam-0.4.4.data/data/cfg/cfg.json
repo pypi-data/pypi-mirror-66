@@ -1,0 +1,26 @@
+{
+    "cal_meta": "/Users/Admin/Pictures/Plenoptic/Plenoptic-Compilation-vol1/B5144402350/mod_0002.json",
+    "cal_path": "/Users/Admin/Pictures/Plenoptic/Plenoptic-Compilation-vol1/caldata-B5144402350.tar",
+    "dir_remo": 0,
+    "lfp_path": "/Users/Admin/Pictures/Plenoptic/Plenoptic-Compilation-vol1/crab_stone.lfr",
+    "opt_arti": 0,
+    "opt_awb_": 0,
+    "opt_cali": 0,
+    "opt_colo": 1,
+    "opt_cont": 0,
+    "opt_dbug": 0,
+    "opt_lier": 0,
+    "opt_pflu": 0,
+    "opt_prnt": 1,
+    "opt_refi": 1,
+    "opt_refo": 1,
+    "opt_rota": 0,
+    "opt_sat_": 0,
+    "opt_view": 1,
+    "opt_vign": 0,
+    "ptc_leng": 7,
+    "ran_refo": [
+        0,
+        3
+    ]
+}
