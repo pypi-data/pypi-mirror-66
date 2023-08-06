@@ -1,0 +1,17 @@
+{% load static %}
+<!-- templates/home.html -->
+{% if debug %}
+  <p>Tarjeta : 4242 4242 4242 4242</p>
+{% endif %}
+<form action="{% url 'urlPago' %}" method="post">
+  {% csrf_token %}
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="{{key}}"
+    data-amount="{{cantidad_final}}"
+    data-name="{{tituloPago}}"
+    data-description="{{descripcion}}"
+    data-currency="mxn"
+    data-image="{% static logo %}"
+    data-locale="auto">
+  </script>
+</form>
