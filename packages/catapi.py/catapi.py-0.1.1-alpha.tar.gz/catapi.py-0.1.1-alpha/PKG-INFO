@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: catapi.py
+Version: 0.1.1-alpha
+Summary: A python wrapper for thecatapi.com
+Home-page: https://github.com/user/reponame
+Author: Ephreal
+Author-email: contact@mylifeneeds.management
+License: MIT
+Download-URL: https://github.com/ephreal/catapi.py/archive/v0.1.1-alpha.tar.gz
+Description: UNKNOWN
+Keywords: cats,catapi
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
