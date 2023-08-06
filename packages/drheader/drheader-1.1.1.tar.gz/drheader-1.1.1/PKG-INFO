@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: drheader
+Version: 1.1.1
+Summary: DrHEADer helps with the audit of security headers received in response to a single request or a list of requests.
+Home-page: https://github.com/santandersecurityresearch/drheader
+Author: Santander UK Security Engineering
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: drheader
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Environment :: Console
+Classifier: Topic :: Security
