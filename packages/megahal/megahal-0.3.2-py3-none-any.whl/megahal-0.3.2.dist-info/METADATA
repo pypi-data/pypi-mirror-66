@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: megahal
+Version: 0.3.2
+Summary: Python implementation of megahal markov bot (fork)
+Home-page: https://github.com/Eboreg/megahal
+Author: Chris Jones, Robert Huselius
+Author-email: robert@huseli.us
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Requires-Dist: python-Levenshtein
+
+UNKNOWN
+
+
