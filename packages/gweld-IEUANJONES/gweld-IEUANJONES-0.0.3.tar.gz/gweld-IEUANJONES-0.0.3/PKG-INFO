@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: gweld-IEUANJONES
+Version: 0.0.3
+Summary: A simple charting library
+Home-page: https://github.com/ieuanjones/gweld
+Author: Ieuan Jones
+Author-email: ieujon@googlemail.com
+License: UNKNOWN
+Description: Gweld
+        -----
+        
+        A simple Python charting library for generating SVGs.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
