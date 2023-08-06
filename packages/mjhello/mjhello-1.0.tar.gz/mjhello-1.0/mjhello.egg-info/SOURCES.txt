@@ -1,0 +1,6 @@
+README.md
+setup.py
+mjhello.egg-info/PKG-INFO
+mjhello.egg-info/SOURCES.txt
+mjhello.egg-info/dependency_links.txt
+mjhello.egg-info/top_level.txt
