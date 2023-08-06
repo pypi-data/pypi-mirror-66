@@ -1,0 +1,8 @@
+scrapy_pyppeteer/__init__.py,sha256=R9xOYoYrWKcfO5zvTeGC3m_eDNOvxMd8CocQs2tLufo,22
+scrapy_pyppeteer/handler.py,sha256=25PyQXBeNllH75IwYYU3GN_ROEEiTtsj2-yfn1zL2k8,5849
+scrapy_pyppeteer/page.py,sha256=m3bqpqk4mGnGwg3RtxLbAudTOkK4wIiFyLDjcb9vo9k,717
+scrapy_pyppeteer-0.0.7.dist-info/LICENSE,sha256=irgaybyKbgi_FWAP_B5YejcPBH0Amj-mtT0O6bmr0A0,1461
+scrapy_pyppeteer-0.0.7.dist-info/METADATA,sha256=R6BIw9o1lAInCNqhWOX6U2C7FrSCO0uqQC1or8U9ClE,9012
+scrapy_pyppeteer-0.0.7.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+scrapy_pyppeteer-0.0.7.dist-info/top_level.txt,sha256=e1LjX3jRJyKcZ1lLCg96g62P0CWTnuVE_M5nUIyE0VQ,17
+scrapy_pyppeteer-0.0.7.dist-info/RECORD,,
