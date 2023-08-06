@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: edge-gravity
+Version: 0.1.0
+Summary: Calculates Edge Gravity for a given networkx DiGraph
+Home-page: https://github.com/luerhard/edge_gravity/
+Author: Lukas Erhard
+Author-email: luerhard@googlemail.com
+License: MIT
+Description: use 'from edge_gravity.edge_gravity import edge_gravity to use
+Keywords: edge gravity network networkx graph edgegravity
+Platform: UNKNOWN

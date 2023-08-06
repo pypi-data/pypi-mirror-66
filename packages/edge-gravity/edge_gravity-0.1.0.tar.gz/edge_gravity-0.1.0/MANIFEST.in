@@ -1,0 +1,4 @@
+include tests
+include README.md
+include edge_gravity/edge_gravity.pyx
+include edge_gravity/edge_gravity.c
