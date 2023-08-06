@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+requirments.txt
+setup.py
+src/webdriverutils.py
+src/d_utils.egg-info/PKG-INFO
+src/d_utils.egg-info/SOURCES.txt
+src/d_utils.egg-info/dependency_links.txt
+src/d_utils.egg-info/requires.txt
+src/d_utils.egg-info/top_level.txt
