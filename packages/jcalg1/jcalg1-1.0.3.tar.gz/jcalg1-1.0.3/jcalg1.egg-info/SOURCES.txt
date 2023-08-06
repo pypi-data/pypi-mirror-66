@@ -1,0 +1,8 @@
+README.md
+setup.py
+jcalg1.egg-info/PKG-INFO
+jcalg1.egg-info/SOURCES.txt
+jcalg1.egg-info/dependency_links.txt
+jcalg1.egg-info/top_level.txt
+src/jcalg1.h
+src/main.cpp
