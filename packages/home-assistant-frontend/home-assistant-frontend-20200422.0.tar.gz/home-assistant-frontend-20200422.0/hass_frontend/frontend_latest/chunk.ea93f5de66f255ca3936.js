@@ -1,0 +1,2 @@
+(self.webpackJsonp=self.webpackJsonp||[]).push([[227],{811:function(e,r,n){"use strict";n.r(r);var t=n(436);n.d(r,"createBadgeElement",function(){return t.a});var a=n(319);n.d(r,"createCardElement",function(){return a.a});var c=n(365);n.d(r,"createHeaderFooterElement",function(){return c.a});var u=n(518);n.d(r,"createHuiElement",function(){return u.a});var o=n(358);n.d(r,"createRowElement",function(){return o.a})}}]);
+//# sourceMappingURL=chunk.ea93f5de66f255ca3936.js.map
