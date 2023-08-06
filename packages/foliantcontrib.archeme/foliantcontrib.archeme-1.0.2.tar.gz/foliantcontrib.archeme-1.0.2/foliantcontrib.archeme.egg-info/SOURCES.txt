@@ -1,0 +1,8 @@
+README.md
+setup.py
+foliant/preprocessors/archeme.py
+foliantcontrib.archeme.egg-info/PKG-INFO
+foliantcontrib.archeme.egg-info/SOURCES.txt
+foliantcontrib.archeme.egg-info/dependency_links.txt
+foliantcontrib.archeme.egg-info/requires.txt
+foliantcontrib.archeme.egg-info/top_level.txt
