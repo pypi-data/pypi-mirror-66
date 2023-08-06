@@ -1,0 +1,33 @@
+- job:
+    name: zaqar-tempest-plugin-tempest-mongodb
+    parent: zaqar-tempest-base
+    vars:
+      database_backend: mongodb
+
+- job:
+    name: zaqar-tempest-plugin-tempest-redis
+    parent: zaqar-tempest-base
+    vars:
+      database_backend: redis
+
+- job:
+    name: zaqar-tempest-plugin-tempest-swift
+    parent: zaqar-tempest-base
+    vars:
+      database_backend: swift
+
+- project:
+    templates:
+      - check-requirements
+      - tempest-plugin-jobs
+    check:
+      jobs:
+        - zaqar-tempest-plugin-tempest-redis
+        - zaqar-tempest-plugin-tempest-swift
+        - zaqar-tempest-plugin-tempest-mongodb
+    gate:
+      queue: zaqar
+      jobs:
+        - zaqar-tempest-plugin-tempest-redis
+        - zaqar-tempest-plugin-tempest-swift
+        - zaqar-tempest-plugin-tempest-mongodb
