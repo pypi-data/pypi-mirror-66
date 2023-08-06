@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ananke-causal
+Version: 0.1
+Summary: Python
+Home-page: UNKNOWN
+Author: Rohit Bhattacharya
+Author-email: rbhatta8@jhu.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: networkx
+Requires-Dist: graphviz
+Requires-Dist: autograd
+Requires-Dist: scipy
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: statsmodels
+
+UNKNOWN
+
+
