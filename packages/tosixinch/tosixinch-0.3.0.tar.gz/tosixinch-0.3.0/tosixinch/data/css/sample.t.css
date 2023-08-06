@@ -1,0 +1,349 @@
+
+@page {
+    size: {{ size }};
+    margin: 1%;
+}
+
+html { page-break-before: always; }
+
+body {
+    font-family: {{ font_family }};
+    font-size: {{ font_size|scale }};
+    line-height: {{ line_height }};
+    color: black;
+}
+
+/* http://pythonhosted.org/feedparser uses 'div.pre'. */
+/* some ebook publisher and calibre seem to create pre1 etc. in div and p */
+pre, code, kbd, samp, tt, div.pre, figcaption,
+div.pre1, div.pre2, div.pre3, div.pre4, div.pre5
+{
+    font-family: {{ font_mono }};
+    font-size: {{ font_size_mono|scale }};
+}
+
+/* h1-h5 scaling is 1.2. */
+/* tabale scaling is 1.125. */
+/* note: somehow 'rem' doesn't render well */
+h1 { font-size: 2.074em; }
+h2 { font-size: 1.728em; }
+h3 { font-size: 1.44em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; }
+table { font-size: .889em; }
+
+
+pre, div.pre {
+    white-space: pre-wrap;
+    border: 1px solid;
+    border-color: lightgray;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid lightgray;
+    page-break-inside: avoid;
+    /* NG: cells are too bloat */
+    /* white-space: pre-wrap; */
+}
+
+/* 'groff -Thtml' and news.ycombinator.com use html attribute border="0" */
+table[border="0"],
+table[border="0"] th,
+table[border="0"] td
+{
+    border: 0;
+}
+
+/* https://stackoverflow.com/questions/18401707/is-it-possible-to-merge-two-table-borders-into-one-another */
+/* table + table, */
+/* table + table tr:first-child > * { */
+/*     border-top: 0; */
+/* } */
+
+img, figure {
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    /* max-height: 100%; */
+}
+
+img.tsi-wide {
+    width: 100%;
+}
+
+img.tsi-tall {
+    height: {{ height|percent98 }};
+}
+
+/* img.tsi-small { */
+/*     width: 10%; */
+/* } */
+
+
+/* Reduce margins as much as reasonable.*/
+/* cf. prince has 'li::marker' */
+
+blockquote {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+dd {
+    margin-left: 2%;
+}
+
+ul, menu, dir, ol {
+    margin: 0%;
+    padding: 0%;
+    /* margin-left: 3em; */
+    padding-left: 3em;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+    padding-left: 1em;
+}
+
+/* li { */
+/*     margin: 0%; */
+/*     padding: 0%; */
+/* } */
+
+
+/* https://stackoverflow.com/a/4151770 */
+hr {
+    border: none;
+    height: 1px;
+    background-color: gray;
+}
+
+/* Default font colors for 'a' (blue or gray) are actually more unpleasant in B&W screen. */
+a:link { color: inherit; }
+
+
+/* Permalink marks (pilcrow sign, U+00B6) are ugly most of the times */
+.anchor-link, .headerlink {
+    display: none;
+    /* visibility: hidden; */
+}
+
+/* When you use process.gen.make_ahref_visible, this class attribute is added. */
+span.tsi-href-visible {
+    font-size: .7em;
+}
+
+/* For mathjax */
+span.MathJax {
+    /* font-family: "Latin Modern Roman", {{ font_mono }}; */
+    font-family: {{ font_mono }};
+    font-size: {{ font_size_mono|scale }};
+}
+span.MathJax > nobr[aria-hidden] {
+    display: none;
+}
+
+
+/* prince --------------------------------------------------------- */
+{% if prince %}
+
+/* Make space for prince logo. */
+@page :first {
+    margin-top: 60px;
+}
+
+h1 { prince-bookmark-level: {{ bm1 }} }
+h2 { prince-bookmark-level: {{ bm2 }} }
+h3 { prince-bookmark-level: {{ bm3 }} }
+h4 { prince-bookmark-level: {{ bm4 }} }
+h5 { prince-bookmark-level: {{ bm5 }} }
+h6 { prince-bookmark-level: {{ bm6 }} }
+
+/* NG: Prince displays permalinks in pdf bookmarks. */
+/* h1, h2, h3 { prince-bookmark-label: text() } */
+
+
+a:link {
+    text-underline-color: #454545;
+}
+
+
+/* NG: for long left margins (mako doc)  */
+/* ul, menu, dir, ol { */
+/*     padding-inline-start: 1%; */
+/* } */
+
+
+/* prince exposes raw strings in noscript tags. */
+/* https://www.princexml.com/forum/topic/2562/junk-between-noscript-tags-getting-put-into-html */
+noscript { display: none }
+
+
+/* When using '--no-default-style' in commandline, */
+/* we need to copy some basic content rendering css from 'prince_html.css' */
+/* (It is included in prince installation). */
+/* Without this, no image is rendered. */
+
+/* img, embed { */
+/*     display: inline-block; */
+/*     content: prince-fallback(attr(src, url)), attr(alt) */
+/* } */
+/* object { */
+/*     display: inline-block; */
+/*     content: prince-fallback(attr(data, url)) */
+/* } */
+
+/* embed[type="application/x-shockwave-flash"], */
+/* object[type="application/x-shockwave-flash"] { */
+/*     display: table-cell; */
+/*     width: attr(width, px); */
+/*     height: attr(height, px); */
+/*     content: "Flash"; */
+/*     background: #f0f0f0; */
+/*     color: black; */
+/*     font: bold 12px sans-serif; */
+/*     text-align: center; */
+/*     vertical-align: middle */
+/* } */
+
+/* br { */
+/*     content: '\A'; */
+/*     white-space: pre; */
+/*     background: none */
+/* } */
+
+/* br[clear="left"] { clear: left } */
+/* br[clear="right"] { clear: right } */
+/* br[clear="all"] { clear: both } */
+
+/* q::before { content: "\201C" } */
+/* q::after { content: "\201D" } */
+/* q:lang(fr)::before { content: "\AB" } */
+/* q:lang(fr)::after { content: "\BB" } */
+/* q:lang(de)::before { content: "\201E" } */
+/* q:lang(de)::after { content: "\201C" } */
+
+
+/* TODO: I don't understand how to set fonts in prince */
+/* http://www.princexml.com/forum/topic/3066/font-family-font-face-issues */
+/* 'In Prince, once you have one @font-face rule for Verdana it won't check the system font.' */
+/* @font-face { */
+    /* font-family: "DejaVu Sans"; */
+    /* src: local("DejaVu Sans"); */
+    /* src: prince-lookup("DejaVu Sans") */
+    /* font-family: sans-serif; */
+
+    /* unicode-range: U+3040-309F, U+30A0-30FF, U+4E00-9FBF; */
+
+    /* src: prince-lookup("Source Han Sans JP") */
+/* } */
+
+{% endif %}
+
+
+/* weasyprint ----------------------------------------------------- */
+{% if weasyprint %}
+
+div.tsi-body-merged { page-break-before: always; }
+
+h1 { bookmark-level: {{ bm1 }} }
+h2 { bookmark-level: {{ bm2 }} }
+h3 { bookmark-level: {{ bm3 }} }
+h4 { bookmark-level: {{ bm4 }} }
+h5 { bookmark-level: {{ bm5 }} }
+h6 { bookmark-level: {{ bm6 }} }
+
+
+a:link {
+    text-decoration: underline solid #454545;
+}
+
+
+/* NG: Tables are cripped */
+/* https://github.com/Kozea/WeasyPrint/issues/36 */
+/* https://github.com/Kozea/WeasyPrint/issues/198 */
+/* table, thead, tbody, tfoot, tr, th, td { display: block; } */
+/* * { float: none !important; } */
+
+{% endif %}
+
+
+/* wkhtmltopdf ---------------------------------------------------- */
+{% if wkhtmltopdf %}
+
+/* Stable wkhtmltopdf(0.12.4) uses Qt4.8, which uses QtWebKit 2.1 */
+/* https://github.com/wkhtmltopdf/qt */
+/* http://doc.qt.io/qt-4.8/qtwebkit-guide.html */
+
+/* wkhtmltopdf (Qt4 versions) doesn't support '@page' rule. */
+/* So page size and margin should be proveided by commandline options. */
+/* (--page-width, --page-height, -B, -L, -R, -T) */
+
+
+/* NG */
+/* a:link { */
+/*     -webkit-text-decoration: underline solid #454545; */
+/* } */
+
+
+blockquote {
+    -webkit-margin-start: 2%;
+    -webkit-margin-end: 2%;
+}
+dd {
+    -webkit-margin-start: 2%;
+}
+ul, menu, dir, ol {
+    -webkit-padding-start: 2%;
+}
+
+
+/* Bug: images */
+/* With 'max-height', no images are rendered. */
+/* Halfway solution of setting to 'none' seems OK. */
+/* https://github.com/wkhtmltopdf/wkhtmltopdf/issues/2836 */
+/* https://github.com/wkhtmltopdf/wkhtmltopdf/issues/1726 */
+img, figure {
+    max-height: none;
+}
+
+/* Bug: thead */
+/* https://github.com/wkhtmltopdf/wkhtmltopdf/issues/1770 */
+/* thead { display: table-header-group } */
+tfoot { display: table-row-group }
+tr { page-break-inside: avoid }
+/* https://github.com/wkhtmltopdf/wkhtmltopdf/issues/1524 */
+/* thead, tfoot { display: table-row-group } */
+
+{% endif %}
+
+
+/* css for text --------------------------------------------------- */
+
+pre.tsi-text {
+    border: none;
+}
+
+h1.tsi-text, h2.tsi-text, h3.tsi-text, h4.tsi-text {
+    font: inherit;
+    font-weight: bold;
+}
+
+h2.tsi-text, h3.tsi-text, h4.tsi-text {
+    display: inline;
+}
+
+span.tsi-text {
+    font-weight: bold;
+}
+
+/* When '--toc' */
+div.tsi-body-merged > h2.tsi-text {
+    display: block;
+    page-break-before: always;
+    font-size: larger;
+}
