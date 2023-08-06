@@ -1,0 +1,11 @@
+model_editor/__init__.py,sha256=RnyJBHXTPBUd80E28pOgUn4OEapLOwWB4aFXfLo6Hoc,112
+model_editor/apps.py,sha256=mWLPs3-_ZbT8heRXQb9i6-_NQgHbixqEIHQH3_2ddhE,93
+model_editor/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+model_editor/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+model_editor/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+model_editor/management/commands/edit.py,sha256=N7ApOtgCydix6h6Mr07BHObvhIM7NTRixkNpMnCuMmI,1284
+django_model_editor-0.0.1.dist-info/METADATA,sha256=dISswRYNdSbzR6VmwAAubVDEOdor0BVY4XQ52JbYNO4,841
+django_model_editor-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_model_editor-0.0.1.dist-info/top_level.txt,sha256=JvOBgF5eh8NqAthVimpqggLINMpTEuaifU76WVprI3k,13
+django_model_editor-0.0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+django_model_editor-0.0.1.dist-info/RECORD,,
