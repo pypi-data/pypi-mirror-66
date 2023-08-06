@@ -1,0 +1,15 @@
+virga/__init__.py,sha256=rvdnik1y3DwyJLvCGLmh8CkM4OUPPaEfDy-raTPkQrs,257
+virga/calc_mie.py,sha256=6CUFpKYiYRxa04SzvJtP0GXdQZMAb0CtsIYnpEDXic0,17860
+virga/compare_plots.py,sha256=qS6eDQ3CX1Tdz6qHrfsrc3h3XZj8I0DwyznwCcDUaHA,11229
+virga/direct_mmr_solver.py,sha256=uLXil9XyGm2M67ACUpdOtdHJhXmxJg7DjWFJX8QKH80,15672
+virga/gas_properties.py,sha256=34VTQFJkLiIs9-VPFg2Bo2l7J__MLCvLh8W9n8eu6NU,4828
+virga/justdoit.py,sha256=EBksY3aFj5XB7QMboExi_K0UwYSdMQOtdANSSE8jG_E,44133
+virga/justplotit.py,sha256=e7T8YsPmhnBlY2iNS-3FEhaMSAyp7TIB979jlnyMKpA,16585
+virga/optics.py,sha256=NhZd5txu_LrzNTMuOqODeIzWSKySdgvRw7_sQmhbj4I,2830
+virga/pvaps.py,sha256=wF008zxsd6-IsHR4wqs70bG0lW68BxA_6fooO3eexZA,8893
+virga/root_functions.py,sha256=fcp3cB8wtj3yivHJGI61la1G_XrfbXjs3f2fEUySKt0,10056
+virga/run_virga.py,sha256=j43RvwBoQ_zfSGJVqLfyXrLWQ295vpzqz2mXmosdDEw,6766
+virga_exo-0.0.dist-info/METADATA,sha256=s4NfgYbjxzCsrmvkyj_ufWexw4A-J3ZFi5EXVG1YdUs,897
+virga_exo-0.0.dist-info/WHEEL,sha256=nvhOrkn7_9sGzJjxuUFjoJ6OkO7SJJqHSjq9VNu0Elc,92
+virga_exo-0.0.dist-info/top_level.txt,sha256=baFIdCx7O0pDCQVPJLte-o42UvCWJ-3Pjd1xNhqJOSk,6
+virga_exo-0.0.dist-info/RECORD,,
