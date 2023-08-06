@@ -1,0 +1,24 @@
+site_name: BDTsim
+site_description: Blockchain Data Trading Simulator
+site_author: Matthias Lohr
+copyright: Copyright &copy; 2020 Matthias Lohr
+theme: readthedocs
+repo_url: https://gitlab.com/MatthiasLohr/bdtsim
+
+nav:
+  - Home: index.md
+  - Quickstart: quickstart.md
+  - Simulation: simulation.md
+  - Commands: commands.md
+  - Protocols: protocols.md
+  - Environments: environments.md
+  - Data Providers: dataproviders.md
+  - Development: development.md
+  - API Documentation: https://matthiaslohr.gitlab.io/bdtsim/api/bdtsim/
+
+# Markdown Extension documentation:
+# https://python-markdown.github.io/extensions/
+markdown_extensions:
+  - extra:
+  - toc:
+      permalink: true

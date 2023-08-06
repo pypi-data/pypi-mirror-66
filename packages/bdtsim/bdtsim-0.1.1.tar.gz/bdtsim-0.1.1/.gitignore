@@ -1,0 +1,10 @@
+/.eggs/
+/.idea/
+/.mypy_cache/
+/build/
+/dist/
+/public/
+/venv/
+__pycache__/
+*.egg-info/
+*.pyc
