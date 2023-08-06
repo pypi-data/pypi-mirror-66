@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: pdsf
+Version: 0.1.7
+Summary: Python/Snowflake Functions
+Home-page: https://github.com/mullenkamp/pdsf
+Author: Mike Kittridge
+Author-email: mullenkamp1@gmail.com
+License: UNKNOWN
+Keywords: Pandas snowflake
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: pandas
+Requires-Dist: sqlalchemy
+Requires-Dist: pyodbc
+Requires-Dist: snowflake-connector-python[pandas]
+Requires-Dist: snowflake-sqlalchemy
+
+UNKNOWN
+
+
