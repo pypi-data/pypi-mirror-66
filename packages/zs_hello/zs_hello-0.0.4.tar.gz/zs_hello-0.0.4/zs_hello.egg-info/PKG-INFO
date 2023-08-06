@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: zs-hello
+Version: 0.0.4
+Summary: Automatically register models in the admin interface in a smart way.
+Home-page: https://github.com/zs527523251/hello
+Author: zhousan
+Author-email: 527523251@qq.com
+License: MIT
+Description: UNKNOWN
+Keywords: python pi
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Provides-Extra: test

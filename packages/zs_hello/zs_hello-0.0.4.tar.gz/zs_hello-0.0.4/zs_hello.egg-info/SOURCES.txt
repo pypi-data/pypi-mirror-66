@@ -1,0 +1,8 @@
+setup.py
+zs_hello/__init__.py
+zs_hello.egg-info/PKG-INFO
+zs_hello.egg-info/SOURCES.txt
+zs_hello.egg-info/dependency_links.txt
+zs_hello.egg-info/entry_points.txt
+zs_hello.egg-info/requires.txt
+zs_hello.egg-info/top_level.txt
