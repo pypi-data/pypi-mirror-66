@@ -1,0 +1,10 @@
+setup.py
+dist_mh2065/Binomialdistribution.py
+dist_mh2065/Gaussiandistribution.py
+dist_mh2065/Generaldistribution.py
+dist_mh2065/__init__.py
+dist_mh2065.egg-info/PKG-INFO
+dist_mh2065.egg-info/SOURCES.txt
+dist_mh2065.egg-info/dependency_links.txt
+dist_mh2065.egg-info/not-zip-safe
+dist_mh2065.egg-info/top_level.txt
