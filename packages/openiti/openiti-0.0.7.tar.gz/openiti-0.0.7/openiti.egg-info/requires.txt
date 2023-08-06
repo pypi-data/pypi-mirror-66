@@ -1,0 +1,4 @@
+beautifulsoup4
+requests
+six
+sphinx_rtd_theme
