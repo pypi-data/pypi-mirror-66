@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: cv_parser
+Version: 0.1
+Summary: This package parses a Curriculum vitae yaml file and generates a pdf and web files
+Home-page: https://github.com/soloidx/cv-parser
+Author: Ider Delzo
+Author-email: soloidx@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/soloidx/cv-parser/issues
+Project-URL: Source Code, https://github.com/soloidx/cv-parser
+Description: UNKNOWN
+Keywords: resume cv,curriculum vitae
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
