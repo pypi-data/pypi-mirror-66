@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+src/yam/__init__.py
+src/yam/yam.py
+src/youandme/__init__.py
+src/youandme/client.py
+src/youandme/commands.py
+src/youandme/server.py
+src/youandme/tor.py
+src/youandme.egg-info/PKG-INFO
+src/youandme.egg-info/SOURCES.txt
+src/youandme.egg-info/dependency_links.txt
+src/youandme.egg-info/requires.txt
+src/youandme.egg-info/top_level.txt
