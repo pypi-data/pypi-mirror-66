@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: feat-psu
+Version: 0.3.0
+Summary: python code of FEAT agroecological model
+Home-page: https://github.com/apparell/farm-energy-analysis-tool
+Author: Pasquale Papparella
+Author-email: pasquale.papparella@pm.me
+License: MIT
+Download-URL: https://github.com/apparell/farm-energy-analysis-tool/archive/v0.3.0.tar.gz
+Description: # PSU FEAT - Agroecological Model
+        
+        -> Info
+                
+        FEAT Agroecological Model
+        http://www.ecologicalmodels.psu.edu/agroecology/feat/about.htm
+        
+Keywords: Sustainability,Agriculture,GHG,Evaluation,Agroecology
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
