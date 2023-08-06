@@ -1,0 +1,8 @@
+dotenver/__init__.py,sha256=RsZjRjMprNcDm97wqRRSk6rTLgTX8N0GyicZyZ8OsBQ,22
+dotenver/cli.py,sha256=NCojaXMus9Yo1WezNeYVYyns5HeL-OF698vFadkrHRE,3503
+dotenver/dotenver.py,sha256=pjVutJn3lloBuVe-9aUrYxutMGIT23IbfK-8_u9l8LM,8129
+dotenver-1.0.0.dist-info/entry_points.txt,sha256=UFsHle_rADUy_wyLi8ribDhnnDFVKUE7kVDTFq8NpN8,45
+dotenver-1.0.0.dist-info/LICENSE,sha256=bL2wiPoBhFLW7qD0jfl5oWOoAR2tl9aZkHBCJAed5TI,1536
+dotenver-1.0.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+dotenver-1.0.0.dist-info/METADATA,sha256=pyF5jSMlOsNI4QR7wQOhhdd4ZtBvdNkKXjlLIUrOXLQ,3391
+dotenver-1.0.0.dist-info/RECORD,,
