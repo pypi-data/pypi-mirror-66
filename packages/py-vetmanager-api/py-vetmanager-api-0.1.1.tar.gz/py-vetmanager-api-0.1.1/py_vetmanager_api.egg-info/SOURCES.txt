@@ -1,0 +1,13 @@
+README.md
+setup.py
+py_vetmanager_api.egg-info/PKG-INFO
+py_vetmanager_api.egg-info/SOURCES.txt
+py_vetmanager_api.egg-info/dependency_links.txt
+py_vetmanager_api.egg-info/requires.txt
+py_vetmanager_api.egg-info/top_level.txt
+tests/__init__.py
+tests/test_client.py
+tests/test_domain.py
+vetmanager/__init__.py
+vetmanager/client.py
+vetmanager/domain.py
