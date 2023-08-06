@@ -1,0 +1,6 @@
+[console_scripts]
+colgraphweb = libcolgraph.web.__main__:main
+lcgweb = libcolgraph.web.__main__:main
+libcolgraph = libcolgraph.__main__:main
+libcolgraphweb = libcolgraph.web.__main__:main
+
