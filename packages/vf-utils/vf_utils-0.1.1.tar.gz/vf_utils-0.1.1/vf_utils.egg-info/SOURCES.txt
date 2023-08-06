@@ -1,0 +1,14 @@
+setup.cfg
+setup.py
+bulk_edit/__init__.py
+bulk_edit/__main__.py
+bulk_edit/task_executor.py
+bulk_edit/tasks/__init__.py
+bulk_edit/tasks/community.py
+bulk_edit/tasks/login_logout.py
+bulk_edit/tasks/task_base.py
+vf_utils.egg-info/PKG-INFO
+vf_utils.egg-info/SOURCES.txt
+vf_utils.egg-info/dependency_links.txt
+vf_utils.egg-info/requires.txt
+vf_utils.egg-info/top_level.txt
