@@ -1,0 +1,13 @@
+dotted/__init__.py,sha256=5EbXQ9xqS8gqrZEAGenchcN1wJff3FLN58ocbIvKr-A,126
+dotted/__main__.py,sha256=dkJsFn6FksZS5jZx6dSKBonNJxBe_vW1TtbbSHnxyoM,63
+dotted/api.py,sha256=37S7pdj9bWIyU4pxn7bpr-8RKvrUnUpm4NMMz38Ayj8,4609
+dotted/elements.py,sha256=XQRfNZKt_uSAwjxmUr89h8SU0i70wWICCLVpihs8sqY,11586
+dotted/grammar.py,sha256=eWrHIapop4FtyQK5uKHih867PAivDd5aQHOSULIEgis,1534
+dotted/transforms.py,sha256=ycS50GAnpqBCG5VQS9oGs4wwksNr44GnP621N2sSqdY,3591
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_appender.py,sha256=yXS-d_fw2__JcL_lDdBJodUhnSab9sEA0ndLru14poY,1433
+dotted_notation-0.0.15.dist-info/LICENSE,sha256=tfaXh_Z7MeQfIHLg0fXMJDZMTHQuOiAv50Wdg2YWHbA,1066
+dotted_notation-0.0.15.dist-info/METADATA,sha256=qL9QaPcptxfToDYZljlEil8ylpqah53e_Q6tdUKl8xI,2947
+dotted_notation-0.0.15.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+dotted_notation-0.0.15.dist-info/top_level.txt,sha256=tVYcYdxsYpQ3jBD8850z6H0HR7huY2HvOspD0PUZg2Y,13
+dotted_notation-0.0.15.dist-info/RECORD,,
