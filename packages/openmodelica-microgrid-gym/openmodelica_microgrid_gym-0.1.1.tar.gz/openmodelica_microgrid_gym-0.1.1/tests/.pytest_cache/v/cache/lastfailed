@@ -1,0 +1,8 @@
+{
+  "test_main.py::test_main": true,
+  "test_main.py::test_main_paramchange": true,
+  "test_modelica.py::test_params_simple": true,
+  "test_modelica.py::test_proper_reset": true,
+  "test_modelica.py::test_reset": true,
+  "test_modelica.py::test_step": true
+}

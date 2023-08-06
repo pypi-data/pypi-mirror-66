@@ -1,0 +1,4 @@
+
+[examples]
+safeopt>=0.16
+GPy>=1.9.9
