@@ -1,0 +1,3 @@
+[console_scripts]
+tac1 = tac1.tac1:main
+

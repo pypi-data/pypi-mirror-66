@@ -1,0 +1,9 @@
+README.md
+setup.py
+tac1/__init__.py
+tac1/tac1.py
+tac1.egg-info/PKG-INFO
+tac1.egg-info/SOURCES.txt
+tac1.egg-info/dependency_links.txt
+tac1.egg-info/entry_points.txt
+tac1.egg-info/top_level.txt
