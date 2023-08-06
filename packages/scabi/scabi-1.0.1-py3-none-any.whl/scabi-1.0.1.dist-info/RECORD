@@ -1,0 +1,9 @@
+scabi/__init__.py,sha256=-5214QbTNHtpURI3W3LREnF_8Ix8Fd6KzCYRysXZxtk,82
+scabi/__main__.py,sha256=2HsC0pk9_QYhjewh-QQZVh5qmXuAQo1ATdmPng5ZEL8,3117
+scabi/crawler.py,sha256=QH_Ox0kVs-H0FSJX6a08L2fRXK4gveav18Ivs5ZCCfg,4318
+scabi/utility_cli.py,sha256=W1zsgH2J9tLjhmuyj7qllxirG6zayZZ_p_3XvfZIajs,1791
+scabi-1.0.1.dist-info/METADATA,sha256=-MmUM59fDG7BAYOGbGHNI3gIwY4lbSZHytcGzE32B9E,2418
+scabi-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+scabi-1.0.1.dist-info/entry_points.txt,sha256=ElOrBazBw9wz2tx_rl3e56HU9Q6drMOKkNor0dvs5tc,47
+scabi-1.0.1.dist-info/top_level.txt,sha256=c-8TFa6W-zpXxI4deY3P2bOLg2hdMpu3OOM7CCZG7PU,6
+scabi-1.0.1.dist-info/RECORD,,
