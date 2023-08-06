@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>bpmappers.fields &#8212; bpmappers 1.0.1 ドキュメント</title>
+    <link rel="stylesheet" href="../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="bpmappers.mappers" href="bpmappers.mappers.html" />
+    <link rel="prev" title="bpmappers.exceptions" href="bpmappers.exceptions.html" /> 
+  </head><body>
+      <div class="header" role="banner"><img class="rightlogo" src="../_static/beproud.png" alt="Logo"/><h1 class="heading"><a href="../index.html">
+          <span>bpmappers 1.0.1 ドキュメント</span></a></h1>
+        <h2 class="heading"><span>bpmappers.fields</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="bpmappers.exceptions.html">bpmappers.exceptions</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">コンテンツ</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="bpmappers.mappers.html">bpmappers.mappers</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="section" id="module-bpmappers.fields">
+<span id="bpmappers-fields"></span><h1>bpmappers.fields<a class="headerlink" href="#module-bpmappers.fields" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<dl class="py class">
+<dt id="bpmappers.fields.ChoiceField">
+<em class="property">class </em><code class="sig-prename descclassname">bpmappers.fields.</code><code class="sig-name descname">ChoiceField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">choices</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">callback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skip_callable</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.fields.ChoiceField" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="bpmappers.fields.DelegateField">
+<em class="property">class </em><code class="sig-prename descclassname">bpmappers.fields.</code><code class="sig-name descname">DelegateField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mapper_class</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">callback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skip_callable</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">before_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">attach_parent</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.fields.DelegateField" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>It is Field delegating mapping to the mapper_class.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="bpmappers.fields.Field">
+<em class="property">class </em><code class="sig-prename descclassname">bpmappers.fields.</code><code class="sig-name descname">Field</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">callback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skip_callable</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.fields.Field" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Basic class of Field.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="bpmappers.fields.ListDelegateField">
+<em class="property">class </em><code class="sig-prename descclassname">bpmappers.fields.</code><code class="sig-name descname">ListDelegateField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mapper_class</span></em>, <em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">callback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skip_callable</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">after_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.fields.ListDelegateField" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Delegate mapping to mapper_class the value as list.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="bpmappers.fields.NonKeyDelegateField">
+<em class="property">class </em><code class="sig-prename descclassname">bpmappers.fields.</code><code class="sig-name descname">NonKeyDelegateField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mapper_class</span></em>, <em class="sig-param"><span class="n">callback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attach_parent</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.fields.NonKeyDelegateField" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="bpmappers.fields.NonKeyField">
+<em class="property">class </em><code class="sig-prename descclassname">bpmappers.fields.</code><code class="sig-name descname">NonKeyField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">callback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">after_callback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.fields.NonKeyField" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Result values are generated manually.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="bpmappers.fields.NonKeyListDelegateField">
+<em class="property">class </em><code class="sig-prename descclassname">bpmappers.fields.</code><code class="sig-name descname">NonKeyListDelegateField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mapper_class</span></em>, <em class="sig-param"><span class="n">callback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">after_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.fields.NonKeyListDelegateField" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="bpmappers.fields.RawField">
+<em class="property">class </em><code class="sig-prename descclassname">bpmappers.fields.</code><code class="sig-name descname">RawField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">callback</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skip_callable</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.fields.RawField" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Result values are obtained from mapping source without conversion.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="bpmappers.fields.StubField">
+<em class="property">class </em><code class="sig-prename descclassname">bpmappers.fields.</code><code class="sig-name descname">StubField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stub</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.fields.StubField" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Result values are fixed value.</p>
+</dd></dl>
+
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="bpmappers.exceptions.html">bpmappers.exceptions</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">コンテンツ</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="bpmappers.mappers.html">bpmappers.mappers</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, BeProud,Inc.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2 で生成しました。
+    </div>
+  </body>
+</html>

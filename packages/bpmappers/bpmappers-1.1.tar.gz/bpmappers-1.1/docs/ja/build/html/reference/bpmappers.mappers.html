@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>bpmappers.mappers &#8212; bpmappers 1.0.1 ドキュメント</title>
+    <link rel="stylesheet" href="../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="bpmappers.utils" href="bpmappers.utils.html" />
+    <link rel="prev" title="bpmappers.fields" href="bpmappers.fields.html" /> 
+  </head><body>
+      <div class="header" role="banner"><img class="rightlogo" src="../_static/beproud.png" alt="Logo"/><h1 class="heading"><a href="../index.html">
+          <span>bpmappers 1.0.1 ドキュメント</span></a></h1>
+        <h2 class="heading"><span>bpmappers.mappers</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="bpmappers.fields.html">bpmappers.fields</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">コンテンツ</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="bpmappers.utils.html">bpmappers.utils</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="section" id="module-bpmappers.mappers">
+<span id="bpmappers-mappers"></span><h1>bpmappers.mappers<a class="headerlink" href="#module-bpmappers.mappers" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<dl class="py class">
+<dt id="bpmappers.mappers.BaseMapper">
+<em class="property">class </em><code class="sig-prename descclassname">bpmappers.mappers.</code><code class="sig-name descname">BaseMapper</code><a class="headerlink" href="#bpmappers.mappers.BaseMapper" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Metaclass of Mapper.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="bpmappers.mappers.Mapper">
+<em class="property">class </em><code class="sig-prename descclassname">bpmappers.mappers.</code><code class="sig-name descname">Mapper</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">options</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.mappers.Mapper" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Basic Mapper class.</p>
+<dl class="py method">
+<dt id="bpmappers.mappers.Mapper.as_dict">
+<code class="sig-name descname">as_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.mappers.Mapper.as_dict" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Return the OrderedDict it is mapping result.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bpmappers.mappers.Mapper.key_name">
+<code class="sig-name descname">key_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">field</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.mappers.Mapper.key_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Hook point for key name converting.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="bpmappers.mappers.Mapper.order">
+<code class="sig-name descname">order</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parsed</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.mappers.Mapper.order" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>This method <strong>must</strong> return the OrderedDict.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="bpmappers.mappers.Options">
+<em class="property">class </em><code class="sig-prename descclassname">bpmappers.mappers.</code><code class="sig-name descname">Options</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.mappers.Options" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Meta data of Mapper.</p>
+<dl class="py method">
+<dt id="bpmappers.mappers.Options.add_field">
+<code class="sig-name descname">add_field</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">field</span></em><span class="sig-paren">)</span><a class="headerlink" href="#bpmappers.mappers.Options.add_field" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Add field</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="bpmappers.fields.html">bpmappers.fields</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">コンテンツ</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="bpmappers.utils.html">bpmappers.utils</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, BeProud,Inc.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2 で生成しました。
+    </div>
+  </body>
+</html>

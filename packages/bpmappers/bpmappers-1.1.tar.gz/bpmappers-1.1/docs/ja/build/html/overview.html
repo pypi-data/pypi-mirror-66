@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>bpmappers &#8212; bpmappers 1.0.1 ドキュメント</title>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="開発の背景" href="background_development.html" />
+    <link rel="prev" title="bpmappers" href="index.html" /> 
+  </head><body>
+      <div class="header" role="banner"><img class="rightlogo" src="_static/beproud.png" alt="Logo"/><h1 class="heading"><a href="index.html">
+          <span>bpmappers 1.0.1 ドキュメント</span></a></h1>
+        <h2 class="heading"><span>bpmappers</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="index.html">bpmappers</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">コンテンツ</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="background_development.html">開発の背景</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="section" id="bpmappers">
+<h1>bpmappers<a class="headerlink" href="#bpmappers" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><a class="reference external" href="https://travis-ci.org/beproud/bpmappers"><img alt="build-status" src="https://travis-ci.org/beproud/bpmappers.svg?branch=master" /></a> <a class="reference external" href="http://badge.fury.io/py/bpmappers"><img alt="pypi" src="https://badge.fury.io/py/bpmappers.svg" /></a> <a class="reference external" href="https://bpmappers.readthedocs.io/en/latest/"><img alt="docs" src="https://readthedocs.org/projects/bpmappers/badge/?version=latest" /></a></p>
+<p>bpmappersは、Pythonの辞書の値やオブジェクトのプロパティを別の辞書へマッピングするPythonモジュールです。</p>
+<div class="section" id="id1">
+<h2>インストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>pip を使ってインストールします。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install bpmappers
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>使い方<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Personクラスのインスタンスを辞書に変換する例です:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s2">&quot;&lt;Person name=</span><span class="si">{}</span><span class="s2">, age=</span><span class="si">{}</span><span class="s2">&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Spam&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span>
+<span class="go">&lt;Person name=Spam, age=25&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">bpmappers</span> <span class="kn">import</span> <span class="n">Mapper</span><span class="p">,</span> <span class="n">RawField</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">PersonMapper</span><span class="p">(</span><span class="n">Mapper</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">mapped_name</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">mapped_age</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">PersonMapper</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">.</span><span class="n">as_dict</span><span class="p">()</span>
+<span class="go">OrderedDict([(&#39;mapped_name&#39;, &#39;Spam&#39;), (&#39;mapped_age&#39;, 25)])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>動作要件<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Pythonのバージョン 2.7, 3.4, 3.5, 3.6, 3.7, 3.8</p></li>
+<li><p>Django 1.11, 2.0, 2.1, 2.2, 3.0 (Djangoサポートを使用する場合)</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>ライセンス<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>MITライセンス</p>
+</div>
+<div class="section" id="id5">
+<h2>ドキュメント<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>最新のドキュメントはReadTheDocsでホストされています。</p>
+<p><a class="reference external" href="https://bpmappers.readthedocs.io/en/latest/">https://bpmappers.readthedocs.io/en/latest/</a></p>
+</div>
+<div class="section" id="id6">
+<h2>開発<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>このプロジェクトはGitHubでホストされています: <a class="reference external" href="https://github.com/beproud/bpmappers">https://github.com/beproud/bpmappers</a></p>
+</div>
+<div class="section" id="id7">
+<h2>作者<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>BeProud, Inc</p></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h2>メンテナ<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Shinya Okano &lt;<a class="reference external" href="mailto:tokibito&#37;&#52;&#48;gmail&#46;com">tokibito<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p></li>
+</ul>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="index.html">bpmappers</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">コンテンツ</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="background_development.html">開発の背景</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, BeProud,Inc.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2 で生成しました。
+    </div>
+  </body>
+</html>

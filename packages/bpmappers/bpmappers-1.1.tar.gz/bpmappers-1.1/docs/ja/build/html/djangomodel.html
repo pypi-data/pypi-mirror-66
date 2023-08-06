@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Djangoフレームワークのモデルをマッピングする &#8212; bpmappers 1.0.1 ドキュメント</title>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="リファレンス" href="reference/index.html" />
+    <link rel="prev" title="同じ階層にマッピング結果をマージする" href="flatten.html" /> 
+  </head><body>
+      <div class="header" role="banner"><img class="rightlogo" src="_static/beproud.png" alt="Logo"/><h1 class="heading"><a href="index.html">
+          <span>bpmappers 1.0.1 ドキュメント</span></a></h1>
+        <h2 class="heading"><span>Djangoフレームワークのモデルをマッピングする</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="flatten.html">同じ階層にマッピング結果をマージする</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">コンテンツ</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="reference/index.html">リファレンス</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="section" id="django">
+<span id="djangomodel"></span><h1>Djangoフレームワークのモデルをマッピングする<a class="headerlink" href="#django" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Djangoフレームワークのモデルインスタンスをマッピングする場合、 <code class="docutils literal notranslate"><span class="pre">bpmappers.djangomodel.ModelMapper</span></code> を使用することができます。</p>
+<div class="section" id="id1">
+<h2>Djangoフレームワークのバージョン<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">bpmappers.djangomodel</span></code> は、Djangoフレームワークのバージョン 1.8 以上に対応しています。</p>
+</div>
+<div class="section" id="modelmapper">
+<h2>ModelMapperの使用<a class="headerlink" href="#modelmapper" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ModelMapperを使用するには、 ModelMapper を継承したクラスを定義します。</p>
+<p>Djangoで次のようなモデルを定義したとします:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+
+<span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Book</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Foreignkey</span><span class="p">(</span><span class="n">Person</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ModelMapperを使ってBookモデルを辞書にマッピングするための定義は次のようになります:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bpmappers.djangomodel</span> <span class="kn">import</span> <span class="n">ModelMapper</span>
+<span class="kn">from</span> <span class="nn">myapp.models</span> <span class="kn">import</span> <span class="n">Book</span>
+
+<span class="k">class</span> <span class="nc">BookMapper</span><span class="p">(</span><span class="n">ModelMapper</span><span class="p">):</span>
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">Book</span>
+</pre></div>
+</div>
+<p>ModelMapperを使わない場合は次のようになります:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bpmappers</span> <span class="kn">import</span> <span class="n">Mapper</span><span class="p">,</span> <span class="n">RawField</span><span class="p">,</span> <span class="n">DelegateField</span>
+
+<span class="k">class</span> <span class="nc">PersonMapper</span><span class="p">(</span><span class="n">Mapper</span><span class="p">):</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">()</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">BookMapper</span><span class="p">(</span><span class="n">Mapper</span><span class="p">):</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">()</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">()</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="n">DelegateField</span><span class="p">(</span><span class="n">PersonMapper</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>仕組み<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ModelMapperは、Djangoモデルクラスのメタ情報(<code class="docutils literal notranslate"><span class="pre">Model._meta.fields</span></code>)を参照してマッピング定義を作成しています。</p>
+<p>Djangoのモデルフィールドとbpmppersのフィールドの対応は次の通りです:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Djangoのモデルフィールド</p></th>
+<th class="head"><p>bpmappersのフィールド</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AutoField</p></td>
+<td><p>bpmappers.RawField</p></td>
+</tr>
+<tr class="row-odd"><td><p>CharField</p></td>
+<td><p>bpmappers.RawField</p></td>
+</tr>
+<tr class="row-even"><td><p>TextField</p></td>
+<td><p>bpmappers.RawField</p></td>
+</tr>
+<tr class="row-odd"><td><p>IntegerField</p></td>
+<td><p>bpmappers.RawField</p></td>
+</tr>
+<tr class="row-even"><td><p>DateTimeField</p></td>
+<td><p>bpmappers.RawField</p></td>
+</tr>
+<tr class="row-odd"><td><p>DateField</p></td>
+<td><p>bpmappers.RawField</p></td>
+</tr>
+<tr class="row-even"><td><p>TimeField</p></td>
+<td><p>bpmappers.RawField</p></td>
+</tr>
+<tr class="row-odd"><td><p>BooleanField</p></td>
+<td><p>bpmappers.RawField</p></td>
+</tr>
+<tr class="row-even"><td><p>FileField</p></td>
+<td><p>bpmappers.djangomodel.DjangoFileField</p></td>
+</tr>
+<tr class="row-odd"><td><p>ForeignKey</p></td>
+<td><p>bpmappers.DelegateField</p></td>
+</tr>
+<tr class="row-even"><td><p>ManyToManyField</p></td>
+<td><p>bpmappers.ListDelegateField</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="meta">
+<h2>Metaインナークラス<a class="headerlink" href="#meta" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ModelMapper</span></code> を継承したクラスには、 <code class="docutils literal notranslate"><span class="pre">Meta</span></code> インナークラスを定義する必要があります。このクラスで定義した内容から、マッピングルールが生成されます。</p>
+<div class="section" id="meta-model">
+<h3>Meta.model<a class="headerlink" href="#meta-model" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Djangoのモデルクラスを指定します。</p>
+</div>
+<div class="section" id="meta-fields">
+<h3>Meta.fields<a class="headerlink" href="#meta-fields" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Meta.model</span></code> で指定したモデルクラスのフィールドのうち、マッピング対象とするフィールド名をシーケンス型で列挙します。省略した場合はすべてのフィールドがマッピング対象になります。</p>
+</div>
+<div class="section" id="meta-exclude">
+<h3>Meta.exclude<a class="headerlink" href="#meta-exclude" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Meta.model</span></code> で指定したモデルクラスのフィールドのうち、マッピング対象から除外するフィールド名をシーケンス型で列挙します。省略した場合は、すべてのフィールドがマッピング対象になります。</p>
+</div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="flatten.html">同じ階層にマッピング結果をマージする</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">コンテンツ</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="reference/index.html">リファレンス</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, BeProud,Inc.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2 で生成しました。
+    </div>
+  </body>
+</html>

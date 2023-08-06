@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>基本的な使い方 &#8212; bpmappers 1.0.1 ドキュメント</title>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="フックポイント" href="hookpoints.html" />
+    <link rel="prev" title="開発の背景" href="background_development.html" /> 
+  </head><body>
+      <div class="header" role="banner"><img class="rightlogo" src="_static/beproud.png" alt="Logo"/><h1 class="heading"><a href="index.html">
+          <span>bpmappers 1.0.1 ドキュメント</span></a></h1>
+        <h2 class="heading"><span>基本的な使い方</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="background_development.html">開発の背景</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">コンテンツ</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="hookpoints.html">フックポイント</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="section" id="id1">
+<h1>基本的な使い方<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id2">
+<h2>マッピングクラスを定義する<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>bpmappersを使ってマッピングするためには、まずマッピングクラスを定義します。</p>
+<p>マッピングクラスの例を示します:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bpmappers</span> <span class="kn">import</span> <span class="n">Mapper</span><span class="p">,</span> <span class="n">RawField</span>
+<span class="k">class</span> <span class="nc">SpamMapper</span><span class="p">(</span><span class="n">Mapper</span><span class="p">):</span>
+    <span class="s2">&quot;マッピングクラス&quot;</span>
+    <span class="n">dest_key</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">(</span><span class="s1">&#39;src_key&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>マッピングクラスは、 <code class="docutils literal notranslate"><span class="pre">bpmappers.Mapper</span></code> を継承して定義します。
+<code class="docutils literal notranslate"><span class="pre">dest_key</span></code> は、マッピング結果の辞書のキー名です。
+<code class="docutils literal notranslate"><span class="pre">src_key</span></code> は、マッピングソースのオブジェクトの属性名、もしくは辞書のキー名です。
+マッピングソースから指定した属性名(キー)で取得した値をそのままマッピング結果の値とする場合は <code class="docutils literal notranslate"><span class="pre">RawField</span></code> フィールドクラスを使います。</p>
+</div>
+<div class="section" id="id3">
+<h2>マッピングクラスを使う<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>定義したマッピングクラスは、次のように使います:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">src_data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;src_key&#39;</span><span class="p">:</span> <span class="s1">&#39;spam&#39;</span><span class="p">}</span>  <span class="c1"># マッピングソース</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">SpamMapper</span><span class="p">(</span><span class="n">src_data</span><span class="p">)</span><span class="o">.</span><span class="n">as_dict</span><span class="p">()</span>
+<span class="c1"># resultは OrderedDict([(&#39;dest_key&#39;, &#39;spam&#39;)]) となる</span>
+</pre></div>
+</div>
+<p>マッピングクラスのコンストラクタに、マッピングソースとしてsrc_data変数に代入された辞書を渡しています。
+<code class="docutils literal notranslate"><span class="pre">as_dict()</span></code> メソッドを呼ぶとマッピング処理が実行され、マッピング結果の辞書(OrderedDict)が返されます。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>バージョン0.9で変更: as_dict()メソッドで返される値は、SortedDictからOrderedDictに変更されました。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>入れ子構造のオブジェクトをマッピングする(別のマッピングクラスに委譲する)<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>親オブジェクトがプロパティで子オブジェクトを持つような、入れ子構造のオブジェクトをマッピングする場合、マッピングクラスのフィールドクラスに <code class="docutils literal notranslate"><span class="pre">bpmappers.DelegateField</span></code> を使います。</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">bpmappers</span> <span class="kn">import</span>  <span class="n">Mapper</span><span class="p">,</span> <span class="n">RawField</span><span class="p">,</span> <span class="n">DelegateField</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Book</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">author</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">author</span> <span class="o">=</span> <span class="n">author</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">PersonMapper</span><span class="p">(</span><span class="n">Mapper</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">name</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">()</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">BookMapper</span><span class="p">(</span><span class="n">Mapper</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">name</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="n">author</span> <span class="o">=</span> <span class="n">DelegateField</span><span class="p">(</span><span class="n">PersonMapper</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;wozozo&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="s1">&#39;python book&#39;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapper</span> <span class="o">=</span> <span class="n">BookMapper</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mapper</span><span class="o">.</span><span class="n">as_dict</span><span class="p">())</span>
+<span class="go">OrderedDict([(&#39;name&#39;, &#39;python book&#39;), (&#39;author&#39;, OrderedDict([(&#39;name&#39;, &#39;wozozo&#39;)]))])</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">bpmappers.DelegateField</span></code> には、引数としてMapperを継承したクラスを指定します。
+この例では、マッピングソースの <code class="docutils literal notranslate"><span class="pre">Book.author</span></code> は、 <code class="docutils literal notranslate"><span class="pre">PersonMapper</span></code> でマッピングされるように定義しています。</p>
+</div>
+<div class="section" id="id5">
+<h2>入れ子構造のリストをマッピングする<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>親子関係のオブジェクトで子がリストになっている場合、 <code class="docutils literal notranslate"><span class="pre">bpmappers.ListDelegateField</span></code> を使います。</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">bpmappers</span> <span class="kn">import</span>  <span class="n">Mapper</span><span class="p">,</span> <span class="n">RawField</span><span class="p">,</span> <span class="n">ListDelegateField</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Team</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">members</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">members</span> <span class="o">=</span> <span class="n">members</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">TeamMapper</span><span class="p">(</span><span class="n">Mapper</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">name</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="n">members</span> <span class="o">=</span> <span class="n">ListDelegateField</span><span class="p">(</span><span class="n">PersonMapper</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;wozozo&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;moriyoshi&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">Team</span><span class="p">(</span><span class="s1">&#39;php&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapper</span> <span class="o">=</span> <span class="n">TeamMapper</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mapper</span><span class="o">.</span><span class="n">as_dict</span><span class="p">())</span>
+<span class="go">OrderedDict([(&#39;name&#39;, &#39;php&#39;), (&#39;members&#39;, [OrderedDict([(&#39;name&#39;, &#39;wozozo&#39;)]), OrderedDict([(&#39;name&#39;, &#39;moriyoshi&#39;)])])])</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">bpmappers.ListDelegateField</span></code> には、引数としてMapperを継承したクラスを指定します。
+この例では、 <code class="docutils literal notranslate"><span class="pre">TeamMapper.members</span></code> の値はリストとして展開されて、 <code class="docutils literal notranslate"><span class="pre">PersonMapper</span></code> を使ってマッピングを行うように定義されています。</p>
+<p>DjangoのManyToManyFieldをマッピングする場合、ListDelegateFieldにはDjangoのManagerオブジェクトが渡されるため、filterパラメータを指定する必要があります。</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">bpmappers</span> <span class="kn">import</span> <span class="n">Mapper</span><span class="p">,</span> <span class="n">RawField</span><span class="p">,</span> <span class="n">ListDelegateField</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Group</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">persons</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ManyToManyField</span><span class="p">(</span><span class="n">Person</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">PersonMapper</span><span class="p">(</span><span class="n">Mapper</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">name</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">()</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">GroupMapper</span><span class="p">(</span><span class="n">Mapper</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">name</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="c1"># filterを指定する</span>
+<span class="gp">... </span>    <span class="n">persons</span> <span class="o">=</span> <span class="n">ListDelegateField</span><span class="p">(</span><span class="n">PersonMapper</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="k">lambda</span> <span class="n">manager</span><span class="p">:</span> <span class="n">manager</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">person1</span> <span class="o">=</span> <span class="n">Person</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s1">&#39;wozozo&#39;</span><span class="p">,</span> <span class="mi">123</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">person2</span> <span class="o">=</span> <span class="n">Person</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s1">&#39;feiz&#39;</span><span class="p">,</span> <span class="mi">456</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">group</span> <span class="o">=</span> <span class="n">Group</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">group</span><span class="o">.</span><span class="n">persons</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">person1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">group</span><span class="o">.</span><span class="n">persons</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">person2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapper</span> <span class="o">=</span> <span class="n">GroupMapper</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mapper</span><span class="o">.</span><span class="n">as_dict</span><span class="p">())</span>
+<span class="go">{&#39;name&#39;: &#39;test&#39;, [{&#39;name&#39;: &#39;wozozo&#39;, &#39;val&#39;: 123}, {&#39;name&#39;: &#39;feiz&#39;, &#39;val&#39;: 456}]}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>ドット区切りのフィールド指定による参照<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ドット区切りの指定で、深い階層の値を簡単に参照できます。</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">bpmappers</span> <span class="kn">import</span> <span class="n">Mapper</span><span class="p">,</span> <span class="n">RawField</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">HogeMapper</span><span class="p">(</span><span class="n">Mapper</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">hoge</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">(</span><span class="s1">&#39;hoge.piyo.fuga&#39;</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">HogeMapper</span><span class="p">({</span><span class="s1">&#39;hoge&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;piyo&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;fuga&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">}}})</span><span class="o">.</span><span class="n">as_dict</span><span class="p">()</span>
+<span class="go">OrderedDict([(&#39;hoge&#39;, 123)])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>複数の入力値を1つの値にまとめる<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Mapper.data</span></code> はインスタンス作成時に引数で与えたものが格納されています。
+この例では、入力値としてリストを渡しています。</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">bpmappers</span> <span class="kn">import</span> <span class="n">Mapper</span><span class="p">,</span> <span class="n">NonKeyField</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">MultiDataSourceMapper</span><span class="p">(</span><span class="n">Mapper</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">pair</span> <span class="o">=</span> <span class="n">NonKeyField</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">filter_pair</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">-</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">MultiDataSourceMapper</span><span class="p">([</span><span class="n">Person</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">),</span> <span class="n">Person</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">)])</span><span class="o">.</span><span class="n">as_dict</span><span class="p">()</span>
+<span class="go">OrderedDict([(&#39;pair&#39;, &#39;foo-bar&#39;)])</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="background_development.html">開発の背景</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">コンテンツ</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="hookpoints.html">フックポイント</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, BeProud,Inc.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2 で生成しました。
+    </div>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>開発の背景 &#8212; bpmappers 1.0.1 ドキュメント</title>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="基本的な使い方" href="usage.html" />
+    <link rel="prev" title="bpmappers" href="overview.html" /> 
+  </head><body>
+      <div class="header" role="banner"><img class="rightlogo" src="_static/beproud.png" alt="Logo"/><h1 class="heading"><a href="index.html">
+          <span>bpmappers 1.0.1 ドキュメント</span></a></h1>
+        <h2 class="heading"><span>開発の背景</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="overview.html">bpmappers</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">コンテンツ</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="usage.html">基本的な使い方</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="section" id="id1">
+<h1>開発の背景<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>WebAPIのレスポンスをJSONやXMLなどの構造化テキストで返すとき、アプリケーションのデータ構造とAPIのインターフェースの構造は一致しないことが頻繁にありました。</p>
+<p>例えば、次のような構造のJSONを返すWebAPIの仕様があったとします(フォーラムのコメントデータ):</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;comment_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a comment.&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;posted_by&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;user_id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Sato&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;age&quot;</span><span class="p">:</span> <span class="mi">40</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>このデータは、アプリケーション上では次のようなデータ構造で保持されていることがあります:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+<span class="k">class</span> <span class="nc">Comment</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">posted_by</span><span class="p">:</span> <span class="n">User</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">posted_by</span> <span class="o">=</span> <span class="n">posted_by</span>
+
+<span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Sato&quot;</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">comment</span> <span class="o">=</span> <span class="n">Comment</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;This is a comment.&quot;</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>WebAPIの仕様に従ったJSONと等価の辞書を生成する場合、次のようなコードを書くかもしれません:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;comment_id&#39;</span><span class="p">:</span> <span class="n">comment</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+  <span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="n">comment</span><span class="o">.</span><span class="n">content</span><span class="p">,</span>
+  <span class="s1">&#39;posted_by&#39;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="n">comment</span><span class="o">.</span><span class="n">posted_by</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">comment</span><span class="o">.</span><span class="n">posted_by</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+    <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="n">comment</span><span class="o">.</span><span class="n">posted_by</span><span class="o">.</span><span class="n">age</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>posted_byの内容を返す部分を再利用したくなった場合、関数に分けるかもしれません:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">map_user</span><span class="p">(</span><span class="n">user</span><span class="p">:</span> <span class="n">User</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">age</span>
+    <span class="p">}</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">&#39;comment_id&#39;</span><span class="p">:</span> <span class="n">comment</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+  <span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="n">comment</span><span class="o">.</span><span class="n">content</span><span class="p">,</span>
+  <span class="s1">&#39;posted_by&#39;</span><span class="p">:</span> <span class="n">map_user</span><span class="p">(</span><span class="n">comment</span><span class="o">.</span><span class="n">posted_by</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>このように再利用の単位で関数を作っていくと、似たような機能の関数がいくつも作られてしまうことがありました。また、リストをマッピングする場合はforループも使うことになり、マッピングのコードは見通しが悪くなってきます。</p>
+<p>こうした背景から、bpmappersを開発しました。</p>
+<p>bpmappersではマッピングルールを宣言的に書くことでき、コードはスッキリします。</p>
+<p>bpmappersを使うとこのように書けます:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bpmappers</span> <span class="kn">import</span> <span class="n">Mapper</span><span class="p">,</span> <span class="n">RawField</span><span class="p">,</span> <span class="n">DelegateField</span>
+<span class="k">class</span> <span class="nc">UserMapper</span><span class="p">(</span><span class="n">Mapper</span><span class="p">):</span>
+    <span class="n">user_id</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">()</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">CommentMapper</span><span class="p">(</span><span class="n">Mapper</span><span class="p">):</span>
+    <span class="n">comment_id</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">RawField</span><span class="p">()</span>
+    <span class="n">posted_by</span> <span class="o">=</span> <span class="n">DelegateField</span><span class="p">(</span><span class="n">UserMapper</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">CommentMapper</span><span class="p">(</span><span class="n">comment</span><span class="p">)</span><span class="o">.</span><span class="n">as_dict</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>他にもマッピング処理のフックポイントや、DjangoフレームワークのORM向けのサポートを含んでいます。</p>
+<p>bpmappersを利用することで、あなたのデータマッピングのコードがスッキリすることを願っています。</p>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="overview.html">bpmappers</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">コンテンツ</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="usage.html">基本的な使い方</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, BeProud,Inc.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2 で生成しました。
+    </div>
+  </body>
+</html>
