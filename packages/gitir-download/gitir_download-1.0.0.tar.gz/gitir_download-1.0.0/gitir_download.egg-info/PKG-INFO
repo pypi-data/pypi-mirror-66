@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: gitir-download
+Version: 1.0.0
+Summary: Download videos from scattered links of git.ir
+Home-page: https://github.com/yankeexe/git.ir_downloader
+Author: Yankee Maharjan
+Author-email: yankee.exe@gmail.com
+License: MIT
+Description: [![Build Status](https://travis-ci.com/yankeexe/git.ir_downloader.svg?token=56RxdbxQqrF5gpqx5Dyz&branch=master)](https://travis-ci.com/yankeexe/git.ir_downloader) [![PyPI version](https://badge.fury.io/py/gitir-download.svg)](https://badge.fury.io/py/gitir-download)
+        
+        # git.ir Video Downloader
+        Downloads video files from scattered links throughout a git.ir page.
+        
+        > Note: Only for freely available video.
+        
+        
+        ## Installing:
+        
+        ### Installation Requirements:
+        - Python >= 3.6
+        - pipx
+        
+        ```bash
+        $ pip install pipx
+        ```
+        
+        ```bash
+        $ pipx install gitir-download
+        ```
+        
+        ## Usage:
+        
+        All the files will be downloaded inside a custom folder based on the URL.
+        
+        ```bash
+        $ gid <git.ir_url>
+        ```
+        
+        To create a user defined function, use the `--name` flag.
+        
+        ```bash
+        $ gid <git.ir_url> --name 'Python Scripting'
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Provides-Extra: dev
