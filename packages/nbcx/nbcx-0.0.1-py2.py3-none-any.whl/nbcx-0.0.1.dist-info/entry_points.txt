@@ -1,0 +1,4 @@
+[nbconvert.exporters]
+nbcx_latex = nbcx.exporters:NBCXLatexExporter
+nbcx_pdf = nbcx.exporters:NBCXPDFExporter
+
