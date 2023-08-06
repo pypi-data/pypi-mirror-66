@@ -1,0 +1,35 @@
+
+Webutils from Tests by David Arroyo Menéndez
+
+* Logo
+[[https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Seller_of_eggs.jpg/320px-Seller_of_eggs.jpg][file:https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Seller_of_eggs.jpg/320px-Seller_of_eggs.jpg]]
+
+* Check Test
++ Execute all tests:
+#+BEGIN_SRC
+$ ./testsbycommands.sh
+#+END_SRC
+
+* Pypi
++ To install from local:
+$ pip install -e .
+
++ To install create tar.gz in dist directory:
+$ python3 setup.py register sdist
+
++ To upload to pypi:
+$ twine upload dist/damenumpy-0.1.tar.gz
+
++ You can install from Internet in a python virtual environment to check:
+$ python3 -m venv /tmp/dw
+$ cd /tmp/dw
+$ source bin/activate
+$ pip3 install damewebutils
+* Dame Music
+
+[[https://www.youtube.com/playlist?list=PLeobXV-Yyn-LvQydcnr46ZkGh1V6tDGEk][Listen music ...]]
+
+* License
+This document is under a [[http://creativecommons.org/licenses/by/4.0/deed][Creative Commons Attribution 4.0 International]]
+
+[[http://creativecommons.org/licenses/by/4.0/deed][file:http://i.creativecommons.org/l/by/3.0/80x15.png]]
