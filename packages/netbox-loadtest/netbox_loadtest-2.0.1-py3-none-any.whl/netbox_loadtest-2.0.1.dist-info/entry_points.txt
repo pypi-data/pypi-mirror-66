@@ -1,0 +1,3 @@
+[console_scripts]
+netbox-loadtest=netbox_loadtest:start
+
