@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: pyboom
+Version: 0.4.0
+Summary: Detonador de bombas .. boom!!!
+Home-page: https://geekl0g.wordpress.com/tag/python-para-detonar-bombas/
+License: MIT
+Keywords: doom,tutorial
+Author: constrict0r
+Author-email: constrict0r@protonmail.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Dist: py-rolldice
+Project-URL: Documentation, https://pyboom.readthedocs.io
+Project-URL: Repository, https://gitlab.com/geek.log/pyboom
+Description-Content-Type: text/markdown
+
+# pyboom
+
+Detonador de bombas .. boom!!!
+
+Paquete de ejemplo para el tutorial - [Doom Presenta: Python desde cero](https://geekl0g.wordpress.com/tag/python-para-detonar-bombas).
