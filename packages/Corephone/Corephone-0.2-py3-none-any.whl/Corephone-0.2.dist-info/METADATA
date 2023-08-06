@@ -1,0 +1,26 @@
+Metadata-Version: 2.0
+Name: Corephone
+Version: 0.2
+Summary: Useful tools to work with phonetic algorithm in Python
+Home-page: https://github.com/SJamii/Phonetic-Algorithm
+Author: Shafayat Jamil
+Author-email: shafayatiuc@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+
+# Phonetic-Algorithm
+This contains our proposed algorithm corephone
+# Usage
+To download corephone type:
+pip3 install Corephone
+
+To use it in code type:
+
+from Corephone import corephone
+
+print(corephone("Name")
+

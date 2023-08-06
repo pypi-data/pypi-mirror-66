@@ -1,0 +1,15 @@
+Corephone/__init__.py,sha256=-CVyl6IMe6Jtfmi5RnYmp17Fp2IN3NuYxPMPTYUJo_E,487
+Corephone/algo_name_gist.py,sha256=6f8wGvbOCxGiVpz3jqu27Rv6dtwPS8OqJ4zgAXnrg0E,12390
+Corephone/algo_name_gist_uni_bn.py,sha256=ET3j55r1S_eg66O8alVLBb-bVTD3QqeDT0tibsZGvN0,5877
+Corephone/algo_uni_bn_to_en_phonetic.py,sha256=W17p0sG12cHzey4qp0JjLptAjbgKmoF5rOWcLVZdn4Y,7405
+Corephone/non_unicode_to_unicode.py,sha256=vrLmJ4Gu1VtMKXMK4mBFrk-yid9D-cXs7vl7rJnmJe0,7288
+Corephone/titles_and_salutations.txt,sha256=nkmuYWO7NAhuZDeWmTqtnQrA6j8DDssOJ0gONMiJBsg,284
+Corephone/tool_optimize_titles_and_salutations.py,sha256=sbGw2H4fbZ9IolW8xtTTmfVxAXuLGCV4i-_Y5nsmYAY,2701
+Corephone/uni_bn_titles_and_salutations.txt,sha256=tVFUIncU_k85MkPOIMjNu9uvWy_wd0m2KFb35QhtA8k,573
+Corephone/vars_uni_bn_to_en_phonetic.py,sha256=_k9QpZS9PcE4ms8U7ea1-mikXGSStkwNYTQ7pYadO8c,3976
+Corephone-0.2.dist-info/DESCRIPTION.rst,sha256=XdM19ChhupuYUJButuqnyu42UJj31bxCxPoTn2kBP1U,211
+Corephone-0.2.dist-info/METADATA,sha256=qLxnGcIjWVsrh5ehMXdpfOuQdqnh1--Fw1b1uvg2Hv4,662
+Corephone-0.2.dist-info/RECORD,,
+Corephone-0.2.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+Corephone-0.2.dist-info/metadata.json,sha256=LjwsOlPooLGix08qSUaQ_OH72TZbBffuMtwnea2cgyw,632
+Corephone-0.2.dist-info/top_level.txt,sha256=GYGuOqOy8iLacjiKy3JpAlgjSCnBn2U6do9B89t6vkQ,10
