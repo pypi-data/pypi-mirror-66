@@ -1,0 +1,3 @@
+[console_scripts]
+prowler = prowler:main
+
