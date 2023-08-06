@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: zcbe
+Version: 0.1.1
+Summary: The Z Cross Build Environment
+Home-page: https://github.com/myzhang1029/zcbe
+Author: Zhang Maiyun
+Author-email: myzhang1029@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: toml
+
+# zcbe
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/e8785246f7dbe7676393/maintainability)](https://codeclimate.com/github/myzhang1029/zcbe/maintainability)
+
+The Z cross build system
+
+
