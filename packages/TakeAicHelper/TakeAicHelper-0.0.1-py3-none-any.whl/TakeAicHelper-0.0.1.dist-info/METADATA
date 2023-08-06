@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: TakeAicHelper
+Version: 0.0.1
+Summary: Métricas para analisar a conversa entre pessoas e chatbots
+Home-page: UNKNOWN
+Author: Caio Souza
+Author-email: caios@take.net
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: plotly
+
+# TakeAicHelper
+
+### FunÃ§Ãµes disponÃ­veis
+```Python
+#InformaÃ§Ãµes bÃ¡sicas sobre a base analisada;
+  overview()
+
+#Valor da Taxa de TCG;
+  tcg()
+
+#Dataframe especÃ­fico sobre a intenÃ§Ã£o desejada;
+  intentDetails("NOME_DA_INTENÃ‡ÃƒO")
+
+#Ranking das entidades, pode ser gerado por intenÃ§Ã£o ou visualizar de forma geral;
+
+  entities(n,'NOME_DA_INTENÃ‡ÃƒO') 
+  entities(n)
+
+#Ranking das intenÃ§Ãµes;
+  intentions(n)
+
+#VisualizaÃ§Ã£o da Taxa de Reconhecimento em grÃ¡fico;
+  tr('chart')
+
+#VisualizaÃ§Ã£o da Taxa de Reconhecimento em tabela;  
+  tr('table')
+
+#VisualizaÃ§Ã£o da Taxa de Reconhecimento em dataframe;
+  tr()
+
+#VisualizaÃ§Ã£o da Taxa de CompreensÃ£o interna por grÃ¡fico, com o score da NLP editÃ¡vel (default: 0.6);
+  tci('table',0.9)
+
+#VisualizaÃ§Ã£o da Taxa de CompreensÃ£o interna por tabela, com o score da NLP editÃ¡vel (default: 0.6);
+  tci('chart',0.9)
+
+#VisualizaÃ§Ã£o da Taxa de CompreensÃ£o geral em dataframe;
+  tci() 
+
+#CriaÃ§Ã£o de arquivos em formato csv separados por intenÃ§Ã£o.
+csvByIntentions(path='', sep=';')
+```
+
+### Regras do parÃ¢metro n
+O parÃ¢mentro *n* Ã© um nÃºmero inteiro, que se refere a quantidade de intenÃ§Ãµes ou entidades que serÃ£o listadas. 
+
+> Caso o *n* for igual a **0** , **todas** as intenÃ§Ãµes/entidades serÃ£o listadas.
+
+> Caso o *n* for um nÃºmero positivo, as n intenÃ§Ãµes/entidades **mais** reconhecidas serÃ£o listadas.
+
+> Caso o *n* for um nÃºmero negativo, as n intenÃ§Ãµes/entidades **menos** reconhecidas serÃ£o listadas.
+
+### Instanciando a classe
+
+```Python
+from TakeAicHelper.metrics import Metrics
+
+analyse = Metrics(path=r'C:\Users\base.csv', encoding='utf-8', sep=';', minimunScore=0.6)
+analyse.overview()
+```
+
+
+
+
