@@ -1,0 +1,83 @@
+#!/usr/bin/env python
+from argparse import ArgumentParser, RawTextHelpFormatter as ArgFormatter
+from json import dumps
+from os import chdir
+from pathlib import Path
+from itsim_scripts.utils import get_geojson, get_first_record_attributes
+
+
+def main(sys_args):
+    chdir(str(Path(__file__).resolve().parents[1]))
+    parser = ArgumentParser(
+        description="Convert a shape file format to geojson format, filtering attributes",
+        epilog="""If no output is given, will output a json with this format:
+{
+    "records_size": 100,
+    "fields": [
+        {
+            "name": "name",
+            "type": "type",
+            "one_value": "example value of first record",
+        },
+        …
+    ],
+    "legend": [
+        {
+            "max_value": value,
+            "nb_values": number,
+            "percent": float_percent,
+            "color: "#RRGGBB",
+        },
+        …
+    ],
+    "legend_as_param": "value1,color1,value2,color2,…",
+}""",
+        formatter_class=ArgFormatter
+    )
+    parser.add_argument('-i', '--input', metavar='SHP_file', dest='shape_file', type=str, required=True,
+                        help="Input shape file path")
+    parser.add_argument('-f', '--from', metavar='field_from', dest='field_from', type=str, default=None,
+                        help="Field from name")
+    parser.add_argument('-l', '--legend-intervals', metavar='number', dest='intervals', type=int, default=5,
+                        help="Legend intervals (default 5)")
+    parser.add_argument('-c', '--min-color', metavar='rrggbb_color', dest='min_color', type=str, default="FEE5D9",
+                        help="Legend minimum color (default FEE5D9)")
+    parser.add_argument('-C', '--max-color', metavar='rrggbb_color', dest='max_color', type=str, default="A50F15",
+                        help="Legend maximum color (default A50F15)")
+    parser.add_argument('-t', '--to', metavar='field_to', dest='field_to', type=str, default=None,
+                        help="Field to name")
+    parser.add_argument('-o', '--output', metavar='json_file', dest='json_file', type=str, default=None,
+                        help="Output geo json file path")
+    args = parser.parse_args(args=sys_args)
+    shape_file = args.shape_file
+    field_from = args.field_from
+    legend_intervals = args.intervals
+    legend_min_color = (int(args.min_color[:2], 16), int(args.min_color[2:4], 16), int(args.min_color[4:], 16))
+    legend_max_color = (int(args.max_color[:2], 16), int(args.max_color[2:4], 16), int(args.max_color[4:], 16))
+    field_to = args.field_to
+    json_file = args.json_file
+    if json_file:
+        print("Reading file %s%s…" % (
+            shape_file,
+            '.shp' if len(shape_file) > 4 and shape_file[-4:].lower() not in ('.shp', '.shx', '.dbf')
+            else ''
+        ))
+        geojson = get_geojson(shape_file, field_from, field_to)
+        print("Writing file %s…" % json_file)
+        with open(json_file, 'w') as f:
+            f.write(dumps(geojson, ensure_ascii=False))
+            f.write('\n')
+    else:
+        info = get_first_record_attributes(
+            shape_file,
+            field_from,
+            legend_intervals,
+            legend_min_color,
+            legend_max_color
+        )
+        print(dumps(info, indent=2, ensure_ascii=False))
+
+
+if __name__ == '__main__':
+    from sys import argv
+    main(argv[1:])
