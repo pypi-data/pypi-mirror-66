@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: Numkdoc
+Version: 0.1
+Summary: Mkdoc plugin to autodoc your numpy docstring
+Home-page: https://github.com/napolar/numkdoc
+Author: Thomas FEL
+Author-email: thomas.fel@protonmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
