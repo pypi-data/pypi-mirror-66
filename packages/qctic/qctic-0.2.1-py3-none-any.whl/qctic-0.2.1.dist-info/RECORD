@@ -1,0 +1,17 @@
+qctic/__init__.py,sha256=CSxSpa0fQWwkZPrxKl4ZBbN_fAh0A96l5ucMqlSXygw,94
+qctic/__version__.py,sha256=tC9CwL4Nm8brVXJnZNGk_eoZaJj6eOtLKtOrdJMrpoI,21
+qctic/api.py,sha256=IR2iVdCF7SDzT0yvroXCqjwb7dob5y6Gq7pLXBl_GvE,7479
+qctic/backend.py,sha256=tAsuon9mRAfNlG1U02lC0PDR14_OPfgV8Xi60WuXQFk,7038
+qctic/job.py,sha256=K9GzvFXUFS7GH6OaFP9obhvudDIyTNo8AesaUk32oCQ,4402
+qctic/provider.py,sha256=3bMQWH1u3sMHfZOCSjuHEC9gxLcmOFGS-ebCtUDLXlI,2394
+qctic/schemas.py,sha256=uOYDY8Lw0WiiN3GTecIvZwMhu1IHaR7_Ro50X_KuuLw,1951
+tests/__init__.py,sha256=ZZVXc-qdn6w3pw-yIv_dvxTHoC0cO2se9hiv122OorE,77
+tests/conftest.py,sha256=ll9u9uQ0xnqegg26inh_O-Q6bi9LYOyQAfiafvGwg1Q,637
+tests/test_api.py,sha256=17Vmhc9OG6xFRYcI-53VXnTHOpD0hTZASy9JAGoNg88,2841
+tests/test_backends.py,sha256=2KBttABNdZAlXFGqU2hLz3WO0lOLyaDomcxCsM-tRio,7423
+tests/test_provider.py,sha256=mhZ4lzk0xLMTRZ3FNz-stQGhuhPVvWyJKfJ0RFH5aF0,8892
+tests/utils.py,sha256=SlKcWQvD1jovUzuzy0dgQgCrkJUNsUn-MglhwUY49nw,759
+qctic-0.2.1.dist-info/METADATA,sha256=d5d71wVXL_Txvb9axMsUwjk__0h5TshZtOB1eD7s1n8,1186
+qctic-0.2.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+qctic-0.2.1.dist-info/top_level.txt,sha256=wV3gnyEprFsR9yh_PfXVgypULwaeMUjrLfwwebpBAW4,12
+qctic-0.2.1.dist-info/RECORD,,
