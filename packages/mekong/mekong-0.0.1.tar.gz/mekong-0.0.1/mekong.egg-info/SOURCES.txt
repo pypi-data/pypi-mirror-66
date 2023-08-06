@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+mekong.egg-info/PKG-INFO
+mekong.egg-info/SOURCES.txt
+mekong.egg-info/dependency_links.txt
+mekong.egg-info/requires.txt
+mekong.egg-info/top_level.txt
