@@ -1,0 +1,8 @@
+README.rst
+setup.cfg
+setup.py
+sproc.py
+sproc.egg-info/PKG-INFO
+sproc.egg-info/SOURCES.txt
+sproc.egg-info/dependency_links.txt
+sproc.egg-info/top_level.txt
