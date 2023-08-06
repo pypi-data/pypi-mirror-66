@@ -1,0 +1,9 @@
+README.txt
+setup.py
+PygamePhysics.egg-info/PKG-INFO
+PygamePhysics.egg-info/SOURCES.txt
+PygamePhysics.egg-info/dependency_links.txt
+PygamePhysics.egg-info/top_level.txt
+pygamePhysics/__init__.py
+pygamePhysics/collisions.py
+pygamePhysics/physics.py
