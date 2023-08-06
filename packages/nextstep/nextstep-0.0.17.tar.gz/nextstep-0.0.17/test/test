@@ -1,0 +1,134 @@
+if __name__ == "__main__":
+    import pandas as pd
+    data = pd.read_csv("../../development/Feature_Mart/feature_mart_merged_1.csv")
+    data = data.drop(['date','demand_clusters','moonrise','moonset','sunrise','sunset'], axis = 1)
+    from random_forest import random_forest
+    random_forest_shell = random_forest({
+                                    'label_column' : 'USEP',
+                                    'train_size' : 0.8,
+                                    'seed' : 33,
+                                    'n_estimators' : 5,
+                                    'bootstrap' : True,
+                                    'criterion' : 'mse',
+                                    'max_features' : 'sqrt'})
+    
+    rf = random_forest_shell.build_model(data)
+    
+    user_config = {'label_column' : 'USEP',
+                   'train_size' : 0.9,
+                   'seed' : 33,
+                   'base_estimator': rf,
+                   'n_estimators' : 10,
+                   'learning_rate' : 1,
+                   'loss' : 'square'}
+    adaboost_shell = adaboost(user_config)
+    adaboost_shell.build_model(data)
+
+if __name__ == "__main__":
+    import pandas as pd
+    data = pd.read_csv("../../../feature_mart.csv")
+    data = data[-100:]
+    
+    user_config = {'lag' : 2,
+                   'differencing' : 0,
+                   'window_size' : 2,
+                   'label_column' : 'USEP',
+                   'train_size' : 0.8,
+                   'seed' : 33}
+    arima_shell = arima(user_config)
+##    arima_shell.autocorrelation(data)
+##    arima_shell.partial_autocorrelation(data)
+    arima_shell.build_model(data)
+    print(arima_shell.predict_next_n(10))
+##    arima_shell.residual_plot()
+
+if __name__ == "__main__":
+    import pandas as pd
+    data = pd.read_csv("../../feature_mart.csv")
+    user_config = {'label_column' : 'USEP',
+                   'n_steps' : 7,
+                   'train_size' : 0.8,
+                   'n_neuron' : 5,
+                   'activation' : 'relu',
+                   'optimizer' : 'adam',
+                   'loss' : 'mse',
+                   'n_epochs' : 2}
+    
+    LSTM_shell = lstm_univariate(user_config)
+    LSTM_shell.build_model(data)
+
+if __name__ == "__main__":
+    import pandas as pd
+    data = pd.read_csv("../../../feature_mart.csv")
+    data = data[-500:]
+    
+    user_config = {
+                   'label_column' : 'USEP',
+                   'train_size' : 0.95,
+                   'seed' : 33,
+                   'trend_order' : (1, 1, 1),
+                   'season_order' : (1, 0, 1, 48)
+                   }
+    sarima_shell = sarima(user_config)
+
+##    sarima_shell.autocorrelation(data)
+##    sarima_shell.partial_autocorrelation(data)
+    sarima_shell.build_model(data)
+    print(sarima_shell.predict_next_n(10))
+
+if __name__ == "__main__":
+    import pandas as pd
+    data = pd.read_csv("../../../feature_mart.csv")
+    data = data[-100:]
+    xgboost_shell = XGboost({    
+                'label_column': 'USEP',
+                'train_size' : 0.8,
+                'seed' : 33,
+                'learning_rate': 0.1,
+                'n_estimators': 150,
+                'max_depth': 20,
+                'min_child_weight': 4,
+                'gamma': 0,
+                'subsample': 0.7,
+                'colsample_bytree': 0.8,
+                'objective': 'reg:linear',
+                'scale_pos_weight': 1,
+                'seed': 1234})
+    
+    xgboost_shell.build_model(data)
+
+if __name__ == "__main__":
+    import pandas as pd
+    data = pd.read_csv("../../development/Feature_Mart/feature_mart_merged_1.csv")
+    data = data.drop(['date','demand_clusters','moonrise','moonset','sunrise','sunset'], axis = 1)
+    random_forest_shell = random_forest({
+                                    'label_column' : 'USEP',
+                                    'train_size' : 0.8,
+                                    'seed' : 33,
+                                    'n_estimators' : 5,
+                                    'bootstrap' : True,
+                                    'criterion' : 'mse',
+                                    'max_features' : 'sqrt'})
+    
+    random_forest_shell.build_model(data)
+if __name__ == "__main__":
+    import pandas as pd
+    data = pd.read_csv("../../../feature_mart.csv")
+    data = data[-100:]
+    xgboost_shell = XGboost({    
+                'label_column': 'USEP',
+                'train_size' : 0.8,
+                'seed' : 33,
+                'learning_rate': 0.1,
+                'n_estimators': 150,
+                'max_depth': 20,
+                'min_child_weight': 4,
+                'gamma': 0,
+                'subsample': 0.7,
+                'colsample_bytree': 0.8,
+                'objective': 'reg:linear',
+                'scale_pos_weight': 1,
+                'seed': 1234})
+    
+    xgboost_shell.build_model(data)
+

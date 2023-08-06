@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: nextstep
+Version: 0.0.17
+Summary: USEP price prediction
+Home-page: https://github.com/YangYuesong0323/nextstep
+Author: Yang Yuesong
+Author-email: yangyuesongyys@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
