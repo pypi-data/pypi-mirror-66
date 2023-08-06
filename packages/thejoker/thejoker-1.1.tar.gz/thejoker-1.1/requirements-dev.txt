@@ -1,0 +1,13 @@
+-r requirements.txt
+pytest
+sphinx==3.0.1
+sphinx-astropy
+pytest-astropy
+corner
+nbsphinx
+nbconvert
+nbformat
+ipykernel
+astroML
+coveralls
+pyyaml
