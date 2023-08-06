@@ -1,0 +1,7 @@
+README.md
+maildir2mbox.py
+setup.py
+maildir2mbox.egg-info/PKG-INFO
+maildir2mbox.egg-info/SOURCES.txt
+maildir2mbox.egg-info/dependency_links.txt
+maildir2mbox.egg-info/top_level.txt
