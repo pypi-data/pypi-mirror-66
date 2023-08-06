@@ -1,0 +1,124 @@
+Metadata-Version: 2.1
+Name: sequoia-client-sdk-async
+Version: 0.4.0
+Summary: 
+Home-page: https://github.com/pikselpalette/sequoia-python-client-sdk-async
+License: GPL-3.0+
+Keywords: piksel,sequoia,client,sdk,asyncio
+Author: José Antonio Perdiguero López
+Author-email: perdy@perdy.io
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: backoff (>=1.10.0,<2.0.0)
+Requires-Dist: httpx (>=0.11.1,<0.12.0)
+Requires-Dist: isodate (>=0.6.0,<0.7.0)
+Project-URL: Repository, https://github.com/pikselpalette/sequoia-python-client-sdk-async
+Description-Content-Type: text/markdown
+
+<p align="center">
+  <a href="https://piksel.com/product/piksel-palette/"><img src="https://pikselgroup.com/broadcast/wp-content/uploads/sites/3/2017/09/P-P.png" alt='Piksel Palette'></a>
+</p>
+
+
+# Sequoia Client SDK Async
+
+Python asyncio based SDK for interacting with Piksel Palette services, providing a high level interface to ease the 
+development of different pieces on top of this ecosystem.
+
+Among other characteristics it provides the following:
+
+* **Async** requests based on `asyncio` engine providing a high throughput.
+* **Lazy loading** to avoid use and discover not needed elements.
+* **Authentication** flow integrated and transparent.
+* **Discovery** for Sequoia services, API resources and methods.
+* **Pagination** automatically handled using continue-based pagination. It's completely transparent to client users.
+* **Schema** validation, including serialization from Sequoia API types into Python's native types and the opposite.
+* **Syntactic sugar** to allow its usage be pythonic.
+
+## Requirements
+
+* [Python] 3.6+
+
+## Installation
+
+```console
+$ pip install sequoia-client-sdk-async
+```
+
+## Usage
+
+The client understand three kind of elements:
+* `Service`: Sequoia service against to the request will be performed.
+* `Resource`: An specific resource of previous service.
+* `Method`: Operation that will be performed (`create`, `retrieve`, `update`, `delete`, `list`).
+
+The syntax to interact with the client is the following for an specific **resource** (`create`, `retrieve`, `update`, `delete`):
+
+```python
+await client.service.resource.method(params={}, headers={})
+```
+
+And the next one for interacting with **collections** (`list`):
+
+```python
+async for item in client.service.resource.method(params={}, headers={}):
+    ...  # Do something
+```
+
+
+## Examples
+
+Here is a list of some client usage examples.
+
+### Iterate over a list of metadata offers filtered by availabilityStartAt
+```python
+import sequoia
+
+async with sequoia.Client(client_id="foo", client_secret="bar", registry_url="https://foo.bar") as client:
+    async for offer in client.metadata.offers.list(params={"withAvailabilityStartAt": "2000-01-01T00:00:00.000Z"}):
+        ...  # Do fancy things with this offer
+```
+
+### Create a metadata offer
+```python
+import sequoia
+
+async with sequoia.Client(client_id="foo", client_secret="bar", registry_url="https://foo.bar") as client:
+    await client.metadata.offers.create(json={"foo": "bar"})
+```
+
+### Retrieve a metadata offer
+```python
+import sequoia
+
+async with sequoia.Client(client_id="foo", client_secret="bar", registry_url="https://foo.bar") as client:
+    offer = await client.metadata.offers.retrieve(pk="foo")
+```
+
+### Update a metadata offer
+```python
+import sequoia
+
+async with sequoia.Client(client_id="foo", client_secret="bar", registry_url="https://foo.bar") as client:
+    await client.metadata.offers.update(pk="foo", json={"foo": "bar"})
+```
+
+### Delete a metadata offer
+```python
+import sequoia
+
+async with sequoia.Client(client_id="foo", client_secret="bar", registry_url="https://foo.bar") as client:
+    await client.metadata.offers.delete(pk="foo")
+```
+
+[Python]: https://www.python.org
+
