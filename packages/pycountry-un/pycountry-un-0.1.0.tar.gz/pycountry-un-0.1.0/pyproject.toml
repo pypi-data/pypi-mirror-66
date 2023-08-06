@@ -1,0 +1,26 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "pycountry_un"
+dist-name = "pycountry-un"
+author = "Fábio Macêdo Mendes"
+author-email = "fabiomacedomendes@gmail.com"
+home-page = "http://github.com/fabiommendes/covid-19"
+classifiers = [ "License :: OSI Approved :: MIT License" ]
+requires = [
+  "pycountry~=19.8",
+]
+
+[tool.flit.metadata.requires-extra]
+dev = [
+  "black",
+]
+test = [
+  "coverage~=5.0",
+  "pytest~=5.0",
+]
+
+[tool.black]
+line-length = 90
