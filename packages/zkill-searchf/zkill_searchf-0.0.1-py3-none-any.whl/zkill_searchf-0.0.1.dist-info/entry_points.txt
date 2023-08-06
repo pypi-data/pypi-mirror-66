@@ -1,0 +1,3 @@
+[console_scripts]
+zkill-searchf = zkill_searchf.search:cli_entry_point
+
