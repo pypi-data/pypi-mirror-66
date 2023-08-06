@@ -1,0 +1,5 @@
+systemd_socketserver.py,sha256=H5IlLVfs-ka4VAUyV9G_Vwl_ErvRkO68bQ4JxXyjAA8,2988
+systemd_socketserver-1.0.dist-info/METADATA,sha256=Rg2eJftcYEru7rBwVvuTVDWFDm9hnkc4CP5dWRoFYK8,2320
+systemd_socketserver-1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+systemd_socketserver-1.0.dist-info/top_level.txt,sha256=kEoGdyVTPIMkfuNKBhSib2Xoi2ge1o-aHpXGvy38ldE,21
+systemd_socketserver-1.0.dist-info/RECORD,,
