@@ -1,0 +1,15 @@
+README.md
+setup.py
+cfb_predictor/__init__.py
+cfb_predictor/cfg.py
+cfb_predictor/data_fxns.py
+cfb_predictor/data_scrape.py
+cfb_predictor/model_testing.py
+cfb_predictor/model_training.py
+cfb_predictor/neural_network.py
+cfb_predictor/train_fxns.py
+cfb_predictor.egg-info/PKG-INFO
+cfb_predictor.egg-info/SOURCES.txt
+cfb_predictor.egg-info/dependency_links.txt
+cfb_predictor.egg-info/requires.txt
+cfb_predictor.egg-info/top_level.txt
