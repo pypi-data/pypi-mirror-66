@@ -1,0 +1,13 @@
+purdy/__init__.py,sha256=2eiWQI55fd-roDdkt4Hvl9WzrTJ4xQo33VzFud6D03U,22
+purdy/actions.py,sha256=paziWVX-dp0SZJiUXWK_rSsjmrzDhux0P6PBtjNA-mo,16953
+purdy/content.py,sha256=e0-klxtQwZdAh8kVwTWUOPotNolX42i2vDKr5rTkpiI,14370
+purdy/purdy,sha256=QDBKrll2BcdAiFjRq_hjXGyUoLBtTDr3Mmpx6KBJSlI,3167
+purdy/settings.py,sha256=12M2GMF4y7qQ7npr45GWqq5CcBHbiQ5rxuy5LgOArQQ,506
+purdy/ui.py,sha256=U5nseJQewLW4GDns3XNnbFlaQyGWkc9edBam9tm7WF0,17095
+purdy/widgets.py,sha256=Icp0G7XtCe6cdAwhJjF3Ft3DV5U-zRw1F7wiFPoMNg0,8588
+purdy-0.4.0.data/scripts/purdy,sha256=T9jsVuUzLC6hl5EZyg-oVYZ6eHR98XoOwqzy42Uo1P0,3154
+purdy-0.4.0.dist-info/LICENSE,sha256=4KpObEei5yq76LLFbbM6vNNg1LGwIVYncpYEiz1joJM,1087
+purdy-0.4.0.dist-info/METADATA,sha256=_63xaRpN6jq7qL3KZPCXdIOCa7PqBCV1P2Lcsyps7q8,3035
+purdy-0.4.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+purdy-0.4.0.dist-info/top_level.txt,sha256=5gqoeH7aNKt8ZeoGhooZUwT1mTk1GnEkMfXq0ldiIeQ,6
+purdy-0.4.0.dist-info/RECORD,,
