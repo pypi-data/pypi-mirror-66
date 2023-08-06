@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: UGFlib
+Version: 0.0.1
+Summary: A library developed by shedarshian.
+Home-page: https://github.com/shedarshian/UGFlib
+Author: shedarshian
+Author-email: shedarshian@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+
+# UGFlib
+
+This is a library developed by UGF. It currently contains helper modules for ROOT and RooFit.
+
+
+
