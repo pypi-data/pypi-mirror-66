@@ -1,0 +1,3 @@
+[console_scripts]
+color-space-converter = color_space_converter.bin.cli:main
+
