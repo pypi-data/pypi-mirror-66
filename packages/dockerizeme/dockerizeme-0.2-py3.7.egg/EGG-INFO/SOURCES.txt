@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+dockerizeme.egg-info/PKG-INFO
+dockerizeme.egg-info/SOURCES.txt
+dockerizeme.egg-info/dependency_links.txt
+dockerizeme.egg-info/entry_points.txt
+dockerizeme.egg-info/not-zip-safe
+dockerizeme.egg-info/requires.txt
+dockerizeme.egg-info/top_level.txt
+package/Dockerfile
+package/__init__.py
+package/dockerize.py
+package/__pycache__/__init__.cpython-37.pyc
+package/templates/Java.Dockerfile
+package/templates/NodeJS.Dockerfile
+package/templates/Python-Flask.Dockerfile
