@@ -1,0 +1,13 @@
+.gitignore
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+flask_image_search/__init__.py
+flask_image_search/feature_extractor.py
+flask_image_search/feature_extractor_debug.py
+flask_image_search.egg-info/PKG-INFO
+flask_image_search.egg-info/SOURCES.txt
+flask_image_search.egg-info/dependency_links.txt
+flask_image_search.egg-info/requires.txt
+flask_image_search.egg-info/top_level.txt
