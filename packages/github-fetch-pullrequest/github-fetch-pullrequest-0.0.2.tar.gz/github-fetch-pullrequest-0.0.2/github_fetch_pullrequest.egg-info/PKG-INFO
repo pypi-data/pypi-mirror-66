@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: github-fetch-pullrequest
+Version: 0.0.2
+Summary: Script to pull request from GitHub.
+Home-page: https://github.com/Josca/github-fetch-pullrequest
+Author: Josef Hák
+Author-email: jhak@redhat.com
+License: GPLv2
+Description: # github-fetch-pullrequest
+        Script to pull request from GitHub and prepare them for rebase process.
+        
+        ## Install
+        ~~~bash
+        pip install github-fetch-pullrequest # from PyPI
+        pip install .                        # from sources
+        ~~~
+        
+        ## Usage
+        ~~~bash
+        github-fetch-pullrequest --help # show help
+        github-fetch-pullrequest        # available pull requests
+        github-fetch-pullrequest -n 42  # fetch pull request number 42
+        ~~~
+        
+        ## Oauth
+        To use oauth create secret file `~/.github-fetch-pullrequest-token` including your
+        github access token. You can create and copy GitHub access token using your
+        GitHub web interface.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
