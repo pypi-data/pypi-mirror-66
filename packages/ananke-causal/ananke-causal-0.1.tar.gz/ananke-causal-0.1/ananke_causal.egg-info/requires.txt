@@ -1,0 +1,7 @@
+networkx
+graphviz
+autograd
+scipy
+numpy
+pandas
+statsmodels
