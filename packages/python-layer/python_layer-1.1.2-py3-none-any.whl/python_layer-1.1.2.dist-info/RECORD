@@ -1,0 +1,9 @@
+aws_layers/__init__.py,sha256=_DU6k9CvOwicSLX-M5IdG24gUO5v-i6peEex3jL0yWA,26
+aws_layers/aws_layers.py,sha256=HGsKqh_5oyVcEAWkbDuTE1v92sgvbfNjVWXkz4K6y1U,3842
+aws_layers/layer_utils.py,sha256=nOE86Ka-nQ9tNVrBC0Yx6J2t48HWS9g0BMLSUDUklo4,685
+python_layer-1.1.2.data/scripts/layer,sha256=n-zqkjXye4AcVkAZUW-KdROfKXfOli5TT3lRRe3rBcE,2289
+python_layer-1.1.2.dist-info/LICENSE,sha256=TIm72nOZSfDrqfgAXyx0ez3Slwd3CjskaTKuMJSigII,1079
+python_layer-1.1.2.dist-info/METADATA,sha256=0BDxtF_yQbCzTaBUuGg2gFGUEy_5NC8mCoLn4GFDDKY,2358
+python_layer-1.1.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+python_layer-1.1.2.dist-info/top_level.txt,sha256=-lVG6fao7gvXfs6h9IFZgDbPNNHbhGRvP65QZDGgQdI,11
+python_layer-1.1.2.dist-info/RECORD,,
