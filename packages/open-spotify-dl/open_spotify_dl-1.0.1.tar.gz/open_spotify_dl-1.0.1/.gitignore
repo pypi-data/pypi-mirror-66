@@ -1,0 +1,5 @@
+*.json
+*.mp3
+*.pyc
+*.egg-info
+dist
