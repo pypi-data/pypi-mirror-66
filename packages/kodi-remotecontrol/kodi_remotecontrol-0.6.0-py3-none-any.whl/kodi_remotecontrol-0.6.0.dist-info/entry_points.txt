@@ -1,0 +1,3 @@
+[console_scripts]
+kodi_remotecontrol = kodi_remotecontrol.wsproxy:start_remotecontrol
+
