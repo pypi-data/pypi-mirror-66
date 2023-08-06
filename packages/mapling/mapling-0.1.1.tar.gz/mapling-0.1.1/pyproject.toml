@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "mapling"
+version = "0.1.1"
+description = ""
+authors = ["Andrew Janco <ajanco@haverford.edu>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+mapling = "mapling.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.5"
+typer = {extras = ["all"], version = "^0.1.1"}
+pandas = "^1.0.3"
+requests = "^2.23.0"
+textract = "^1.6.3"
+spacy = "^2.2.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
