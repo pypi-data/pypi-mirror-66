@@ -1,0 +1,12 @@
+layabauth/__init__.py,sha256=TvenfD4ps8HV4thH8BfIlT0W_BCChRW5OtcOEZPlIwU,111
+layabauth/_http.py,sha256=MlvvknNKriZhVqXfhIVUYuNsfNKxo8539P4sFI2anWE,217
+layabauth/_openapi.py,sha256=zb6pQsyamnDYOAeam6UAkJBLinA9tci2eFUhpWx3gBQ,726
+layabauth/flask.py,sha256=xDaq5NfonEnyUbbnV-FEGCRyX4-ESifn9Y2zoIOpYmk,1683
+layabauth/starlette.py,sha256=UClMOqZAtAPYYsV8YMFvKCOqOpLmvcgfR3ri1-4WTHQ,1760
+layabauth/testing.py,sha256=hRlNtOgt2gHuu2xM2hpDex42qMuz4afbiBT9_envCjc,208
+layabauth/version.py,sha256=ponMScTJ726YiGGfrLV9rf-Y-IsWdS__Dasv7THJzBI,371
+layabauth-4.0.0.dist-info/LICENSE,sha256=xd320zQeoc-jRB1LnCTKMFT2x0yIIqqX64icuabaQtE,1071
+layabauth-4.0.0.dist-info/METADATA,sha256=vrFob4fVAC5_pI4dazSo7vqUPmV1neplnYnOGYkzr24,5935
+layabauth-4.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+layabauth-4.0.0.dist-info/top_level.txt,sha256=4lkdAAGhUj6zuK7j7X4-2W86OEJBcZcTEH2tXemXHJ8,10
+layabauth-4.0.0.dist-info/RECORD,,
