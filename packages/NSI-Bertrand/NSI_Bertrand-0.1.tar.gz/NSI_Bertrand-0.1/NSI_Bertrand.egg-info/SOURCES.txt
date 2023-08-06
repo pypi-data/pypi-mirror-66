@@ -1,0 +1,8 @@
+README.md
+setup.py
+NSI_Bertrand/__init__.py
+NSI_Bertrand/tri.py
+NSI_Bertrand.egg-info/PKG-INFO
+NSI_Bertrand.egg-info/SOURCES.txt
+NSI_Bertrand.egg-info/dependency_links.txt
+NSI_Bertrand.egg-info/top_level.txt
