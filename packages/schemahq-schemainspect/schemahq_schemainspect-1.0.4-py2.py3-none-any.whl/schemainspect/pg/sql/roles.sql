@@ -1,0 +1,41 @@
+select
+  oid,
+  rolname as name,
+  case rolinherit when true then
+    'INHERIT'
+  else
+    'NOINHERIT'
+  end as inherit,
+  case rolcreaterole when true then
+    'CREATEROLE'
+  else
+    'NOCREATEROLE'
+  end as createrole,
+  case rolcreatedb when true then
+    'CREATEDB'
+  else
+    'NOCREATEDB'
+  end as createdb,
+  case rolcanlogin when true then
+    'LOGIN'
+  else
+    'NOLOGIN'
+  end as login,
+  case rolreplication when true then
+    'REPLICATION'
+  else
+    'NOREPLICATION'
+  end as replication,
+  case rolbypassrls when true then
+    'BYPASSRLS'
+  else
+    'NOBYPASSRLS'
+  end as bypassrls,
+  rolconnlimit as connection_limit,
+  rolvaliduntil as valid_until
+from pg_roles
+where
+  rolsuper = false
+  and rolname not like 'pg_%'
+  and rolname not like 'rds%'
+order by rolname;
