@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: glueetl
+Version: 0.0.2
+Summary: A command line tool to help deploy AWS Glue Jobs at ease :)
+Home-page: https://github.com/ngocson2vn/glueetl
+Author: Son Nguyen
+Author-email: ngocson2vn@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: boto3
+
+# glueetl
+A command line tool to help deploy AWS Glue Jobs at ease :)
+
+## Install
+```bash
+pip install glueetl
+```
+
+## Initialize a Glue job
+```bash
+mkdir sample
+cd sample
+glueetl init
+```
+```
+.
+├── README.md
+├── config.yaml
+└── script.py
+```
+
+Please change default values in file `config.yaml` and write your job logic in file `script.py`.
+
+## Deploy a Glue job
+```bash
+cd sample
+glueetl deploy
+```
+
+## Run a Glue job
+```bash
+cd sample
+glueetl run --arg1=value1 --arg2=value2
+```
+
+
