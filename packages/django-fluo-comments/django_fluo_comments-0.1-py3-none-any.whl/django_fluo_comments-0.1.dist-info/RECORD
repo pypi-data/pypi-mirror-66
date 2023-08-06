@@ -1,0 +1,13 @@
+comments/__init__.py,sha256=SMI9TlbKckyFeoVl7iGrx9CASElAF6xXCGFagz8ygJg,1678
+comments/apps.py,sha256=sIX5xTajMStIaWyexQc17FTPM1GGaQoJ9bqBi0d2wrg,1305
+comments/conf.py,sha256=Eu0mo_qeyW5dudlQdvz4qaQthwMeiHiH1ejyhiQSVMw,3652
+comments/forms.py,sha256=Jr2tNz-Cgx922AC_zzbIc43pcFCBpUYLsmQaZLKUOCw,3715
+comments/models.py,sha256=a0kapKlteYP7XKPDZo2vUB8laEYrs3NpytOlE0ZVFZ4,5493
+comments/version.py,sha256=vEFP5Ny0_xl8pT3aK-RvCXcwCAyqdi4YT66-EzBUsqo,1649
+comments/templatetags/__init__.py,sha256=lAtt9YdASFaZIA7nfv0uiH-g0mNax8Gzac5_a-2l3ZY,1125
+comments/templatetags/comments_tags.py,sha256=3Qxu0vXSdWl8wDy187aeg6BuDtGlKlwIELFqSDLnQxU,5581
+django_fluo_comments-0.1.dist-info/COPYING,sha256=lvuewQP51v_D3Fua3k-esoottZ0wFd99QMUdxFgB8f4,1090
+django_fluo_comments-0.1.dist-info/METADATA,sha256=5yeHWZA747Hr829lgRab5Rt97ir03r1NU55f0SFveb0,1233
+django_fluo_comments-0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_fluo_comments-0.1.dist-info/top_level.txt,sha256=sX--sSj-gM8jMTcdiCPDvnD9AnhG41gxXIvivRYzQYc,9
+django_fluo_comments-0.1.dist-info/RECORD,,
