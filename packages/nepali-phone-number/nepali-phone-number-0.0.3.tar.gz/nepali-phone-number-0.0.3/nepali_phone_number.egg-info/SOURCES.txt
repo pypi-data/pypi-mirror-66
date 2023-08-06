@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+nepali_phone_number/__init__.py
+nepali_phone_number/config.py
+nepali_phone_number/datasets.py
+nepali_phone_number/exceptions.py
+nepali_phone_number/nepali_phone_number.py
+nepali_phone_number/regexs.py
+nepali_phone_number/validators.py
+nepali_phone_number.egg-info/PKG-INFO
+nepali_phone_number.egg-info/SOURCES.txt
+nepali_phone_number.egg-info/dependency_links.txt
+nepali_phone_number.egg-info/top_level.txt
