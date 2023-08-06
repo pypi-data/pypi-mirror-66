@@ -1,0 +1,5 @@
+graft bootstrap_navbar/templates/
+exclude bootstrap_navbar/tests/*
+exclude bootstrap_navbar/migrations/*
+exclude bootstrap_navbar/settings.py
+exclude bootstrap_navbar/conftest.py
