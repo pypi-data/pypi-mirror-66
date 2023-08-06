@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: darwyn-genopt-kevinlioi
+Version: 1.1.0
+Summary: Optimizing analytic functions utilizing a genetic algorithm
+Home-page: https://github.com/kevinlioi/metaheuristics
+Author: Kevin Lioi
+Author-email: kevin@getdarwyn.com
+License: unlicense
+Platform: UNKNOWN
+Requires-Dist: numpy
+
+UNKNOWN
+
+
