@@ -1,0 +1,32 @@
+[
+  {
+    "tyyppi": "julkaisu",
+    "tunnus": "a6f85479e6ba2dbd99502188f6e142170353ed24",
+    "versio": "0.1",
+    "kuvaus": "Versio 0.1"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "e0c6a273e458ae2c5d7c70853eef7c2485d17438",
+    "versio": "0.1",
+    "kuvaus": "Lis\u00e4tty `XtermNakyma`-luokka"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "7ca3c585269a6d5fe1a47c302023c7ad90fc2719",
+    "versio": "0.0.3",
+    "kuvaus": "Lis\u00e4tty ylikuormitettu `runserver`-komento"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "8d8f8fa0d1509cdd7ab5a39fe3b7f1012a9fc0ce",
+    "versio": "0.0.2",
+    "kuvaus": "Lis\u00e4tty esimerkinomainen `WebsocketNakyma`-kantaluokka"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "d740b77e3ce875620f3362cda26060dab375100a",
+    "versio": "0.0.1",
+    "kuvaus": "Alustava toteutus"
+  }
+]
