@@ -1,0 +1,11 @@
+vecmaths/__init__.py,sha256=GX5NOcq7mMSHtTv9LXZhhw26PrhDDofjATpbSJgLh_c,42
+vecmaths/_version.py,sha256=DQiXHqQ3C29f_--ye7aVMDPnITrl9M0zMU42LYY48zE,22
+vecmaths/geometry.py,sha256=e1HKRyg-iCqO8pWar4ZW4Ft88t5nweSfYT50283FVfk,4300
+vecmaths/rotation.py,sha256=vueTpXPBeQim8ciau_uq1Ojbq17sMDZvI_9trrDSqFA,15753
+vecmaths/utils.py,sha256=Hvh7rutxUrTFQuoBbK8tbirE21LF09bUJ336c6UL1Lo,4711
+vecmaths/vectors.py,sha256=Z4ECPcJCGk6Fa5k2SFWdVfQW2RVGIGpXFkH3-NTwKB4,17654
+vecmaths-0.1.5.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+vecmaths-0.1.5.dist-info/METADATA,sha256=y1LszC3lj8pDyTaEuPngggnV_SNy1Vv9sIwl_Ov-Z6g,1423
+vecmaths-0.1.5.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+vecmaths-0.1.5.dist-info/top_level.txt,sha256=mgWc6SjdYYTe3_EBw7Q-y9FhjW6Kg0cI7-B4yJeHuhU,9
+vecmaths-0.1.5.dist-info/RECORD,,
