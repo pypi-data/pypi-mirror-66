@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: websnapshot
+Version: 0.1.4
+Summary: 
+Author: Sergey M
+Author-email: tz4678@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: click (>=7.1.1,<8.0.0)
+Requires-Dist: pyppeteer (>=0.0.25,<0.0.26)
+Description-Content-Type: text/markdown
+
+# Take Snapshot of WebPage
+
+```bash
+# install
+$ pip install websnapshot
+
+# install in isolated environment
+$ pipx install websnapshot
+
+# full page snapshot
+$ echo 'https://stackoverflow.com/' | websnapshot -f t
+
+# text file with urls
+$ websnapshot -i urls.txt
+
+# help
+$ websnapshot --help
+```
+
