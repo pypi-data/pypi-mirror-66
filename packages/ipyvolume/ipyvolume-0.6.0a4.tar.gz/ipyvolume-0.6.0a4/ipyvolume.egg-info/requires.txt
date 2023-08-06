@@ -1,0 +1,10 @@
+ipywidgets>=7.0.0
+bqplot
+numpy
+traittypes
+traitlets
+Pillow
+ipywebrtc
+requests
+pythreejs>=2.0.0
+matplotlib
