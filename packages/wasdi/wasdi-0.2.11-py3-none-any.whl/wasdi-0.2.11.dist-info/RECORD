@@ -1,0 +1,9 @@
+testWasdi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+testWasdi/test___init__.py,sha256=3HZtsKAgC0AtOg_aunPqu7GD2QkExnB7F2zkOZybgeY,182
+wasdi/__init__.py,sha256=gMOqFtaX6O53jPULmnUFYsSR40KIa1D7i1mZiEf4XZ0,102549
+wasdi/waspyLogFormatter.py,sha256=q7BImRIkS0tpe9nJ8tFd6GVLfoHU52LDnS7bazSUbIY,1899
+wasdi-0.2.11.dist-info/LICENSE,sha256=Byh6fhSQ530omBViVdQrRs_dTKoiFfNaOHVyraXwRqw,1081
+wasdi-0.2.11.dist-info/METADATA,sha256=rkzRwEKz65YFqMw3bcGLKbsfxMy1MhQPVXeZSsLHJXs,15716
+wasdi-0.2.11.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+wasdi-0.2.11.dist-info/top_level.txt,sha256=JzmVAs6k7JstCZ8uHH2YZbEMdM2tryt1FPcIWorci_Q,16
+wasdi-0.2.11.dist-info/RECORD,,
