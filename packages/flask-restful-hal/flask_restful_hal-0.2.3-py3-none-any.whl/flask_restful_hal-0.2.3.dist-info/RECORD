@@ -1,0 +1,10 @@
+flask_restful_hal/__init__.py,sha256=vww-eQ4z5ZGy6Gz7LtbynP5QDyPW8i_-9abS_vGq-10,250
+flask_restful_hal/_version.py,sha256=H3tXf_YDIPEQ7mYwur7rN8Pgxg6zYt9iV2b-Ax2EKZc,80
+flask_restful_hal/api.py,sha256=58brS1Mycqkb-03Ixv04rDhbqLU3FYgNGmSSL2eJ0Ck,1988
+flask_restful_hal/representation.py,sha256=SWHalZFFQ1vQ_hZCTM5jeWiSM7jew8kpzoPP66iwIEc,828
+flask_restful_hal/resource.py,sha256=Ah3KoQt0DIX3ZCLufAE7Bi68EPdZmii5kMvRg5dE26I,8121
+flask_restful_hal-0.2.3.dist-info/LICENSE,sha256=EwNOLgzlOXk1r_tfEDUB4udhDxroADoxVpCNyzEbNP4,1070
+flask_restful_hal-0.2.3.dist-info/METADATA,sha256=sCiQcCya7OrPsD1aMMgWZjCdyWQUY8dERxewZrE1zoA,918
+flask_restful_hal-0.2.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+flask_restful_hal-0.2.3.dist-info/top_level.txt,sha256=EFNIc6kyMY9PR-qLQpHjK9n3graVH2ijRRJi0tkKC0E,18
+flask_restful_hal-0.2.3.dist-info/RECORD,,
