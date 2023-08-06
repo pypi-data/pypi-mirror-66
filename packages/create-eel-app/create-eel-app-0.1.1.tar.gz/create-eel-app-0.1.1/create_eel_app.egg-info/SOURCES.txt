@@ -1,0 +1,10 @@
+README.md
+setup.py
+app_templates/__init__.py
+app_templates/basic_template.py
+create_eel_app.egg-info/PKG-INFO
+create_eel_app.egg-info/SOURCES.txt
+create_eel_app.egg-info/dependency_links.txt
+create_eel_app.egg-info/requires.txt
+create_eel_app.egg-info/top_level.txt
+scripts/create_eel_app.py
