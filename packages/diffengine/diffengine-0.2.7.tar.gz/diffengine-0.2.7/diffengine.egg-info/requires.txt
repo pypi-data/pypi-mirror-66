@@ -1,0 +1,13 @@
+bleach
+genshi
+jinja2
+peewee>=3.0
+pillow
+pytest
+pyyaml>=5.1
+tweepy
+requests
+selenium
+feedparser
+readability-lxml
+htmldiff==0.2
