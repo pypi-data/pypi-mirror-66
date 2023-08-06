@@ -1,0 +1,20 @@
+{% if not table.rows and invalid_form_message %}
+    {{ invalid_form_message }}
+{% elif not table.rows and empty_message %}
+    {{ empty_message }}
+{% else %}
+
+    <div class="iommi-table-plus-paginator">
+        <{{ table.tag }}{{ table.attrs }}>
+
+            {{ table.header }}
+
+            <tbody>
+                {{ table.tbody }}
+            </tbody>
+        </{{ table.tag }}>
+
+        {{ table.paginator }}
+    </div>
+
+{% endif %}
