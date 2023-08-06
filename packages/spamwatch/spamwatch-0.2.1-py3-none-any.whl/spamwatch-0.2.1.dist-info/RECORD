@@ -1,0 +1,9 @@
+spamwatch/__init__.py,sha256=qIvp9twNiLyiLTJ6iI15U8QHsVJFeykMDETudtEQo8c,76
+spamwatch/client.py,sha256=SCB3rnFtBOSLW8GPTiOOVHltAeOdmYjTJPNAKnn62HU,4975
+spamwatch/errors.py,sha256=AsiVktAMwatALvbfp7pm_79m-CEj8mRVxaeCNexLQwI,626
+spamwatch/types.py,sha256=8I109kgPG4F8Xqig0-FQcjLY0ajEgimAbOPsXYycg6M,1249
+spamwatch-0.2.1.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+spamwatch-0.2.1.dist-info/METADATA,sha256=BQiZ3N29eHfDPX0xYzti3ZmAaSp0A0PFxHXq0-IhmS0,818
+spamwatch-0.2.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+spamwatch-0.2.1.dist-info/top_level.txt,sha256=1H0u54HGgHNjmN7a5OKoMxIfoq1nOaaQrEtTnLowU5g,10
+spamwatch-0.2.1.dist-info/RECORD,,
