@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+avery_Trading_ML/__init__.py
+avery_Trading_ML.egg-info/PKG-INFO
+avery_Trading_ML.egg-info/SOURCES.txt
+avery_Trading_ML.egg-info/dependency_links.txt
+avery_Trading_ML.egg-info/requires.txt
+avery_Trading_ML.egg-info/top_level.txt
