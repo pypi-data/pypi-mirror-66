@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: epgame
+Version: 0.1.1
+Summary: easy to do game with pygame for me.
+Home-page: https://github.com/me/myproject
+Author: bbks
+Author-email: 1107798893@qq.com
+License: MIT
+Description: 
+        Easy to make game with pyagme
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown

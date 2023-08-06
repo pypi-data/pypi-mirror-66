@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+epgame/__init__.py
+epgame/mswl.py
+epgame.egg-info/PKG-INFO
+epgame.egg-info/SOURCES.txt
+epgame.egg-info/dependency_links.txt
+epgame.egg-info/requires.txt
+epgame.egg-info/top_level.txt
