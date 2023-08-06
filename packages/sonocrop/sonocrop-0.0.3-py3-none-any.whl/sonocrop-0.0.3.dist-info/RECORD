@@ -1,0 +1,10 @@
+sonocrop/__init__.py,sha256=POkidY6iXXE0cR8czuqR-P8ScxR-OaAx2CCX-alouxQ,141
+sonocrop/__version__.py,sha256=p-4HC4BnBYbc6ns8eaSHHSj3NZSATC_YWNCt6lMyO2Q,51
+sonocrop/cli.py,sha256=w9t2vvXqnj5ue_rxWRx5uSmvr0XG11Zor5mX_rj_TcI,650
+sonocrop/vid.py,sha256=El41LUSdRoPhXKnILIQAr2KlrpDlZb1M5VFldOJ5mv0,2085
+sonocrop-0.0.3.dist-info/LICENSE.txt,sha256=GfUZKORN_fKAHAW6m1wz_URjGqGwAWm7VB63_uYBXzo,28
+sonocrop-0.0.3.dist-info/METADATA,sha256=GLHYf2pFg8d4qyZKtZnDRGWHNlERKxcA0JgrvukryU8,866
+sonocrop-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sonocrop-0.0.3.dist-info/entry_points.txt,sha256=Xkc6AsAvuE5re2mnQev-JIdBzoOm7yBeDFEzHMMnDIs,48
+sonocrop-0.0.3.dist-info/top_level.txt,sha256=tmDaUNIRYmBDwNrcSf0KN_h_hHKiBgG9U744uWnkMzI,9
+sonocrop-0.0.3.dist-info/RECORD,,
