@@ -1,0 +1,9 @@
+subtitle_sync/formatText.py,sha256=9FplDCgFKQeGiF2dX8lKPK5NlZzTGAGzsFG-cYIheuo,5465
+subtitle_sync/markScriptWithRareWordsTimestamp.py,sha256=bR60XjJDn5BFUffc748p3ZLy57tpImi4b016lqNcPbI,5472
+subtitle_sync/sync.py,sha256=w72ZPBhI1GaZl-m0ZE6ENSXLOni3lqgCN6aDXsAl9m4,2095
+subtitle_sync/utils/furtherSyncScript.py,sha256=amCicPuR50z0S9MxbK3Uz9S8F1zVD9u1-6EPQrUFYZo,2742
+subtitle_sync/utils/removeStopWords.py,sha256=6q1zSgeSnZkF1SolWOUQyDK5LHkXel1D92fHHx_e_04,1140
+subtitle_sync/utils/traverseDialogue.py,sha256=s8ZPkxAnZtEgt0yxOVO2xJZFp3Q8YBKmIOuZdcyAV1Q,350
+subtitle_sync-0.1.2.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+subtitle_sync-0.1.2.dist-info/METADATA,sha256=NkbxoIJG508kmleT_QnqDX_GCVQyyKNWwiEvi_wp6mg,450
+subtitle_sync-0.1.2.dist-info/RECORD,,
