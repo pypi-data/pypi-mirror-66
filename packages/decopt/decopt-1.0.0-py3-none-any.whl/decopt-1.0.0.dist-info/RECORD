@@ -1,0 +1,12 @@
+dec_opt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dec_opt/compression.py,sha256=XeS_eGB4TM4UyFZpeL3eoTmE-mFaijQ2q18qqSR5Ya8,2188
+dec_opt/data_reader.py,sha256=6IrCo21E-5ul2hpRGRmzsHgeolm3qqgCX2uZFywsJz8,1952
+dec_opt/dec_gd.py,sha256=nVzetF6DcT8AK6cc8U_m9mdO5KdxllposKTLX6_0VrY,6279
+dec_opt/gossip_matrix.py,sha256=_8QKDL7z96aKkBnnmUpD1nQtrQqQXG83mL1tp8HPOEc,1747
+dec_opt/logistic_regression.py,sha256=eOLOOI5rg8WE09DgP-EnVwAOmDPEtT4kOkWpdd61bAo,3742
+dec_opt/pickle_data.py,sha256=BMVXKIQEaoGq99tVcciDijBhLuFEpvV6oO0OJ6_hGh8,937
+decopt-1.0.0.dist-info/LICENSE,sha256=b28xOA5j9sOLNqITqpHvknXwohCs-bgxavKtIQLqozM,1070
+decopt-1.0.0.dist-info/METADATA,sha256=IYuIXwkYkM-7fcR9gJ24_Hlg9s2zdy51zSisiFB-HmQ,499
+decopt-1.0.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+decopt-1.0.0.dist-info/top_level.txt,sha256=wb9leFeDYW0qigyUVQm1xmFo3MRz0z2f_sD-je_KA4I,8
+decopt-1.0.0.dist-info/RECORD,,
