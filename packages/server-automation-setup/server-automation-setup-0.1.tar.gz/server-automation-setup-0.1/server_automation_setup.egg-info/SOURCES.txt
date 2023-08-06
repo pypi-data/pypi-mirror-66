@@ -1,0 +1,6 @@
+README.md
+setup.py
+server_automation_setup.egg-info/PKG-INFO
+server_automation_setup.egg-info/SOURCES.txt
+server_automation_setup.egg-info/dependency_links.txt
+server_automation_setup.egg-info/top_level.txt
