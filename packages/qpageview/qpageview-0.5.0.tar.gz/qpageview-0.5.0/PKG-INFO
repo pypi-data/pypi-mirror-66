@@ -1,0 +1,52 @@
+Metadata-Version: 1.2
+Name: qpageview
+Version: 0.5.0
+Summary: Widget to display page-based documents for Qt5/PyQt5
+Home-page: https://github.com/frescobaldi/qpageview
+Maintainer: Wilbert Berendsen
+Maintainer-email: info@frescobaldi.org
+License: GPL v3
+Description: The qpageview module
+        ====================
+        
+        ::
+        
+            import qpageview
+        
+            from PyQt5.Qt import *
+            a = QApplication([])
+        
+            v = qpageview.View()
+            v.show()
+            v.loadPdf("path/to/afile.pdf")
+        
+        
+        `Development    <https://github.com/frescobaldi/qpageview>`_    •
+        `Download       <https://pypi.org/project/qpageview/>`_         •
+        `Documentation  <https://qpageview.readthedocs.io/>`_           •
+        `License        <https://www.gnu.org/licenses/gpl-3.0>`_
+        
+        qpageview provides a page based document viewer widget for Qt5/PyQt5.
+        
+        It has a flexible architecture potentionally supporting many formats.
+        Currently, it supports SVG documents, images, and, using the Poppler-Qt5
+        binding, PDF documents.
+        
+        Dependencies
+        ~~~~~~~~~~~~
+        
+        * Python 3.6+
+        * Qt5
+        * PyQt5
+        * python-poppler-qt5 (needed for display of PDF documents)
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.6
