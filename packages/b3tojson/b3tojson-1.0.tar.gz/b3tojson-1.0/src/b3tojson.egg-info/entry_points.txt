@@ -1,0 +1,3 @@
+[console_scripts]
+b3tojson = b3tojson.cli:main
+
