@@ -1,0 +1,11 @@
+README.md
+setup.py
+techind/__init__.py
+techind/exponentialMovingAverage.py
+techind/simpleMovingAverage.py
+techind/weightedMovingAverage.py
+techind.egg-info/PKG-INFO
+techind.egg-info/SOURCES.txt
+techind.egg-info/dependency_links.txt
+techind.egg-info/requires.txt
+techind.egg-info/top_level.txt
