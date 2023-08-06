@@ -1,0 +1,12 @@
+forallpeople/__init__.py,sha256=CzQU2RUQ90qvl0HFnCKYRJvtungMHXdOM168O6GzyIE,45505
+forallpeople/default.json,sha256=JtADsH01wEhoTrQo5ZM6t4X7equ0usDfm6HvX40TleI,1169
+forallpeople/electrical.json,sha256=Yig2wFmJUSUIlYmYfCULRM1DMEfqUwFqDeFGp13R0W4,744
+forallpeople/structural.json,sha256=599kDSpVcOhstQm0FhVkpm_os1lGBlEEr8bz_2bIpoY,2389
+forallpeople/test_definitions.json,sha256=M3C3IpzpZ59yVzXb_C7rm6Wp1u8E6yH0dnlLRHA3gX8,2073
+forallpeople/test_forallpeople.py,sha256=eb3Dm9Gcd3zoIyzk892M0XxfGHXPxu0Pz8KUMHwNO7U,15222
+forallpeople/tuplevector.py,sha256=heUvUPAuCFCKRupX4JkbQ17JwHtrXqXvnf0M-Lnk8eA,8635
+forallpeople-1.2.0.dist-info/LICENSE.TXT,sha256=8NdQp-_tRyErhkQ8Wgse2euSIusR-LRMmpZw31Kz0ao,1092
+forallpeople-1.2.0.dist-info/METADATA,sha256=m_j73LUWF7pGcFiQI7jWrBW7LDnGjDepQw3-yENx5Y4,16785
+forallpeople-1.2.0.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+forallpeople-1.2.0.dist-info/top_level.txt,sha256=oM9d6W6Nkmy-04pktQoLx3CohSQhEO-QYG0CQx1dnPo,13
+forallpeople-1.2.0.dist-info/RECORD,,
