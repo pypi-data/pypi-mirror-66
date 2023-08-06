@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[scripts]
+main = "rain_api"
+requirements = "pip freeze > requirements.txt"
+
+[dev-packages]
+flake8 = "*"
+
+[packages]
+click = "*"
+requests = "*"
+pillow = "*"
+pymysql = "*"
+rain_api = {editable = true,path = "."}
+pytest = "*"
+
+[requires]
+python_version = "3.8"
