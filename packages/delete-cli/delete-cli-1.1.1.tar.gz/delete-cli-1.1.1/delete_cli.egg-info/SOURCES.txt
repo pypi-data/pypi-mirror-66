@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.py
+delete/__init__.py
+delete/__meta__.py
+delete/logging.py
+delete_cli.egg-info/PKG-INFO
+delete_cli.egg-info/SOURCES.txt
+delete_cli.egg-info/dependency_links.txt
+delete_cli.egg-info/entry_points.txt
+delete_cli.egg-info/requires.txt
+delete_cli.egg-info/top_level.txt
+man/man1/delete.1
