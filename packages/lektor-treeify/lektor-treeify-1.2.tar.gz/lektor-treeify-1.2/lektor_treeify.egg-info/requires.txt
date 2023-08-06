@@ -1,0 +1,5 @@
+more_itertools
+simplejson
+
+[dev]
+spherical-dev[dev]>0.0.2
