@@ -1,0 +1,17 @@
+README.md
+setup.py
+twitter_boto_dummy/data_analysis.py
+twitter_boto_dummy/data_collection.py
+twitter_boto_dummy/strategy_interface.py
+twitter_boto_dummy/trends_data_collection.py
+twitter_boto_dummy/twitter_account.py
+twitter_boto_dummy/twitter_action.py
+twitter_boto_dummy/twitter_api_preparation.py
+twitter_boto_dummy/twitter_bot.py
+twitter_boto_dummy/twitter_data_collection.py
+twitter_boto_dummy/twitter_object_parsing.py
+twitter_boto_dummy.egg-info/PKG-INFO
+twitter_boto_dummy.egg-info/SOURCES.txt
+twitter_boto_dummy.egg-info/dependency_links.txt
+twitter_boto_dummy.egg-info/requires.txt
+twitter_boto_dummy.egg-info/top_level.txt
