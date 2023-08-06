@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: SubCMedians
+Version: 0.0.3
+Summary: Weight-based Subspace Clustering
+Home-page: UNKNOWN
+Author: Sergio Peignier, Christophe Rigotti
+Author-email: sergio.peignier@insa-lyon.fr
+License: UNKNOWN
+Description: # PySubCMedians
+        
+        __Authors__: Sergio Peignier, Christophe Rigotti, Anthony Rossi and Guillaume Beslon
+        
+        Python implementation of the SubCMedians algorithm. SubCMedians is a Subspace Clustering algorithm that extends the K-medians paradigm. SubCMedians is a simple hill climbing algorithm based on stochastic weighted local exploration steps. This median based algorithm exhibits satisfactory quality clusters when compared to well-established paradigms, while medians have still their own interests depending on the user application (robustness to noise/outliers and location optimality). Detailled description available in the paper "Weight-based search to find clusters around medians in subspaces" presented in the ACM SAC conference 2018.
+        
+        # Installation
+        
+        
+        
+        # Dependencies :
+        
+        + numpy
+        + pandas
+        + seaborn
+        + scikit-learn
+        + scipy
+        + tqdm
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
