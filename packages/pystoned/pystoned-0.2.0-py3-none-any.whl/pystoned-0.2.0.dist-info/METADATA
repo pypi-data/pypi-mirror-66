@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: pystoned
+Version: 0.2.0
+Summary: Estimating CNLS and StoNED in Python
+Home-page: https://github.com/ds2010/StoNED-Python
+Author: Sheng Dai, Timo Kuosmanen
+Author-email: sheng.dai@aalto.fi, timo.kuosmanen@aalto.fi
+License: LICENSE.txt
+Download-URL: https://pypi.org/project/pystoned/
+Keywords: StoNED,CNLS,CER,CQR,Z-variables
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pyomo
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+# StoNED-Python
+
+`StoNED-Python` project provides the python codes for estimating Convex Nonparametric Least Square (`CNLS`), Stochastic Nonparametric Envelopment of Data (`StoNED`), and their different variants. It allows the user to estimate the CNLS/StoNED models in an open-access environment rather than in commercial software, e.g., GAMS, MATLAB. The `StoNED-Python` project is built based on the [PYOMO](http://www.pyomo.org/). 
+
+# Authors
+ + [Timo Kuosmanen](https://people.aalto.fi/timo.kuosmanen), Professor, Aalto University School of Business.
+ + [Sheng Dai](https://www.researchgate.net/profile/Sheng_Dai8), Ph.D. candidate, Aalto University School of Business.
+
+# To do list
+- [ ]  `CNLS`/`StoNED`
+   - [x] variables returns to scale (`VRS`) model
+   - [x] constant returns to scale (`CRS`) model
+   - [x] Additive composite error term
+   - [x] Multiplicative composite error term
+   - [x] Residuals decomposition by method of moments(`MoM`) 
+   - [x] Residuals decomposition by quasi-likelihood estimation(`QLE`)
+   - [ ] Residuals decomposition by nonparametric kernel deconvolution (`NKD`)
+- [x] `StoNEZD` (contextual variables)
+- [x] Convex quantile regression (`CQR`)
+- [x] Convex expectile regression (`CER`)
+- [ ] Isotonic CNLS (`ICNLS`)
+- [ ] Isotonic convex quantile regression (`ICQR`)
+- [ ] Isotonic convex expectile regression (`ICER`)
+- [x] Corrected convex nonparametric least squares (C<sup>2</sup>NLS)
+
+# Change log
+
+## [0.2.0] - 2020-04-19
+
+### Added
+- `CCNLS()`
+- `CCNLS2()`
+- `CNLSZ()`
+
+### Changed
+- Update REDAME.md
+- Update function `cqer()`
+
+## [0.0.7] - 2020-04-18
+
+### Added
+
+### Changed
+- Update function `cnls()`
+
+### Removed
+
+## [0.0.6] - 2020-04-17
+
+### Added
+- README.md
+- LICENSE.txt
+- HISTORY.md
+
+## [0.0.2] - 2020-04-17
+
+### Added
+- `cqer()`
+- `qllf()`
+
+## [0.0.1] - 2020-04-01
+
+### Added
+- `stoned()`
+- `cnls()`
+
+
