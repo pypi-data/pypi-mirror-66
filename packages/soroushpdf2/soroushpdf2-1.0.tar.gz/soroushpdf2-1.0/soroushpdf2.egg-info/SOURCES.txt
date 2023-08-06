@@ -1,0 +1,10 @@
+README.md
+setup.py
+soroushpdf/__init__.py
+soroushpdf/app.py
+soroushpdf/pdf2image.py
+soroushpdf/pdf2text.py
+soroushpdf2.egg-info/PKG-INFO
+soroushpdf2.egg-info/SOURCES.txt
+soroushpdf2.egg-info/dependency_links.txt
+soroushpdf2.egg-info/top_level.txt
