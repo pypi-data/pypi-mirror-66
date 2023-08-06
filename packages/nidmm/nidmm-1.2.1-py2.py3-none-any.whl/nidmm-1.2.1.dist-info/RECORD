@@ -1,0 +1,15 @@
+nidmm/VERSION,sha256=_xwzi-Ul4OXs426oU1FJZW_MBtrRm77EAaqlQgvP36M,7
+nidmm/__init__.py,sha256=V04X8-CmTgbBOmzuL7mE7140Nh428VpVJYDWp5dSO_4,2960
+nidmm/_attributes.py,sha256=Qr3fpDX0KWkC5kPQHaATb-Da1qys1tJs26TjXZk7ATU,3511
+nidmm/_converters.py,sha256=LuIQWQS-jHK3dIG4mdx84GPkm3tIbfCyrvVPA0zUhp4,24036
+nidmm/_library.py,sha256=juO0jeNY31dzSiZ9EC7ZpCT4uMktgd6TYLX6n0AKE2w,30552
+nidmm/_library_singleton.py,sha256=8Pss7KN4dhudETb6g-bRof4DZSE7UbK6kC9-rrVsXE8,1605
+nidmm/_visatype.py,sha256=6dbb_0reR_MGfbn37oi4H6xB23UjJxUWSZpLaHjNjP4,659
+nidmm/enums.py,sha256=u_HcUf9P5yFPDndswJsI4gyqcvSfxkNl6mBmfqgk2DY,8301
+nidmm/errors.py,sha256=7RAUQWusF7nx9V7Me5npwx7qjYm_SCkyqAwR309qwFM,3176
+nidmm/session.py,sha256=nK4gKo5ltiCdC72HMHm7s-ysmnK-n9Qep-CijI-4oXk,150447
+nidmm-1.2.1.dist-info/METADATA,sha256=1KGu0VcR05q4_GS5ziktl0C_M5rKR88bN-eF-hb6nn4,8628
+nidmm-1.2.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+nidmm-1.2.1.dist-info/top_level.txt,sha256=hnE534sNbtl4qd-rHoZ9-Iqwj6nGXWUHwljmoEK3g3U,6
+nidmm-1.2.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+nidmm-1.2.1.dist-info/RECORD,,
