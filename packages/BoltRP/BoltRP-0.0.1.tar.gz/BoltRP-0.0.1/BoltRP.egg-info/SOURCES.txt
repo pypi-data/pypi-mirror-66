@@ -1,0 +1,9 @@
+README.md
+setup.py
+BoltRP.egg-info/PKG-INFO
+BoltRP.egg-info/SOURCES.txt
+BoltRP.egg-info/dependency_links.txt
+BoltRP.egg-info/requires.txt
+BoltRP.egg-info/top_level.txt
+boltrp/__init__.py
+boltrp/functional.py

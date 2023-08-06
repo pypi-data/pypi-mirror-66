@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: BoltRP
+Version: 0.0.1
+Summary: Torch-powered RQA
+Home-page: https://github.com/yop0/BoltRP
+Author: Johan Medrano
+Author-email: johan.medrano@umontpellier.fr
+License: MIT
+Description: # BoltRP
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
