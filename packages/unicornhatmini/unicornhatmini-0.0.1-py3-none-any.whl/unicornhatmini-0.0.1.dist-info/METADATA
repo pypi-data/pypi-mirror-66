@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: unicornhatmini
+Version: 0.0.1
+Summary: Python library for the unicornhatmini 17x7 RGB LED matrix
+Home-page: https://www.pimoroni.com
+Author: Philip Howard
+Author-email: phil@pimoroni.com
+License: MIT
+Project-URL: GitHub, https://www.github.com/pimoroni/unicornhatmini-python
+Keywords: Raspberry Pi
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Hardware
+Requires-Python: >= 2.7
+Description-Content-Type: text/markdown
+Requires-Dist: spidev
+
+# unicornhatmini
+
+[![Build Status](https://travis-ci.com/pimoroni/unicornhatmini-python.svg?branch=master)](https://travis-ci.com/pimoroni/unicornhatmini-python)
+[![Coverage Status](https://coveralls.io/repos/github/pimoroni/unicornhatmini-python/badge.svg?branch=master)](https://coveralls.io/github/pimoroni/unicornhatmini-python?branch=master)
+[![PyPi Package](https://img.shields.io/pypi/v/unicornhatmini.svg)](https://pypi.python.org/pypi/unicornhatmini)
+[![Python Versions](https://img.shields.io/pypi/pyversions/unicornhatmini.svg)](https://pypi.python.org/pypi/unicornhatmini)
+
+# Installing
+
+Stable library from PyPi:
+
+* Just run `sudo pip install unicornhatmini`
+
+Latest/development library from GitHub:
+
+* `git clone https://github.com/pimoroni/unicornhatmini-python`
+* `cd unicornhatmini-python`
+* `sudo ./install.sh`
+
+
+
