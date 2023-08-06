@@ -1,0 +1,7 @@
+dialogflowpy_webhook/__init__.py,sha256=9aME38RuqjcQ8zikmIWiH5LXAFrIPUfa3HprFRxSgQU,92
+dialogflowpy_webhook/request_handler.py,sha256=h7f8NR1tlYG10L3h7SPGmAdyk5_5vRxZRCpD-5kZcpE,5259
+dialogflowpy_webhook/response_handler.py,sha256=kLXSKFoiHVi9xfT3Z-k1_S22201UvsNcvOAXbyM3hkA,18047
+dialogflowpy_webhook-1.0.0.dist-info/METADATA,sha256=bbNLiLxgUtq5AxiGOeO_xKoBWkAvpiQAXFkwUtYP0wQ,2711
+dialogflowpy_webhook-1.0.0.dist-info/RECORD,,
+dialogflowpy_webhook-1.0.0.dist-info/WHEEL,sha256=FRuHuBX28RTgsOL603qIpbSc2WeDgbsFBWKj9XFOCpg,92
+dialogflowpy_webhook-1.0.0.dist-info/top_level.txt,sha256=iQiWsfA-VOVz9plwSTLvBiCj3cDcgLmnY_as9Jbbh1w,21
