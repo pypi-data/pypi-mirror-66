@@ -1,0 +1,12 @@
+more.cors-0.3-py3.7-nspkg.pth,sha256=sFy3xzEvXCJJjGujIINXjAWeal7lqjM4oe2LDr513io,529
+more/cors/__init__.py,sha256=mBJjsmaU8bgjI9tEvsal6a81ZkCZG-y_jdsfbAtAnZw,42
+more/cors/action.py,sha256=Z0otkDnyxSq5DSFDirwWYB9Mgg5Yrk0susquz81573Q,2300
+more/cors/main.py,sha256=mjxJEoXDyIrMgDT_zl8tqSKeug9tEYwM6WjvzKNchto,5521
+more/cors/tests/test_cors.py,sha256=JJEM38yAde7ZErnFrIk2J2OEBnehjFTi-sOlgI0CPrY,3919
+more.cors-0.3.dist-info/LICENSE.txt,sha256=HH2A0Y2q8f2SBHZf7U4BoentRQlzS6hxOQ40aTHGF1A,1508
+more.cors-0.3.dist-info/METADATA,sha256=On8puvRRX5O0m-DQrCbSOliXn6tuGdgaRf8l0bRWaSY,3978
+more.cors-0.3.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+more.cors-0.3.dist-info/entry_points.txt,sha256=UBJUxQX4XYmyGipgZySUMECl5HlhCHKA0GAj9en-B_k,29
+more.cors-0.3.dist-info/namespace_packages.txt,sha256=I5YJnGwIT6S5vqyfDVLPO-nPjUcEDvEniD1TK1eQzXQ,5
+more.cors-0.3.dist-info/top_level.txt,sha256=I5YJnGwIT6S5vqyfDVLPO-nPjUcEDvEniD1TK1eQzXQ,5
+more.cors-0.3.dist-info/RECORD,,
