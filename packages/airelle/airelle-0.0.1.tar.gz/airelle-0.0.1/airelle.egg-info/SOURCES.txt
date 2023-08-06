@@ -1,0 +1,5 @@
+setup.py
+airelle.egg-info/PKG-INFO
+airelle.egg-info/SOURCES.txt
+airelle.egg-info/dependency_links.txt
+airelle.egg-info/top_level.txt
