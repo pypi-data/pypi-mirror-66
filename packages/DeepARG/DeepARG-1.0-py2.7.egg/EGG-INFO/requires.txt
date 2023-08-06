@@ -1,0 +1,11 @@
+BioPython
+ete3
+tqdm
+numpy==1.10.4
+scipy==0.16.1
+nolearn==0.6
+lasagne==0.1
+scikit-learn==0.19.1
+theano==0.8.2
+requests
+wget
