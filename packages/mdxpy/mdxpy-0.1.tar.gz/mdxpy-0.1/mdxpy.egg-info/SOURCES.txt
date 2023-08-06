@@ -1,0 +1,11 @@
+LICENSE
+readme.md
+setup.py
+test.py
+mdxpy/__init__.py
+mdxpy/mdx.py
+mdxpy.egg-info/PKG-INFO
+mdxpy.egg-info/SOURCES.txt
+mdxpy.egg-info/dependency_links.txt
+mdxpy.egg-info/requires.txt
+mdxpy.egg-info/top_level.txt
