@@ -1,0 +1,11 @@
+evocov/__init__.py,sha256=F4asH4jsSrdmk7yNrehw0zIErFwLU0WMg871ZRtoJ44,36
+evocov/covariance_function.py,sha256=WpU1jrh2NMVS7NU6_dNGW97DS7dr8prPPC3WTvzrlek,4029
+evocov/creation.py,sha256=F291A2Sk-FT0I4QGlfISFTU5LaxPro-ZotcNg8g0LLU,14727
+evocov/primitive_set.py,sha256=NIs0G4cC3dSV5wDTT1nKF6xtXKo0-tEBoqHBeFlTdf8,12819
+evocov/fitting_methods/__init__.py,sha256=7U5bQEcLhPB-1ihYUt3N7k8SVHBSCF7PfhlM9ED4kp0,26
+evocov/fitting_methods/random.py,sha256=0Yu95INzxxj58FDNFdj_QTzIyLK3z5B3T-P_toD-oHk,4558
+evocov-0.0.2.dist-info/LICENSE.txt,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+evocov-0.0.2.dist-info/METADATA,sha256=MOz2bdUqhIOVdHOxdro1KpQmERZeWbjCt3cZnBYk6Zs,2731
+evocov-0.0.2.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+evocov-0.0.2.dist-info/top_level.txt,sha256=pGEJbIEf6WLS5P52g3Sm235SCMWpo3bkx2xuIGFgCj8,7
+evocov-0.0.2.dist-info/RECORD,,
