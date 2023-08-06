@@ -1,0 +1,12 @@
+flake8
+tqdm
+pyyaml>=5.3
+pytest
+numpy>=1.16.4
+pytest
+torch
+transformers
+pytorch-lightning
+sklearn
+pandas
+setuptools>=41.0.0

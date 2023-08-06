@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: bert-reranker
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://github.com/mirkobronzi/bert_reranker
+Author: Mirko Bronzi
+Author-email: m.bronzi@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
