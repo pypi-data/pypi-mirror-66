@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+libcomet/__init__.py
+libcomet/sdk.py
+libcomet.egg-info/PKG-INFO
+libcomet.egg-info/SOURCES.txt
+libcomet.egg-info/dependency_links.txt
+libcomet.egg-info/not-zip-safe
+libcomet.egg-info/requires.txt
+libcomet.egg-info/top_level.txt
