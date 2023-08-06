@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+dego/DeroGoldd.py
+dego/WalletAPI.py
+dego/__init__.py
+dego.egg-info/PKG-INFO
+dego.egg-info/SOURCES.txt
+dego.egg-info/dependency_links.txt
+dego.egg-info/requires.txt
+dego.egg-info/top_level.txt
