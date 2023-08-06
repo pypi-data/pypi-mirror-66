@@ -1,0 +1,12 @@
+include AUTHORS
+include LICENSE
+
+include dev-requirements.txt
+include tox.ini
+include tasks.py
+include Vagrantfile
+include conftest.py
+include tests/*.py
+
+include syskit/sargs64.c
+include syskit/_bindings/*.py

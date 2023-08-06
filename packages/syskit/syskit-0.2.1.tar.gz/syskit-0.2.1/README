@@ -1,0 +1,46 @@
+==============================
+System Information for Pedants
+==============================
+
+Syskit provides a uniform API to system details across all platforms.
+It is a tough task to walk the fine line between a usable
+platform-neutral API while still accurately providing platform
+specific details, but syskit tries.
+
+Initially syskit is targeting process information.
+
+Documentation: xxx
+
+Source: https://bitbucket.org/flub/syskit
+
+Issues: https://bitbucket.org/flub/syskit/issues
+
+CI: xxx
+
+Supported Python versions: 2.7, 3.4, PyPy, PyPy3
+
+
+Install
+=======
+
+Syskit is built using CFFI_ so when installing from source on CPython
+a working CFFI installation and compiler toolchain is required.  The
+normal ``distutil`` commands are used to build and install.
+
+.. _CFFI: https://pypi.python.org/pypi/cffi
+
+Testing
+=======
+
+Tests are run using `py.test <http://pytest.org>`_ but a ``py.test``
+script is bundled which can be used to run the tests.  Because of the
+nature of syskit there are some tests which will only work when having
+root permissions, so those will be skipped if adequate permissions are
+not available.  If you are trusting enough the full test suite should
+ideally be run once as a normal user and once as root.
+
+License
+=======
+
+Syskit is covered by the MIT license, see the LICENSE and AUTHORS
+files for details.
