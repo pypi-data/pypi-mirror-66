@@ -1,0 +1,6 @@
+rauth
+requests
+appdirs
+cerberus
+argparse
+requests-toolbelt
