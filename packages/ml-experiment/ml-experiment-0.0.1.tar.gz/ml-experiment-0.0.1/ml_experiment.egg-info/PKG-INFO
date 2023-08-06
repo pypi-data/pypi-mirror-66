@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: ml-experiment
+Version: 0.0.1
+Summary: Machine Learning Experiment Framework
+Home-page: https://github.com/stephenhky/ml-experiment
+Author: Kwan-Yuet Ho
+Author-email: stephenhky@yahoo.com.hk
+License: MIT
+Description: ## Introduction
+        
+        Framework for fast prototyping of machine learning experiment.
+        
+        There will be tutorials and documentations.
+        
+        ## News
+        
+        * 04/24/2020: '0.0.1' released.
+Keywords: machine learning
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
