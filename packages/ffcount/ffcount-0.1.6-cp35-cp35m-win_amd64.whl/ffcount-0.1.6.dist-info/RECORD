@@ -1,0 +1,10 @@
+ffcount/__init__.py,sha256=uFhD3mcOsQJVa-ssvjTr-ARcVRw6NVkz1TONNTVsFQA,1361
+ffcount/__main__.py,sha256=yXmO90PkK9ofYjUgwptBQvQ2fb1t5-brKbVlZHSUd8k,1418
+ffcount/__version__.py,sha256=2EXeWZiXCXUKXrVp2yIl5wU1MAU1FphDUfMB-Y9IydE,95
+ffcount/count.cp35-win_amd64.pyd,sha256=yAQHNqBJJhfmbHUZ_KIVNj0yKVP7IkOdPz4l_RF7vUA,27648
+ffcount-0.1.6.dist-info/LICENSE,sha256=4DukHX-rIHAHaf5BGLq1DYAMt0-ZA1OgXS9f_xwig2M,11558
+ffcount-0.1.6.dist-info/METADATA,sha256=BAU7djXhtw43QAK9_D2OBgrhefazTDmSegHGrtF6RWA,3216
+ffcount-0.1.6.dist-info/WHEEL,sha256=lAhx1E7vuMdfB15XOB_cxzoqY_rMvOvDnKwTbnMf6lo,106
+ffcount-0.1.6.dist-info/entry_points.txt,sha256=u4XaPNskLjbxLI7GRlMWa17w-T-nNDWlV-y1kkxoaio,51
+ffcount-0.1.6.dist-info/top_level.txt,sha256=MuXaiMWmhQn1JRmmIj2FaXUROEAnXYfRYgWvDDecEak,8
+ffcount-0.1.6.dist-info/RECORD,,
