@@ -1,0 +1,39 @@
+/* .sidebar {
+  width: 280px;
+} */
+
+body {
+  background-color: #D7E2D7;
+}
+
+
+#main.container {
+  background: url("../img/grid.png") repeat-x;
+  background-attachment: fixed;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #f5f5f5;
+}
+
+.table-striped > tbody > tr:nth-child(2n) > td, .table-striped > tbody > tr:nth-child(2n) > th {
+   background-color: #f0f0f0;
+}
+
+
+.btn-success {
+  background-color: #87BBA2;
+  border-color: #87BBA2;
+  background-image: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #364958;
+    border-radius:10px;
+}
