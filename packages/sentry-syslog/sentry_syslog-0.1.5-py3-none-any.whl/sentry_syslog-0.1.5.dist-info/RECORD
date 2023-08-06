@@ -1,0 +1,12 @@
+sentrysyslog/__init__.py,sha256=ow3ZTYL5BnBGYW0WEulLrB2XBC-UN1KiIw4_RlzqUwI,5959
+sentrysyslog/version.py,sha256=bMGJJNtuh93pgRLhUkVPAFnlYugKoiGg_whepnBD0gM,116
+sentrysyslog/tests/__init__.py,sha256=Gy0FTVjDu4MY5A6fDCI7y3IFe8u7W1si8uW3oG1vdzs,703
+sentrysyslog/tests/test_logging.py,sha256=HXvaVBV0HIgbrNXagMve48UrECSGYsZQQvhOShz7bO8,1101
+sentrysyslog/tests/test_sentry.py,sha256=z4JIn4vTQ75yd2JlENFnAuTXjzJpkWI9kl_f_M1J-4Y,5087
+sentrysyslog/tests/test_sentrysyslog.py,sha256=iEQW5pgZa8Mxbq2la4gsCyvjPcCS7xTM5Si16o4vCOU,3136
+sentry_syslog-0.1.5.dist-info/LICENSE,sha256=TQB2hl5wQbApX26FyvttNUVV0qERhdlTY4GsCwSzNt8,1081
+sentry_syslog-0.1.5.dist-info/METADATA,sha256=4QkcvPn5F28rQdL-BTSKWwOirH89w8v6yJffjIXSGXI,3801
+sentry_syslog-0.1.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+sentry_syslog-0.1.5.dist-info/entry_points.txt,sha256=mOW8KsiuFVTD-EzFSwSMyUhb8vHpht2jZtlREB8_yNI,53
+sentry_syslog-0.1.5.dist-info/top_level.txt,sha256=7HI7OM67Gw9hL33892uYtbyF2QzHuE8ejfyIcOr53s8,13
+sentry_syslog-0.1.5.dist-info/RECORD,,
