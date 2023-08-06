@@ -1,0 +1,12 @@
+astropy
+matplotlib>=2.0
+qtpy
+scipy
+spectral-cube
+
+[docs]
+sphinx-astropy
+
+[test]
+PyQt5==5.13.*
+pytest-astropy
