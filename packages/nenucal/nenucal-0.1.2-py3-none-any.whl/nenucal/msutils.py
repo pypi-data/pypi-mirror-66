@@ -1,0 +1,182 @@
+import os
+
+import numpy as np
+
+import tables as h5_tables
+from casacore import tables
+
+from . import utils
+
+
+class FlagManager(object):
+
+    def __init__(self, time, freqs, flag):
+        self.time = time
+        self.freqs = freqs
+        self.flag = flag
+
+    @staticmethod
+    def load_from_ms(ms_file):
+        print(f'Loading flag from MS {ms_file} ...')
+        with tables.table(ms_file, readonly=True) as t:
+            flag = t.getcol('FLAG')
+            time = t.getcol('TIME')
+            freqs, _ = get_ms_freqs(ms_file)
+
+        return FlagManager(time, freqs, flag)
+
+    def save_to_ms(self, ms_file):
+        print(f'Saving flag to MS {ms_file} ...')
+        with tables.table(ms_file, readonly=False) as t:
+            current_flag = t.getcol('FLAG')
+            assert current_flag.shape == self.flag.shape
+            t.putcol('FLAG', self.flag)
+
+    @staticmethod
+    def reset(ms_file):
+        print(f'Reseting flag in MS {ms_file} ...')
+        with tables.table(ms_file, readonly=False) as t:
+            current_flag = t.getcol('FLAG')
+            t.putcol('FLAG', np.zeros_like(current_flag, dtype=bool))
+
+    @staticmethod
+    def load(h5_file):
+        print(f'Loading flag file {h5_file} ...')
+        with h5_tables.open_file(h5_file, 'r') as h5:
+            flag = h5.root.flag.flag.read()
+            freqs = h5.root.flag.freqs.read()
+            time = h5.root.flag.time.read()
+
+        return FlagManager(time, freqs, flag)
+
+    def save(self, h5_file):
+        print(f'Saving flag file {h5_file} ...')
+        with h5_tables.open_file(h5_file, 'w') as h5:
+            group = h5.create_group("/", 'flag', 'Flag cube')
+            h5.create_array(group, 'flag', self.flag, "Flags")
+            h5.create_array(group, 'freqs', self.freqs, "Frequencies (Hz)")
+            h5.create_array(group, 'time', self.time, "Time")
+
+
+class MsDataCube(object):
+
+    def __init__(self, m_vis, m_vis_dt, time, weights, ru, ant1, ant2, idx_baselines, freq):
+        self.data = m_vis
+        self.data_dt = m_vis_dt
+        self.time = time
+        self.ru = ru
+        self.ant1 = ant1
+        self.ant2 = ant2
+        self.idx_baselines = idx_baselines
+        self.freq = freq
+        self.weights = weights
+
+    @staticmethod
+    def load(ms_file, umin, umax, data_col, n_time_avg=1):
+        print('Opening %s ...' % ms_file)
+        with tables.table(ms_file, readonly=True) as t:
+            uvw = t.getcol('UVW')
+            data = t.getcol(data_col)
+            flag = t.getcol('FLAG')
+            time = t.getcol('TIME')
+            a1 = t.getcol('ANTENNA1')
+            a2 = t.getcol('ANTENNA2')
+
+            weights = None
+            if 'WEIGHT_SPECTRUM' in t.colnames() and t.iscelldefined('WEIGHT_SPECTRUM', 0):
+                weights = t.getcol('WEIGHT_SPECTRUM')
+
+        baselines = a1 + 10000 * a2
+
+        freq, _ = get_ms_freqs(ms_file)
+
+        uu, vv, ww = uvw.T
+        ru = np.sqrt(uu ** 2 + vv ** 2 + ww ** 2)
+
+        idx = (ru > umin) & (ru < umax)
+        sel_baselines = np.unique(baselines[idx])
+
+        print('Selecting %s baselines between %s and %s lambda' % (len(sel_baselines), umin, umax))
+
+        idx_baselines = np.in1d(baselines, sel_baselines)
+        n_time = data[idx_baselines].shape[0] // len(sel_baselines)
+
+        vis = data[idx_baselines].reshape(n_time, len(sel_baselines), data.shape[1], data.shape[2])
+        flag = flag[idx_baselines].reshape(n_time, len(sel_baselines), data.shape[1], data.shape[2])
+        m_vis = np.ma.masked_array(vis, flag)
+
+        time = time[idx_baselines].reshape(n_time, len(sel_baselines))[:, 0]
+        weights = weights[idx_baselines].reshape(n_time, -1, data.shape[1], data.shape[2])
+
+        ant1 = a1[idx_baselines].reshape(n_time, len(sel_baselines))[0]
+        ant2 = a2[idx_baselines].reshape(n_time, len(sel_baselines))[0]
+
+        ru = ru[idx_baselines][:len(sel_baselines)]
+
+        m_vis_dt = utils.diff_consecutive(m_vis)
+
+        if n_time_avg > 1:
+            m_vis = utils.mean_consecutive(m_vis, n=n_time_avg, axis=0)
+            time = utils.mean_consecutive(time, n=n_time_avg, axis=0)
+            m_vis_dt = utils.mean_consecutive(m_vis_dt, n=n_time_avg, axis=0)
+
+        m_vis = m_vis.transpose((2, 0, 1, 3))
+        m_vis_dt = m_vis_dt.transpose((2, 0, 1, 3))
+
+        return MsDataCube(m_vis, m_vis_dt, time, weights, ru, ant1, ant2, idx_baselines, freq)
+
+    def save_flag(self, ms, flag_new):
+        with tables.table(ms, readonly=False) as t:
+            flag_new = flag_new.transpose(1, 2, 0, 3)
+            flag_new = flag_new.reshape(-1, flag_new.shape[2], flag_new.shape[3])
+
+            flag = t.getcol('FLAG')
+            flag[self.idx_baselines] = flag[self.idx_baselines] + flag_new
+
+            t.putcol('FLAG', flag.astype(bool))
+
+
+def get_ms_freqs(ms_file):
+    with tables.table(os.path.join(ms_file, 'SPECTRAL_WINDOW'), readonly=True, ack=False) as t_spec_win:
+        freqs = t_spec_win.getcol('CHAN_FREQ').squeeze()
+        chan_widths = t_spec_win.getcol('CHAN_WIDTH').squeeze()
+
+    return freqs, chan_widths
+
+
+def get_ms_time_interval(ms_file):
+    with tables.table(ms_file) as t:
+        return t.getcell('INTERVAL', 0)
+
+
+def get_info_from_ms_files(files):
+    t_start = []
+    t_end = []
+    t_total = 0
+
+    for file in files:
+        with tables.table(file, ack=False) as t:
+            start = t.getcell('TIME', 0)
+            end = t.getcell('TIME', t.nrows() - 1)
+            t_int = t.getcell('INTERVAL', 0)
+        t_start.append(start)
+        t_end.append(end)
+        t_total += end - start
+        freqs, chan_widths = get_ms_freqs(file)
+        n_chan = len(freqs)
+        chan_width = chan_widths.mean()
+
+    t_start = min(t_start)
+    t_end = max(t_end)
+
+    return {'start_time': t_start, 'end_time': t_end, 'int_time': t_int,
+            'total_time': t_total, 'n_channels': n_chan, 'chan_width': chan_width}
+
+
+def make_ant_matrix(ant1, ant2, m, a_max=54):
+    m_map = np.ma.zeros((a_max, a_max)) * np.nan
+    for a1, a2, i in zip(ant1, ant2, m):
+        if (a1 < a_max) and (a2 < a_max):
+            m_map[a1, a2] = i
+
+    return m_map
