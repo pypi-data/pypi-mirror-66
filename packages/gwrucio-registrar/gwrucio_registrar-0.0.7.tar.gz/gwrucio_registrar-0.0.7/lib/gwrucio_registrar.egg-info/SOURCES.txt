@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.py
+bin/gwrucio_fileinfo_pipe
+bin/gwrucio_registrar
+lib/gwrucio/__init__.py
+lib/gwrucio/register.py
+lib/gwrucio_registrar.egg-info/PKG-INFO
+lib/gwrucio_registrar.egg-info/SOURCES.txt
+lib/gwrucio_registrar.egg-info/dependency_links.txt
+lib/gwrucio_registrar.egg-info/requires.txt
+lib/gwrucio_registrar.egg-info/top_level.txt
+lib/ldr/__init__.py
+lib/ldr/diskcache.py
