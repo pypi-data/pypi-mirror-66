@@ -1,0 +1,13 @@
+LICENSE-APACHE
+LICENSE-MIT
+MANIFEST.in
+README.md
+setup.py
+mkpatcher/__init__.py
+mkpatcher/__meta__.py
+mkpatcher/extension.py
+mkpatcher.egg-info/PKG-INFO
+mkpatcher.egg-info/SOURCES.txt
+mkpatcher.egg-info/dependency_links.txt
+mkpatcher.egg-info/requires.txt
+mkpatcher.egg-info/top_level.txt
