@@ -1,0 +1,25 @@
+---
+all:
+  hosts:
+    # infrastructure
+    infrastructure1-host:
+    infrastructure2-host:
+    # bind
+    external-host:
+    bind-client-host:
+    # certificate
+    ownca-host:
+    owncanotweb-host:
+    letsencryptstaging-host:
+    client-host:
+    # openvpn
+    openvpnclient-host:
+
+firewall_web_server_group:
+  hosts:
+    # certificate
+    ownca-host:
+    owncanotweb-host:
+    letsencryptstaging-host:
+    client-host:
+    bind-host:
