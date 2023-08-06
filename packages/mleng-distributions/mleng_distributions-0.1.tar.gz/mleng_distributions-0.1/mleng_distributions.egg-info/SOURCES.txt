@@ -1,0 +1,10 @@
+setup.py
+mleng_distributions/Binomialdistribution.py
+mleng_distributions/Gaussiandistribution.py
+mleng_distributions/Generaldistribution.py
+mleng_distributions/__init__.py
+mleng_distributions.egg-info/PKG-INFO
+mleng_distributions.egg-info/SOURCES.txt
+mleng_distributions.egg-info/dependency_links.txt
+mleng_distributions.egg-info/not-zip-safe
+mleng_distributions.egg-info/top_level.txt
