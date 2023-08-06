@@ -1,0 +1,5 @@
+fastavro
+requests
+
+[faust]
+faust
