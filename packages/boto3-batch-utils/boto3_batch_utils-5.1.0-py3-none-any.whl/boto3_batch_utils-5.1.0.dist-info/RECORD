@@ -1,0 +1,13 @@
+boto3_batch_utils/Base.py,sha256=ZFc_Midc0sHSLgMoVUSVbhD6ki3ERHptmImQEZ22Ggo,9350
+boto3_batch_utils/Cloudwatch.py,sha256=BaAWZJ0M1w3SudpLr_gKpXxER03IuiGC0YyFNgmaSAc,2236
+boto3_batch_utils/Dynamodb.py,sha256=GLrynoSUvxoFlVc3a16pErzCsiWPxYPXTVYm1uQWlfU,6814
+boto3_batch_utils/Kinesis.py,sha256=tikljzITQ9JmA-sLQW3tOw9Wx7GcwniRamF2W-Fd9Ng,5146
+boto3_batch_utils/SQS.py,sha256=jFtIgvRT0_TxsXcc3i0zkTA9WrK54nM_nqe1x9ECpH4,6359
+boto3_batch_utils/__init__.py,sha256=MnRk1tF7vJIo7q1mBRs7YrY0er2FaUAq0RnzdCX20Jo,501
+boto3_batch_utils/constants.py,sha256=S2mdWTG9uhkcuZMum2qbl3WvWxncT0u4bqRuSOwpR9g,585
+boto3_batch_utils/utils.py,sha256=3v5OC-jDOAPwM8CuY6MsP-zhuvNPVkZBkKC8KhsxtZc,2635
+boto3_batch_utils-5.1.0.dist-info/LICENSE,sha256=dql8h4yceoMhuzlcK0TT_i-NgTFNIZsgE47Q4t3dUYI,34520
+boto3_batch_utils-5.1.0.dist-info/METADATA,sha256=KHnviq_tujmvp-Cm3iVMrg-Mctm96vEcTlk4aefP3Wk,3172
+boto3_batch_utils-5.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+boto3_batch_utils-5.1.0.dist-info/top_level.txt,sha256=sjxm8U0p-0ZU1Xy-5Z3YRaeKycJ9goMpl4bRjWwYln4,18
+boto3_batch_utils-5.1.0.dist-info/RECORD,,
