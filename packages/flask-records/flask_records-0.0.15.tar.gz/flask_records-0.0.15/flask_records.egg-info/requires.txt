@@ -1,0 +1,4 @@
+Flask>=0.9
+Flask-SQLAlchemy>=1.0
+records>=0.5.3
+pandas>=0.23.0
