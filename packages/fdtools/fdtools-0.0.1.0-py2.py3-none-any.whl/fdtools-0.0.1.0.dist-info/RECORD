@@ -1,0 +1,10 @@
+fdtools/__init__.py,sha256=m8yt7PAdmChr82us_g9kqm5_wAYqjs8NdsUXRvj6mQE,206
+fdtools/dirtools/__init__.py,sha256=icpc78tn7hvZI-a0jRohocL5A-qN_EcIUl3yjWdT66o,170
+fdtools/dirtools/core.py,sha256=vAEpQbutblLGS3-DrRvJesd0VstMy_FWhDjbBTyi6TQ,1192
+fdtools/filetools/__init__.py,sha256=7bsLTu0Ay6PragLihC0VdpwxAp1ZKEYkTi6WI1Pv0r4,165
+fdtools/filetools/core.py,sha256=RjYofcR1GnGwDqFM9b2Inu3GMRRgVyLXOnShVU8YZc4,943
+fdtools-0.0.1.0.dist-info/LICENSE,sha256=4ZSm1ForYxdRy6pZIOa3Tv8c_gH6KnUrmBQkREHzpAI,1090
+fdtools-0.0.1.0.dist-info/METADATA,sha256=jQe6LeZiS2ZHf1LUZRqNXeE7aphbL5nTsmHCw88Po3M,551
+fdtools-0.0.1.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+fdtools-0.0.1.0.dist-info/top_level.txt,sha256=swqGBNT4pLMzP58929N_yM-O5T-afjT9R0bBlKnP6fo,8
+fdtools-0.0.1.0.dist-info/RECORD,,

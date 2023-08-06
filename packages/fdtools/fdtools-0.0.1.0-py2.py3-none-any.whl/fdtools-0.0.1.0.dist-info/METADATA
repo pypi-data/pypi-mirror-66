@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: fdtools
+Version: 0.0.1.0
+Summary: common used file and directory tools for python
+Home-page: UNKNOWN
+Author: qin_hw
+Author-email: 1039954093@qq.com
+License: BSD License
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.0
+
+UNKNOWN
+
+
