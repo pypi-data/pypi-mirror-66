@@ -1,0 +1,11 @@
+mandate/__init__.py,sha256=TOz2WMw3vEQyu0PyPPSjpCZ-YE0_R8vfYVgsNVk2hX0,79
+mandate/aws_srp.py,sha256=o34SfV7v4JnIwV21nBjjjb1MSuSMdbRUzpDYcZZ6jNM,11779
+mandate/client.py,sha256=DgileXOOLf8KkXuVZUlFXDgHHzE1MwkEtD3-dX_lggU,23023
+mandate/exceptions.py,sha256=K_qVuPIpyLbSfa3nW-hiPaeBeLKD-IJhcgWxtCbW5_o,307
+mandate/groupobj/__init__.py,sha256=aImYrr8ITetGN6xuXRYu43pL1jjG6YONwQByPExJb-0,882
+mandate/userobj/__init__.py,sha256=c7u6jHG8CQQo3TuQZSSGnnTw901WMQAzQ4XMMugPIRE,1843
+mandate/utils/__init__.py,sha256=Zr-KKV-kf4Sr6cOUZ9ixM_KSU92iRRT7E43powqs_Ro,889
+mandate-2.0.0.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+mandate-2.0.0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+mandate-2.0.0.dist-info/METADATA,sha256=zya1RjuNe044emuV1wDSDIcwdTcE9yN0c21JkudYDes,3952
+mandate-2.0.0.dist-info/RECORD,,
