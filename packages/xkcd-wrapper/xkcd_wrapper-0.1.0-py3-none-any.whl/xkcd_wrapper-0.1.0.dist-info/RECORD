@@ -1,0 +1,9 @@
+xkcd_wrapper/__init__.py,sha256=iMtqPEA5BjIxED14KYUd10xt_UrrnHepGHkS7vGitns,583
+xkcd_wrapper/client.py,sha256=JMTvSLfZyVSRxgwKX8hGtup9ezl-HV7eXSsGH0xj4Lk,7994
+xkcd_wrapper/comic.py,sha256=W3GtEicGJIfNk-FRVnydHLzPRP4sjBw94ry7j436q28,2518
+xkcd_wrapper/exceptions.py,sha256=2bszp8uXSUiTRsKxtWTgYWmtBOU7AnYtaWKYIy1lAqs,1455
+xkcd_wrapper-0.1.0.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+xkcd_wrapper-0.1.0.dist-info/METADATA,sha256=jckF75r35ds-P0xZutBneDeVNTiVLYPo0O4UBkUFRNA,2785
+xkcd_wrapper-0.1.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+xkcd_wrapper-0.1.0.dist-info/top_level.txt,sha256=i38yVArllB9GtjcrHvqHvigZ38Ymr9YxSWQhF5T7Eew,13
+xkcd_wrapper-0.1.0.dist-info/RECORD,,
