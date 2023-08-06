@@ -1,0 +1,3 @@
+[console_scripts]
+mkv-this = mkv_this.mkv_this:main
+
