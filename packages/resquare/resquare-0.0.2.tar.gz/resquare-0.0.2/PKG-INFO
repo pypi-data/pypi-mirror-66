@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: resquare
+Version: 0.0.2
+Summary: Utility for expanding the frame size of a logo image while preserving the background color of the original image.
+License: MIT
+Author: faizanbhat
+Author-email: faizan.bhat@gmail.com
+Requires-Python: >=3.4,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: Pillow (>=7.0.0,<8.0.0)
