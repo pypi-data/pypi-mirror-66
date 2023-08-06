@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pwbus
+Version: 0.0.4
+Summary: A simple task execution manager with integration bus cababities
+Home-page: https://github.com/fszostak/pwbus
+Author: Fabio Szostak
+Author-email: fszostak@gmail.com
+License: UNKNOWN
+Description: # pwbus
+        
+        A simple task execution manager with integration bus capabities.
+        
+        Features
+        
+        - Asynchronous task
+        - Data format conversion
+        - **TODO**
+        
+        [Github-](https://github.com/fszostak/pwbus)
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
