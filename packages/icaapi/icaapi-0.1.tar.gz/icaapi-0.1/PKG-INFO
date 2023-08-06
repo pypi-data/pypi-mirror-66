@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: icaapi
+Version: 0.1
+Summary: Python Wrapper for ICA shopping list API
+Home-page: https://github.com/danen580/ICAapi
+Author: Daniel Engberg
+Author-email: engberg.daniel@gmail.com
+License: MIT
+Download-URL: https://github.com/danen580/ICAapi/archive/v0.1.tar.gz
+Description: UNKNOWN
+Keywords: ICA,Shoppinglist
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
