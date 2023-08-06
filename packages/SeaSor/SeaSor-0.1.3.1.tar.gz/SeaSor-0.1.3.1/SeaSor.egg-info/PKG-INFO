@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: SeaSor
+Version: 0.1.3.1
+Summary: Search & Sorting algorithms
+Home-page: https://github.com/m1ghtfr3e/SearchSort
+Author: m1ghtfr3e
+License: UNKNOWN
+Description: ---
+        
+        ### Search and Sort Modules
+        
+        ---
+        <section data-markdown>
+        
+        Different Search and Sort algorithms
+        are implemented.
+        
+        
+        For now the functionality is really basic
+        but it should evolve to a collection of
+        several methods for searching elements 
+        and / or sorting sequences.
+        
+        
+        HowTo:
+        
+        1) find index number of a element in a list
+          (here the binary search method is applied)
+            
+        ```python
+            from SeaSor import SeaSor
+            
+            get_index = SeaSor.Search().bin_index(array, target)
+        ```
+        
+        
+        
+        
+        ##### For more informations and instructions visit:
+        https://github.com/m1ghtfr3e/SearchSort
+        
+        </section>
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
