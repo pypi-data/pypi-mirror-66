@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+cambridict/__init__.py
+cambridict/cambridge.yaml
+cambridict/const.py
+cambridict/dictionary.py
+cambridict.egg-info/PKG-INFO
+cambridict.egg-info/SOURCES.txt
+cambridict.egg-info/dependency_links.txt
+cambridict.egg-info/requires.txt
+cambridict.egg-info/top_level.txt
