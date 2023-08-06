@@ -1,0 +1,17 @@
+libscrc/__init__.py,sha256=Qg56bJzpjqbSvxRkeuvjkivY5ySu1iVLc4N24yI67xo,809
+libscrc/_crc16.cp37-win_amd64.pyd,sha256=0Mc5x3gnwk99JKUxc-d9_JcCjtZCsV_iwOYjEkD5TWI,22528
+libscrc/_crc32.cp37-win_amd64.pyd,sha256=ZpNW6Y_aDWNaI4SfCuTIXWKKPSDDOYzxtDprUA7MICw,16384
+libscrc/_crc64.cp37-win_amd64.pyd,sha256=LdFD8KbTaMzfb6u85gdg0Hxuq0_qhbYQMNsYCqB2GLQ,14848
+libscrc/_crc8.cp37-win_amd64.pyd,sha256=gTje5AWES85Cbc2k1d4DcR955hyRmOeIXNVF8Tp1k1o,18944
+libscrc/_crcx.cp37-win_amd64.pyd,sha256=AEhfwflmHySfYxIT-xUUkpPx78ohMPQrpb7_N9DHe50,15872
+libscrc/test/crc16.py,sha256=_h2z00-4TSyT0qi385hCQJLooC_ZyD5ibhckgsN7-L4,2135
+libscrc/test/crc32.py,sha256=ttkMlIgPhYHbtEgv6FfIuqpalYz8Wsxg-EiBPUpb81Q,1415
+libscrc/test/crc64.py,sha256=qeooTb1lKb2UBMP8YD919144NRLCfWMgLX-_5PkMc3c,1980
+libscrc/test/crc8.py,sha256=fY13zwiVJ1Q9C8dgw77Pi90AM_48Tp7Jp6JSrBI-Qzk,1418
+libscrc/test/hacker.py,sha256=qMyGgnjIsQNBpXFy991N0vGuhKayVMsp9S33y4C2W6U,1876
+libscrc/test/modbus.py,sha256=8eZdbMjnpLXgaodD7XTJjO96kbfyUCuKcRbxCYmZSPI,1753
+libscrc-1.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+libscrc-1.1.dist-info/METADATA,sha256=HwQmsJ6vf6m-Zqdas6JImMgATnssAluJzLoOzpjpH08,7790
+libscrc-1.1.dist-info/WHEEL,sha256=uaZe_9gV-4T_d4AskuIQkCgcY8wMc0UXsVFnf0_mBGs,106
+libscrc-1.1.dist-info/top_level.txt,sha256=j8elyX8PEpgoQ0zwvun_4gI27RymPFWlkGB2sDNEQsg,8
+libscrc-1.1.dist-info/RECORD,,
