@@ -1,0 +1,9 @@
+README.md
+setup.py
+pyjobana/__init__.py
+pyjobana/processor.py
+pyjobana/spider.py
+pyjobana.egg-info/PKG-INFO
+pyjobana.egg-info/SOURCES.txt
+pyjobana.egg-info/dependency_links.txt
+pyjobana.egg-info/top_level.txt
