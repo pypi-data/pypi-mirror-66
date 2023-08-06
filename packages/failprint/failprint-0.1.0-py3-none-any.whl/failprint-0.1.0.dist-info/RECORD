@@ -1,0 +1,9 @@
+README.md,sha256=Nrx5ii4LfyFN07n-igg-6vqfrpXRTt1-NpcclVd0ZBI,2287
+failprint/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+failprint/__main__.py,sha256=HHe8SfENhVa19CLDtf9NrrGOyrFKl4aHSx2b4bSGQnI,94
+failprint/cli.py,sha256=4D0hoh3LpCeq44SwBhvIiUqDPh-tmQmxSejpHMhir50,3663
+pyproject.toml,sha256=x_d4vuMIiHXAWD4OARqsw7NMofT8VaciG1TwYw0_Xew,1327
+failprint-0.1.0.dist-info/entry_points.txt,sha256=K1586z1xdf9b9zxYwQpvrNAvy04hD27KHEPD7fOj8CU,48
+failprint-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+failprint-0.1.0.dist-info/METADATA,sha256=MS2vCzBM3ErUSTFajrGRbSKOdt0icRybCqFnxUoqRbE,2984
+failprint-0.1.0.dist-info/RECORD,,
