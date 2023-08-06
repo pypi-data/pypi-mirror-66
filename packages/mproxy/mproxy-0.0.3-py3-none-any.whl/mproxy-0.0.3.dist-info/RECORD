@@ -1,0 +1,13 @@
+mproxy/__init__.py,sha256=bzA-w5hgbHzexlcqsy8V8D6vdUvpgEZ4X0j70e_NHBs,448
+mproxy/babies-first-names-top-100-girls.csv,sha256=o9BvozOfg6vCbeC3vGLJG8-Zti47fkiDp3utqch8_uE,134359
+mproxy/mp_object.py,sha256=Ou5BlvFmwH2nIRXIzR_kAOjtHka4m2yDvh7OvFgyKSI,1716
+mproxy/mproxy.py,sha256=0ayAMT2rmAXiJpIv8R9gf52DdB4JaLow7y_4T_NZpBM,8727
+mproxy/retry.py,sha256=kcHsFlKX13DXuTwyIYKv5j-FzOtQL-F9rBe1JBoQDEU,1474
+mproxy/search.py,sha256=5hw1bSTcWd3RuiHF6iF6LbpdYadtI3KEISWyxu8IbEc,6035
+mproxy/server.yaml,sha256=DJ4v-Q1UKmO5KYRPy6mbUTptO7_uoAgFgKGvL3F3fCY,252
+mproxy/tinyproxy.conf,sha256=uAT2jHqDCi9KcrWFHz5brFjD7V3fWzhiEfhYsCjSAkI,10324
+mproxy/translate.py,sha256=5O9wqL8soaTYHzUrcVzhGE4HuY1QSIWDLa1wIdkB1_U,2358
+mproxy-0.0.3.dist-info/METADATA,sha256=00pDMGGlpRjP0xnPp43kgOily85zFdFBLz-N_Qz-UZA,322
+mproxy-0.0.3.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+mproxy-0.0.3.dist-info/top_level.txt,sha256=Ib2I05vM4D0FUdqJdnjwqFmRtn9ocW1gsgw5I6ZHlrQ,7
+mproxy-0.0.3.dist-info/RECORD,,
