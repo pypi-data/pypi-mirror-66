@@ -1,0 +1,11 @@
+soak/__init__.py,sha256=ed-I14NYHXz_Od21iv1NY0iEwQ5VSzEUcG8y07oTNxE,815
+soak/context.py,sha256=uetFp8pGrJPGDiuFhjuET807t2uLBDIi25qPbWEfyYM,2017
+soak/soak.py,sha256=pdkAo0U2oftcfg29GNivdr398AWrjMVfd6wtgwVfKdQ,3531
+soak/terminal.py,sha256=y1EKOXwTcLzy14SJTn4f15PW2afev_mTYeepC8Byl00,1505
+soak/test_conformance.py,sha256=VJWDgZ1EnfvYnQiq6eN8ibeAjCYrJCaEelvypPiBn10,1726
+soak-6.dist-info/COPYING,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+soak-6.dist-info/METADATA,sha256=7nzx0VYyxhecyFq09SPoPSsu-S3QrtZ-D0jbKMG_tJE,496
+soak-6.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+soak-6.dist-info/entry_points.txt,sha256=zjQR8xe2nGcrPxbtv5HvKKALVEidM4AhkK_40mgST54,46
+soak-6.dist-info/top_level.txt,sha256=eOYgnDrBe4vhKpNyAyUtKE14-vZ6b9I27Fkqe_hGdx4,5
+soak-6.dist-info/RECORD,,
