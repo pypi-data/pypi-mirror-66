@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mkapi/__init__.py
+mkapi/main.py
+mkapi.egg-info/PKG-INFO
+mkapi.egg-info/SOURCES.txt
+mkapi.egg-info/dependency_links.txt
+mkapi.egg-info/entry_points.txt
+mkapi.egg-info/requires.txt
+mkapi.egg-info/top_level.txt
