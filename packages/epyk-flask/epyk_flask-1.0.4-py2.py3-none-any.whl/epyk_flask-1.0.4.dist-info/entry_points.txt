@@ -1,0 +1,3 @@
+[console_scripts]
+epyk-flask = epyk_flask.cli.cli:main
+
