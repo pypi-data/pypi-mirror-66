@@ -1,0 +1,11 @@
+README.md
+setup.py
+TheSequencer.egg-info/PKG-INFO
+TheSequencer.egg-info/SOURCES.txt
+TheSequencer.egg-info/dependency_links.txt
+TheSequencer.egg-info/requires.txt
+TheSequencer.egg-info/top_level.txt
+sequencer/__init__.py
+sequencer/distance_metrics.py
+sequencer/elongation_estimation.py
+sequencer/sequencer_.py
