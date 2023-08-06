@@ -1,0 +1,16 @@
+chefboost/Chefboost.py,sha256=170U387ZG_RxLVaVB6T9xprq8aKFxe07lAPRyy9F5GY,8187
+chefboost/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chefboost/commons/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chefboost/commons/functions.py,sha256=535rzcgLmnwRrMl7o6DvCfnMsxR-_jaEYC_xg8mWMEs,3106
+chefboost/training/Preprocess.py,sha256=UOO52wE6jcliB-V1j1qfgPKuJs_uNuIVsjbcapwtLYo,4634
+chefboost/training/Training.py,sha256=E3wvUCaAlpfiqPNQwhDQ7H433gWKWaF5oe9fk2PyqHk,17015
+chefboost/training/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chefboost/tuning/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chefboost/tuning/adaboost.py,sha256=FqcWE2csnuYJtoLTxgdS7GQ5ehDkY2gBp6p69saKOdc,4297
+chefboost/tuning/gbm.py,sha256=NVTNtjj8wmCSILYj5tr3gKlaWGy8KGeD0g_dpCbYeoE,8106
+chefboost/tuning/randomforest.py,sha256=aSy0W47quAVP1JCQ8MzwuwqozvzwB18vsX9jY2x7fHA,3359
+chefboost-0.0.5.dist-info/LICENSE,sha256=1jGwH8Cd0CqD0srIWG2BDttJNsG0XNUuVUfQisRfFdM,1096
+chefboost-0.0.5.dist-info/METADATA,sha256=om7RanHCiqs9SdIsxnKyBFrWomEUCLyR38HxGu2lFkU,6608
+chefboost-0.0.5.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+chefboost-0.0.5.dist-info/top_level.txt,sha256=Gtlu3bSxYVXtdXytPwnUkUtT-SKOU11UYylRzCZ97k4,10
+chefboost-0.0.5.dist-info/RECORD,,
