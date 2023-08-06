@@ -1,0 +1,9 @@
+numpy
+func-timeout
+scipy
+matplotlib
+cloudpickle
+PyQt5
+pyqtgraph
+PyOpenGL
+LoveUpdate
