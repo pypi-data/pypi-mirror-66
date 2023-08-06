@@ -1,0 +1,14 @@
+README.md
+setup.py
+scapy_unroot/__init__.py
+scapy_unroot/daemon.py
+scapy_unroot/sockets.py
+scapy_unroot.egg-info/PKG-INFO
+scapy_unroot.egg-info/SOURCES.txt
+scapy_unroot.egg-info/dependency_links.txt
+scapy_unroot.egg-info/entry_points.txt
+scapy_unroot.egg-info/requires.txt
+scapy_unroot.egg-info/top_level.txt
+tests/__init__.py
+tests/daemon.py
+tests/sockets.py

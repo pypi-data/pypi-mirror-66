@@ -1,0 +1,3 @@
+[console_scripts]
+scapy-unroot = scapy_unroot.daemon:run
+
