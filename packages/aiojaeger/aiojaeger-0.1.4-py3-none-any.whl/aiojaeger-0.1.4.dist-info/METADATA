@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: aiojaeger
+Version: 0.1.4
+Summary: Distributed tracing instrumentation for asyncio application with zipkin and jaeger
+Home-page: https://github.com/pavkazzz/aiojaeger
+Author: Pavel Mosein
+Author-email: pavel-mosein@yandex.ru
+License: Apache 2
+Download-URL: https://pypi.python.org/pypi/aiojaeger
+Keywords: zipkin,jaeger,distributed-tracing,tracing
+Platform: POSIX
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: POSIX
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: AsyncIO
+Requires-Dist: aiohttp (<4)
+Requires-Dist: thriftpy2 (~=0.4.11)
+Requires-Dist: pydantic (~=1.4)
+
+aiojaeger
+=========
+.. image:: https://github.com/pavkazzz/aiojaeger/workflows/Python%20package/badge.svg
+    :target:  https://github.com/pavkazzz/aiojaeger/workflows
+.. image:: https://codecov.io/gh/aio-libs/aiojaeger/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/aio-libs/aiojaeger
+.. image:: https://api.codeclimate.com/v1/badges/1ff813d5cad2d702cbf1/maintainability
+   :target: https://codeclimate.com/github/aio-libs/aiojaeger/maintainability
+   :alt: Maintainability
+.. image:: https://img.shields.io/pypi/v/aiojaeger.svg
+    :target: https://pypi.python.org/pypi/aiojaeger
+.. image:: https://readthedocs.org/projects/aiojaeger/badge/?version=latest
+    :target: http://aiojaeger.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+Requirements
+------------
+
+* Python_ 3.7+
+* aiohttp_
+* pydanctic_
+* thriftpy2_
+
+
+.. _PEP492: https://www.python.org/dev/peps/pep-0492/
+.. _Python: https://www.python.org
+.. _aiohttp: https://github.com/KeepSafe/aiohttp
+.. _pydanctic: https://github.com/samuelcolvin/aiohttp
+.. _thriftpy2: https://github.com/Thriftpy/aiohttp
+.. _asyncio: http://docs.python.org/3.8/library/asyncio.html
+.. _uvloop: https://github.com/MagicStack/uvloop
+.. _jaeger: http://jaeger.readthedocs.io/en/latest/
+
+CHANGES
+=======
+
+0.1.0 (2020-04-16)
+------------------
+Init release
+
+* Add support for zipkin and jeager system
+* Tests and linters
+
