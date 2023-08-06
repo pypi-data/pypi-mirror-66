@@ -1,0 +1,52 @@
+Metadata-Version: 1.2
+Name: sequana_pipetools
+Version: 0.1.0
+Summary: A set of utilities to manager sequana pipelines
+Home-page: https://github.com/sequana/sequana_pipetools
+Author: thomas cokelaer
+Author-email: thomas.cokelaer@pasteur.fr
+Maintainer: thomas cokelaer
+Maintainer-email: thomas.cokelaer@pasteur.fr
+License: new BSD
+Description: :Overview: A set of tools to help building or using sequana pipelines
+        :Status: Production
+        :Citation: Cokelaer et al, (2017), ‘Sequana’: a Set of Snakemake NGS pipelines, Journal of Open Source Software, 2(16), 352, JOSS DOI doi:10.21105/joss.00352
+        
+        
+        Installation
+        ~~~~~~~~~~~~
+        
+        from pypi website::
+        
+            pip install sequana_pipetools
+        
+        No dependencies for this package except Python itself. Although, when using it,
+        you will need to install the relevant Sequana pipelines that you wish to use. 
+        
+        Changelog
+        ~~~~~~~~~
+        
+        ========= ====================================================================
+        Version   Description
+        ========= ====================================================================
+        0.1.0     creation of the package
+        ========= ====================================================================
+        
+Keywords: snakemake, sequana, RNAseq, differential analysis
+Platform: Linux
+Platform: Unix
+Platform: MacOsX
+Platform: Windows
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
