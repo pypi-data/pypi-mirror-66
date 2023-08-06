@@ -1,0 +1,7 @@
+README.md
+setup.cfg
+setup.py
+xlogger.egg-info/PKG-INFO
+xlogger.egg-info/SOURCES.txt
+xlogger.egg-info/dependency_links.txt
+xlogger.egg-info/top_level.txt
