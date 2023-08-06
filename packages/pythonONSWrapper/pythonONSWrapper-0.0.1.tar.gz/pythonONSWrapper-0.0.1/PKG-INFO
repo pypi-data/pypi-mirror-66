@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pythonONSWrapper
+Version: 0.0.1
+Summary: Interact with the ONS API in Python 
+Home-page: https://github.com/jackminchin/PythonONSAPIWrapper
+Author: Jack Minchin
+Author-email: jackminchin@gmail.com
+License: UNKNOWN
+Description: # PythonONSAPIWrapper
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
