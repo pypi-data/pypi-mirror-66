@@ -1,0 +1,10 @@
+README.md
+setup.py
+bin/ipynb2pajamas
+bin/ipynb_strip
+bin/pajamas2ipynb
+pajamas/__init__.py
+pajamas.egg-info/PKG-INFO
+pajamas.egg-info/SOURCES.txt
+pajamas.egg-info/dependency_links.txt
+pajamas.egg-info/top_level.txt
