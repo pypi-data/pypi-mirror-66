@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="package_view_tree">
+            <field name="model">stock.package</field>
+            <field name="inherit" ref="stock_package.package_view_tree"/>
+            <field name="name">package_list</field>
+        </record>
+    </data>
+</tryton>

@@ -1,0 +1,2 @@
+trytond<5.3,>=5.2
+trytond_stock_package_shipping<5.3,>=5.2

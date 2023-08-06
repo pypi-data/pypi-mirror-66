@@ -1,0 +1,4 @@
+
+    [trytond.modules]
+    stock_package_shipping_label_filestore = trytond.modules.stock_package_shipping_label_filestore
+    
