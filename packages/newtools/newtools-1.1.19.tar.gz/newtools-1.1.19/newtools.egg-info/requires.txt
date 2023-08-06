@@ -1,0 +1,7 @@
+
+[full]
+s3fs>=0.4.2
+pandas>=0.23
+boto3>=1.12
+awsretry>=1.0.1
+dativatools>=3.3.813
