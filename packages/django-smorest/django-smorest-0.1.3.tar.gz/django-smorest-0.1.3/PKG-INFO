@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: django-smorest
+Version: 0.1.3
+Summary: Use flask-smorest for django project.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: vazgen@hilearn.io
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
