@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: GooCalendar
+Version: 0.7.1
+Summary: A calendar widget for GTK using PyGoocanvas
+Home-page: https://pypi.python.org/pypi/goocalendar
+Author: Tryton
+Author-email: goocalendar@tryton.org
+License: GPL-2
+Download-URL: https://downloads.tryton.org/goocalendar/
+Project-URL: Bug Tracker, https://goocalendar.tryton.org/
+Project-URL: Documentation, https://goocalendar.readthedocs.org/
+Project-URL: Forum, https://discuss.tryton.org/tags/goocalendar
+Project-URL: Source Code, https://hg.tryton.org/goocalendar/
+Keywords: calendar GTK GooCanvas widget
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: X11 Applications :: GTK
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Widget Sets
+Requires-Python: >=3.4
+
+GooCalendar
+===========
+
+A calendar widget for GTK using GooCanvas
+
+Nutshell
+--------
+
+Example usage::
+
+    >>> import datetime
+    >>> import goocalendar
+    >>> event_store = goocalendar.EventStore()
+    >>> calendar = goocalendar.Calendar(event_store)
+    >>> event = goocalendar.Event('Birthday',
+    ...     datetime.date.today(),
+    ...     bg_color='lightgreen')
+    >>> event_store.add(event)
+
+
