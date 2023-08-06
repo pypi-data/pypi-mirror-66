@@ -1,0 +1,15 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "model:account.tax.zone,name:zone_eu"
+msgid "EU"
+msgstr "EU"
+
+msgctxt "model:account.tax.zone,name:zone_foreign"
+msgid "Ausland"
+msgstr "Ausland"
+
+msgctxt "model:account.tax.zone,name:zone_inland"
+msgid "Inland"
+msgstr "Inland"
