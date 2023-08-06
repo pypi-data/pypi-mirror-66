@@ -1,0 +1,7 @@
+include README.md
+include HISTORY.md
+include docs
+include ext
+include template
+include tests
+include workflow.png
