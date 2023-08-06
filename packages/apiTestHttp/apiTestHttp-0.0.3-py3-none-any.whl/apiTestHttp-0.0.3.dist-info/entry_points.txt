@@ -1,0 +1,4 @@
+[console_scripts]
+apitest = apiTestHttp.apitest:main
+uitest = apiTestHttp.uitest:main
+
