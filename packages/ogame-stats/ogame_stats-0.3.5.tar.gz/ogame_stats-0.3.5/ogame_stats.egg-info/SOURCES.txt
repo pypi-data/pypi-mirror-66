@@ -1,0 +1,12 @@
+README.md
+setup.py
+ogame_stats/__init__.py
+ogame_stats/highscores_api.py
+ogame_stats/universe_api.py
+ogame_stats/universes_api.py
+ogame_stats/utils.py
+ogame_stats.egg-info/PKG-INFO
+ogame_stats.egg-info/SOURCES.txt
+ogame_stats.egg-info/dependency_links.txt
+ogame_stats.egg-info/requires.txt
+ogame_stats.egg-info/top_level.txt

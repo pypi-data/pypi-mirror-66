@@ -1,0 +1,8 @@
+pandas
+requests
+xmltodict
+
+[dev]
+coverage
+pytest
+wheel
