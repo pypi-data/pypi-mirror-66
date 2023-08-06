@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+recursive-include docs *
+recursive-include skeleton *
+recursive-include skeleton/static *
+recursive-include skeleton/templates *
