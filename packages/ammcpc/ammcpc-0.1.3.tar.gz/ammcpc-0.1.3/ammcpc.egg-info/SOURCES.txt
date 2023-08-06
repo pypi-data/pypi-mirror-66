@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+ammcpc/__init__.py
+ammcpc/__main__.py
+ammcpc/ammcpc.py
+ammcpc.egg-info/PKG-INFO
+ammcpc.egg-info/SOURCES.txt
+ammcpc.egg-info/dependency_links.txt
+ammcpc.egg-info/entry_points.txt
+ammcpc.egg-info/requires.txt
+ammcpc.egg-info/top_level.txt
+test/test_ammcpc.py
