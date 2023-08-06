@@ -1,0 +1,5 @@
+[console_scripts]
+bel-commons = bel_commons.cli:main
+bel-commons-run = bel_commons.cli:run
+bel-commons-worker = bel_commons.cli:worker
+

@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+
+{% block title %}About{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript">
+        var maxHeight = 0;
+        $(".panel-body").find(".row").find(".col-sm-6").find(".thumbnail").each(function (idx, item) {
+            var height = $(item).height();
+            maxHeight = maxHeight > height ? maxHeight : height;
+        });
+        $(".panel-body").find(".row").find(".col-sm-6").find(".thumbnail").height(maxHeight);
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {{ util.flashed_messages(dismissible=True, container=False) }}
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">About BEL Commons</h3>
+            </div>
+            <div class="list-group">
+                <div class="list-group-item">
+                    <p>
+                        BEL Commons is a free, open-source web platform for Biological Expression Language (BEL)
+                        that was originally developed by <a href="https://github.com/cthoyt">Charles Tapley Hoyt</a> and
+                        <a href="https://github.com/ddomingof">Daniel Domingo-Fernández</a> at the
+                        <a href="https://www.scai.fraunhofer.de/en/business-research-areas/bioinformatics.html">Fraunhofer
+                            SCAI Department of Bioinformatics</a> with support from the <a
+                            href="https://www.imi.europa.eu/">IMI</a>
+                        project, <a href="http://www.aetionomy.eu/">AETIONOMY</a>.
+
+                        It is built on top of <a href="https://github.com/pybel/pybel">PyBEL</a>, an open source
+                        project.
+                    </p>
+                    <p>
+                        If you find BEL Commons useful in your work, please consider citing:
+                    </p>
+                    <ul>
+                        <li>
+                            Hoyt, C. T., Domingo-Fernández, D., &amp; Hofmann-Apitius, M. (2018). <a
+                                href="https://doi.org/10.1093/database/bay126">BEL Commons: an environment for
+                            exploration and analysis of networks encoded in Biological Expression Language</a>.
+                            <i>Database</i>, 2018(3), 1–11.
+                        </li>
+                        <li>
+                            Hoyt, C. T., Konotopez, A., &amp; Ebeling, C. (2018). <a
+                                href="https://doi.org/10.1093/bioinformatics/btx660">PyBEL: a computational framework
+                            for Biological Expression Language</a>. <i>Bioinformatics</i> (Oxford, England),
+                            <strong>34</strong>(4), 703–704.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list-group-item">
+                    <h4 class="list-group-item-heading">
+                        API
+                    </h4>
+                    <p class="list-group-item-text">
+                        Our RESTful service is documented with the <a href="https://www.openapis.org/">OpenAPI</a>
+                        specification. It can be accessed through the <a href="{{ url_for('flasgger.apidocs') }}">Swagger
+                        UI</a> or <a href="{{ url_for('flasgger.apispec_1') }}">programatically</a>.
+                    </p>
+                </div>
+
+                <div class="list-group-item">
+                    <h4 class="list-group-item-heading">
+                        Artwork
+                    </h4>
+                    <p class="list-group-item-text">
+                        The PyBEL logos are derivatives of <a
+                            href="http://game-icons.net/lorc/originals/ringing-bell.html">Ringing bell</a>
+                        by <a href="https://lorcblog.blogspot.com/">Lorc</a>, used under <a
+                            href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>. The PyBEL
+                        logos are licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY
+                        3.0</a> by <a href="https://github.com/scolby33">Scott Colby</a>. See its <a
+                            href="https://github.com/pybel/pybel-art#usage-guidelines-and-information">usage
+                        guidelines</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        {% include "help/index.html" %}
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Historical Support</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                        <a href="https://www.scai.fraunhofer.de/en/business-research-areas/bioinformatics.html">
+                            <img alt="Fraunhofer SCAI Logo" class="img-responsive" src="{{ url_for('static', filename='img/scai_logo.svg') }}"/>
+                        </a>
+                    </div>
+                    <div>
+                        This application was originally developed at the <a
+                            href="https://www.scai.fraunhofer.de/en/business-research-areas/bioinformatics.html">
+                        Fraunhofer SCAI Department of Bioinformatics</a>.
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                        <a href="https://pharmacome.scai.fraunhofer.de">
+                            <img class="img-responsive" src="{{ url_for('static', filename='img/hbp_logo.png') }}"/>
+                        </a>
+                    </div>
+                    <div>
+                        The <a href="https://pharmacome.scai.fraunhofer.de">Human Brain Pharmacome</a> is a project
+                        focusing on integrating quantitative chemical information with mechanistic models of complex
+                        neurodegenerative disease in order to identify and propose drug repurposing candidates.
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                        <a href="https://www.imi.europa.eu/">
+                            <img class="img-responsive" src="{{ url_for('static', filename='img/imi_logo.png') }}"/>
+                        </a>
+                    </div>
+                    <div>
+                        The <a href="https://www.imi.europa.eu/">IMI</a> is an EU public-private partnership funding
+                        health research and innovation.
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                        <a href="http://www.aetionomy.eu/">
+                            <img class="img-responsive"
+                                 src="{{ url_for('static', filename='img/aetionomy_logo.png') }}"/>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://www.aetionomy.eu/">AETIONOMY</a> is a project aimed to develop a mechanism-based
+                        taxonomy of Alzheimer's disease and Parkinson's disease in order to support stratifying
+                        patients.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Application Metadata</h3>
+            </div>
+            <div class="list-group">
+                {% for key, value in metadata %}
+                    <div class="list-group-item">
+                        <h4 class="list-group-item-heading">{{ key }}</h4>
+                        <p class="list-group-item-text">{{ value }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+
+        {% if managers %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Bio2BEL Managers</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        {% for name, m in managers.items()|sort %}
+                            <div class="col-sm-6 col-md-3">
+                                <h4>
+                                    <a href="https://github.com/bio2bel/{{ name[:-8] }}">{{ name[:-8] }}</a>
+                                </h4>
+                                {% if name in unpopulated %}
+                                    <p>Unpopulated</p>
+                                {% elif name in summaries %}
+                                    <dl class="dl-horizontal">
+                                        {% for k, v in summaries[name].items() %}
+                                            <dt>{{ k }}</dt>
+                                            <dd>
+                                                {% if v is mapping %}
+                                                    {{ v|length }}
+                                                {% else %}
+                                                    {{ v }}
+                                                {% endif %}
+                                            </dd>
+                                        {% endfor %}
+                                    </dl>
+                                {% else %}
+                                    <p>Unable to summarize</p>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Dependencies</h3>
+            </div>
+            <div class="panel-body row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <h3>Technologies</h3>
+                    <ul>
+                        <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+                        <li><a href="https://www.rabbitmq.com/">RabbitMQ</a></li>
+                        <li><a href="https://uwsgi-docs.readthedocs.io/">uWSGI</a></li>
+                        <li><a href="http://www.celeryproject.org/">Celery</a></li>
+                        <li><a href="https://redis.io//">Redis</a></li>
+                        <li><a href="https://www.python.org/">Python 3</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <h3>Python Packages</h3>
+                    <ul>
+                        <li><a href="http://flask.pocoo.org/">Flask</a></li>
+                        <li><a href="http://click.pocoo.org/">Click</a></li>
+                        <li><a href="http://docs.python-requests.org/">Requests</a></li>
+                        <li><a href="https://networkx.github.io/">NetworkX</a></li>
+                        <li><a href="https://pandas.pydata.org/">Pandas</a></li>
+                        <li><a href="https://scikit-learn.org/">scikit-learn</a></li>
+                        <li><a href="https://www.sqlalchemy.org/">SQLAlchemy</a></li>
+                        <li><a href="https://pybel.readthedocs.org/">PyBEL</a></li>
+                        <li><a href="https://pybel-tools.readthedocs.org/">PyBEL Tools</a></li>
+                        <li><a href="https://bio2bel.readthedocs.org/">Bio2BEL</a></li>
+                        <li><a href="https://github.com/rochacbruno/flasgger">Flasgger</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <h3>Client</h3>
+                    <ul>
+                        <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+                        <li><a href="https://d3js.org/">D3.js</a></li>
+                        <li><a href="https://jquery.com/">jQuery</a></li>
+                        <li><a href="https://select2.github.io/">Select2</a></li>
+                        <li><a href="https://github.com/helion3/inspire-tree">InspireTree</a></li>
+                        <li><a href="https://github.com/patorjk/d3-context-menu">D3-context-menu</a></li>
+                        <li><a href="https://github.com/minhur/bootstrap-toggle">Bootstrap Toggle</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+{% endblock %}

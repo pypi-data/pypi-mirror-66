@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+
+{% block title %}How to Use BEL Commons{% endblock %}
+
+{% block content %}
+    <div class="container">
+
+        <ol class="breadcrumb">
+            <li><a href="{{ url_for('help.index') }}">Help</a></li>
+            <li class="active">Tutorial</li>
+        </ol>
+
+        <div class="page-header">
+            <h1>Typical Workflow</h1>
+        </div>
+
+        {% if 'parser' in blueprints %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Curation</h2>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        BEL Commons hosts biological knowledge assemblies that are encoded in Biological Expression
+                        Language. BEL supports the assembly of context-specific qualitative causal and correlative
+                        relations between biological entities across multiple modes and scales in BEL Script with
+                        provenance information, external namespace references, relation provenance (citation and
+                        evidence),
+                        and relation metadata such as the biological context (anatomy, cell, disease, etc.).
+                    </p>
+
+                    <h3>Upload and Parse</h3>
+                    <p>
+                        On the <a href="{{ url_for('ui.home') }}">home page</a>, click <a
+                            href="{{ url_for('parser.view_parser') }}">Parse BEL</a>. In the form, choose a file, then
+                        click
+                        "upload".
+                    </p>
+                    <iframe src="https://player.vimeo.com/video/224197756" width="640" height="335" frameborder="0"
+                            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <p>
+                        The link to the BEL Script used in this video can be found <a
+                            href="https://github.com/cthoyt/selventa-knowledge/tree/master/selventa_knowledge">here</a>.
+                    </p>
+
+                    <h3>Share</h3>
+                    <p>
+                        Users can <a href="{{ url_for('project.create_view', url=url_for('ui.home')) }}">create
+                        projects</a>
+                        that allow them to easily share networks with groups of other users. This is useful when
+                        multiple
+                        curators are uploading related BEL Scripts. Later, they can be assembled and queried.
+                    </p>
+                    <iframe src="https://player.vimeo.com/video/224316280" width="640" height="334" frameborder="0"
+                            webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    </iframe>
+
+                    <h3>Validate Namespaces</h3>
+                    <p>
+                        Large terminologies that are curated for projects investigating new diseases and pathologies can
+                        be
+                        validated by checking their contents using the Ontology Lookup Service, provided by the EBI to
+                        identify duplicate names and enable better semantic integration.
+                    </p>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Summarize a Knowledge Assembly</h3>
+            </div>
+            <div class="panel-body">
+                <p>From the home page, click <a href="{{ url_for('ui.view_networks') }}">List Networks</a>, find your
+                    network, and select "Summarize".
+                </p>
+                <p>
+                    This web application organizes high level statistical information about a network, such as the
+                    number of nodes, edges, author contributions, citation contributions, and provenance information as
+                    well as global network statistics such as the average node degree, network density, number of weakly
+                    connected components, etc. When appropriate, it proves feedback on syntax and semantics of the
+                    source BEL document to assist in curation.
+                </p>
+
+                <iframe src="https://player.vimeo.com/video/224197768" width="640" height="334" frameborder="0"
+                        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+                <p>
+                    Finally, the summary page provides an assessment of the "Biological Grammar", or the biological
+                    validity of statements. These analysis include identification of contradictory edges,
+                    unstable biological motifs in pairs and triplets of nodes, and other information that is inferred
+                    to be missing or incomplete.
+                </p>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Exploration of the Knowledge Base</h3>
+            </div>
+            <div class="panel-body">
+                <h3>Query Builder</h3>
+                <p>A query contain three steps:</p>
+                <ol>
+                    <li>
+                        <strong>Assembly</strong>: A list of networks can be assembled. This is useful to integrate many
+                        networks in the same disease area that have been produced at different times and in different
+                        places. Additionally, this allows for integration of other static resources such as gene
+                        families, orthology information, biochemical reaction databases, and other annotations to fill
+                        in the most fine-granular information extracted from structured knowledge bases. We provide
+                        several networks publicly for users to add to their assemblies.
+                    </li>
+                    <li>
+                        <strong>Seeding</strong>: Large assemblies of networks are very difficult to view, especially
+                        when
+                        there is
+                        a certain point of interest for the user. We provide several network seeding methods to create
+                        a more relevant and managable network before performing general queries. For example,
+                        subgraphs can be seeded around a given node or list of nodes, based on edges with certain
+                        properties, or even by author or citation provenance information.
+                    </li>
+                    <li>
+                        <strong>Transformations</strong>: Networks can be modified using the entire
+                        suite of tools provided by PyBEL. This includes filters for nodes based on certain properties,
+                        expansion around nodes of interest, exclusion of nodes or groups of nodes, and more.
+                    </li>
+                </ol>
+
+                <iframe src="https://player.vimeo.com/video/224475309" width="640" height="480" frameborder="0"
+                        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+                <p>Finally, the results of queries can be summarized, downloaded in many formats, or explored.</p>
+
+                <h3>Interactive Network Explorer</h3>
+                <p>
+                    The results of query can be explored interactively with the Biological Network Explorer. Its
+                    tools panel contains an extended query builder interface that can be used to apply additional
+                    transformations. Network algorithms can be readily applied to
+                    networks such as path searches, centrality calculations, and overlaying of external data. These
+                    data can come from differential expression experiments, or directly from the results of the
+                    Heat Diffusion workflow, which is explained below.
+                </p>
+            </div>
+        </div>
+
+        {% if 'analysis' in blueprints %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Analyze a Knowledge Assembly</h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        Data sets like differential gene expression can be used to quantify the perturbation amplitude
+                        of biological processes in a network using an randomized algorithm based on NPA. Candidate
+                        upstream mechanisms are generated for each biological process and a heat diffusion algorithm is
+                        used
+                        to quantify the cumulative observed effect of upstream genes and gene products based on the
+                        differential gene expression data.
+                    </p>
+                    <p>
+                        This algorithm is general enough that other data types could be used, such as copy number
+                        variations
+                        on SNPs or clinical measurements of neuro-imaging features, which have been annotated to
+                        our Alzheimer Disease Knowledge assembly with NeuroMMSigDB.
+                    </p>
+                    <p>
+                        Data sets can be directly uploaded and analyzed. The results of these experiments can then be
+                        directly overlaid to the interactive network viewer to provide a data-driven analysis of
+                        given networks or sub-networks.
+                    </p>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    {% include "footer.html" %}
+{% endblock %}

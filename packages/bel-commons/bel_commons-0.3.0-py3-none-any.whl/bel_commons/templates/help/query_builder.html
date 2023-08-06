@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+
+{% block title %}Query Builder Help{% endblock %}
+
+{% block content %}
+    <div class="container">
+
+        <ol class="breadcrumb">
+            <li><a href="{{ url_for('help.index') }}">Help</a></li>
+            <li class="active">Query Builder</li>
+        </ol>
+
+        <div class="page-header">
+            <h1>Query Builder Help</h1>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Transformations</h3>
+            </div>
+            <div class="list-group">
+                {% for fname, f in function_dict|sort %}
+                    <div class="list-group-item">
+                        <h4 class="list-group-item-heading">{{ fname }}</h4>
+                        <p class="list-group-item-text">{{ f }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% include "footer.html" %}
+{% endblock %}

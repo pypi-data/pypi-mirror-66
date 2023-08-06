@@ -1,0 +1,636 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+{% import 'macros.html' as pbw %}
+
+{% block styles %}
+    {{ super() }}
+    <link href="{{ url_for('static', filename='css/c3.min.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block head %}
+    {{ super() }}
+
+    <script src="{{ url_for('static', filename='js/d3.3.5.17.min.js') }}" charset="utf-8"></script>
+    <script src="{{ url_for('static', filename='js/c3.min.js') }}"></script>
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
+    <script>
+        // Initializes popover
+        $(function () {
+            $('[data-toggle="popover"]').popover({
+                placement: 'top',
+                trigger: 'hover'
+            })
+        })
+    </script>
+{% endblock %}
+
+{% block title %}{{ network }}{% endblock %}
+
+{% block content %}
+    <a id="top"></a>
+    <div class="container">
+        {{ util.flashed_messages(dismissible=True, container=False) }}
+
+        <ol class="breadcrumb">
+            <li><a href="{{ url_for('ui.home') }}">Catalog</a></li>
+            <li><a href="{{ url_for('ui.view_networks') }}">Networks</a></li>
+            <li class="active">{{ network }}</li>
+        </ol>
+
+        <div class="page-header">
+            <h1>{{ network.name }}
+                <small class="text-muted">{{ network.version }}</small>
+            </h1>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="btn-group">
+                    <a class="btn btn-default"
+                       href="{{ url_for('ui.view_summarize_compilation', network_id=network.id) }}"
+                       data-toggle="popright" title="Summary of the Network"
+                       data-content="Access the compilation summary of the network.">
+                        <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> Compilation
+                    </a>
+                    <a class="btn btn-default"
+                       href="{{ url_for('ui.view_summarize_biogrammar', network_id=network.id) }}"
+                       data-toggle="popright" title="Summary of the Network"
+                       data-content="Access the biogrammar summary of the network.">
+                        <span class="glyphicon glyphicon-apple" aria-hidden="true"></span> Biogrammar
+                    </a>
+                </div>
+
+                {% if network.report and network.report.is_displayable %}
+                    <a href="{{ url_for('ui.view_explore_network', network_id=network.id) }}"
+                       class="btn btn-default" data-toggle="popover" title="Explore this Network"
+                       data-content="This network has {{ network.report.number_nodes }} nodes so it can be directly shown in the Biological Network Explorer.">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        Explore
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('ui.build_subsample_query', network_id=network.id) }}"
+                       class="btn btn-default" data-toggle="popover"
+                       title="Sample this Network"
+                       data-content="This network is too large to explore directly, so view a random sample of 250 edges.">
+                        <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
+                        Explore
+                    </a>
+                {% endif %}
+
+                <a href="{{ url_for('ui.view_build_query_from_network', network_id=network.id) }}"
+                   class="btn btn-default" data-toggle="popover"
+                   title="Perform a Query on this Network"
+                   data-content="You can ask specific questions to your network using the Query Builder.">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    Query
+                </a>
+                {% if 'analysis' in blueprints %}
+                    <div class="btn-group">
+                        <a href="{{ url_for('analysis.view_network_uploader', network_id=network.id) }}"
+                           class="btn btn-default" data-toggle="popover"
+                           title="Analyze this Network"
+                           data-content="Upload your experiments and run algorithms on your network.">
+                            <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+                            Analyze
+                        </a>
+                        <a class="btn btn-default"
+                           href="{{ url_for('analysis.view_experiments', network_id=network.id) }}"
+                           role="button">
+                            <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+                            Results
+                        </a>
+                    </div>
+                {% endif %}
+
+                {% if current_user.is_authenticated %}
+                    <!-- Single button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            Download
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li>
+                                <a href="{{ url_for('dbs.export_network', network_id=network.id, serve_format='bel') }}">
+                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span> BEL Script
+                                </a>
+
+                            <li>
+                                <a href="{{ url_for('dbs.export_network', network_id=network.id, serve_format='nodelink') }}">
+                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Node-Link JSON
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('dbs.export_network', network_id=network.id, serve_format='cx') }}">
+                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span> CX JSON
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('dbs.export_network', network_id=network.id, serve_format='json') }}">
+                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Compact JSON
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('dbs.export_network', network_id=network.id, serve_format='bytes') }}">
+                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Pickle</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('dbs.export_network', network_id=network.id, serve_format='sif') }}">
+                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span> SIF
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('dbs.export_network', network_id=network.id, serve_format='graphml') }}">
+                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span> GraphML
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('dbs.export_network', network_id=network.id, serve_format='graphml-umbrella') }}">
+                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+                                    GraphML-Umbrella
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('dbs.export_network', network_id=network.id, serve_format='csv') }}">
+                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span> CSV</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('dbs.export_network', network_id=network.id, serve_format='gsea') }}">
+                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span> GSEA
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('dbs.export_network', network_id=network.id, serve_format='citations') }}">
+                                    <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Citations
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                {% endif %}
+
+                {% if current_user.is_authenticated and current_user.is_admin %}
+                    <a class="btn btn-danger" role="button"
+                       href="{{ url_for('dbs.drop_network', network_id=network.id, next=url_for('ui.home')) }}">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        Drop
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+
+        {% if network_versions is defined and network_versions|length > 1 %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Versions
+                        <span class="badge">{{ network_versions|length }}</span>
+                        <a class="pull-right" href="#top">
+                            <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                        </a>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-inline">
+                        {% for network_version in network_versions %}
+                            {% if network_version.id == network.id %}
+                                <li>
+                                    <a class="btn btn-info" role="button"
+                                       href="{{ url_for('ui.view_network', network_id=network_version.id) }}">{{ network_version.version }}</a>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a class="btn btn-default" role="button"
+                                       href="{{ url_for('ui.view_network', network_id=network_version.id) }}">{{ network_version.version }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Provenance</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <dl class="dl-horizontal">
+                            {% if network.report %}
+                                <dt>Upload</dt>
+                                <dd>{{ network.report.user.email }} at {{ network.report.created }}</dd>
+                            {% endif %}
+
+                            <dt>Authors</dt>
+                            <dd>{{ network.authors }}</dd>
+
+                            <dt>Contact</dt>
+                            <dd>{{ network.contact }}</dd>
+
+                            {% if network.description %}
+                                <dt>Description</dt>
+
+                                <dd>{{ network.description }}</dd>
+                            {% endif %}
+
+                            {% if network.licenses %}
+                                <dt>License</dt>
+                                <dd>{{ network.licenses }}</dd>
+                            {% endif %}
+
+                            {% if network.copyright %}
+                                <dt>Copyright</dt>
+                                <dd>{{ network.copyright }}</dd>
+                            {% endif %}
+                        </dl>
+                    </div>
+                    <div class="col-lg-6">
+                        <dl class="dl-horizontal">
+                            <dt>Number Nodes</dt>
+                            <dd>{{ network.report.number_nodes }}</dd>
+                            <dt>Number Edges</dt>
+                            <dd>{{ network.report.number_edges }}</dd>
+                            <dt>Number Components</dt>
+                            <dd>{{ network.report.number_components }}</dd>
+                            <dt>Network Density</dt>
+                            <dd>{{ network.report.network_density }}</dd>
+                            <dt>Average Degree</dt>
+                            <dd>{{ network.report.average_degree }}</dd>
+                            <dt>Number Citations</dt>
+                            <dd>{{ network.report.number_citations }}</dd>
+                            <dt>Number BEL Errors</dt>
+                            <dd>{{ network.report.number_warnings }}</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a id="content-statistics"></a>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Content Statistics
+                    <a class="pull-right" href="#top">
+                        <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                    </a>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div id="chart1"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="chart2"></div>
+                    </div>
+                    {% if chart_4_data %}
+                        <div class="col-md-4">
+                            <div id="chart4"></div>
+                        </div>
+                    {% endif %}
+                    {% if chart_5_data %}
+                        <div class="col-md-4">
+                        <div id="chart5"></div>
+                    {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                        <div id="chart6"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="chart7"></div>
+                    </div>
+                    {% if chart_9_data %}
+                        <div class="col-md-4">
+                            <div id="chart9"></div>
+                        </div>
+                    {% endif %}
+                    <div class="col-md-4">
+                        <div id="chart10"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="chart11"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="chart12"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a id="overlap"></a>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Network Overlap
+                    <a class="pull-right" href="#top">
+                        <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+                    </a>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    The node-based overlap between this network and other networks is calculated as the <a
+                        href="https://en.wikipedia.org/wiki/Overlap_coefficient">Szymkiewicz-Simpson coefficient</a>
+                    of their respective nodes. Up to the top 10 are shown below.
+                </p>
+            </div>
+            <table class="table table-hover table-responsive table-striped">
+                <thead>
+                <tr>
+                    <th>Network</th>
+                    <th>Overlap</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for other_network, tanimoto in overlaps %}
+                    {% if other_network %}
+                        <tr>
+                            <td>
+                                <a href="{{ url_for('ui.view_network', network_id=other_network.id) }}">{{ other_network }}</a>
+                            </td>
+                            <td>
+                                {{ (100 * tanimoto)|round|int }}%
+
+                                {% if current_user.is_authenticated and current_user.is_admin %}
+                                    <a href="{{ url_for('ui.view_network_comparison', network_1_id=network.id, network_2_id=other_network.id) }}">
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                    </a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Sample Edges</h3>
+            </div>
+
+            {{ pbw.render_edge_list(network.edges.limit(5), show_networks=False) }}
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Sample Nodes</h3>
+            </div>
+
+            {{ pbw.render_node_list(network.nodes.limit(5)) }}
+        </div>
+
+    </div>
+    {% include "footer.html" %}
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+    <script>
+        c3.generate({
+            padding: {
+                top: 15,
+                left: 100
+            },
+            size: {
+                height: 350
+            },
+            bindto: '#chart1',
+            data: {
+                x: 'x',
+                columns: {{ chart_1_data|safe}},
+                type: 'bar'
+            },
+            title: {
+                text: 'Nodes ({{ network.report.number_nodes }})'
+            },
+            axis: {
+                rotated: true,
+                x: {
+                    type: 'category'
+                }
+            },
+            legend: {
+                show: false
+            }
+        });
+
+        c3.generate({
+            padding: {
+                top: 15,
+                left: 100
+            },
+            size: {
+                height: 350
+            },
+            bindto: '#chart2',
+            data: {
+                x: 'x',
+                columns: {{ chart_2_data|safe}},
+                type: 'bar'
+            },
+            title: {
+                text: 'Edges ({{ network.report.number_edges }})'
+            },
+            axis: {
+                rotated: true,
+                x: {
+                    type: 'category'
+                }
+            },
+            legend: {
+                show: false
+            }
+        });
+
+        {% if chart_4_data %}
+            c3.generate({
+                padding: {
+                    top: 15,
+                    left: 100
+                },
+                size: {
+                    height: 350
+                },
+                bindto: '#chart4',
+                data: {
+                    x: 'x',
+                    columns: {{ chart_4_data|safe}},
+                    type: 'bar'
+                },
+                title: {
+                    text: 'Transformations ({{ number_transformations }})'
+                },
+                axis: {
+                    rotated: true,
+                    x: {
+                        type: 'category'
+                    }
+                },
+                legend: {
+                    show: false
+                }
+            });
+        {% endif %}
+
+        {% if chart_5_data %}
+            c3.generate({
+                padding: {
+                    top: 15,
+                    left: 100
+                },
+                size: {
+                    height: 350
+                },
+                bindto: '#chart5',
+                data: {
+                    x: 'x',
+                    columns: {{ chart_5_data|safe}},
+                    type: 'bar'
+                },
+                title: {
+                    text: 'Variants ({{ number_variants }})'
+                },
+                axis: {
+                    rotated: true,
+                    x: {
+                        type: 'category'
+                    }
+                },
+                legend: {
+                    show: false
+                }
+            });
+        {% endif %}
+
+        c3.generate({
+            padding: {
+                top: 15,
+                left: 100
+            },
+            size: {
+                height: 350
+            },
+            bindto: '#chart6',
+            data: {
+                x: 'x',
+                columns: {{ chart_6_data|safe}},
+                type: 'bar'
+            },
+            title: {
+                text: 'Namespace Usage ({{ number_namespaces }})'
+            },
+            axis: {
+                rotated: true,
+                x: {
+                    type: 'category'
+                }
+            },
+            legend: {
+                show: false
+            }
+        });
+
+        c3.generate({
+            padding: {
+                top: 15,
+                left: 100
+            },
+            size: {
+                height: 350
+            },
+            bindto: '#chart7',
+            data: {
+                x: 'x',
+                columns: {{ chart_7_data|safe}},
+                type: 'bar'
+            },
+            title: {
+                text: 'Node Degrees'
+            },
+            axis: {
+                rotated: true,
+                x: {
+                    type: 'category'
+                }
+            },
+            legend: {
+                show: false
+            }
+        });
+
+        {% if chart_9_data %}
+            c3.generate({
+                padding: {
+                    top: 15,
+                    left: 100
+                },
+                size: {
+                    height: 350
+                },
+                bindto: '#chart9',
+                data: {
+                    x: 'x',
+                    columns: {{ chart_9_data|safe}},
+                    type: 'bar'
+                },
+                title: {
+                    text: 'Pathologies'
+                },
+                axis: {
+                    rotated: true,
+                    x: {
+                        type: 'category'
+                    }
+                },
+                legend: {
+                    show: false
+                }
+            });
+        {% endif %}
+
+        {% if chart_10_data %}
+            c3.generate({
+                padding: {
+                    top: 15
+                },
+                size: {
+                    height: 350
+                },
+                data: {
+                    x: 'x',
+                    columns: {{ chart_10_data|safe}}
+                },
+
+                bindto: '#chart10',
+                axis: {
+                    x: {
+                        type: 'timeseries',
+                        tick: {
+                            format: '%Y'
+                        }
+                    }
+                }
+                , title: {
+                    text: 'Publication Years'
+                },
+                legend: {
+                    show: false
+                }
+            });
+        {% endif %}
+
+    </script>
+{% endblock %}

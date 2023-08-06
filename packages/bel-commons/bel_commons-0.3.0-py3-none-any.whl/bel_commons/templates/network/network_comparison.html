@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+
+{% block title %}Compare Networks{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Network Comparison</h3>
+            </div>
+            <div class="panel-body">
+                {% for entry in ['nodes', 'edges', 'citations', 'annotations'] %}
+                    <h3>{{ entry|capitalize }}</h3>
+                    <dl class="dl-horizontal">
+                        <dt><a href="{{ url_for('ui.view_network', network_id=network_1.id) }}">{{ network_1 }}</a></dt>
+                        <dd>{{ data[entry][0] }}</dd>
+                        <dt>Overlap</dt>
+                        <dd>{{ data[entry][1] }}</dd>
+                        <dt><a href="{{ url_for('ui.view_network', network_id=network_2.id) }}">{{ network_2 }}</a></dt>
+                        <dd>{{ data[entry][2] }}</dd>
+                    </dl>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

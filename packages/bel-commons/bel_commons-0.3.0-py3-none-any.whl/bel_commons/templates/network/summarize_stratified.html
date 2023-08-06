@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            const dataTableConfig = {
+                dom: "<'row'<'col-sm-1'><'col-sm-2'l><'col-sm-3'f><'col-sm-4'B>>" +
+                    "<'row'<'col-sm-12'tr>>" +
+                    "<'row'<'col-sm-4'i><'col-sm-8'p>>",
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            };
+
+            $("#stratified-useful").DataTable(dataTableConfig);
+            $("#stratified-full").DataTable(dataTableConfig);
+        });
+    </script>
+{% endblock %}
+
+{% block title %}{{ network }} Summary: Stratified{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {{ util.flashed_messages(dismissible=True, container=False) }}
+
+        <ol class="breadcrumb">
+            <li><a href="{{ url_for('ui.home') }}">Catalog</a></li>
+            <li><a href="{{ url_for('ui.view_networks') }}">Networks</a></li>
+            <li><a href="{{ url_for('ui.view_network', network_id=network.id) }}">{{ network }}</a></li>
+            <li>Stratified</li>
+            <li class="active">{{ annotation }}</li>
+        </ol>
+
+        <div class="page-header">
+            <h1>Stratified Summary of {{ network.name }}
+                <small class="text-muted">{{ network.version }}</small>
+            </h1>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Summary of {{ network }}</h3>
+            </div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    {% for k, v in full_summary.items() %}
+                        <dt>{{ k }}</dt>
+                        <dd>{{ v }}</dd>
+                    {% endfor %}
+                </dl>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Full Summary Stratified by {{ annotation }}</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    This is a summary of the sub-graphs. It includes information that fits the schema of BEL,
+                    but is less useful for reasoning. See below for a "target" summary with pre-processing done to each
+                    sub-graph.
+                </p>
+            </div>
+            <table class="table table-striped table-hover" id="stratified-full">
+                <thead>
+                <tr>
+                    <th>{{ annotation }}</th>
+                    <th>Nodes</th>
+                    <th>Edges</th>
+                    <th>Components</th>
+                    <th>Citations</th>
+                    <th>Density</th>
+                    <th>Errors</th>
+                    <th>Error Density</th>
+                    <th>Node Percentage</th>
+                    <th>Edge Percentage</th>
+                    <th>Citation Percentage</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for name, data in summaries.items() %}
+                    <tr>
+                        <td>{{ name }}</td>
+                        <td>{{ data['Nodes'] }}</td>
+                        <td>{{ data['Edges'] }}</td>
+                        <td>{{ data['Components'] }}</td>
+                        <td>{{ data['Citations'] }}</td>
+                        <td>{{ (data['Network density'] * 100) | round(precision=3) }}%</td>
+                        <td>{{ data['errors'] }}</td>
+                        <td>{{ (data['error_density'] * 100) | round(precision=3) }}%</td>
+                        <td>{{ (data['node_overlap']* 100) | round(precision=3) }}%</td>
+                        <td>{{ (data['edge_overlap']* 100) | round(precision=3) }}%</td>
+                        <td>{{ (data['citation_overlap']* 100) | round(precision=3) }}%</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Targeted Summary Stratified by {{ annotation }}</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Graphs have been sliced to be more useful. The pathologies and associative relationships are
+                    removed, proteins and RNAs are collapsed to genes, and isolated nodes are removed.
+                </p>
+            </div>
+            <table class="table table-striped table-hover" id="stratified-useful">
+                <thead>
+                <tr>
+                    <th>{{ annotation }}</th>
+                    <th>Nodes</th>
+                    <th>Edges</th>
+                    <th>Components</th>
+                    <th>Citations</th>
+                    <th>Density</th>
+                    <th>Node Percentage</th>
+                    <th>Edge Percentage</th>
+                    <th>Citation Percentage</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for name, data in useful_summaries.items() %}
+                    <tr>
+                        <td>{{ name }}</td>
+                        <td>{{ data['Nodes'] }}</td>
+                        <td>{{ data['Edges'] }}</td>
+                        <td>{{ data['Components'] }}</td>
+                        <td>{{ data['Citations'] }}</td>
+                        <td>{{ (data['Network density'] * 100) | round(precision=3) }}%</td>
+                        <td>{{ (data['node_overlap']* 100) | round(precision=3) }}%</td>
+                        <td>{{ (data['edge_overlap']* 100) | round(precision=3) }}%</td>
+                        <td>{{ (data['citation_overlap']* 100) | round(precision=3) }}%</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

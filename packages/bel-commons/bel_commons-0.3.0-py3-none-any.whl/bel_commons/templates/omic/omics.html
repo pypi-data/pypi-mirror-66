@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+
+{% block title %}Omic Catalog{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    {% if current_user.is_authenticated and current_user.is_admin %}
+        <script src="{{ url_for('static', filename='js/bootstrap-confirmation.min.js') }}"></script>
+        <script>
+            $('[data-toggle=confirmation]').confirmation({
+                rootSelector: '[data-toggle=confirmation]'
+                // other options
+            });
+        </script>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {{ util.flashed_messages(dismissible=True, container=False) }}
+
+        <ol class="breadcrumb">
+            <li><a href="{{ url_for('ui.home') }}">Catalog</a></li>
+            <li class="active">Omics</li>
+        </ol>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {% if current_user.is_authenticated and current_user.is_admin %}
+                    <div class="btn-group pull-right">
+                        <a class="btn btn-danger btn-xs"
+                           href="{{ url_for('analysis.drop_omics', next=url_for('ui.home')) }}"
+                           role="button" data-toggle="confirmation" data-btn-ok-icon="glyphicon glyphicon-share-alt"
+                           data-btn-ok-class="btn-success" data-btn-cancel-icon="glyphicon glyphicon-ban-circle"
+                           data-btn-cancel-class="btn-danger">
+                            Drop All
+                        </a>
+                    </div>
+                {% endif %}
+                <h3 class="panel-title">Omic Catalog</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    Currently, each entry in the Omic Catalog corresponds to the results from a differential gene
+                    expression analysis. Instructions for creating new data sets from the GEO can be found
+                    <a href="{{ url_for('help.dgx') }}">here</a>.
+                </p>
+                <p>
+                    The three pre-processed differential gene expression experiments related to Alzheimer's
+                    disease corresponding to the examples in the BEL Commons manuscript are available on <a
+                        href="https://github.com/cthoyt/bel-commons-manuscript/tree/master/data">GitHub</a>.
+                </p>
+            </div>
+            <table class="table table-hover table-strpied">
+                <thead>
+                <tr>
+                    <th>Identifier</th>
+                    <th>Created</th>
+                    <th>Description</th>
+                    <th>Public</th>
+                    <th>Experiments</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for omic in omics %}
+                    <tr>
+                        <td>
+                            <a href="{{ url_for('analysis.view_omic', omic_id=omic.id) }}">
+                                {{ omic.id }}
+                            </a>
+                        </td>
+                        <td>{{ omic.created }}</td>
+                        <td>{{ omic.description }}</td>
+                        <td>
+                            {% if omic.public %}
+                                <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+                            {% else %}
+                                <span class="glyphicon glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if omic.experiments %}
+                                <a class="btn btn-default btn-xs"
+                                   href="{{ url_for('analysis.view_experiments', omic_id=omic.id) }}">
+                                    <span class="badge">{{ omic.experiments.count() }}</span>
+                                    <span class="glyphicon glyphicon-flash"></span>
+                                    <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+                                </a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {% include "footer.html" %}
+{% endblock %}

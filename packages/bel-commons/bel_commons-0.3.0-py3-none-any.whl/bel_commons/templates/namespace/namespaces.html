@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+
+{% block title %}Namespaces{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#table-namespaces").DataTable();
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {{ util.flashed_messages(dismissible=True, container=False) }}
+
+        <ol class="breadcrumb">
+            <li><a href="{{ url_for('ui.home') }}">Catalog</a></li>
+            <li class="active">Namespaces</li>
+        </ol>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Namespaces</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    BEL borrows some ideas from the semantic web that resources at a given location should be
+                    persistent. However, the BEL namespace file format contains a flag to signify namespaces that
+                    might change over time that is only very narrowly appropriate for custom terminologies as they are
+                    under development. These namespaces are not cached and are not listed.
+                </p>
+            </div>
+        </div>
+
+        <table class="table table-striped" id="table-namespaces">
+            <thead>
+            <tr>
+                <th></th>
+                <th>Keyword</th>
+                <th>Name</th>
+                <th>Version</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for namespace in namespaces %}
+                <tr>
+                    <td>
+                        <a href="{{ url_for('ui.view_namespace', namespace_id=namespace.id) }}">{{ namespace.id }}</a>
+                    </td>
+                    <td>{{ namespace.keyword }}</td>
+                    <td>{{ namespace.name }}</td>
+                    <td><a href="{{ namespace.url }}">{{ namespace.version }}</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+    {% include "footer.html" %}
+{% endblock %}

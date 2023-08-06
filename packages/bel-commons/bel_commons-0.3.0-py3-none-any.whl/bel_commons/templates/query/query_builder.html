@@ -1,0 +1,372 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+{% import "bootstrap/utils.html" as util %}
+
+{% block title %}Query Builder{% endblock %}
+
+{% block head %}
+    {{ super() }}
+
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script type="text/javascript"
+            src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <style>
+
+        .select2-selection--multiple .select2-search--inline .select2-search__field {
+            width: auto !important;
+        }
+
+        [data-role="dynamic-fields"] > .form-inline + .form-inline {
+            margin-top: 0.5em;
+        }
+
+        [data-role="dynamic-fields"] > .form-inline [data-role="add"] {
+            display: none;
+        }
+
+        [data-role="dynamic-fields"] > .form-inline:last-child [data-role="add"] {
+            display: inline-block;
+        }
+
+        [data-role="dynamic-fields"] > .form-inline:last-child [data-role="remove"] {
+            display: none;
+        }
+
+        .toggle-off {
+            background-color: #00967f !important;
+            color: white !important;
+            text-decoration-color: white !important;
+            outline-color: white !important;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href='https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'/>
+    <link rel="stylesheet" type="text/css"
+          href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css'/>
+    <link rel="stylesheet" type="text/css"
+          href='https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.min.css'/>
+    <link rel="stylesheet" type="text/css"
+          href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css'/>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <link rel="stylesheet"
+          href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'/>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript"
+            src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js'></script>
+    <script type="text/javascript"
+            src="{{ url_for('static', filename='js/controllers/query_builder_controller.js', version='20171013') }}">
+    </script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.js"></script>
+
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>Query Builder{% if network is defined %} for {{ network }}{% endif %}</h1>
+        </div>
+
+        {{ util.flashed_messages(dismissible=True, container=False) }}
+
+        <form id="query-form" method="post" action="{{ url_for('ui.get_pipeline') }}">
+            {% if use_all_networks is defined and use_all_networks %}
+                <!-- Using super network! -->
+            {% elif network is defined %}
+                <input type="checkbox" style="display: none" name="network_ids[]" value="{{ network.id }}"
+                       checked="checked"/>
+            {% else %}
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Assembly</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Choose networks to assemble for the query. All public networks, networks that you have
+                            uploaded, and networks shared with projects in which you participate are shown.
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <table class="table table-striped table-responsive" id="network-table">
+                            <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" title="Select All Networks" id="selectAll"/>
+                                </th>
+                                <th>Name</th>
+                                <th>Version</th>
+                                <th>Created</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for network in networks %}
+                                <tr>
+                                    <td>
+                                        {% if preselected and network.id == preselected %}
+                                            <input type="checkbox" class="networks" name="network_ids[]"
+                                                   value="{{ network.id }}" checked="checked"/>
+                                        {% else %}
+                                            <input type="checkbox" class="networks" name="network_ids[]"
+                                                   value="{{ network.id }}"/>
+                                        {% endif %}
+                                    </td>
+                                    <td>{{ network.name }}</td>
+                                    <td>{{ network.version }}</td>
+                                    <td>{{ network.created }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Seeding</h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        Please choose the seeding type your want to use for the query. Note: it's possible to
+                        use multiple seeding types.
+                    </p>
+
+                    <div id="seed-selection" class="btn-group">
+                        <a data-toggle="tab" href="#node-panel">
+                            <button type="button" class="btn btn-primary">Nodes</button>
+                        </a>
+
+                        {% if current_user.is_beta_tester %}
+                            <a data-toggle="tab" href="#name-panel">
+                                <button type="button" class="btn btn-warning">Names</button>
+                            </a>
+                        {% endif %}
+
+                        <a data-toggle="tab" href="#pubmed-panel">
+                            <button type="button" class="btn btn-primary" value="pmids">PubMeds</button>
+                        </a>
+                        <a data-toggle="tab" href="#author-panel">
+                            <button type="button" class="btn btn-primary" value="authors">Authors</button>
+                        </a>
+
+                        <a data-toggle="tab" href="#annotation-panel">
+                            <button type="button" class="btn btn-primary" value="annotations">Annotations</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content">
+                <div class="panel panel-default tab-pane fade" id="node-panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Seeding by Nodes</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>This method of seeding will acquire the given nodes and expand around them using given seed
+                            method.
+                        </p>
+                        <p>
+                            <strong>Use Case:</strong> The leukemia drug, <a
+                                href="https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL255863">nilotinib</a>,
+                            triggers cells to get rid of faulty components - including the ones associated with several
+                            brain diseases. In 2015, Georgetown University Medical Center <a
+                                href="http://content.iospress.com/articles/journal-of-parkinsons-disease/jpd160867">published</a>
+                            findings that the drug had a helpful effect on patients in Alzheimer's and Parkinson's
+                            diseases. Though it is currently unknown, a search of the paths between this drug and these
+                            diseases could provide insight to nilotinib's mechanism of action.</p>
+                        <div class="form-group form-horizontal">
+                            <label class="col-md-2 control-label">Nodes</label>
+                            <div class="col-md-10">
+                                <select style="width: 100%" multiple="multiple" name="node_selection[]"
+                                        id="node_selection"></select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                                <div class="radio">
+                                    <label>
+                                        <input checked id="seed_method-1" name="seed_method" type="radio"
+                                               value="neighbors">
+                                        Expand to first neighbors
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input id="seed_method-2" name="seed_method" type="radio" value="dneighbors">
+                                        Expand to first/second neighbors
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input id="seed_method-0" name="seed_method" type="radio" value="induction">
+                                        Induce edges between nodes
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input id="seed_method-3" name="seed_method" type="radio"
+                                               value="shortest_paths">
+                                        Induce a sub-graph over the nodes in all shortest paths between the given nodes
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input id="seed_method-4" name="seed_method" type="radio" value="upstream">
+                                        Expand to upstream causal relations in first/second neighbors
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input id="seed_method-5" name="seed_method" type="radio" value="downstream">
+                                        Expand to downstream causal relations in first/second neighbors
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-warning tab-pane fade" id="name-panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Seeding by Name Search</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>This method acquires the nodes whose names are superstrings of the search query</p>
+                        <p><strong>Use Case:</strong> Users may be interested in a whole class of nodes related
+                            to a certain name, such as th MGI, RGD, HGNC, and HGNC Families related to AKT1.
+                        </p>
+                        <div class="form-group form-horizontal">
+                            <label class="col-md-2 control-label">Name</label>
+                            <div class="col-md-10">
+                                <input id="name_selection" class="form-control" placeholder="Type query here"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default tab-pane fade" id="author-panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Seeding by Authorship</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>This method acquires the nodes and edges asserted by the given authors and
+                            expands around their neighborhoods to show peripheral knowledge.</p>
+                        <p><strong>Use Case:</strong> Users may be interested in the representation of their own work,
+                            their colleagues' work, and their favorite publications in the knowledge assembly. For users
+                            that are new to a given field, this is an excellent research tool to identify what papers to
+                            read next.
+                        </p>
+                        <div class="form-group form-horizontal">
+                            <label class="col-md-2 control-label">Authors</label>
+                            <div class="col-md-10">
+                                <select style="width: 100%;" multiple="multiple" name="author_selection[]"
+                                        id="author_selection"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default tab-pane fade" id="pubmed-panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Seeding by Citation</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>This method acquires the nodes and edges asserted by the given citations and
+                            expands around their neighborhoods to show peripheral knowledge.</p>
+                        <p><strong>Use Case:</strong> Users may be interested in the representation of their own work,
+                            their colleagues' work, and their favorite publications in the knowledge assembly. For users
+                            that are new to a given field, this is an excellent research tool to identify what papers to
+                            read next.
+                        </p>
+                        <div class="form-group form-horizontal">
+                            <label class="col-md-2 control-label">PubMed Identifiers</label>
+                            <div class="col-md-10">
+                                <select style="width: 100%" multiple="multiple" name="pubmed_selection[]"
+                                        id="pubmed_selection"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-warning tab-pane fade" id="annotation-panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Seeding by Annotation</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>This method of will acquire edges matching any of the given annotations.</p>
+                        <p>
+                            <strong>Use Case:</strong> The <a
+                                href="http://www.nature.com/nrd/journal/v10/n9/full/nrd3505.html">Amyloidogenic
+                            Cascade</a> describes the processes resulting from amyloid beta peptides deposition in the
+                            brain; and is a central to Alzheimer Disease (AD) pathology. Using the <a
+                                href="http://neurommsig.scai.fraunhofer.de/">NeuroMMSig</a>
+                            functional annotations, this sub-network can be extracted and its periphery can be
+                            investigated to identify novel overlaps with other canonical pathways implicated in AD.</p>
+                        <div class="form-group form-horizontal">
+                            <label class="col-md-2 control-label">Annotation Values</label>
+                            <div class="col-md-6">
+                                <select style="width: 100%;" multiple="multiple" name="annotation_selection[]"
+                                        id="annotation_selection"></select>
+                            </div>
+                            <input class="col-md-2" data-toggle="toggle" data-width="25%"
+                                   data-style="android" name="and"
+                                   data-on="All Annotations Should Be Present" value="True" id="andortoggle"
+                                   data-off="Any Annotation Present" type="checkbox">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Transformations</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Please choose any filters, enrichments, or transformations you want to apply to the query.
+                            For a list of available functions, please see
+                            <a href="{{ url_for('help.query_builder') }}">here</a>.
+                        </p>
+                        <p>
+                            <strong>Use Case:</strong> You might want to collapse all protein, RNA, and miRNA nodes to
+                            their corresponding gene to simplify visualization and exploration.
+                        </p>
+                        <div data-role="dynamic-fields">
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <label class="sr-only" for="pipeline">Pipeline</label>
+                                    <input type="text" class="form-control" name="pipeline[]" id="pipeline"
+                                           placeholder="Please enter the PyBEL function that will be applied to the query"
+                                           style=" min-width: 500px;">
+                                </div>
+                                <button class="btn btn-danger" data-role="remove">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                                <button class="btn btn-primary" data-role="add">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                            </div>  <!-- /div.form-inline -->
+                        </div>  <!-- /div[data-role="dynamic-fields"] -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-bottom: 20px">
+                <input class="btn btn-primary btn-lg" id="submit-query" placeholder="Submit Query" type="submit">
+            </div>
+        </form>
+    </div>
+
+    {% include "footer.html" %}
+{% endblock %}
