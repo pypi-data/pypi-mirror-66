@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+bf2c/__init__.py
+bf2c/bf2c.py
+bf2c.egg-info/PKG-INFO
+bf2c.egg-info/SOURCES.txt
+bf2c.egg-info/dependency_links.txt
+bf2c.egg-info/top_level.txt
+test/test_bf2c.py
