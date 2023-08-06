@@ -1,0 +1,6 @@
+gtfstk
+matplotlib
+pandas
+pyshp
+shapely
+simplification
