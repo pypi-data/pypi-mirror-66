@@ -1,0 +1,16 @@
+apscheduler
+Automat==0.8.0
+chardet
+docker
+requests==2.20.0
+pysyncobj>=0.2.3
+subprocess32
+scrapy<2.0
+service-identity
+six>=1.12
+sqlalchemy
+sqlalchemy-migrate
+tornado>=4.4.2,<5.0
+virtualenv
+w3lib
+pyaml
