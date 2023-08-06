@@ -1,0 +1,12 @@
+macrobot/__init__.py,sha256=ryAfvAaW7VM8g1gnCrFCPrXmcbbm99Xw44aLkwGZzaI,23
+macrobot/bgt.py,sha256=TTsQrGoHpm7dF83jnYUJJuf9NqJRZwVzg2hNsRfCoL8,3313
+macrobot/cli.py,sha256=nSZ9w_oNi4tcULR8WQacWz24QzTU0gJrdgOcNW9W6ms,3831
+macrobot/helpers.py,sha256=NQD8uVqw3Hqvm8RDLR5OOYbwDksTCSL-zOLOyFOBAx0,2786
+macrobot/mb_pipeline.py,sha256=oeMrOs7UoyzzjYutiwIVWDyNXB4YLLxonghy-W9ov8M,6579
+macrobot/prediction.py,sha256=O80X2AAT0X_RucZpob24zYlpGONXCZPkFixgtVxTspE,4300
+macrobot/puccinia.py,sha256=HtLMZHXQHXD27bZulWMx48Z39C11sPpkL9qhk1K9Fek,3709
+macrobot/segmentation.py,sha256=2T5hXEgXgjfWtC-KrxY4Csq03GpSHku_GfMdVAC18xg,12184
+macrobot-0.1.1.dist-info/entry_points.txt,sha256=F3MSbu0YIjr6V79h-yUvHvI3I2x9Y-x_4P2JM6AflNk,40
+macrobot-0.1.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+macrobot-0.1.1.dist-info/METADATA,sha256=hgTnCGnXI2681Mbx_1FwZq9CQyY_JMRfBZSdlJ9t8Sw,432
+macrobot-0.1.1.dist-info/RECORD,,
