@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: tinet
+Version: 0.1
+Summary: A Tiny Neural Network library for Python
+Home-page: UNKNOWN
+Author: V Pavan Preetham
+Author-email: pavanpreethamsmart@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Tinet - Neural Network Package for Python
+
+
+
