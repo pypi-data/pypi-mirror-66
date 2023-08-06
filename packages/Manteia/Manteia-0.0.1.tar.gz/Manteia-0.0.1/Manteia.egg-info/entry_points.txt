@@ -1,0 +1,3 @@
+[console_scripts]
+Manteia-test = Manteia.Manteia:testManteia
+

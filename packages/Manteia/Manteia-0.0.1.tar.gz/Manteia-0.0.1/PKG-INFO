@@ -1,0 +1,34 @@
+Metadata-Version: 1.1
+Name: Manteia
+Version: 0.0.1
+Summary: Deep NLP
+Home-page: https://github.com/ym001/Manteia
+Author: Yves Mercadier
+Author-email: yves.mercadier@gmail.com
+License: WTFPL
+Description: Manteia - Proclame la bonne parole 
+        ================================================================
+        
+        Ce module proclame la bonne parole. Puissent-t-ils
+        retrouver une totale liberté de pensée cosmique vers un nouvel age
+        reminiscent.
+        
+        Vous pouvez l'installer avec pip:
+        
+            pip install Manteia
+        
+        Exemple d'usage:
+        
+            >>> from Manteia import testManteia
+            >>> testManteia()
+        
+        Ce code est sous licence WTFPL.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved
+Classifier: Natural Language :: French
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Communications
