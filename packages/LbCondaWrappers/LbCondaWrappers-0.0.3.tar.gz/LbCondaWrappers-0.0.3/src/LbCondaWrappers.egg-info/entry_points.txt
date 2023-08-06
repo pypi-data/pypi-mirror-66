@@ -1,0 +1,3 @@
+[console_scripts]
+lb-conda = LbCondaWrappers:lb_conda
+
