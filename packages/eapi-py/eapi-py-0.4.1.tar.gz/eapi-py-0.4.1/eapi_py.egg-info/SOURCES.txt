@@ -1,0 +1,8 @@
+README.md
+eapi.py
+setup.py
+eapi_py.egg-info/PKG-INFO
+eapi_py.egg-info/SOURCES.txt
+eapi_py.egg-info/dependency_links.txt
+eapi_py.egg-info/requires.txt
+eapi_py.egg-info/top_level.txt
