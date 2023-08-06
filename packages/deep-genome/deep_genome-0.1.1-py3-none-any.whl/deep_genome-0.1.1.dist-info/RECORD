@@ -1,0 +1,11 @@
+deep_genome/__init__.py,sha256=moKMVoiPvfqJ9NGVGCbnGvAm-DTUCULmrhaJR9Ecff0,139
+deep_genome/dataset.py,sha256=zPoAr0p5OaecOQz-Jvuy0lZbWuFTc1ZYkTz-3TN7i00,2043
+deep_genome/generate.py,sha256=f269WqZuC4YZq71p724POW-tEn2BCdHN9Szza3xCv9Q,2979
+deep_genome/model.py,sha256=mU2rGJowiNvxJ898MO5adc4xlsOEQ1ynp0OGIPVNygI,2609
+deep_genome/models.py,sha256=fc82mj-5Jwkj8UcOgvoL5xYL66CbGHWVcM7jOQGCkk0,3275
+deep_genome/utils.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+deep_genome-0.1.1.dist-info/LICENSE,sha256=8GsTx80iiOj5-fk78DrYxq2xuxntnZw5ie0YjgRZ9AM,34837
+deep_genome-0.1.1.dist-info/METADATA,sha256=w4lE0EDcnbz3t90OoT6V2WZ8kv_mceauPWSTKRxajds,640
+deep_genome-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+deep_genome-0.1.1.dist-info/top_level.txt,sha256=8xIFbykxpJ_AxOfxCI7sIFSMk6bnuniWQo4bgmuBRbs,12
+deep_genome-0.1.1.dist-info/RECORD,,
