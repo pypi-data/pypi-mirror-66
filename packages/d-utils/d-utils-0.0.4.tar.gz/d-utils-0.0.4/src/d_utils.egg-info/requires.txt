@@ -1,0 +1,5 @@
+selenium
+pyvirtualdisplay
+
+[dev]
+pytest>=3.7
