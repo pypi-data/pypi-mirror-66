@@ -1,0 +1,11 @@
+README.md
+setup.py
+foliant/preprocessors/dbmldoc/__init__.py
+foliant/preprocessors/dbmldoc/dbmldoc.py
+foliant/preprocessors/dbmldoc/template/dbml.j2
+foliant/preprocessors/dbmldoc/template/scheme.j2
+foliantcontrib.dbmldoc.egg-info/PKG-INFO
+foliantcontrib.dbmldoc.egg-info/SOURCES.txt
+foliantcontrib.dbmldoc.egg-info/dependency_links.txt
+foliantcontrib.dbmldoc.egg-info/requires.txt
+foliantcontrib.dbmldoc.egg-info/top_level.txt
