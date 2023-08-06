@@ -1,0 +1,10 @@
+myprinter-1.0.data/data/testsetup/config3/t.json,sha256=tV29dnaJNEZF_s-KhrZcsTGs1gpYB_E5S3B3QYgMkC4,329
+testsetup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+testsetup/hello.py,sha256=NXtNFAgrqmFQ8IuyVhix0-sxavr1thY3dJzU4nWv9WY,430
+testsetup/utilts/__init__.py,sha256=0LuwSIzhMEwq_suX1y-8CNUE1FeaDmJe33c2DdnZtwc,57
+testsetup/utilts/print_info.py,sha256=6K1pTptKJsu08bYiPZmrNRrPm-A4-P_FYE3aRGedR4I,188
+myprinter-1.0.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+myprinter-1.0.dist-info/METADATA,sha256=fS9VkwbmwPXlzbYvU1sKQrdSL3YcS-7tu4A-RMB-Ojg,211
+myprinter-1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+myprinter-1.0.dist-info/top_level.txt,sha256=zUPbHByZnymIyAo-6LVb27sKAAr43SYrrJr38aiuB9k,10
+myprinter-1.0.dist-info/RECORD,,
