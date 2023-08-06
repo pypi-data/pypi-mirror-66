@@ -1,0 +1,13 @@
+getversion/__init__.py,sha256=zwneUayUKIKzORvAt0OXjlOJ9BqS8HB_J_QjT0T_zHE,797
+getversion/_version.py,sha256=_EcBpuyaGIKgbG6Q-tqhcx16utTekxkPMFOjX-5L97g,116
+getversion/main.py,sha256=eEuQuA85Gg-MAoFn4FfWRsDEeaGqwQtJY8h3Cc1pxTY,9065
+getversion/plugin_builtins.py,sha256=usTicbbiTTEWfU9WML_ECoeE54DL_dvKS49ERO9liWE,1353
+getversion/plugin_eggs_and_wheels.py,sha256=qIl5RMWrNkQTVgtB8wfxrwWor8QmAsWTdjbTOxaKbp0,5737
+getversion/plugin_importlib_metadata.py,sha256=fPlx8tqvFVwsMKoz_kkIWMo_ttqzj0ExVUkopbSR_AU,935
+getversion/plugin_setuptools_scm.py,sha256=UJVFYAKyomm0o7cjde07wSXzJmxN7wTvlOmkI6pEgIo,2304
+getversion/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+getversion-1.0.1.dist-info/LICENSE,sha256=JipSav17Ux2_r051tc1v9vh2luZbhDEek-cneA-EmzQ,1506
+getversion-1.0.1.dist-info/METADATA,sha256=FW3SlZ-EYh3ZHRyMa1tlHjfkgEusNgswbIJ4prn2vXE,2624
+getversion-1.0.1.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+getversion-1.0.1.dist-info/top_level.txt,sha256=81jedTlIv-Ee6sxQoXvIBK5jl9AmV72NjdBe4KoO0QU,11
+getversion-1.0.1.dist-info/RECORD,,
