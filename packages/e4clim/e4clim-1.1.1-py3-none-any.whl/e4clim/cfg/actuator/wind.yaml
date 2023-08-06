@@ -1,0 +1,38 @@
+---
+capacity_factor:
+  data:
+    in_fit:
+    in_predict:
+    out:
+
+  # output_extractor:
+  #   module_path: .model.cf_from_generation_mean_cf
+  #   mean_frequency: 'Y'
+
+  feature_extractor:
+
+    module_path: .model.wind
+
+    # Nominal power (W)
+    nominal_power: 2300000.
+
+    # Hub height (m)
+    hub_height: 101
+
+    # Power curve file
+    powercurve_filename: 'powercurve_siemens_swt_2.3mw_101m.csv'
+
+    # Capital expenditure (euro/MW)
+    capex: 1279000
+    # Operation expenditure (euro/MW)
+    opex: 42000
+
+    # Use roughness length data with log law to get the wind at hub height?
+    use_roughness: False
+
+  estimator:
+    module_path: .actuator.scale_corrector
+    time_slice:
+    subsample_freq:
+    alphas_logspace:
+    regressor_kwargs:

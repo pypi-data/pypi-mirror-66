@@ -1,0 +1,8 @@
+area1:
+  zone1:
+    src1: ['src1_reg1', 'src1_reg2']
+    src2: 'src2_zone1'
+  zone2:
+area2:
+  zone3:
+

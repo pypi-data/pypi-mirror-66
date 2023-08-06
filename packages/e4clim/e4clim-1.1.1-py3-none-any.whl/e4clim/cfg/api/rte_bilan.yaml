@@ -1,0 +1,6 @@
+---
+module_path: .api.rte_bilan
+first_year: 2008
+last_year: 2017
+units:
+  capacity_factor: ''

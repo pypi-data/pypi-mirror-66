@@ -1,0 +1,9 @@
+---
+module_path: .api.istat
+host: http://www.istat.it/
+path: /storage/cartografia/confini_amministrativi/generalizzati/
+date: 01012018
+# resolution: 
+resolution: _g    
+crs: WGS84
+child_column: DEN_REG

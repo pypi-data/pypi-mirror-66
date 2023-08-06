@@ -1,0 +1,25 @@
+---
+no_verbose: False
+module_path: .api.eco2mix
+host: 'https://eco2mix.rte-france.com/download/eco2mix/'
+first_year: '2013'
+last_year: '2017'
+source_file_format: 'xls'
+read_csv_kwargs:
+  sep: '\t'
+  skipfooter: 2
+  index_col: False
+  encoding: 'latin1'
+  engine: 'python'
+frequency: '15min'
+drop_columns: ['Nature', 'Date', 'Heures', 'Périmètre']
+# Mapping from region name in file to region name in filename
+region_files: {'Grand-Est': 'Grand-Est', 'Nouvelle-Aquitaine': 'Nouvelle-Aquitaine', 'Auvergne-Rhône-Alpes': 'Auvergne-Rhône-Alpes', 'Bourgogne-Franche-Comté': 'Bourgogne-Franche-Comté', 'Bretagne': 'Bretagne', 'Centre-Val de Loire': 'Centre-Val-de-Loire', 'Ile-de-France': 'Ile-de-France', 'Occitanie': 'Occitanie', 'Hauts-de-France': 'Hauts-de-France', 'Normandie': 'Normandie', 'Pays-de-la-Loire': 'Pays-de-la-Loire', 'PACA': 'PACA'}
+# Mapping from package component names to data-source component names
+component_names:
+  wind-onshore: 'Eolien'
+  pv: 'Solaire'
+units:
+  generation: 'MWh'
+  capacity: 'MW'
+  capacity_factor: ''

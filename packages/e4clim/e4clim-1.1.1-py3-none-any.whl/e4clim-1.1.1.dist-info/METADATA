@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: e4clim
+Version: 1.1.1
+Summary: The Energy for CLimate Integrated Model for climate-aware renewable energy mixes
+Home-page: https://gitlab.in2p3.fr/energy4climate/e4clim/e4clim
+Author: Energy for CLimate Integrated Model developpers
+Author-email: alexis.tantet@lmd.polytechnique.fr
+Maintainer: alexis.tantet
+License: GPLv3
+Project-URL: Documentation, https://energy4climate.pages.in2p3.fr/e4clim/e4clim/
+Platform: UNKNOWN
+Requires-Dist: oyaml
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: numexpr
+Requires-Dist: xarray
+Requires-Dist: dask
+Requires-Dist: netcdf4
+Requires-Dist: netCDF4
+Requires-Dist: h5netcdf
+Requires-Dist: cvxopt
+Requires-Dist: scikit-learn
+Requires-Dist: matplotlib
+Requires-Dist: python-dateutil
+Requires-Dist: xlrd
+Requires-Dist: requests
+Requires-Dist: geopandas
+Requires-Dist: descartes
+Requires-Dist: uncertainties
+Requires-Dist: rasterio
+Requires-Dist: entsoe-py
+Requires-Dist: requests-oauthlib
+
+e4clim: Energy for CLimate Integrated Model
+============================================
+
+The Energy for CLimate Integrated Model.
+
+See the [e4clim documentation](https://energy4climate.pages.in2p3.fr/e4clim/e4clim/) for more details.
+
+

@@ -1,0 +1,33 @@
+---
+first_year: 2014
+last_year: 2018
+host: 'http://www.eirgridgroup.com/site-files/library/EirGrid/'
+module_path: .api.eirgrid
+timezone: 'Europe/Dublin'
+capacity:
+  filename: 'System-and-Renewable-Data-Summary-Report'
+  file_format: 'xlsx'
+  variable_names:
+    wind-onshore: 'Total.3'
+  read_excel_kwargs:
+    sheet_name: 'Wind Installed Capacities'
+    usecols: 'Q:T'
+    index_col: 0
+    skiprows: 3
+generation:
+  filename: 'System-Data-Qtr-Hourly'
+  file_format: 'xlsx'
+  variable_names:
+    wind-onshore:
+      'IE Wind Generation'
+  read_excel_kwargs:
+    sheet_name: 'System Data'
+    index_col: 0
+  year_groups:
+    - [2014, 2015]
+    - [2016, 2017]
+    - [2018, 2019]
+units:
+  generation: 'MWh'
+  capacity: 'MW'
+  capacity_factor: ''

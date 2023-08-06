@@ -1,0 +1,32 @@
+---
+first_year: 1990
+last_year: 2018
+host: 'https://opendata.cbs.nl/ODataApi/odata/'
+module_path: .api.cbs
+data_entity: 'TypedDataSet'
+read_csv_kwargs:
+  index_col: 0
+  parse_dates: True
+variable_identifiers:
+  generation: '82610NED'
+  capacity: '82610NED'
+variable_names:
+  generation: 'NettoElektriciteitsproductie_3'
+  capacity: 'ElektrischVermogen_8'
+component_keys:
+  wind: 'E006588 '
+  wind-onshore: 'E006637 '
+  wind-offshore: 'E006638 '
+  pv: 'E006590 '
+  hydro: 'E006587 '
+  biomass: 'E006566 '
+  biogas: 'E006583 '
+unit_conversions:
+  # GWh -> MWh
+  generation: 1000.
+  # MW
+  capacity: 1.
+units:
+  generation: 'MWh'
+  capacity: 'MW'
+  capacity_factor: ''

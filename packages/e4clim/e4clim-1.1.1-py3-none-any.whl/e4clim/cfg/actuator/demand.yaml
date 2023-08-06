@@ -1,0 +1,82 @@
+---
+demand:
+  data:
+    in_fit:
+    in_predict:
+    out:
+
+  actuators:
+    feature_extractor:
+      module_path: .actuator.demand_heat_cool_linear
+
+    estimator:
+      module_path: .actuator.demand_heat_cool_linear
+      # Regression method (Lasso, Ridge, BayesianRidge)
+      method: BayesianRidge
+      # Cross validation
+      # n_splits: 7
+      # Grid search
+      # CORDEX daily
+      # t_heat:
+      #   start: 6.
+      #   stop: 6.5
+      #   step: 0.5
+      # t_cool:
+      #   start: 14.5
+      #   stop: 15.
+      #   step: 0.5
+      # alpha:
+      #   start: 2.
+      #   stop: 1.
+      #   num: 5.
+      # CORDEX hourly
+      t_heat:
+        start: 9.
+        stop: 10.5
+        step: 0.5
+      t_cool:
+        start: 12.5
+        stop: 14.
+        step: 0.5
+      alpha:
+        start: 2.
+        stop: 1.
+        num: 5.
+      # # MERRA-2 Daily
+      # t_heat:
+      #   start: 5.
+      #   stop: 5.5
+      #   step: 0.5
+      # t_cool:
+      #   start: 12.5
+      #   stop: 13.
+      #   step: 0.5
+      # alpha:
+      #   start: 2.
+      #   stop: 1.
+      #   num: 5.
+      # # MERRA-2 Hourly
+      # t_heat:
+      #   start: 6.5
+      #   stop: 8.
+      #   step: 0.5
+      # t_cool:
+      #   start: 13.5
+      #   stop: 15.
+      #   step: 0.5
+      # alpha:
+      #   start: 2.
+      #   stop: 1.
+      # num: 5.
+
+    # # Modifier to apply to the climate data used by default
+    # # component.actuators
+    # modifier:
+    #   module_path: .actuator.offset_variable
+    #   variable: 'surface_temperature'
+    #   offset: 2.
+    #   stage: 'predict'
+
+  calendar:
+    module_path: .api.calendar_italy
+

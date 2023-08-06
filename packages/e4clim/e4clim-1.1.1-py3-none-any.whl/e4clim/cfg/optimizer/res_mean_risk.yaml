@@ -1,0 +1,70 @@
+---
+module_path: .optimizer.res_mean_risk
+cases: [['strategy'], ['cstr', 'tot_cap']]
+strategy: ['global', 'techno', 'none']
+postfix:
+input:
+  postfix:
+  # Period selection
+  select_period: False
+  start_date: 'YYYY-MM-DD HH:mm:ss'
+  end_date: 'YYYY-MM-DD HH:mm:ss'
+component:
+  demand: demand
+  capacity_factor:
+    - wind
+    - pv
+# Reference capacity and year
+reference_capacity:
+  wind:
+  pv:
+reference_year:
+
+# Total demand to impose if demand component absent (MWh/y)
+total_demand:
+
+# Constraints to add
+cstr:
+  bounds: True
+  # Total capacity constraint:
+  #   - False/True: No constraint/Hard constraint
+  #   - float: soft constraint weighted by float
+  tot_cap: [True, False]
+  total_penetration: True
+
+# The range of target RES penetration rates
+penetration:
+  start: 0.
+  stop: 1.
+  step: 0.1
+
+# scipy.optimize.minimize arguments
+scipy:
+  method: SLSQP
+  #method: trust-constr
+  tol: 1.e-2
+  options:
+    maxiter: 500
+    disp: False
+
+# Grid configuration
+grid:
+  max_capacity: 99999999999
+  min_capacity: 0.0
+  max_conventional: 0.8
+  max_res: 0.4
+
+# Plot configuration
+plot:
+  markersize: 6
+  front:
+    xlim: [0., 100.]
+    ylim: [0., 100.]
+    linestyle: ['--', '-.']
+  ratio:
+    ylim: [0., 100.]
+  freq:
+    ylim: [0., 100.]
+  dist:
+    capa_max: 10000.
+    n_markers: 4
