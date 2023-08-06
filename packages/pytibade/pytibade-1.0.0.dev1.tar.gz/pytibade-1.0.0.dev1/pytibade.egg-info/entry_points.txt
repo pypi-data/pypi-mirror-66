@@ -1,0 +1,3 @@
+[console_scripts]
+pytibade = pytibade.pytibade:main
+
