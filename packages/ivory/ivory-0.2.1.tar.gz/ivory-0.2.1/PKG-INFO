@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: ivory
+Version: 0.2.1
+Summary: ML Tool
+Home-page: https://ivory.daizutabi.net
+Author: daizutabi
+Author-email: daizutabi@gmail.com
+License: MIT
+Description: ML Tool.
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
