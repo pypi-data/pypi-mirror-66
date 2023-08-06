@@ -1,0 +1,2 @@
+Click>=7.0.0
+rdflib>=5.0.0RC1
