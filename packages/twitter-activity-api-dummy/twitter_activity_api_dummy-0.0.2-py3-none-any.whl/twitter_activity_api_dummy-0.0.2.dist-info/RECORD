@@ -1,0 +1,11 @@
+twitter_activity_api_dummy/activity_manager/activity_identifier.py,sha256=4t-50QYeQ4DgGojodcaMQ5bJUsAxLCG9BtgSE308q-c,4001
+twitter_activity_api_dummy/activity_manager/resources.py,sha256=QMDOmRRCn2e15kbQDOIncN2gbaWFaqXFbAF5_O4eRCU,1072
+twitter_activity_api_dummy/activity_manager/save_manager.py,sha256=ExEtfjyDEzruiixn2nqu86opFcU3lbdQh8o4r8rgXAE,976
+twitter_activity_api_dummy/activity_manager/save_to_folder.py,sha256=Lg7rb7F9sxiJskXkSUBYpYxJxxJYGZdvlSYmtCvq_Ts,1397
+twitter_activity_api_dummy/activity_manager/save_to_s3.py,sha256=Cdvz8PZFlCjD-bsSGMZUGzw1P_us-0VjXt5k04nYnRE,2057
+twitter_activity_api_dummy/webhook_manager/twitter_webhook_manager.py,sha256=bjcwtk04E5GJ1Q7HdBRwIK8XCfnRQGEFUP44icwanno,3214
+twitter_activity_api_dummy-0.0.2.dist-info/LICENSE,sha256=8tKDLrRwq81ekRrZas6W-7u_4MOFwDbw18DJrg-cltw,1089
+twitter_activity_api_dummy-0.0.2.dist-info/METADATA,sha256=VZ-4Xbr_gCFGPowlD1JRXnBm227Z0SvMBjZR14QXpDk,2097
+twitter_activity_api_dummy-0.0.2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+twitter_activity_api_dummy-0.0.2.dist-info/top_level.txt,sha256=ZKZKgo8B1NBc1pa3hZQ4OCbrN74cHx-nhIbAbRqJhVw,87
+twitter_activity_api_dummy-0.0.2.dist-info/RECORD,,

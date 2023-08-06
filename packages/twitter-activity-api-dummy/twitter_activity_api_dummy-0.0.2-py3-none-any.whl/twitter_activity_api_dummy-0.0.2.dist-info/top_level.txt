@@ -1,0 +1,2 @@
+twitter_activity_api_dummy/activity_manager
+twitter_activity_api_dummy/webhook_manager
