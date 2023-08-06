@@ -1,0 +1,9 @@
+README.md
+setup.py
+heat_index/__init__.py
+heat_index/calculate.py
+heat_index/coefficients.py
+heat_index.egg-info/PKG-INFO
+heat_index.egg-info/SOURCES.txt
+heat_index.egg-info/dependency_links.txt
+heat_index.egg-info/top_level.txt

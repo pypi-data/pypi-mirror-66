@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: heat_index
+Version: 0.0.1
+Summary: A simple tool to calculate heat index in Python
+Home-page: https://github.com/myleshk/heat_index_calculator
+Author: Myles Fang
+Author-email: i@myles.hk
+License: MIT
+Download-URL: https://pypi.org/project/heat_index_calculator/
+Description: # heat_index_calculator
+        Simple Python library to calculate heat index based on the second formula on https://en.wikipedia.org/wiki/Heat_index
+        
+Keywords: HeatIndex
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
