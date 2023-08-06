@@ -1,0 +1,13 @@
+README.md
+setup.py
+SocketSays.egg-info/PKG-INFO
+SocketSays.egg-info/SOURCES.txt
+SocketSays.egg-info/dependency_links.txt
+SocketSays.egg-info/requires.txt
+SocketSays.egg-info/top_level.txt
+socket_says/__init__.py
+socket_says/custom_errors.py
+socket_says/socket_says.py
+test/__init__.py
+test/setup.py
+test/test_socketsays.py
