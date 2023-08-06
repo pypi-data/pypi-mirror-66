@@ -1,0 +1,59 @@
+Change-log for django-smalluuid.
+
+This file will be added to as part of each release
+
+----
+
+Version 1.2.0, Sat 25 Apr 2020
+===============================
+
+4869e160f3	Upping smalluuid requirement to >=1.1.0, as this addres Python 3.8 support (Adam Charnock)
+5366656ed1	fix MIDDLEWARE setting for newer Django versions (Petr Dlouhý)
+59a29f0ff1	fix and update Travis testing (Petr Dlouhý)
+15aad0b01d	fixes for Django 3.0 (Petr Dlouhý)
+
+
+Version 1.1.1, Sun 26 Feb 2017
+===============================
+
+7358e3fb15	Further fixes for changes in Django 1.11 (Adam Charnock)
+
+
+Version 1.1.0, Sun 26 Feb 2017
+===============================
+
+232a828f02	Updating readme with django/python version support (Adam Charnock)
+d06ba7cb2c	Fixes for changes to UUID field in django 1.11 (Adam Charnock)
+
+
+Version 1.0.0, Mon 12 Dec 2016
+===============================
+
+de9ab97fd9	Now building for multiple django versions (Adam Charnock)
+092d4eb918	No longer testing against Python 3.2/3.3. Adding 3.5. (Adam Charnock)
+
+
+Version 0.1.3, Mon 11 Jul 2016
+===============================
+
+380786137e	Fixing error when value to be stored is None (Adam Charnock)
+
+
+Version 0.1.2, Mon 15 Jun 2015
+===============================
+
+ec94611406	Fixing bug in get_db_prep_value (Adam Charnock)
+
+
+Version 0.1.1, Mon 15 Jun 2015
+===============================
+
+0213010ccd	Updating default value generators to support django migrations (Adam Charnock)
+e08f1c5cde	The SmallUUIDField model field now defaults to unique=True (Adam Charnock)
+6335289c21	Readme typo fix (Adam Charnock)
+
+
+Version 0.1.0 (first version), Sun 14 Jun 2015
+===============================================
+
+
