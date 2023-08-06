@@ -1,0 +1,17 @@
+lambda_base/__init__.py,sha256=dXCqC-wP6CfRkVVTAHrwPtxnyE9yEtxYoxA1EksSzEs,266
+lambda_base/enhanced_request.py,sha256=P8LijlMzXfMyj7rU7DOnytwKpUWw7ZqsgDKQjCRJIW0,2727
+lambda_base/http_methods.py,sha256=tTGt6LZ3_8gDz9qd7Hjtxe4EAku0Z11ceszwk6b1oT4,695
+lambda_base/jsonapi.py,sha256=j6u52EwYSQzx_LyCfju-y4w5ang9BrO4PnOFuss4PE8,827
+lambda_base/request_handler.py,sha256=0fv80vioo-Bi5xw_-3W3SHtTBUyCeHET1IGHO4xSh2Y,963
+lambda_base/response_handler.py,sha256=iG4hqCRc816RWhsuDDLn0d9K4Vsu5VAD26-PkPctEHc,2442
+lambda_base/route.py,sha256=qRxJlGHhJE1b_LVFBsCHqvAzy_cFbH3qUTMHKIerl6M,348
+lambda_base/route_holder.py,sha256=pRAZbyd0EZ-hBCg0PevIepi9wACXVU2zz6hDBfFia1I,1965
+lambda_base/route_parser.py,sha256=7iGwmKzIFq7TTq4uymxL-pATShP22F4B7o5ShR7qk6w,1742
+lambda_base/singleton.py,sha256=jNv4LQ5MW7gE99it4PtkKm2tHqG6oDtmQSPQPpN_GUg,219
+lambda_base/utils.py,sha256=TZ3lgE-0A9BOwP_vEjvCD5IU3tp9882GMQPvRimC4rs,946
+lambda_base/validations/__init__.py,sha256=Eon9rFr6P8Fczzw106U7-CigObPHx0fK3IGe_ZTCV9U,2297
+py_lambda_base-0.0.6.dev24.dist-info/LICENSE,sha256=YvZUn4WMKer_DWR-W3a_Fgmq7hRPpgoiDxkH0KSICTc,1079
+py_lambda_base-0.0.6.dev24.dist-info/METADATA,sha256=ZlVh5JAKAKSZIsF1G3SqUf-mQ2wdqf0dffc-EPw5AFg,712
+py_lambda_base-0.0.6.dev24.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+py_lambda_base-0.0.6.dev24.dist-info/top_level.txt,sha256=pY7TZvRqkkumY7uDgl4U14BEgY13legClD1i62P8ZxM,12
+py_lambda_base-0.0.6.dev24.dist-info/RECORD,,

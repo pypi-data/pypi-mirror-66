@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: py-lambda-base
+Version: 0.0.6.dev24
+Summary: Pseudo-application for AWS Lambda
+Home-page: https://github.com/pypa/sampleproject
+Author: Michael Madison
+Author-email: cadetstar@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: deepmerge (==0.1.0)
+Requires-Dist: dpath (==2.0.1)
+Requires-Dist: json-api-doc (==0.11.0)
+
+# Simple AWS Lambda Router
+
+This contains utilities to create a pseudo-application to be served behind an AWS API Gateway with a proxy endpoint.
+
