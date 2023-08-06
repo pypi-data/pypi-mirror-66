@@ -1,0 +1,3 @@
+[console_scripts]
+pysupwsdpocket = pysupwsdpocket.__main__:main
+
