@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: tpd-pete
+Version: 0.1.2
+Summary: TPD Pete is a AWS Deployment tool for AWS Cloudformation
+Home-page: https://github.com/totalpunch/TPD-Pete
+Author: TotalPunch Development
+Author-email: info@totalpunch.nl
+License: MIT
+Download-URL: https://github.com/totalpunch/TPD-Pete/archive/0.1.2.tar.gz
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Requires-Dist: awscli (==1.18.31)
+Requires-Dist: pyinquirer (==1.0.3)
+Requires-Dist: halo (==0.0.29)
+Requires-Dist: termcolor (==1.1.0)
+Requires-Dist: cfn-flip (==1.2.2)
+
+UNKNOWN
+
+
