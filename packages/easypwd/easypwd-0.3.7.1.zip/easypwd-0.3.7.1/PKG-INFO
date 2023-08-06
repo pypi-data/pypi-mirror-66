@@ -1,0 +1,249 @@
+Metadata-Version: 1.1
+Name: easypwd
+Version: 0.3.7.1
+Summary: easy password generate libary.
+Home-page: http://security.xatu.edu.cn
+Author: L34Rn
+Author-email: security@xatu.edu.cn
+License: UNKNOWN
+Download-URL: https://pypi.org/project/easypwd/
+Description: whoami
+        ======
+        ::
+        
+            easypwd
+            easy password generate libary
+        
+        
+        version
+        ========
+        ::
+        
+            0.3.7
+        
+        License
+        =========
+        ::
+        
+            GPL
+            GNU General Public License
+        
+        install
+        =========
+        ::
+        
+            unzip easypwd-0.3.7.zip to c:\easypwd-0.3.7\
+            c:\easypwd-0.3.7>setup.py install
+            OR
+            pip install easypwd
+        
+        author
+        =======
+        ::
+        
+            L34Rn
+        
+        email
+        ======
+        ::
+        
+            security@xatu.edu.cn
+        
+        orginazation
+        =============
+        ::
+        
+            xatusec
+        
+        url
+        =====
+        ::
+        
+            http://security.xatu.edu.cn/
+        
+        support os
+        ============
+        ::
+        
+            Windows
+        
+        support python version
+        ========================
+        ::
+        
+            2.6
+            2.7
+        
+        functions
+        ===========
+        ::
+        
+            md5(password_length)
+            weak(password_length)
+            normal(password_length)
+            strong(password_length)
+            very_strong(password_length)
+        
+        lib
+        ====
+        ::
+        
+            >>> easypwd.md5(20)
+            'cc19224f51ebdaebbc97'
+            >>> easypwd.weak(20)
+            '37363766808224449490'
+            >>> easypwd.strong(20)
+            'wSYEWP5N13xKzN9G6Un6'
+            >>> easypwd.very_strong(20)
+            '^6!z3**$tH7J^oR&f&!1
+            >>> for x in xrange(10):
+                    easypwd.very_strong(20)
+            '$U%$*X$87#M*^k2bU^!%'
+            '#~#5*z5ld#1sg^&&W#9O'
+            'K@@^*!*#nY!7Wp*!Ay&1'
+            '7cgD@*8%1^c!%K#j*@6H'
+            'd@*~Q@y@*FMw$$@u$*~$'
+            '1#^4z@8&*!&3~~*^~KW^'
+            '%qG&!48~g0$6m^#%6ZBz'
+            '#d7!xh1E#W8$*~^#%69G'
+            '9l~%^f~VWg*&!5*6*#~5'
+            'n$9nnD@#%%3X%~149$Iy'
+        
+        cmd_argv
+        =========
+        ::
+        
+            c:\>easypwd md5 20
+            >> c2ef253798161c03ba17 <<
+            c:\>easypwd weak 20
+            >> 31833991765480388122 <<
+            c:\>easypwd normal 20
+            >> 42h9d925hgah5lz340xs <<
+            c:\>easypwd strong 20
+            >> R78mdOJNDSX4mofBqI26 <<
+            c:\>easypwd very_strong 20
+            >> !B!~$ch*#z^R%5^*E@l4 <<
+            c:\>easypwd 0 20
+            >> e7df021fa85616c763ad <<
+            c:\>easypwd 1 20
+            >> 25221558565193699175 <<
+            c:\>easypwd 2 20
+            >> 40woz3se46k05w065rvw <<
+            c:\>easypwd 3 20
+            >> B5Va9REb9B8kUV1dO9nL <<
+            c:\>easypwd 4 20
+            >> 0m3a@$DG&$8%Pf^R!%W5 <<
+            c:\>easypwd m 20
+            >> 07b9fb8fe5a592d867c9 <<
+            c:\>easypwd w 20
+            >> 69278289057444356479 <<
+            c:\>easypwd n 20
+            >> b0b2qn7hw31787zdow05 <<
+            c:\>easypwd s 20
+            >> Q3Xv5FGT1YLJ1gw1tDDq <<
+            c:\>easypwd vs 20
+            >> ~^S4*g@1#*^X7u!y#U!u <<
+        
+        cmd_interact
+        ===============
+        ::
+        
+            c:\>easypwd
+            [*] Usage: easypwd <PasswordType> <PasswordLength>
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] Example: easypwd md5 6
+            [*] Example: easypwd weak 7
+            [*] Example: easypwd normal 8
+            [*] Example: easypwd strong 9
+            [*] Example: easypwd very_strong 10
+            [*] Example: easypwd 0 11
+            [*] Example: easypwd 1 12
+            [*] Example: easypwd 2 13
+            [*] Example: easypwd 3 14
+            [*] Example: easypwd 4 15
+            [*] Example: easypwd m 16
+            [*] Example: easypwd w 17
+            [*] Example: easypwd n 18
+            [*] Example: easypwd s 19
+            [*] Example: easypwd vs 20
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> md5
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> fb47b3c354ae40b6cd64 <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> weak
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> 36989945676299868136 <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> normal
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> 20eq3k5i2n45z5vnml30 <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> strong
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> pHQQrN3l2LmJ0I9MWtES <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> very_strong
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> %&@xARn$k42%@!!!N@Y@ <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> 0
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> 1c9618dac2259abc8b52 <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> 1
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> 17068274366216798696 <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> 2
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> 4n1uk6c4184mt0tct14v <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> 3
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> FX85w5B6ak7QaJ6GrLjF <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> 4
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> mi!*5l31*58%$H#@p*$M <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> m
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> cd1147906fecaf415ed6 <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> w
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> 59289630610630348575 <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> n
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> 68x006qhw8uj6499cwjd <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> s
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> oh3xYVCHAZzIxARPIwP4 <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> vs
+            [*] PasswordLength: 1<=md5<=32 weak>=1 normal>=2 strong>=3 very_strong>=4.
+            [*] length>> 20
+            >> %EW~@!8Y*1o$&gG#@%Z6 <<
+            [*] PasswordType: [0]md5(m) [1]weak(w) [2]normal(n) [3]strong(s) [4]very_strong(vs).
+            [*] type>> exit
+            c:\>
+        
+Platform: Windows
