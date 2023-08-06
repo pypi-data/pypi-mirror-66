@@ -1,0 +1,9 @@
+README.md
+setup.py
+rubyslippers/__init__.py
+rubyslippers/utils.py
+rubyslippers/wikiextractor.py
+rubyslippers.egg-info/PKG-INFO
+rubyslippers.egg-info/SOURCES.txt
+rubyslippers.egg-info/dependency_links.txt
+rubyslippers.egg-info/top_level.txt
