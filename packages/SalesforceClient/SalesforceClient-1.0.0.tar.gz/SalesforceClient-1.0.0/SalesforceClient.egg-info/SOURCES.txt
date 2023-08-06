@@ -1,0 +1,8 @@
+README.md
+setup.py
+SalesforceClient/__init__.py
+SalesforceClient.egg-info/PKG-INFO
+SalesforceClient.egg-info/SOURCES.txt
+SalesforceClient.egg-info/dependency_links.txt
+SalesforceClient.egg-info/requires.txt
+SalesforceClient.egg-info/top_level.txt
