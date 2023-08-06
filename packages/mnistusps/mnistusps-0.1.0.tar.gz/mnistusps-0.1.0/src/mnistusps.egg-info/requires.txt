@@ -1,0 +1,12 @@
+datasetops==0.0.6
+requests
+torchvision
+
+[build]
+setuptools
+wheel
+twine
+
+[tests]
+pytest
+pytest-cov

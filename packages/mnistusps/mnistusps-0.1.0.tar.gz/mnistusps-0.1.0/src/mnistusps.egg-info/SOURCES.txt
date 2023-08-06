@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/mnistusps/__init__.py
+src/mnistusps/split.py
+src/mnistusps.egg-info/PKG-INFO
+src/mnistusps.egg-info/SOURCES.txt
+src/mnistusps.egg-info/dependency_links.txt
+src/mnistusps.egg-info/requires.txt
+src/mnistusps.egg-info/top_level.txt
