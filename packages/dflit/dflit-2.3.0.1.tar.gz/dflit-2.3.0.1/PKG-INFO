@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: dflit
+Version: 2.3.0.1
+Summary: A simple packaging tool for simple packages.
+Home-page: https://github.com/davidfritzsche/dflit
+Author: David Fritzsche / flit by Thomas Kluyver
+Author-email: david.fritzsche@mvua.de
