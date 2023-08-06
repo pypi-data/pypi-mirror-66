@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: quantbacktest
+Version: 0.0.3
+Summary: This backtesting is used to backtest algorithmic/quant trading strategies.
+Home-page: https://gitlab.com/fsbc/theses/quantbacktest
+Author: Jan Frederic Spörer
+Author-email: jan.spoerer@whu.edu
+License: BSD <two-clau></two-clau>se license
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: math
+Requires-Dist: datetime
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+
+# Setup
+
+Please insert a `__init__.py` file in the configuration folder with the following line of code: `PATH_TO_PROJECT = '/home/YOUR_NAME_HERE/code/YOUR_NAME_HERE/fsbc_master_thesis_jan_spoerer_crypto_trading_strategy'`
+
+# Background
+
+This project is the main part of a Master's thesis by Jan Spörer at the Frankfurt School Blockchain Center. It has just been started, but you can track the thesis's progress here: https://www.overleaf.com/read/mtfktgqqwvsr
+
