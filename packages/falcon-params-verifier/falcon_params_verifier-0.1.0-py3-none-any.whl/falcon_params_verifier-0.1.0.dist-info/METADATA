@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: falcon-params-verifier
+Version: 0.1.0
+Summary: A simple Falcon API "hook" to verify if a provided list of query parameters have been fulfilled.
+Home-page: https://github.com/ms7m/falcon-params-verifer
+Author: Mustafa Mohamed
+Author-email: ms7mohamed@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+
+
+# Falcon Query Parameter Verifier
+
+A simple falcon hook to check if a request contains all required query parameters.
+
+***
+
+## Installation / Requirements
+
+Installation:
+
+**PyPi**
+
+```
+pip install falcon_params_verifier
+```
+
+**.whl**
+
+A ``.whl`` is provided in the releases tab in Github. 
+
+## Sample Usage
+
+*Sample code*
+
+```python
+import falcon
+import falcon_params_verifier 
+from falcon_params_verifier import ParamVerifier # This can also be used.
+
+class SampleResource(object):
+    def __init__(self):
+        self._required_params = [
+            "userId",
+        ]
+    # Add the hook
+	@falcon.before(falcon_params_verifier.ParamVerifier(self._required_params))
+    def on_get(self, req, resp):
+        req.media = {
+            "message": "Whoo hoo, you made a proper request!"
+        }
+```
+
+***
+
+If a query parameter is missing, the module will automatically raise an ``falcon.HTTPBadRequest``.
+
+
+
