@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: CoronaTest
+Version: 0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Karigor
+Author-email: 
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+
+
+## Installation:
+
+```
+pip install CoronaTest
+```
+
+In Python a Bangla Linga is typically written as:
+
+## Usage:
+```python
+>>>  from CoronaTest import test
+>>>  data = [18,1,97,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,1,1]
+>>>  result = get_prob(data)
+>>>  print(result)
+
+```
+Output:
+```
+90
+```
+
+
