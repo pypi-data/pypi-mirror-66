@@ -1,0 +1,9 @@
+zswag/__init__.py,sha256=64PWeBBLSQQB03g_C0oXgKSEIU6fq1mDnPULGgntiHc,70
+zswag/app.py,sha256=DOGiJ8IXeyYaIKvmPX9MQRM3FYkBI4xCDjlffBJ09zg,7567
+zswag/client.py,sha256=hQC87eX9G2LVx5TgXci6Gcse7gDKlhl45negobv0_Ys,1322
+zswag/gen.py,sha256=KYlGIgRvoASoaPIqsf_uA1s-rBbgjkMJOH3Oi-eM2LM,3310
+zswag-0.1.0.dist-info/LICENSE,sha256=LNbVqs57nqojXY2bLvtxmFEpzeEO_cKjKIqZ77dankU,1527
+zswag-0.1.0.dist-info/METADATA,sha256=bGjJ_ZLn9UHNAtdsiBj2LihXfNEDY3_u-g4hyidZt8c,2350
+zswag-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+zswag-0.1.0.dist-info/top_level.txt,sha256=13gM6HyInsF9lF5Q31lOLebRu2AmFc4KbYZcuWZPY48,6
+zswag-0.1.0.dist-info/RECORD,,
