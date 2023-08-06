@@ -1,0 +1,4 @@
+laspy>=1.7
+scipy
+typer
+Cython>=0.25
