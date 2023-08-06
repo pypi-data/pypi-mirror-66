@@ -1,0 +1,139 @@
+#!python
+import sys, re, os, logging
+
+# The bastard manpage for less, has a number of things like this
+#
+#       -hn or --max-back-scroll=n
+#              Specifies  a  maximum number of lines to scroll backward.  If it
+#              is necessary to scroll backward more than n lines, the screen is
+#              repainted in a forward direction instead.  (If the terminal does
+#              not have the ability to scroll backward, -h0 is implied.)
+#
+# Because of this the only *real* reliable system is to look at the formatting, 
+# which normally gets stripped so we have to be a bit more clever and be a full
+# wrapper to man as opposed to just parsing <stdout> 
+#
+
+logging.basicConfig(level=(os.environ.get('LOGLEVEL') or 'info').upper())
+
+# This allows us to do mansnip <num> <page> or just <page> 
+cutoff = 3 if sys.argv[1].isnumeric() else 2
+os.environ['MAN_KEEP_FORMATTING'] = '1'
+cmd = '/usr/bin/man {}'.format(' '.join(sys.argv[1:cutoff]))
+man_input = os.popen(cmd).read()
+
+pack = sys.argv[cutoff:]
+
+opts = '|'.join(pack)
+# here's our utilization of the formatting (_)
+#
+# ffmpeg uses [ at times (see hwaccel).
+# the second part is for the long options, sometimes (git config)
+# specified by commas
+#
+my_re = '^\s*(({})([\s_\[].*|, .*|)|-.*({}))$'.format(opts, opts)
+logging.debug(my_re)
+
+is_def = False
+line_def = False
+buf = []
+buf_start = False
+stack_start = False
+term_indent = False
+indent_window = []
+stack_guess = []
+stack_indent = []
+last_stack_guess = []
+
+# There's lots of let's say "creative" ways to format man pages, so
+# we have a plain-text version in case our sophisticated searching
+# method fails.
+man_input_plain = re.sub('(.\x08)', '', man_input).split('\n')
+man_input = man_input.split('\n')
+
+rs = 5 if len(man_input) < 1e4 else 7
+
+for line_num, line in enumerate(man_input):
+    line = line.strip('\n')
+    indent = re.match('^(\s*)', line).end()
+    indent_window = indent_window[-2:] + [indent]
+
+    if len(line):
+        while len(stack_indent) and indent <= stack_indent[-1]:
+            stack_indent.pop()
+            stack_guess.pop()
+
+        if not len(stack_indent) or indent > stack_indent[-1]:
+            stack_indent.append(indent)
+            stack_guess.append(man_input[line_num].strip())
+
+    if not len(buf):
+        res = re.match(my_re, line) or re.match(my_re, man_input_plain[line_num])
+        if res:
+            # This is sheer frantic handwaving for things like this (From bash)
+            #
+            #  declare [-aAfFgilnrtux] [-p] [name[=value] ...]
+            #  typeset [-aAfFgilnrtux] [-p] [name[=value] ...]
+            #
+            # Surely, if I search for "declare" this is what I want, but it
+            # it breaks our classic rules so instead we try a number of 
+            # imperfet guesses.
+            #
+            # The first one is back-searching the indent margins. Generally
+            # there's a space before we see this and then some end of a 
+            # previous block that was indented further. soooo yeah we
+            # look for that.
+            #
+            if indent_window[0] > indent and indent_window[1] == 0:
+                is_def = True
+
+            # From man 7 man we get things like this:
+            #  .I  Italics
+            #
+            #  .IB Italics alternating with bold
+            #
+            #  .IR Italics alternating with Roman
+            #
+            elif indent_window[0] == indent and indent_window[1] == 0:
+                line_def = True
+
+            buf.append(line)
+            buf_start = line_num
+            stack_start = stack_guess[:]
+            term_indent = indent
+
+    elif term_indent:
+        if indent > 1 and (indent < term_indent or (not is_def and indent == term_indent)):
+            spacer = '\n' + ' ' * rs
+            if (len(buf) == 2 and indent == term_indent and line_def) or len(buf) > 2:
+
+                while not len(buf[0]): buf = buf[1:]
+                while not len(buf[-1]): buf = buf[:-1]
+
+                stack_small = stack_start[:]
+                for i in range(0, min(len(last_stack_guess),len(stack_start))):
+                    if last_stack_guess[i] == stack_start[i]:
+                        stack_small = stack_small[1:]
+
+                last_stack_guess = stack_start[:]
+
+                if len(stack_small) > 1:
+                    stack_print = stack_small[0]
+                    if len(stack_small) > 2:
+                        stack_print += spacer + spacer.join(stack_small[1:-1])
+                    stack_print += "\n"
+                else:
+                    stack_print = ''
+                    buf[0] = re.sub('^\s{%d}' % rs, '', buf[0])
+
+                print(("{:<%d}{}{}\n" % rs).format(buf_start, stack_print, '\n'.join(buf)))
+
+            buf = []
+            term_indent = False
+            is_def = False
+        else:
+            # Once our formatting goes in we have to reset it 
+            if is_def and indent > term_indent:
+                is_def = False
+                
+            buf.append(line)
