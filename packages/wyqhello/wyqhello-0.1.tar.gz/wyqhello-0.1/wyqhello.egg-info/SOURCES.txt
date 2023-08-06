@@ -1,0 +1,8 @@
+hello.py
+setup.py
+wyqhello.egg-info/PKG-INFO
+wyqhello.egg-info/SOURCES.txt
+wyqhello.egg-info/dependency_links.txt
+wyqhello.egg-info/entry_points.txt
+wyqhello.egg-info/requires.txt
+wyqhello.egg-info/top_level.txt
