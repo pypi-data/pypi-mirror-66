@@ -1,0 +1,25 @@
+{% macro begin_code(language='python') -%}<div class='codeblock'><pre><code class="language-{{ language }}">{%- endmacro %}
+
+{% macro end_code() -%}</code></pre></div>{%- endmacro %}
+
+{% macro doc(template, text='') -%}<A HREF="./{{ template }}.html">{% if text == '' %}{{ ROCKCHISEL_title_map[template] }}{% else %}{{ text }}{% endif %}</a>{%- endmacro %}
+
+{% macro link(url, text) -%}<A HREF="{{ url }}">{{ text }}</a>{%- endmacro %}
+
+{% macro begin_info_block() -%}
+<div class='infoblock'>
+<i class="fas fa-info-circle"></i></i>&nbsp;
+{%- endmacro %}
+
+{% macro end_info_block() -%}
+</div>
+{%- endmacro %}
+
+{% macro begin_warn_block() -%}
+<div class='warnblock'>
+<i class="fas fa-exclamation-triangle"></i></i></i>&nbsp;
+{%- endmacro %}
+
+{% macro end_warn_block() -%}
+</div>
+{%- endmacro %}

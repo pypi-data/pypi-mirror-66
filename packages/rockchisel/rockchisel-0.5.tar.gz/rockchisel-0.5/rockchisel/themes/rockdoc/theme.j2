@@ -1,0 +1,72 @@
+<html lang='en'>
+<head>
+<title>{{ ROCKCHISEL_page_title }}</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="rockdoc.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-okaidia.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-core.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/autoloader/prism-autoloader.min.js" crossorigin="anonymous"></script>
+
+<div class="wrapper">
+    <nav id="sidebar">
+       <div class="sidebar-header">
+           {{ SNIPPET_topleft }}
+       </div>
+       <ul class="list-unstyled components">
+           {% for section, entries in ROCKCHISEL_sections.items() %}
+               {% if ROCKCHISEL_active_section == section %}
+               <li class="active">
+               {% else %}
+               <li>
+               {% endif %}
+                   <a id='navToggle{{ section.replace(' ','') }}' href="#navMenu{{ section.replace(' ','') }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{ section }}</a>
+                   <ul class="collapse list-unstyled" id="navMenu{{ section.replace(' ','') }}">
+                   {% for title, template in entries.items() %}
+                        <li><a href="./{{ template }}.html">{{ title }}</a></li>
+                   {% endfor %}
+                   </ul>
+               </li>
+           {% endfor %}
+       </ul>
+       <div class="overlay"></div>
+    </nav>
+    <div id="content">
+        {{ SNIPPET_header }}
+        {{ ROCKCHISEL_page_content }}
+        {{ SNIPPET_footer }}
+    </div>
+</div>
+
+<script>
+
+$(document).ready(function () {
+    $("#sidebar").mCustomScrollbar({
+         theme: "minimal"
+    });
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+    {% if ROCKCHISEL_active_section != '' %}
+        document.getElementById('navToggle{{ ROCKCHISEL_active_section.replace(' ','') }}').click();
+    {% endif %}
+
+});
+
+</script>
+
+</body>
+</html>
+
