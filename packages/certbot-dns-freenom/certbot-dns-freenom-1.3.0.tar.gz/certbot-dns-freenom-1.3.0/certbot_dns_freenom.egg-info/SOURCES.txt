@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+certbot_dns_freenom/__init__.py
+certbot_dns_freenom/dns_freenom.py
+certbot_dns_freenom.egg-info/PKG-INFO
+certbot_dns_freenom.egg-info/SOURCES.txt
+certbot_dns_freenom.egg-info/dependency_links.txt
+certbot_dns_freenom.egg-info/entry_points.txt
+certbot_dns_freenom.egg-info/requires.txt
+certbot_dns_freenom.egg-info/top_level.txt
