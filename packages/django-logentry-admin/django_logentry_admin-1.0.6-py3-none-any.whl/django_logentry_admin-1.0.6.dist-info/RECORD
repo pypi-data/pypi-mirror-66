@@ -1,0 +1,13 @@
+logentry_admin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logentry_admin/admin.py,sha256=aJdaBGRJ2hR3Gp-qzPon-XcHaXttkpl8EmaGsxAhd20,5448
+logentry_admin/models.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logentry_admin/locale/az/LC_MESSAGES/django.po,sha256=d34jKUj79W_6cbN6fyIMKJAK6MpCF9iihwEiMrOq9nw,1190
+logentry_admin/locale/eo/LC_MESSAGES/django.po,sha256=j3336yvPvVvpZCeLyWSGcnGlFQ9YhrnCvw8u-YKWsmk,1189
+logentry_admin/locale/pt_BR/LC_MESSAGES/django.po,sha256=dV3UK25m6xiAt7i9ciQvtsUuVWj-SC_mYyTGZ8ai6EE,1243
+logentry_admin/locale/ru/LC_MESSAGES/django.po,sha256=lJjDRLEwA09jiVME6nPq4grs6ZLx8QJ-ELpxKFAf_qg,1380
+logentry_admin/templates/admin/admin/logentry/change_form.html,sha256=XuGsIR6htQNMDyQIg-Ghwo5UN_bImQhJt3-XL367DHQ,84
+django_logentry_admin-1.0.6.dist-info/LICENSE.txt,sha256=zsfZ5o2antIf2Z4aoDkKwgvnshK-nqVEL_Ge_BxOSZg,733
+django_logentry_admin-1.0.6.dist-info/METADATA,sha256=aM0byR0L4aOgNOymbbbbsOkOgkyBjiPesabbXFct4is,5248
+django_logentry_admin-1.0.6.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+django_logentry_admin-1.0.6.dist-info/top_level.txt,sha256=Axnmh3GUATtaMSouGRGN73poXZjk8LdKcZI0HOls-H8,15
+django_logentry_admin-1.0.6.dist-info/RECORD,,
