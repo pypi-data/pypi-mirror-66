@@ -1,0 +1,15 @@
+{% with id=widget.attrs.id %}
+{% for group, options, index in widget.optgroups %}
+{% if group %}
+{{ group }}
+{% endif %}
+{% for option in options %}
+<div class="form-check">
+  <input type="{{ option.type }}" class="form-check-input" name="{{ option.name }}"{% if option.value != None %} value="{{ option.value|stringformat:'s' }}"{% endif %}>
+  <label class="form-check-label" for="{{ option.attrs.id }}">
+    {{ option.label}}
+  </label>
+</div>
+{% endfor %}
+{% endfor %}
+{% endwith %}

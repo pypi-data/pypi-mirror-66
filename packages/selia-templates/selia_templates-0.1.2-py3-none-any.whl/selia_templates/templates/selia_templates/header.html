@@ -1,0 +1,28 @@
+{% load static %}
+{% load i18n %}
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark box-shadow main-navbar">
+    {% block nav-brand %}
+    <a class="navbar-brand" href='{% block logo-url %}/{% endblock %}' %}>
+      <img src="{% static 'selia_templates/img/selia.png' %}" class="mr-2"/>
+      Selia
+    </a>
+    {% endblock nav-brand %}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      {% block tabs %}
+      <ul class="navbar-nav m-auto">
+        {% block tab-items %}
+          {% include 'selia_templates/navbar_items.html' %}
+        {% endblock tab-items %}
+      </ul>
+      {% endblock tabs %}
+
+      {% block nav-menu %}
+        {% include 'selia_templates/user_menu.html' %}
+      {% endblock nav-menu %}
+    </div>
+</nav>

@@ -1,0 +1,12 @@
+{% load i18n %}
+
+<div class="btn btn-dark text-light">
+  {% trans 'Mine' %}:
+  {% if form.is_own.value %}
+    <input type="hidden" id="id_is_own_field" name="{{ form.is_own.html_name }}" value="on">
+    <input type="checkbox" id="id_is_own" checked>
+  {% else %}
+    <input type="hidden" id="id_is_own_field" name="{{ form.is_own.html_name }}" value="">
+    <input type="checkbox" id="id_is_own">
+  {% endif %}
+</div>

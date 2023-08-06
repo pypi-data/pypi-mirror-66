@@ -1,0 +1,18 @@
+{% load selia_forms %}
+
+<div class="form-group w-100">
+  {% include 'selia_templates/forms/form_tag.html' %}
+  {% if form.errors %}
+    {% include 'selia_templates/forms/form_error.html' %}
+  {% endif %}
+  {% if form.field.widget.input_type == 'file' %}
+  {{ form }}
+  {% elif form.field.widget.input_type == 'radio' %}
+  <div class="px-3">
+    {{ form }}
+  </div>
+  {% else %}
+    {{ form | add_class:"form-control" }}
+  {% endif %}
+  <small id="{{form.id_for_label}}_help" class="form-text text-muted">{{ form.help_text }}</small>
+</div>

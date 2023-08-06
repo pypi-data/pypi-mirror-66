@@ -1,0 +1,12 @@
+<div class="row w-100 my-2">
+  <div class="col">
+    <a class="w-100 text-center" href="#collapse{{ id }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse{{ id }}">
+      <h4>{{ label }}: {{ item }}</h4>
+    </a>
+    <div class="collapse w-100" id="collapse{{ id }}">
+      <div class="d-flex justify-content-center w-100">
+        {% include template with item=item %}
+      </div>
+    </div>
+  </div>
+</div>

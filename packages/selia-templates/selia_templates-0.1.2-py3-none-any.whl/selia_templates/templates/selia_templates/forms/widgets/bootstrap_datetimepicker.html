@@ -1,0 +1,18 @@
+<div class="input-group date" id="{{ widget.datetimepicker_id }}" data-target-input="nearest">
+  <input data-toggle="datetimepicker" autocomplete="off" type="{{ widget.type }}" name="{{ widget.name }}"{% if widget.value != None %} value="{{ widget.value|stringformat:'s' }}"{% endif %}{% include "django/forms/widgets/attrs.html" %}>
+  <div class="input-group-append" data-target="#{{ widget.datetimepicker_id }}" data-toggle="datetimepicker">
+    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      $(function () {
+        $("#{{ widget.datetimepicker_id }}").datetimepicker({
+          inline: false,
+          sideBySide: true,
+          format: 'DD/MM/YYYY HH:mm:ss',
+        });
+      });
+    });
+  </script>
+</div>

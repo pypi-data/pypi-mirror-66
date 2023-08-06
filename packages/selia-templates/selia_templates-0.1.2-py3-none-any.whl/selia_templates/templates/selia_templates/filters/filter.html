@@ -1,0 +1,53 @@
+{% load selia_tags %}
+{% load selia_forms %}
+{% load i18n %}
+
+<form id="filter_form" action="#" method="get">
+
+  {% for field, value in request.GET.items %}
+    {% if field != 'page' %}
+      <input type="hidden" name="{{ field }}"  value="{{ value }}">
+    {% endif %}
+  {% endfor %}
+
+  <div class="container-fluid w-100 text-light px-4 py-2 filter_bar" style="background-color: #465362;">
+    <div class="row mt-2 d-flex flex-row-reverse">
+      {% if forms.order %}
+      <div class="col-2" align="right">
+        <div class="form-group mb-0">
+          {{ forms.order.order | add_class:"form-control btn btn-link text-light m-2 sort_submit"}}
+        </div>
+      </div>
+      {% endif %}
+      <div class="col-2" align="right">
+        <div class="mb-0">
+          <a href="#collapseFilters" data-toggle="collapse" class="btn btn-link text-light m-2 dropdown-toggle" style="background-color: var(--dark)!important;">
+            {% trans 'Filters' %}
+          </a>
+        </div>
+      </div>
+      <div class="col-1">
+      </div>
+      {% if forms.search %}
+        <div class="col-7">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon2">
+                <i class="fas fa-search"></i>&nbsp;{% trans 'Search' %}
+              </span>
+            </div>
+            {{ forms.search.search | add_class:"form-control" }}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    <div class="row collapse" id="collapseFilters">
+      <div class="col">
+        {% include template with filter=forms.filter %}
+      </div>
+    </div>
+    <div class="row mb-1">
+      {% filter_bar forms %}
+    </div>
+  </div>
+</form>

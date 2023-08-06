@@ -1,0 +1,12 @@
+<label>
+  <div class="card p-1 mx-2" style="width: 8rem;">
+    <div class="container-fluid w-100 p-4">
+      {% if widget.label.icon %}
+        <img src="{{ widget.label.icon.url }}" class="card-img-top" alt="typeIcon">
+      {% endif %}
+    </div>
+    <div class="d-flex justify-content-center">
+      {% include "django/forms/widgets/input_option.html" %}
+    </div>
+  </div>
+</label>
