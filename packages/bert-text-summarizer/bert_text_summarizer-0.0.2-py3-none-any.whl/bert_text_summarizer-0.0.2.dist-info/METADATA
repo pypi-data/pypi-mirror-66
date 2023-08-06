@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: bert-text-summarizer
+Version: 0.0.2
+Summary: A BERT-based text summarization tool
+Home-page: https://github.com/david-wb/bert-text-summarizer
+Author: David Brown
+Author-email: davewbrwn@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: tf-nightly
+Requires-Dist: tf-models-official
+Requires-Dist: tensorflow-hub (>=0.7.0)
+Requires-Dist: sentencepiece (==0.1.85)
+Requires-Dist: nltk (>=3.5)
+
+UNKNOWN
+
+
