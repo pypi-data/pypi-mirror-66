@@ -1,0 +1,7 @@
+README.md
+converter.py
+setup.py
+pyuic5_tool.egg-info/PKG-INFO
+pyuic5_tool.egg-info/SOURCES.txt
+pyuic5_tool.egg-info/dependency_links.txt
+pyuic5_tool.egg-info/top_level.txt
