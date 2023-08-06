@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: pygds
+Version: 0.1.0
+Summary: A python wrapper around the Neo4j Graph Data Science Library
+Home-page: https://github.com/stellasia/pygds
+Author: Estelle Scifo
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6

@@ -1,0 +1,12 @@
+README.md
+setup.py
+pygds/__init__.py
+pygds/algorithms.py
+pygds/gds.py
+pygds/graph.py
+pygds/mixins.py
+pygds.egg-info/PKG-INFO
+pygds.egg-info/SOURCES.txt
+pygds.egg-info/dependency_links.txt
+pygds.egg-info/requires.txt
+pygds.egg-info/top_level.txt
