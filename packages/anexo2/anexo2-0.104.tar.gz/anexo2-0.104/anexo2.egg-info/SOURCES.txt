@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+anexo2/docs.py
+anexo2.egg-info/PKG-INFO
+anexo2.egg-info/SOURCES.txt
+anexo2.egg-info/dependency_links.txt
+anexo2.egg-info/requires.txt
+anexo2.egg-info/top_level.txt
