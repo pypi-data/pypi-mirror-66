@@ -1,0 +1,1 @@
+__version__ = '1.0.0.alpha2020042404' #This will be overwritten in the devops pipelines
