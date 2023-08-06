@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Login Test | automation-report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://rawcdn.githack.com/bibekad123/automation-report/a9da806e4bb7bfa33d04e51a770dded901dafeca/automation_report/html_source/automation_report.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="main_content">
+        <header class="text-center">
+            <h1><a href="/"> <img src=https://www.pngkit.com/png/full/137-1377913_sample-png.png height='80'/></h1></a>
+        </header>
+
+        <div class="total_info text-center">
+            <div class="charts">
+                <canvas id="myChart" width="175" height="175"></canvas>
+            </div>
+    
+            <span>Total Cases: <b>2</b> </span>
+            <span>Passed Cases: <b>1</b> </span>
+            <span>Failed Cases: <b>1</b> </span>
+            <span>Pass Percentage: <b>50.0%</b></span>
+        </div>
+    
+        <div class="container-fluid">
+            <div class="col-sm-4 float-left">
+                <div class="Tests">
+                    <h4 class="text-center">Test Cases</h4>
+                    <li class='testname active' id='Test1'> <span class='PASS casestatus status-1'>PASS</span> <span class ='casename' title='CASE 0001: Login to the system'>CASE 0001: Login to the system</span></li><li class='testname ' id='Test2'> <span class='FAIL casestatus status-2'>FAIL</span> <span class ='casename' title='CASE 0002: Logout User'>CASE 0002: Logout User</span></li>
+                </div>
+            </div>
+            <div class="col-sm-8 float-right testSteps">
+                <h4 class="text-center">Cases Steps</h4>
+                <div id='Test1Steps' class='case table-responsive'><table class="table table-hover table-bordered">
+                        <thead>
+                            <th>Status</th>
+                            <th>Message</th>
+                        </thead>
+                        <tbody><tr class='table-info'><td><i><b>INFO</b></i></td><td> Entered email in email field </td></tr>
+<tr class='table-success'><td><i><b>SUCCESS</b></i></td><td> Login Successfully: </td></tr>
+
+ </tbody>
+</table>
+</div><div id='Test2Steps' class='case table-responsive'><table class="table table-hover table-bordered">
+                        <thead>
+                            <th>Status</th>
+                            <th>Message</th>
+                        </thead>
+                        <tbody><tr class='table-info'><td><i><b>INFO</b></i></td><td> User is logged in </td></tr>
+<tr class='table-success'><td><i><b>SUCCESS</b></i></td><td> Logout link is present </td></tr>
+<tr class='table-danger'><td><i><b>FAIL</b></i></td><td> User not logged out </td></tr>
+
+ </tbody>
+</table>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container container-fluid">
+            <div class="footer-links text-center">
+                <a href='#'> Footer link </a>
+            </div>
+            <div class="my-contents">
+                <p>Report generated using <a href="https://github.com/bibekad123/automation-report" target="_blank"><u><b>automation-report</b></u></a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $('.testname').on("click", function () {
+            var id = $(this).attr('id');
+            $('.active').removeClass('active')
+            $(this).addClass("active");
+            var anotherid = id + "Steps"
+            $('.case').css("display", "none")
+            $('#' + anotherid).css("display", "table")
+        });
+
+    </script>
+    <script>
+        var ctx = document.getElementById('myChart');
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Pass', 'Fail'],
+                datasets: [{
+                    data: [1, 1],
+                    backgroundColor: [
+                        'rgba(0, 128, 0, 1)',
+                        'rgba(255, 0, 0, 1)'
+                    ],
+                    borderColor: [
+                        'rgba(0, 128, 0, 0.8)',
+                        'rgba(255, 0, 0, 0.8)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+            }
+        });
+        </script>
+</body>
+
+</html>
