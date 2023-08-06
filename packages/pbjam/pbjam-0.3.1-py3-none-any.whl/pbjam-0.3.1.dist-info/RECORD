@@ -1,0 +1,16 @@
+pbjam/__init__.py,sha256=Tu5EBNAoJUNFNI_D7Vyi0s7J6PDrHWdjnFBthCpkRHk,334
+pbjam/asy_peakbag.py,sha256=qXhQ0iFjH-415z8_h6iEiDGSQ3qVw5pqmI1za-2llPA,18415
+pbjam/jar.py,sha256=tmIJS-pgwmu1yCBxT6RuGelbl13ZvdVNitIOTqJUUQI,2442
+pbjam/mcmc.py,sha256=voMZZWkiEylwBAOtw4SQOegBmHZ9uWrkUqDMCfpBRyo,8630
+pbjam/peakbag.py,sha256=fhyKMsv-LAsqzJftDbrrG9itxE54XdkBCgtn02Esq8A,14462
+pbjam/plotting.py,sha256=JA7w3TVapBWpdzFNHk00S14N-yHGO81qwt0Jh4OcdqI,21012
+pbjam/priors.py,sha256=iAgwUGhSFkyTqB94NTYrBIacfXympVBV52H7N2XrrrE,13684
+pbjam/session.py,sha256=lZ7jNZ2BeK7HQZpnIKSeBJm1KvYt1djjL6nxJ_R2HAA,28514
+pbjam/star.py,sha256=8hlYL1F3TxpagBaFkuoAA_ogQFM7WKrusxvQlC7BpG8,11299
+pbjam/version.py,sha256=TZkGuMIRSRmUY3XCIs5owt2o60vXyqYMHWIkhx65uYE,22
+pbjam/data/prior_data.csv,sha256=XcK9-zK4igpwAGiFDv26OQkPMnMhZR-96yiqJhhk1jo,2267744
+pbjam-0.3.1.dist-info/LICENSE,sha256=OYFgQB4i85K3_TyDiME7Gxo144Tu_Qu97UansfxvxVE,1068
+pbjam-0.3.1.dist-info/METADATA,sha256=W0QWcgNVVt16-F2E83Ci2lNefzFhzuSh077KeZ5Zz5Y,3128
+pbjam-0.3.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pbjam-0.3.1.dist-info/top_level.txt,sha256=UIAlILELJ3JJ4q1EsJ-9GMa37OFHPBgkNMlTA5p1ftY,6
+pbjam-0.3.1.dist-info/RECORD,,
