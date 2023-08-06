@@ -1,0 +1,6 @@
+[console_scripts]
+heist = heist.__main__:main
+heistMerge = heist.__main__:heistMerge
+newick2ms = heist.__main__:newick2ms
+subs2coal = heist.__main__:subs2coal
+
