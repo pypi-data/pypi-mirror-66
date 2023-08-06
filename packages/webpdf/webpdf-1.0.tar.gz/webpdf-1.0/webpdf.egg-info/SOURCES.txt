@@ -1,0 +1,8 @@
+README.md
+setup.py
+vdpdf/__init__.py
+vdpdf/pdf2text.py
+webpdf.egg-info/PKG-INFO
+webpdf.egg-info/SOURCES.txt
+webpdf.egg-info/dependency_links.txt
+webpdf.egg-info/top_level.txt
