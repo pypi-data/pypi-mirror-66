@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+generate.py
+setup.py
+nnpy/__init__.py
+nnpy/constants.py
+nnpy/errors.py
+nnpy/socket.py
+nnpy/tests.py
+nnpy_bundle.egg-info/PKG-INFO
+nnpy_bundle.egg-info/SOURCES.txt
+nnpy_bundle.egg-info/dependency_links.txt
+nnpy_bundle.egg-info/requires.txt
+nnpy_bundle.egg-info/top_level.txt
