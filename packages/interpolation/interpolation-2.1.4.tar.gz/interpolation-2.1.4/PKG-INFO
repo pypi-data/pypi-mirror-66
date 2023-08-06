@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: interpolation
+Version: 2.1.4
+Summary: Interpolation in Python
+License: BSD-2-Clause
+Author: Chase Coleman
+Author-email: cc7768@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: numba (>=0.49.0,<0.50.0)
+Requires-Dist: numpy (>=1.18.3,<2.0.0)
+Requires-Dist: tempita (>=0.5.2,<0.6.0)
