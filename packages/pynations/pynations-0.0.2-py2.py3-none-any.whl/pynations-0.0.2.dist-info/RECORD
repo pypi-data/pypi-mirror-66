@@ -1,0 +1,16 @@
+pynations/CountryInfo.py,sha256=vvtJVPP4Lz5KKHRHuomJWr0SMNXW2qogu8s1fWl3k7E,9132
+pynations/__init__.py,sha256=miSsqPy2PFJ18TW9kocQJLcv4HFpkfQhcTzgAO-GTVE,22
+pynations/__main__.py,sha256=lcTLsStikERYbf8t73_Y8Oz6VJ0QqJm0LNNwdDaSEg4,387
+pynations/cli.py,sha256=HZnOOysYZQt-zrHwGzi_7ALfadHbUXneLmTSyV7CLio,816
+pynations/geodownloader.py,sha256=hgULmI0l6BcjoogK5Bii-haAJkur4Mghp1mad1n4XV4,7514
+pynations/geosqlite.py,sha256=mcZkzp7I2LSFkO5PiHA6Ygesfa9JNFzkLoa4ojCOCWs,16668
+pynations/data/countryinfo.json,sha256=EpwmlUR2q62ewneWbaiecLiv77y4w6_KDu38EerZv-w,1138768
+pynations/data/countrylookup.json,sha256=1j1ed7UjZBD2Q5OEGVbbkgpRYY-JLuuaMsojpYbPyH0,1495989
+pynations/data/geonamesdata/readme.md,sha256=C1pDkYtO-M-XuoOAmHSn75ntEL47tKnd-8QstsYGHlk,54
+pynations-0.0.2.dist-info/AUTHORS.rst,sha256=Q825_3TEv5m8vKDlFvqer8TKgIeCetfGzRpq7AjzEC0,88
+pynations-0.0.2.dist-info/LICENSE,sha256=WUh7yRmiqVuBcFdCBahgrhQm8HmtHLKfo7V9AB6h-_w,1117
+pynations-0.0.2.dist-info/METADATA,sha256=MUvbvFf1vneYvicZv9VSdt4ILtoTFhO5_MtGOJ3jJo4,2712
+pynations-0.0.2.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+pynations-0.0.2.dist-info/entry_points.txt,sha256=iCtP_WOjkgyR0lZik3l0BXifD6NXl4PhN2dcZmSuDQg,50
+pynations-0.0.2.dist-info/top_level.txt,sha256=vn4pid5L518-pzj653BT-6YO6aMdom2Ae3JohN5dLHU,10
+pynations-0.0.2.dist-info/RECORD,,
