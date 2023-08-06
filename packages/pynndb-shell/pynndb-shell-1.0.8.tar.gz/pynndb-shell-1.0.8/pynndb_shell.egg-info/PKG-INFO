@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: pynndb-shell
+Version: 1.0.8
+Summary: Database library for Python based on LMDB storage engine
+Home-page: https://github.com/oddjobz/pynndb-shell
+Author: Gareth Bult
+Author-email: oddjobz@linux.co.uk
+License: MIT
+Description: PyNNDB - Command Line Interface
+        ===============================
+        
+        This is the command line interface for <PyNNDB__>.
+        
+        .. __: https://github.com/oddjobz/pynndb
+        
+        * Docs [pynndb_ docs are here]
+        
+        .. _pynndb: https://github.com/oddjobz/pynndb-shell/blob/master/docs/shell.md
+        
+        
+Keywords: pynndb,cli,shell,python,database
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database :: Database Engines/Servers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
