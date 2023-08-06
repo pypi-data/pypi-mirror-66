@@ -1,0 +1,9 @@
+README.md
+setup.py
+aioprint/__init__.c
+aioprint/print.c
+aioprint.egg-info/PKG-INFO
+aioprint.egg-info/SOURCES.txt
+aioprint.egg-info/dependency_links.txt
+aioprint.egg-info/requires.txt
+aioprint.egg-info/top_level.txt
