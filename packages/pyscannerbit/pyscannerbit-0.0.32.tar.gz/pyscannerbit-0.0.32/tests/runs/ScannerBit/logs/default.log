@@ -1,0 +1,20 @@
+(Wed Mar  4 00:52:03 2020)(792.294 [s])[Default,Utilities]:
+Random number engine mt19937_64 (default) selected with hardware random seed -1.
+--<>--<>--<>--<>--<>--<>--<>--
+(Wed Mar  4 00:52:03 2020)(792.295 [s])[Default][Info]:
+No previous output file found, treating run as completely new.
+--<>--<>--<>--<>--<>--<>--<>--
+(Wed Mar  4 00:52:03 2020)(792.295 [s])[Default,Printers][Error][Fatal]:
+ERROR: A problem has occurred in the printer utilities.
+Failed to open existing HDF5 file, then failed to create new one! (runs/ScannerBit/samples//gambit_output.hdf5). The file may exist but be unreadable. You can check this by trying to inspect it with the 'h5ls' command line tool.
+Raised at: line 230 in function hid_t Gambit::Printers::HDF5::openFile(const string&, bool, bool&, char) of /tmp/pip-install-v474k4tc/pyscannerbit/pyscannerbit/scannerbit/untar/ScannerBit/Printers/src/printers/hdf5printer/hdf5tools.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Wed Mar  4 00:52:03 2020)(792.295 [s])[Default,Core][Info]:
+Doing Iprobe to check for shutdown signals from other processes (with MPI tag 1). These will be discarded (since we are inside the 'discard_excess_shutdown_messages' routine)
+--<>--<>--<>--<>--<>--<>--<>--
+(Wed Mar  4 00:52:03 2020)(792.295 [s])[Default,Utilities][Info]:
+rank 0: Entered BarrierWithTimeout (with tag 6666)
+--<>--<>--<>--<>--<>--<>--<>--
+(Wed Mar  4 00:52:03 2020)(792.295 [s])[Default,Utilities][Info]:
+rank 0: Synchronisation succeeded in BarrierWithTimeout (tag=6666)!
+--<>--<>--<>--<>--<>--<>--<>--

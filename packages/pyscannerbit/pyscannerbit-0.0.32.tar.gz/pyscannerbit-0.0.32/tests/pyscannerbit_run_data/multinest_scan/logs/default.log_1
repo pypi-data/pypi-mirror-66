@@ -1,0 +1,99 @@
+(Mon Mar 16 13:51:37 2020)(-0.2516 [s])(Rank 1)[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/gmartine/.local/lib/python3.7/site-packages/pyscannerbit/ScannerBit/lib/libscanner_great.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-u9fog3b6/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:38 2020)(1.20143 [s])(Rank 1)[Default,Utilities]:
+Random number engine mt19937_64 (default) selected with seed -283212828.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:38 2020)(1.2152 [s])(Rank 1)[Default,Core]:
+Starting scan.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:38 2020)(1.22386 [s])(Rank 1)[Default,Printers][Info]:
+Assigned printer ID '0' to output quantity with label 'LogLike'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:38 2020)(1.22398 [s])(Rank 1)[Default,Printers][Info]:
+Assigned printer ID '1' to output quantity with label 'pointID'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:38 2020)(1.22404 [s])(Rank 1)[Default,Printers][Info]:
+Assigned printer ID '2' to output quantity with label 'MPIrank'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:38 2020)(1.22481 [s])(Rank 1)[Default,Printers][Info]:
+Assigned printer ID '3' to output quantity with label 'Posterior'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:38 2020)(1.22488 [s])(Rank 1)[Default,Printers][Info]:
+Assigned printer ID '4' to output quantity with label 'LastLive'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:38 2020)(1.22758 [s])(Rank 1)[Default,Printers][Info]:
+Assigned printer ID '5' to output quantity with label 'default::z'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:38 2020)(1.22788 [s])(Rank 1)[Default,Printers][Info]:
+Assigned printer ID '6' to output quantity with label 'default::x'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:38 2020)(1.22804 [s])(Rank 1)[Default,Printers][Info]:
+Assigned printer ID '7' to output quantity with label 'default::y'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:38 2020)(1.22868 [s])(Rank 1)[Default,Printers][Info]:
+Assigned printer ID '8' to output quantity with label 'unitCubeParameters'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.30456 [s])(Rank 1)[Default,Printers][Info]:
+Gathering sync buffer data from all processes to rank 0 process...
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.30472 [s])(Rank 1)[Default,Printers][Info]:
+Gathering data on number of points and buffers to be transmitted
+Number of points to send from this process: 48
+Number of buffers to send from this process: 9
+
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.30478 [s])(Rank 1)[Default,Printers][Info]:
+Gathered data:
+Number of points to recv from each process: [48, 48 ]
+Number of buffers to recv from each process: [9, 9 ]
+
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.30696 [s])(Rank 1)[Default,Printers][Info]:
+Gathering buffer data for processes [0, 1 ]
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.30922 [s])(Rank 1)[Default,Printers][Info]:
+Gathering buffer block size data (number of buffer blocks to transmit from this process: 5)
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.30928 [s])(Rank 1)[Default,Printers][Info]:
+Performing Gatherv of buffer data blocks...
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.30953 [s])(Rank 1)[Default,Printers][Info]:
+Gathering random-access print buffer data from all process to rank 0 process...
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.30959 [s])(Rank 1)[Default,Printers][Info]:
+Gathering data on number of points and buffers to be transmitted
+Number of points to send from this process: 0
+Number of buffers to send from this process: 0
+
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.32176 [s])(Rank 1)[Default,Printers][Info]:
+Gathered data:
+Number of points to recv from each process: [26, 0 ]
+Number of buffers to recv from each process: [2, 0 ]
+
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.32328 [s])(Rank 1)[Default,Printers][Info]:
+Gathering buffer data for processes [0, 1 ]
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.32335 [s])(Rank 1)[Default,Printers][Info]:
+Gathering buffer block size data (number of buffer blocks to transmit from this process: 0)
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.32339 [s])(Rank 1)[Default,Printers][Info]:
+Performing Gatherv of buffer data blocks...
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.32387 [s])(Rank 1)[Default,Printers][Info]:
+HDF5Printer2 output finalisation complete.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.32394 [s])(Rank 1)[Default]:
+ScannerBit run completed successfully.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.32404 [s])(Rank 1)[Default,Core][Info]:
+Doing Iprobe to check for shutdown signals from other processes (with MPI tag 1). These will be discarded (since we are inside the 'discard_excess_shutdown_messages' routine)
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:41 2020)(4.32409 [s])(Rank 1)[Default,Utilities][Info]:
+rank 1: WARNING! Unreceived MPI message detected (source=0, tag=0, communicator group=scanComm). This may cause problems when MPI_Finalize is run.
+--<>--<>--<>--<>--<>--<>--<>--

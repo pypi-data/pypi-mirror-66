@@ -1,0 +1,123 @@
+(Mon Mar 16 13:51:37 2020)(-0.267209 [s])(Rank 0)[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/gmartine/.local/lib/python3.7/site-packages/pyscannerbit/ScannerBit/lib/libscanner_great.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-u9fog3b6/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:42 2020)(5.15057 [s])(Rank 0)[Default,Utilities]:
+Random number engine mt19937_64 (default) selected with seed -955900733.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:42 2020)(5.15176 [s])(Rank 0)[Default,Printers][Info]:
+Running shell command: rm -f pyscannerbit_run_data/diver_scan/samples//results.hdf5
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:42 2020)(5.16257 [s])(Rank 0)[Default,Core]:
+Starting scan.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:42 2020)(5.16579 [s])(Rank 0)[Default,Printers][Info]:
+Assigned printer ID '0' to output quantity with label 'LogLike'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:42 2020)(5.16593 [s])(Rank 0)[Default,Printers][Info]:
+Assigned printer ID '1' to output quantity with label 'pointID'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:42 2020)(5.16601 [s])(Rank 0)[Default,Printers][Info]:
+Assigned printer ID '2' to output quantity with label 'MPIrank'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:42 2020)(5.16847 [s])(Rank 0)[Default,Printers][Info]:
+Assigned printer ID '3' to output quantity with label 'default::z'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:42 2020)(5.16861 [s])(Rank 0)[Default,Printers][Info]:
+Assigned printer ID '4' to output quantity with label 'default::x'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:42 2020)(5.16872 [s])(Rank 0)[Default,Printers][Info]:
+Assigned printer ID '5' to output quantity with label 'default::y'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:42 2020)(5.16926 [s])(Rank 0)[Default,Printers][Info]:
+Assigned printer ID '6' to output quantity with label 'unitCubeParameters'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.57053 [s])(Rank 0)[Default,Printers][Info]:
+Gathering sync buffer data from all processes to rank 0 process...
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.57067 [s])(Rank 0)[Default,Printers][Info]:
+Gathering data on number of points and buffers to be transmitted
+Number of points to send from this process: 700
+Number of buffers to send from this process: 9
+
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.57075 [s])(Rank 0)[Default,Printers][Info]:
+Gathered data:
+Number of points to recv from each process: [700, 700 ]
+Number of buffers to recv from each process: [9, 9 ]
+
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.57262 [s])(Rank 0)[Default,Printers][Info]:
+Gathering buffer data for processes [0, 1 ]
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.61622 [s])(Rank 0)[Default,Printers][Info]:
+Gathering buffer block size data (number of buffer blocks to transmit from this process: 70)
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.61647 [s])(Rank 0)[Default,Printers][Info]:
+Performing Gatherv of buffer data blocks...
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.70784 [s])(Rank 0)[Default,Printers][Info]:
+Resynchronising print buffers:
+   Buffer contains 1400 items (name=LogLike)
+   Buffer contains 1400 items (name=MPIrank)
+   Buffer contains 1400 items (name=default::x)
+   Buffer contains 1400 items (name=default::y)
+   Buffer contains 1400 items (name=default::z)
+   Buffer contains 1400 items (name=pointID)
+   Buffer contains 1400 items (name=unitCubeParameters[0])
+   Buffer contains 1400 items (name=unitCubeParameters[1])
+   Buffer contains 1400 items (name=unitCubeParameters[2])
+
+  Initial N points   : 0
+  Final N points     : 1400
+  Difference N points: 1400
+
+Print buffer now contains 1400 items.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.76087 [s])(Rank 0)[Default,Printers][Info]:
+Final dataset size is 5400
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.76116 [s])(Rank 0)[Default,Printers][Info]:
+Gathering random-access print buffer data from all process to rank 0 process...
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.76124 [s])(Rank 0)[Default,Printers][Info]:
+Gathering data on number of points and buffers to be transmitted
+Number of points to send from this process: 0
+Number of buffers to send from this process: 0
+
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.76132 [s])(Rank 0)[Default,Printers][Info]:
+Gathered data:
+Number of points to recv from each process: [0, 0 ]
+Number of buffers to recv from each process: [0, 0 ]
+
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.7634 [s])(Rank 0)[Default,Printers][Info]:
+Gathering buffer data for processes [0, 1 ]
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.76355 [s])(Rank 0)[Default,Printers][Info]:
+Gathering buffer block size data (number of buffer blocks to transmit from this process: 0)
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.76364 [s])(Rank 0)[Default,Printers][Info]:
+Performing Gatherv of buffer data blocks...
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.76371 [s])(Rank 0)[Default,Printers][Info]:
+Resynchronising print buffers:
+
+  Initial N points   : 0
+  Final N points     : 0
+  Difference N points: 0
+
+Print buffer now contains 0 items.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.7651 [s])(Rank 0)[Default,Printers][Info]:
+HDF5Printer2 output finalisation complete.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.76526 [s])(Rank 0)[Default]:
+ScannerBit run completed successfully.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Mar 16 13:51:44 2020)(6.76557 [s])(Rank 0)[Default,Core][Info]:
+Doing Iprobe to check for shutdown signals from other processes (with MPI tag 1). These will be discarded (since we are inside the 'discard_excess_shutdown_messages' routine)
+--<>--<>--<>--<>--<>--<>--<>--

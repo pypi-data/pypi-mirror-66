@@ -1,0 +1,5 @@
+(Wed Mar  4 00:52:03 2020)(792.295 [s])[Default,Printers][Error][Fatal]:
+ERROR: A problem has occurred in the printer utilities.
+Failed to open existing HDF5 file, then failed to create new one! (runs/ScannerBit/samples//gambit_output.hdf5). The file may exist but be unreadable. You can check this by trying to inspect it with the 'h5ls' command line tool.
+Raised at: line 230 in function hid_t Gambit::Printers::HDF5::openFile(const string&, bool, bool&, char) of /tmp/pip-install-v474k4tc/pyscannerbit/pyscannerbit/scannerbit/untar/ScannerBit/Printers/src/printers/hdf5printer/hdf5tools.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
