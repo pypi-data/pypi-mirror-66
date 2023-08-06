@@ -1,0 +1,15 @@
+covid19/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+covid19/__main__.py,sha256=seR2D1a1PorYATOHwAQR3mUgoOQ8BSlvG1Cs71KlrPs,1339
+covid19/fetcher.py,sha256=86coebACZiFO-qqDL0iY8flhptDH43ZSmCqNvK6WuGY,6622
+covid19/functions.py,sha256=_yfiCUgCat802sTxabuzUV7aTuKhgDtdGO0ALOk8MVw,2192
+covid19/helpers.py,sha256=wXUnHmwfQ0h_3iVq1U6pvRze6O02XFpBakZ_ERcJwr4,562
+covid19/logger.py,sha256=YWn5S8e0nCVP9_TiEGI2seMN4i8f6DiM5AqIcDYoK2w,354
+covid19/parser.py,sha256=LCeKJGntk6uC0SSoIRcBXuQJovNpD-PqFWN17Xv07AI,7723
+covid19/printer.py,sha256=kIuF_dxwg7ALg9EkZdBdM4rUvfbn7WQ9e-ieiJ-LrhU,1830
+covid19_cli-1.0.9.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+covid19_cli-1.0.9.dist-info/METADATA,sha256=KeWCsF5pEhL_7i7tROFN2PzeD8Ea3CK2fNQSHszl1lM,471
+covid19_cli-1.0.9.dist-info/RECORD,,
+covid19_cli-1.0.9.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+covid19_cli-1.0.9.dist-info/entry_points.txt,sha256=6iKZETZap5W45EVH-RHKURxuQLDX8je4x2sfzTgHass,51
+covid19_cli-1.0.9.dist-info/metadata.json,sha256=hOyfWEeT_3mh6QbEwalYDuAVISM6RqGBZjXbV84ljoA,811
+covid19_cli-1.0.9.dist-info/top_level.txt,sha256=iKJg5V5d5yzW9zmAIKaMOWm7HBJE8iE8E6Ge-PoOK4g,8
