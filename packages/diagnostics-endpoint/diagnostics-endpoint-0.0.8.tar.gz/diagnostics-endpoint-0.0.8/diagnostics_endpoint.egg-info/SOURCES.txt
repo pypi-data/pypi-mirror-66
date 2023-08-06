@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+diagnostics_endpoint/__init__.py
+diagnostics_endpoint/diagnostics.py
+diagnostics_endpoint/test.py
+diagnostics_endpoint.egg-info/PKG-INFO
+diagnostics_endpoint.egg-info/SOURCES.txt
+diagnostics_endpoint.egg-info/dependency_links.txt
+diagnostics_endpoint.egg-info/requires.txt
+diagnostics_endpoint.egg-info/top_level.txt
+diagnostics_endpoint/templates/diagnostics.html
