@@ -1,0 +1,4 @@
+irekua-database
+django-filter
+django-autocomplete-light
+djangorestframework
