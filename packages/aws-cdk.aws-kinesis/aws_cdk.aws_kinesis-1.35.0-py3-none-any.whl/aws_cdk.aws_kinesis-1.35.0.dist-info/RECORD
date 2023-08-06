@@ -1,0 +1,8 @@
+aws_cdk/aws_kinesis/__init__.py,sha256=N7nLl56tm-Tu-mOFjjM7plvf4HQRBSpjFrJRcUloCWA,41801
+aws_cdk/aws_kinesis/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_kinesis/_jsii/__init__.py,sha256=CqXug4RZSw8SvzqRZq9WVt3WzixezhNMV98VUa_lJnI,417
+aws_cdk/aws_kinesis/_jsii/aws-kinesis@1.35.0.jsii.tgz,sha256=WlURM_UAVgBZQe0CibYFUUi4LD9PYjy05T8R8VJ6Isk,48696
+aws_cdk.aws_kinesis-1.35.0.dist-info/METADATA,sha256=NZLNLDTIL1qGX2wliiD1h6HECYz8cITHjGmqCXrES4c,7826
+aws_cdk.aws_kinesis-1.35.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+aws_cdk.aws_kinesis-1.35.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_kinesis-1.35.0.dist-info/RECORD,,
