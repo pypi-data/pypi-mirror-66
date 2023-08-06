@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: tgs
+Version: 0.6.0
+Summary: A framework to work with lottie / tgs files
+Home-page: https://pypi.org/project/lottie/
+Author: Mattia Basaglia
+Author-email: mattia.basaglia@gmail.com
+License: GNU Affero General Public License v3 or later (AGPLv3+)
+Description: This project as moved to https://pypi.org/project/lottie/
+Keywords: telegram stickers tgs lottie svg animation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Multimedia :: Graphics
+Requires: lottie
+Requires-Python: >=3
+Description-Content-Type: text/markdown
