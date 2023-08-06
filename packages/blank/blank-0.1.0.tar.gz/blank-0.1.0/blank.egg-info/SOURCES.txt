@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+blank/__init__.py
+blank/blank_func.py
+blank/main.py
+blank.egg-info/PKG-INFO
+blank.egg-info/SOURCES.txt
+blank.egg-info/dependency_links.txt
+blank.egg-info/entry_points.txt
+blank.egg-info/top_level.txt
