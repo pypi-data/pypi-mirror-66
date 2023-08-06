@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: econlib
+Version: 0.0.2
+Summary: A package for econometric models and methods
+Home-page: https://github.com/jianghaochu/econlib
+Author: Jianghao Chu
+Author-email: jianghaochu@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# EconLib
+
+`EconLib` includes econometric models and methods covered in Green (2011) such as OLS, MLE, GMM, etc.
+This package is written with the most basic python operations and packages and is intended be as easy to understand as possible.
+It is just to showcase the numerical implementation of the econometric methods and is not suitable for computational demanding tasks.
+It is intended to be easily variability and to act as a starting point for implementing and testing new ideas and methods.
+
