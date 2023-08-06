@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: markdown-tree
+Version: 0.1.5
+Summary: Generate file tree in markdown format
+Home-page: https://github.com/jiaminglu/markdown-tree
+Author: Jiaming Lu
+Author-email: jiaminglu@live.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: click
+
+## Install
+`pip install markdown-tree`
+
+## Usage
+
+```
+Usage: markdown_tree [OPTIONS] [DIRECTORY]
+
+Options:
+  --ignore TEXT         Ignored files or dirs, comma separated, default=.*
+  --header TEXT         Header
+  --footer TEXT         Footer
+  --emoji / --no-emoji  Enable file/folder emoji
+  --prefixes TEXT       Prefixes, default='## {},- {}', which means, top level
+                        entries are <h2> and the rest are <ul>
+
+  -c, --config PATH     Load all configs from a json file if exists,
+                        default=.mdtreeconfig.json
+
+  -o, --output PATH     Output filename, default is stardard output
+  --help                Show this message and exit.
+```
+
+
