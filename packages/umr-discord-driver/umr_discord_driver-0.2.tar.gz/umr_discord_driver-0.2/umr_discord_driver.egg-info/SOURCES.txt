@@ -1,0 +1,10 @@
+README.md
+setup.py
+umr_discord_driver/__init__.py
+umr_discord_driver/driver.py
+umr_discord_driver.egg-info/PKG-INFO
+umr_discord_driver.egg-info/SOURCES.txt
+umr_discord_driver.egg-info/dependency_links.txt
+umr_discord_driver.egg-info/not-zip-safe
+umr_discord_driver.egg-info/requires.txt
+umr_discord_driver.egg-info/top_level.txt
