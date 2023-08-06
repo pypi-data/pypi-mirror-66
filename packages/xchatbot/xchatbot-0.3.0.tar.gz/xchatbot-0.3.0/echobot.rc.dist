@@ -1,0 +1,29 @@
+# xchatbot configuration file
+#
+# copy this file   and fill in required and optional values
+#
+# This is a comment and will be ignored
+#
+
+# user@server/resource
+JID=
+PASSWORD=
+
+# JID of user with admin powers (debug, shutdown...)
+ADMIN=
+
+# If True, the bot will accept presence requests from anybody,
+# if False, only the admin can add the bot to the roster
+ACCEPT_PRESENCE_REQUEST=False
+
+# If True, the bot will accept invitations to join MUC rooms
+MUC_ACCEPT_INVITE=False
+
+# List of muc room jids to join, separated by ;
+#MUCS=
+
+# Nickname to use in muc. defaults to "xbot"
+#MUC_NICK=xbot
+
+# Log level, default DEBUG
+#LOGGER=DEBUG
