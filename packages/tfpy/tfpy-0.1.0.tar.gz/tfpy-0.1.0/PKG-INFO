@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: tfpy
+Version: 0.1.0
+Summary: Create Terraform resources using Python
+License: MIT
+Author: Rémy Greinhofer
+Author-email: remy.greinhofer@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: pyyaml (>=5.3.1,<6.0.0)
+Requires-Dist: terraformpy (==1.2.3)
+Requires-Dist: typer (>=0.1.1,<0.2.0)
