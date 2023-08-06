@@ -1,0 +1,3 @@
+[console_scripts]
+BERTVector = BERTVector.BERTVector:main_cli
+
