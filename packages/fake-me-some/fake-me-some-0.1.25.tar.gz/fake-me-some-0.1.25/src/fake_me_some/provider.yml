@@ -1,0 +1,206 @@
+providers.address:
+- building_number
+- postalcode_in_state
+- postalcode_plus4
+- city_prefix
+- military_ship
+- city
+- zipcode_plus4
+- street_suffix
+- street_address
+- state_abbr
+- city_suffix
+- military_dpo
+- postcode_in_state
+- country_code
+- country
+- secondary_address
+- postalcode
+- address
+- zipcode_in_state
+- state
+- military_state
+- street_name
+- zipcode
+- postcode
+- military_apo
+providers.automotive:
+- license_plate
+providers.bank:
+- bban
+- bank_country
+- iban
+providers.barcode:
+- ean
+- ean13
+- ean8
+providers.color:
+- rgb_css_color
+- color_name
+- rgb_color
+- safe_hex_color
+- safe_color_name
+- hex_color
+providers.company:
+- company
+- company_suffix
+- catch_phrase
+- bs
+providers.credit_card:
+- credit_card_security_code
+- credit_card_provider
+- credit_card_full
+- credit_card_expire
+- credit_card_number
+providers.currency:
+- cryptocurrency_code
+- currency_code
+- currency_name
+- cryptocurrency_name
+- cryptocurrency
+- currency
+providers.date_time:
+- future_datetime
+- time_series
+- date_between_dates
+- date_time_between
+- date_this_decade
+- date_time_this_month
+- past_date
+- day_of_week
+- date_time_this_decade
+- date_between
+- date_time_this_century
+- date
+- am_pm
+- date_time_between_dates
+- date_object
+- date_this_year
+- iso8601
+- future_date
+- date_this_century
+- month
+- year
+- day_of_month
+- unix_time
+- timezone
+- century
+- date_of_birth
+- time_object
+- date_time_this_year
+- date_time
+- time
+- date_this_month
+- past_datetime
+- month_name
+- time_delta
+providers.file:
+- unix_device
+- mime_type
+- file_path
+- unix_partition
+- file_name
+- file_extension
+providers.geo:
+- coordinate
+- latitude
+- longitude
+- local_latlng
+- location_on_land
+- latlng
+providers.internet:
+- ascii_free_email
+- image_url
+- tld
+- email
+- url
+- ipv4_private
+- user_name
+- uri_extension
+- uri_page
+- free_email_domain
+- safe_email
+- ascii_email
+- ipv4_public
+- ipv4_network_class
+- ascii_company_email
+- domain_name
+- hostname
+- ipv4
+- domain_word
+- slug
+- uri_path
+- company_email
+- uri
+- ipv6
+- free_email
+- ascii_safe_email
+- mac_address
+providers.isbn:
+- isbn10
+- isbn13
+providers.job:
+- job
+providers.lorem:
+- text
+- paragraphs
+- sentences
+- word
+- paragraph
+- sentence
+- words
+providers.misc:
+- passwordJ8KDn2WTC
+- uuid4
+- binary
+- md5
+- sha1
+- null_boolean
+- sha256
+- boolean
+providers.person:
+- last_name_male
+- name_female
+- prefix_male
+- prefix
+- name
+- name_male
+- first_name
+- first_name_male
+- first_name_female
+- last_name_female
+- last_name
+- prefix_female
+providers.phone_number:
+- phone_number
+- msisdn
+providers.profile:
+- simple_profile
+- profile
+providers.python:
+- pyiterable
+- pystr
+- pystruct
+- pyfloat
+- pydecimal
+- pylist
+- pytuple
+- pybool
+- pyset
+- pydict
+- pyint
+providers.ssn:
+- vat_id
+- ssn
+providers.user_agent:
+- mac_processor
+- firefox
+- linux_platform_token
+- opera
+- windows_platform_token
+- internet_explorer
+- user_agent
+- linux_processor
+- chrome
+- mac_platform_token
+- safari

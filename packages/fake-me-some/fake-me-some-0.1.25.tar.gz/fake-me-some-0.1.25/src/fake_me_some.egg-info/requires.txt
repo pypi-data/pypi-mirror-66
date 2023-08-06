@@ -1,0 +1,9 @@
+py_dbutils
+pyyaml
+pyarrow
+faker
+python-Levenshtein
+
+[testing]
+pytest
+pytest-cov

@@ -1,0 +1,12 @@
+
+py_dbutils
+pyyaml
+pyarrow
+faker
+python-Levenshtein
+twine
+autopep8
+pgcli
+pytest
+pytest-cov
+bumpversion
