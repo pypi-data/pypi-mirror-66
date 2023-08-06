@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: kcluster
+Version: 0.0.2
+Summary: Cluster using a combined kmeans, kmedians, and kmodes. Allows weightings
+Home-page: https://github.com/chrisebell24/kcluster
+Author: Christopher Bell
+Author-email: Chris.E.Bell24@gmail.com
+Maintainer: Christopher Bell
+Maintainer-email: Chris.E.Bell24@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pandas (>=0.25.1)
+Requires-Dist: numpy (>=1.6.5)
+Requires-Dist: scikit-learn (>=0.21.3)
+Provides-Extra: dev
+Requires-Dist: pytest (>=3.7) ; extra == 'dev'
+
+# KCluster
+
+This is project is a class that allows for a combination of clustering numeric and string data using kmean, kmedians, and kmodes all in one. You can also weight your variables.
+
+## Installation
+
+Run the following to install: 
+
+```python
+pip install kcluster
+```
+
+## Usage
+
+```
+from kcluster import KCluster
+model = KCluster()
+model.fit(X)
+```
+
+## Development kcluster
+
+To install kcluster, along with the tools you need to develop and run tests, run the following in your virtualend:
+```bash
+$ pip install -e .[dev]
+```
+
+
