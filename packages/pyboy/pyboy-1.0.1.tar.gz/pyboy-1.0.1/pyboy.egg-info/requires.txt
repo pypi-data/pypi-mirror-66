@@ -1,0 +1,9 @@
+cython
+numpy
+pillow
+pysdl2
+
+[all]
+pyopengl
+markdown
+pdoc3
