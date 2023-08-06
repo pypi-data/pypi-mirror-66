@@ -1,0 +1,9 @@
+game/__init__.py,sha256=EuhkTQhSqHCP1HJnLQosiMWaYxFnYndNt0stFpTB9U4,221
+game/__version__.py,sha256=q--HyRpoF-HXjrlimJvdlzhSg3kGeTok2Z-d-wCfwbo,192
+game/run.py,sha256=xP1Dfcx835X2rkrPmFaFCUV7DpCRte4Av1c6doELVgk,136
+game-0.0.1.dist-info/LICENSE,sha256=ZmhzMcnzxNwMNK_nyZfuKXq3_hYNO8CEt-4Jer00xYQ,1079
+game-0.0.1.dist-info/METADATA,sha256=S0T1DqfHYc19BT3HrA3FQTr07c3HfcHzJwqXy2Cu5Lk,601
+game-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+game-0.0.1.dist-info/entry_points.txt,sha256=H-q1NfXA90M5D7F8mwcIo8_EYHIPcd49_PRbGDzU_i4,39
+game-0.0.1.dist-info/top_level.txt,sha256=qwGyB-Va1sUTRvt4anB-6UfFjkcjtKjjyZE1wOdZ9-E,5
+game-0.0.1.dist-info/RECORD,,
