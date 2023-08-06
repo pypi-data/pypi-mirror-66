@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+unicornhatmini/__init__.py
+unicornhatmini.egg-info/PKG-INFO
+unicornhatmini.egg-info/SOURCES.txt
+unicornhatmini.egg-info/dependency_links.txt
+unicornhatmini.egg-info/requires.txt
+unicornhatmini.egg-info/top_level.txt
