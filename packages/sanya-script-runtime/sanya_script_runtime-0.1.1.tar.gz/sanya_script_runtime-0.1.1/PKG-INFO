@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: sanya_script_runtime
+Version: 0.1.1
+Summary: Runtime library for SanyaScript
+Home-page: https://github.com/ARtoriouSs/sanya-script-runtime
+Author: Alexander Teslovskiy
+Author-email: artoriousso@gmail.com
+License: MIT
+Download-URL: https://github.com/ARtoriouSs/sanya-script-runtime/archive/0.1.1.tar.gz
+Description: UNKNOWN
+Keywords: SanyaScript,Runtime,ANTLR,Graph language
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
