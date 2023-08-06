@@ -1,0 +1,3 @@
+[console_scripts]
+spotirec = spotirec.main:run
+
