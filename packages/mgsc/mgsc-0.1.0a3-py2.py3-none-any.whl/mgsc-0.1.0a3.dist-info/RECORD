@@ -1,0 +1,17 @@
+mgsc/__init__.py,sha256=S5_RD3U2LZIgHqXVGPHD-FhIEpNQ-5yKg7uS681q7xg,128
+mgsc/mgsc.py,sha256=h0hwdogXGFqerm-5ZPeT-irPn91pCcQRjiHThXsRzEk,19
+mgsc/blueprints/__init__.py,sha256=qduLFUf3kZ07tGfaZpJYWXeR1CbTmOQmyuFBrJgMNUs,101
+mgsc/blueprints/namespaces.py,sha256=vK0Fc4kMDyJSbzeHZMeJsLv1nwCbjkJ98hBYfG6lDNY,654
+mgsc/blueprints/repositories.py,sha256=pG-2dI2adh4mnmL5jmnNlXEy7yU8w1yXx48qZnu-sss,1845
+mgsc/service/__init__.py,sha256=lB2HfguTrTBJY_QyyXLVOiWC_5eo8PjETHDgaoQTbkE,150
+mgsc/service/gitea.py,sha256=APfQIViGr1T6qMhzwiHqiIwXK3iirZ5S3Ot36x_xZvw,1978
+mgsc/service/github.py,sha256=BviAvYWQE9Kpm7FZRZrVoz_wGq8bbbL7aDeXGGMeq_k,1741
+mgsc/service/gitlab.py,sha256=6bEn4iuy59D4SfbswH9cxfXsakjV6XWpFleG1_Ggwto,2233
+mgsc/service/service.py,sha256=jRHwAiqbzSHUkt_j4TgXDq6PhVLsKPQT3K5mwi550TA,1383
+mgsc/service/session.py,sha256=ZP8p0YAGfAqCEIHgx-XqjhsQqanwzQmm6paaGGKoKrY,1826
+mgsc-0.1.0a3.dist-info/AUTHORS.rst,sha256=L__uMpXJTpH9vpDz1fJle9f4ZE3ZHbKoIEio7TqUtEk,162
+mgsc-0.1.0a3.dist-info/LICENSE,sha256=cLKGmRJI9FCNVZGg3n3yYpvbmIxsxdVLf0gt-7rnq1c,1076
+mgsc-0.1.0a3.dist-info/METADATA,sha256=tC5MsBfHX5qJzXoXqsIbum2CIcQ3QhhylRFZlaxrMlc,1619
+mgsc-0.1.0a3.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+mgsc-0.1.0a3.dist-info/top_level.txt,sha256=X-fdzcnSSFN6nVVr-Ews9pc2wbpiMFOkjp2KAO7n5Wc,5
+mgsc-0.1.0a3.dist-info/RECORD,,
