@@ -1,0 +1,10 @@
+README.md
+setup.py
+prometheus_kafka_metrics.egg-info/PKG-INFO
+prometheus_kafka_metrics.egg-info/SOURCES.txt
+prometheus_kafka_metrics.egg-info/dependency_links.txt
+prometheus_kafka_metrics.egg-info/not-zip-safe
+prometheus_kafka_metrics.egg-info/requires.txt
+prometheus_kafka_metrics.egg-info/top_level.txt
+prometheus_kafka_producer/__init__.py
+prometheus_kafka_producer/metrics_manager.py
