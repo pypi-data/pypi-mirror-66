@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: py-mscip
+Version: 0.1.0
+Summary: Library interface for communication with Memsense IMU devices
+Home-page: https://gitlab.com/memsense/py_mscip
+Author: Memsense
+Author-email: nneisen@memsense.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# py_mscip
+
+[![pipeline status](https://gitlab.com/memsense/py_mscip/badges/develop/pipeline.svg)](https://gitlab.com/memsense/py_mscip/-/commits/develop)
+[![coverage report](https://gitlab.com/memsense/py_mscip/badges/develop/coverage.svg)](https://gitlab.com/memsense/py_mscip/-/commits/develop)
+
+py_mscip is a python library for interfacing with Memsense IMU devices. 
+
+## Installation
+
+py_mscip is available as a PyPi package for convenience. To add the latest stable version to your project, install the library using pip:
+
+`pip install py_mscip`
+
+## Basic Usage
+
+py_mscip provides a number of classes to make interfacing with Memsense IMUs convenient. The most basic of these is the Conn class which manages reading and writing to a serial connection. An example of a simple script to read values from the IMU and print them to the screen would be:
+
+```python
+from py_mscip.interfaces.conn import Conn
+from serial import Serial
+
+ser = Serial(args.comport, args.baudrate)
+conn = Conn(ser, args.format)
+
+while True:
+    packets = conn.read()
+    if packets:
+        for packet in packets:
+            print(packet)
+```
+
+Additional examples along with API details and development information can be found in the [official documentation](https://memsense.gitlab.io/py_mscip).
+
