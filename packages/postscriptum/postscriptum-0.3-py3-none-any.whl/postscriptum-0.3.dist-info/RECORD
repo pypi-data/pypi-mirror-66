@@ -1,0 +1,14 @@
+postscriptum/__about__.py,sha256=-RCj9cL1fjAfNNW61wz_4MbhmcdUhJ6wSnUthoHODaY,444
+postscriptum/__init__.py,sha256=Ht9SFs01Uw0VsariHjyeil5s9v5gi_NuWYWpLIE9K_8,207
+postscriptum/excepthook.py,sha256=zbaCGFQz03DmOL-s8IuXtuHvPfprmVEjOGs6XOvPKuI,2812
+postscriptum/exceptions.py,sha256=SqifI5-HaY7Vkw-FySKe42ZIaSiGa6qgsEr_PMM8_E0,262
+postscriptum/pubsub.py,sha256=5s-oyYRe74MgDjf4WIJZxPsYdpZOHyLU_708i7yQbII,14264
+postscriptum/signals.py,sha256=KbOknqhTsimbvtFKzNXda3AyCwgkS6i_mlL55axNxxw,4310
+postscriptum/system_exit.py,sha256=X0Tv8oSdc1Loawbojg1D42tEAX-hUK-ZEb1AepkHpGw,2236
+postscriptum/types.py,sha256=nOF0uC8sbiLj8do5E2RzA2a-iIqAtr-o9-cp3RTHEkg,2397
+postscriptum/utils.py,sha256=QQR-7URz_BfZuVk3LrwnLzv9NQZLJj6TOY2YaLhtc48,972
+postscriptum-0.3.dist-info/LICENCE,sha256=qYbqlycvA_uJsOaqtcQ566ECXc_LIHQj1FH3pc5tskY,1049
+postscriptum-0.3.dist-info/METADATA,sha256=I_u7-Dukm7ABMuWNfWyoCxHIDUkVe5Vb5sh4bM5qQZM,3210
+postscriptum-0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+postscriptum-0.3.dist-info/top_level.txt,sha256=js6GuUQubUKdkYsP9TwjqyRrOLy5fIz4fFusCGaI0ko,13
+postscriptum-0.3.dist-info/RECORD,,
