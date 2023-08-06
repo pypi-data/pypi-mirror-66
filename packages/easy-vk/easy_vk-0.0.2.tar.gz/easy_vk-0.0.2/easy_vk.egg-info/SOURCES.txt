@@ -1,0 +1,8 @@
+setup.py
+easy_vk/__init__.py
+easy_vk/bots.py
+easy_vk/easy_vk.py
+easy_vk.egg-info/PKG-INFO
+easy_vk.egg-info/SOURCES.txt
+easy_vk.egg-info/dependency_links.txt
+easy_vk.egg-info/top_level.txt
