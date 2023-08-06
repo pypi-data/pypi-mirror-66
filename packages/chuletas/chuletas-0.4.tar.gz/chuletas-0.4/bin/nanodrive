@@ -1,0 +1,48 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import os
+import requests
+import argparse
+import tempfile
+import json
+
+parser = argparse.ArgumentParser(description="editar textos online http://waltermasbdrive.appspot.com")
+parser.add_argument("-l", "--list", action="store_true", help="lista los titulos disponibles")
+parser.add_argument("-e", "--edit", type=str, help="edita titulo")
+parser.add_argument("--delete", type=str, help="elimina titulo")
+parser.add_argument("-c", "--cat", type=str, help="hace un cat titulo")
+
+args = parser.parse_args()
+if args.list:
+    r = requests.get("https://waltermasbdrive.appspot.com/todoslosnanostxt")
+    data = json.loads(r.text)
+    for item in data:
+        print item
+elif args.cat:
+    r = requests.get("https://waltermasbdrive.appspot.com/buscarnano/%s" % args.cat)
+    print(r.text)
+elif args.edit:
+    tmp = tempfile.NamedTemporaryFile(delete=False)
+    r = requests.get("https://waltermasbdrive.appspot.com/buscarnano/%s" % args.edit)
+    tmp.write(r.text.encode('utf8'))
+    tmp.close()
+    os.system("micro %s" % tmp.name)
+    with open(tmp.name, 'r') as content_file:
+        content = content_file.read()
+    print content
+    if r.text <> content.decode('utf8'):
+        print 'grabando ...'
+        URL = "https://waltermasbdrive.appspot.com/guardarsubmittednano"
+        payload = {
+        'name': args.edit,
+        'comments': content
+    }
+        rpost = requests.post(URL, data=payload)
+    else:
+        print 'no hay modificaciones'
+elif args.delete:
+    if raw_input("are you sure? (y/n)") != "y":
+        exit()
+    r = requests.get("https://waltermasbdrive.appspot.com/borrarnano/%s" % args.delete)
+    print r.text

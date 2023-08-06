@@ -1,0 +1,43 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import os
+import requests
+import argparse
+import json
+#from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
+
+parser = argparse.ArgumentParser(description="manage your files online http://waltermasbdrive.appspot.com")
+parser.add_argument("-l", "--list", action="store_true", help="lista los archivos disponibles")
+parser.add_argument("-d", "--download", type=str, help="descarga titulo")
+parser.add_argument("--delete", type=str, help="elimina titulo")
+parser.add_argument("-u", "--upload", nargs=2,  type=str, help="sube un archivo: titulo path")
+
+args = parser.parse_args()
+if args.list:
+    r = requests.get("https://waltermasbdrive.appspot.com/todoslosarchivostxt")
+    data = json.loads(r.text)
+    for item in data:
+        print item
+elif args.download:
+    archivoweb = "http://waltermasbdrive.appspot.com/buscararchivo/%s" % args.download
+    os.system("wget %s" % archivoweb)
+elif args.delete:
+    if raw_input("are you sure? (y/n)") != "y":
+        exit()
+    r = requests.get("https://waltermasbdrive.appspot.com/borrararchivo/%s" % args.delete)
+    print r.text
+elif args.upload:
+    nombre = args.upload[0]
+    filename = args.upload[1]
+
+    sessionObj = requests.session()
+    url1 = 'http://waltermasbdrive.appspot.com/uploadfile'
+    r = sessionObj.get(url1)
+#    print r.text
+    soup = BeautifulSoup(r.content, features="lxml")
+    url2 = soup.find('form').get('action')
+    f = open (filename)
+    r2 = sessionObj.post(url2, data={'name':nombre},files = {'file':f})
+#    print r2.text
