@@ -1,0 +1,17 @@
+physipy/__init__.py,sha256=5MrH-45TQkbH-lblTLsfic_zQiEp9RYxfyeQ4mN7WQk,791
+physipy/_version.py,sha256=fLEJR5xjtnVyYI7IoBmSzERIxPfpG9hh4bIlPLqJWqo,73
+physipy/constants.py,sha256=FHRawC9T7auXPkqcMFujSdxKKEQkHQHA3dDqHCeGUaI,9119
+physipy/custom_units.py,sha256=528Qhc3a8ZOA1DxKBJimSIK4OOSCYclCcXZTjkk3m8o,2617
+physipy/quickstart.py,sha256=t595KluS26XOWbr2YZXe-Fd-qbaW1tLSHUJN3EUrjGA,622
+physipy/quantity/__init__.py,sha256=68L3yaYLKqSJyXuC_jpzlZxAFjDIAdp3uMQMLYxkT2c,678
+physipy/quantity/calculus.py,sha256=bNtDnIA3eBntHKJOLAH3brWvH56yigq16ZC_McgUxes,8231
+physipy/quantity/dimension.py,sha256=u-2vU5JFkPPjiAVA4SW5FOSyRGHFIzrKoD4NOgwVX5k,9112
+physipy/quantity/dimension.txt,sha256=NtnK3xMpjd-LjTkmlnKF4mTbfNcrdCxP5m9tNKpnGgM,142
+physipy/quantity/plot.py,sha256=UWvw_2wXGNWi_xfxZuK7j3qCtMbg6_qcmj8moWjIXRg,1503
+physipy/quantity/quantity.py,sha256=y3aeutzxHM_0xkWnZc2wVeJF0wjEwFZwkxKmDrXypSY,28159
+physipy/quantity/units.py,sha256=xQ6W6F84vsLaEi9Ujnk3MbsY36kMlh7FoG1F5_N9PGk,4725
+physipy/quantity/utils.py,sha256=ATvdqw0RDJ11I8HmC_F6Pd8QN-Dz_wtb05t9SAvtS5E,7083
+physipy-0.2.post1.dist-info/METADATA,sha256=NC47Ug6c3FJHI8yH7-B6lMd9cJXanwOGFWdqmB7A-GM,5212
+physipy-0.2.post1.dist-info/RECORD,,
+physipy-0.2.post1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+physipy-0.2.post1.dist-info/top_level.txt,sha256=aBcjRdozXYxevwmjJPXwEsed1AQrTVdx1R50FTzcjCc,8
