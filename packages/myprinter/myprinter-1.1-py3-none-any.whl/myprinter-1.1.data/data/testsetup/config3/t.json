@@ -1,0 +1,13 @@
+{
+    "log": {
+        "tag": "CPU_XS_BAT_CET_SHSTK_CPU_INFO_TEST",
+        "description": "/proc/cpuinfo shows the availability of shstk",
+        "kernel_tag": "v5.6",
+        "env": "Lab",
+        "result": "No Run",
+        "log_errors": null,
+        "dmesg": null,
+        "telemetry": null,
+        "content": null
+    }
+}
