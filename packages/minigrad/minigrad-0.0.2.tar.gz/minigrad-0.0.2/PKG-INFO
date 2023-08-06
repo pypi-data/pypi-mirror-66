@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: minigrad
+Version: 0.0.2
+Summary: Autograd Engine for Numpy
+Home-page: https://github.com/goktug97/minigrad
+Author: Göktuğ Karakaşlı
+Author-email: karakasligk@gmail.com
+License: MIT
+Description: Minigrad
+        ==========
+        
+        An autograd engine inspired by Karpathy's [micrograd](https://github.com/karpathy/micrograd) library. It is called mini because it is a little bit bigger than micrograd. Engine is implemented in Python C API so that Value type can be used in numpy functions. Currently nn.py and micrograd.nn are the same but will implement it in Numpy.
+        
+        ## Installation
+        
+        ``` bash
+        pip install minigrad
+        ```
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
