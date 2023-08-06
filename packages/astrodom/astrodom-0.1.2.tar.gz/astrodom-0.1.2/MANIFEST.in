@@ -1,0 +1,8 @@
+include *.md *.txt LICENSE requirements.txt
+recursive-include icons * 
+recursive-include config * 
+recursive-include gui * 
+recursive-exclude * __pycache__
+recursive-exclude * *.pyc
+recursive-exclude * *.pyo
+recursive-exclude astrodom.egg-info *
