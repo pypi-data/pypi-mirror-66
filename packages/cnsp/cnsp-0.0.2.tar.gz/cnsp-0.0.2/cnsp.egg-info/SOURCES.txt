@@ -1,0 +1,7 @@
+README.md
+setup.py
+cnsp/__init__.py
+cnsp.egg-info/PKG-INFO
+cnsp.egg-info/SOURCES.txt
+cnsp.egg-info/dependency_links.txt
+cnsp.egg-info/top_level.txt
