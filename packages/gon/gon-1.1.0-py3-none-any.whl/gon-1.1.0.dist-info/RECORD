@@ -1,0 +1,13 @@
+gon/__init__.py,sha256=65NFizfN-tOVtfrw4w9EfM9DkZKz4mPpWIcKldZCQ2U,50
+gon/angular.py,sha256=O59xOgH1xtgUGHxTxVx9yhEbTFiURePopB01_Z8Nx0U,427
+gon/compound.py,sha256=zPGRiI_n2YvbaJMCty64PIt8zOYk1FOq13kjqpIB0pk,1745
+gon/geometry.py,sha256=FD0mgcmgXkXmGPAv0yUGxUHnfCxO1UjFBVEKKeJDD5c,1137
+gon/hints.py,sha256=cVuDod8LIcRPojO80ES_hrX90ZWbJ0ezchSKOc6nDGk,98
+gon/linear.py,sha256=4fDStog2kfsDQos8sBN5G2NxGWBilBa0nFHrvHg65uQ,25059
+gon/primitive.py,sha256=ZIuaPg9YLE3lkWIG8abq11esolAjD-Hfq3wg6b54PRI,3771
+gon/shaped.py,sha256=SdeBi0WM3mo_Q-0b8TRU3NoIcZe2L1YOh9-a1yqQzX0,17973
+gon-1.1.0.dist-info/LICENSE,sha256=Qnoq_TtEh8_qp3-hG9F-EqZxgMxekDFJ2SGoY-Mcl6g,1069
+gon-1.1.0.dist-info/METADATA,sha256=K0Gl78XWF3iva8cnCeLTS2DipwJWvukAgX6QaoBwDDc,4770
+gon-1.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gon-1.1.0.dist-info/top_level.txt,sha256=estISrwhEn821GKLfebY5QYuv3EvxdY3plCG3zclTG4,4
+gon-1.1.0.dist-info/RECORD,,
