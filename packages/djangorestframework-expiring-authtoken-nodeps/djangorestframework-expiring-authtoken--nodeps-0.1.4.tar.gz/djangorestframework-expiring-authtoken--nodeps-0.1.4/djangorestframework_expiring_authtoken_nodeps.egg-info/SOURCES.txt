@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+djangorestframework_expiring_authtoken_nodeps.egg-info/PKG-INFO
+djangorestframework_expiring_authtoken_nodeps.egg-info/SOURCES.txt
+djangorestframework_expiring_authtoken_nodeps.egg-info/dependency_links.txt
+djangorestframework_expiring_authtoken_nodeps.egg-info/not-zip-safe
+djangorestframework_expiring_authtoken_nodeps.egg-info/top_level.txt
+rest_framework_expiring_authtoken/__init__.py
+rest_framework_expiring_authtoken/authentication.py
+rest_framework_expiring_authtoken/models.py
+rest_framework_expiring_authtoken/settings.py
+rest_framework_expiring_authtoken/views.py
+rest_framework_expiring_authtoken/migrations/0001_initial.py
+rest_framework_expiring_authtoken/migrations/__init__.py
