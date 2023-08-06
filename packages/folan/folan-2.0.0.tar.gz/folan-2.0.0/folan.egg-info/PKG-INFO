@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: folan
+Version: 2.0.0
+Summary: Sharing files over LAN
+Home-page: https://github.com/MattTimms/folan
+Author: Matthew Timms
+Author-email: matthewtimms@live.com.au
+License: MIT
+Description: UNKNOWN
+Keywords: file sharing,tcp,lan
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Communications :: File Sharing
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
