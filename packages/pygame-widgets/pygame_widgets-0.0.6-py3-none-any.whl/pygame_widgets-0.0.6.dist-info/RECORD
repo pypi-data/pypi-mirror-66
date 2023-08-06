@@ -1,0 +1,9 @@
+pygame_widgets/__init__.py,sha256=TVYTC-GaHLTF_vDrVB3u-pkTPDyhLSV4aK7_bLHK4co,99
+pygame_widgets/button.py,sha256=Ux2reCh4H4SCezxm__B_l9V3tB5EH-J6KP6T25lYgb0,11193
+pygame_widgets/textbox.py,sha256=Kdt9otCQkTgGz4XUakhRNXyTGuSp18HD8iHtophviEU,9423
+pygame_widgets/widget.py,sha256=YpBNqPryfYWZ4jXnXfk5JN0LIFhMVq60amyXhpSkuEI,714
+pygame_widgets-0.0.6.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+pygame_widgets-0.0.6.dist-info/METADATA,sha256=jEeMq3JfLds9o6IrG73z5tiK7-P-_fE9oLvC5ChLWtw,474
+pygame_widgets-0.0.6.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+pygame_widgets-0.0.6.dist-info/top_level.txt,sha256=KWIzBkobwKxVRsjbQdNENLneHaoLBMLCkPXavUpIz28,15
+pygame_widgets-0.0.6.dist-info/RECORD,,
