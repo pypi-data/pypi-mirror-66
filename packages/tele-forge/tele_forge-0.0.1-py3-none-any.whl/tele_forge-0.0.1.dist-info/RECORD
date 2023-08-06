@@ -1,0 +1,17 @@
+forge/__init__.py,sha256=XsCiU9x2sE1bUw7FhdtANIgbIpp_lcfBQHDQgmSox-4,2031
+forge/_internal_plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forge/_internal_plugins/manage_plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forge/_internal_plugins/manage_plugins/manage_plugins.py,sha256=sAz_NPfb_wW2rybnasW4ZOHLy1KERg43tkocJA_HGeY,656
+forge/_internal_plugins/manage_plugins/manage_plugins_logic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forge/_internal_plugins/manage_plugins/manage_plugins_logic/manage_plugins.py,sha256=3Wx8bZd94LQ5HBSX2NSarGrvgbvTYn100frCnSTn5tY,7382
+forge/_internal_plugins/manage_plugins/manage_plugins_logic/manage_plugins_test.py,sha256=7y04FRtTuEK2rkE5MTXEt1015zLSzUtiJsyqpOGlngo,3487
+forge/_internal_plugins/manage_plugins/manage_plugins_logic/plugin_puller.py,sha256=WiaR6z03dFy2d2KebYYiTBc-mwQyZ4HNBRHCLLNXqkY,1402
+forge/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+forge/config/config_handler.py,sha256=yUO15tPsx2Dssu79xWoOUTWXWUBX5eWPklJS-wdWDhw,2213
+forge/config/config_handler_test.py,sha256=XahU5ZBIoI8ujZxIvSRx8W5kuV3Z29GpVebgr9MD4q8,1544
+tele_forge-0.0.1.data/scripts/forge,sha256=rb_nmvInofFZrxXvcBYdP3pYv5sTlRpseZrAuwm_FhQ,59
+tele_forge-0.0.1.dist-info/LICENSE,sha256=pPnUERP_tmqB2C559o5gt-8pTBhNhhk3qjCwt9eZ_Ss,1056
+tele_forge-0.0.1.dist-info/METADATA,sha256=SK1Q_Yzjvm7sL3i7_AePId3zdHwpYhpYIIJkVXpgRHw,645
+tele_forge-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+tele_forge-0.0.1.dist-info/top_level.txt,sha256=sDbe4KjRUBYyB4IABQOjHzoomNKH_4KwOv5fPPrv4ME,6
+tele_forge-0.0.1.dist-info/RECORD,,
