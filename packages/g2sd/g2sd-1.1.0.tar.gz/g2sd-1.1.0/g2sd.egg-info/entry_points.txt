@@ -1,0 +1,3 @@
+[console_scripts]
+g2sd = g2sd.g2sd:cmd
+

@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+g2sd/__init__.py
+g2sd/g2sd.py
+g2sd.egg-info/PKG-INFO
+g2sd.egg-info/SOURCES.txt
+g2sd.egg-info/dependency_links.txt
+g2sd.egg-info/entry_points.txt
+g2sd.egg-info/requires.txt
+g2sd.egg-info/top_level.txt
+g2sd.egg-info/zip-safe

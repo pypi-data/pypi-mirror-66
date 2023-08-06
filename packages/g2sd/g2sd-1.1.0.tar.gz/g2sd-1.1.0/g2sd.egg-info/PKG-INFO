@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: g2sd
+Version: 1.1.0
+Summary: Extract and save Skype chats.
+Home-page: https://github.com/thismachinechills/grub2systemd
+Author: thismachinechills (Alex)
+Author-email: UNKNOWN
+License: AGPL 3.0
+Description: UNKNOWN
+Keywords: grub2,grub,systemd,systemd-boot,menuentry,efi,efiboot,uefi
+Platform: UNKNOWN
