@@ -1,0 +1,11 @@
+scipy
+numpy
+sklearn
+geographiclib
+pandas
+pysolar>=0.8
+matplotlib
+datetime
+
+[dev]
+twine
