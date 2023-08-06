@@ -1,0 +1,8 @@
+README.md
+setup.py
+Kigo.egg-info/PKG-INFO
+Kigo.egg-info/SOURCES.txt
+Kigo.egg-info/dependency_links.txt
+Kigo.egg-info/top_level.txt
+kigo/__init__.py
+kigo/service.py

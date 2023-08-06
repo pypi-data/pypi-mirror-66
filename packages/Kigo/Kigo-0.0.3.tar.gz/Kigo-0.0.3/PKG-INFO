@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Kigo
+Version: 0.0.3
+Summary: Python framework for Event Async RPC
+Home-page: https://github.com/AsyncMicroStack/kigo
+Author: Krzysztof Kaczkowski
+Author-email: krzysztof.kaczkowski@architekt-it.pl
+License: UNKNOWN
+Description: # Kigo - Asnyc Event RPC by RabbitMQ
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
