@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: SiPANN
+Version: 1.0
+Summary: Artifical Neural Networks for use with Silicon Photonics
+Home-page: https://github.com/contagon/SiPANN
+Author: Easton Potokar, Alec Hammond, R Scott Collings
+Author-email: contagon6@gmail.com
+License: UNKNOWN
+Keywords: artificial neural networks
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: tensorflow
+Requires-Dist: gdspy (>=1.5.2)
+Requires-Dist: joblib
+Requires-Dist: scikit-rf
+
+UNKNOWN
+
+
