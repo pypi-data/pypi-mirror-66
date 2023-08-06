@@ -1,0 +1,8 @@
+requests
+bs4
+coloredlogs
+colorama
+progress
+img2pdf
+Click
+pyinquirer
