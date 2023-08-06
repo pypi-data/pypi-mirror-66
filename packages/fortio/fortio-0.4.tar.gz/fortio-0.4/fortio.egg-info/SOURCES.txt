@@ -1,0 +1,8 @@
+README.md
+fortio.py
+setup.py
+fortio.egg-info/PKG-INFO
+fortio.egg-info/SOURCES.txt
+fortio.egg-info/dependency_links.txt
+fortio.egg-info/requires.txt
+fortio.egg-info/top_level.txt
