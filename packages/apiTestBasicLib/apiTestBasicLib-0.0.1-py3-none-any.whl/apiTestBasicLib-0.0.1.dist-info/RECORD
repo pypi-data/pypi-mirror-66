@@ -1,0 +1,15 @@
+apiTestHttp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apiTestHttp/apitest.py,sha256=h6gl-lZRNsacyVxVC0vrDS97uVidGkG3rMdVDU2JPx4,1344
+apiTestHttp/uitest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apitestbasiclib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apitestbasiclib/apibasic.py,sha256=m458iG-ce9ifvJtVIMq1T3Bjav3dbGZPpLga0DXl9ss,3395
+apitestbasiclib/apirequest.py,sha256=KULN8QjR85lzBvZ9_uSkuzW-vSP1WDW7lykvCYGL9fA,6051
+apitestbasiclib/apitestlogic.py,sha256=ep_WYeuTezC0-kHd0ZvMabEQv_OiVVLoBsTaJSV_c8k,12191
+apitestbasiclib/dbutils.py,sha256=EzcFwarAkWeh6iA-kGxDNk-PlQinl6bH4XcAueauCEY,4079
+apitestbasiclib/filetools.py,sha256=uHv6C03PKZb_wyHKkOJw_aTWjTXqin5EV3XTHoK6MSA,1868
+apitestbasiclib/jsoncompare.py,sha256=ft-rd7qXH1d5I-FNJp4YjPJoULe6c_pXDDrimj9Y0rI,10645
+apitestbasiclib/log.py,sha256=5-Gm0AsRoxck6svB-YjZNgsyN_u7ZTCCPrg3i-14HII,1543
+apiTestBasicLib-0.0.1.dist-info/METADATA,sha256=bmFxW-_zbSSycXbEIy6j8Vz_fA0143--STQIxn7eZqM,389
+apiTestBasicLib-0.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+apiTestBasicLib-0.0.1.dist-info/top_level.txt,sha256=h-nzR_ObY3djRCVtdWWa1lpE1pI0k6tghFtD04tgbkQ,16
+apiTestBasicLib-0.0.1.dist-info/RECORD,,
