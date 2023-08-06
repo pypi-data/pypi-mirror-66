@@ -1,0 +1,7 @@
+Click
+pyfiglet
+prettytable
+yaspin
+termgraph
+colorama
+termcolor
