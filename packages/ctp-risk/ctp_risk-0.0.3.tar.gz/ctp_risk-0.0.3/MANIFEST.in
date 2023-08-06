@@ -1,0 +1,14 @@
+include *.in
+include *.ini
+include setup.md
+include *.txt
+include LICENSE
+include setup.py
+
+global-exclude __pycache__ *.py[cod] *.con
+
+recursive-include ctp_risk/lib32 *.*
+recursive-include ctp_risk/lib64 *.*
+
+recursive-exclude ctp_risk/log
+exclude test*.py
