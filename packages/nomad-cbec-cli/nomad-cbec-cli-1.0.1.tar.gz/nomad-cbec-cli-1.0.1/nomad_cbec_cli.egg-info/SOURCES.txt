@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+nomad_cbec_cli.egg-info/PKG-INFO
+nomad_cbec_cli.egg-info/SOURCES.txt
+nomad_cbec_cli.egg-info/dependency_links.txt
+nomad_cbec_cli.egg-info/requires.txt
+nomad_cbec_cli.egg-info/top_level.txt
+test/test_api_response.py
+test/test_api_response_data.py
+test/test_user_api.py
