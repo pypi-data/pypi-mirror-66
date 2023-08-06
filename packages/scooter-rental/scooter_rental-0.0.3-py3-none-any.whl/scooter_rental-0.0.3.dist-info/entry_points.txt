@@ -1,0 +1,3 @@
+[console_scripts]
+scooter-rental = scooter.__main__:launch_scooter_rental
+
