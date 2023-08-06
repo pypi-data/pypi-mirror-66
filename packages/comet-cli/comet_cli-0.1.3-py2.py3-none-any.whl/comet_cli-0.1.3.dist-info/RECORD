@@ -1,0 +1,12 @@
+comet_cli-0.1.3.dist-info/DESCRIPTION.rst,sha256=MIhSD1KqFlP0vaZPS5MQWVlqByDUjuvoaI2ER3Rd8Dk,17
+comet_cli-0.1.3.dist-info/METADATA,sha256=NpSWKqAUziY8Zy_1HGUlgvGEDcluXJaK_mDC52LXzQA,893
+comet_cli-0.1.3.dist-info/RECORD,,
+comet_cli-0.1.3.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+comet_cli-0.1.3.dist-info/entry_points.txt,sha256=mue1W4B0l89z8lyb8n8HOVnPZeCup8f7J8d4r9Va7hE,45
+comet_cli-0.1.3.dist-info/metadata.json,sha256=cUd6PZVelI53gb8rk2jK2njLHyzOOz6Fw2pVfBmZz3k,1102
+comet_cli-0.1.3.dist-info/top_level.txt,sha256=uejrCju03eUW49NVH0chCR72Kd6umidp6Cn1fGdcK0Y,9
+cometcli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cometcli/cli.py,sha256=G8G2C8PIrYVCwV_-zMPGxOr4i6wxctN-pdoAsRqEU4c,3420
+cometcli/datasets.py,sha256=hjYlHwFPXVqpHmNgNmY0v9sXjuYuQ3l-YmN7wYmOO4I,3236
+cometcli/query.py,sha256=N5G344DSMX_yaOvALWB_xo6L_IkqpqSSOcjdMZwRXsg,2026
+cometcli/utils.py,sha256=Y3kFEB1lakBMi5ZbPvqYwRNNcloaDULjD0ew-t6Adeg,2441
