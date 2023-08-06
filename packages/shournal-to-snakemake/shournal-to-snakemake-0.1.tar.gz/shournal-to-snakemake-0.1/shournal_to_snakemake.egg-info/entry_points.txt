@@ -1,0 +1,3 @@
+[console_scripts]
+shournal-to-snakemake = shournal_to_snakemake.__main__:main
+
