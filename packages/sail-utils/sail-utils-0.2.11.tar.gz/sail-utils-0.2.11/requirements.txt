@@ -1,0 +1,17 @@
+coverage
+coverage-badge
+ffmpeg
+ffmpy
+grpcio
+grpcio-tools
+kafka-python
+mlflow
+numpy
+opencv-python
+oss2
+pandas
+protobuf
+pytest
+pytest-runner
+pytest-cov
+simpleutils
