@@ -1,0 +1,3 @@
+    
+    for (const auto& block: grid.GetSelectedBlocks()) 
+        ... do something with block ...
