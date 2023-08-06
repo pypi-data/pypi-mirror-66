@@ -1,0 +1,3 @@
+[console_scripts]
+pyuninstaller=pyuninstaller.__main__:main
+
