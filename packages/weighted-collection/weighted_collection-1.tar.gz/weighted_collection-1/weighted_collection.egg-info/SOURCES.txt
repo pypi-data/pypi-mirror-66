@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+weighted_collection/__init__.py
+weighted_collection/weighted_collection.py
+weighted_collection.egg-info/PKG-INFO
+weighted_collection.egg-info/SOURCES.txt
+weighted_collection.egg-info/dependency_links.txt
+weighted_collection.egg-info/requires.txt
+weighted_collection.egg-info/top_level.txt
