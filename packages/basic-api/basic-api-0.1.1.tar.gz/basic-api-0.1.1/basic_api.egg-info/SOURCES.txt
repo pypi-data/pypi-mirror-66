@@ -1,0 +1,9 @@
+README.md
+setup.py
+basic_api/__init__.py
+basic_api/exceptions.py
+basic_api.egg-info/PKG-INFO
+basic_api.egg-info/SOURCES.txt
+basic_api.egg-info/dependency_links.txt
+basic_api.egg-info/requires.txt
+basic_api.egg-info/top_level.txt
