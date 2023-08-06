@@ -1,0 +1,5 @@
+amqpstorm
+injector
+limecore-core>=0.2.0
+limecore-core-configuration
+limecore-messaging-api>=0.2.1
