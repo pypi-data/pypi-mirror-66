@@ -1,0 +1,13 @@
+gsc/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+gsc/auth.py,sha256=DWnidaNO96VH9U__1axnCbPIyN7k9v9Y-uyByqTYeZI,2227
+gsc/cli.py,sha256=_P408oElLDOChycy1qV_Qp5oncYvtp1mq1KGJBMw3dM,1239
+gsc/client.py,sha256=yP38_9VwbvECCpZaz83VS5UmWFMDIESyDrS4C5ov5lc,930
+gsc/exercises/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gsc/exercises/my_first_commit.py,sha256=l58QJTE9HK-NmPPAIL9BjCZ09Ft5yPQdB2AriqXAQ-0,1456
+gsc/exercises/utils.py,sha256=WCtCsSdz99E6VW2jU6psjoQ4OeHD1SH0EY7sWAUbDZg,1003
+gsc/verifier.py,sha256=I1Nf2EHrMIQWYPHFQCZlGsoIKsxH4-dqIvsbBsApdLY,699
+gsc-0.0.1.dist-info/entry_points.txt,sha256=ZmcVEWrGCzxBtEcoJ50MVSqNDHB6T6WjwpY7WzX9XO0,36
+gsc-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+gsc-0.0.1.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+gsc-0.0.1.dist-info/METADATA,sha256=4OfsHBLvJza-7JydA9ZVaKPFMsCoNX3-SS22Tl3AOVg,717
+gsc-0.0.1.dist-info/RECORD,,
