@@ -1,0 +1,14 @@
+logfire/__init__.py,sha256=gWcgY9HgzirgYa_7PHwAz4Al_db3vOL-ti55mbHcQw8,47
+logfire/config.py,sha256=u7KYPS_6WGNo1Ift3dqzb1c5snRr6ZXIRCR-bxJ1kzo,613
+logfire/format.py,sha256=pjWyMMcGgZDe5jxuvezkcbhTewlCrTXtWZ53JhZbKIA,974
+logfire/main.py,sha256=G9--pFT7rc4lxOjBUlny-uY2epvQKiNIsrv_I9YwD30,3795
+logfire/record.py,sha256=0g0NmMFo0y8wIOUaLwGrbfeBr-X4DP8lUAl1IFZv5DM,1103
+logfire/send.py,sha256=V1hZ3dNgROJVgenW3yml-80-46yAyqvpseSJvn0YjOA,3732
+logfire/serialize.py,sha256=Ysdp5AtSGv5rn1QxO0WQB2V_tgj28zvuUmdbyV1PLnU,1228
+logfire/version.py,sha256=o_VYey62aBF9n5SD3C_PdbMFIS1WlbXEikyIl1bpJEY,42
+logfire-0.0.1.dist-info/LICENSE,sha256=zV_96A5tMoai4uXwL7LLB7gjkxyjaOfHNabF9a6-cQM,1080
+logfire-0.0.1.dist-info/METADATA,sha256=-chNxwO8f4QbW1vVYWVvImd-tReTvtCxbFq7X2ldDkM,1101
+logfire-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+logfire-0.0.1.dist-info/top_level.txt,sha256=2-HdiKgjTrLMcz4RGZUgzl5uLLLCNd8DdPhEceKGpdY,8
+logfire-0.0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+logfire-0.0.1.dist-info/RECORD,,
