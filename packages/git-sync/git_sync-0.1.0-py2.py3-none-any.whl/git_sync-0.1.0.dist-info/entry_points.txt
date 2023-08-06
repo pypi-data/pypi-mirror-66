@@ -1,0 +1,3 @@
+[console_scripts]
+git-sync = git_sync.__main__:main
+
