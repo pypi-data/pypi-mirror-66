@@ -1,0 +1,4 @@
+name = "sf2"
+
+[paths]
+sample = "florestan-subset.sf2"
