@@ -1,0 +1,9 @@
+README.md
+setup.py
+ritsis/__init__.py
+ritsis/sis.py
+ritsis.egg-info/PKG-INFO
+ritsis.egg-info/SOURCES.txt
+ritsis.egg-info/dependency_links.txt
+ritsis.egg-info/requires.txt
+ritsis.egg-info/top_level.txt

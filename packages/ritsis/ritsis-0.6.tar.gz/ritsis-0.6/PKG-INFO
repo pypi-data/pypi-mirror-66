@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: ritsis
+Version: 0.6
+Summary: Package for Sis
+Home-page: UNKNOWN
+Author: noidea
+Author-email: noidea1238@gmail.com
+License: UNKNOWN
+Description: # RIT SIS \n
+        
+        ## Package Containing Some Of the Features of SIS
+        
+        # Functions Available
+        
+        >dict getAttendance(usn,dob)
+        
+        This returns the attendance of the student with ResultCode as ** Success ** and ResultCode will be ** Fail ** if the credentials are incorrect.
+        
+        >bool isStudent(usn,dob)
+        
+        This returns ** true ** if credentials are correct and ** false ** otherwise
+        
+        >dict getDetails(usn,dob)
+        
+        This returns the details of the student
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
