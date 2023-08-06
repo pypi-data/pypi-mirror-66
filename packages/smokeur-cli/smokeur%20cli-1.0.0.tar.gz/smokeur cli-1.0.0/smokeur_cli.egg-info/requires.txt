@@ -1,0 +1,9 @@
+requests
+pyperclip
+click
+
+[package]
+bump2version
+setuptools
+wheel
+twine
