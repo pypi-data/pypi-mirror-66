@@ -1,0 +1,27 @@
+ # fill all these out
+db:
+    connection:
+        appname: data_faker #used to tag dbconnection for visibility in db
+        db: test
+        host: server_host
+        port: 1433
+        type: 'MSSQL'
+        schema: "dbo"
+        userid: 'master'
+        password_envir_var: MSPASSWORD #set environment variable MSPASSWORD
+Tables:
+    dbo.test1:
+        full_name: provider.person.name #faker provider name from faker_doc.txt
+        ssn: provider.ssn.ssn #faker provider
+        phone_number: provider.phone_number.phone_number
+        loan_amount: bigint
+    dbo.company:
+        company_name: provider.company.name
+        company_address: provider.address.address
+        company_size: int
+    dbo.test_table2:
+    dbo.test_table3:
+        color_name: provider.color.color_name
+        hex_color: provider.color.hex_color
+            
+            
