@@ -1,0 +1,51 @@
+#!python
+from argparse import ArgumentParser, RawTextHelpFormatter as ArgFormatter
+from json import dumps, load
+from os import chdir
+from pathlib import Path
+
+
+def merge_and_add_color(lines, points, colors, out_file):
+    with open(colors) as f:
+        color_mapping = {v[0].strip('"'): v[1].strip('"').strip('#') for v in [l.strip().split(',') for l in f.readlines()[1:]]}
+    res_dict = {
+        'type': 'FeatureCollection',
+        'features': [],
+    }
+    with open(lines) as f:
+        lines_dict = load(f)
+        for feature in lines_dict['features']:
+            line_id = feature['properties']['line_id']
+            feature['properties']['route_color'] = color_mapping.get(line_id, '00' * 3)
+            res_dict['features'].append(feature)
+    with open(points) as f:
+        points_dict = load(f)
+        for feature in points_dict['features']:
+            line_id = feature['properties']['line_id']
+            feature['properties']['route_color'] = color_mapping.get(line_id, '00' * 3)
+            res_dict['features'].append(feature)
+    with open(out_file, 'w') as f:
+        f.write(dumps(res_dict, indent=2, ensure_ascii=False))
+
+
+def main(sys_args):
+    chdir(str(Path(__file__).resolve().parents[1]))
+    parser = ArgumentParser(
+        description="Merge two geojson and import a route color based on a csv file",
+        formatter_class=ArgFormatter
+    )
+    parser.add_argument('-l', '--lines', metavar='geojson_lines', dest='lines', type=str, required=True,
+                        help="Input GeoJson lines file path")
+    parser.add_argument('-p', '--points', metavar='geojson_points', dest='points', type=str, required=True,
+                        help="Input GeoJson points file path")
+    parser.add_argument('-c', '--colors', metavar='csv_colors', dest='colors', type=str, required=True,
+                        help="Input CSV colors file path")
+    parser.add_argument('-o', '--out', metavar='out_file', dest='out_file', type=str, required=True,
+                        help="Output GeoJson file path")
+    args = parser.parse_args(args=sys_args)
+    merge_and_add_color(**vars(args))
+
+
+if __name__ == '__main__':
+    from sys import argv
+    main(argv[1:])
