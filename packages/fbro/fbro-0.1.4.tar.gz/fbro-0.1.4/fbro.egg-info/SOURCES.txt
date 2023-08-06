@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+fbro/__init__.py
+fbro/_version.py
+fbro/aws.py
+fbro/cli.py
+fbro/interactive.py
+fbro.egg-info/PKG-INFO
+fbro.egg-info/SOURCES.txt
+fbro.egg-info/dependency_links.txt
+fbro.egg-info/entry_points.txt
+fbro.egg-info/not-zip-safe
+fbro.egg-info/requires.txt
+fbro.egg-info/top_level.txt
