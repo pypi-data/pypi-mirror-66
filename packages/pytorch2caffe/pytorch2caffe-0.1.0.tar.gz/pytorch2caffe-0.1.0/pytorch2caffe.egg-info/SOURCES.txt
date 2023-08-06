@@ -1,0 +1,12 @@
+README.md
+setup.py
+pytorch2caffe/__init__.py
+pytorch2caffe/caffe_net.py
+pytorch2caffe/caffe_pb2.py
+pytorch2caffe/layer_param.py
+pytorch2caffe/pytorch2caffe.py
+pytorch2caffe.egg-info/PKG-INFO
+pytorch2caffe.egg-info/SOURCES.txt
+pytorch2caffe.egg-info/dependency_links.txt
+pytorch2caffe.egg-info/requires.txt
+pytorch2caffe.egg-info/top_level.txt
