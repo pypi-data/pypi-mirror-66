@@ -1,0 +1,10 @@
+soroushpdf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+soroushpdf/app.py,sha256=lP3sDUeSau2cY2hMWL4JJT-0TPZ2RUCHqpLhF7N09-s,62
+soroushpdf/pdf2image.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+soroushpdf/pdf2text.py,sha256=kT1Vi4fMllZsyG-NhJsTAURI_i575zuvkAcFw1mszCc,366
+soroushpdf2-1.0.dist-info/DESCRIPTION.rst,sha256=umAEVlxXPnhu64-hjg7-xNbSrbesvVXjkVgdDyo6OgI,40
+soroushpdf2-1.0.dist-info/METADATA,sha256=efgR5M-UCeKhc9SH8V4QmxzF1kuQBjVY2HZmffIjqUU,203
+soroushpdf2-1.0.dist-info/RECORD,,
+soroushpdf2-1.0.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+soroushpdf2-1.0.dist-info/metadata.json,sha256=M2TQehPAUVy2iluKoT3w6YruT-izWFtZKhIafkoANIU,217
+soroushpdf2-1.0.dist-info/top_level.txt,sha256=a6owN-66DJZAZtl-3Rd4wkHxWwaPzJVEt2QsdKRigDo,11
