@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: graphene-sqlalchemy-auto
+Version: 0.2.0
+Summary: graphene-sqlalchemy-auto
+Author: golden
+Author-email: goodking_bq@hotmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: graphene-sqlalchemy (>=2.3.0,<3.0.0)
