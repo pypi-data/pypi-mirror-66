@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: stackpython_popo
+Version: 0.2
+Summary: test for uploading
+Home-page: https://github.com/isarafx/potato
+Author: isarfx_stackpython
+Author-email: isarawn@gmail.com
+License: MIT
+Download-URL: https://github.com/isarafx/potato/archive/0.2.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
