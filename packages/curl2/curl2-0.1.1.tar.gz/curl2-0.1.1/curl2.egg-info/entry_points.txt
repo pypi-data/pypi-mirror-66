@@ -1,0 +1,3 @@
+[console_scripts]
+curl2 = curl2.run:run
+
