@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: utaromkan
+Version: 1.2.0
+Summary: romkan.py - a Python rewrite of the Perl Romaji<->Kana conversion module.
+Home-page: https://github.com/Danalog/utaromkan
+License: UNKNOWN
+Author: tart
+Author-email: conemusicproductions@gmail.com
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
