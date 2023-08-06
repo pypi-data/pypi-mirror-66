@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+telraam_data/__init__.py
+telraam_data/download.py
+telraam_data/version.py
+telraam_data.egg-info/PKG-INFO
+telraam_data.egg-info/SOURCES.txt
+telraam_data.egg-info/dependency_links.txt
+telraam_data.egg-info/requires.txt
+telraam_data.egg-info/top_level.txt
