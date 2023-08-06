@@ -1,0 +1,10 @@
+setup.py
+flask_sqlalchemy-stubs/__init__.pyi
+flask_sqlalchemy-stubs/_compat.pyi
+flask_sqlalchemy-stubs/model.pyi
+flask_sqlalchemy-stubs/utils.pyi
+flask_sqlalchemy_stubs.egg-info/PKG-INFO
+flask_sqlalchemy_stubs.egg-info/SOURCES.txt
+flask_sqlalchemy_stubs.egg-info/dependency_links.txt
+flask_sqlalchemy_stubs.egg-info/requires.txt
+flask_sqlalchemy_stubs.egg-info/top_level.txt
