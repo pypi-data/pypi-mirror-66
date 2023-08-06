@@ -1,0 +1,9 @@
+ubc/calculator.py,sha256=QbkF3DM4AW3gHdXwQ7M7F988KDWQ_N8Q8oX6-En8R2E,5638
+ubc/rates/abstract.py,sha256=rgldO3tI-bpOzPYZZO-qpe_6A5lRlPiYLmYVj6n1O40,277
+ubc/rates/openei/__init__.py,sha256=T6_CGo_UWMcdycAUHST3t1hGYcbi5ZItls9cmEHQS7c,61
+ubc/rates/openei/api.py,sha256=LzPtZS9OVkkrm5ifMGyQhUNYNfU23xQ7uGClSEDyuYs,6341
+ubc/rates/openei/schemas.py,sha256=dQermeq6OD-X9_bEWANNgG5T0X7PJYbv9yewKzLwTCQ,1338
+ubc/reports.py,sha256=gBj2Sg29csCZVzN6x2ncsT3OtLUIlpyAmLkFY65yKdE,3011
+ubc-0.0.7.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+ubc-0.0.7.dist-info/METADATA,sha256=DjnRsgGKaeI7O8F_enS_70m8bjbXnmAJxkEEMxWZ4eI,512
+ubc-0.0.7.dist-info/RECORD,,
