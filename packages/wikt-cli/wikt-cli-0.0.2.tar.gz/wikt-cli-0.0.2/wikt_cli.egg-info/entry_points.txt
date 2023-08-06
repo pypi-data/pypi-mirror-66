@@ -1,0 +1,3 @@
+[console_scripts]
+wikt = wikt.__main__:main
+

@@ -1,0 +1,12 @@
+README.md
+setup.py
+wikt/__init__.py
+wikt/__main__.py
+wikt/fancyprint.py
+wikt/utils.py
+wikt_cli.egg-info/PKG-INFO
+wikt_cli.egg-info/SOURCES.txt
+wikt_cli.egg-info/dependency_links.txt
+wikt_cli.egg-info/entry_points.txt
+wikt_cli.egg-info/requires.txt
+wikt_cli.egg-info/top_level.txt
