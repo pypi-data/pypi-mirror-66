@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: mo-http
+Version: 3.67.20113
+Summary: More HTTP! A few more features atop the Requests library
+Home-page: https://github.com/klahnakoski/mo-http
+Author: Kyle Lahnakoski
+Author-email: kyle@lahnakoski.com
+License: MPL 2.0
+Description: # mo-http
+        
+        More HTTP! A few more features atop the Requests library
+        
+        ## Overview
+        
+        * handles large data using streams or temporary files
+        * compresses/decompresses automatically 
+        * try multiple urls 
+        * retry a number of times with sleeps between
+        * reminds you to set headers, so you are good citizen 
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Description-Content-Type: text/markdown
