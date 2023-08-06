@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: Flask-RESTy-Tenants
+Version: 0.8.0
+Summary: Multitenant authorization for Flask-RESTy
+Home-page: https://github.com/4Catalyzer/flask-resty-tenants
+Author: Giacomo Tagliabue
+Author-email: giacomo.tag@gmail.com
+License: MIT
+Description: # Flask-RESTy-Tenants [![Travis][build-badge]][build] [![PyPI][pypi-badge]][pypi]
+        
+        Multitenant authorization for [Flask-RESTy](https://flask-resty.readthedocs.io/).
+        
+        [![Codecov][codecov-badge]][codecov]
+        
+        [build-badge]: https://img.shields.io/travis/4Catalyzer/flask-resty-tenants/master.svg
+        [build]: https://travis-ci.org/4Catalyzer/flask-resty-tenants
+        [pypi-badge]: https://img.shields.io/pypi/v/Flask-RESTy-Tenants.svg
+        [pypi]: https://pypi.python.org/pypi/Flask-RESTy-Tenants
+        [codecov-badge]: https://img.shields.io/codecov/c/github/4Catalyzer/flask-resty-tenants/master.svg
+        [codecov]: https://codecov.io/gh/4Catalyzer/flask-resty-tenants
+        
+Keywords: rest flask multitenancy
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Flask
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
