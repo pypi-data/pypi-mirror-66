@@ -1,0 +1,4 @@
+include README.md
+include LICENSE.md
+graft elfinder_client
+recursive-exclude * *.py[co]
