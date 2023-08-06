@@ -1,0 +1,126 @@
+# Default parameter file for pp_1d
+# created by do_default.py
+
+############################################################
+#  This macro realizes the peak picking of a 1D spectrum
+#  - spec_noise : evaluate noise, estimated by finding an empty zone
+#  - prefilter  : smooths the spectrum before peak-picking, modification is not stored permanently
+#  - restrict   : restricts the peak picking to a certain spectral zone 
+#  - peakpick   : do the peak picking, by detecting local extrema 
+#  - aggregate  : sorts peak list to aggregate peaks close from each other
+#  
+#      
+#  %F1-input-domain%  frequency
+#  %F1-output-domain% frequency
+#  %dimensionality%   1
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+############################################################
+
+
+##############################
+#  spec_noise                #
+##############################
+# evaluate noise, estimated by finding an empty zone
+# %param% spec_noise boolean / default 0
+
+spec_noise=0
+
+# %param% spec_noise_n integer / default 30
+
+spec_noise_n=30
+
+# number of different zones where noise is evaluated
+# %return% NoiseInFrequencyDomain
+# estimate of the noise in the spectrum
+
+##############################
+#  prefilter                 #
+##############################
+# smooths the spectrum before peak-picking, modification is not stored permanently
+# %param% prefilter boolean / default 1
+
+prefilter=1
+
+# %param% prefilter_value float / default 3.0
+
+prefilter_value=3.0
+
+# pre-smoothing parameter in Hz
+
+##############################
+#  restrict                  #
+##############################
+# restricts the peak picking to a certain spectral zone 
+# %param% restrict boolean / default 0
+
+restrict=0
+
+# %param% restrict_left float / default 10.0
+
+restrict_left=10.0
+
+# the left border of the restrict zone, in unit
+# %param% restrict_left_unit enum ppm hz index / default ppm
+
+restrict_left_unit=ppm
+
+# the unit in which restrict_left is given
+# %param% restrict_right float / default 0.0
+
+restrict_right=0.0
+
+# the right border of the restrict zone, in unit
+# %param% restrict_right_unit enum ppm hz index / default ppm
+
+restrict_right_unit=ppm
+
+# the unit in which restrict_right is given
+# %param_cond% (restrict_left{index} < restrict_right{index})
+# %return% restrict_left
+# the left coordinate of the restrict zone in index
+# %return% restrict_right
+# the right coordinate of the restrict zone in index
+
+##############################
+#  peakpick                  #
+##############################
+# do the peak picking, by detecting local extrema 
+# %param% peakpick boolean / default 1
+
+peakpick=1
+
+# %param% noise_thresh float / default 10.0
+
+noise_thresh=10.0
+
+# minimum peak/noise ratio for peak detection
+# %param% ratio_thresh float / default 30.0
+
+ratio_thresh=30.0
+
+# maximum tallest peak / peak ratio for peak detection
+# %param% peak_sign enum  positive negative both / default positive
+
+peak_sign=positive
+
+# sign of the peaks to detect
+# %return% nb_detect_peaks
+# the number of detected peaks
+# %return% low_limit
+# low limit for peak detection
+
+##############################
+#  aggregate                 #
+##############################
+# sorts peak list to aggregate peaks close from each other
+# %param% aggregate boolean / default 0
+
+aggregate=0
+
+# %param% aggregate_value float / default 3.0
+
+aggregate_value=3.0
+
+# distance parameter in Hz

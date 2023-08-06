@@ -1,0 +1,73 @@
+# Default parameter file for pre_2d
+# created by do_default.py
+
+############################################################
+#  This macro realizes the preparation operation on a 2D FID
+#  
+#  it implements global FID evaluation before 2D FT:
+#  - data_check       : performs minimum data checking 
+#  - fid_noise        : measure of noise and offset levels in FID of noise and offset levels in FID
+#  - conv_n_p         : conversion of N+P acquisition (echo / antiecho)
+#  
+#  arguments :
+#      audit       the opened audit file
+#      filein      the file name of the input file, can be "memory"
+#      fileout     the file name of the input file, can be "memory"
+#      p_in        the dictionary containing all the processing parameters
+#      f_in        the dictionary containing all the details on the spectrum "filein"
+#      f_out       details on the spectrum "fileout" will be put in this dictionary
+#  
+#  %F1-input-domain%  time
+#  %F2-input-domain%  time
+#  %F1-output-domain%  time
+#  %F2-output-domain%  time
+#  %dimensionality%   2
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+#  
+############################################################
+
+
+##############################
+#  data_check                #
+##############################
+# performs minimum data integrity
+# %param% data_check boolean / default 1
+
+data_check=1
+
+# checks points which can not be checked by the kernel
+# for the moment, only check data-sets with an odd number of points
+
+##############################
+#  fid_noise                 #
+##############################
+# evaluate noise and offset, estimated from the last points
+# %param% fid_noise_F2zone float / default 0.2
+
+fid_noise_F2zone=0.2
+
+# zone of the 2D FID (expressed in % from the end) where to compute noise
+# %param_cond% [ (fid_noise_F2zone > 0.0) and (fid_noise_F2zone<=1)]
+# %param% fid_noise_f1zone float / default 0.1
+
+fid_noise_f1zone=0.1
+
+# zone of the 2D FID (expressed in % from the end) where to compute noise
+# %param_cond% [ (fid_noise_f1zone > 0.0) and (fid_noise_f1zone<=1)]
+# %return% fid_offset
+# constant offset of the FID, estimated on the last points of the dataset
+# %return% NOISEINTIMEDOMAIN
+# estimate of the fid noise, from the standard deviation of the last points of the dataset
+# set_task("FID noise evaluation")
+
+##############################
+#  conv_n_p                  #
+##############################
+# convert experiment acquired in n+p (echo/antiecho mode) to hypercomplex
+# %param% conv_n_p boolean / default 0
+
+conv_n_p=0
+
+# %param_exclusive%  [ conv_n_p ft_phase_modu ]

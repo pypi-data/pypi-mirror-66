@@ -1,0 +1,117 @@
+# Default parameter file for pre_ft_2df2
+# created by do_default.py
+
+############################################################
+#  This macro realizes the pre FT operation on each F2 FID of the 2D
+#  
+#  it implements FID massaging before FT:
+#  - dc_offset        : corrects for constant offset in FID
+#  - causalize        : changes DSP processed FID (Bruker) to causal FID's by Hilbert transform
+#  - flatten_solvent  : removes solvent signal by FID analysis
+#  - left_shift       : drops first points of the FID 
+#  - right_shift      : adds empty points on the beginning of the FID
+#  - back_extend      : reconstructs missing points in the beginning of the FID by LP analysis
+#  
+#  %F2-input-domain%  time
+#  %F2-output-domain% time
+#  %dimensionality%   2
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+#  
+############################################################
+
+
+##############################
+#  dc_offset                 #
+##############################
+# removes a constant level in the fid, estimated from the last points
+# %param% dc_offset boolean  / default 0
+
+dc_offset=0
+
+# %param%  fid_noise_f2zone float / default 0.2
+
+fid_noise_f2zone=0.2
+
+# constant offset of the FID, estimated on the last points of the dataset
+
+##############################
+#  causalize                 #
+##############################
+# removes the non causal header found in certain (Bruker) implementation of the digital filter.
+# %param% causalize boolean / default 0
+
+causalize=0
+
+# %use% axisf2_zerotimeposition
+# %return% causalize
+# contains the correction applied by causalize
+
+##############################
+#  flatten_solvent           #
+##############################
+# removes water from fit of the FID in the time domain
+# %param% flatten_solvent boolean  / default 0
+
+flatten_solvent=0
+
+# %param% flat_solv_mode enum polynomial moving_average polynomial+moving_average moving_average+polynomial / default polynomial
+
+flat_solv_mode=polynomial
+
+# algorithm used
+
+##############################
+#  f2_left_shift             #
+##############################
+# shifts the FID to the left by dropping data points
+# %param% f2_left_shift boolean  / default 0
+
+f2_left_shift=0
+
+# %param% f2_left_shift_size integer  / default 2
+
+f2_left_shift_size=2
+
+# number of points to shift
+# %param_cond%  [ (f2_left_shift_size > 0) and (f2_left_shift_size < get_si2_2d()) ]
+
+##############################
+#  f2_right_shift            #
+##############################
+# shifts the FID to the right by adding zero data points
+# %param% f2_right_shift boolean  / default 0
+
+f2_right_shift=0
+
+# %param% f2_right_shift_size integer  / default 2
+
+f2_right_shift_size=2
+
+# number of points to shift
+# %param_cond%  [ (f2_right_shift_size > 0) ]
+
+##############################
+#  back_extend               #
+##############################
+# extends the FID backward for reconstruction of initial missing points
+# %param% f2_b_extend boolean  / default 0
+
+f2_b_extend=0
+
+# %param% f2_b_extend_size integer / default 2
+
+f2_b_extend_size=2
+
+# number of missing points to reconstruct
+# %param_cond% [ f2_b_extend_size > 0 ]
+# %param% f2_b_extend_algo enum burg / default burg
+
+f2_b_extend_algo=burg
+
+# algorithm used
+# %return% f2_b_extend_order
+# the order used during back_extend
+# %return% f2_b_extend_size
+# the number of points added by back_extend

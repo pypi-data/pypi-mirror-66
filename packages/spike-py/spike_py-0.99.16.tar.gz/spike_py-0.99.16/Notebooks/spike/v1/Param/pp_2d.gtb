@@ -1,0 +1,177 @@
+# Default parameter file for pp_2d
+# created by do_default.py
+
+############################################################
+#  This macro realizes the peak picking of a 2D dataset
+#  
+#  it implements
+#  - spec_noise        : estimates noise
+#  - prefilter               : apply a filtering to the data-set to remove features below a given separation in Hz
+#  - restrict          : defines the zone in whch the peak-picking is to be done
+#  - peakpick                : do the peak picking
+#  - postfilter              : apply a post filtering on the peak list
+#  
+#  %F1-input-domain%  frequency
+#  %F2-input-domain% frequency
+#  %dimensionality%   2
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+#  
+############################################################
+
+
+##############################
+#  spec_noise                #
+##############################
+# evaluate noise, estimated by finding an empty zone
+# %param% spec_noise boolean / default 0
+
+spec_noise=0
+
+# %param% spec_noise_n integer / default 30
+
+spec_noise_n=30
+
+# number of different zones where noise is evaluated
+# %return% NoiseInFrequencyDomain
+
+##############################
+#  prefilter                 #
+##############################
+# smooths the spectrum before peak-picking, modification is not stored permanently
+# %param% prefilter boolean / default 0
+
+prefilter=0
+
+# %param% f1_prefilter_value float / default 10.0
+
+f1_prefilter_value=10.0
+
+# pre-smoothing parameter for F1 axis in Hz
+# %param% f2_prefilter_value float / default 10.0
+
+f2_prefilter_value=10.0
+
+# pre-smoothing parameter for F2 axis in Hz
+
+##############################
+#  restrict                  #
+##############################
+# restricts the peak picking to a certain spectral zone 
+# %param% restrict boolean / default 0
+
+restrict=0
+
+# %param% f1_restrict_left float / default 10.0
+
+f1_restrict_left=10.0
+
+# the left border of the F1 restrict zone, in unit
+# %param% f1_restrict_left_unit enum ppm hz index / default ppm
+
+f1_restrict_left_unit=ppm
+
+# the unit in which F1 restrict_left is given
+# %param% f1_restrict_right float / default 0.0
+
+f1_restrict_right=0.0
+
+# the right border of the F1 restrict zone, in unit
+# %param% f1_restrict_right_unit enum ppm hz index / default ppm
+
+f1_restrict_right_unit=ppm
+
+# the unit in which F1 restrict_right is given
+# %param_cond% (f1_restrict_left{index} < f1_restrict_right{index})
+# %return% f1_restrict_left
+# the left coordinate of the F1 restrict zone in index
+# %return% f1_restrict_right
+# the right coordinate of the F1 restrict zone in index
+# %param% f2_restrict_left float / default 10.0
+
+f2_restrict_left=10.0
+
+# the left border of the F2 restrict zone, in unit
+# %param% f2_restrict_left_unit enum ppm hz index / default ppm
+
+f2_restrict_left_unit=ppm
+
+# the unit in which F2 restrict_left is given
+# %param% f2_restrict_right float / default 0.0
+
+f2_restrict_right=0.0
+
+# the right border of the F2 restrict zone, in unit
+# %param% f2_restrict_right_unit enum ppm hz index / default ppm
+
+f2_restrict_right_unit=ppm
+
+# the unit in which f2_restrict_right is given
+# %param_cond% (f2_restrict_left{index} < f2_restrict_right{index})
+# %return% f2_restrict_left
+# the left coordinate of the F2 restrict zone in index
+# %return% f2_restrict_right
+# the right coordinate of the F2 restrict zone in index
+
+##############################
+#  peakpick                  #
+##############################
+# do the peak picking, by detecting local extrema 
+# %param% peakpick boolean / default 1
+
+peakpick=1
+
+# %param% noise_thresh float / default 10.0
+
+noise_thresh=10.0
+
+# minimum peak/noise ratio for peak detection
+# %param% ratio_thresh float / default 30.0
+
+ratio_thresh=30.0
+
+# maximum tallest peak / peak ratio for peak detection
+# %param% peak_sign enum  positive negative both / default positive
+
+peak_sign=positive
+
+# sign of the peaks to detect
+# %return% nb_detect_peaks
+# the number of detected peaks
+# %return% low_limit
+# low limit for peak detection
+
+##############################
+#  aggregate                 #
+##############################
+# sorts peak list to aggregate peaks close from each other
+# %param% aggregate boolean / default 0
+
+aggregate=0
+
+# %param% aggregate_value float / default 10.0
+
+aggregate_value=10.0
+
+# distance parameter in Hz
+
+##############################
+#  symetrize_peak            #
+##############################
+# symetrizes the peak list to  peaks relative to the diagonal
+# %param% symetrize_peak boolean / default 0
+
+symetrize_peak=0
+
+# %param% symetrize_peak_tol float / default 10.0
+
+symetrize_peak_tol=10.0
+
+# tolerance for symetrisation, in Hz
+# %param% symetrize_peak_algo enum remove add / default add
+
+symetrize_peak_algo=add
+
+# correction to apply,
+# either add missing peaks, are remove non symetrical peaks

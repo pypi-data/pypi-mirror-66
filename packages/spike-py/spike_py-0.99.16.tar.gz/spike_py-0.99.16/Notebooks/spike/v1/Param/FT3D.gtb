@@ -1,0 +1,13 @@
+# Default parameter file for FT3D
+# created by do_default.py
+
+############################################################
+#      FT processing of a 3D FID
+#  
+#      uses  :
+#          pre_3d()
+#          process3DF2F3()
+#          process3DF1()
+#          post_3d()
+############################################################
+

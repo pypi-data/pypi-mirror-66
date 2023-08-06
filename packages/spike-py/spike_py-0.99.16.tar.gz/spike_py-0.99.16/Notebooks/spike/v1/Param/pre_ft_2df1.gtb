@@ -1,0 +1,74 @@
+# Default parameter file for pre_ft_2df1
+# created by do_default.py
+
+############################################################
+#  This macro realizes the pre FT operation on each F1 FID of the 2D
+#  
+#  it implements FID massaging before FT:
+#  - left_shift       : drops first points of the FID 
+#  - right_shift      : adds empty points on the beginning of the FID
+#  - back_extend      : reconstructs missing points in the beginning of the FID by LP analysis
+#  
+#  %F1-input-domain%  time
+#  %F1-output-domain% time
+#  %dimensionality%   2
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+#  
+############################################################
+
+
+##############################
+#  f1_left_shift             #
+##############################
+# shifts the FID to the left by dropping data points, probably always useless !
+# %param% f1_left_shift boolean  / default 0
+
+f1_left_shift=0
+
+# %param% f1_left_shift_size integer  / default 2
+
+f1_left_shift_size=2
+
+# number of points to shift
+# %param_cond%  [ (f1_left_shift_size > 0) and (f1_left_shift_size < get_si1_2d()) ]
+
+##############################
+#  f1_right_shift            #
+##############################
+# shifts the FID to the right by adding zero data points
+# %param% f1_right_shift boolean  / default 0
+
+f1_right_shift=0
+
+# %param% f1_right_shift_size integer  / default 2
+
+f1_right_shift_size=2
+
+# number of points to shift
+# %param_cond%  [ (f1_right_shift_size > 0) ]
+
+##############################
+#  f1_back_extend            #
+##############################
+# extends the FID backward for reconstruction of initial missing points
+# %param% f1_b_extend boolean  / default 0
+
+f1_b_extend=0
+
+# %param% f1_b_extend_size integer > 0  / default 2*get_si1_2d()
+
+f1_b_extend_size=2*get_si1_2d()
+
+# number of missing points to reconstruct
+# %param_cond% [ f1_b_extend_size > 0 ]
+# %param% f1_b_extend_algo enum burg / default burg
+
+f1_b_extend_algo=burg
+
+# algorithm used
+# %return% f1_b_extend_order
+# the order used during back_extend
+# %return% f1_b_extend_size
+# the number of points added by back_extend

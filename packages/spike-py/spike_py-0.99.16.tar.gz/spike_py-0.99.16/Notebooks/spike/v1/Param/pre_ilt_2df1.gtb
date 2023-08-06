@@ -1,0 +1,139 @@
+# Default parameter file for pre_ilt_2df1
+# created by do_default.py
+
+############################################################
+#  This macro realizes the pre operation on each F1 decay of the 2D
+#  
+#  it implements data massaging before ILT:
+#  - ilt_set-up
+#      dosy_q2 dosy_tab tosy_q2 tosy_tab
+#  - load tabulated file
+#      file name
+#  - calibration
+#  - F1 noise evaluation
+#  - wrong points filtering
+#  
+#  %F1-input-domain%  tabulated
+#  %F1-output-domain% tabulated
+#  %dimensionality%   2
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+#  
+############################################################
+
+
+##############################
+#  ilt_set-up                #
+##############################
+# determines the kind of analysis to perform
+# %param% ilt_type enum dosy tosy / default dosy
+
+ilt_type=dosy
+
+# %param% sampling_type enum regular tabulated / default regular
+
+sampling_type=regular
+
+# %param% sampling_tab_file file_name
+# sampling_type == tabulated implies sampling_tab_file
+
+##############################
+#  ilt_tosy_calibration      #
+##############################
+# Calibrate ilt axis on physical parameters for Tosy
+# %param% ilt_tosy_unit enum usec msec sec / default sec 
+
+ilt_tosy_unit=sec
+
+# value of the Laplace axis unity
+
+##############################
+#  ilt_dosy_calibration      #
+##############################
+# Calibrate ilt axis on physical parameters for Dosy
+# %param% dosy_big_delta float
+# "Big Delta"  : diffusion delay in msec
+# %param% dosy_little_delta float
+# "little Delta"  : gradient duration in msec
+# %param% dosy_seq_typ enum pgse ste bpp_ste ste_2echoes bpp_ste_2echoes oneshot / default ste
+
+dosy_seq_typ=ste
+
+# the type of DOSY sequence used
+# %param% dosy_nucleus enum 1H 2H 13C 15N 17O 19F 31P / default 1H
+
+dosy_nucleus=1H
+
+# the observed nucleus
+# %param% recovery_gradient_delay float / default 0.0
+
+recovery_gradient_delay=0.0
+
+# %param_cond%  (recovery_gradient_delay >= 0 ) 
+# Gradient recovery delay
+# %param% max_grad float nonnegative / default 50.0
+
+max_grad=50.0
+
+# Maximum Amplificator Gradient Intensity, in G/cm    
+# %param_cond%  (max_grad > 0 )
+# %param% max_tab float / default 100.0
+
+max_tab=100.0
+
+# Maximum Tabulated Gradient Value in the tabulated file. 
+# Bruker users use 100 here
+# Varian users use 32768 here
+# %param_cond%  (max_tab > 0 )
+# %param% gradient_shape float / default 1.0
+
+gradient_shape=1.0
+
+# integral factor depending on the gradient shape used 
+# typical values are :
+# 1.0 for rectangular gradients
+# 0.6366 = 2/pi for sine bell gradients
+# 0.4839496 for 4% truncated gaussian (Bruker gauss.100 file)
+# %param_cond%  [ (gradient_shape > 0.0 ) and (gradient_shape <= 1.0 )]
+
+##############################
+#  f1_noise                  #
+##############################
+# evaluate noise, estimated by finding an empty zone on a given 1D spectrum
+# %param% f1_noise boolean / default 1
+
+f1_noise=1
+
+# %param% f1_noise_n integer / default 30
+
+f1_noise_n=30
+
+# number of different zones where noise is evaluated
+# %param% f1_noise_row integer / default get_si1_2d()
+
+f1_noise_row=get_si1_2d()
+
+# the index of the row on which the noise is evaluated
+# %param% f1_noise_weight float / default 1.0
+
+f1_noise_weight=1.0
+
+# the noise used during the MaxEnt iteration is weigthed with this scalar,
+# this permits to compensate for over- or under-estimate of the noise level
+# %param_cond%   [ noise_weight > 0.0 ]
+# %return% noise_in_f1_domain
+
+##############################
+#  f1_ignore_point           #
+##############################
+# enter the list of the point to ignore along the (gradient) axis
+# %param% f1_ignore_point boolean / default 0
+
+f1_ignore_point=0
+
+# %param% f1_ignore_point_list (list of integer) / default ()
+
+f1_ignore_point_list=()
+
+# list of points to ignore

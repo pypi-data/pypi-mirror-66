@@ -1,0 +1,13 @@
+# Default parameter file for PreDosy3D
+# created by do_default.py
+
+############################################################
+#      prepare a 3D for processing of a 3D DOSY experiment
+#  
+#      experiment should be organized as a decaying series along F1 of regular 2D along F2-F3.
+#      ends with a half processed file
+#      uses  :
+#          process3DF2F3()        ( from Process3D )
+#          pre_dosy()
+############################################################
+

@@ -1,0 +1,75 @@
+# Default parameter file for post_maxent_1d
+# created by do_default.py
+
+############################################################
+#      post processing of a 1D spectrum processed by MaxEnt
+############################################################
+
+
+##############################
+#  calibration               #
+##############################
+# calibrate 0ppm on the spectrum
+# %param% calibration float / default 0.0
+
+calibration=0.0
+
+# the coordinate in ppm of the right-most point in the spectrum
+
+##############################
+#  spectral_zone             #
+##############################
+# extract one spectral zone of the spectrum
+# %param% spectral_zone boolean / default 0
+
+spectral_zone=0
+
+# %param% spec_zone_left float / default 10.0
+
+spec_zone_left=10.0
+
+# the left border of the extract zone, in unit
+# %param% spec_zone_left_unit enum ppm hz index / default ppm
+
+spec_zone_left_unit=ppm
+
+# the unit in which spec_zone_left is given
+# %param% spec_zone_right float / default 0.0
+
+spec_zone_right=0.0
+
+# the right border of the extract zone, in unit
+# %param% spec_zone_right_unit enum ppm hz index / default ppm
+
+spec_zone_right_unit=ppm
+
+# the unit in which spec_zone_right is given
+# %param_cond% (spec_zone_left{index} < spec_zone_right{index})
+# %return% spec_zone_left  the left coordinate of the extracted spectral zone in index
+# %return% spec_zone_right  the right coordinate of the extracted spectral zone in index
+
+##############################
+#  baseline correction       #
+##############################
+# baseline correction of the spectrum
+# %param% baseline boolean / default 1
+
+baseline=1
+
+# %param% bcorr_algo enum offset linear spline polynomial moving_average polynomial+moving_average moving_average+polynomial / default linear
+
+bcorr_algo=linear
+
+# %param% bcorr_pivots Integerlist / default 10.0
+
+bcorr_pivots=10.0
+
+# pivot points used by the linear or spline algorithm
+# %param_cond% (index > 0 and index <= get_si1_1d())
+# %param% bcorr_radius integer > 0 / default 3
+
+bcorr_radius=3
+
+# radius around pivot points used by the linear or spline algorithm
+# %return% spec_offset
+# offset computed from the pivot points when using the offset algo

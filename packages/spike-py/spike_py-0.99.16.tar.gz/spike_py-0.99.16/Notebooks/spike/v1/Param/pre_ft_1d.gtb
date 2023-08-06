@@ -1,0 +1,127 @@
+# Default parameter file for pre_ft_1d
+# created by do_default.py
+
+############################################################
+#  This macro realizes the pre FT operation on a 1D FID
+#  
+#  - fid_noise        : evaluate of noise and offset levels in FID
+#  - dc_offset        : corrects for constant offset in FID
+#  - causalize        : changes DSP processed FID (Bruker) to causal FID's by Hilbert transform
+#  - flatten_solvent  : removes solvent signal by FID analysis
+#  - left_shift       : drops first points of the FID 
+#  - right_shift      : adds empty points on the beginning of the FID
+#  - back_extend      : reconstructs missing points in the beginning of the FID by LP analysis
+#  
+#  %F1-input-domain%  time
+#  %F1-output-domain% time
+#  %dimensionality%   1
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+############################################################
+
+
+##############################
+#  fid_noise                 #
+##############################
+# evaluate noise and offset, estimated from the last points
+# %param% fid_noise_zone float / default 0.2
+
+fid_noise_zone=0.2
+
+# zone of the FID (expressed in % from the end) where to compute noise
+# %param_cond% [ (fid_noise_zone > 0.0) and (fid_noise_zone<=1)]
+# %return% fid_offset
+# constant offset of the FID, estimated on the last points of the dataset (defined by fid_noise_zone)
+# %return% NoiseInTimeDomain
+# estimate of the fid noise, from the standard deviation of the last points of the dataset (defined by fid_noise_zone)
+
+##############################
+#  dc_offset                 #
+##############################
+# removes a constant level in the fid, estimated from the last points
+# default has been set to off (0), as it seems the 
+# %param% dc_offset boolean  / default 0
+
+dc_offset=0
+
+
+##############################
+#  causalize                 #
+##############################
+# removes the non causal header found in certain (Bruker) implementation of the digital filter.
+# %param% causalize boolean / default 0
+
+causalize=0
+
+# %use% zerotimeposition
+# %return% causalize
+# contains the correction applied by causalize
+
+##############################
+#  flatten_solvent           #
+##############################
+# removes water from fit of the FID in the time domain
+# %param% flatten_solvent boolean  / default 0
+
+flatten_solvent=0
+
+# %param% flat_solv_mode enum polynomial moving_average polynomial+moving_average moving_average+polynomial / default polynomial
+
+flat_solv_mode=polynomial
+
+# algorithm used
+
+##############################
+#  left_shift                #
+##############################
+# shifts the FID to the left by dropping data points
+# %param% left_shift boolean  / default 0
+
+left_shift=0
+
+# %param% left_shift_size integer  / default 2
+
+left_shift_size=2
+
+# number of points to shift
+# %param_cond%  [ (left_shift_size > 0) and (left_shift_size < get_si1_1d()) ]
+
+##############################
+#  right_shift               #
+##############################
+# shifts the FID to the right by adding zero data points
+# %param% right_shift boolean  / default 0
+
+right_shift=0
+
+# %param% right_shift_size integer  / default 2
+
+right_shift_size=2
+
+# number of points to shift
+# %param_cond%  [ (right_shift_size > 0) ]
+
+##############################
+#  b_extend                  #
+##############################
+# extends the FID backward for reconstruction of initial missing points
+# %param% b_extend boolean  / default 0
+
+b_extend=0
+
+# %param% b_extend_size integer / default 2
+
+b_extend_size=2
+
+# number of missing points to reconstruct
+# %param_cond% [ b_extend_size > 0 ]
+# %param% b_extend_algo enum burg svd  / default burg
+
+b_extend_algo=burg
+
+# algorithm used
+# %return% b_extend_order 
+# the order used during back_extend
+# %return% b_extend_size 
+# the number of points added by back_extend

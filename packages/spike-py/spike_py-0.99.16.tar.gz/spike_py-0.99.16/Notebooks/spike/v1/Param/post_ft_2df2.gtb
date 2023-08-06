@@ -1,0 +1,115 @@
+# Default parameter file for post_ft_2df2
+# created by do_default.py
+
+############################################################
+#  This macro realizes the post FT operation on each F2 spectrum of the 2D
+#  
+#  it implements the massaging of the spectrum after FT :
+#  - phase         : apply phase correction on the complex spectrum
+#  - autophase     : compute and apply phase correction 
+#  - invHibert     : apply inverse Hilbert transform
+#  - calibration   : apply ppm calibration
+#  - spectral_zone : extract a spectral zone
+#  
+#  %F2-input-domain%  frequency
+#  %F2-output-domain% frequency
+#  %dimensionality%   2
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+#  
+############################################################
+
+
+##############################
+#  phase                     #
+##############################
+# applies a F2 phase correction to the spectrum
+# %param% f2_phase boolean / default 0
+
+f2_phase=0
+
+# %param% f2_phase_0 float / default 0.0
+
+f2_phase_0=0.0
+
+# global order phase correction
+# %param_cond% ( (f2_phase_0 >= -180 ) and (f2_phase_0 <= 180) )
+# %param% f2_phase_1 float / default 0.0
+
+f2_phase_1=0.0
+
+# 1st order phase correction
+
+##############################
+#  autophase                 #
+##############################
+# automatic phase correction of the spectrum in F2
+# phase is computed on the first experiment
+# %param% f2_autophase boolean / default 0
+
+f2_autophase=0
+
+# %param% f2_phase_algo enum apsl apmin / default apmin
+
+f2_phase_algo=apmin
+
+# algorithm used
+# %return% f2_autophase_0
+# the value of the global order phase correction applied by autophase 
+# %return% f2_autophase_1
+# the value of the 1st order phase correction applied by autophase 
+
+##############################
+#  invHilbert                #
+##############################
+# apply an inverse Hilbert transform.
+# This operation takes a complex spectrum, and generates a real spectrum in-place
+# i.e. with twice the number of real points.
+# %param% f2_invHilbert boolean / default 0
+
+f2_invHilbert=0
+
+
+##############################
+#  calibration               #
+##############################
+# calibrate the ppm scale on the spectrum
+# %param% f2_calibration float / default 0
+
+f2_calibration=0
+
+# the coordinate in ppm of the right-most point in the spectrum
+
+##############################
+#  spectral_zone             #
+##############################
+# extract one spectral zone of the spectrum
+# %param% f2_spectral_zone boolean / default 0
+
+f2_spectral_zone=0
+
+# %param% f2_spec_zone_left float / default 10.0
+
+f2_spec_zone_left=10.0
+
+# the left border of the extract zone, in unit
+# %param% f2_spec_zone_left_unit enum ppm hz index / default ppm
+
+f2_spec_zone_left_unit=ppm
+
+# the unit in which spec_zone_left is given
+# %param% f2_spec_zone_right float / default 0.0
+
+f2_spec_zone_right=0.0
+
+# the right border of the extract zone, in unit
+# %param% f2_spec_zone_right_unit enum ppm hz index / default ppm
+
+f2_spec_zone_right_unit=ppm
+
+# the unit in which spec_zone_right is given
+# %return% f2_spec_zone_left
+# the left coordinate of the extracted spectral zone in index
+# %return% f2_spec_zone_right
+# the right coordinate of the extracted spectral zone in index

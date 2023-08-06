@@ -1,0 +1,33 @@
+# Default parameter file for integ_1d
+# created by do_default.py
+
+############################################################
+#  This macro Computes integrales of a 1D spectrum
+#  - integral    : omputes integral positions from peaks
+#  
+#      
+#  %F1-input-domain%  frequency
+#  %F1-output-domain% frequency
+#  %dimensionality%   1
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+############################################################
+
+
+##############################
+#  integral                  #
+##############################
+# computes integral positions from peaks
+# %param% integ_aggregate float / default 30
+
+integ_aggregate=30
+
+# peak aggregatian width, in Hz
+# %param% integ_extention float / default 15
+
+integ_extention=15
+
+# integral extension, in Hz
+# %return% nb_integral
+# number of integral zones determined

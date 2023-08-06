@@ -1,0 +1,134 @@
+# Default parameter file for post_ft_2df1
+# created by do_default.py
+
+############################################################
+#  This macro realizes the post FT operation on each F1 spectrum of the 2D
+#  
+#  it implements the massaging of the spectrum after FT :
+#  - phase         : apply phase correction on the complex spectrum
+#  - autophase     : compute and apply phase correction 
+#  - invHibert     : apply inverse Hilbert transform
+#  - calibration   : apply ppm calibration
+#  - autocalibrate : autocalibration of the F1 axis based on the F2 calibration
+#  - spectral_zone : extract a spectral zone
+#  
+#  %F2-input-domain%  frequency
+#  %F2-output-domain% frequency
+#  %dimensionality%   2
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+#  
+############################################################
+
+
+##############################
+#  phase                     #
+##############################
+# applies a F1 phase correction to the spectrum
+# %param% f1_phase boolean / default 0
+
+f1_phase=0
+
+# %param% f1_phase_0 float / default 0.0
+
+f1_phase_0=0.0
+
+# global order phase correction
+# %param_cond% ( (f1_phase_0 >= -180 ) and (f1_phase_0 <= 180) )
+# %param% f1_phase_1 float / default 0.0
+
+f1_phase_1=0.0
+
+# 1st order phase correction
+
+##############################
+#  autophase                 #
+##############################
+# automatic phase correction of the spectrum in F1
+# phase is computed from a set 
+# %param% f1_autophase boolean / default 0
+
+f1_autophase=0
+
+# %param% f1_phase_algo enum apsl apmin / default apmin
+
+f1_phase_algo=apmin
+
+# algorithm used
+# %return% f1_autophase_0
+# the value of the global order phase correction applied by autophase 
+# %return% f1_autophase_1
+# the value of the 1st order phase correction applied by autophase 
+
+##############################
+#  invHilbert                #
+##############################
+# apply an inverse Hilbert transform.
+# This operation takes a complex spectrm, and generate a real spectrum in-place
+# i.e. with twice the number of real points.
+# %param% f1_invHilbert boolean / default 0
+
+f1_invHilbert=0
+
+
+##############################
+#  autocalibrate             #
+##############################
+# calibrates the F1 axis based on the F2 calibration, using IUPAC / IUPAB conventions
+# %param% f1_autocalibrate boolean / default 1
+
+f1_autocalibrate=1
+
+# %param% autocalibrate_mode   enum standard biomolecule / default standard
+
+autocalibrate_mode=standard
+
+# if autocalibrate_mode is standard, IUPAC rules are followed,
+# if autocalibrate_mode is biomolecule then
+# DSS is used instead of TMS for 2H and 13C
+# NH3 is used instead of CH3NO2 for 15N
+# (CH3O)3PO is used instead of H3PO4 for 31P
+
+##############################
+#  calibration               #
+##############################
+# calibrate the ppm scale on the spectrum
+# %param% f1_calibration float / default 0
+
+f1_calibration=0
+
+# the coordinate in ppm of the lower-most point in the spectrum
+
+##############################
+#  spectral_zone             #
+##############################
+# extract one spectral zone of the spectrum
+# %param% f1_spectral_zone boolean / default 0
+
+f1_spectral_zone=0
+
+# %param% f1_spec_zone_left float / default 10.0
+
+f1_spec_zone_left=10.0
+
+# the left border of the extract zone, in unit
+# %param% f1_spec_zone_left_unit enum ppm hz index / default ppm
+
+f1_spec_zone_left_unit=ppm
+
+# the unit in which spec_zone_left is given
+# %param% f1_spec_zone_right float / default 0.0
+
+f1_spec_zone_right=0.0
+
+# the right border of the extract zone, in unit
+# %param% f1_spec_zone_right_unit enum ppm hz index / default ppm
+
+f1_spec_zone_right_unit=ppm
+
+# the unit in which spec_zone_right is given
+# %return% f1_spec_zone_left
+# the left coordinate of the extracted spectral zone in index
+# %return% f1_spec_zone_right
+# the right coordinate of the extracted spectral zone in index

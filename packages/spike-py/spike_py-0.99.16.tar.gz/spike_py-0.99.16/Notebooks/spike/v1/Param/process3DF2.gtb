@@ -1,0 +1,7 @@
+# Default parameter file for process3DF2
+# created by do_default.py
+
+############################################################
+#      This macro realizes the 1D processing of each F2-FID along the F2 (intermediate varying) axis of the 3D
+############################################################
+

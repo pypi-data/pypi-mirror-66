@@ -1,0 +1,135 @@
+# Default parameter file for ft_2df1
+# created by do_default.py
+
+############################################################
+#  This macro realizes the FT operation on the F1 FID of the 2D
+#  
+#  it implements the spectral analysis step :
+#  - truncate          : remove points at the end of the FID
+#  - lp_extend         : extend the FID by LP analysis
+#  - apodisation       : multiply the FID by some windowing function 
+#  - Fourier_transform : performs FFT
+#  - reverse           : reverses spectral axis
+#  
+#  %F1-input-domain%  time
+#  %F1-output-domain% frequency
+#  %dimensionality%   2
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+#  
+############################################################
+
+
+##############################
+#  truncate                  #
+##############################
+# truncates along the F1 dimension by removing the last points
+# %param% f1_truncate boolean / default 0
+
+f1_truncate=0
+
+# %param% f1_trunc_size integer > 0 <= get_si1_2d() / default get_si1_2d()
+
+f1_trunc_size=get_si1_2d()
+
+# FID size after truncation
+# %param_cond% [ (f1_trunc_size > 0 ) and (f1_trunc_size <= get_si1_2d() ) ]
+
+##############################
+#  f1_lp_extend              #
+##############################
+# extend FID with LP algorithm
+# %param% f1_lp_extend boolean / default 0
+
+f1_lp_extend=0
+
+# %param% f1_lp_ext_size integer > si1_2d / default 2*get_si1_2d()
+
+f1_lp_ext_size=2*get_si1_2d()
+
+# final size of FID
+# %param_cond% [ f1_lp_ext_size > get_si1_2d() ]
+# %param% f1_lp_ext_algo enum burg mirror lpsvd lpsvd_stable / default burg
+
+f1_lp_ext_algo=burg
+
+# algorithm used
+# burg and miror are much faster, svd_stable is much slower
+# miror is to be used when the phase of the spectrum is known before hand (see lp_ext_off)
+# %param% f1_lp_ext_off integer / default 0
+
+f1_lp_ext_off=0
+
+# offset determines the position of the t=0 point, used by mirror algo
+# 0  no shift : in-phase data set.
+# -1  acquisition started exactly half a dwell after t=0 - (will need phase 0 180)
+# n>0 acquisition started exactly n dwell before t=0
+# %param% f1_lp_ext_order integer / default 20
+
+f1_lp_ext_order=20
+
+# the size of the prediction polynomial used for LP, a rough estimate of the complexity
+# %param_cond% [ f1_lp_ext_order < get_si1_2d()/2 ]
+# %param% f1_lp_ext_apod boolean / default 1
+
+f1_lp_ext_apod=1
+
+# apply a sine bell apodisation after LP extenstion.
+
+##############################
+#  apodize                   #
+##############################
+# standard apodisation by a window
+# %param% f1_apodize boolean / default 1
+
+f1_apodize=1
+
+# %param% f1_apodisation string / default "sin(0.1)"
+
+f1_apodisation="sin(0.1)"
+
+# the string describing the apodisation to apply
+# "apodisation" should be a suite of window apodisation commands
+# ie : 'sin(0.5)' or 'exbroad(0.2);sin(0.5)'
+# the following predefined functions are implemnted
+# sin (sine bell) sqsin (squared sine bell) expbroad (exponential)
+# gaussbroad (gaussian) gaussenh (gaussian enhancement)
+
+##############################
+#  Fourier_transform         #
+##############################
+# performs the Fourier transform
+# %param% f1_fourier_transform boolean / default 1
+
+f1_fourier_transform=1
+
+# %param% f1_ask_for_ftsize boolean / default 0
+
+f1_ask_for_ftsize=0
+
+# if set, the final size is determined by f1_ft_size, automatically determined otherwise
+# size for FT is determined by  size or lp_ext_size or trunc_size
+# it will be extended to the next 2^n
+# %param% f1_ft_size integer  / default 2*power2(get_si1_2d())
+
+f1_ft_size=2*power2(get_si1_2d())
+
+# the size for FT if f1_ask_for_ftsize is true
+# %param_cond% (f1_ft_size == power2(n)
+# %param% f1_ft_type enum none ft_sh ft_tppi ft_sh_tppi ft_n_p ft_phase_modu ft rft / default ft_sh
+
+f1_ft_type=ft_sh
+
+# the Fourier transform algorithm, depends on the acquisition scheme
+# %return% f1_size_for_ft
+# contains the data size right after FT (will usually be different from final size)
+
+##############################
+#  f1_reverse                #
+##############################
+# %param% f1_reverse boolean / default 0
+
+f1_reverse=0
+
+# value depends on spectrometer

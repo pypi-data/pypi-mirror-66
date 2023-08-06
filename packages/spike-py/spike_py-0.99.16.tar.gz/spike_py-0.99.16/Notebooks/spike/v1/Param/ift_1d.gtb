@@ -1,0 +1,69 @@
+# Default parameter file for ift_1d
+# created by do_default.py
+
+############################################################
+#  This macro Computes the Inverse Fourier transform of a 1D spectrum
+#  
+#  - apodize       : standard apodisation
+#  - inverseFourier : performs the inverse Fourier transform
+#  - reverse       : reverses the spectral axis after FT
+#      
+#  %F1-input-domain%  frequency
+#  %F1-output-domain% time
+#  %dimensionality%   1
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+############################################################
+
+
+##############################
+#  apodize                   #
+##############################
+# standard apodisation
+# %param% apodize boolean / default 0
+
+apodize=0
+
+# %param% apodisation string / default "sin 0.5"
+
+apodisation="sin 0.5"
+
+# the string describing the apodisation to apply
+# see apodise.g for details
+
+##############################
+#  inverseFourier            #
+##############################
+# performs the inverse Fourier transform
+# %param% inverseFourier boolean / default 1
+
+inverseFourier=1
+
+# %param% ask_for_iftsize boolean / default 0
+
+ask_for_iftsize=0
+
+# if set, the final size is determined by ift_size, automatically determined otherwise
+# size for FT is determined by current size
+# it will be extended to the next 2^n
+# %param% ift_size integer  / default 2*power2(get_si1_1d())
+
+ift_size=2*power2(get_si1_1d())
+
+# %param% ft_type enum none ift ifthilbert / default ifthilbert
+
+ft_type=ifthilbert
+
+# two iFT algorithms, ifthilbert discard the imaginary part if present and computes it using Hilbert transform
+# %param_cond%   [ ispower2(ift_size) ]
+# %return% size_for_ift contains the data size right after iFT
+
+##############################
+#  reverse                   #
+##############################
+# reverses the spectral axis after FT
+# %param% reverse boolean / default 0
+
+reverse=0
+

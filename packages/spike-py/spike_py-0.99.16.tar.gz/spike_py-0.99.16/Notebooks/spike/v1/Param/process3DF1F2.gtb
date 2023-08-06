@@ -1,0 +1,7 @@
+# Default parameter file for process3DF1F2
+# created by do_default.py
+
+############################################################
+#      This macro realizes the 2D processing of each F1-F2 planes (aka orthogonal to F3) of the 3D
+############################################################
+

@@ -1,0 +1,197 @@
+# Default parameter file for post_maxent_2d
+# created by do_default.py
+
+############################################################
+#  This macro realizes the post MaxEnt operation on a 2D spectrum
+#   
+#  it implements the massaging of the spectrum after FT :
+#  - level_correction      : correct the slight level offseting by doing a simple baseline correction
+#  - calibration           : apply ppm calibration
+#  - positive_negative_cor : reconstruct a composite 2D from the two channel processing
+#  - smoothing             : apply a smoothing filter
+#  - median                : apply a media filter
+#  - projection            : compute F1 and F2 projections
+#  - select_state          : enforce the final state of the data
+#  
+#  arguments :
+#      audit       the opened audit file
+#      filein      the file name of the input file, can be "memory"
+#      fileout     the file name of the input file, can be "memory"
+#      p_in        the dictionary containing all the processing parameters
+#      f_in        the dictionary containing all the details on the spectrum "filein"
+#      f_out       details on the spectrum "fileout" will be put in this dictionary
+#  
+#  %F1-input-domain%  frequency
+#  %F1-output-domain% frequency
+#  %F2-input-domain%  frequency
+#  %F2-output-domain% frequency
+#  %dimensionality%  2
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+#  
+############################################################
+
+
+##############################
+#  level_correction          #
+##############################
+# correct the slight level offseting by doing a simple baseline correction
+# %param% level_correction boolean / default 1
+
+level_correction=1
+
+# %param% f2_level_correction_axis boolean / default 1
+
+f2_level_correction_axis=1
+
+# apply level on F2 axis
+# %param% f2_level_correction_pivots list / default (int(0.01*get_si2_2d()),int(0.99*get_si2_2d()))
+
+f2_level_correction_pivots=(int(0.01*get_si2_2d()),int(0.99*get_si2_2d()))
+
+# where level will be computed
+# %param% f1_level_correction_axis boolean / default 0
+
+f1_level_correction_axis=0
+
+# apply level on F1 axis
+# %param% f1_level_correction_pivots list / default (int(0.01*get_si1_2d()),int(0.99*get_si1_2d()))
+
+f1_level_correction_pivots=(int(0.01*get_si1_2d()),int(0.99*get_si1_2d()))
+
+# where level will be computed
+
+##############################
+#  positive_negative_cor     #
+##############################
+# reconstruct a composite 2D from the two channel processing
+# %param% positive_negative_cor boolean / default 0
+
+positive_negative_cor=0
+
+
+##############################
+#  calibration               #
+##############################
+# calibrate 0ppm on the spectrum
+# %param% f2_calibration float / default 0
+
+f2_calibration=0
+
+# the coordinate in ppm of the right-most point in the spectrum
+# %param% f1_autocalibrate boolean / default 1
+
+f1_autocalibrate=1
+
+# calibrate the F1 axis based on the F2 calibration.
+# overwrite the F1 calibration.
+# %param% f1_calibration float / default 0
+
+f1_calibration=0
+
+# the coordinate in ppm of the lower-most point in the spectrum
+
+##############################
+#  smoothing                 #
+##############################
+# apply a smoothing filter to the data-set
+# %param% smoothing boolean / default 0
+
+smoothing=0
+
+# %param% smooth_f1_w integer / default 2
+
+smooth_f1_w=2
+
+# size of the smoothing window in f1
+# %param% smooth_f2_w integer / default 2
+
+smooth_f2_w=2
+
+# size of the smoothing window in f2
+# %param% smooth_iteration / default 1
+
+smooth_iteration=1
+
+# number of loop
+# %param_cond% [ smooth_f1_w > 0 ]
+# %param_cond% [ smooth_f2_w > 0 ]
+
+##############################
+#  median                    #
+##############################
+# apply a median filter to the data-set
+# %param_cond% [ [ median == ((f1_extract_real and f2_extract_real) | modulus) ] 
+# %param% median boolean / default 0
+
+median=0
+
+# %param% median_f1_w integer / default 2
+
+median_f1_w=2
+
+# size of the median window in f1
+# %param% median_f2_w integer / default 2
+
+median_f2_w=2
+
+# size of the median window in f2
+# %param% median_i integer <= median_w  / default 2
+
+median_i=2
+
+# index of point to keep in the median filtering window
+# %param_cond% [ median_f2_w > 0 ]
+# %param_cond% [ median_f1_w > 0 ]
+# %param_cond% [ (median_i > 0) and (median_i <= (median_f1_w*median_f2_w)) ]
+
+##############################
+#  projection                #
+##############################
+# creates and store in files the projections of the 2D
+# 2 files are created per axis :
+# using a mean algorithm (_M suffix) and using a skyline algorithm (_S suffix)
+# %param% projection boolean / default 1
+
+projection=1
+
+# %return% f1_projection_M
+# %return% f2_projection_M
+# %return% f1_projection_S
+# %return% f2_projection_S
+
+##############################
+#  spec_noise                #
+##############################
+# evaluate noise, estimated by finding an empty zone
+# %param% spec_noise_n integer / default 10
+
+spec_noise_n=10
+
+# number of different zones where noise is evaluated
+# %return% spec_std_noise
+# estimate of the noise in the spectrum
+
+##############################
+#  select_state              #
+##############################
+# permit to choose the state complex / real of the output file
+# complex data are changed to real by dropping the imaginary part
+# real data are changed to complex by computing the Hilbert transform with tocomplex()
+# this is usually not required as all processing commands prepare the state themselves 
+# %param% select_state boolean / default 0
+
+select_state=0
+
+# actuallly does the selection
+# %param% f1_state enum ignore complex real / default ignore
+
+f1_state=ignore
+
+# force the f1 axis to real or complex. ignore will let the axis unchanged
+# %param% f2_state enum ignore complex real / default ignore
+
+f2_state=ignore
+
+# force the f2 axis to real or complex. ignore will let the axis unchanged

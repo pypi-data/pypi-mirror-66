@@ -1,0 +1,152 @@
+# Default parameter file for ft_1d
+# created by do_default.py
+
+############################################################
+#  This macro realizes the FT operation on a 1D FID
+#  
+#  - truncate      : truncates the FID by removing the last points
+#  - lp_extend     : extend FID with a Linear Prediction algorithm
+#  - apodize       : standard apodisation by a window
+#  - fourier_transform : performs the Fourier transform
+#  - causal_corr   : performs causal correction of the spectrum if not done on the FID
+#  - reverse       : reverses the spectral axis after FT
+#  
+#  
+#  %F1-input-domain%  time
+#  %F1-output-domain% frequency
+#  %dimensionality%   1
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+#  
+############################################################
+
+
+##############################
+#  truncate                  #
+##############################
+# truncates the FID by removing the last points
+# %param% truncate boolean / default 0
+
+truncate=0
+
+# %param% trunc_size integer / default get_si1_1d()
+
+trunc_size=get_si1_1d()
+
+# FID size after truncation
+# %param_cond% [ (trunc_size > 0 ) and (trunc_size <= get_si1_1d() ) ]
+
+##############################
+#  lp_extend                 #
+##############################
+# extend FID with a Linear Prediction algorithm
+# %param% lp_extend boolean / default 0
+
+lp_extend=0
+
+# %param% lp_ext_size integer / default 2*get_si1_1d()
+
+lp_ext_size=2*get_si1_1d()
+
+# final size of FID
+# %param_cond% [ lp_ext_size > get_si1_1d() ]
+# %param% lp_ext_algo enum burg mirror lpsvd lpsvd_stable / default burg
+
+lp_ext_algo=burg
+
+# algorithm used
+# burg and mirror are much faster, svd_stable is much slower
+# mirror is to be used when the phase of the spectrum is known before hand (see lp_ext_off)
+# %param% lp_ext_off integer / default 0
+
+lp_ext_off=0
+
+# offset determines the position of the t=0 point, used by mirror algo
+# 0           no shift : in-phase data set.
+# -1           acquisition started exactly half a dwell after t=0 - (will need phase 0 180)
+# lp_ext_off>0 acquisition started exactly n dwell before t=0
+# %param_cond% [ lp_ext_off > -1 ]
+# %param% lp_ext_order integer / default (min(get_si1_1d()/2,20))
+
+lp_ext_order=(min(get_si1_1d()/2,20))
+
+# the size of the prediction polynomial used for LP, a rough estimate of the complexity
+# %param_cond% [ (lp_ext_order < get_si1_1d()/2 ) and (lp_ext_order > 2) ]
+# %param% lp_ext_apod boolean / default 1
+
+lp_ext_apod=1
+
+# apply a sine bell apodisation after LP extenstion.
+
+##############################
+#  apodize                   #
+##############################
+# standard apodisation by a window
+# %param% apodize boolean / default 1
+
+apodize=1
+
+# %param% apodisation string / default "expbroad(0.5)"
+
+apodisation="expbroad(0.5)"
+
+# the string describing the apodisation to apply
+# "apodisation" should be a suite of window apodisation commands
+# ie : 'sin(0.5)' or 'exbroad(0.2), sin(0.5)'
+# the following predefined functions are implemnted
+# sin (sine bell) sqsin (squared sine bell) expbroad (exponential)
+# gaussbroad (gaussian) gaussenh (gaussian enhancement)
+
+##############################
+#  fourier_transform         #
+##############################
+# performs the Fourier transform
+# size after FT is determined automatically from FID size and apodisation.
+# the optimum size is determined heuristically from 
+# - the size of the FID (after truncation) : default is to zerofill once
+# - the apodisation : resolution is not more than twice the filtered linewidth
+# %param% fourier_transform boolean / default 1
+
+fourier_transform=1
+
+# %param% ask_for_ftsize boolean / default 0
+
+ask_for_ftsize=0
+
+# if set, the final size is determined by ft_size, automatically determined otherwise
+# it will be extended to the next 2^n
+# %param% ft_size integer  / default 2*power2(get_si1_1d())
+
+ft_size=2*power2(get_si1_1d())
+
+# %param% ft_type enum none ft_seq ft_sim ft rft / default ft_sim
+
+ft_type=ft_sim
+
+# the Fourier transform algorithm, depends on spectrometer and acquisition scheme
+# %param_cond%   [ ispower2(ft_size) ]
+# %return% size_for_ft
+# contains the data size right after FT (will usually be different from final size)
+
+##############################
+#  causal_corr               #
+##############################
+# performs causal correction of the spectrum if not done on the FID
+# %param% causal_corr boolean / default 1
+
+causal_corr=1
+
+# %param_exclusive% causal [ causalize causal_corr ]
+# %use% axisF1_zerotimeposition 
+# %return% causalize
+# contains the correction applied by causalize
+
+##############################
+#  reverse                   #
+##############################
+# reverses the spectral axis after FT
+# %param% reverse boolean / default 0
+
+reverse=0
+

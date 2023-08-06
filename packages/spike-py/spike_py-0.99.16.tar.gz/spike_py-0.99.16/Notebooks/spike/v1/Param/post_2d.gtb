@@ -1,0 +1,321 @@
+# Default parameter file for post_2d
+# created by do_default.py
+
+############################################################
+#  This macro realizes the post FT operation on a 2D spectrum
+#  
+#  This macro implements the massaging of the spectrum after complete Spectral analysis :
+#  - autophase2D   : computes and apply global phase correction
+#  - modulus       : take the modulus of the complex spectrum
+#  - baseline      : baseline correction
+#  - shear         : apply the shear correction
+#  - tilt          : apply the tilt correction
+#  - symetrize     : apply symetrisation algorithms
+#  - smoothing     : apply a smoothing filter
+#  - median        : apply a media filter
+#  - projection    : compute F1 and F2 projections
+#  - select_state  : enforce the final state of the data
+#  - spec_noise    : estimates noise in final spectrum
+#  
+#  %F1-input-domain%  frequency
+#  %F1-output-domain% frequency
+#  %F2-input-domain%  frequency
+#  %F2-output-domain% frequency
+#  
+#  %dimensionality%   2
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+############################################################
+
+
+##############################
+#  autophase_2d              #
+##############################
+# automatic phase correction of the spectrum in 2D
+# phase is computed from a set of lines extracted fro the dataset
+# %param% autophase_2d boolean / default 1
+
+autophase_2d=1
+
+# %param% phase_2d_algo enum apsl2d apmin2d / default apmin2d
+
+phase_2d_algo=apmin2d
+
+# algorithm used for the phase correction
+# %param% phase_2d_axis enum F1 F2 F12 / default F12 
+
+phase_2d_axis=F12
+
+# Axis along which the autophasing is to be applied.
+# %return% f1_autophase_0
+# the value of the global order phase correction applied by autophase 
+# %return% f1_autophase_1
+# the value of the 1st order phase correction applied by autophase 
+# %return% f2_autophase_0
+# the value of the global order phase correction applied by autophase 
+# %return% f2_autophase_1
+# the value of the 1st order phase correction applied by autophase 
+
+##############################
+#  modulus                   #
+##############################
+# modulus of the spectrum
+# %param% modulus boolean / default 0
+
+modulus=0
+
+
+##############################
+#  throw_imaginary           #
+##############################
+# at this stage, data should be real
+# %param% throw_imaginary boolean / default 1
+
+throw_imaginary=1
+
+# throw_imaginary set to false will keep hypercomplex data
+# Note that most of the following procesing will fail
+
+##############################
+#  baseline correction       #
+##############################
+# baseline correction of the spectrum
+# %param% f2_baseline boolean / default 1
+
+f2_baseline=1
+
+# %param% f2_bcorr_algo enum  offset linear spline quest polynomial moving_average / default moving_average
+
+f2_bcorr_algo=moving_average
+
+# offset : removes a automatically determined offset
+# linear - spline : uses the list of user determined pivot points to define the baseline,
+# : fit with a straight line or a spline
+# quest : reconstruct the beginning of the FID using Linear Prediction technics,
+# should usually be followed by offset
+# polynomial - moving_average : uses statistics to separate signal from baseline,
+# : apply a polynomial or moveing average correction.
+# in more than one term is given (blank separated string!), the correction are applied in sequence.
+# %param% spec_noise_n integer / default 10
+
+spec_noise_n=10
+
+# used by the offset algorithm to determine the offset to correct
+# %param% f2_bcorr_pivots Integerlist / default (int(0.02*get_si2_2d()),int(0.98*get_si2_2d()))
+
+f2_bcorr_pivots=(int(0.02*get_si2_2d()),int(0.98*get_si2_2d()))
+
+# pivot points used by the linear or spline algorithm
+# %param_cond% (f2_bcorr_pivots > 0 and bcorr_pivots <= get_si2_2d())
+# %param% f2_bcorr_radius integer / default 1
+
+f2_bcorr_radius=1
+
+# radius around pivot points used by the linear or spline algorithm
+# %param% f2_bcorr_order integer  / default 10
+
+f2_bcorr_order=10
+
+# %param_cond% (f2_bcorr_order > 0 and f2_bcorr_order < get_si2_2d() and f2_bcorr_order == 2*n)
+# order (number of points corrected in the time domain) of the quest algorithm
+
+##############################
+#  baseline correction       #
+##############################
+# baseline correction of the spectrum
+# %param% f1_baseline boolean / default 1
+
+f1_baseline=1
+
+# %param% f1_bcorr_algo enum  offset linear spline quest polynomial moving_average / default moving_average
+
+f1_bcorr_algo=moving_average
+
+# offset : removes a automatically determined offset
+# linear - spline : uses the list of user determined pivot points to define the baseline,
+# : fit with a straight line or a spline
+# quest : reconstruct the beginning of the FID using Linear Prediction technics,
+# should usually be followed by offset
+# polynomial - moving_average : uses statistics to separate signal from baseline,
+# : apply a polynomial or moveing average correction.
+# in more than one term is given (blank separated string!), the correction are applied in sequence.
+# %param% spec_noise_n integer / default 10
+
+spec_noise_n=10
+
+# used by the offset algorithm to determine the offset to correct
+# %param% f1_bcorr_pivots Integerlist / default (int(0.05*get_si1_2d()),int(0.95*get_si2_2d()))
+
+f1_bcorr_pivots=(int(0.05*get_si1_2d()),int(0.95*get_si2_2d()))
+
+# pivot points used by the linear or spline algorithm
+# %param_cond% (f1_bcorr_pivots > 0 and bcorr_pivots <= get_si1_2d())
+# %param% f1_bcorr_radius integer / default 1
+
+f1_bcorr_radius=1
+
+# radius around pivot points used by the linear or spline algorithm
+# %param% f1_bcorr_order integer  / default 10
+
+f1_bcorr_order=10
+
+# %param_cond% (f1_bcorr_order > 0 and f1_bcorr_order < get_si1_2d() and f1_bcorr_order == 2*n)
+# order (number of points corrected in the time domain) of the quest algorithm
+
+##############################
+#  shear                     #
+##############################
+# apply the shear correction
+# %param% shear boolean / default 0
+
+shear=0
+
+# %param% shear_slope float / default -1
+
+shear_slope=-1
+
+# the slope of the shear operation, -1 corresponds to the INADEQUATE to COSY correction
+# %param% shear_pivot float / default 0.5
+
+shear_pivot=0.5
+
+# the location of the invariant point
+# %param_cond% [ (shear_pivot>=0) and (shear_pivot<=1) ] 
+
+##############################
+#  tilt                      #
+##############################
+# apply the tilt correction
+# %param% tilt boolean / default 0
+
+tilt=0
+
+# %param% tilt_slope float / default 1
+
+tilt_slope=1
+
+# the slope of the tilt operation, 1 corresponds to the J-Res correction
+# %param% tilt_pivot float / default 0.5
+
+tilt_pivot=0.5
+
+# the location of the invariant point
+# %param_cond% [ (tilt_pivot>=0) and (tilt_pivot<=1) ] 
+
+##############################
+#  symetrize                 #
+##############################
+# requires the data-set to be square, will reduce to the smallest of both axes
+# %param% symetrize boolean / default 0
+
+symetrize=0
+
+# %param% symetrize_algo enum mean smallest / default smallest
+
+symetrize_algo=smallest
+
+
+##############################
+#  smoothing                 #
+##############################
+# apply a smoothing filter to the data-set
+# %param% smoothing boolean / default 0
+
+smoothing=0
+
+# %param% smooth_f1_w integer / default 2
+
+smooth_f1_w=2
+
+# size of the smoothing window in f1
+# %param% smooth_f2_w integer / default 2
+
+smooth_f2_w=2
+
+# size of the smoothing window in f2
+# %param% smooth_iteration / default 1
+
+smooth_iteration=1
+
+# number of loop
+# %param_cond% [ smooth_f1_w > 0 ]
+# %param_cond% [ smooth_f2_w > 0 ]
+
+##############################
+#  median                    #
+##############################
+# apply a median filter to the data-set
+# %param_cond% [ [ median == ((f1_extract_real and f2_extract_real) | modulus) ] 
+# %param% median boolean / default 0
+
+median=0
+
+# %param% median_f1_w integer / default 2
+
+median_f1_w=2
+
+# size of the median window in f1
+# %param% median_f2_w integer / default 2
+
+median_f2_w=2
+
+# size of the median window in f2
+# %param% median_i integer <= median_w  / default 2
+
+median_i=2
+
+# index of point to keep in the median filtering window
+# %param_cond% [ median_f2_w > 0 ]
+# %param_cond% [ median_f1_w > 0 ]
+# %param_cond% [ (median_i > 0) and (median_i <= (median_f1_w*median_f2_w)) ]
+
+##############################
+#  projection                #
+##############################
+# creates and store in files the projections of the 2D
+# 2 files are created per axis :
+# using a mean algorithm (_M suffix) and using a skyline algorithm (_S suffix)
+# %param% projection boolean / default 1
+
+projection=1
+
+# %return% f1_projection_M
+# %return% f2_projection_M
+# %return% f1_projection_S
+# %return% f2_projection_S
+
+##############################
+#  spec_noise                #
+##############################
+# evaluate noise, estimated by finding an empty zone
+# %param% spec_noise_n integer / default 10
+
+spec_noise_n=10
+
+# number of different zones where noise is evaluated
+# %return% spec_std_noise
+# estimate of the noise in the spectrum
+
+##############################
+#  select_state              #
+##############################
+# permit to choose the state complex / real of the output file
+# complex data are changed to real by dropping the imaginary part
+# real data are changed to complex by computing the Hilbert transform with tocomplex()
+# this is usually not required as all processing commands prepare the state themselves 
+# %param% select_state boolean / default 0
+
+select_state=0
+
+# actuallly does the selection
+# %param% f1_state enum ignore complex real / default ignore
+
+f1_state=ignore
+
+# force the f1 axis to real or complex. ignore will let the axis unchanged
+# %param% f2_state enum ignore complex real / default ignore
+
+f2_state=ignore
+
+# force the f2 axis to real or complex. ignore will let the axis unchanged

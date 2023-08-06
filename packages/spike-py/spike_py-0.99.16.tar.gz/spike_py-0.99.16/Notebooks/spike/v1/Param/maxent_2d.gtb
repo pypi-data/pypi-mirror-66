@@ -1,0 +1,342 @@
+# Default parameter file for maxent_2d
+# created by do_default.py
+
+############################################################
+#  This macro realizes the MaxEnt spectral analysis of a 2D FID
+#  
+#   it implements the following steps :
+#   - freq_massage      : do some preparation in the frequency domain
+#      - causal_corr    : perform causal correction
+#      - phase                      : apply phase correction on the complex spectrum before analysis
+#      - spectral_zone  : extract a spectral zone before analysis
+#      - reverse        : reverses spectral axis
+#   - truncate          : remove points at the end of the FID
+#   - preconvoluate     : apply a preconcolution function of the FID
+#   - partialsampling   : implements analysis on partially sampled FID
+#   - positive_negative : implements two channel processing for positive and negative lines
+#   - deconvoluate      : deconvoluate spectrum from a given time domain response
+#   - maxent            : apply Maximum Entropy analysis of the dataset
+#  
+#  arguments :
+#      audit       the opened audit file
+#      filein      the file name of the input file, can be "memory"
+#      fileout     the file name of the input file, can be "memory"
+#      p_in        the dictionary containing all the processing parameters
+#      f_in        the dictionary containing all the details on the spectrum "filein"
+#      f_out       details on the spectrum "fileout" will be put in this dictionary
+#  
+#   %F1-input-domain%  time
+#   %F1-output-domain% frequency
+#   %F2-input-domain%  time
+#   %F2-output-domain% frequency
+#   %dimensionality%   2
+#  
+#   %author% Marc-Andre Delsuc
+#   %version% 1.0
+############################################################
+
+
+##############################
+#  f2_freq_massage           #
+##############################
+# computes a temporary Fourier transform in F2
+# %param% f2_freq_massage boolean / default 1
+
+f2_freq_massage=1
+
+# %param% f2_ft_type enum none ft_seq ft_sim ft rft / default ft
+
+f2_ft_type=ft
+
+# the Fourier transform algorithm, depends on spectrometer and acquisition scheme
+# %param% f2_reverse boolean / default 0
+
+f2_reverse=0
+
+# reverses the spectral axis after FT
+# %param% causal_corr boolean / default 1
+
+causal_corr=1
+
+# performs causal correction of the spectrum if not done on the FID
+# %param_exclusive% causal [ causalize causal_corr ]
+# %param% f2_phase boolean / default 0
+
+f2_phase=0
+
+# %param% f2_phase_0 float / default 0.0
+
+f2_phase_0=0.0
+
+# global order phase correction
+# %param% f2_phase_1 float / default 0.0
+
+f2_phase_1=0.0
+
+# 1st order phase correction
+# %use% AXISF2_ZEROTIMEPOSITION
+# %return% causalize contains the correction applied by causalize
+# %param%
+
+##############################
+#  spectral_zone             #
+##############################
+# extract one spectral zone of the spectrum
+# %param% f2_spectral_zone boolean / default 0
+
+f2_spectral_zone=0
+
+# %param% f2_spec_zone_left float / default 10.0
+
+f2_spec_zone_left=10.0
+
+# the left border of the extract zone, in unit
+# %param% f2_spec_zone_left_unit enum ppm hz index / default ppm
+
+f2_spec_zone_left_unit=ppm
+
+# the unit in which spec_zone_left is given
+# %param% f2_spec_zone_right float / default 0.0
+
+f2_spec_zone_right=0.0
+
+# the right border of the extract zone, in unit
+# %param% f2_spec_zone_right_unit enum ppm hz index / default ppm
+
+f2_spec_zone_right_unit=ppm
+
+# the unit in which spec_zone_right is given
+# %return% f2_spec_zone_left
+# the left coordinate of the extracted spectral zone in index
+# %return% f2_spec_zone_right
+# the right coordinate of the extracted spectral zone in index
+
+##############################
+#  f1_freq_massage           #
+##############################
+# computes a temporary Fourier transform in F1
+# %param% f1_freq_massage boolean / default 0
+
+f1_freq_massage=0
+
+# %param% f1_ft_type enum none ft_sh ft_tppi ft_sh_tppi ft_n_p ft_phase_modu ft rft / default ft_sh
+
+f1_ft_type=ft_sh
+
+# the Fourier transform algorithm, depends on spectrometer and acquisition scheme
+# %param% f1_reverse boolean / default 0
+
+f1_reverse=0
+
+# reverses the spectral axis after FT
+# %param% f1_phase boolean / default 0
+
+f1_phase=0
+
+# %param% f1_phase_0 float / default 0.0
+
+f1_phase_0=0.0
+
+# global order phase correction
+# %param% f1_phase_1 float / default 0.0
+
+f1_phase_1=0.0
+
+# 1st order phase correction
+
+##############################
+#  F2 truncate               #
+##############################
+# removes last points of FID
+# %param% f2_truncate boolean / default 0
+
+f2_truncate=0
+
+# %param% f2_trunc_size integer / default get_si2_2d()
+
+f2_trunc_size=get_si2_2d()
+
+# new FID size after truncation
+# %param_cond% [ (f2_trunc_size > 0 ) and (f2_trunc_size <= get_si2_2d() ) ]
+
+##############################
+#  F1 truncate               #
+##############################
+# %param% f1_truncate boolean / default 0
+
+f1_truncate=0
+
+# %param% f1_trunc_size integer > 0 <= get_si1_2d() / default get_si1_2d()
+
+f1_trunc_size=get_si1_2d()
+
+# new FID size after truncation
+
+##############################
+#  preconvoluate             #
+##############################
+# apply a preconvolution before analysis, this may help stability of the algorithm and enhance noise rejection
+# %param% preconvoluate boolean / default 0
+
+preconvoluate=0
+
+# %param% f1_exponential_preconv float / default 1.0
+
+f1_exponential_preconv=1.0
+
+# exponential preconvolution along F1 axis
+# %param% f2_exponential_preconv float / default 1.0
+
+f2_exponential_preconv=1.0
+
+# exponential preconvolution along F2 axis
+
+##############################
+#  partialsampling           #
+##############################
+# set-up for processing data partially sampled in the time domain
+# %param% partialsampling boolean / default 0
+
+partialsampling=0
+
+# %param% partialsampling_mode enum F1 F2 F1+F2 F12 / default F1+F2
+
+partialsampling_mode=F1+F2
+
+# defines the sampling mod used on the 2D plane
+# F1 : sampling along the F1 spectral axis only, -- use f1_samplingfile definition
+# F2 : sampling along one F2 spectral axis only, -- use f2_samplingfile definition
+# F1+F2 : sampling along both spectral axis, defined independentely
+# F12 : global sampling of the F1xF2 plane -- use F12_samplingfile definition
+# %param% f1_samplingfile string / default "F1vplist"
+
+f1_samplingfile="F1vplist"
+
+# the filename of the file containing the list of sample to use along the F1 axis
+# %param% f2_samplingfile string / default "F2vplist"
+
+f2_samplingfile="F2vplist"
+
+# the filename of the file containing the list of sample to use along the F2 axis
+# see sampling.g for details
+# %param% f12_samplingfile string / default "F12vplist"
+
+f12_samplingfile="F12vplist"
+
+# the filename of the file containing the list of sample to use on the F1xF2plane
+
+##############################
+#  positive_negative         #
+##############################
+# set-up for positive_negative analysis
+# %param% positive_negative boolean / default 0
+
+positive_negative=0
+
+
+##############################
+#  deconvoluate              #
+##############################
+# describes the deconvolution to apply during analysis,
+# %param% deconvoluate boolean / default 1
+
+deconvoluate=1
+
+# this part is not finished yet, only suport for exponential deconvolution so far
+# %param% f1_exponential_deconv float / default 1.0
+
+f1_exponential_deconv=1.0
+
+# exponential deconvolution along F1 axis
+# %param% f2_exponential_deconv float / default 1.0
+
+f2_exponential_deconv=1.0
+
+# exponential deconvolution along F2 axis
+
+##############################
+#  me_preset                 #
+##############################
+# presets the MaxEnt parameters to default values
+# %param% me_preset_value enum 0 1 2 3 4 5 / default 3
+
+me_preset_value=3
+
+# sets the parameter for a balance between speed (1) and quality (5), 0 is for fit
+
+##############################
+#  me_details                #
+##############################
+# if this flag is on, default parameters can be set.
+# %param% me_details boolean / default 0
+
+me_details=0
+
+# %param% me_size integer 
+# %param% me_iteration integer
+# %param% me_int_iteration
+# %param% me_ncheck integer
+# %param% me_lambda_control integer
+# %param% me_lambda_speed 
+# %param% me_algo enum 0 1 2 / default 1
+
+me_algo=1
+
+
+##############################
+#  maxent                    #
+##############################
+# apply MaxEnt analysis,
+# %param% maxent boolean / default 1
+
+maxent=1
+
+# %param% me_preset boolean / default 1
+
+me_preset=1
+
+# determines convergence parameters from a given preset or gives the details
+# %param% preset_value enum 1 2 3 4 5 / default 3
+
+preset_value=3
+
+# preset for maxent# 1 is faster, 5 is more accurate
+# %param% iteration integer / default 100
+
+iteration=100
+
+# global number of iterations - set by preset
+# %param% control integer / default 10
+
+control=10
+
+# number of iterations between control step - set by preset
+# %param% lambsp float / default 5.0
+
+lambsp=5.0
+
+# the value of the lambda controlling parameter LAMBSP in the Gifa algorithm
+# %param% lambcont enum 0 1 2 / default 1
+
+lambcont=1
+
+# the value of the lambda controlling parameter LAMBCONT in the Gifa algorithm
+# %param% f1_me_size integer / default 2*power2(get_si1_2d())
+
+f1_me_size=2*power2(get_si1_2d())
+
+# F1 size for MaxEnt reconstruction
+# %param% f2_me_size integer / default 2*power2(get_si2_2d())
+
+f2_me_size=2*power2(get_si2_2d())
+
+# F2 size for MaxEnt reconstruction
+# %param% noise_weight float / default 1.0
+
+noise_weight=1.0
+
+# the noise used during the MaxEnt iteration is weigthed with this scalar,
+# this permits to compensate for over- or under-estimate of the noise level
+# %param_cond%   [ noise_weight > 0.0 ]
+# %param_cond%   [ ispower2(f1_me_size) ]
+# %param_cond%   [ ispower2(f2_me_size) ]

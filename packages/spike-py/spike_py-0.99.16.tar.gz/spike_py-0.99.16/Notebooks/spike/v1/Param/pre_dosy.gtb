@@ -1,0 +1,71 @@
+# Default parameter file for pre_dosy
+# created by do_default.py
+
+############################################################
+#  This macro is simply a wrapper around proc_2d() to realise a f2 baseline correction at the end of the PreDosy2D processing
+#  This is somewhat ad-hoc, and may be changed sometimes
+#  
+#  it implements
+#  - f2_baseline   : baseline correction
+#  - select_state  : enforce the final state of the data
+#  
+#  %F2-input-domain%  frequency
+#  %F2-output-domain% frequency
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+#  
+############################################################
+
+
+##############################
+#  baseline correction       #
+##############################
+# baseline correction of the hald-processed DOSY spectrum
+# %param% f2_baseline boolean / default 1
+
+f2_baseline=1
+
+# %param% f2_bcorr_algo enum  offset linear spline / default linear
+
+f2_bcorr_algo=linear
+
+# offset : removes a automatically determined offset
+# linear - spline : uses the list of user determined pivot points to define the baseline,
+# : fit with a straight line or a spline
+# %action% change other post_2d() default actions
+# %param% autophase_2d boolean / default 0
+
+autophase_2d=0
+
+# %param% f1_baseline boolean / default 0
+
+f1_baseline=0
+
+# %param% projection boolean / default 0
+
+projection=0
+
+
+##############################
+#  select_state              #
+##############################
+# permit to choose the state complex / real of the output file
+# complex data are changed to real by dropping the imaginary part
+# real data are changed to complex by computing the Hilbert transform with tocomplex()
+# this is usually not required as all processing commands prepare the state themselves 
+# %param% select_state boolean / default 1
+
+select_state=1
+
+# actuallly does the selection
+# %param% f1_state enum ignore complex real / default ignore
+
+f1_state=ignore
+
+# force the f1 axis to real or complex. ignore will let the axis unchanged
+# %param% f2_state enum ignore complex real / default real
+
+f2_state=real
+
+# force the f2 axis to real or complex. ignore will let the axis unchanged

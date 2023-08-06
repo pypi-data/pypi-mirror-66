@@ -1,0 +1,172 @@
+# Default parameter file for ilt_2df1
+# created by do_default.py
+
+############################################################
+#  This macro realizes the ILT operation on the F1 decay of the 2D
+#  
+#  it implements the spectral analysis step :
+#  
+#  
+#  - damp_width        dmin dmax
+#  - minimum S/N
+#  - col_selection
+#  - me_preset
+#  - me_details
+#      size
+#      iteration
+#      ndisp
+#      lambcont
+#      lambsp
+#      miniter
+#  - ILT
+#  - reverse           : reverses laplace axis
+#  
+#  
+#  %F1-input-domain%  tabulated
+#  %F1-output-domain% damping
+#  %dimensionality%   2
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+#  
+############################################################
+
+
+##############################
+#  damp_width                #
+##############################
+# sets-up the border for the laplace spectrum
+# %param% damp_width enum diff_standard from_tab defined / default diff_standard
+
+damp_width=diff_standard
+
+# defines how the window will be defined
+# diff_standard is the set-up for a standard solution : 10-5000 um^2 sec-1
+# from_tab : the borders are computed from the tabulated values
+# defined : the values 
+# %param% dmin float > 0  / default 10
+
+dmin=10
+
+# %param% dmax float > 0  / default 5000
+
+dmax=5000
+
+# %param_cond% [ dmin < dmax ]
+
+##############################
+#  minimum_sn                #
+##############################
+# defines the minimum Signal/Noise ratio required for ILT processing
+# No data will ever be processed if the S/N is below this value, independently of the col_selection set-up
+# It is considered unsafe to go below 10 for this parameter.
+# %param% minimum_sn float / default 32.0
+
+minimum_sn=32.0
+
+
+##############################
+#  col_selection             #
+##############################
+# set-up the conditions for selecting the column to be processed by ILT for DOSY
+# %param% col_selection boolean / default 0
+
+col_selection=0
+
+# %param% col_selection_mode enum valthreshold zone list none / default none
+
+col_selection_mode=none
+
+# none : no selection (only minimum_sn stands)
+# valthreshold : absolute value theshold, will not be used if below minimum_sn
+# zone : only points within that spectral zone will be considered
+# list : explicit list of the columns to consider
+# 
+# %param% col_valthreshold float
+# 
+# %param% col_list (integer list)
+# list og the columns to consider, given in index (real part only)
+# 
+# %param% col_selection_left float / default 10.0
+
+col_selection_left=10.0
+
+# the left border of the selection zone, in unit
+# %param% col_selection_left_unit enum ppm hz index / default ppm
+
+col_selection_left_unit=ppm
+
+# the unit in which selection_left is given
+# %param% col_selection_right float / default 0.0
+
+col_selection_right=0.0
+
+# the right border of the selection zone, in unit
+# %param% col_selection_right_unit enum ppm hz index / default ppm
+
+col_selection_right_unit=ppm
+
+# the unit in which selection_right is given
+# %param_cond% (col_selection_left{index} < col_selection_right{index})
+# %return% col_selection_left
+# the left coordinate of the selection zone in index
+# %return% col_selection_right
+# the right coordinate of the selection zone in index
+# 
+
+##############################
+#  me_preset                 #
+##############################
+# presets the MaxEnt parameters to default values
+# %param% me_preset_value enum 0 1 2 3 4 5 / default 3
+
+me_preset_value=3
+
+# sets the parameter for a balance between speed (1) and quality (5), 0 is for fit
+
+##############################
+#  me_details                #
+##############################
+# if this flag is on, default parameters can be set.
+# %param% me_details boolean / default 0
+
+me_details=0
+
+# %param% me_size integer 
+# %param% me_iteration integer
+# %param% me_int_iteration
+# %param% me_ncheck integer
+# %param% me_lambda_control integer
+# %param% me_lambda_speed
+# %param% me_algo enum Fit MaxEnt
+
+##############################
+#  dump_preset               #
+##############################
+# dump all the parameters to a gtb file
+# usually used to check the parameter or to prepare for a parallel run
+# %param% dump_preset boolean / default 0
+
+dump_preset=0
+
+# %param% dump_preset_file file / default dosy_preset.gtb
+
+dump_preset_file=dosy_preset.gtb
+
+
+##############################
+#  ILT                       #
+##############################
+# perform the ILT computation itself
+# %param% execute_ilt boolean / default 1
+
+execute_ilt=1
+
+
+##############################
+#  f1_reverse                #
+##############################
+# %param% f1_reverse boolean / default 0
+
+f1_reverse=0
+

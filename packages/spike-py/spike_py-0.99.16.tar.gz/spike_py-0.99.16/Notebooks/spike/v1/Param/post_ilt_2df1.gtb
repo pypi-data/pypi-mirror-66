@@ -1,0 +1,17 @@
+# Default parameter file for post_ilt_2df1
+# created by do_default.py
+
+############################################################
+#  This macro realizes the post F1-ILT operation on a 2D spectrum
+#  
+#  - smoothing     : F2 smoothing of DOSY
+#  
+#  %F2-input-domain%  time
+#  %F2-output-domain% time
+#  %dimensionality%   2
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+#  
+############################################################
+

@@ -1,0 +1,10 @@
+# Default parameter file for Dosy3D
+# created by do_default.py
+
+############################################################
+#      processing of a small 3D DOSY experiment
+#      larger DOSY3D should be processed with Process3D.DOSY3D()
+#      
+#      starts with a half processed file
+############################################################
+

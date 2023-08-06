@@ -1,0 +1,162 @@
+# Default parameter file for maxent_1d
+# created by do_default.py
+
+############################################################
+#  This macro realizes the MaxEnt analysis of a 1D FID
+#  - freq_massage  : computes a temporary Fourier transform
+#  - truncate   : truncates the FID by removing the last points
+#  - preconvoluate  :apply a preconvolution before analysis, this may help stability of the algorithm and enhance noise rejection
+#  - partialsampling   : set-up for processing data partially sampled in the time domain
+#  - deconvoluate : apply a deconvolution during analysis,
+#  - maxent : apply MaxEnt analysis,
+#  
+#      
+#  %F1-input-domain%  frequency
+#  %F1-output-domain% frequency
+#  %dimensionality%   1
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+############################################################
+
+
+##############################
+#  freq_massage              #
+##############################
+# computes a temporary Fourier transform
+# %param% freq_massage boolean / default 1
+
+freq_massage=1
+
+# %param% ft_type enum none ft_seq ft_sim ft rft / default ft
+
+ft_type=ft
+
+# the Fourier transform algorithm, depends on spectrometer and acquisition scheme
+# %param% phase boolean / default 0
+
+phase=0
+
+# %param% phase_0 float / default 0.0
+
+phase_0=0.0
+
+# global order phase correction
+# %param% phase_1 float / default 0.0
+
+phase_1=0.0
+
+# 1st order phase correction
+
+##############################
+#  truncate                  #
+##############################
+# truncates the FID by removing the last points
+# %param% truncate boolean / default 0
+
+truncate=0
+
+# %param% trunc_size integer / default get_si1_1d()
+
+trunc_size=get_si1_1d()
+
+# FID size after truncation
+# %param_cond% [ (trunc_size > 0 ) and (trunc_size <= get_si1_1d() ) ]
+
+##############################
+#  preconvoluate             #
+##############################
+# apply a preconvolution before analysis, this may help stability of the algorithm and enhance noise rejection
+# %param% preconvoluate boolean / default 0
+
+preconvoluate=0
+
+# %param% preconvolution string / default "expbroad(1)"
+
+preconvolution="expbroad(1)"
+
+# the string describing the apodisation to apply
+# see apodise.g for details
+
+##############################
+#  partialsampling           #
+##############################
+# set-up for processing data partially sampled in the time domain
+# %param% partialsampling boolean / default 0
+
+partialsampling=0
+
+# %param% samplingfile string / default vplist
+
+samplingfile=vplist
+
+# the filename of the file containing the list of sample to use,
+# file is relative to the directory containg the input file 
+# see sampling.g for details
+
+##############################
+#  deconvoluate              #
+##############################
+# apply a deconvolution during analysis,
+# %param% deconvoluate boolean / default 1
+
+deconvoluate=1
+
+# %param% deconvolution string / default "expbroad(1)"
+
+deconvolution="expbroad(1)"
+
+# the string describing the apodisation to apply
+# see apodise.g for details
+
+##############################
+#  maxent                    #
+##############################
+# apply MaxEnt analysis,
+# %param% maxent boolean / default 1
+
+maxent=1
+
+# %param% me_preset boolean / default 0
+
+me_preset=0
+
+# determines convergence parameters from a given preset or gives the details
+# %param% preset_value enum 1 2 3 4 5 / default 3
+
+preset_value=3
+
+# preset for maxent; 1 is faster, 5 is more accurate
+# %param% iteration integer / default 100
+
+iteration=100
+
+# global number of iterations - set by preset
+# %param% control integer / default 10
+
+control=10
+
+# number of iterations between control step - set by preset
+# %param% lambsp float / default 5.0
+
+lambsp=5.0
+
+# the value of the lambda controlling parameter LAMBSP in the Gifa algorithm
+# %param% lambcont enum 0 1 2 / default 1
+
+lambcont=1
+
+# the value of the lambda controlling parameter LAMBCONT in the Gifa algorithm
+# %param% me_size integer / default 2*get_si1_1d()
+
+me_size=2*get_si1_1d()
+
+# size for MaxEnt reconstruction
+# %param% noise_weight float / default 1.0
+
+noise_weight=1.0
+
+# the noise used during the MaxEnt iteration is weigthed with this scalar,
+# this permits to compensate for over- or under-estimate of the noise level
+# %param_cond%   [ noise_weight > 0.0 ]
+# %param_cond%   [ ispower2(me_size) ]

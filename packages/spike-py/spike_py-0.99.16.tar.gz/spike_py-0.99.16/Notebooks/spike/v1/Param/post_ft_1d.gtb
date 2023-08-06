@@ -1,0 +1,262 @@
+# Default parameter file for post_ft_1d
+# created by do_default.py
+
+############################################################
+#  This macro realizes the Post processing of a 1D spectrum
+#  
+#  - modulus       : takes the complex modulus of the spectrum
+#  - phase         : applies a phase correction to the spectrum
+#  - autophase     : automatically computes the phase correction of the spectrum
+#  - invHilbert    : apply an inverse Hilbert transform
+#  - calibration   : calibrate the ppm scale on the spectrum
+#  - spectral_zone : extract one spectral zone of the spectrum
+#  - baseline_correction : applies a baseline correction to the spectrum
+#  - smoothing     : apply a smoothing filter to the data-set
+#  - median        : apply a median filter to the data-set
+#  - derivative    : compute the nth derivative of the data-set
+#  - spec_noise    : evaluate noise, estimated by finding an empty zone
+#  
+#  
+#  
+#  %F1-input-domain%  frequency
+#  %F1-output-domain% frequency
+#  %dimensionality%   1
+#  
+#  %author% Marc-Andre Delsuc
+#  %version% 6.0
+############################################################
+
+
+##############################
+#  modulus                   #
+##############################
+# takes the complex modulus of the spectrum
+# %param% modulus boolean / default 0
+
+modulus=0
+
+
+##############################
+#  phase                     #
+##############################
+# applies a phase correction to the spectrum
+# %param% phase boolean / default 0
+
+phase=0
+
+# %param% phase_0 float / default 0.0
+
+phase_0=0.0
+
+# global order phase correction
+# %param% phase_1 float / default 0.0
+
+phase_1=0.0
+
+# 1st order phase correction
+
+##############################
+#  autophase                 #
+##############################
+# automatically computes the phase correction of the spectrum
+# %param% autophase boolean / default 1
+
+autophase=1
+
+# %param% phase_algo enum apsl apmin / default apmin
+
+phase_algo=apmin
+
+# algorithm used
+# %return% autophase_0
+# contains the value of the global order phase correction applied by autophase 
+# %return% autophase_1
+# contains the value of the 1st order phase correction applied by autophase 
+
+##############################
+#  invHilbert                #
+##############################
+# apply an inverse Hilbert transform.
+# This operation takes a complex spectrum, and generates a real spectrum in-place
+# i.e. with twice the number of real points.
+# %param% invHilbert boolean / default 0
+
+invHilbert=0
+
+
+##############################
+#  calibration               #
+##############################
+# calibrate the ppm scale on the spectrum
+# %param% calibration float / default 0.0
+
+calibration=0.0
+
+# the coordinate in ppm of the right-most point in the spectrum
+
+##############################
+#  spectral_zone             #
+##############################
+# extract one spectral zone of the spectrum
+# %param% spectral_zone boolean / default 0
+
+spectral_zone=0
+
+# %param% spec_zone_left float / default 10.0
+
+spec_zone_left=10.0
+
+# the left border of the extract zone, in unit
+# %param% spec_zone_left_unit enum ppm hz index / default ppm
+
+spec_zone_left_unit=ppm
+
+# the unit in which spec_zone_left is given
+# %param% spec_zone_right float / default 0.0
+
+spec_zone_right=0.0
+
+# the right border of the extract zone, in unit
+# %param% spec_zone_right_unit enum ppm hz index / default ppm
+
+spec_zone_right_unit=ppm
+
+# the unit in which spec_zone_right is given
+# %param_cond% (spec_zone_left{index} < spec_zone_right{index})
+# %return% spec_zone_left
+# the left coordinate of the extracted spectral zone in index
+# %return% spec_zone_right
+# the right coordinate of the extracted spectral zone in index
+
+##############################
+#  baseline_correction       #
+##############################
+# applies a baseline correction to the spectrum
+# %param% baseline boolean / default 1
+
+baseline=1
+
+# %param% bcorr_algo enum offset linear spline quest polynomial moving_average / default "offset"
+
+bcorr_algo="offset"
+
+# offset : removes a automatically determined offset
+# linear - spline : uses the list of user determined pivot points
+# to define the baseline, then fit with a straight line or a spline
+# quest : reconstruct the beginning of the FID using Linear Prediction technics, should usually be followed by offset
+# polynomial - moving_average : uses statistics to separate signal from baseline,
+# then apply a polynomial or moveing average correction.
+# in more than one term is given, the correction are applied in sequence.
+# %param% spec_noise_n integer / default 30
+
+spec_noise_n=30
+
+# used by the offset algorithm to determine the offset to correct
+# %param% bcorr_pivots Integerlist / default "10 (get_si1_1d()-10)"
+
+bcorr_pivots="10 (get_si1_1d()-10)"
+
+# pivot points used by the linear or spline algorithm
+# %param_cond% (bcorr_pivots > 0 and bcorr_pivots <= get_si1_1d())
+# %param% bcorr_radius integer / default 1
+
+bcorr_radius=1
+
+# radius around pivot points used by the linear or spline algorithm
+# %param% bcorr_order integer  / default 10
+
+bcorr_order=10
+
+# %param_cond% (bcorr_order > 0 and bcorr_order < get_si1_1d() and bcorr_order == 2*n)
+# order (number of points corrected in the time domain) of the quest algorithm
+# %return% spec_offset
+# offset computed when using the offset algo
+
+##############################
+#  smoothing                 #
+##############################
+# apply a smoothing filter to the data-set
+# %param% smoothing boolean / default 0
+
+smoothing=0
+
+# %param% smooth_w integer / default 5
+
+smooth_w=5
+
+# size of the smoothing window
+# %param% smooth_iteration / default 1
+
+smooth_iteration=1
+
+# number of loop
+# %param_cond% [ smooth_w > 0 ]
+
+##############################
+#  median                    #
+##############################
+# apply a median filter to the data-set
+# %param% median boolean / default 0
+
+median=0
+
+# %param% median_w integer  / default 6
+
+median_w=6
+
+# size of the median filtering window
+# %param% median_i integer <= median_w  / default 3
+
+median_i=3
+
+# index of point to keep in the median filtering window
+# %param_cond% [ median_w > 0 ]
+# %param_cond% [ (median_i > 0) and (median_i <= median_w) ]
+
+##############################
+#  derivative                #
+##############################
+# compute the nth derivative of the data-set
+# %param% derivative boolean / default 0
+
+derivative=0
+
+# %param% deriv_nth integer > 0 / default 1
+
+deriv_nth=1
+
+# %param% deriv_smooth integer > 0 / default 2
+
+deriv_smooth=2
+
+# binomial smoothing applied before derivative
+
+##############################
+#  select_state              #
+##############################
+# permit to choose the state complex / real of the output file
+# complex data are changed to real by dropping the imaginary part
+# real data are changed to complex by computing the Hilbert transform with tocomplex()
+# this is usually not required as all processing commands prepare the state themselves 
+# %param% select_state boolean / default 0
+
+select_state=0
+
+# actuallly does the selection
+# %param% f1_state enum ignore complex real / default ignore
+
+f1_state=ignore
+
+# force the f1 axis to real or complex. ignore will let the axis unchanged
+
+##############################
+#  spec_noise                #
+##############################
+# evaluate noise, estimated by finding an empty zone
+# %param% spec_noise_n integer / default 30
+
+spec_noise_n=30
+
+# number of different zones where noise is evaluated
+# %return% spec_std_noise
+# estimate of the noise in the spectrum

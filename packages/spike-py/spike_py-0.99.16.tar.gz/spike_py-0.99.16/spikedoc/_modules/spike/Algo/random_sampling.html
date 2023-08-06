@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>spike.Algo.random_sampling &#8212; spike 0.99.16-472 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for spike.Algo.random_sampling</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">random_sampling.py</span>
+
+<span class="sd">Created by Marc-Andre on 2013-03-21.</span>
+<span class="sd">modified 1 july 2014 for interactive mode.</span>
+<span class="sd">modified february 2017 for python3 compat.</span>
+
+<span class="sd">Copyright (c) 2013 IGBMC. All rights reserved.</span>
+
+<span class="sd">Generates random sampling for NUS FT spectroscopy</span>
+
+<span class="sd">can be used</span>
+<span class="sd">    as a standalone by answering to the prompted questions</span>
+<span class="sd">    as a library by importing the code</span>
+<span class="sd">    the program displays the results - closing the display will generate the files</span>
+
+<span class="sd">The program generates two files.</span>
+<span class="sd">one with the delay values, typically used for the acquisition process,</span>
+<span class="sd">and one with index values, typically used for the analysis.</span>
+
+<span class="sd">Parameters that define the sampling are :</span>
+
+<span class="sd">the size of the complete sampling</span>
+<span class="sd">SIZE = 20000</span>
+
+<span class="sd">the sampling ratio  - 0.3 means sampling 30% of the entries</span>
+<span class="sd">RATIO = 0.2</span>
+
+<span class="sd">thus with SIZE = 1000, RATIO = 0.3    300 values out of 1000  will be generated</span>
+
+<span class="sd">the dwell time (Nyquist frequency) - used for the delay list</span>
+<span class="sd">DWELL = 0.0033</span>
+
+<span class="sd">the sampling protocole defines how the random points are chosen.</span>
+<span class="sd">three different protocoles are available : random / poisson / uniform  (sampling P out of N)</span>
+<span class="sd">PROTOCOLE = &quot;poisson&quot;</span>
+<span class="sd">    points are sampled so that the gaps between sample points follow a poisson law of $\mu$ = P/N</span>
+<span class="sd">PROTOCOLE = &quot;uniform&quot;</span>
+<span class="sd">    points are sampled so that the gaps between sample points follow a uniform law</span>
+<span class="sd">    so all gaps from 1 to N/P are equiprobable</span>
+<span class="sd">PROTOCOLE = &quot;random&quot;</span>
+<span class="sd">    there points are simply sampled at random, using a uniform sampline of P out on N</span>
+<span class="sd">    the gap distribution follows an exponential law</span>
+
+<span class="sd">HEAD determines a number of points that will be kept linearly sampled in the beginning of the sampling</span>
+<span class="sd">usefull for allowing regular analysis of the data</span>
+<span class="sd">HEAD = 100</span>
+
+
+<span class="sd">Additional parameters :</span>
+<span class="sd">The seed of the random generator.</span>
+<span class="sd">This allows the program to be run several time with reproducible results</span>
+<span class="sd">The same seed will generate the same values.</span>
+<span class="sd">Changing the seed will change the values no SEED will generate a new distribution, any integer number will do.</span>
+<span class="sd">None draws a new distribution each time.</span>
+<span class="sd">SEED = 1234</span>
+
+
+<span class="sd">file basename of the stored files</span>
+<span class="sd">FNAME = &quot;Sampling_file&quot;</span>
+<span class="sd">    generates two files : </span>
+<span class="sd">    - the delay list used by the spectrometer - named &#39;filename&#39;.delay</span>
+<span class="sd">    - the sampling function used for analysis - named &#39;filename&#39;.list</span>
+
+<span class="sd">if PLOT is True, then the program displays the results - closing the display will generate the files</span>
+<span class="sd">PLOT = True</span>
+
+
+<span class="sd">Use in a program as follows :</span>
+
+<span class="sd">import random_sampling as rs</span>
+<span class="sd">rs.SIZE = 10000</span>
+<span class="sd">rs.DWELL = 0.005</span>
+<span class="sd">rs.RATIO = 0.12</span>
+<span class="sd">rs.FNAME = &quot;My_file&quot;        # generate 2 files : My_file   and   My_file.list</span>
+<span class="sd">rs.PROTOCOLE = &quot;poisson&quot;</span>
+
+<span class="sd">#then either</span>
+<span class="sd">rs.main()	                # creates both files - default is no display</span>
+
+<span class="sd">#or</span>
+<span class="sd">sampling =  poisson_gap(SIZE, ratio=RATIO)</span>
+<span class="sd">...</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">poisson</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="c1">#</span>
+<span class="c1">#import spike.Display.testplot as testplot</span>
+<span class="c1">#plt = testplot.plot()</span>
+<span class="c1"># these two lines are kind of equivalent to &quot;import matplotlib.pyplot as plt&quot;</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># First fix the seed of the random generator</span>
+<span class="c1"># This allows the program to be run several time with reproducible results</span>
+<span class="c1"># The same seed will generate the same values. Changing the seed will change the values</span>
+<span class="c1"># no SEED will generate a new distribution each time</span>
+<span class="c1"># any integer number will do</span>
+<span class="n">SEED</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># define size of the complete sampling</span>
+<span class="n">SIZE</span> <span class="o">=</span> <span class="mi">20000</span>
+
+<span class="c1"># define dwell time (Nyquist frequency)</span>
+<span class="n">DWELL</span> <span class="o">=</span> <span class="mf">0.0033</span>
+
+<span class="c1">#define sampling ratio  - 0.3 means sampling 30% of the entries - thus if SIZE = 1000, only 300 entries will be generated</span>
+<span class="n">RATIO</span> <span class="o">=</span> <span class="mf">0.2</span>
+
+<span class="c1"># sampling protocole : random / poisson / uniform</span>
+<span class="c1">#PROTOCOLE = &quot;uniform&quot;</span>
+<span class="c1">#PROTOCOLE = &quot;random&quot;</span>
+<span class="n">PROTOCOLE</span> <span class="o">=</span> <span class="s2">&quot;poisson&quot;</span>
+
+<span class="c1"># file name of the stored files</span>
+<span class="n">FNAME</span> <span class="o">=</span> <span class="s2">&quot;Sampling_file&quot;</span>
+
+<span class="c1"># if PLOT is True, then the program displays the results - closing the display will generate the files</span>
+<span class="n">PLOT</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># HEAD determines a number of points that will be kept linearly sampled in the beginning of the sampling</span>
+<span class="c1"># usefull for allowing regular analysis of the data</span>
+<span class="n">HEAD</span> <span class="o">=</span> <span class="mi">0</span>
+
+<div class="viewcode-block" id="random_gap"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.random_gap">[docs]</a><span class="k">def</span> <span class="nf">random_gap</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    for a sampling function of &#39;size&#39; long</span>
+<span class="sd">    generate a random sampling with sampling &#39;ratio&#39;</span>
+<span class="sd">    the first &#39;head&#39; values are kept linearly sampled</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ssize</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">size</span><span class="o">*</span><span class="n">ratio</span><span class="p">)</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">HEAD</span><span class="p">,</span><span class="n">ssize</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">perm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">size</span><span class="o">-</span><span class="n">head</span><span class="p">)</span><span class="o">+</span><span class="n">head</span>  <span class="c1"># generate a permutation from 2 to size</span>
+    <span class="n">samp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">ssize</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">samp</span><span class="p">[</span><span class="n">head</span><span class="p">:</span><span class="n">ssize</span><span class="p">]</span> <span class="o">=</span> <span class="n">perm</span><span class="p">[:</span><span class="n">ssize</span><span class="o">-</span><span class="n">head</span><span class="p">]</span>              <span class="c1"># and truncate</span>
+    <span class="n">samp</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">head</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">head</span><span class="p">))</span>                               <span class="c1"># we set the first values</span>
+<span class="c1">#    samp[0] = size                              # first entry being 0, we replace it with last value </span>
+    <span class="n">samp</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>                                 <span class="c1"># then sort it</span>
+    <span class="n">samp</span><span class="p">[</span><span class="n">ssize</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">size</span><span class="o">-</span><span class="mi">1</span>                              <span class="c1"># last entry with last value </span>
+    <span class="k">return</span> <span class="n">samp</span></div>
+
+<div class="viewcode-block" id="poisson_gap"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.poisson_gap">[docs]</a><span class="k">def</span> <span class="nf">poisson_gap</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    for a sampling function of &#39;size&#39; long</span>
+<span class="sd">    generate a random sampling with sampling &#39;ratio&#39; with poisson distribution of gap</span>
+<span class="sd">    the first &#39;head&#39; values are kept linearly sampled</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ssize</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">size</span><span class="o">*</span><span class="n">ratio</span><span class="p">)</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">HEAD</span><span class="p">,</span><span class="n">ssize</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">mu0</span> <span class="o">=</span> <span class="p">(</span><span class="n">size</span><span class="o">-</span><span class="n">head</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">size</span><span class="o">*</span><span class="n">ratio</span> <span class="o">-</span><span class="n">head</span><span class="p">)</span>  <span class="c1"># 2 x ( length/nb of steps)</span>
+    <span class="n">mu</span> <span class="o">=</span> <span class="n">mu0</span>    <span class="c1"># *0.99   # just to help a little</span>
+    <span class="n">samp</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">head</span><span class="p">))</span>                               <span class="c1"># we set the first values</span>
+    <span class="n">rv</span> <span class="o">=</span> <span class="n">poisson</span><span class="p">(</span><span class="n">mu</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">head</span>
+    <span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">samp</span><span class="p">)</span> <span class="o">==</span> <span class="n">ssize</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">samp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">prev</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="k">while</span> <span class="n">prev</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>                <span class="c1"># avoid 0 increments</span>
+            <span class="n">n</span> <span class="o">+=</span> <span class="n">rv</span><span class="o">.</span><span class="n">rvs</span><span class="p">()</span>
+    <span class="n">samp</span> <span class="o">=</span> <span class="n">correct</span><span class="p">(</span><span class="n">samp</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">samp</span><span class="p">)</span></div>
+<div class="viewcode-block" id="uniform_gap"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.uniform_gap">[docs]</a><span class="k">def</span> <span class="nf">uniform_gap</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    for a sampling function of &#39;size&#39; long</span>
+<span class="sd">    generate a random sampling with sampling &#39;ratio&#39; with uniform distribution of gap</span>
+<span class="sd">    the first &#39;head&#39; values are kept linearly sampled</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ssize</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">size</span><span class="o">*</span><span class="n">ratio</span><span class="p">)</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">HEAD</span><span class="p">,</span><span class="n">ssize</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">mu0</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">size</span><span class="o">-</span><span class="n">head</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">size</span><span class="o">*</span><span class="n">ratio</span> <span class="o">-</span><span class="n">head</span><span class="p">)</span>  <span class="c1"># 2 x ( length/nb of steps)</span>
+    <span class="n">mu</span> <span class="o">=</span> <span class="n">mu0</span>
+    <span class="n">samp</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">head</span><span class="p">))</span>                               <span class="c1"># we set the first values</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">head</span>
+    <span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">samp</span><span class="p">)</span> <span class="o">==</span> <span class="n">ssize</span><span class="p">:</span>
+                <span class="k">break</span>
+        <span class="n">samp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">prev</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="k">while</span> <span class="n">prev</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>                <span class="c1"># avoid 0 increments</span>
+            <span class="n">n</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">mu</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">())</span>
+    <span class="n">samp</span> <span class="o">=</span> <span class="n">correct</span><span class="p">(</span><span class="n">samp</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">samp</span><span class="p">)</span></div>
+<div class="viewcode-block" id="correct_size"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.correct_size">[docs]</a><span class="k">def</span> <span class="nf">correct_size</span><span class="p">(</span><span class="n">sampling</span><span class="p">,</span><span class="n">targetsize</span><span class="p">):</span>
+    <span class="s2">&quot;this removes trailing entries in sampling until its size is equal to targetsize&quot;</span>
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">sampling</span><span class="p">)</span><span class="o">&gt;</span><span class="n">targetsize</span><span class="p">:</span>
+        <span class="n">sampling</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sampling</span></div>
+<div class="viewcode-block" id="correct"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.correct">[docs]</a><span class="k">def</span> <span class="nf">correct</span><span class="p">(</span><span class="n">sampling</span><span class="p">,</span><span class="n">targetsize</span><span class="p">):</span>
+    <span class="s2">&quot;this corrects entries in sampling so that entries go from 0 to targetsize-1, and removes duplicates&quot;</span>
+    <span class="n">ratio</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">sampling</span><span class="p">))</span><span class="o">/</span><span class="n">targetsize</span>
+<span class="c1">#    print( ratio, max(sampling), targetsize)</span>
+    <span class="n">newsamp</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sampling</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">s</span><span class="o">/</span><span class="n">ratio</span><span class="p">)),</span> <span class="n">targetsize</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">while</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">newsamp</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="n">val</span><span class="o">-</span><span class="mi">1</span>
+            <span class="k">if</span> <span class="n">val</span> <span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;run failed, please rerun&quot;</span><span class="p">)</span>
+        <span class="n">newsamp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">newsamp</span></div>
+<div class="viewcode-block" id="write"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.write">[docs]</a><span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">sampling</span><span class="p">,</span> <span class="n">dwell</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">ratio</span><span class="p">,</span> <span class="n">proto</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; given sampling and dwell</span>
+<span class="sd">    generates two files : </span>
+<span class="sd">        - the delay list used by the spectrometer - named &#39;filename&#39;.delay</span>
+<span class="sd">        - the sampling function used for analysis - named &#39;filename&#39;.list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">F</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="o">+</span><span class="s1">&#39;.delay&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="o">+</span><span class="s1">&#39;.list&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">FG</span> <span class="ow">in</span> <span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="n">G</span><span class="p">):</span>                <span class="c1"># both files share same header</span>
+        <span class="n">FG</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;#File generated by random_sampling.py</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">FG</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# Date : </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">()</span> <span class="p">)</span>
+        <span class="n">FG</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;#</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">FG</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# Initial size  : </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">size</span><span class="p">)</span>
+        <span class="n">FG</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# sampled size  : </span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">sampling</span><span class="p">))</span>
+        <span class="n">FG</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# sampling ratio: </span><span class="si">%f</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">ratio</span><span class="p">)</span>
+        <span class="n">FG</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# Protocole     : </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">proto</span><span class="p">)</span>
+        <span class="n">FG</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# Dwell time    : </span><span class="si">%f</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">dwell</span><span class="p">)</span>
+        <span class="n">FG</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;# linear zone   : </span><span class="si">%d</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">HEAD</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">sampling</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)))</span>
+        <span class="n">FG</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;# seed          : </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">SEED</span><span class="p">)</span>
+        <span class="n">FG</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;#</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">sampling</span><span class="p">:</span>
+        <span class="n">F</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%f</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">dwell</span><span class="o">*</span><span class="n">i</span><span class="p">))</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">%</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">F</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">G</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="realize"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.realize">[docs]</a><span class="k">def</span> <span class="nf">realize</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">sampling</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;returns a buffer filled with 1.0 and 0.0 realizing the sampling&quot;&quot;&quot;</span>
+    <span class="n">disp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">disp</span><span class="p">[</span><span class="n">sampling</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="k">return</span> <span class="n">disp</span></div>
+    
+<div class="viewcode-block" id="plotit2"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.plotit2">[docs]</a><span class="k">def</span> <span class="nf">plotit2</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">sampling</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;plots the result along with the PSF and the gap histogram &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">numpy.fft</span> <span class="k">as</span> <span class="nn">fft</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">221</span><span class="p">)</span>
+    <span class="n">gaps</span> <span class="o">=</span> <span class="n">sampling</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">-</span><span class="n">sampling</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">gaps</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">gaps</span><span class="p">))</span> <span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;gap distribution&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">223</span><span class="p">)</span>
+    <span class="n">disp</span> <span class="o">=</span> <span class="n">realize</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">sampling</span><span class="p">)</span>
+    <span class="n">psf</span> <span class="o">=</span> <span class="n">fft</span><span class="o">.</span><span class="n">fftshift</span><span class="p">(</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">disp</span><span class="p">))</span>   <span class="c1"># complex psf</span>
+    <span class="n">apsf</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">psf</span><span class="p">)</span>                     <span class="c1"># its modulus</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">apsf</span><span class="p">)</span>
+    <span class="n">sig</span> <span class="o">=</span> <span class="n">apsf</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    <span class="n">noise</span> <span class="o">=</span> <span class="n">psf</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">psf</span><span class="p">)</span><span class="o">//</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+    <span class="n">snr</span> <span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">sig</span><span class="o">/</span><span class="n">noise</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.9</span><span class="o">*</span><span class="n">sig</span><span class="p">,</span><span class="s2">&quot;SNR : </span><span class="si">%.2f</span><span class="s2"> dB&quot;</span><span class="o">%</span><span class="n">snr</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Point Spread Function of the sampling&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">224</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sampling</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;cumulative&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">222</span><span class="p">)</span>
+    <span class="n">plotit</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">sampling</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="plotit"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.plotit">[docs]</a><span class="k">def</span> <span class="nf">plotit</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">sampling</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;plots the result&quot;&quot;&quot;</span>
+    <span class="n">disp</span> <span class="o">=</span> <span class="n">realize</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">sampling</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">disp</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="n">ymax</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span><span class="n">ymin</span><span class="o">=-</span><span class="mf">0.1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Measure on </span><span class="si">%d</span><span class="s1"> points, </span><span class="si">%s</span><span class="s1">ly sampled at </span><span class="si">%.2f</span><span class="s1"> </span><span class="si">%%</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">PROTOCOLE</span><span class="p">,</span> <span class="p">(</span><span class="mf">100.0</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">sampling</span><span class="p">))</span><span class="o">/</span><span class="n">size</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Tests"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.Tests">[docs]</a><span class="k">class</span> <span class="nc">Tests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+<div class="viewcode-block" id="Tests.test1"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.Tests.test1">[docs]</a>    <span class="k">def</span> <span class="nf">test1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">global</span> <span class="n">PROTOCOLE</span><span class="p">,</span> <span class="n">SIZE</span><span class="p">,</span> <span class="n">HEAD</span><span class="p">,</span> <span class="n">RATIO</span><span class="p">,</span> <span class="n">DWELL</span><span class="p">,</span> <span class="n">FNAME</span><span class="p">,</span> <span class="n">SEED</span>
+        <span class="n">PROTOCOLE</span> <span class="o">=</span> <span class="s2">&quot;poisson&quot;</span>
+        <span class="n">SIZE</span> <span class="o">=</span> <span class="mi">20000</span>
+        <span class="n">HEAD</span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="n">RATIO</span> <span class="o">=</span> <span class="mf">0.25</span>
+        <span class="n">SEED</span> <span class="o">=</span> <span class="mi">12345</span>
+        <span class="n">FNAME</span> <span class="o">=</span> <span class="s2">&quot;TestFile&quot;</span>
+        <span class="n">sampling</span> <span class="o">=</span> <span class="n">main</span><span class="p">()</span>
+<span class="c1">#        print( sampling)</span>
+        <span class="nb">print</span><span class="p">(</span> <span class="n">sampling</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">sampling</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span> <span class="n">sampling</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">==</span><span class="mi">19999</span> <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span> <span class="n">sampling</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">==</span><span class="mi">49886308</span> <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertAlmostEqual</span><span class="p">(</span> <span class="n">sampling</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span> <span class="mf">5780.85909618678</span> <span class="p">)</span></div></div>
+
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">SEED</span>
+    <span class="k">if</span> <span class="n">SEED</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">SEED</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span> <span class="o">%</span> <span class="mi">4294967200</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">SEED</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">PROTOCOLE</span> <span class="o">==</span> <span class="s2">&quot;random&quot;</span><span class="p">:</span>
+        <span class="n">sampling</span> <span class="o">=</span>  <span class="n">random_gap</span><span class="p">(</span><span class="n">SIZE</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="n">RATIO</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">PROTOCOLE</span> <span class="o">==</span> <span class="s2">&quot;poisson&quot;</span><span class="p">:</span>
+        <span class="n">sampling</span> <span class="o">=</span>  <span class="n">poisson_gap</span><span class="p">(</span><span class="n">SIZE</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="n">RATIO</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">PROTOCOLE</span> <span class="o">==</span> <span class="s2">&quot;uniform&quot;</span><span class="p">:</span>
+        <span class="n">sampling</span> <span class="o">=</span>  <span class="n">uniform_gap</span><span class="p">(</span><span class="n">SIZE</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="n">RATIO</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;UNKNOWN PROTOCOLE&quot;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;generated </span><span class="si">{0}</span><span class="s2"> </span><span class="si">{1}</span><span class="s2">ly sampled points out of </span><span class="si">{2}</span><span class="s2"> contiguous points.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sampling</span><span class="p">),</span> <span class="n">PROTOCOLE</span><span class="p">,</span> <span class="n">SIZE</span><span class="p">)</span> <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;from </span><span class="si">{0}</span><span class="s2"> to </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sampling</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sampling</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="k">if</span> <span class="n">PLOT</span><span class="p">:</span>
+        <span class="n">plotit2</span><span class="p">(</span><span class="n">SIZE</span><span class="p">,</span> <span class="n">sampling</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">write</span><span class="p">(</span><span class="n">FNAME</span><span class="p">,</span> <span class="n">sampling</span><span class="p">,</span> <span class="n">DWELL</span><span class="p">,</span> <span class="n">SIZE</span><span class="p">,</span> <span class="n">RATIO</span><span class="p">,</span> <span class="n">PROTOCOLE</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;result written to file </span><span class="si">{0}</span><span class="s2">.list and </span><span class="si">{0}</span><span class="s2">.delay&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">FNAME</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">sampling</span></div>
+
+<div class="viewcode-block" id="get_val"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.get_val">[docs]</a><span class="k">def</span> <span class="nf">get_val</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">defval</span><span class="p">):</span>
+    <span class="s2">&quot;a typed version of input(), with default value&quot;</span>
+    <span class="c1"># modified to adapt python3</span>
+    <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">, (</span><span class="si">%s</span><span class="s2">)  &quot;</span><span class="o">%</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span><span class="n">defval</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">, (</span><span class="si">%s</span><span class="s2">)  &quot;</span><span class="o">%</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span><span class="n">defval</span><span class="p">))</span>
+
+    <span class="n">t</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">defval</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">z</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="n">z</span> <span class="o">=</span> <span class="n">defval</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">z</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">SyntaxError</span><span class="p">:</span>
+            <span class="n">z</span> <span class="o">=</span> <span class="n">defval</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">z</span></div>
+
+<div class="viewcode-block" id="get_from_input"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.get_from_input">[docs]</a><span class="k">def</span> <span class="nf">get_from_input</span><span class="p">():</span>
+    <span class="s2">&quot;prompt the user and populates the values&quot;</span>
+    <span class="k">global</span> <span class="n">PROTOCOLE</span><span class="p">,</span> <span class="n">SIZE</span><span class="p">,</span> <span class="n">HEAD</span><span class="p">,</span> <span class="n">RATIO</span><span class="p">,</span> <span class="n">DWELL</span><span class="p">,</span> <span class="n">FNAME</span><span class="p">,</span> <span class="n">SEED</span><span class="p">,</span> <span class="n">PLOT</span>
+    <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;Please Enter values&quot;</span><span class="p">)</span>
+    <span class="n">SIZE</span> <span class="o">=</span> <span class="n">get_val</span><span class="p">(</span><span class="s2">&quot;Size of the starting list&quot;</span><span class="p">,</span> <span class="n">SIZE</span><span class="p">)</span>
+    <span class="n">RATIO</span> <span class="o">=</span> <span class="n">get_val</span><span class="p">(</span><span class="s2">&quot;Sampling ratio&quot;</span><span class="p">,</span> <span class="n">RATIO</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;This will generate a </span><span class="si">%d</span><span class="s2"> long sampling&quot;</span><span class="o">%</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">SIZE</span><span class="o">*</span><span class="n">RATIO</span><span class="p">)))</span>
+    <span class="n">DWELL</span> <span class="o">=</span> <span class="n">get_val</span><span class="p">(</span><span class="s2">&quot;dwell time (Nyquist frequency) - used for the delay list&quot;</span><span class="p">,</span><span class="n">DWELL</span><span class="p">)</span>
+    <span class="n">PROTOCOLE</span> <span class="o">=</span> <span class="n">get_val</span><span class="p">(</span><span class="s2">&quot;sampling protocole defines how the random points are chosen: random/poisson/uniform&quot;</span><span class="p">,</span><span class="n">PROTOCOLE</span><span class="p">)</span>
+    <span class="n">HEAD</span> <span class="o">=</span> <span class="n">get_val</span><span class="p">(</span><span class="s2">&quot;number of points that will be kept linearly sampled in the beginning of the sampling&quot;</span><span class="p">,</span><span class="n">HEAD</span><span class="p">)</span>
+    <span class="n">SEED</span> <span class="o">=</span> <span class="n">get_val</span><span class="p">(</span><span class="s2">&quot;seed of the random generator (positive integer - the same seed generates the same list - None is a new list each time)&quot;</span><span class="p">,</span><span class="n">SEED</span><span class="p">)</span>
+    <span class="n">FNAME</span> <span class="o">=</span> <span class="n">get_val</span><span class="p">(</span><span class="s2">&quot;file basename of the stored files&quot;</span><span class="p">,</span><span class="n">FNAME</span><span class="p">)</span>
+    <span class="n">PLOT</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">PLOT</span> <span class="o">=</span> <span class="n">get_val</span><span class="p">(</span><span class="s2">&quot;displays the results - closing the display will generate the files: True/False&quot;</span><span class="p">,</span><span class="n">PLOT</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="parse_arg"><a class="viewcode-back" href="../../../spike.Algo.html#spike.Algo.random_sampling.parse_arg">[docs]</a><span class="k">def</span> <span class="nf">parse_arg</span><span class="p">(</span><span class="n">argv</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="s2">&quot;read arg line and act&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">argv</span><span class="p">:</span>
+        <span class="n">argv</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;try running &quot;</span><span class="si">%s</span><span class="s1"> help&quot; for documentation&#39;</span><span class="o">%</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">param</span> <span class="o">=</span> <span class="n">get_from_input</span><span class="p">()</span>
+        <span class="n">main</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;HELP&quot;</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span> <span class="vm">__doc__</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;unknown argument, try &quot;</span><span class="si">%s</span><span class="s1"> help&quot;&#39;</span><span class="o">%</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span></div>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">parse_arg</span><span class="p">()</span>
+    <span class="n">PLOT</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="c1">#unittest.main()</span>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">spike</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Readme.html">What is SPIKE ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Readme.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Readme.html#how-do-i-get-spike">How do I get SPIKE ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Readme.html#developing-for-spike">Developing for SPIKE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Doc.html">First contact SPIKE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../spike.html">spike package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release_notes.html">SPIKE Relase Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../licenses.html">SPIKE License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../licenses.html#secondary-licenses">Secondary Licenses</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  <li><a href="../Algo.html">spike.Algo</a><ul>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2010-2019, IGBMC and others.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
