@@ -1,0 +1,4 @@
+numpy
+scipy
+bih
+gmsh-sdk
