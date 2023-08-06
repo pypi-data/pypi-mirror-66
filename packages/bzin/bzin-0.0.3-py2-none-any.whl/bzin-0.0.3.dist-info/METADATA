@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: bzin
+Version: 0.0.3
+Summary: FOR FB
+Home-page: https://github.com/binyamin-binni
+Author: Binyamin
+Author-email: bnmn6464@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+
+For Facebook
+==============
+
+Use
+----
+
+import bin
+
+
