@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: qcrop
+Version: 0.0.0
+Summary: A basic PyQt image cropping tool
+Home-page: https://gitlab.com/gregseth/qcrop
+Author: Grégory Millasseau
+Author-email: gregory@millasseau.fr
+License: UNKNOWN
+Description: # QCrop
+        
+        A basic PyQt image cropping tool.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Multimedia :: Graphics
+Description-Content-Type: text/markdown
