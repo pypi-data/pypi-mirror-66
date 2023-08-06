@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+ccxtpro/__init__.py
+ccxtpro.egg-info/PKG-INFO
+ccxtpro.egg-info/SOURCES.txt
+ccxtpro.egg-info/dependency_links.txt
+ccxtpro.egg-info/top_level.txt
