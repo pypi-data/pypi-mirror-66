@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: ruppell
+Version: 0.0.4
+Summary: text extractor based in tesseract ocr
+Home-page: https://github.com/joorgelm/ruppell
+Author: Jorge Melgarejo
+Author-email: melgarejo.colarte@gmail.com
+License: MIT License
+Download-URL: https://github.com/joorgelm/ruppell/archive/0.0.4.tar.gz
+Description: UNKNOWN
+Keywords: ocr text extractor
+Platform: UNKNOWN
