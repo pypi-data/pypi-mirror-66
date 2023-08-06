@@ -1,0 +1,4 @@
+Topoly version: 0.9.1
+Build Environment:
+Linux-5.3.0-46-generic
+gcc 5.3.1
