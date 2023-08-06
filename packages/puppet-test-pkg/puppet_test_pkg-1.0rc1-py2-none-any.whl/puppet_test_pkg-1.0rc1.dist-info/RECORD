@@ -1,0 +1,5 @@
+puppet_test_pkg-1.0rc1.data/scripts/puppet_test_pkg,sha256=ICFVChh5hsW1LLcE-cN2N-pd3Mw9-EiOYcTfwvhUNHc,30
+puppet_test_pkg-1.0rc1.dist-info/METADATA,sha256=jjpN4UzaRss_dvj3aRCn2TsRYneOY_u0aezIW7jldnw,379
+puppet_test_pkg-1.0rc1.dist-info/WHEEL,sha256=CbUdLTqD3-4zWemf83rgR_2_MC4TeXw9qXwrXte5w4w,92
+puppet_test_pkg-1.0rc1.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+puppet_test_pkg-1.0rc1.dist-info/RECORD,,

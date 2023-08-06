@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: puppet-test-pkg
+Version: 1.0rc1
+Summary: A dummy package used for testing the version ranges feature in Puppet.
+Home-page: UNKNOWN
+Author: Luchi
+Author-email: luchi@puppet.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+
+It just prints out a nice "Hello world!".
+
+
