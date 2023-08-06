@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pycalendars
+Version: 0.0.1
+Summary: A simple library to access your online calendars
+Home-page: https://github.com/rmic/pycalendars
+Author: Raphael Michel
+Author-email: raph.mic@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# pycalendars
+
+PyCalendars helps you to retrieve events from your Google and ICloud calendars, in python.
+
+## Getting Started
+
+### Google calendar
+
+The google calendar api requires that you create a project in google developer console (https://console.developers.google.com/) and retrieve credentials. 
+Depending on what type of application you plan to develop and how you want to use the calendar, you may either want to get credentials for a web / desktop application or for a service account.
+
+### ICloud
+
+ICloud only requires your apple id username and password. However, depending on how your account is configured, you may need to use a 2FA verification code.
+
+
