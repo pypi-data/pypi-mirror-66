@@ -1,0 +1,5 @@
+{
+  "test_helpers.py::test_max_rgb": true,
+  "test_helpers.py::test_min_rgb": true,
+  "test_helpers.py::test_whitebalance": true
+}
