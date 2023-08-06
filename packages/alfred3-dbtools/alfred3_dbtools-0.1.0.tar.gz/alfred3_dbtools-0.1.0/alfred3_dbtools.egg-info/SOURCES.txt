@@ -1,0 +1,9 @@
+README.md
+setup.py
+alfred3_dbtools/__init__.py
+alfred3_dbtools/mongotools.py
+alfred3_dbtools.egg-info/PKG-INFO
+alfred3_dbtools.egg-info/SOURCES.txt
+alfred3_dbtools.egg-info/dependency_links.txt
+alfred3_dbtools.egg-info/requires.txt
+alfred3_dbtools.egg-info/top_level.txt
