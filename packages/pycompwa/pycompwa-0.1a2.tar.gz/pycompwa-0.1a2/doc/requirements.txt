@@ -1,0 +1,6 @@
+doc8==0.8.0
+jupyter
+nbsphinx==0.5.1
+sphinx-copybutton
+sphinx==2.4.4
+sphinx_rtd_theme

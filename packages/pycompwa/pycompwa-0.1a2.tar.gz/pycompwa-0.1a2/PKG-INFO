@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pycompwa
+Version: 0.1a2
+Summary: ComPWA: The Common Partial Wave Analysis framework
+Home-page: https://github.com/ComPWA/pycompwa
+Author: The ComPWA team
+Maintainer-email: compwa-admin@ep1.rub.de
+License: GPLv3 or later
+Description: pycompwa is the Python interface of `ComPWA <https://github.com/ComPWA/ComPWA>`_
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst

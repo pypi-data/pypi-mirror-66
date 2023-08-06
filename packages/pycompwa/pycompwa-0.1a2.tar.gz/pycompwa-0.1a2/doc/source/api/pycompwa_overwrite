@@ -1,0 +1,17 @@
+pycompwa
+========
+
+.. automodule:: pycompwa
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+
+   pycompwa.data
+   pycompwa.expertsystem
+   pycompwa.plotting
+   pycompwa.ui
