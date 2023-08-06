@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: pyfan
+Version: 0.1.3
+Summary: 
+Author: Fan Wang
+Author-email: wangfanbsg75@live.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
