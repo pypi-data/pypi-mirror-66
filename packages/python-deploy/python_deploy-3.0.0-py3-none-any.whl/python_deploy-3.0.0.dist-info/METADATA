@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: python-deploy
+Version: 3.0.0
+Summary: Build, push and deploy k8s services with single deploy.json file to provide common convention for multiple production services.
+Home-page: https://gitlab.com/cert.pl/deploy
+Author: msm, psrok1
+Author-email: info@cert.pl
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: PyYAML
+
+UNKNOWN
+
+
