@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: torch-nfp
+Version: 0.0.1.dev0
+Summary: An implementation of neural fingerprint
+Home-page: https://github.com/YHRen/NGFP
+Author: Yihui Ren
+Author-email: yren@bnl.gov
+License: MIT
+Description: UNKNOWN
+Keywords: example documentation tutorial
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
