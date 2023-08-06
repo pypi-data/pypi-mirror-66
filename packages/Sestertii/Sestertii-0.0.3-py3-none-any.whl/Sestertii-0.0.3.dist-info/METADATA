@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: Sestertii
+Version: 0.0.3
+Summary: A personalized stock trading dashboard
+Home-page: https://github.com/harishk1908/sestertii
+Author: Harish Kumar
+Author-email: harishk1908@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (==1.18.1)
+
+
+This is a personalized dashboard for stock trading,
+focusing primarily on showing metrics and portfolio
+health for long-term investors. Derivatives, options,
+futures are not emphasized here, nor is their trading
+and tracking supported much.
+This package uses Python 3.7 and support is not 
+guaranteed for other versions.
+
+
