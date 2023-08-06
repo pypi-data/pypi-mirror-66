@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: interrogate
+Version: 1.0.0
+Summary: Interrogate a codebase for docstring coverage.
+Home-page: https://github.com/econchick/interrogate
+Author: Lynn Root
+Author-email: lynn@lynnroot.com
+Maintainer: Lynn Root
+Maintainer-email: lynn@lynnroot.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: documentation,coverage,quality
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Provides-Extra: docs
+Provides-Extra: tests
+Provides-Extra: dev
