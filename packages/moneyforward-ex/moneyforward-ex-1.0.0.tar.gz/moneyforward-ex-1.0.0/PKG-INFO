@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: moneyforward-ex
+Version: 1.0.0
+Summary: マネーフォワード クラウド経費API
+Home-page: https://github.com/moneyforward-api-client/ex-python
+Author: OTA2000
+Author-email: yasuhiroota26@gmail.com
+License: UNKNOWN
+Description:     マネーフォワードクラウド経費のAPI
+            
+Keywords: OpenAPI,OpenAPI-Generator,マネーフォワード クラウド経費API
+Platform: UNKNOWN
