@@ -1,0 +1,11 @@
+README.md
+setup.py
+keydb/__init__.py
+keydb/client.py
+keydb.egg-info/PKG-INFO
+keydb.egg-info/SOURCES.txt
+keydb.egg-info/dependency_links.txt
+keydb.egg-info/requires.txt
+keydb.egg-info/top_level.txt
+tests/__init__.py
+tests/cmd.py
