@@ -1,0 +1,12 @@
+# Project-specific variable data
+/var
+
+# Python build/packaging/distribution artifacts
+/.eggs
+/dist
+/build
+/src/*/version.py
+
+# Testing artifacts
+/.tox
+/.coverage
