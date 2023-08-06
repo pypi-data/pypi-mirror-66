@@ -1,0 +1,2 @@
+flask_apidoc_extend
+flask_apidoc_extend/templates
