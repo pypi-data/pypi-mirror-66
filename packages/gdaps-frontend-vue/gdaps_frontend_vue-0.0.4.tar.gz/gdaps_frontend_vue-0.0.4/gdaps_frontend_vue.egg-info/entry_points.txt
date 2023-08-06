@@ -1,0 +1,3 @@
+[gdaps.frontend.engines]
+vue = gdaps_frontend_vue:VueEngine
+

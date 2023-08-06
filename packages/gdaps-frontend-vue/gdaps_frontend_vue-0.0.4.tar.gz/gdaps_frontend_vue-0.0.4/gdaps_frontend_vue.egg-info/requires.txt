@@ -1,0 +1,11 @@
+gdaps
+semantic-version
+nltk
+django-webpack-loader
+
+[dev]
+check-manifest
+pytest==4.6.3
+pytest-cov==2.7.1
+twine
+django-debug-toolbar
