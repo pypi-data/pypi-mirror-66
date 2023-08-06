@@ -1,0 +1,14 @@
+ubelt
+
+[all]
+ubelt
+pytest
+coverage
+xdoctest
+pytest-cov
+
+[tests]
+pytest
+coverage
+xdoctest
+pytest-cov
