@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pyfly/__init__.py
+pyfly/dryden.py
+pyfly/pid_controller.py
+pyfly/pyfly.py
+pyfly/pyfly_config.json
+pyfly/x8_param.mat
+pyfly_fixed_wing.egg-info/PKG-INFO
+pyfly_fixed_wing.egg-info/SOURCES.txt
+pyfly_fixed_wing.egg-info/dependency_links.txt
+pyfly_fixed_wing.egg-info/requires.txt
+pyfly_fixed_wing.egg-info/top_level.txt
