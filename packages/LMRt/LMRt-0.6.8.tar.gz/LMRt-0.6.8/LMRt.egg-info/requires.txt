@@ -1,0 +1,12 @@
+tqdm
+dotmap
+pyyaml
+prysm-api
+xarray
+statsmodels
+nitime
+netCDF4
+seaborn
+scikit-learn
+keras
+tensorflow
