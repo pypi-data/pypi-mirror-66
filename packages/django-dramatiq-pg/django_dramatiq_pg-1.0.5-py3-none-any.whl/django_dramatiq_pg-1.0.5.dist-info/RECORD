@@ -1,0 +1,12 @@
+django_dramatiq_pg/__init__.py,sha256=mvKfvWOFy0SQ04esOASmwenJiryMrl3bBDG9tamMXIQ,62
+django_dramatiq_pg/admin.py,sha256=lMsK4ZelRnDG9XPt9rJ9l9SnTzZgokIAe_2CmfkdNJ0,964
+django_dramatiq_pg/apps.py,sha256=jJPvx0KoTtK-zNMUS-yQM5uIfk9-Uc9fC1b1lvPTBQM,1751
+django_dramatiq_pg/migrations/0001_initial.py,sha256=0ZbwGaH4sZi0rUD1B0WwEKSIsLM3WvGsoLyEGuf15lQ,2086
+django_dramatiq_pg/migrations/0002_auto_20200329_2103.py,sha256=xXmxKtGN2hFacqiVJ3OAphamr72UfdYUBWz0Xbd2gwI,339
+django_dramatiq_pg/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_dramatiq_pg/models.py,sha256=KEazFuZV_JyUivCqd-VE8DCs6DAqVKe5p2h08Ujw2gY,784
+django_dramatiq_pg/signals.py,sha256=u_cDbBgkTHtmx4ExapMewQLpZqGKovTMmrGw6i3xRKE,337
+django_dramatiq_pg/worker.py,sha256=6UZRt9i_JjYfvZga9vxCKQ8xMZy_2rVB-Y8rIPO_tYU,320
+django_dramatiq_pg-1.0.5.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+django_dramatiq_pg-1.0.5.dist-info/METADATA,sha256=H1Q6ww8sIOuwk6-8erPqK-KcsPXigf0ID8ngnOohRRc,2136
+django_dramatiq_pg-1.0.5.dist-info/RECORD,,
