@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: txppb
+Version: 0.1
+Summary: Twisted support for PursuedPyBear
+Home-page: https://github.com/moshez/txppb
+Author: Moshe Zadka
+Author-email: moshez@zadka.club
+License: Artistic-2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Artistic License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Operating System :: OS Independent
+Requires-Python: >= 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Twisted
+Requires-Dist: ppb
+
+# Twisted Support for PursuedPyBear
+
+Twisted PursuedPyBar,
+`txppb`,
+adds support for the Twisted event loop to PursuedPyBear.
+This is useful for adding networking to games,
+as well as for integration with other event loops
+using Twisted's support for foreign event loop.
+
+
