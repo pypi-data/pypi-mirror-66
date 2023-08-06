@@ -1,0 +1,11 @@
+pytorch2caffe/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytorch2caffe/caffe_net.py,sha256=4_xqXt6wFLmYrdXdQ7242VJ1ScFNKP1osuCIcS0b__0,5350
+pytorch2caffe/caffe_pb2.py,sha256=DMkP5JpnovzSl0W5CqzVQNtcZyGY9fVBV6VNUm0ERco,262123
+pytorch2caffe/layer_param.py,sha256=uMSu1w_Iblg0XRTSDq0FB80TOrDGnQiDpO1GF3GBomY,7274
+pytorch2caffe/pytorch2caffe.py,sha256=rAs4sZjGWbcVtXiNiVkmDXf_3sdPmqXQIjeR5GEELgE,35383
+pytorch2caffe-0.1.0.dist-info/DESCRIPTION.rst,sha256=xhnDbM_aVlmAcKG3MpDa5MJZsXXRGmqsegLgwwgfBF0,695
+pytorch2caffe-0.1.0.dist-info/METADATA,sha256=4Tgu_4K12Mearly2B4jWOxGPYpepbqJo-o27xOtRjvw,1531
+pytorch2caffe-0.1.0.dist-info/RECORD,,
+pytorch2caffe-0.1.0.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+pytorch2caffe-0.1.0.dist-info/metadata.json,sha256=b-C2jOey_lzPfGdfOqz-WSn2qtOc5rSVbXAN0xlOTWY,1001
+pytorch2caffe-0.1.0.dist-info/top_level.txt,sha256=f9NK2xfF4zaoJMqWgHyacCoLCRQklXT9ijusE-O9uu4,14
