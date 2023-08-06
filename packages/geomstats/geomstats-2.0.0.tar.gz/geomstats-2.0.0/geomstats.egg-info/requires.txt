@@ -1,0 +1,32 @@
+autograd
+joblib==0.14.1
+matplotlib
+numpy>=1.18.1
+scikit-learn>=0.22.1
+scipy>=1.4.1
+
+[all]
+flake8
+flake8-docstrings
+flake8-import-order
+nose2
+pre-commit
+torch==1.4.0
+
+[all:python_version < "3.8"]
+tensorflow==2.0.1
+
+[tensorflow]
+
+[tensorflow:python_version < "3.8"]
+tensorflow==2.0.1
+
+[test]
+flake8
+flake8-docstrings
+flake8-import-order
+nose2
+pre-commit
+
+[torch]
+torch==1.4.0
