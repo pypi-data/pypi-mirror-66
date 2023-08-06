@@ -1,0 +1,58 @@
+
+image: python:3.7
+
+stages:
+  - test
+  - build
+
+unittests:
+  stage: test
+  except:
+    - pages
+  before_script:
+    - pip install .
+  script:
+    - python -m unittest discover tests
+
+flake8 checks:
+  stage: test
+  except:
+    - pages
+  before_script:
+    - pip install flake8
+  script:
+    - python -m flake8
+
+mypy checks:
+  stage: test
+  except:
+    - pages
+  before_script:
+    - pip install . mypy
+  script:
+    - python -m mypy -p bdtsim
+
+build packages:
+  stage: build
+  only:
+    - tags
+  script:
+    - python setup.py sdist bdist_wheel
+  artifacts:
+    paths:
+      - dist/*.tar.gz
+
+pages:
+  stage: build
+  only:
+    - pages
+  before_script:
+    - pip install .
+    - pip install mkdocs pdoc3
+  script:
+    - python -m mkdocs build -d public
+    - pdoc3 --html --force -o public/api bdtsim
+  artifacts:
+    paths:
+      - public
+    expire_in: 1h
