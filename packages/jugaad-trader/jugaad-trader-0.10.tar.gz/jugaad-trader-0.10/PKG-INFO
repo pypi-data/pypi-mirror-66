@@ -1,0 +1,23 @@
+Metadata-Version: 1.0
+Name: jugaad-trader
+Version: 0.10
+Summary: A trade automation library
+Home-page: https://jugaad-trader.web.app/
+Author: jugaad-coder
+Author-email: nomail@nodomain.com
+License: UNKNOWN
+Description: *************
+        Jugaad Trader
+        *************
+        
+        
+        Unofficial Upstox & Zerodha Client library
+        
+        
+        Documentation
+        #############
+        
+        `<https://jugaad-trader.web.app>`_
+        
+        
+Platform: UNKNOWN
