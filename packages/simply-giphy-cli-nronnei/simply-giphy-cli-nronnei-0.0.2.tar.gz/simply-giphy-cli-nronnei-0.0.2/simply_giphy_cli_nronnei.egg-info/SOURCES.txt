@@ -1,0 +1,9 @@
+README.md
+setup.py
+giphy/__init__.py
+giphy/__main__.py
+giphy/get_gif.py
+simply_giphy_cli_nronnei.egg-info/PKG-INFO
+simply_giphy_cli_nronnei.egg-info/SOURCES.txt
+simply_giphy_cli_nronnei.egg-info/dependency_links.txt
+simply_giphy_cli_nronnei.egg-info/top_level.txt
