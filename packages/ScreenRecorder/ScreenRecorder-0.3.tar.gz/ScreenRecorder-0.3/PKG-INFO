@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ScreenRecorder
+Version: 0.3
+Summary: A screen recorder.
+Home-page: https://pypi.org/project/ScreenRecorder
+Author: foo
+Author-email: foo@foo.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
