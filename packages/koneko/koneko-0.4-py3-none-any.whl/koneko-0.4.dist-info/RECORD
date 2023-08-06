@@ -1,0 +1,15 @@
+koneko/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+koneko/colors.py,sha256=R4c6hhQDRwt1-aheYT7gmJXEoqTmTvLNxKVt6GkGInc,1550
+koneko/koneko.py,sha256=4UO-4BPx0oFR73afVdV2xPtGfJ1nRldJ6fVjFPvKAuc,51639
+koneko/lscat.py,sha256=Y9BCtwyVmQS41VvsLQBFOlL5yhM5ynbNpPB8X6dnbno,6646
+koneko/page_json.py,sha256=NoX9acabFOBONajFLAABp2Z64y8AbU8KdVz_aeiGPJY,72356
+koneko/prompt.py,sha256=s0gvbIZmo04lqE6O2_s-fFZG_Dmd8crjF6VusJ3dKbo,9302
+koneko/pure.py,sha256=2fg4OmDEPqK0Eonb8FESy2PfmTec0BzsoT6Ybb3ngpA,5046
+koneko/testing.py,sha256=cofxLFAiDxK4R6vQ2B3IAU5TeeBcqs4zZleLcQfYTJ8,4303
+koneko/utils.py,sha256=F97PqVdFJw3rdffNvZq2TmNxeQhtG2Q4WgIsBAbecas,5416
+koneko-0.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+koneko-0.4.dist-info/METADATA,sha256=lHgKraYuShSkMw7B6VISsdlBAreqEZwxIO1DRjOxVxM,18974
+koneko-0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+koneko-0.4.dist-info/entry_points.txt,sha256=FUlPCv2eGyrYnRoUQB6EG61bz1TVYUX9BFRmOmbrm4A,47
+koneko-0.4.dist-info/top_level.txt,sha256=dzoOl_WSwdVXzUXCeWWz0_AtLNcV0lMnQI4jUzpxshI,7
+koneko-0.4.dist-info/RECORD,,

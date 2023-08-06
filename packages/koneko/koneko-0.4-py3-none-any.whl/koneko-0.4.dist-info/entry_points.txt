@@ -1,0 +1,3 @@
+[console_scripts]
+koneko = koneko.koneko:main
+
