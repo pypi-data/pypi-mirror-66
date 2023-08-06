@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: binance-data
+Version: 0.1.4
+Summary: Python package to retrieve historical data from Binance
+Home-page: https://github.com/uneasyguy/binance_data
+Author: Jeff Bingaman
+Author-email: bingaman.jeff@gmail.com
+License: MIT
+Download-URL: https://github.com/uneasyguy/binance_data/archive/v0.1.2.tar.gz
+Keywords: Binance,Cryptocurrency Data,OHCLV
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: python-binance
+
+UNKNOWN
+
+
