@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: algotype
+Version: 0.2.39
+Summary: Algorythmic font creation system.
+Home-page: http://algotype.org
+Author: Marek Ryćko, Bogusław Jackowski, Piotr Strzelczyk
+Author-email: marek@do.com.pl
+Maintainer: Marek Ryćko
+Maintainer-email: marek@do.com.pl
+License: UNKNOWN
+Description: Algotype manual
+        #########################################
+        Algorythmic font creation system.
+        
+        Version 0.2.39
+        
+        Status: Alpha
+        
+        Authors
+        ################################
+        
+        Marek Ryćko (system design and most of Python programming)
+        
+        Bogusław Jackowski (design consulting and Metapost programming)
+        
+        Piotr Strzelczyk (Python 2 Metatype1 programming, partially used in Algotype)
+        
+        Introduction
+        ################################
+        
+        Algotype is a system for creating fonts using algorythmic means, by programming
+        the shapes of characters (glyphs), metric information and their relationships.
+        
+        The ``algotype`` Python package is a Python part of the entire Algotype
+        system. The other parts, not included on the Python Package Index, PyPI, are:
+        
+        * program files in the Metapost language, defining the shapes of font glyphs, their relationships and general font data,
+        * configuration files, defining both the installation instance and the paramteters of a particular run of the Algotype system,
+        * templates of font feature files (definitions),
+        * GOADB file or files (Glyph Order and Alias DataBase), defining the renaming of glyphs for certain types of output fonts,
+        * renaming definition files, defining the renaminig of fonts both for OTF format and for Type 1 (PFB) format, including the definitions of names of files in 256-character fonts with various encodings.
+        
+        Algotype is a successor of the Metatype1 system created in the years 2000–2018 by Bogusław Jackowski and Piotr Strzelczyk. The original Metatype1 system has been used to create several font families, including Latin Modern fonts and a series of TeX Gyre fonts (all of them are freele available and also included in most Linux distribiutions).
+        
+        The name
+        ********
+        
+        The name “Agotype” reflects the fact that the purpose of the system is algorythmic type (fonts) design.
+        
+        The project web page is planned to be: http://algotype.org.
+        
+        Installation
+        ################################
+        
+        The installation steps are the following:
+        
+        * install Python 3, version at least 3.6,
+        * install t1utils (``t1asm``, ``t1disasm`` programs; must be available in operating system program search path),
+        * install Fontforge (a font manipulation program, available for major operating systems),
+        * install Fontforge Python support (Python >= 2.7 in 2.x line or >= 3.7 in 3.x line),
+        * use ``pip`` command in Python 3 to install Algotype, namely the package ``algotype``
+        
+            ``pip install -i https://test.pypi.org/simple/ algotype``
+        
+            The command in your operating system may be also called ``pip3`` or ``pip3.8``, or similarly,
+            
+        * install Metapost (probably as a part of TeXLive installation),
+        * install the Metapost Algotype files (for LM and TG fonts),
+        * insltall other input Algotype files (feature templates, goadb files etc),
+        * create (or edit) Algotype configuration files,
+        * create (or edit) scripts or batch files running/calling the algotype program, with config file paths and file names parameters.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
