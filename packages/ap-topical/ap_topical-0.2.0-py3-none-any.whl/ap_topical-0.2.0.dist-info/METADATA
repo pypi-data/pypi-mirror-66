@@ -1,0 +1,155 @@
+Metadata-Version: 2.1
+Name: ap-topical
+Version: 0.2.0
+Summary: Topical is a simple event pipeline written in Python.
+Home-page: UNKNOWN
+Author: Anna Poulakos
+Author-email: anna.poulakos@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+
+# topical
+Topical is a simple eventing library written in Python.
+
+![build](https://github.com/annapoulakos/topical/workflows/build/badge.svg)
+
+## Table of Contents
+
+1. [Developer Requirements](#developer-requirements)
+1. [Installation](#installation)
+1. [Usage](#usage)
+    1. [Small Example](#small-example)
+    1. [Using the Event Decorator](#using-the-event-decorator)
+
+## Developer Requirements
+
+* Python 3.7 or higher
+
+## Installation
+
+```
+pip install ap-topical
+```
+
+## Usage
+
+> Topical supports both synchronous and asynchronous callbacks. This documentation only details the async/await calls. For more in-depth usage instructions, please consult the wiki.
+
+First, you will need an event handler. This function requires a `payload` object as its only parameter:
+
+```python
+async def event_handler_one(payload):
+    pass
+
+async def event_handler_two(payload):
+    pass
+```
+
+Next, you will need to configure your event pipeline.
+
+```python
+topical.subscribe('event-one', event_handler_one)
+topical.subscribe('event-two', event_handler_two)
+```
+
+Next, you will need to publish your first event.
+
+```python
+payload = TopicalEventPayload()
+await topical.publish_async('event-one', payload)
+```
+
+To continue your event chain, you will need to publish an event from an existing event handler:
+
+```python
+async def event_handler_one(payload):
+    # do something with your event payload
+
+    await topical.publish_async('event_two', payload)
+```
+
+#### Small Example
+
+```python
+import asyncio
+from ap.topical import topical
+from ap.topical.topical_event_payload import TopicalEventPayload
+
+async def event_handler_one(payload):
+    print(f'inside event_handler_one for {payload.idempotency_token}')
+
+    print('sleeping for 5 seconds')
+    await asyncio.sleep(5)
+    await topical.publish_async('event-two', payload)
+
+async def event_handler_two(payload):
+    print(f'inside event_handler_two for {payload.idempotency_token}')
+
+    print('sleeping for 5 seconds')
+    await asyncio.sleep(5)
+    print('done!')
+
+async def main():
+    topical.subscribe('event-one', event_handler_one)
+    topical.subscribe('event-two', event_handler_two)
+
+    payloads = [TopicalEventPayload() for _ in range(3)]
+
+    await asyncio.gather(*[topical.publish_async('event-one', payload) for payload in payloads])
+
+asyncio.run(main())
+
+# Output
+# (topical) λ python info.py
+# inside event_handler_one for 3744628e-fb1c-4c60-a43a-175b1a09b0fd
+# sleeping for 5 seconds
+# inside event_handler_one for 64a546dc-46fd-4c23-9adc-501194376ea6
+# sleeping for 5 seconds
+# inside event_handler_one for b470535f-f65a-4c22-b764-6fe8379a0388
+# sleeping for 5 seconds
+# inside event_handler_two for 3744628e-fb1c-4c60-a43a-175b1a09b0fd
+# sleeping for 5 seconds
+# inside event_handler_two for 64a546dc-46fd-4c23-9adc-501194376ea6
+# sleeping for 5 seconds
+# inside event_handler_two for b470535f-f65a-4c22-b764-6fe8379a0388
+# sleeping for 5 seconds
+# done!
+# done!
+# done!
+```
+
+#### Using the Event Decorator
+
+Manually subscribing to a lot of events could be an issue. Topical ships with a decorator that allows you to decorate any function as an event handler.
+
+```python
+import asyncio
+from ap.topical import topical
+
+@topical.event('event-one')
+async def event_handler_one(payload):
+    print('in event handler')
+
+async def main():
+    await asyncio.gather(*[topical.publish_async('event-one', {}) for _ in range(3)])
+
+asyncio.run(main())
+
+# Output
+# (topical) λ python info.py
+# in event handler
+# in event handler
+# in event handler
+```
+
+
