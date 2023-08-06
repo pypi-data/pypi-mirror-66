@@ -1,0 +1,3 @@
+[console_scripts]
+hualang_table_Markdown_to_file = hualang.__init__:table_Markdown_to_file
+
