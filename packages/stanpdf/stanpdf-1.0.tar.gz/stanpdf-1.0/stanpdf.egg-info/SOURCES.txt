@@ -1,0 +1,9 @@
+README.md
+setup.py
+stanpdf/__init__.py
+stanpdf/pdf2image.py
+stanpdf/pdf2text.py
+stanpdf.egg-info/PKG-INFO
+stanpdf.egg-info/SOURCES.txt
+stanpdf.egg-info/dependency_links.txt
+stanpdf.egg-info/top_level.txt
