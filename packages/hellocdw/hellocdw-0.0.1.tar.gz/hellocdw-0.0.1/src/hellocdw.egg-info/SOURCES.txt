@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/hellocdw.py
+src/hellocdw.egg-info/PKG-INFO
+src/hellocdw.egg-info/SOURCES.txt
+src/hellocdw.egg-info/dependency_links.txt
+src/hellocdw.egg-info/top_level.txt
