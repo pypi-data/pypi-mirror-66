@@ -1,0 +1,18 @@
+---
+module_path: .api.energimyndigheten
+level: 'zone'
+read_csv_kwargs:
+  index_col: [0, 1]
+  skiprows: 2
+variable_names:
+  capacity: 'Installed capacity, MW'
+  generation: 'Electricity production, GWh'
+units:
+  generation: 'MWh'
+  capacity: 'MW'
+  capacity_factor: ''
+unit_conversions:
+  capacity: 1.
+  generation: 1.e3
+first_year: 2004
+last_year: 2018

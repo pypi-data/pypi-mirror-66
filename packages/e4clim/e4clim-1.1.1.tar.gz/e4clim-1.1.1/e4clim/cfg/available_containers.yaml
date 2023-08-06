@@ -1,0 +1,39 @@
+# Country-non-specific containers
+## Components
+components:
+  - demand
+  - wind
+  - pv
+
+## Data sources
+data:
+  # Climate
+  - merra2
+  - cordex
+  - clc
+  # Energy
+  - entsoe  # Europe-specific
+  # Calendar
+  - calendar
+
+# Geographic data sources
+geo:
+  - gisco
+  - gadm
+  
+
+optimizer:
+  - res_mean_risk
+  
+# Country-specific containers
+Italy:
+  data:
+    - gme
+    - gse
+  geo:
+    - istat
+
+France:
+  data:
+    - rtedata
+    - rteopen

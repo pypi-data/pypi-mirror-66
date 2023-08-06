@@ -1,0 +1,15 @@
+do_plots: True
+show: True
+# Sampling of time series to plot (hour, day, week, month, year)
+frequency: week
+# Plot one figure per region
+per_region: True
+# Matplotlib parameters
+fs_default: x-large
+fs_latex: xx-large
+savefigs_kwargs:
+  format: eps
+  dpi: 300
+  bbox_inches: tight
+  transparent: True
+

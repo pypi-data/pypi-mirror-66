@@ -1,0 +1,8 @@
+---
+module_path: .api.gme
+host: http://www.gestoremercatienergetici.org/En/MenuBiblioteca/Documenti/
+first_year: '2005'
+last_year: '2018'
+sheet_name: 'Vendite-Sales'
+units:
+  demand: 'MWh'

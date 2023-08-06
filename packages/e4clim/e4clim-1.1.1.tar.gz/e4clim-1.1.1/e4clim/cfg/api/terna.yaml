@@ -1,0 +1,43 @@
+---
+first_year: 2000
+last_year: 2018
+module_path: .api.terna
+host: 'https://www.terna.it/Portals/0/Resources/visualagency/data/evoluzione_mercato_elettrico/regioni/'
+file_format: 'xlsx'
+variable_names:
+  demand: 'consumi'
+  generation: 'produzione'
+  capacity: 'capacita'
+component_names:
+  demand: 'totale'
+  wind-onshore: 'eolica'
+  pv: 'fotovoltaica'
+  hydro: 'idroelettrica'
+  bioenergy: 'bioenergie'
+unit_conversions:
+  demand: 1.e6
+  generation: 1.e6
+  capacity: 1.
+  capacity_factor: 1.
+units:
+  demand: 'MWh'
+  generation: 'MWh'
+  capacity: 'MW'
+  capacity_factor: ''
+sheet_names:
+  demand: 'trend'
+  generation: 'trend'
+  capacity: 'trend'
+select_rows:
+  generation:
+    netta_lorda: 'netta'
+read_excel_kwargs:
+  demand:
+    index_col: 0
+    na_values: ['_']
+  generation:
+    index_col: 1
+    na_values: ['_']
+  capacity:
+    index_col: 0
+    na_values: ['_']

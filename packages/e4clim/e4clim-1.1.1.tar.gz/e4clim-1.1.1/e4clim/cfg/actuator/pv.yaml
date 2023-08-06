@@ -1,0 +1,53 @@
+---
+capacity_factor:
+  data:
+    in_fit:
+    in_predict:
+    out:
+
+  feature_extractor:
+    module_path: .actuator.pv
+
+    # Photovoltaic.actuator
+    # Capital expenditure (euro/MW)
+    capex: 879000
+    # Operation expenditure (euro/MW)
+    opex: 31000
+
+    # Array orientation and surroundings
+    surface:
+      # Array tilt (float, 'lat')
+      # tilt: 25.
+      tilt: lat
+      # Tracking: 'ns_track', 'ew_track', 'vertical', 'two'
+      tracking: 'none'
+      # Array azimuth
+      azimuth: 180.
+      # Albedo
+      albedo: 0.2
+      # Elevation threshold (degrees)
+      elevation_cut: 10.
+
+    # Modules characteristics
+    module:
+      # Module area (m2)
+      area: 1.675
+      # Number of modules
+      n_modules: 1
+      # Nominal power (W/m2)
+      nominal_power: 250.
+      # Circuit efficiency
+      eff_elec: 0.86
+      # Temperature dependence of cell efficiency (K^{-1})
+      thermal_loss: 0.004
+      # Reference temperature (K)
+      temp_ref: 298.15
+      # Cell temperature at NOCT (K)
+      temp_cell_noct: 319.15
+
+  estimator:
+    module_path: .actuator.scale_corrector
+    time_slice:
+    subsample_freq:
+    alphas_logspace:
+    regressor_kwargs:

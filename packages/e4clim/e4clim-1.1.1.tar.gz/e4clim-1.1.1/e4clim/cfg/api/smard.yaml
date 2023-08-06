@@ -1,0 +1,56 @@
+---
+# Start and end dates in UTC/Europe/Berlin timezone
+first_year: 2015
+last_year: 2018
+timezone: 'Europe/Berlin'
+url: 'https://www.smard.de/nip-download-manager/nip/download/market-data/'
+module_path: .api.smard
+file_format: 'csv'
+language: 'en'
+component_columns:
+  wind-onshore: 'Wind onshore'
+  wind-offshore: 'Wind offshore'
+  pv: 'Photovoltaics'
+  hydroe: 'Hydropower'
+  biomass: 'Biomass'
+  renewable-other: 'Other renewable'
+  coal-brown: 'Fossil brown coal'
+  coal-hard: 'Fossil hard coal'
+  gas: 'Fossil gas'
+  pumped: 'Hydro pumped storage'
+  conventional-other: 'Other conventional'
+component_ids:
+  generation:
+    wind-onshore: 1004067
+    wind-offshore: 1001225
+    pv: 1004068
+    hydro: 1001226
+    biomass: 1004066
+    renewable-other: 1001228
+    coal-brown: 1001223
+    coal-hard: 1004069
+    gas: 1004071
+    pumped: 1004070
+    conventional-other: 1001227
+  capacity:
+    wind-onshore: 3000186
+    wind-offshore: 3004076
+    pv: 3000188
+    hydro: 3003792
+    biomass: 3000189
+    renewable-other: 3000194
+    coal-brown: 3004072
+    coal-hard: 3004075
+    gas: 3000198
+    pumped: 3004074
+    conventional-other: 3000207
+units:
+  generation: 'MWh'
+  capacity: 'MW'
+  capacity_factor: ''
+read_csv_kwargs:
+  index_col: 0
+  parse_dates: [[0, 1]]
+  na_values: ['-']
+  sep: ';'
+  thousands: ','

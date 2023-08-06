@@ -1,0 +1,56 @@
+---
+start_date: '2013-01-01'
+end_date: '2019-01-01'
+module_path: .api.elia
+host: 'https://publications.elia.be/Publications/Publications/'
+version: 'v4'
+categories:
+  pv: 'SolarForecasting'
+  wind: 'WindForecasting'
+  wind-onshore: 'WindForecasting'
+  wind-offshore: 'WindForecasting'
+methods: 
+  pv: 'GetChartDataForZoneXml'
+  wind: 'GetForecastData'
+  wind-onshore: 'GetForecastData'
+  wind-offshore: 'GetForecastData'
+options:
+  pv:
+  wind: 
+    isOffshore: ''
+    isEliaConnected: ''
+  wind-onshore: 
+    isOffshore: 'false'
+    isEliaConnected: ''
+  wind:-offshore: 
+    isOffshore: 'true'
+    isEliaConnected: ''
+units:
+  generation: 'MWh'
+  capacity: 'MW'
+  capacity_factor: ''
+unit_conversions:
+  pv:
+    capacity_factor: 0.01
+  wind: 
+    capacity_factor: 1.
+  wind-onshore: 
+    capacity_factor: 1.
+  wind-offshore: 
+    capacity_factor: 1.
+tags: 
+  pv:
+    - 'SolarForecastingChartDataForZone'
+    - 'SolarForecastingChartDataForZoneItems'
+  wind: 
+    - 'WindForecastingGraphDataResponse'
+    - 'ForecastGraphItems'
+  wind-onshore: 
+    - 'WindForecastingGraphDataResponse'
+    - 'ForecastGraphItems'
+  wind-offshore: 
+    - 'WindForecastingGraphDataResponse'
+    - 'ForecastGraphItems'
+variable_names:
+  capacity_factor: 'LoadFactor'
+timezone: 'Europe/Brussels'

@@ -1,0 +1,22 @@
+---
+start_date: '2016-01-01T00:00Z'
+end_date: '2019-01-01T00:00Z'
+frequency: 'Month'
+module_path: .api.energidataservice_dk
+host: 'https://api.energidataservice.dk/'
+variable_names:
+  generation: 'communityproduction'
+  capacity: 'capacitypermunicipality'
+  demand: 'communityconsumption'
+variable_names_in_components:
+  generation: 'Power'
+  capacity: 'Capacity'
+  demand: 'Consumption'
+component_names:
+  wind-onshore: 'OnshoreWind'
+  wind-offshore: 'OffshoreWind'
+  pv: 'Solar'
+units:
+  generation: 'MWh'
+  capacity: 'MW'
+  capacity_factor: ''

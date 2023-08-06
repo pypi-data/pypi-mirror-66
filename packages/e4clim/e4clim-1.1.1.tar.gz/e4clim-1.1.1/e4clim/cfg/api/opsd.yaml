@@ -1,0 +1,7 @@
+---
+module_path: .api.opsd
+version: '2018-06-30'
+min: 60
+start_date: '2006-01-01'
+end_date: '2018-05-31'
+

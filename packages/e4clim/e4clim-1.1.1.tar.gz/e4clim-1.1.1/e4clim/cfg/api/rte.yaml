@@ -1,0 +1,37 @@
+---
+module_path: .api.rte
+host: https://digital.iservices.rte-france.com
+version: v1
+region_name: France
+timezone: 'Europe/Paris'
+dataset:
+  actual_generation:
+    structure: actual_generations_per_production_type
+    frequency: hour
+    start_date: '2015-01-01'
+    end_date: '2019-01-01'
+    units: MWh
+    max_record_length: 120
+  generation_installed_capacities:
+    structure: capacities_per_production_type
+    frequency: year
+    start_date: '2015-01-01'
+    end_date: '2019-01-01'
+    units: MW
+    max_record_length: 36500
+# Missing value management
+fillna: True
+fill_method: linear
+dependency:
+  capacity_factor:
+    - actual_generation
+    - generation_installed_capacities
+  generation:
+    - actual_generation
+  capacity:
+    - generation_installed_capacities
+
+component_names:
+  wind_onshore: WIND_ONSHORE
+  wind_offshore: WIND_OFFSHORE
+  pv: SOLAR

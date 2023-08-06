@@ -1,0 +1,17 @@
+---
+module_path: .api.gisco
+host: https://ec.europa.eu/
+path: /eurostat/cache/GISCO/distribution/v2/nuts/
+max_fetch_trials: 50
+spatial_type: RG
+scale: 10M
+projection: 3035
+# projection: 4326
+year: 2016
+nuts_level: 2
+# Column of the name of the parent administrative area
+# for which the regions are extracted
+parent_column: CNTR_CODE
+# Column of the name of the regions
+child_column: NUTS_NAME
+read_file_kwargs:

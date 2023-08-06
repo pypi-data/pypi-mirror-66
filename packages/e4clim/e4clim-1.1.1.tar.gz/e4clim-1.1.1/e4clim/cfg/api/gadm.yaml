@@ -1,0 +1,10 @@
+---
+module_path: .api.gadm
+host: https://biogeo.ucdavis.edu/
+path: data/
+version: '3.6'
+format: 'shp'
+level: 1
+child_column_prefix: 'NAME'
+read_file_kwargs:
+  encoding: 'utf8'

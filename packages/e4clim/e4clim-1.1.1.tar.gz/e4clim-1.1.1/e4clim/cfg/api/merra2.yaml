@@ -1,0 +1,67 @@
+---
+data_dir:
+postfix:
+module_path: .api.merra2
+max_fetch_trials:
+check_quality: False
+host: 'https://goldsmr4.gesdisc.eosdis.nasa.gov'
+geos5_version: '5.12.4'
+
+time_description: 'tavg'
+# time_description: 'stat'
+frequency: 'hour'
+# frequency: 'day'
+# frequency: 'month'
+
+data_name: 'M2'
+horizontal_resolution: 'N'  # Native
+vertical_location: 'x'  # 2D
+space: '2d'
+delta_lat: 0.5
+delta_lon: 0.625
+# Horizontal and Vertical grid
+format: 'nc4'
+
+start_date: '19800101'
+# end_date: '19810101'
+end_date: '20180731'
+
+streams:
+  1:
+    start_date: '19800101'
+    end_date: '19920101'
+  2:
+    start_date: '19920101'
+    end_date: '20010101'
+  3:
+    start_date: '20010101'
+    end_date: '20110101'
+  4:
+    start_date: '20110101'
+    end_date: '20210101'
+version: '00'
+
+# Height coordinate name
+height: 'height'
+# Package-source variable names mapping
+variable_names:
+  surface_density: 'RHOA'
+  surface_temperature: 'TLML'
+  surface_downward_radiation: 'SWGDN'
+  zonal_wind: 'U10M'
+  upper_zonal_wind: 'U50M'
+  meridional_wind: 'V10M'
+  upper_meridional_wind: 'V50M'
+  surface_temperature_max: 'T2MMAX'
+  height_500: 'H500'
+# Package variable-source group mapping
+group_names:
+  surface_density: 'flx'
+  surface_temperature: 'flx'
+  surface_downward_radiation: 'rad'
+  zonal_wind: 'slv'
+  meridional_wind: 'slv'
+  upper_zonal_wind: 'slv'
+  upper_meridional_wind: 'slv'
+  surface_temperature_max: 'slv'
+  height_500: 'slv'

@@ -1,0 +1,17 @@
+---
+start_date: '2014-01-01'
+end_date: '2019-01-01'
+frequency: 'A-DEC'
+module_path: .api.gov_uk_dukes
+host: 'https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/'
+component_names:
+  wind: 'Wind'
+  wind-onshore: 'Onshore'
+  wind-offshore: 'Offshore'
+  pv: 'Solar photovoltaics'
+  hydro: 'Hydro'
+  bio: 'Bioenergy (excludes cofiring and non-biodegradable wastes)'
+unit_conversions:
+  capacity_factor: 0.01
+units:
+  capacity_factor: ''

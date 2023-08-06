@@ -1,0 +1,73 @@
+---
+data_dir:
+module_path: .api.cordex
+# domain: MED-44
+domain: MED-18
+# domain: MED-11
+frequency: day
+# frequency: 3hr
+
+# institution: IPSL
+# gcm_model_name: ECMWF-ERAINT
+# rcm_model_name: IPSL-WRF311
+# cmip5_ensemble_member: r1i1p1
+# institution: GUF
+# gcm_model_name: MPI-ESM-LR
+# rcm_model_name: GUF-CCLM4-8-18
+# cmip5_ensemble_member: r1i1p1
+institution: CNRM
+gcm_model_name: CNRM-CM5
+rcm_model_name: CNRM-ALADIN52
+cmip5_ensemble_member: r8i1p1
+# institution: CMCC
+# gcm_model_name: CMCC-CM
+# rcm_model_name: CMCC-CCLM4-8-19
+# cmip5_ensemble_member: r1i1p1
+
+rcm_version_id: v1
+cmip5_experiment_name: evaluation
+# cmip5_experiment_name: historical
+# cmip5_experiment_name: rcp45
+# cmip5_experiment_name: rcp85
+
+variable_names:
+  surface_temperature: tas
+  zonal_wind: uas
+  meridional_wind: vas
+  surface_downward_radiation: rsds
+  surface_specific_humidity: huss
+  surface_pressure: ps
+  # sea_level_pressure: psl
+# Height coordinate name
+height: height
+
+server: www.medcordex.eu
+
+streams:
+  evaluation:
+    # MED-18/IPSL
+    start_dates: ['19890101', '19910101', '19960101', '20010101', '20060101', '20110101']
+    end_dates: ['19901231', '19951231', '20001231', '20051231', '20101231', '20111130']
+    # # MED-44/IPSL
+    # start_dates: ['19890101', '19910101', '19960101', '20010101', '20060101']
+    # end_dates: ['19901231', '19951231', '20001231', '20051231', '20081231']
+  rcp:
+    start_dates: ['20060101', '20110101', '20160101', '20210101', '20260101', '20310101', '20360101', '20410101', '20460101', '20510101', '20560101', '20610101', '20660101', '20710101', '20760101', '20810101', '20860101', '20910101', '20960101']
+    end_dates: ['20101231', '20151231', '20201231', '20251231', '20301231', '20351231', '20401231', '20451231', '20501231', '20551231', '20601231', '20651231', '20701231', '20751231', '20801231', '20851231', '20901231', '20951231', '21001231']
+  historical:
+    # # GUF
+    # start_dates: ['19490101', '19510101', '19560101', '19610101', '19660101', '19710101', '19760101', '19810101', '19860101', '19910101', '19960101', '20010101']
+    # end_dates: ['19501231', '19551231', '19601231', '19651231', '19701231', '19751231', '19801231', '19851231', '19901231', '19951231', '20001231', '20051231']
+    # # CNRM
+    # start_dates: ['19500101', '19510101', '19560101', '19610101', '19660101', '19710101', '19760101', '19810101', '19860101', '19910101', '19960101', '20010101']
+    # end_dates: ['19501231', '19551231', '19601231', '19651231', '19701231', '19751231', '19801231', '19851231', '19901231', '19951231', '20001231', '20051231']
+    # CMCC
+    start_dates: ['19500101', '19560101', '19610101', '19660101', '19710101', '19760101', '19810101', '19860101', '19910101', '19960101', '20010101']
+    end_dates: ['19551231', '19601231', '19651231', '19701231', '19751231', '19801231', '19851231', '19901231', '19951231', '20001231', '20051231']
+
+dims:
+  CMCC-CCLM4-8-19: [rlat, rlon]
+  GUF-CCLM4-8-18: [rlat, rlon]
+  IPSL-WRF311: [y, x]
+  CNRM-ALADIN52: [y, x]
+

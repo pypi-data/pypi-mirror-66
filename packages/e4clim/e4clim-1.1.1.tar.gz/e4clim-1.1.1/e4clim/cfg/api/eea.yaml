@@ -1,0 +1,9 @@
+---
+module_path: .api.eea
+# EEA geographical data
+host: https://www.eea.europa.eu/
+path: /data-and-maps/data/eea-reference-grids-2/gis-files/
+postfix: '-shapefile/at_download/file'
+# resolution: 1km
+resolution: 10km
+# resolution: 100km

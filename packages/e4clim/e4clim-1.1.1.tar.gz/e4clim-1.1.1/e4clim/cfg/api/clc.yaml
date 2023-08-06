@@ -1,0 +1,7 @@
+---
+module_path: .api.clc
+sampling: '16'
+version: '18_5'
+year: '2012'
+resolution: '250'
+file_format: tif

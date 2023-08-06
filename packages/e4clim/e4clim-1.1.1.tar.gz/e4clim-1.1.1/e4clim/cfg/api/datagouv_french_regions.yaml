@@ -1,0 +1,12 @@
+---
+module_path: .api.datagouv_french_regions
+host: 'https://www.data.gouv.fr/'
+filetypes: ['dbf', 'prj', 'shp', 'shx']
+child_column: 'RégION'
+read_file_kwargs:
+dbf: 'f61cd689-9850-48f4-b7b1-751d60c5d669'
+prj: 'd629b370-699a-46d6-bc05-86196fbf3f35'
+shp: '69fc7722-3e40-43fc-be67-17cb335545f7'
+shx: 'b114a44c-30f8-44de-a88b-2c7ca7842f87'
+# Used to replace Lambert II Carto with Lambert II Etendu
+wkt: 'PROJCS["France_II_Etendu",GEOGCS["GCS_NTF",DATUM["D_NTF",SPHEROID["Clarke_1880_IGN",6378249.2,293.46602]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Lambert_Conformal_Conic"],PARAMETER["False_Easting",600000.0],PARAMETER["False_Northing",2200000.0],PARAMETER["Central_Meridian",2.3372291667],PARAMETER["Standard_Parallel_1",45.8989188889],PARAMETER["Standard_Parallel_2",47.6960144444],PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",46.8],UNIT["Meter",1.0]]'

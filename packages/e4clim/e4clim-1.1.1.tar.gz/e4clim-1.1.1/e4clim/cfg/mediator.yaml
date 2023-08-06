@@ -1,0 +1,21 @@
+---
+# Project name
+project_name: 
+
+# Data frequency ('hour', 'day')
+frequency: 'hour'
+
+# Path of the log file name
+log_path:
+# Log description-level
+# ('DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL')
+log_level: 'INFO'
+
+component_managers_per_area:
+
+optimizer:
+
+cfg_path:
+  geo:
+  plot:
+
