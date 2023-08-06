@@ -1,0 +1,167 @@
+Metadata-Version: 2.1
+Name: proteinko
+Version: 5.0
+Summary: Encode protein sequence as a distribution of its physicochemical properties
+Home-page: https://github.com/stefs304/proteinko
+Author: Stefan Stojanovic
+Author-email: stefs304@gmail.com
+License: UNKNOWN
+Description: # proteinko
+        
+        ![Python package](https://github.com/stefs304/proteinko/workflows/Python%20package/badge.svg?branch=master)
+        
+        Encode protein sequence as a distribution of its physicochemical properties.
+        
+        * [Introduction](#introduction)
+        * [Methods](#methods)
+        * [Installation](#instalation)
+        * [Usage](#usage)
+          * [Example 1](#example-1)
+          * [Example 2](#example-2)
+        * [Release Notes](#release-notes)
+          * [release 5.0](#release-50)
+        
+        ### Introduction
+        
+        Protein is as sequence of amino acid residues connected by peptide bonds. Each
+        amino acid residue is characterized by a unique combination of its physical and chemical 
+        properties. `proteinko` takes advantage of this to represent protein sequence as 
+        a spatial distribution of the physicochemical properties of its amino acid 
+        residues, capturing the complementing or cancelling effect of neighbouring amino acid 
+        residues.
+        
+        `proteinko` enables numerical representation of a protein sequence 
+        while preserving the information of its underlying physicochemical properties. This 
+        allows the investigation of relationships and interactions between proteins as well as 
+        potential discovery of underlying physicochemical properties which facilitate those interactions. 
+        
+        ### Methods
+        
+        `proteinko` implements a fairly simple algorithm. The protein sequence is mapped to a 
+        vector `V` representing a distribution of a certain physicochemical property of the entire protein. 
+        Each amino acid residue `Ai` is modeled independently as a Gaussian curve `Gi` and 
+        scaled by the corresponding value from the encoding scheme. `Gi` is mapped to 
+        the slice of `V` which is centered at a position correspondig to the position of `Ai` in the sequence and 
+        which spans `L` neighbouring slices on each side. 
+        The overlap allows to sum the complementing or cancelling effects 
+        that the neighbouring amino acid residues may exert on the local physicochemical 
+        property of the protein. The extent of overlap is determined by two factors: 
+        overlap distance (`L`) and sigma factor. Overlap distance determines how many 
+        neighbouring slices `Gi` spans on each side. Sigma determines the shape of the Gaussian curve 
+        of each of the amino acid residues (see [example](#example-1)). Both of these parameters `proteinko` accepts as 
+        function arguments allowing users to modify the shape of final distribution as needed.
+        
+        ![plot1](https://raw.githubusercontent.com/stefs304/proteinko/master/resources/plot1.png)
+        
+        ### Instalation
+        ```bash
+        pip install proteinko
+        ```
+        
+        ### Usage
+        
+        `proteinko` implements two functions: `model_distribution` and `encode_sequence`. 
+        Both functions have `encoding_scheme` parameter which accepts a python dictionary with 
+        amino acid one-letter codes as keys.  
+        
+        #### Example 1:
+        ```python
+        from proteinko import model_distribution, encode_sequence
+        import matplotlib.pyplot as plt
+        from pyaaisc import Aaindex
+        
+        
+        sequence = 'MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDIEQWFTEDPGP'
+        encoding_scheme = Aaindex().get('ARGP820101', dbkey='aaindex1').index_data
+        
+        dist_1 = model_distribution(sequence, encoding_scheme, overlap_distance=2, sigma=0.4)
+        dist_2 = model_distribution(sequence, encoding_scheme, overlap_distance=3, sigma=0.8)
+        encoded = encode_sequence(sequence, encoding_scheme)
+        
+        fig, ax = plt.subplots(3, 1, sharey=True, figsize=(12,5))
+        ax[0].plot(dist_1)
+        ax[0].grid()
+        ax[0].set_xticklabels([])
+        ax[0].set_title('Modeled distribution, overlap_distance=2, sigma=0.4')
+        ax[1].plot(dist_2)
+        ax[1].grid()
+        ax[1].set_xticklabels([])
+        ax[1].set_title('Modeled distribution, overlap_distance=3, sigma=0.8')
+        ax[1].set_ylabel('Hydrophobicity index - ARGP820101')
+        ax[2].bar(range(len(encoded)), encoded)
+        ax[2].grid()
+        ax[2].set_xticks(range(len(sequence)))
+        ax[2].set_xticklabels([x for x in sequence])
+        ax[2].set_title('Sequence')
+        
+        plt.show()
+        ```
+        ![plot2](https://raw.githubusercontent.com/stefs304/proteinko/master/resources/plot2.png)
+        
+        #### Example 2
+        ```python
+        from proteinko import model_distribution
+        import matplotlib.pyplot as plt
+        from pyaaisc import Aaindex
+        
+        
+        sequence = 'MEEPQSDPSVE'
+        encoding_scheme = Aaindex().get('ARGP820101', dbkey='aaindex1').index_data
+        
+        dist = model_distribution(sequence, encoding_scheme, overlap_distance=2, sigma=0.4)
+        sampled_dist = model_distribution(sequence, encoding_scheme, overlap_distance=2, sigma=0.4, sampling_points=16)
+        
+        fig, ax = plt.subplots(2, 1, figsize=(6,4))
+        ax[0].plot(dist)
+        ax[0].grid()
+        ax[0].set_xticklabels([])
+        ax[0].set_title('Modeled distribution')
+        ax[0].set_ylabel('Hydrophobicity index')
+        
+        ax[1].bar(range(16), sampled_dist)
+        ax[1].grid()
+        ax[1].set_xticklabels([])
+        ax[1].set_title('Sampled distribution')
+        ax[1].set_ylabel('Hydrophobicity index')
+        
+        plt.show()
+        ```
+        <img src="https://raw.githubusercontent.com/stefs304/proteinko/master/resources/plot3.png" width="50%">
+        
+        ### Release Notes
+        
+        #### release 5.0
+        
+        Algorithm changes:
+        * Number of overlaping neigbouring amino acid residues has been added as function argument 
+        and default value set to `overlap_distance=2`.   
+        * Default `sigma` value has been changed from `0.8` to `0.4`. 
+        * Normalization and standardization of modeled distribution are deprecated. 
+        No pre or post processing is applied. 
+        * Scaling factor has been decreased from `100` to `40`, reducing the number of computations 
+        and increasing the performance of algorithm.
+        
+        Major code changes:
+        * `Proteinko` class has been removed and algorithm is implemented under `model_distribution` function. 
+        * New function `encode_sequence` has been introduced which simply encodes sequence 
+        with values provided in the encoding table.
+        * Encoding tables are now passed as python dictionaries instead of `pandas` dataframe. 
+        * Use of `pandas` and `scipy` packages has been replaced with python functions making 
+        the code more lightweight and increasing the performance of algorithm. 
+        
+        Minor code changes:
+        * `vlen` parameter has been renamed to `sampling_points` because it is the number 
+        of points to sample from final distribution.
+        * `schema` parameter has been renamed to `encoding_scheme`.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Description-Content-Type: text/markdown
