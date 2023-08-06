@@ -1,0 +1,10 @@
+
+[7z]
+pylzma
+
+[all]
+requests
+pylzma
+
+[web]
+requests

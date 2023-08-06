@@ -1,0 +1,3 @@
+[console_scripts]
+kecleon = kecleon.__main__:main
+
