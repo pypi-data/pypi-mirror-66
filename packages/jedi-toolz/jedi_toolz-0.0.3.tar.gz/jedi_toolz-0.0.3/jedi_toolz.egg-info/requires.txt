@@ -1,0 +1,5 @@
+tabulate
+openpyxl>=3.0.3
+pydomo>=0.2.3
+decorator>=4.4.2
+toolz
