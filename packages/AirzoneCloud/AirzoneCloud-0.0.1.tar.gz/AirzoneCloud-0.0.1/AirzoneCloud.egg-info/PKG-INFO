@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: AirzoneCloud
+Version: 0.0.1
+Summary: Python3 library for Airzone Cloud API
+Home-page: https://github.com/max13fr/AirzoneCloud
+Author: max13fr
+Author-email: max13fr@yozo.fr
+License: UNKNOWN
+Description: # Airzone Cloud
+        
+        Allow to communicate easily with Airzone Cloud to retrieve information or to send commands (on/off, temperature, mode, ...)
+        
+Keywords: airzone,airzonecloud,api
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
