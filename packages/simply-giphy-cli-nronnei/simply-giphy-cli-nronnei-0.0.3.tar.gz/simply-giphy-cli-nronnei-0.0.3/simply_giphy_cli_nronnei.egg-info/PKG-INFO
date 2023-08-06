@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: simply-giphy-cli-nronnei
+Version: 0.0.3
+Summary: A simple python-based CLI for searching Giphy
+Home-page: UNKNOWN
+Author: Nick Ronnei
+Author-email: nronnei@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
