@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: imdb-films-scraper
+Version: 1.0.1
+Summary: Scrape Film data from IMDB
+Home-page: https://github.com/AdriaPadilla/imdb_films_scraper/
+Author: Adrian Padilla
+Author-email: adrian.padilla.m@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent

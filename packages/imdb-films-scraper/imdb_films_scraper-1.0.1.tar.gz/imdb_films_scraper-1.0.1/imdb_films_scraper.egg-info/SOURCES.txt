@@ -1,0 +1,13 @@
+README.md
+setup.py
+idmb_films_scraper/__init__.py
+idmb_films_scraper/dataframing.py
+idmb_films_scraper/films.py
+idmb_films_scraper/main.py
+idmb_films_scraper/movie_class.py
+idmb_films_scraper/related_films.py
+imdb_films_scraper.egg-info/PKG-INFO
+imdb_films_scraper.egg-info/SOURCES.txt
+imdb_films_scraper.egg-info/dependency_links.txt
+imdb_films_scraper.egg-info/requires.txt
+imdb_films_scraper.egg-info/top_level.txt
