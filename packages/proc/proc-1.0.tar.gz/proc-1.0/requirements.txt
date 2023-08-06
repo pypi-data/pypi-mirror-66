@@ -1,0 +1,5 @@
+coloredlogs >= 14.0
+executor >= 22.0
+humanfriendly >= 8.2
+property-manager >= 3.0
+verboselogs >= 1.7
