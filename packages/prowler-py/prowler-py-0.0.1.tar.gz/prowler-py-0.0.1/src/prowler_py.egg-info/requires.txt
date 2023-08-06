@@ -1,0 +1,3 @@
+awscli
+ansi2html
+detect-secrets

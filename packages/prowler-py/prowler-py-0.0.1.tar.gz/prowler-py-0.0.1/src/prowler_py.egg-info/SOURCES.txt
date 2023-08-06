@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/prowler/__init__.py
+src/prowler_py.egg-info/PKG-INFO
+src/prowler_py.egg-info/SOURCES.txt
+src/prowler_py.egg-info/dependency_links.txt
+src/prowler_py.egg-info/entry_points.txt
+src/prowler_py.egg-info/requires.txt
+src/prowler_py.egg-info/top_level.txt
