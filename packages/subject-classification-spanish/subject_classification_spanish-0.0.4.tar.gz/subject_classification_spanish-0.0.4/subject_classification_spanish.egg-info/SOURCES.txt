@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+subject_classification_spanish/__init__.py
+subject_classification_spanish/subject_classifier.py
+subject_classification_spanish/test_subject_classifier.py
+subject_classification_spanish.egg-info/PKG-INFO
+subject_classification_spanish.egg-info/SOURCES.txt
+subject_classification_spanish.egg-info/dependency_links.txt
+subject_classification_spanish.egg-info/top_level.txt
+subject_classification_spanish/__pycache__/cleaner.cpython-37.pyc
+subject_classification_spanish/__pycache__/sentiment_analysis.cpython-37.pyc
+subject_classification_spanish/saved_model/model.h5
+subject_classification_spanish/saved_model/model.json
+subject_classification_spanish/saved_model/multilabel_binarizer.pickle
+subject_classification_spanish/saved_model/tokenizer.pickle
