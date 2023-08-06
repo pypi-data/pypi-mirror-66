@@ -1,0 +1,11 @@
+README.rst
+setup.cfg
+setup.py
+pdsf/__init__.py
+pdsf/sflake.py
+pdsf/util.py
+pdsf.egg-info/PKG-INFO
+pdsf.egg-info/SOURCES.txt
+pdsf.egg-info/dependency_links.txt
+pdsf.egg-info/requires.txt
+pdsf.egg-info/top_level.txt
