@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: kws-dash-infra
+Version: 0.1.0
+Summary: "Helpers to build a dash kws application"
+Home-page: UNKNOWN
+Author: Mathias Ngo
+License: kilowattsol
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: Other/Proprietary License
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: docs
+Provides-Extra: test
+Provides-Extra: deploy
