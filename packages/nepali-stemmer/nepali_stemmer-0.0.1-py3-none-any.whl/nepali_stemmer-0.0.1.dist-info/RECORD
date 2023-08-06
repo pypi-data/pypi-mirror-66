@@ -1,0 +1,15 @@
+nepali_stemmer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nepali_stemmer/helper.py,sha256=ALRNqkBD6Epds0X-h2jtpjtsJ-uIrkwHdxF897CPzvo,1452
+nepali_stemmer/root.py,sha256=ALRNqkBD6Epds0X-h2jtpjtsJ-uIrkwHdxF897CPzvo,1452
+nepali_stemmer/stemmer.py,sha256=Bi-mdMVf4xIIycLkO46Ty6Vm2QNsBWhD7TWzTxk_5k8,4286
+nepali_stemmer/files/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nepali_stemmer/files/dictionary.txt,sha256=q3ohuYfNy2jg6eu_pva7Gy_hB8kgHGdOfU7bKt2M-A4,722832
+nepali_stemmer/files/suffix.txt,sha256=5H8dEB3AAC7i2PeWTflVzq3Y-knf7i7uFlZtLk4_YTM,5144
+stemmer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stemmer/nep_stemmer.py,sha256=nlrW8WDfnWbfoZTyZWX43DDVkItXOnmOsPvSsJlW7So,3816
+stemmer/root.py,sha256=ALRNqkBD6Epds0X-h2jtpjtsJ-uIrkwHdxF897CPzvo,1452
+nepali_stemmer-0.0.1.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+nepali_stemmer-0.0.1.dist-info/METADATA,sha256=0Rwt_j7JxmEE-EOy9IbVQ1rYvH9e8pngc9ZDMkpl-QQ,1163
+nepali_stemmer-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+nepali_stemmer-0.0.1.dist-info/top_level.txt,sha256=-N2rBtRo1L-8nxEneQdgfXpDCYsTaDMAaYefn-07I3Q,15
+nepali_stemmer-0.0.1.dist-info/RECORD,,
