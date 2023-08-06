@@ -1,0 +1,14 @@
+README.md
+setup.py
+mcos/__init__.py
+mcos/covariance_transformer.py
+mcos/error_estimator.py
+mcos/mcos.py
+mcos/observation_simulator.py
+mcos/optimizer.py
+mcos/utils.py
+mcos.egg-info/PKG-INFO
+mcos.egg-info/SOURCES.txt
+mcos.egg-info/dependency_links.txt
+mcos.egg-info/requires.txt
+mcos.egg-info/top_level.txt
