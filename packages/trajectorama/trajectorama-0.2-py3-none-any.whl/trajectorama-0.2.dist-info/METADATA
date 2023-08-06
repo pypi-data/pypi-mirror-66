@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: trajectorama
+Version: 0.2
+Summary: Single-cell trajectory integration
+Home-page: https://github.com/brianhie/trajectorama
+Author: Brian Hie
+Author-email: brianhie@mit.edu
+License: MIT
+Download-URL: https://github.com/brianhie/trajectorama/archive/v0.2-beta.tar.gz
+Platform: UNKNOWN
+Requires-Dist: anndata (>=0.6.22)
+Requires-Dist: joblib (>=0.13.2)
+Requires-Dist: geosketch (>=1.0)
+Requires-Dist: numpy (>=1.12.0)
+Requires-Dist: scanpy (>=1.4.5.1)
+Requires-Dist: scikit-learn (>=0.20rc1)
+Requires-Dist: scipy (>=1.0.0)
+
+UNKNOWN
+
+
