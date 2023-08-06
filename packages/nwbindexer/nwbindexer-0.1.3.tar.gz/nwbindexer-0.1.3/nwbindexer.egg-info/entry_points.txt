@@ -1,0 +1,5 @@
+[console_scripts]
+build_nwbindex = nwbindexer.build_index:main
+query_nwbindex = nwbindexer.query_index:main
+search_nwb = nwbindexer.search_nwb:main
+
