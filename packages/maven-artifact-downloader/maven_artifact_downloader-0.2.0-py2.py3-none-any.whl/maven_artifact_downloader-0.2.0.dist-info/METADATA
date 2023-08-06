@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: maven-artifact-downloader
+Version: 0.2.0
+Summary: Resolve and download maven artifacts
+Home-page: https://git.linecorp.com/filipe-guerreiro/main-downloader
+Author: Filipe Guerreiro
+Author-email: filipe.guerreiro@linecorp.com
+License: GNU 3.0
+Keywords: packages
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: lxml
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+# maven-downloader
+A maven repository artifact download tool written in Python.
+
+This is a small CLI, ripped out version of Ansible's maven artifact fetcher, which in turn is based on hamnis/maven-artifact project. Most implementation credits go to them.
+
+Works with both Python 2 and 3.
+
+## Dependencies
+
+- lxml
+- boto3 (if using AWS S3)
+
+## Installation
+
+```
+pip install maven_artifact_downloader
+```
+
+## Usage
+
+```
+maven_artifact_downloader --group_id GROUP_ID --artifact_id ARTIFACT_ID
+                          [--repository_url REPOSITORY_URL] 
+                          [--version VERSION] [--classifier CLASSIFIER] [--extension EXTENSION]
+                          [--username USERNAME] [--password PASSWORD]
+                          [--user_agent USER_AGENT] [--state {present,absent}]
+                          [--timeout TIMEOUT] [--dest DEST]
+                          [--validate_certs VALIDATE_CERTS] [--keep_name KEEP_NAME]
+                          [--verify_checksum {never,download,change,always}]
+```
+
+
+## Examples
+
+### Download the latest version of the JUnit framework artifact from Maven Central
+
+```
+maven_artifact_downloader 
+    --group_id junit 
+    --artifact_id junit 
+    --dest /tmp/junit-latest.jar
+```
+
+### Download JUnit 4.11 from Maven Central
+
+```
+maven_artifact_downloader 
+    --group_id junit 
+    --artifact_id junit 
+    --version 4.11 
+    --dest /tmp/junit-4.11.jar
+```
+
+### Download an artifact from a private repository requiring authentication
+```
+maven_artifact_downloader
+    --group_id com.company
+    --artifact_id library-name
+    --repository_url 'https://repo.company.com/maven'
+    --username user
+    --password pass
+    --dest /tmp/library-name-latest.jar
+```
+
+### Download a WAR File to the Tomcat webapps directory to be deployed
+
+```
+maven_artifact_downloader 
+    --group_id com.company 
+    --artifact_id web-app 
+    --extension war 
+    --repository_url 'https://repo.company.com/maven' 
+    --dest /var/lib/tomcat7/webapps/web-app.war
+```
+
+## Known Bugs
+
+There is an infinite loop that happens when --verify_checksum flag is set to anything other than `never`. To ignore it and run the downloader, add the `--verify_checksum never` flag.
+
+## License
+
+GNU General Public License v3.0 or later
+
+See [LICENSE](LICENSE) to see the full text.
+
