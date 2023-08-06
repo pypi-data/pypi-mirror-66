@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+capture_the_flag.egg-info/PKG-INFO
+capture_the_flag.egg-info/SOURCES.txt
+capture_the_flag.egg-info/dependency_links.txt
+capture_the_flag.egg-info/requires.txt
+capture_the_flag.egg-info/top_level.txt
+ctf/__init__.py
+ctf/api.py
+ctf/error.py
+ctf/io.py
+ctf/pieces.py
+ctf/rendering.py
+ctf/version.py
+ctf/resources/PressStart2P-Regular.ttf

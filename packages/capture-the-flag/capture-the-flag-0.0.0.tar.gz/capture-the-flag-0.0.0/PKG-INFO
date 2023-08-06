@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: capture-the-flag
+Version: 0.0.0
+Summary: A Capture The Flag (CTF) environment.
+Home-page: https://gitlab.com/documented/ctf
+Author: Christian Lang
+Author-email: me@christianlang.io
+License: BSD
+Description: # Capture The Flag (CTF)
+        CTF is a Python package for reinforcement learning. This package is not related to [CTF Hacking](https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security) competitions.
+        ## Installation
+        ```
+        pip install ctf
+        ```
+        ## Dependencies
+        - [numpy](https://www.numpy.org)
+        - [pyglet](http://www.pyglet.org)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: testing

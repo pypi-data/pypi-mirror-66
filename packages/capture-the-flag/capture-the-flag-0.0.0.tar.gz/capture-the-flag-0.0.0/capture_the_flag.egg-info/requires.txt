@@ -1,0 +1,7 @@
+numpy
+pyglet
+
+[testing]
+pytest
+pytest-cov
+flake8
