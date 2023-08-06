@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: biggu_pipeline
+Version: v0.0.1
+Summary: Pipeline abstraction for python projects that implements IoC container
+Home-page: https://github.com/esalazarv/biggu-pipeline.git
+Author: Eduardo Salazar
+Author-email: eduardosalazar89@hotmail.es
+License: MIT
+Download-URL: https://github.com/esalazarv/biggu-pipeline/archive/v0.0.1.zip
+Description: UNKNOWN
+Keywords: biggu_pipeline,Pipeline,pipes
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
