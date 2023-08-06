@@ -1,0 +1,68 @@
+#!/usr/bin/env python
+# automatically created by shore {{shore_version}}
+
+from __future__ import print_function
+import argparse
+import os
+import subprocess
+import sys
+
+package_def = {{package_def}}
+
+parser = argparse.ArgumentParser()
+parser.add_argument('packages', nargs='*')
+parser.add_argument('--no-develop', action='store_true', help='Perform a normal install of the packages.')
+parser.add_argument('--uninstall', action='store_true', help='Uninstall the packages instead.')
+parser.add_argument('--type', choices=('install', 'develop'), help='Alternative for using or not using --no-develop.')
+parser.add_argument('-v', '--verbose', action='store_true', help='Print the Pip command that is run.')
+parser.add_argument('--extras', default='', help='Comma-separated extras to install.')
+args = parser.parse_args()
+
+if args.type and args.uninstall:
+  parser.error('conflicting options: --type and --uninstall')
+if args.no_develop and args.uninstall:
+  parser.error('conflicting options: --no-develop and --uninstall')
+if args.type == 'develop':
+  if args.no_develop:
+    parser.error('conflicting options: --type=develop and --no-develop')
+elif args.type == 'install':
+  args.no_develop = True
+
+def _resolve(result, pkg_names, extras=(), visited=None):
+  if visited is None:
+    visited = set()
+
+  for pkg_name in (x for x in pkg_names if x not in visited):
+    visited.add(pkg_name)
+    package = next((x for x in package_def if x['name'] == pkg_name), None)
+    if package is None:
+      parser.error('not a package of this monorepo: {}'.format(pkg_name))
+
+    _resolve(result, package['requires'], extras, visited)
+    for extra in filter(bool, extras):
+      _resolve(result, package['extra_requires'].get(extra, []))
+
+    if extras:
+      pkg_name += '[' + ','.join(extras) + ']'
+    result.append(pkg_name)
+
+install_packages = []
+_resolve(install_packages, (args.packages or (x['name'] for x in package_def)), list(filter(bool, args.extras.split(','))))
+
+python = os.getenv('PYTHON', 'python')
+command = [python, '-m', 'pip', 'uninstall' if args.uninstall else 'install']
+for pkgname in install_packages:
+  if not args.no_develop and not args.uninstall:
+    command.append('-e')
+  command.append(pkgname if args.uninstall else './' + pkgname)
+if args.uninstall:
+  command.append('-y')
+
+project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+if args.verbose:
+  command.append('-v')
+  print('Running command in working directory', project_dir)
+  print('$', ' '.join(command))
+
+sys.exit(subprocess.call(command, cwd=project_dir))
