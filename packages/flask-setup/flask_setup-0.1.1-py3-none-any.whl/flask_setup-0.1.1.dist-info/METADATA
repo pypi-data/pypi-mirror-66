@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: flask-setup
+Version: 0.1.1
+Summary: A simple tool to help you setup a flask project for web development, API development and just any basic app
+Home-page: https://github.com/mrteey/flask-setup
+Author: Nasir Mustapha
+Author-email: nasir@mrteey.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# flask-setup
+Flask Setup Tool
+
+INSTALLATION:
+pip install flask_setup
+
+USAGE:
+create a virtual environment and activate it
+then build with flask_setup
+
+1. To Build Basic Flask App:
+    a) flask_setup -basic
+    b) to name your project pass the name with a double flag e.g. --myproject
+    c) to build with blueprint pass -blueprint flag
+2. To Build Web App:
+    a) flask_setup -web
+    b) to build with blueprint pass -blueprint flag
+    c) to work with flask-marshmallow for RESTapis pass -api flag
+
+
