@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+COVID19_ES_Py/__init__.py
+COVID19_ES_Py/boletim.py
+COVID19_ES_Py/exceptions.py
+COVID19_ES_Py/relatorio.py
+COVID19_ES_Py/utils.py
+COVID19_ES_Py.egg-info/PKG-INFO
+COVID19_ES_Py.egg-info/SOURCES.txt
+COVID19_ES_Py.egg-info/dependency_links.txt
+COVID19_ES_Py.egg-info/requires.txt
+COVID19_ES_Py.egg-info/top_level.txt
