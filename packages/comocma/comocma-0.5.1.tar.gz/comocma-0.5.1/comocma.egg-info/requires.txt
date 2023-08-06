@@ -1,0 +1,3 @@
+cma>=3
+moarchiving
+numpy

@@ -1,0 +1,13 @@
+setup.py
+comocma/LICENSE
+comocma/__init__.py
+comocma/__main__.py
+comocma/como.py
+comocma/hv.py
+comocma/nondominatedarchive.py
+comocma/sofomore_logger.py
+comocma.egg-info/PKG-INFO
+comocma.egg-info/SOURCES.txt
+comocma.egg-info/dependency_links.txt
+comocma.egg-info/requires.txt
+comocma.egg-info/top_level.txt
