@@ -1,0 +1,3 @@
+[console_scripts]
+moco_explorer = moco_explorer.cli:main
+
