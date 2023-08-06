@@ -1,0 +1,10 @@
+numpy
+pandas
+scipy
+matplotlib
+numba==0.48
+sciris
+scirisweb
+gunicorn
+plotly_express
+fire
