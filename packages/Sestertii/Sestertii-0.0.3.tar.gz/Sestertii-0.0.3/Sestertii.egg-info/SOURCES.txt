@@ -1,0 +1,11 @@
+README.md
+setup.py
+Sestertii.egg-info/PKG-INFO
+Sestertii.egg-info/SOURCES.txt
+Sestertii.egg-info/dependency_links.txt
+Sestertii.egg-info/requires.txt
+Sestertii.egg-info/top_level.txt
+sestertii/__init__.py
+sestertii/dummy_function.py
+tests/__init__.py
+tests/dummy_test.py
