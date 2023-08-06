@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+cop_number/__init__.py
+cop_number/cop.py
+cop_number.egg-info/PKG-INFO
+cop_number.egg-info/SOURCES.txt
+cop_number.egg-info/dependency_links.txt
+cop_number.egg-info/requires.txt
+cop_number.egg-info/top_level.txt
