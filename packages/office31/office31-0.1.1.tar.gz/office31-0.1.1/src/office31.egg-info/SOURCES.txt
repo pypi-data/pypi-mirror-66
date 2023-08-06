@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/office31/__init__.py
+src/office31/download.py
+src/office31/split.py
+src/office31.egg-info/PKG-INFO
+src/office31.egg-info/SOURCES.txt
+src/office31.egg-info/dependency_links.txt
+src/office31.egg-info/requires.txt
+src/office31.egg-info/top_level.txt
