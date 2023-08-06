@@ -1,0 +1,3 @@
+[console_scripts]
+greet = chat.cli:greet
+
