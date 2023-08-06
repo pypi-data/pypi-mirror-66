@@ -1,0 +1,7 @@
+numpy
+scikit-learn
+pandas
+surprise
+scipy
+scikit-surprise
+networkx
