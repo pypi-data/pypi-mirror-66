@@ -1,0 +1,10 @@
+README.md
+setup.py
+schnell/__init__.py
+schnell/detector.py
+schnell/mapping.py
+schnell.egg-info/PKG-INFO
+schnell.egg-info/SOURCES.txt
+schnell.egg-info/dependency_links.txt
+schnell.egg-info/requires.txt
+schnell.egg-info/top_level.txt
