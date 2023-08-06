@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: AuroraSolarClient
+Version: 1.0.2
+Summary: A python client for Aurora Solar
+Home-page: https://github.com/chaosinside/python-aurora-solar-client
+Author: Chris Hubbard
+Author-email: chubbard@gmail.com
+License: UNKNOWN
+Description: # Python Aurora Solar Client
+        
+        A python client for the Aurora Solar API.
+        
+        ### Dependencies
+        * requests
+        
+        ### Getting Started
+        
+        	pip install AuroraSolarClient
+        
+        ### Usage
+        AuroraSolarClient must be initialized with a tenant_id, api_key, and api_secret. Once intialized, you can use any of the provided functions to return a requests response object.
+        
+        ### Example
+        ```python
+        from .client import AuroraSolarClient
+        
+        tenant_id = "my_tenant_id"
+        api_key = "my_api_key"
+        api_secret = "my_api_secret"
+        aurora_project_id = "my_aurora_project_id"
+        
+        client = AuroraSolarClient(tenant_id, api_key, api_secret)
+        response = client.get_project(aurora_project_id)
+        print("response:", response.text)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
