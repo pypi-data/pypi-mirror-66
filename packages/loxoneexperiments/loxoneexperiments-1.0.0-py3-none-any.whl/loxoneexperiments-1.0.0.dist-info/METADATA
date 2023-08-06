@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: loxoneexperiments
+Version: 1.0.0
+Summary: Simple interaction with Loxone home automation server
+Home-page: UNKNOWN
+Author: Petr Pavlu
+Author-email: ppavlu@cisco.com
+License: MIT
+Requires-Dist: requests
+Requires-Dist: pathlib
+
+Sample Python class providing basic interaction with Loxone server in home automation.
+
+
