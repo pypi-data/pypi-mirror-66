@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: sonocrop
+Version: 0.2
+Summary: Prepare ultrasound videos for machine learning-- crop and remove static clutter from ultrasound video.
+Home-page: https://github.com/davycro/sonocrop
+Author: David Crockett, MD
+Author-email: davycro1@gmail.com
+License: Apache Software License 2.0
+Description: Will fill this in later
+        
+Keywords: ultrasound bedside ultrasound pocus ffmpeg opencv echo cardiac
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
