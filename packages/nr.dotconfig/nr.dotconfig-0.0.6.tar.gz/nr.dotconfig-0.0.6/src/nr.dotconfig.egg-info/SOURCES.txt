@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/dotconfig.py
+src/nr.dotconfig.egg-info/PKG-INFO
+src/nr.dotconfig.egg-info/SOURCES.txt
+src/nr.dotconfig.egg-info/dependency_links.txt
+src/nr.dotconfig.egg-info/entry_points.txt
+src/nr.dotconfig.egg-info/requires.txt
+src/nr.dotconfig.egg-info/top_level.txt
