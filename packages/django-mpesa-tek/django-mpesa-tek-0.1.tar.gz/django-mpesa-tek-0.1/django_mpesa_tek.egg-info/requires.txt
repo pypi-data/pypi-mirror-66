@@ -1,0 +1,8 @@
+django-rest-framework
+
+[:python_version == "3"]
+daraja-mpesa
+
+[docs]
+sphinx
+sphinx-automodapi
