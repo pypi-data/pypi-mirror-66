@@ -1,0 +1,17 @@
+stpmex/__init__.py,sha256=0RmNVTcjIladKULAK8Hu4P6rFaWUUkKBiIHO_JrnuBI,97
+stpmex/auth.py,sha256=B0dnSuyudQctlXpY34avbv_4XOyUxA5PSrniS7wn69U,1513
+stpmex/client.py,sha256=A69JXixfkGkMwY6PwNfBql_gs-N6VsNsDYEeSgWkuTk,4317
+stpmex/exc.py,sha256=tD8gLrpoaGHcAu5YpfxnqOaOQPCrwVTYTa4Ovrwjim0,1190
+stpmex/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stpmex/types.py,sha256=5CJ6oRyLSnkyNwRrP_-IfjDhslXptb6Mem-qyafABUI,4280
+stpmex/version.py,sha256=weaNpwg_wW5WeyIU1uhd80q5RH5gUi1qq155oi9xXEE,47
+stpmex/resources/__init__.py,sha256=H2VxHfw1mXWM8qd8xxkz4ilQEe4hW2e1G5ESk-DDCf0,172
+stpmex/resources/base.py,sha256=QJ8HIMrrsc7s4FXw6MiYAN701Xqg7ApQlT0fEm2Tpa8,1366
+stpmex/resources/cuentas.py,sha256=o0fLVO0Ok2BwHQKfLmh8B17N5Iq7pzDIZMFFf2g1nkc,3417
+stpmex/resources/ordenes.py,sha256=sy6sA-C4xnnAkCFXG8VltId7cvzIW9syVIE7Xf6_tVo,6025
+stpmex/resources/saldos.py,sha256=aG9aj_Wrnj6C78TnBW65CDqQdqEXUTu8rg2zZphFrlc,717
+stpmex-3.3.0.dev2.dist-info/LICENSE,sha256=9GQPE7kl6j7TtaughgZn1IypobZPB0y6CajRzcZQx2U,1063
+stpmex-3.3.0.dev2.dist-info/METADATA,sha256=UY6xSrAK8XlU5yoYm6A5D6xzIpXsqhuIIq_o59kmd4s,2561
+stpmex-3.3.0.dev2.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+stpmex-3.3.0.dev2.dist-info/top_level.txt,sha256=yzq_SArWwc5tJAK2pqz74quZKPGH782f_s7l2FTf9KQ,7
+stpmex-3.3.0.dev2.dist-info/RECORD,,
