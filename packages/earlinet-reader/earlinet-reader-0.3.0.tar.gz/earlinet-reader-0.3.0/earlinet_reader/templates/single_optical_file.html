@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Contents of optical file {{ p.file_name }} </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <style>
+      {% include 'normalize.css' %}
+
+
+
+
+    </style>
+    <style>
+      {% include 'skeleton.css' %}
+
+
+
+
+    </style>
+    <style>
+        .header {
+           margin-top: 6rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: 50rem;
+        }
+
+        span.small {
+            font-size: 1.8rem;
+            color: #999;
+            letter-spacing: normal;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="container">
+    <section class="header">
+        <h3>Contents of optical file {{ p.file_name }}</h3>
+    </section>
+
+    <div class="row">
+        <div class="twelve columns">
+         <p><strong>System:</strong> {{p.System}}<br>
+            <strong>Location:</strong>{{p.Location}} ({{ p.Latitude_degrees_north|round(1, 'floor') }}N, {{p.Longitude_degrees_east|round(1, 'floor') }}E, {{ p.Altitude_meter_asl }}m asl)<br>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="twelve columns">
+            <h4>Data variables</h4>
+            <img src="{{ image_dir }}/{{ p.get_variable_plot_name('all') }}">
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="twelve columns">
+            <h4>Global attributes</h4>
+            <table class="u-full-width">
+                <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for attribute in p.spec_global_attributes %}
+                {% if p[attribute] %}
+                <tr>
+                    <td>{{ attribute }}</td>
+                    <td>{{ p[attribute] }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

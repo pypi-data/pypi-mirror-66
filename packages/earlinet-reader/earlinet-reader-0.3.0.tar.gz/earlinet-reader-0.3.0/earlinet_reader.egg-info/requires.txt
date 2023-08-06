@@ -1,0 +1,5 @@
+numpy
+matplotlib
+sphinx
+jinja2
+netCDF4

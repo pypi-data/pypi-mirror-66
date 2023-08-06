@@ -1,0 +1,5 @@
+[console_scripts]
+plotELPP = earlinet_reader.scripts.plot_elpp:main
+plotoptical = earlinet_reader.scripts.plot_optical:main
+plotoptical-dataset = earlinet_reader.scripts.plot_dataset:main
+
