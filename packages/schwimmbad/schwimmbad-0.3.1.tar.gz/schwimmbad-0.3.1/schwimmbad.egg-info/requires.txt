@@ -1,0 +1,12 @@
+
+[docs]
+alabaster
+emcee
+
+[test]
+pytest
+pytest-astropy
+cython
+mpi4py
+joblib
+matplotlib
