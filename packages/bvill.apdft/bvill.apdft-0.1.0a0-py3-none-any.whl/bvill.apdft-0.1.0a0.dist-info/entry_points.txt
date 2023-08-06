@@ -1,0 +1,3 @@
+[console_scripts]
+apdft=bvill_apdft.cli:run
+

@@ -1,0 +1,11 @@
+bvill_apdft/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bvill_apdft/apdft.py,sha256=peCX-ATmEl5MvCXRhQUUGOKcu8UT_PHQiOByG1kV5xw,2200
+bvill_apdft/cli.py,sha256=1zJzZdv_ZSamcDi2gBapQus9v7jk7NRNrp9BXM8F-R4,3054
+bvill_apdft/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bvill_apdft/tests/test_apdft.py,sha256=hKpKILXiMsCKaBP4PXC0vfvTJJpZsxdeHVWBL7nixLw,4951
+bvill_apdft/utils.py,sha256=S3G-0T4SkxM8K11pNiLeMDSYf9BN65gcwjYqgAi_GA0,1763
+bvill.apdft-0.1.0a0.dist-info/entry_points.txt,sha256=LUBj7qR7sgBPBnLk3zQ4kwZHXfFMocRoYxvuO3FLQnw,45
+bvill.apdft-0.1.0a0.dist-info/LICENSE,sha256=-dB-uAVWSuyq9p1v5eGP_QEl-EIt5J__JOUXXXn-Miw,1095
+bvill.apdft-0.1.0a0.dist-info/WHEEL,sha256=xSvaL1DM8LOHfdyo0cCcwjZu1tC6CnCsRGWUgazvlbM,83
+bvill.apdft-0.1.0a0.dist-info/METADATA,sha256=YazeHrVzQ3Q7RbJoMIlJlISuB4HwKsZBqkwd1mBTA0o,5666
+bvill.apdft-0.1.0a0.dist-info/RECORD,,
