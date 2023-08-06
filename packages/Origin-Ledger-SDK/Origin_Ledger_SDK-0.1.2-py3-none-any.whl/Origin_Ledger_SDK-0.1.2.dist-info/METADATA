@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: Origin-Ledger-SDK
+Version: 0.1.2
+Summary: Project Origin ledger SDK
+Home-page: https://github.com/project-origin/ledger-sdk-python
+Author: Martin Schmidt
+Author-email: mcs@energinet.dk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+
+UNKNOWN
+
+
