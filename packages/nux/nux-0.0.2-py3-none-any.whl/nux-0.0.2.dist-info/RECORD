@@ -1,0 +1,14 @@
+Experiments/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Experiments/realNVP.py,sha256=eAqo0Cwby9zdpSPcrObS4MWd2awf7LChG3pQJwAH7hA,9966
+nox/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nox/datasets.py,sha256=rh_MNWqnJQ6oFGtphgoj9uPZb71aDkVfYwS5U9eCxC0,9053
+nox/debug.py,sha256=fyaz57EwDOvcJuLQG4CBvs9Yr8WtvUD2WnsBUF1_xik,791
+nox/main.py,sha256=LNO5lNvVhRQtjdbVIcwdyGSbxFTVrVKnllZGSgMnuzc,29
+nox/normalizing_flows.py,sha256=0FFdmM4nx17BK_wc0KxEqDR_JTRo2swzJXYUdkj25oY,66802
+nox/staxplusplus.py,sha256=W1XEDG7yvCoFvZ44xBtzInRumrmKerVZeDdf0zzQ3SY,23946
+nox/util.py,sha256=x8GPUcT8uwe410OXnVNV-zhywQ7kSbacZxFaxwL8dMY,18817
+nux-0.0.2.dist-info/LICENSE,sha256=gam5wB0NISuzv4-0ewEC5-4R4I9cfKqdnOIs4WNGUkA,1088
+nux-0.0.2.dist-info/METADATA,sha256=vUbxGcBWnsKEyXJzFmtSeuIYoy_1mMl2-7zEbSOh3Hg,3340
+nux-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+nux-0.0.2.dist-info/top_level.txt,sha256=d1e2V2nlPEvQCqzuuTfaHiyxM3aLkyNo69kbg4fDCg0,16
+nux-0.0.2.dist-info/RECORD,,
