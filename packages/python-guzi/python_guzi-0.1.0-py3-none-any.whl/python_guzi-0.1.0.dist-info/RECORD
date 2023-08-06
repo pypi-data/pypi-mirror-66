@@ -1,0 +1,10 @@
+guzi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+guzi/models.py,sha256=-A828JZ0IOI650NFgDKlV2-JIsjR_D664Q4_xJoPKiU,9050
+python-guzi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_models.py,sha256=aFrfSn6eUpa02aZEnzjNd343XibJr4eBmE5WiDLKddE,14767
+python_guzi-0.1.0.dist-info/LICENSE,sha256=HWta9a7wk1egVAijPyvPfAHgReZi7MnlVDtdjZkwskw,1068
+python_guzi-0.1.0.dist-info/METADATA,sha256=DFtl3-QPgdjB4f7-k7zwfydnY7r00JV1qVTKuefTDhY,2733
+python_guzi-0.1.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+python_guzi-0.1.0.dist-info/top_level.txt,sha256=NbEAlK9sX5lPmF3FJINPNqprgOs0cve60jqsMlehGXI,11
+python_guzi-0.1.0.dist-info/RECORD,,
