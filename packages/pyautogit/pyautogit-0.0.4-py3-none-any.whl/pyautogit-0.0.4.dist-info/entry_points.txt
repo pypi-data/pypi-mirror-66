@@ -1,0 +1,5 @@
+[console_scripts]
+askpass_pyautogit = pyautogit.askpass.askpass:main
+askpass_pyautogit_win = pyautogit.askpass.askpass_win:main
+pyautogit = pyautogit:main
+
