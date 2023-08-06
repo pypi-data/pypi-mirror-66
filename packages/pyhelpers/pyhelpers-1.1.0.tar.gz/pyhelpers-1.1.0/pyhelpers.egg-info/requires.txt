@@ -1,0 +1,12 @@
+fuzzywuzzy
+numpy
+openpyxl
+pandas
+psycopg2
+python-rapidjson
+sqlalchemy
+sqlalchemy-utils
+tqdm
+xlrd
+xlwt
+XlsxWriter
