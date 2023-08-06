@@ -1,0 +1,9 @@
+README.md
+setup.py
+kimmy/OneZone.py
+kimmy/__init__.py
+kimmy.egg-info/PKG-INFO
+kimmy.egg-info/SOURCES.txt
+kimmy.egg-info/dependency_links.txt
+kimmy.egg-info/requires.txt
+kimmy.egg-info/top_level.txt
