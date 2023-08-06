@@ -1,0 +1,76 @@
+{% extends 'selia_templates/base_with_toolbar.html' %}
+
+{% load i18n %}
+{% load selia_tags %}
+{% load selia_buttons %}
+{% load static %}
+
+{% block secondary-navbar %}
+  {% include 'selia_annotator/navbar.html' %}
+{% endblock secondary-navbar %}
+
+
+{% block toolbar-title %}
+  {{ item.collection }}: {% trans 'Item' %} {{ item.pk }}: {% trans 'Annotations: Add' %}
+{% endblock %}
+
+{% block toolbar-items %}
+  {% include 'selia_annotator/toolbar.html' %}
+{% endblock toolbar-items %}
+
+{% block main-content %}
+	<div id="annotator">
+  </div>
+{% endblock main-content %}
+
+{% block scripts-extra %}
+{{ block.super }}
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script type="text/javascript" src="{% static 'selia_annotator/annotator.js' %}"></script>
+
+<script type="text/javascript">
+  let Annotator = annotator.default;
+
+  let urls = {{% for key, url in urls.items %}
+    {{ key }}: '{{ url }}',{% endfor %}
+  }
+
+  let info = {
+    item: "{{ item.pk }}",
+    itemType: "{{ item.item_type.pk }}",
+  }
+
+  function getCookie(name) {
+      var cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+          var cookies = document.cookie.split(';');
+          for (var i = 0; i < cookies.length; i++) {
+              var cookie = cookies[i].trim();
+              // Does this cookie string begin with the name we want?
+              if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                  break;
+              }
+          }
+      }
+      return cookieValue;
+  }
+  var csrftoken = getCookie('csrftoken');
+
+  function csrfSafeMethod(method) {
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+  }
+  $.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFTOKEN", csrftoken);
+        }
+    }
+  });
+
+  ReactDOM.render(
+    React.createElement(Annotator, {urls: urls, info: info}, null),
+    document.getElementById('annotator'));
+</script>
+{% endblock scripts-extra %}

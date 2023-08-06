@@ -1,0 +1,7 @@
+include LICENSE
+include README.md
+include requirements.txt
+recursive-include selia_annotator/static *
+recursive-include selia_annotator/templates *
+recursive-include selia_annotator/locale *
+recursive-include docs *

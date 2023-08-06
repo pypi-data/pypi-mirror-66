@@ -1,0 +1,7 @@
+irekua_database
+irekua-models
+irekua_permissions
+irekua_rest_api
+irekua_autocomplete
+selia_templates
+selia_visualizers
