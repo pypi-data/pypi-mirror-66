@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib
+scipy
+jupyter
+hyperspy
+matplotlib_scalebar
+tqdm
+Pillow
+opencv-python
+PyQt5

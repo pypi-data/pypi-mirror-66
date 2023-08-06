@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: temmeta
+Version: 0.0.1
+Summary: TEMMETA is a library for transmission electron microscopy (TEM) (meta)data manipulation
+Home-page: https://github.com/din14970/TEMMETA
+Author: Niels Cautaerts
+Author-email: nielscautaerts@hotmail.com
+License: GPL-3.0
+Description: UNKNOWN
+Keywords: TEM
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
