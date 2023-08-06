@@ -1,0 +1,3 @@
+[console_scripts]
+text2qti = text2qti.cmdline:main
+
