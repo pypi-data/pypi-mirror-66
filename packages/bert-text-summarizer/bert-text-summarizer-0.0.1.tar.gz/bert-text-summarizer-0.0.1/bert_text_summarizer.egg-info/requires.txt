@@ -1,0 +1,5 @@
+tf-nightly
+tf-models-official
+tensorflow-hub>=0.7.0
+sentencepiece==0.1.85
+nltk>=3.5

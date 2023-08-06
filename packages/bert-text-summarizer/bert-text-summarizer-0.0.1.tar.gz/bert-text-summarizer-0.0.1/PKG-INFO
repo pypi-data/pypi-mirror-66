@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: bert-text-summarizer
+Version: 0.0.1
+Summary: A BERT-based text summarization tool
+Home-page: https://github.com/david-wb/bert-text-summarizer
+Author: David Brown
+Author-email: davewbrwn@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
