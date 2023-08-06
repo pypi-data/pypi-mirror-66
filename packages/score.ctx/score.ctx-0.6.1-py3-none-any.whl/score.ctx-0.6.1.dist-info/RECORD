@@ -1,0 +1,10 @@
+score.ctx-0.6.1-py3.7-nspkg.pth,sha256=Sc8n-AjC4efQEM9N970YYvqthmC_oBMk9MryXA8wB9c,534
+score/ctx/__init__.py,sha256=ry6iQdfhCDTtEZgpZx3eQx-FhUKd99wEpL6N-IKwVtM,1550
+score/ctx/_init.py,sha256=q-MMaGXuC8ypZ4rMp1VdHZcjVH5ZYvi0pRJUqiYgGlg,16035
+score/ctx/cli.py,sha256=4qco_O6dP0iLxfS_t-cyydc7bo5rOeHy3KzKhuZ8qnU,1697
+score.ctx-0.6.1.dist-info/COPYING.LESSER.txt,sha256=Okmm5A9QcXz_d-8FH0qPxEG_r_Yc0bM07KQZHBTzAH8,42870
+score.ctx-0.6.1.dist-info/METADATA,sha256=T2qqA4k3iuRj9HyKCbSKv2s6bbafBMKkt2FzXLiNUwk,3367
+score.ctx-0.6.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+score.ctx-0.6.1.dist-info/namespace_packages.txt,sha256=ombXQcxxoHXkOBjIMIwHIdXOU_bRR6fxpkmCd_LLxCQ,6
+score.ctx-0.6.1.dist-info/top_level.txt,sha256=ombXQcxxoHXkOBjIMIwHIdXOU_bRR6fxpkmCd_LLxCQ,6
+score.ctx-0.6.1.dist-info/RECORD,,
