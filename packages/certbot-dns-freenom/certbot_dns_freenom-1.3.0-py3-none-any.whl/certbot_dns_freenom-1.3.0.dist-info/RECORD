@@ -1,0 +1,8 @@
+certbot_dns_freenom/__init__.py,sha256=Aj7vJ4IjEIxpTRWuy2FPDIa3JaYhZXH_G363Wzb_RoM,22
+certbot_dns_freenom/dns_freenom.py,sha256=JAsoGqJuvQNYA2PjcxEP25CsWtzXZJULhE860OHhvl8,3721
+certbot_dns_freenom-1.3.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+certbot_dns_freenom-1.3.0.dist-info/METADATA,sha256=c0026tyH_jnR6mtm2fLF1YjfatKUkq0P0clDSFgepYo,1512
+certbot_dns_freenom-1.3.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+certbot_dns_freenom-1.3.0.dist-info/entry_points.txt,sha256=0JIiAMst-WEYDkgfpltQlbO3zC7moSa6kPOzlU5s81I,79
+certbot_dns_freenom-1.3.0.dist-info/top_level.txt,sha256=VMR0s75pYDZa-D4x0B9N56WwQRUUBNnFHpO_JoyMIgQ,20
+certbot_dns_freenom-1.3.0.dist-info/RECORD,,

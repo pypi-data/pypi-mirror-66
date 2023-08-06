@@ -1,0 +1,3 @@
+[certbot.plugins]
+dns-freenom = certbot_dns_freenom.dns_freenom:Authenticator
+
