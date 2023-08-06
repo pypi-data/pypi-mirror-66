@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+unalix/__init__.py
+unalix.egg-info/PKG-INFO
+unalix.egg-info/SOURCES.txt
+unalix.egg-info/dependency_links.txt
+unalix.egg-info/requires.txt
+unalix.egg-info/top_level.txt
+unalix/rules/custom-data.min.json
+unalix/rules/data.min.json
+unalix/rules/special_rules.json
