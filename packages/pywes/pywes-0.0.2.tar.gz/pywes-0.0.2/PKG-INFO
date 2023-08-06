@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: pywes
+Version: 0.0.2
+Summary: carrier and trio analysis
+Home-page: https://github.com/N-damo/exomreport
+Author: Li'an Lin
+Author-email: 21620151153308@stu.xmu.edu.cn
+License: GPL3
+Description: vcf_split.py拆分注释后的vcf文件，结果文件`samplename.SNP OR INDEL.annovar.filter.csv`和`samplename.SNP OR INDEL.annovar.withoutfilter.csv`
+        
+        inh_gene_phenotype.json，{gene:[inheritance,phenotype]},获得对应gene的遗传方式和表型
+        omim_gene.json，根据hpo号得到omim表型号，再根据omim表型号得到gene
+        家系样品需要先trio.py运行，annovar注释，再pedigree.py拆分（vcf必须仅有三人家系样本）
+        需要用到的模块：
+        annotation_filter.py:变异过滤
+        hg38Tohg19.py:hg38坐标转成hg19坐标
+        hgvs.py:修改AAChange.refGene栏中碱基替换的格式，如果是插入缺失则不改变，仅输出转录本号数值最小的那个
+        database_format.py，对genemap2.txt 和omimdata.xlsx进行处理得到inh_gene_phenotype.json和omim_gene.json
+        如果有必要的话需要复制到~/soft/python/bin
+Keywords: exom
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
