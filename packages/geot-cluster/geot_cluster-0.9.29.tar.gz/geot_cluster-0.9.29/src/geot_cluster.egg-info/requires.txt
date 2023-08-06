@@ -1,0 +1,10 @@
+folium>=0.10.1
+haversine
+markov-clustering
+matplotlib
+networkx
+numpy
+pandas
+pytest>=3.7
+pytz
+timezonefinder
