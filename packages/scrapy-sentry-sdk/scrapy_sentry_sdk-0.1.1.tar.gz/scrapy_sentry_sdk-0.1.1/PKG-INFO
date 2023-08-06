@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: scrapy-sentry-sdk
+Version: 0.1.1
+Summary: Scrapy extension for integration of Sentry SDK to Scrapy projects
+Home-page: https://github.com/groupbwt/scrapy-sentry-sdk/
+License: MIT
+Keywords: Error reporting,Monitoring,Scrapy,Sentry
+Author: KristobalJunta
+Author-email: junta.kristobal@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: scrapy (>=1.6,<2.0)
+Requires-Dist: sentry-sdk (>=0.14.3,<0.15.0)
+Project-URL: Repository, https://github.com/groupbwt/scrapy-sentry-sdk/
+Description-Content-Type: text/markdown
+
+# scrapy-sentry-sdk
+A Scrapy extension for integration of Sentry SDK to Scrapy projects.
+
+This package provides a Scrapy extension for convenient initialization of Sentry SDK.
+
+To use it, first install the package:
+
+```shell script
+pip install scrapy_sentry_sdk
+```
+
+The add the following to you project's `settings.py`:
+
+```python
+# Send exceptions to Sentry
+# replace SENTRY_DSN by you own DSN
+SENTRY_DSN = "XXXXXXXXXX"
+
+# Enable or disable extensions
+# See https://doc.scrapy.org/en/latest/topics/extensions.html
+EXTENSIONS = {
+    'scrapy_sentry_sdk.extensions.SentryLogging': 1,  # Load SentryLogging extension before others
+}
+```
+
