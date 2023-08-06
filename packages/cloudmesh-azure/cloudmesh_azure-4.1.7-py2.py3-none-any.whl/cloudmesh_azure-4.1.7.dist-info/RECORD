@@ -1,0 +1,12 @@
+cloudmesh_azure-4.1.7-py3.8-nspkg.pth,sha256=K4lDZyHlKS0TcVsgEjQjgNPYnsZp6PXCSyRIy68BhkI,554
+cloudmesh/azure/__init__.py,sha256=u5uks7rOk5d3nzgkRI3_Ou-Brww8B_Fg_V8uhuQunQs,21
+cloudmesh/azure/__version__.py,sha256=DrkH7PrIzWHQwEVCs8u3HbXyPfUKCyuLfe0mlzJ--ro,17
+cloudmesh/azure/compute/Provider.py,sha256=izt4BIf9bCdkJHtgt0ZVcUMsVtYZ4yf_EiDWTwMeirk,57759
+cloudmesh/azure/compute/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloudmesh/azure/compute/test.py,sha256=aPDBhQ7Jtxy-5fBGKgnkI7IQwf7AsX5WRbv5ApQaMuc,1295
+cloudmesh_azure-4.1.7.dist-info/LICENSE,sha256=w7U4P4ljhJjniTEMxSyhAcEbWHDk2Ng1FqsOG6aEgs0,769
+cloudmesh_azure-4.1.7.dist-info/METADATA,sha256=rcQjQMEAtDWGXcwmXDM4v6ezj6Epajn7fgrfibwKSQo,1633
+cloudmesh_azure-4.1.7.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+cloudmesh_azure-4.1.7.dist-info/namespace_packages.txt,sha256=aTw_KEhKv-8X8yWzikhSTeYlXkcauZxg_98rOi1SJHg,10
+cloudmesh_azure-4.1.7.dist-info/top_level.txt,sha256=aTw_KEhKv-8X8yWzikhSTeYlXkcauZxg_98rOi1SJHg,10
+cloudmesh_azure-4.1.7.dist-info/RECORD,,
