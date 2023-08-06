@@ -1,0 +1,4 @@
+argparse
+html2text
+markovify
+requests
