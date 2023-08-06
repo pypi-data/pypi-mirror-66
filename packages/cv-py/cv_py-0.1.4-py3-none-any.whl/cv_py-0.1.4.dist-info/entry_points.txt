@@ -1,0 +1,3 @@
+[console_scripts]
+cv-download=cv_py.data.resource:download
+
