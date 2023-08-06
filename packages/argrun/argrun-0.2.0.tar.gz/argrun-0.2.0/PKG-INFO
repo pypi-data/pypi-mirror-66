@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: argrun
+Version: 0.2.0
+Summary: a small library that wraps argparse to map arguments to decorated functions
+Home-page: https://github.com/nilput/argrun/
+Author: nilput
+Author-email: nilputs@gmail.com
+License: MIT
+Download-URL: https://github.com/nilput/argrun/releases/download/v0.2/argrun-0.2.tar.gz
+Description: UNKNOWN
+Keywords: argparse,arguments,cli
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
