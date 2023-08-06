@@ -1,0 +1,6 @@
+[console_scripts]
+pidgy = pidgy.__main__:application
+
+[pytest11]
+pytest-pidgy = pidgy.pytest_config
+
