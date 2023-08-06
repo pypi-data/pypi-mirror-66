@@ -1,0 +1,9 @@
+README.md
+setup.py
+dict2json/__init__.py
+dict2json.egg-info/PKG-INFO
+dict2json.egg-info/SOURCES.txt
+dict2json.egg-info/dependency_links.txt
+dict2json.egg-info/entry_points.txt
+dict2json.egg-info/requires.txt
+dict2json.egg-info/top_level.txt
