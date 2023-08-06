@@ -1,0 +1,6 @@
+[console_scripts]
+BOSManager = Biblelator.Apps.BOSManager:run
+Biblelator = Biblelator.Biblelator:run
+BiblelatorSettingsEditor = Biblelator.Apps.BiblelatorSettingsEditor:run
+SwordManager = Biblelator.Apps.SwordManager:run
+
