@@ -1,0 +1,8 @@
+README.md
+setup.py
+lcsb_pbin/__init__.py
+lcsb_pbin.egg-info/PKG-INFO
+lcsb_pbin.egg-info/SOURCES.txt
+lcsb_pbin.egg-info/dependency_links.txt
+lcsb_pbin.egg-info/requires.txt
+lcsb_pbin.egg-info/top_level.txt
