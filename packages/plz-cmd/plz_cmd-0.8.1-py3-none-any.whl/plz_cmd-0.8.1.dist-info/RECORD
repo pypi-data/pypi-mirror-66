@@ -1,0 +1,11 @@
+plz/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+plz/colorize.py,sha256=w6GK_MpCw7OiLKlNpn29Mws9-zOdSpKcDJS7FOzZ_JY,919
+plz/config.py,sha256=lE-QftkLX1hPdaGq2-bQ0xPbQbbzaGmUPm_HacoKO-Q,2094
+plz/glob_tools.py,sha256=UVjb3N0lye2s4CYXw-kGexS8h8g_DvMfnouwDhxp6o0,1400
+plz/main.py,sha256=mRC4rWOz7CIwyrsMFMDgcGtogqZNMuciABQQB45H8_E,1549
+plz/runner.py,sha256=290nizFSpOiNWQOJ8JSDYsfZia0_4e1L0hDQibxhNF4,2471
+plz_cmd-0.8.1.dist-info/entry_points.txt,sha256=9P_lVMzL32qr9dfQiDFCLVxOlDqrA1roRFZd4KoNVSI,37
+plz_cmd-0.8.1.dist-info/LICENSE,sha256=6iyifLp8w1gi2VpG1ZvNPMiOGWWS5jkNGUmjWf_JkOg,1092
+plz_cmd-0.8.1.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+plz_cmd-0.8.1.dist-info/METADATA,sha256=HvEgujGRrY3EcpASk5YTHB3vkzbznT2oAx9t48BqxTQ,3481
+plz_cmd-0.8.1.dist-info/RECORD,,
