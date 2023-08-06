@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: Bootstrap-Flask
+Version: 1.3.0
+Summary: Bootstrap helper for Flask/Jinja2.
+Home-page: https://github.com/greyli/bootstrap-flask
+Author: Grey Li
+Author-email: withlihui@gmail.com
+License: MIT
+Description: # Bootstrap-Flask
+        
+        [Bootstrap 4](https://getbootstrap.com) helper for Flask/Jinja2.
+        
+        
+        ## Links
+        
+        * [Documentation](https://bootstrap-flask.readthedocs.io/en/latest/)
+        * [PyPI](https://pypi.org/project/Bootstrap-Flask/)
+        * [Examples](https://github.com/greyli/bootstrap-flask/tree/master/examples)
+        
+        ## License
+        
+        This project is licensed under the MIT License (see the
+        `LICENSE` file for details).
+        
+        Some macros were part of [Flask-Bootstrap](https://github.com/mbr/flask-bootstrap) and were modified under the terms of its BSD License.
+        
+Keywords: flask extension development
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Provides-Extra: docs
+Provides-Extra: dev
