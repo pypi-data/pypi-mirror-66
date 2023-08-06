@@ -1,0 +1,7 @@
+gdbundle/__init__.py,sha256=p06BQrOARXqG2BQFJmgwTqKz5ih9HfaSDGtFwpLgHjY,3452
+gdbundle/commands_gdb.py,sha256=5PU-Bv1kZknfAc3Bfx_MqrogFITHFXg3TJlkI3W_NAI,805
+gdbundle/commands_lldb.py,sha256=xNYmTHcJDRWTnSvtqLnT1y6c1s-Qa4thfJieeB4JRzg,301
+gdbundle-0.0.4.dist-info/LICENSE,sha256=1zcV3SqJK4XicfSSx0iuEv0_N8-Yg4zYwELVbVnGsEs,1065
+gdbundle-0.0.4.dist-info/WHEEL,sha256=2SyTS6-hWVbCVhxpPo1j5f9gwaWw-hVIJs0s_cC8MXM,87
+gdbundle-0.0.4.dist-info/METADATA,sha256=fwTF9Mw43Y1qX8OOPp8fvzmIvyidIrvT6RpHbAkvu4Y,12411
+gdbundle-0.0.4.dist-info/RECORD,,
