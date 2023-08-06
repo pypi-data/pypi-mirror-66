@@ -1,0 +1,8 @@
+setup.py
+celery-stubs/__init__.pyi
+celery-stubs/schedules.pyi
+celery_stubs.egg-info/PKG-INFO
+celery_stubs.egg-info/SOURCES.txt
+celery_stubs.egg-info/dependency_links.txt
+celery_stubs.egg-info/requires.txt
+celery_stubs.egg-info/top_level.txt
