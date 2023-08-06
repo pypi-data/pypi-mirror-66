@@ -1,0 +1,9 @@
+README.md
+kcleaner.py
+setup.py
+kcleaner.egg-info/PKG-INFO
+kcleaner.egg-info/SOURCES.txt
+kcleaner.egg-info/dependency_links.txt
+kcleaner.egg-info/entry_points.txt
+kcleaner.egg-info/requires.txt
+kcleaner.egg-info/top_level.txt
