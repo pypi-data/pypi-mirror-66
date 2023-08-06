@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: coinmetrics
+Version: 0.2.5
+Summary: An unofficial library to standardize queries to the Coin Metrics (coinmetrics.io) API.
+Home-page: https://github.com/h4110w33n/coinmetrics
+Author: Robert Rice
+Author-email: h4110w33n@gmail.com
+License: GNU General Public License v3 (GPLv3)
+Keywords: coinmetrics,crypto,cryptocurrency,rest,api
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides: coinmetrics
+Description-Content-Type: text/markdown
+Requires-Dist: certifi
+Requires-Dist: chardet
+Requires-Dist: idna
+Requires-Dist: python-dateutil
+Requires-Dist: requests
+Requires-Dist: six
+Requires-Dist: urllib3
+Requires-Dist: setuptools
+
+Coin Metrics API for Python
+===========================
+[![Documentation Status](https://readthedocs.org/projects/coinmetrics/badge/?version=latest)](https://coinmetrics.readthedocs.io/en/latest/?badge=latest)
+[![Build Status](https://travis-ci.com/h4110w33n/coinmetrics.svg?branch=master)](https://travis-ci.com/h4110w33n/coinmetrics)
+[![PyPI version](https://badge.fury.io/py/coinmetrics.svg)](https://badge.fury.io/py/coinmetrics)
+[![codecov](https://codecov.io/gh/h4110w33n/coinmetrics/branch/master/graph/badge.svg)](https://codecov.io/gh/h4110w33n/coinmetrics)
+
+An unofficial Python module for interacting with the Coin Metrics (coinmetrics.io) API. Currently, this library only impliments the [Community API](https://coinmetrics.io/api/). The [Pro APIs](https://coinmetrics.io/cm-network-data-pro/) will be available in a [later release](https://github.com/h4110w33n/coinmetrics/issues/10).
+
+### Getting Started
+
+This project's official documentation is hosted on [Read the Docs](https://coinmetrics.readthedocs.io/en/latest/index.html). Below are some direct links to get you started.
+
+* [Install](https://coinmetrics.readthedocs.io/en/latest/install.html)
+* [API Reference](https://coinmetrics.readthedocs.io/en/latest/api_ref.html)
+* [Usage](https://coinmetrics.readthedocs.io/en/latest/usage.html)
+
+### Donations
+
+Like this project? Help fund others like it.
+
+* __BTC:__ bc1qf523ue5xdzxqpgt4nnmpj78d2snzqf3n7s0rmd
+* __USD:__ [PayPal Donation](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=NBK3S2YT92NVJ&currency_code=USD&source=url)
+

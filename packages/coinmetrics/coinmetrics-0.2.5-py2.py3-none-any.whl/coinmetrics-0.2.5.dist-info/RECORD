@@ -1,0 +1,9 @@
+coinmetrics/__init__.py,sha256=yTHdx3NUd579nmrZf5YEML-asXE2x00HSGvI761ALV8,169
+coinmetrics/base.py,sha256=Kond__xxkRZN2Yo5m7SIssSnghh-TgUfTQKVdL3VlRE,6797
+coinmetrics/community.py,sha256=QZnX8OphhguMRGU1hzj7XV84iPn7TtlyCyXpopeGfjc,26439
+coinmetrics/errors.py,sha256=g3XVhzI6e_ii55583bt7jbzWoch8FeiCQd1uJil_ug8,1018
+coinmetrics/utils.py,sha256=nEVwFyS3abHtBQ4RFdmuIXhnTFaC6OIDR1_zRgQJyAk,2008
+coinmetrics-0.2.5.dist-info/METADATA,sha256=WTqTSX6rbRQnqeaJqvebi4GQjgPXqm4Dd2j5VBcJ3zQ,3131
+coinmetrics-0.2.5.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+coinmetrics-0.2.5.dist-info/top_level.txt,sha256=9ebPkFpUOqA5dkrGhzL2ftxG4RfnWLhGK_eeqaa57ec,12
+coinmetrics-0.2.5.dist-info/RECORD,,
