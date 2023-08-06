@@ -1,0 +1,17 @@
+mincepy>=0.12.0
+PySide2
+pytray<0.3.0,>=0.2.2
+stevedore
+
+[dev]
+pip
+pytest>4
+pytest-cov
+pytest-qt
+pre-commit
+yapf
+prospector
+pylint
+twine
+
+[gui]
