@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: blobfish-ejbca-client-python
+Version: 0.1.0
+Summary: Blobfish's Python client for EJBCA services.
+Home-page: UNKNOWN
+Author: Jaime Hablutzel
+Author-email: hablutzel1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: zeep
+Requires-Dist: pyOpenSSL
+
+UNKNOWN
+
+
