@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: PyFEM-TUE
+Version: 3.0.2
+Summary: A Python Finite Element package
+Home-page: https://github.com/jjcremmers/PyFEM
+Author: J.J.C. Remmers
+Author-email: j.j.c.remmers@tue.nl
+License: UNKNOWN
+Description: PyFEM is a python-based finite element code accompanies the book: 'Non-Linear Finite Element Analysis of Solids and Structures' by R. de Borst, M.A. Crisfield, J.J.C. Remmers and C.V. Verhoosel. The code is open source and intended for educational and scientific purposes only. If you use PyFEM in your research, the  developers would be grateful if you could cite the book in your work.
+Keywords: Finite Element Method,Mechanics,Wiley
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
