@@ -1,0 +1,3 @@
+[console_scripts]
+base24=base24_builder.cli:run
+
