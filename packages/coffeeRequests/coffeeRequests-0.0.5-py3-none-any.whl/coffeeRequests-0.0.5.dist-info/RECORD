@@ -1,0 +1,16 @@
+coffeeRequests/UA.json,sha256=MGMjCkrICXmjH5jIQ_k3F66RxUZPgBDX7QxZRFIVFd8,42687
+coffeeRequests/__init__.py,sha256=hwaOABhLU6Mg2EqMynFcZKXFhEFtqcA1OSCw8I2dr40,32
+coffeeRequests/_version.py,sha256=tkmQ_MRcpdVMjo8K3J6fYWWQBPniLmAPc6F3LT7jTZY,80
+coffeeRequests/coffeeRequests.py,sha256=pkxoGpv6sDU8GUOy0Jgzwijz3pr99IQrphcpTvaymvU,797
+coffeeRequests/pool.py,sha256=QCP5wvUoQH8jsAg3Xc_clO5RvNGSCoUH1NZ0GzpiL3w,150
+coffeeRequests/proxy_pool.py,sha256=FC4h-JTXHIwpONBRzVqfpYkcnuKj25PAc-KXV3gaL_g,2280
+coffeeRequests/user_agent_pool.py,sha256=TYLN66nSr_Stg2Isyy9fZtaGw-dqNg70_Ps_efVCx2c,365
+coffeeRequests/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coffeeRequests/tests/test_coffeeRequests.py,sha256=y1YFBh6YkWVTc2coKlV5gPr0RpE62hJ4SRUowhebRtw,475
+coffeeRequests/tests/test_proxy_pool.py,sha256=v4o0ftIu6lHZUbfV1fYqPmXWPXkCLPp_DOabbwZQQ4c,492
+coffeeRequests/tests/test_user_agent_pool.py,sha256=_409a2UUFJEzjswHKglO0g4CMQQY_eYfnct5YGYXTEg,359
+coffeeRequests-0.0.5.dist-info/LICENSE,sha256=lkhikVPOmJ4bP1dRx0RzBf_0UhRpOUdldZ2cd_yf5eQ,1071
+coffeeRequests-0.0.5.dist-info/METADATA,sha256=Jc_jMitaXH7qoie4CH3e3TH-iTW8i3XqR0uLSMfWkvs,224
+coffeeRequests-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+coffeeRequests-0.0.5.dist-info/top_level.txt,sha256=5qnIWEqKFLc06h_acIY3nvFnsGV9c2B-b8vRI1eUzGU,15
+coffeeRequests-0.0.5.dist-info/RECORD,,
