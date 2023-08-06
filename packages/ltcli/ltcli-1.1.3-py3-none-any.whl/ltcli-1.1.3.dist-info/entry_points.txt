@@ -1,0 +1,3 @@
+[console_scripts]
+ltcli = ltcli.cli_main:main
+
