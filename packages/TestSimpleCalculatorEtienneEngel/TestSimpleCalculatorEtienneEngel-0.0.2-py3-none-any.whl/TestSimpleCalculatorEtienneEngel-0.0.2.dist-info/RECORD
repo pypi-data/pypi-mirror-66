@@ -1,0 +1,9 @@
+Package/SubPackage/__init__.py,sha256=Cl3Z2t6No_500qzqht4iA5_XIFcrAvPv4VMQrIuD6QE,26
+Package/SubPackage/calculator.py,sha256=k-LVylfqQAolrhyNTFRh9XlZjHRoqgUbFBknmJkuO2k,3331
+Package/Test/__init__.py,sha256=Cl3Z2t6No_500qzqht4iA5_XIFcrAvPv4VMQrIuD6QE,26
+Package/Test/test_code.py,sha256=iYipiO9AMCwnHkMLVc4cfYXZAXpuR9ThvPXv_ekdkkI,13503
+TestSimpleCalculatorEtienneEngel-0.0.2.dist-info/LICENSE.txt,sha256=Risi23ALyZ1UFVb5_WXI1exwkQuOHwcJXYvkxgAbcnw,1078
+TestSimpleCalculatorEtienneEngel-0.0.2.dist-info/METADATA,sha256=dz59nv6ahOEmiUkCA1YltK-mSy-UNZWtpOb3Y87y5Vg,303
+TestSimpleCalculatorEtienneEngel-0.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+TestSimpleCalculatorEtienneEngel-0.0.2.dist-info/top_level.txt,sha256=QV0RYwqHnVkUx7xCznOH-kQ588aeThhg1D9qE2m01RI,32
+TestSimpleCalculatorEtienneEngel-0.0.2.dist-info/RECORD,,
