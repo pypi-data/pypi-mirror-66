@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: easyocr
+Version: 1.0
+Summary: End-to-End Multi-Lingual Optical Character Recognition (OCR) Solution
+Home-page: https://github.com/jaidedai/easyocr
+Author: Rakpong Kittinaradorn
+Author-email: r.kittinaradorn@gmail.com
+License: Apache License 2.0
+Download-URL: https://github.com/jaidedai/easyocr.git
+Description: UNKNOWN
+Keywords: ocr optical character recognition deep learning neural network
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
