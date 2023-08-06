@@ -1,0 +1,7 @@
+edge_gravity/__init__.py,sha256=eej_qZ1DCdhQpjgar3Ienyf8482qs3v1VuSMYJcIwqE,124
+edge_gravity/edge_gravity.c,sha256=lpWGPbNeIM-I8oLdh5rcViw1w7qUZpuyCV7GrbOy2oA,384313
+edge_gravity/edge_gravity.pyx,sha256=KFRMpQqzIss5dzXslwpZxCL59bKn8FKdpxo0n26atxY,3983
+edge_gravity-0.0.1.dist-info/LICENSE,sha256=xzkvwf9D_TJ_rUVKxnmxwN1CTyXDKprmR8qGGs-YAzw,1069
+edge_gravity-0.0.1.dist-info/WHEEL,sha256=4vGQWMHJO3SOyvYcLHqr380W2n90FCfzkrP_YY3xjq8,99
+edge_gravity-0.0.1.dist-info/METADATA,sha256=aoKD1qYuDuDcs9l1vozMxXGhDYYSp7Vufnr-jtbi3Eg,1334
+edge_gravity-0.0.1.dist-info/RECORD,,
