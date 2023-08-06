@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: motifcluster
+Version: 0.0.1
+Summary: Motif-Based Spectral Clustering of Weighted Directed Networks
+Home-page: UNKNOWN
+Author: William George Underwood
+Author-email: wgu2@princeton.edu
+License: GPLv3
+Platform: UNKNOWN
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: sklearn
+
+Construct motif adjacency matrices for (weighted directed) networks, and use them for spectral clustering. Also provides random sampling methods for weighted directed networks.
+
+
