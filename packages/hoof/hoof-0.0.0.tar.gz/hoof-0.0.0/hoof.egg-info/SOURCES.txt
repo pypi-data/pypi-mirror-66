@@ -1,0 +1,7 @@
+hoof.py
+setup.py
+hoof.egg-info/PKG-INFO
+hoof.egg-info/SOURCES.txt
+hoof.egg-info/dependency_links.txt
+hoof.egg-info/requires.txt
+hoof.egg-info/top_level.txt

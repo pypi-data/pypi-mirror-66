@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: hoof
+Version: 0.0.0
+Summary: Generate abstract syntax trees using antlr grammars
+Home-page: https://github.com/machow/hoof
+Author: Michael Chow
+Author-email: mc_al_github@fastmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
