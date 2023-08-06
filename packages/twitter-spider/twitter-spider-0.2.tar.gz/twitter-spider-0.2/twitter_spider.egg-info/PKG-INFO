@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: twitter-spider
+Version: 0.2
+Summary: A twitter tweets spider
+Home-page: https://github.com/Dainius-P/twitter_spider
+Author: Dainius Preimantas
+Author-email: preimantasd@gmail.com
+License: UNKNOWN
+Description: ### Twitter Spider ###
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
