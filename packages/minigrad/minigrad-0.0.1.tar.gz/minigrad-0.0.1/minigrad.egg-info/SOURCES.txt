@@ -1,0 +1,9 @@
+README.md
+setup.py
+minigrad/__init__.py
+minigrad/engine.c
+minigrad/nn.py
+minigrad.egg-info/PKG-INFO
+minigrad.egg-info/SOURCES.txt
+minigrad.egg-info/dependency_links.txt
+minigrad.egg-info/top_level.txt
