@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: bagpy
+Version: 0.1a0
+Summary: A python class to facilitate the reading of rosbag file based on semantic datatypes.
+Home-page: https://github.com/jmscslgroup/bagpy
+Author: Rahul Bhadani
+Author-email: rahulbhadani@email.arizona.edu
+License: UNKNOWN
+Keywords: Autonomous vehicle,ACC,adaptive cruise control,ROS,Robotics
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: AsyncIO
+Classifier: Topic :: Communications
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: numpy
+Requires-Dist: matplotlib (>=3.0.3)
+Requires-Dist: cantools (>=32.20.1)
+Requires-Dist: libusb1 (>=1.7.1)
+Requires-Dist: pyserial (>=3.4)
+Requires-Dist: seaborn (>=0.9.0)
+Requires-Dist: bitstring (>=3.1.6)
+Requires-Dist: pycryptodomex
+
+UNKNOWN
+
+
