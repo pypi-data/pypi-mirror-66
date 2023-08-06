@@ -1,0 +1,10 @@
+README.md
+setup.py
+zkill_searchf/__init__.py
+zkill_searchf/search.py
+zkill_searchf.egg-info/PKG-INFO
+zkill_searchf.egg-info/SOURCES.txt
+zkill_searchf.egg-info/dependency_links.txt
+zkill_searchf.egg-info/entry_points.txt
+zkill_searchf.egg-info/requires.txt
+zkill_searchf.egg-info/top_level.txt
