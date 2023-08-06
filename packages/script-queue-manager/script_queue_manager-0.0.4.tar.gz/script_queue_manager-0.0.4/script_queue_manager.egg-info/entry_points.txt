@@ -1,0 +1,4 @@
+[console_scripts]
+sqm-executor = script_queue_manager.executor:executor
+sqm-pusher = script_queue_manager.pusher:pusher
+
