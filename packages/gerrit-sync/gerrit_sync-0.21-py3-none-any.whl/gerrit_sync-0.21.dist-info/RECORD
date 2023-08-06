@@ -1,0 +1,11 @@
+gerrit_sync/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gerrit_sync/__main__.py,sha256=WxFE9PK5wJkovN0leO4sRdhcrrBQfBVTyd8mPeB8POo,2114
+gerrit_sync/cli.py,sha256=wOTD16PBmlRadM4Jn2ns4xNmYY3XOLBmBhvk4o7vAi4,2879
+gerrit_sync/util_gerrit.py,sha256=h7lJSASZiX25GiBcvagkDWSU4FIEFIBxIN4CGexJMa0,1106
+gerrit_sync/util_logging.py,sha256=4UB-cPagB5ljky_1D8DqJMB52g1xAbe07HH-VqgQmpU,543
+gerrit_sync-0.21.dist-info/LICENSE,sha256=gFVam2hvf3ChjvbJJnQuV7JqJuH92lo2ZrliiJW8bcw,1053
+gerrit_sync-0.21.dist-info/METADATA,sha256=lESGcL20pTZtHEn6m353Vd7WoVDFbkxeMPRey7gWY0Q,2953
+gerrit_sync-0.21.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+gerrit_sync-0.21.dist-info/entry_points.txt,sha256=Ee-Qq6m2Y9I4o_rrwpiEYhAZ7QSnvwxVBGAdeCesKlw,59
+gerrit_sync-0.21.dist-info/top_level.txt,sha256=Pwn6_an2G4eZ7_8-xphbGrpuDNZSwBJgaz14SudKvWU,12
+gerrit_sync-0.21.dist-info/RECORD,,
