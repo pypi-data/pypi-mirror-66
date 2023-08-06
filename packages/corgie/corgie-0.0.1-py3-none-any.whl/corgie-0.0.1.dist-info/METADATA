@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: corgie
+Version: 0.0.1
+Summary: Connectomics Registration General Inference Engine
+Home-page: https://github.com/seugnlab/corgie
+Author: Sergiy Popovych
+Author-email: sergiy.popovich@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: numpy
+
+UNKNOWN
+
+
