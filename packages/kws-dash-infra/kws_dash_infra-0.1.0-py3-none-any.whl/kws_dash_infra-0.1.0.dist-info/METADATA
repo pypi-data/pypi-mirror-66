@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: kws-dash-infra
+Version: 0.1.0
+Summary: "Helpers to build a dash kws application"
+Home-page: UNKNOWN
+Author: Mathias Ngo
+License: kilowattsol
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: Other/Proprietary License
+Description-Content-Type: text/markdown
+Requires-Dist: dash
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: python-slugify
+Provides-Extra: deploy
+Requires-Dist: twine ; extra == 'deploy'
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: rope ; extra == 'dev'
+Requires-Dist: ipython ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+
+UNKNOWN
+
+
