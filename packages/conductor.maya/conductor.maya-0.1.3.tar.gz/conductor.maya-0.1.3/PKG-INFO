@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: conductor.maya
+Version: 0.1.3
+Summary: Maya plugin for Conductor's client tools
+Home-page: https://github.com/AtomicConductor/conductor-maya
+Author: conductor
+Author-email: info@conductortech.com
+License: UNKNOWN
+Description: 
+        # DEV
+        
+        ```
+        <commit changes>
+        pip install --upgrade   git+file:///path/to/local-dev/conductor-maya@branch-name
+        ```
+        
+        # PYPI TEST
+        
+        ```
+        python setup.py sdist
+        twine upload --repository testpypi dist/conductor.maya-*.tar.gz
+        pip install --index-url https://test.pypi.org/simple/  conductor.maya 
+        
+        ```
+        
+        
+        # PYPI PROD
+        
+        ```
+        python setup.py sdist
+        twine upload dist/conductor.maya-*.tar.gz
+        pip install  conductor.maya 
+        
+        ```
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python
+Classifier: Topic :: Multimedia :: Graphics :: 3D Rendering
+Requires-Python: ~=2.7
+Description-Content-Type: text/markdown
