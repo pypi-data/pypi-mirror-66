@@ -1,0 +1,10 @@
+README.md
+setup.py
+guzi/__init__.py
+guzi/models.py
+guzi.egg-info/PKG-INFO
+guzi.egg-info/SOURCES.txt
+guzi.egg-info/dependency_links.txt
+guzi.egg-info/top_level.txt
+tests/__init__.py
+tests/test_models.py
