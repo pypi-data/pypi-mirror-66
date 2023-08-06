@@ -1,0 +1,11 @@
+pysnooper/__init__.py,sha256=U5PTz44vTi4GC-wHrcJ32KgNPBfCBaz2l3BSFB7JRfs,842
+pysnooper/pycompat.py,sha256=sGJUzSQLEsrEC0EP56dHto5_LkxacXLTF51hR79INgQ,2725
+pysnooper/tracer.py,sha256=xiJHEHcMavgQ-LAk_UpKe6vQbRr89CElV7C3IxkcL0o,20143
+pysnooper/utils.py,sha256=j2_8QFpuAenmIa4-WRQ5AGttkHKZLbxIn1KvIbDqrus,2383
+pysnooper/variables.py,sha256=_RLPqXKSVRPmsvUgLYxBMXeImLsJfTOukjRHLbyV1i0,3789
+PySnooper-0.4.0.dist-info/AUTHORS,sha256=IQsg4DNnAaWyVz11SndRCCm1dtrVdS67MjmeFJiISeo,331
+PySnooper-0.4.0.dist-info/LICENSE,sha256=cGjOjaHV4R7DJi00DaYaLHRbf0abp-hatQ3eUoE41Zs,1106
+PySnooper-0.4.0.dist-info/METADATA,sha256=kseIvVD48pm27p9Hfz7pTnpMQ5JLuQp-4HKPSKshJSw,6199
+PySnooper-0.4.0.dist-info/WHEEL,sha256=6T3TYZE4YFi2HTS1BeZHNXAi8N52OZT4O-dJ6-ome_4,116
+PySnooper-0.4.0.dist-info/top_level.txt,sha256=FSDQVJ8ETZs3IAz1qj6BZasYgd8_zSTx5ZCp8wj_5v4,10
+PySnooper-0.4.0.dist-info/RECORD,,
