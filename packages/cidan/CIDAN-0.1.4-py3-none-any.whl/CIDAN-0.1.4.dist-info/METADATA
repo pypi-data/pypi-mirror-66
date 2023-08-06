@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: CIDAN
+Version: 0.1.4
+Summary: CIDAN-Calcium Imaging Data ANalysis
+Home-page: UNKNOWN
+Author: Sam Schickler
+Author-email: sschickl@ucsd.edu
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: QtPy
+Requires-Dist: QDarkStyle
+Requires-Dist: Pyside2
+Requires-Dist: numpy
+Requires-Dist: dask[complete]
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: tiffile
+Requires-Dist: scikit-image
+Requires-Dist: hnswlib
+Requires-Dist: pillow
+
+# CIDAN
+
+# Install Instructions
+1. Make sure you have anaconda installed.
+2. Then download the requirements.txt file.
+3. In the same directory where it is located
+run these commands:
+
+```
+conda create -n CIDAN python=3.7
+conda activate CIDAN
+pip install -r requirements.txt
+python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps CIDAN
+python -m CIDAN
+```
+
+
