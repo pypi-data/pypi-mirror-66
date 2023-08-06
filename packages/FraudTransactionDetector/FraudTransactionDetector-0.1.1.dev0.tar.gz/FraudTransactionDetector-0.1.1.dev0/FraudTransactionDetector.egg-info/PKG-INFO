@@ -1,0 +1,50 @@
+Metadata-Version: 1.0
+Name: FraudTransactionDetector
+Version: 0.1.1.dev0
+Summary: Scalable Fraud Transaction Identifier using Clustering, Anamoly Detection and Classification ML Algorithms
+Home-page: http://pypi.python.org/pypi/FraudTransactionDetector/
+Author: Venkata Siva Rama Sastry Kavuri
+Author-email: sivaram.kavuri@gmail.com
+License: License.txt
+Description: ==========================
+        Fraud Transaction Detector
+        ==========================
+        
+        The generic objective of this project is to identify clusters in the 
+        data and finding out anamolies/outliers in each cluster which gives 
+        a mapping to each data point to determine whether it is an anamoly 
+        or genuine one. With this information, we can create a classification 
+        model through which we can segregate say fraud transactions from genuine 
+        ones. This algorithm can be applied to lot of use cases such as:
+        
+        * Fradulent Medical Claim detection
+        * Fradulent Credit Card Transactions
+        * Early detection of insider trading
+        * System Security
+        
+        Technologies used
+        =================
+        
+        As the package needs to be scalable and handle Big Data involving 
+        Hundreds of Millions of records, I have chosen to use 
+        
+        * Apache Spark
+        * H2o
+        
+        My Approach
+        ===========
+        Below is the approach taken and algorithms used to solve the problem 
+        at hand:
+        
+        1. K-Means Clustering from Apache Spark MLlib to identify clusters 
+        2. Isolation Forest from H2o to detect the Anamolies
+        3. PCA to visualize the data in 3D by reducing the number of dimensions
+        4. Gradient Boosted Classification Trees from Spark MLlib to create classification model
+        5. Model optimization using Apache Spark MLlib Cross Validator
+        
+        How to import and use the package?
+        ==================================
+        
+        
+        
+Platform: UNKNOWN
