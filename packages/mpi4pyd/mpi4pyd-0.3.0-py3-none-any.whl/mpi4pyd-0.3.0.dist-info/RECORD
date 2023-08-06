@@ -1,0 +1,17 @@
+mpi4pyd/__init__.py,sha256=egUt6fJouKofMZ4BpH-56MzecOHgfyufo1DuRZXIVAY,465
+mpi4pyd/__version__.py,sha256=vWei2bTA2tPkcoiRQhFHcbgkeIF4zsHpNqvU4nroBW8,206
+mpi4pyd/dummyMPI.py,sha256=uElcLt6CKGjlDaKAzG_1qWQ7TA0_mibC66bfXKhtGyI,10861
+mpi4pyd/utils.py,sha256=Nc8E_RYQoYG7ITRlbK3jFFlaal0sUv3QD0Tk-WO4bH0,886
+mpi4pyd/MPI/__init__.py,sha256=LQhoq0igpUGHGJ88ZUYJ0-0tGdHaicLIkpM7bqAABO4,788
+mpi4pyd/MPI/_helpers.py,sha256=jyQ1lwJD5yh3SNhpP8-mqm_sXf8PgxFfMNyyENgymFg,586
+mpi4pyd/MPI/_hybrid_comm.py,sha256=N8TKbfvqhws-IkAL5et4M3XPJW-ztJN_-uE9yeVbJy4,19121
+mpi4pyd/MPI/tests/__init__.py,sha256=lVL4VPz3c4kWCgjPtL4uuQLNmgwK92q1ffAsv5El02k,25
+mpi4pyd/MPI/tests/test_MPI.py,sha256=YAJGQQJ7o-MdyNP7gvOndNWHSCYucYhG2NErgq86OKE,5440
+mpi4pyd/tests/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+mpi4pyd/tests/test_dummyMPI.py,sha256=dD8PttdKFZErYx0JVxbIxoom8nYpWCnpixXHrmJ4-pk,3531
+mpi4pyd/tests/test_utils.py,sha256=T2c-q4vUOx7nvD8KRdcMf7KCeXg_z-xSwr6gsYwxayc,249
+mpi4pyd-0.3.0.dist-info/LICENSE,sha256=DKhyb2xsPbpTglW3PpP9hLlN2f1Nr9CSAWaGJWBW6Mc,1555
+mpi4pyd-0.3.0.dist-info/METADATA,sha256=llZh5JB32HePUYYsD0HS1Ybn4LAqPxt7U0WVMhBjjL4,2631
+mpi4pyd-0.3.0.dist-info/WHEEL,sha256=QBOOAdG2icRHGBs2s94rfaUlHrdfNBp-TceubUYCwOE,97
+mpi4pyd-0.3.0.dist-info/top_level.txt,sha256=jjd1_RFhB9tEqRSdWs3o27cr_GVYy-Ywhj-QvwAL1rg,8
+mpi4pyd-0.3.0.dist-info/RECORD,,
