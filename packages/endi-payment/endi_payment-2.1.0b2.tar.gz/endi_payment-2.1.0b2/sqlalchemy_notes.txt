@@ -1,0 +1,19 @@
+Notes :
+
+    Object edited in a custom session can't be refreshed without changing the
+    transaction isolation policy
+
+    If commiting the transaction before and beginning after, we don't know which
+    reified element could generate a detached instance error (request.user ...)
+
+Problématique :
+
+    On veut deux engine (deux connexions avec des identifiants différents)
+    On veut que les deux engines puissent manipuler les Payment :
+
+        l'engine général a des droits en lecture
+        l'engine endi_payment a des droits en lecture/écriture
+        l'engine endi_payment ne peut être manipulé que par la librairie
+        endi_payment
+
+    Le soucis c'est la pérennité des modèles d'une session à une autre
