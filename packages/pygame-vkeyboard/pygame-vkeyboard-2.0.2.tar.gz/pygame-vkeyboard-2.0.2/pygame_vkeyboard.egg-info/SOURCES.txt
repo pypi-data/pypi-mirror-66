@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+pygame_vkeyboard.egg-info/PKG-INFO
+pygame_vkeyboard.egg-info/SOURCES.txt
+pygame_vkeyboard.egg-info/dependency_links.txt
+pygame_vkeyboard.egg-info/requires.txt
+pygame_vkeyboard.egg-info/top_level.txt
+src/__init__.py
+src/vkeyboard.py
+src/vkeys.py
+src/vrenderers.py
+src/vtextinput.py
+src/examples/__init__.py
+src/examples/azerty.py
+src/examples/numeric.py
+src/examples/textinput.py
