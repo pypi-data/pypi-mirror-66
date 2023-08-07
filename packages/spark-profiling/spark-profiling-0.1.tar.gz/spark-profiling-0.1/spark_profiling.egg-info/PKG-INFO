@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: spark-profiling
+Version: 0.1
+Summary: Generate profile report for spark DataFrame
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: To be released
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Topic :: Scientific/Engineering
+Classifier: Framework :: IPython
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

@@ -1,0 +1,7 @@
+setup.py
+spark_profiling/__init__.py
+spark_profiling.egg-info/PKG-INFO
+spark_profiling.egg-info/SOURCES.txt
+spark_profiling.egg-info/dependency_links.txt
+spark_profiling.egg-info/requires.txt
+spark_profiling.egg-info/top_level.txt
